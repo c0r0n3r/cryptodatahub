@@ -1,0 +1,16 @@
+*.orig
+*.rej
+
+*.swp
+
+*.pyc
+
+/.coverage
+
+/*.egg-info
+/.eggs
+/.tox
+/Pipfile
+/Pipfile.lock
+/build
+/dist
