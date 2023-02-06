@@ -1,0 +1,14 @@
+{
+    "RSA2048_PKCS1_5": {
+        "code": 0,
+        "_code_in_hex": "0x00"
+    },
+    "RSA2048_PSS": {
+        "code": 1,
+        "_code_in_hex": "0x01"
+    },
+    "ECDSAP256": {
+        "code": 2,
+        "_code_in_hex": "0x02"
+    }
+}

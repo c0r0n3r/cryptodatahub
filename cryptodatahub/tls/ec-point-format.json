@@ -1,0 +1,20 @@
+{
+    "UNCOMPRESSED": {
+        "name": "uncompressed",
+        "long_name": null,
+        "code": 0,
+        "_code_in_hex": "0x00"
+    },
+    "ANSIX962_COMPRESSED_PRIME": {
+        "name": "ANSI X.962 compressed prime",
+        "long_name": null,
+        "code": 1,
+        "_code_in_hex": "0x01"
+    },
+    "ANSIX962_COMPRESSED_CHAR2": {
+        "name": "ANSI X.962 compressed char2",
+        "long_name": null,
+        "code": 2,
+        "_code_in_hex": "0x02"
+    }
+}

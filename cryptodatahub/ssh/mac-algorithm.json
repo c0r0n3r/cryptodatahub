@@ -1,0 +1,428 @@
+{
+    "NONE": {
+        "code": "none",
+        "truncated_size": null,
+        "mac": null,
+        "mode": null
+    },
+    "AEAD_AES_128_CCM": {
+        "code": "AEAD_AES_128_CCM",
+        "truncated_size": null,
+        "mac": "AEAD_AES_128_CCM",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "AEAD_AES_128_CCM_SSH": {
+        "code": "aead-aes-128-ccm-ssh",
+        "truncated_size": null,
+        "mac": "AEAD_AES_128_CCM",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "AEAD_AES_256_CCM": {
+        "code": "AEAD_AES_256_CCM",
+        "truncated_size": null,
+        "mac": "AEAD_AES_256_CCM",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "AEAD_AES_256_CCM_SSH": {
+        "code": "aead-aes-256-ccm-ssh",
+        "truncated_size": null,
+        "mac": "AEAD_AES_256_CCM",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "AEAD_AES_128_GCM": {
+        "code": "AEAD_AES_128_GCM",
+        "truncated_size": null,
+        "mac": "AEAD_AES_128_GCM",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "AEAD_AES_128_GCM_SSH": {
+        "code": "aead-aes-128-gcm-ssh",
+        "truncated_size": null,
+        "mac": "AEAD_AES_128_GCM",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "AEAD_AES_256_GCM": {
+        "code": "AEAD_AES_256_GCM",
+        "truncated_size": null,
+        "mac": "AEAD_AES_256_GCM",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "AEAD_AES_256_GCM_SSH": {
+        "code": "aead-aes-256-gcm-ssh",
+        "truncated_size": null,
+        "mac": "AEAD_AES_256_GCM",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "CRYPTICORE_MAC_SSH_COM": {
+        "code": "crypticore-mac@ssh.com",
+        "truncated_size": null,
+        "mac": "CRYPTICORE",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_GOST2012_256_ETM": {
+        "code": "hmac-gost2012-256-etm",
+        "truncated_size": null,
+        "mac": "GOST_R3411_12_256",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "HMAC_GOSTHASH": {
+        "code": "hmac-gosthash",
+        "truncated_size": null,
+        "mac": "GOST_R3411_94",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_GOSTHASH2012_256": {
+        "code": "hmac-gosthash2012-256",
+        "truncated_size": null,
+        "mac": "GOST_R3411_12_256",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA256": {
+        "code": "hmac-sha256",
+        "truncated_size": null,
+        "mac": "SHA2_256",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA1": {
+        "code": "hmac-sha1",
+        "truncated_size": null,
+        "mac": "SHA1",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA1_96": {
+        "code": "hmac-sha1-96",
+        "truncated_size": 96,
+        "mac": "SHA1",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA2_224": {
+        "code": "hmac-sha2-224",
+        "truncated_size": null,
+        "mac": "SHA2_224",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA2_256": {
+        "code": "hmac-sha2-256",
+        "truncated_size": null,
+        "mac": "SHA2_256",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA256_96_SSH_COM": {
+        "code": "hmac-sha256-96@ssh.com",
+        "truncated_size": 96,
+        "mac": "SHA2_256",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA2_256_96": {
+        "code": "hmac-sha2-256-96",
+        "truncated_size": 96,
+        "mac": "SHA2_256",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA2_256_96_ETM_OPENSSH_COM": {
+        "code": "hmac-sha2-256-96-etm@openssh.com",
+        "truncated_size": 96,
+        "mac": "SHA2_256",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "HMAC_SHA2_384": {
+        "code": "hmac-sha2-384",
+        "truncated_size": null,
+        "mac": "SHA2_384",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA2_512": {
+        "code": "hmac-sha2-512",
+        "truncated_size": null,
+        "mac": "SHA2_512",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA2_512_96": {
+        "code": "hmac-sha2-512-96",
+        "truncated_size": 96,
+        "mac": "SHA2_512",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA3_224": {
+        "code": "hmac-sha3-224",
+        "truncated_size": 224,
+        "mac": "SHA3_224",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA3_256": {
+        "code": "hmac-sha3-256",
+        "truncated_size": 256,
+        "mac": "SHA3_256",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA3_384": {
+        "code": "hmac-sha3-384",
+        "truncated_size": 384,
+        "mac": "SHA3_384",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA3_512": {
+        "code": "hmac-sha3-512",
+        "truncated_size": 512,
+        "mac": "SHA3_512",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA2_512_96_ETM_OPENSSH_COM": {
+        "code": "hmac-sha2-512-96-etm@openssh.com",
+        "truncated_size": 96,
+        "mac": "SHA2_512",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "HMAC_SHA224_SSH_COM": {
+        "code": "hmac-sha224@ssh.com",
+        "truncated_size": null,
+        "mac": "SHA2_224",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA256_SSH_COM": {
+        "code": "hmac-sha256@ssh.com",
+        "truncated_size": null,
+        "mac": "SHA2_256",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA384_SSH_COM": {
+        "code": "hmac-sha384@ssh.com",
+        "truncated_size": null,
+        "mac": "SHA2_384",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA512_SSH_COM": {
+        "code": "hmac-sha512@ssh.com",
+        "truncated_size": null,
+        "mac": "SHA2_512",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA2_256_2_SSH_COM": {
+        "code": "hmac-sha256-2@ssh.com",
+        "truncated_size": null,
+        "mac": "SHA2_256",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_MD5": {
+        "code": "hmac-md5",
+        "truncated_size": null,
+        "mac": "MD5",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_MD5_96": {
+        "code": "hmac-md5-96",
+        "truncated_size": null,
+        "mac": "MD5",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "UMAC_32_OPENSSH_COM": {
+        "code": "umac-32@openssh.com",
+        "truncated_size": null,
+        "mac": "UMAC_32",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "UMAC_64_OPENSSH_COM": {
+        "code": "umac-64@openssh.com",
+        "truncated_size": null,
+        "mac": "UMAC_64",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "UMAC_96_OPENSSH_COM": {
+        "code": "umac-96@openssh.com",
+        "truncated_size": null,
+        "mac": "UMAC_96",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "UMAC_128_OPENSSH_COM": {
+        "code": "umac-128@openssh.com",
+        "truncated_size": null,
+        "mac": "UMAC_128",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_SHA1_ETM_OPENSSH_COM": {
+        "code": "hmac-sha1-etm@openssh.com",
+        "truncated_size": null,
+        "mac": "SHA1",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "HMAC_SHA1_96_ETM_OPENSSH_COM": {
+        "code": "hmac-sha1-96-etm@openssh.com",
+        "truncated_size": null,
+        "mac": "SHA1",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "HMAC_SHA2_256_ETM_OPENSSH_COM": {
+        "code": "hmac-sha2-256-etm@openssh.com",
+        "truncated_size": null,
+        "mac": "SHA2_256",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "HMAC_SHA2_512_ETM_OPENSSH_COM": {
+        "code": "hmac-sha2-512-etm@openssh.com",
+        "truncated_size": null,
+        "mac": "SHA2_512",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "HMAC_MD5_ETM_OPENSSH_COM": {
+        "code": "hmac-md5-etm@openssh.com",
+        "truncated_size": null,
+        "mac": "MD5",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "HMAC_MD5_96_ETM_OPENSSH_COM": {
+        "code": "hmac-md5-96-etm@openssh.com",
+        "truncated_size": null,
+        "mac": "MD5",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "HMAC_RIPEMD": {
+        "code": "hmac-ripemd",
+        "truncated_size": null,
+        "mac": "RIPEMD128",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_RIPEMD160": {
+        "code": "hmac-ripemd160",
+        "truncated_size": null,
+        "mac": "RIPEMD160",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_RIPEMD160_SSH_COM": {
+        "code": "hmac-ripemd160@ssh.com",
+        "truncated_size": null,
+        "mac": "RIPEMD160",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_RIPEMD160_96": {
+        "code": "hmac-ripemd160-96",
+        "truncated_size": null,
+        "mac": "RIPEMD160",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_RIPEMD160_96_SSH_COM": {
+        "code": "hmac-ripemd160-96@ssh.com",
+        "truncated_size": null,
+        "mac": "RIPEMD160",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_RIPEMD160_OPENSSH_COM": {
+        "code": "hmac-ripemd160@openssh.com",
+        "truncated_size": null,
+        "mac": "RIPEMD160",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_RIPEMD160_ETM_OPENSSH_COM": {
+        "code": "hmac-ripemd160-etm@openssh.com",
+        "truncated_size": null,
+        "mac": "RIPEMD160",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "HMAC_TIGER128": {
+        "code": "hmac-tiger128",
+        "truncated_size": null,
+        "mac": "TIGER_128",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_TIGER128_96": {
+        "code": "hmac-tiger128-96",
+        "truncated_size": null,
+        "mac": "TIGER_128_96",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_TIGER128_SSH_COM": {
+        "code": "hmac-tiger128@ssh.com",
+        "truncated_size": null,
+        "mac": "TIGER_128",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_TIGER128_96_SSH_COM": {
+        "code": "hmac-tiger128-96@ssh.com",
+        "truncated_size": null,
+        "mac": "TIGER_128_96",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_TIGER160": {
+        "code": "hmac-tiger160",
+        "truncated_size": null,
+        "mac": "TIGER_160",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_TIGER160_96": {
+        "code": "hmac-tiger160-96",
+        "truncated_size": null,
+        "mac": "TIGER_160_96",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_TIGER160_SSH_COM": {
+        "code": "hmac-tiger160@ssh.com",
+        "truncated_size": null,
+        "mac": "TIGER_160",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_TIGER160_96_SSH_COM": {
+        "code": "hmac-tiger160-96@ssh.com",
+        "truncated_size": null,
+        "mac": "TIGER_160_96",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_TIGER192": {
+        "code": "hmac-tiger192",
+        "truncated_size": null,
+        "mac": "TIGER_192",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_TIGER192_96": {
+        "code": "hmac-tiger192-96",
+        "truncated_size": null,
+        "mac": "TIGER_192_96",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_TIGER192_SSH_COM": {
+        "code": "hmac-tiger192@ssh.com",
+        "truncated_size": null,
+        "mac": "TIGER_192",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_TIGER192_96_SSH_COM": {
+        "code": "hmac-tiger192-96@ssh.com",
+        "truncated_size": null,
+        "mac": "TIGER_192_96",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_WHIRLPOOL": {
+        "code": "hmac-whirlpool",
+        "truncated_size": null,
+        "mac": "WHIRLPOOL",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "UMAC_64_ETM_OPENSSH_COM": {
+        "code": "umac-64-etm@openssh.com",
+        "truncated_size": null,
+        "mac": "UMAC_64",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "UMAC_128_ETM_OPENSSH_COM": {
+        "code": "umac-128-etm@openssh.com",
+        "truncated_size": null,
+        "mac": "UMAC_128",
+        "mode": "ENCRYPT_THEN_MAC"
+    },
+    "TIGER128": {
+        "code": "tiger128",
+        "truncated_size": null,
+        "mac": "TIGER_128",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "TIGER160": {
+        "code": "tiger160",
+        "truncated_size": null,
+        "mac": "TIGER_160",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "TIGER192": {
+        "code": "tiger192",
+        "truncated_size": null,
+        "mac": "TIGER_192",
+        "mode": "ENCRYPT_AND_MAC"
+    }
+}

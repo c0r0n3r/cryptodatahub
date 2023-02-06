@@ -1,0 +1,46 @@
+{
+    "CBC": {
+        "name": "CBC",
+        "long_name": "Cipher Block Chaining"
+    },
+    "CCM": {
+        "name": "CCM",
+        "long_name": "Counter with CBC-MAC"
+    },
+    "CCM_8": {
+        "name": "CCM-8",
+        "long_name": "Counter with CBC-MAC (8)"
+    },
+    "CFB": {
+        "name": "CFB",
+        "long_name": "Cipher Feedback"
+    },
+    "CNT": {
+        "name": "CNT",
+        "long_name": "GOST Counter"
+    },
+    "CTR": {
+        "name": "CTR",
+        "long_name": "Counter"
+    },
+    "ECB": {
+        "name": "ECB",
+        "long_name": "Electronic Codebook"
+    },
+    "EAX": {
+        "name": "EAX",
+        "long_name": "encrypt-then-authenticate-then-translate"
+    },
+    "GCM": {
+        "name": "GCM",
+        "long_name": "Galois/Counter Mode"
+    },
+    "MGM": {
+        "name": "MGM",
+        "long_name": "GOST Magma"
+    },
+    "OFB": {
+        "name": "OFB",
+        "long_name": "Output Feedback"
+    }
+}

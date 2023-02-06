@@ -1,0 +1,11 @@
+{
+    "ZLIB_OPENSSH_COM": {
+        "code": "zlib@openssh.com"
+    },
+    "ZLIB": {
+        "code": "zlib"
+    },
+    "NONE": {
+        "code": "none"
+    }
+}

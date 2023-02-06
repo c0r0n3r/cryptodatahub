@@ -1,0 +1,254 @@
+{
+    "ACSS": {
+        "name": "ACSS",
+        "long_name": null,
+        "key_size": 40,
+        "block_size": null
+    },
+    "AES_128": {
+        "name": "AES-128",
+        "long_name": null,
+        "key_size": 128,
+        "block_size": 128
+    },
+    "AES_192": {
+        "name": "AES-192",
+        "long_name": null,
+        "key_size": 192,
+        "block_size": 128
+    },
+    "AES_256": {
+        "name": "AES-256",
+        "long_name": null,
+        "key_size": 256,
+        "block_size": 128
+    },
+    "ARIA_128": {
+        "name": "ARIA-128",
+        "long_name": null,
+        "key_size": 128,
+        "block_size": 128
+    },
+    "ARIA_192": {
+        "name": "ARIA-192",
+        "long_name": null,
+        "key_size": 192,
+        "block_size": 128
+    },
+    "ARIA_256": {
+        "name": "ARIA-256",
+        "long_name": null,
+        "key_size": 256,
+        "block_size": 128
+    },
+    "BLOWFISH": {
+        "name": "Blowfish",
+        "long_name": null,
+        "key_size": 32,
+        "block_size": 64
+    },
+    "TWOFISH128": {
+        "name": "Twofish-128",
+        "long_name": null,
+        "key_size": 128,
+        "block_size": 128
+    },
+    "TWOFISH192": {
+        "name": "Twofish-192",
+        "long_name": null,
+        "key_size": 192,
+        "block_size": 192
+    },
+    "TWOFISH256": {
+        "name": "Twofish-256",
+        "long_name": null,
+        "key_size": 256,
+        "block_size": 256
+    },
+    "CAMELLIA_128": {
+        "name": "Camellia-128",
+        "long_name": null,
+        "key_size": 128,
+        "block_size": 128
+    },
+    "CAMELLIA_256": {
+        "name": "Camellia-256",
+        "long_name": null,
+        "key_size": 256,
+        "block_size": 128
+    },
+    "CAST_128": {
+        "name": "CAST-128",
+        "long_name": null,
+        "key_size": 40,
+        "block_size": 64
+    },
+    "CAST_256": {
+        "name": "CAST-256",
+        "long_name": null,
+        "key_size": 128,
+        "block_size": 128
+    },
+    "CHACHA20": {
+        "name": "ChaCha20",
+        "long_name": null,
+        "key_size": 128,
+        "block_size": null
+    },
+    "CRYPTICORE": {
+        "name": "CryptiCore",
+        "long_name": "CryptiCore (Rabbit)",
+        "key_size": 128,
+        "block_size": null
+    },
+    "DES": {
+        "name": "DES",
+        "long_name": null,
+        "key_size": 56,
+        "block_size": 64
+    },
+    "DES40": {
+        "name": "DES-40",
+        "long_name": null,
+        "key_size": 40,
+        "block_size": 64
+    },
+    "ESTREAM_SALSA20": {
+        "name": "eSTREAM Salsa20",
+        "long_name": null,
+        "key_size": 256,
+        "block_size": null
+    },
+    "FORTEZZA": {
+        "name": "Fortezza",
+        "long_name": null,
+        "key_size": 96,
+        "block_size": 64
+    },
+    "GOST2814789": {
+        "name": "GOST 28147-89",
+        "long_name": null,
+        "key_size": 64,
+        "block_size": 256
+    },
+    "GOST_R3412_15_128": {
+        "name": "GOST R 34.12-2015 \"Kuznyechik\"",
+        "long_name": null,
+        "key_size": 256,
+        "block_size": 128
+    },
+    "GOST_R3412_15_64": {
+        "name": "GOST R 34.12-2015 \"Magma\"",
+        "long_name": null,
+        "key_size": 256,
+        "block_size": 64
+    },
+    "IDEA": {
+        "name": "IDEA",
+        "long_name": null,
+        "key_size": 64,
+        "block_size": 6
+    },
+    "IDEA_128": {
+        "name": "IDEA-128",
+        "long_name": null,
+        "key_size": 128,
+        "block_size": 64
+    },
+    "RC2_40": {
+        "name": "RC2-40",
+        "long_name": null,
+        "key_size": 40,
+        "block_size": 64
+    },
+    "RC2": {
+        "name": "RC2",
+        "long_name": null,
+        "key_size": 64,
+        "block_size": 64
+    },
+    "RC2_56": {
+        "name": "RC2-56",
+        "long_name": null,
+        "key_size": 56,
+        "block_size": 64
+    },
+    "RC2_128": {
+        "name": "RC2-128",
+        "long_name": null,
+        "key_size": 128,
+        "block_size": 64
+    },
+    "RC4_40": {
+        "name": "RC4-40",
+        "long_name": null,
+        "key_size": 40,
+        "block_size": null
+    },
+    "RC4_56": {
+        "name": "RC4-56",
+        "long_name": null,
+        "key_size": 56,
+        "block_size": null
+    },
+    "RC4_64": {
+        "name": "RC4-64",
+        "long_name": null,
+        "key_size": 64,
+        "block_size": null
+    },
+    "RC4_128": {
+        "name": "RC4-128",
+        "long_name": null,
+        "key_size": 128,
+        "block_size": null
+    },
+    "RC4_256": {
+        "name": "RC4-256",
+        "long_name": null,
+        "key_size": 256,
+        "block_size": null
+    },
+    "SALSA20": {
+        "name": "Salsa20",
+        "long_name": null,
+        "key_size": 256,
+        "block_size": null
+    },
+    "SEED": {
+        "name": "SEED",
+        "long_name": null,
+        "key_size": 128,
+        "block_size": 128
+    },
+    "SERPENT_128": {
+        "name": "Serpent-128",
+        "long_name": null,
+        "key_size": 128,
+        "block_size": 128
+    },
+    "SERPENT_192": {
+        "name": "Serpent-192",
+        "long_name": null,
+        "key_size": 192,
+        "block_size": 128
+    },
+    "SERPENT_256": {
+        "name": "Serpent-256",
+        "long_name": null,
+        "key_size": 256,
+        "block_size": 128
+    },
+    "TRIPLE_DES": {
+        "name": "3DES",
+        "long_name": "Triple DES",
+        "key_size": 128,
+        "block_size": 64
+    },
+    "TRIPLE_DES_EDE": {
+        "name": "3DES EDE",
+        "long_name": "Triple DES EDE",
+        "key_size": 128,
+        "block_size": 64
+    }
+}

@@ -1,0 +1,611 @@
+{
+    "C2PNB163V1": {
+        "name": "c2pnb163v1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.1",
+        "size": 163,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2PNB163V2": {
+        "name": "c2pnb163v2",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.2",
+        "size": 163,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2PNB163V3": {
+        "name": "c2pnb163v3",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.3",
+        "size": 163,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2PNB176W1": {
+        "name": "c2pnb176w1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.4",
+        "size": 176,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2TNB191V1": {
+        "name": "c2tnb191v1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.5",
+        "size": 191,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2TNB191V2": {
+        "name": "c2tnb191v2",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.6",
+        "size": 191,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2TNB191V3": {
+        "name": "c2tnb191v3",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.7",
+        "size": 191,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2ONB191V4": {
+        "name": "c2onb191v4",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.8",
+        "size": 191,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2ONB191V5": {
+        "name": "c2onb191v5",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.9",
+        "size": 191,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2PNB208W1": {
+        "name": "c2pnb208w1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.10",
+        "size": 208,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2TNB239V1": {
+        "name": "c2tnb239v1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.11",
+        "size": 239,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2TNB239V2": {
+        "name": "c2tnb239v2",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.12",
+        "size": 239,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2TNB239V3": {
+        "name": "c2tnb239v3",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.13",
+        "size": 239,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2ONB239V4": {
+        "name": "c2onb239v4",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.14",
+        "size": 239,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2ONB239V5": {
+        "name": "c2onb239v5",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.15",
+        "size": 239,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2PNB272W1": {
+        "name": "c2pnb272w1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.16",
+        "size": 272,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2PNB304W1": {
+        "name": "c2pnb304w1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.17",
+        "size": 304,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2TNB359V1": {
+        "name": "c2tnb359v1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.18",
+        "size": 359,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2PNB368W1": {
+        "name": "c2pnb368w1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.19",
+        "size": 368,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "C2TNB431R1": {
+        "name": "c2tnb431r1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.0.20",
+        "size": 431,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "CECPQ2": {
+        "name": "CECPQ2",
+        "long_name": null,
+        "oid": null,
+        "size": 256,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "GC256A": {
+        "name": "tc26-gost-3410-2012-256-paramSetA",
+        "long_name": null,
+        "oid": "1.2.643.7.1.2.1.1.1",
+        "size": 256,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "GC256B": {
+        "name": "GostR3410-2001-CryptoPro-A-ParamSet",
+        "long_name": null,
+        "oid": "1.2.643.2.2.35.1",
+        "size": 256,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "GC256C": {
+        "name": "GostR3410-2001-CryptoPro-B-ParamSet",
+        "long_name": null,
+        "oid": "1.2.643.2.2.35.2",
+        "size": 256,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "GC256D": {
+        "name": "GostR3410-2001-CryptoPro-C-ParamSet",
+        "long_name": null,
+        "oid": "1.2.643.2.2.35.3",
+        "size": 256,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "GC512A": {
+        "name": "tc26-gost-3410-12-512-paramSetA",
+        "long_name": null,
+        "oid": "1.2.643.7.1.2.1.2.1",
+        "size": 512,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "GC512B": {
+        "name": "tc26-gost-3410-12-512-paramSetB",
+        "long_name": null,
+        "oid": "1.2.643.7.1.2.1.2.2",
+        "size": 512,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "GC512C": {
+        "name": "tc26-gost-3410-2012-512-paramSetC",
+        "long_name": null,
+        "oid": "1.2.643.7.1.2.1.2.3",
+        "size": 512,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "PRIME239V1": {
+        "name": "prime239v1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.1.4",
+        "size": 239,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "PRIME239V2": {
+        "name": "prime239v2",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.1.5",
+        "size": 239,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "PRIME239V3": {
+        "name": "prime239v3",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.1.6",
+        "size": 239,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP112R1": {
+        "name": "secp112r1",
+        "long_name": null,
+        "oid": "1.3.132.0.6",
+        "size": 112,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP112R2": {
+        "name": "secp112r2",
+        "long_name": null,
+        "oid": "1.3.132.0.7",
+        "size": 112,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP128R1": {
+        "name": "secp128r1",
+        "long_name": null,
+        "oid": "1.3.132.0.28",
+        "size": 128,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP128R2": {
+        "name": "secp128r2",
+        "long_name": null,
+        "oid": "1.3.132.0.29",
+        "size": 128,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT113R1": {
+        "name": "sect113r1",
+        "long_name": null,
+        "oid": "1.3.132.0.4",
+        "size": 113,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT113R2": {
+        "name": "sect113r2",
+        "long_name": null,
+        "oid": "1.3.132.0.5",
+        "size": 113,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT131R1": {
+        "name": "sect131r1",
+        "long_name": null,
+        "oid": "1.3.132.0.22",
+        "size": 131,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT131R2": {
+        "name": "sect131r2",
+        "long_name": null,
+        "oid": "1.3.132.0.23",
+        "size": 131,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT163K1": {
+        "name": "sect163k1",
+        "long_name": null,
+        "oid": "1.3.132.0.1",
+        "size": 163,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT163R1": {
+        "name": "sect163r1",
+        "long_name": null,
+        "oid": "1.3.132.0.2",
+        "size": 163,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT163R2": {
+        "name": "sect163r2",
+        "long_name": null,
+        "oid": "1.3.132.0.15",
+        "size": 163,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT193R1": {
+        "name": "sect193r1",
+        "long_name": null,
+        "oid": "1.3.132.0.24",
+        "size": 193,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT193R2": {
+        "name": "sect193r2",
+        "long_name": null,
+        "oid": "1.3.132.0.25",
+        "size": 193,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT233K1": {
+        "name": "sect233k1",
+        "long_name": null,
+        "oid": "1.3.132.0.26",
+        "size": 233,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT233R1": {
+        "name": "sect233r1",
+        "long_name": null,
+        "oid": "1.3.132.0.27",
+        "size": 233,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT239K1": {
+        "name": "sect239k1",
+        "long_name": null,
+        "oid": "1.3.132.0.3",
+        "size": 239,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT283K1": {
+        "name": "sect283k1",
+        "long_name": null,
+        "oid": "1.3.132.0.16",
+        "size": 283,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT283R1": {
+        "name": "sect283r1",
+        "long_name": null,
+        "oid": "1.3.132.0.17",
+        "size": 283,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT409K1": {
+        "name": "sect409k1",
+        "long_name": null,
+        "oid": "1.3.132.0.36",
+        "size": 409,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT409R1": {
+        "name": "sect409r1",
+        "long_name": null,
+        "oid": "1.3.132.0.37",
+        "size": 409,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT571K1": {
+        "name": "sect571k1",
+        "long_name": null,
+        "oid": "1.3.132.0.38",
+        "size": 571,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECT571R1": {
+        "name": "sect571r1",
+        "long_name": null,
+        "oid": "1.3.132.0.39",
+        "size": 571,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP160K1": {
+        "name": "secp160k1",
+        "long_name": null,
+        "oid": "1.3.132.0.9",
+        "size": 160,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP160R1": {
+        "name": "secp160r1",
+        "long_name": null,
+        "oid": "1.3.132.0.8",
+        "size": 160,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP160R2": {
+        "name": "secp160r2",
+        "long_name": null,
+        "oid": "1.3.132.0.30",
+        "size": 160,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP192K1": {
+        "name": "secp192k1",
+        "long_name": null,
+        "oid": "1.3.132.0.31",
+        "size": 192,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "PRIME192V1": {
+        "name": "prime192v1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.1.1",
+        "size": 192,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "PRIME192V2": {
+        "name": "prime192v2",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.1.2",
+        "size": 192,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "PRIME192V3": {
+        "name": "prime192v3",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.1.3",
+        "size": 192,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP224K1": {
+        "name": "secp224k1",
+        "long_name": null,
+        "oid": "1.3.132.0.32",
+        "size": 224,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP224R1": {
+        "name": "secp224r1",
+        "long_name": null,
+        "oid": "1.3.132.0.33",
+        "size": 224,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP256K1": {
+        "name": "secp256k1",
+        "long_name": null,
+        "oid": "1.3.132.0.10",
+        "size": 256,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "PRIME256V1": {
+        "name": "prime256v1",
+        "long_name": null,
+        "oid": "1.2.840.10045.3.1.7",
+        "size": 256,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP384R1": {
+        "name": "secp384r1",
+        "long_name": null,
+        "oid": "1.3.132.0.34",
+        "size": 384,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "SECP521R1": {
+        "name": "secp521r1",
+        "long_name": null,
+        "oid": "1.3.132.0.35",
+        "size": 521,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP160R1": {
+        "name": "brainpoolp160r1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.1",
+        "size": 160,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP160T1": {
+        "name": "brainpoolp160t1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.2",
+        "size": 160,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP192R1": {
+        "name": "brainpoolp192r1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.3",
+        "size": 192,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP192T1": {
+        "name": "brainpoolp192t1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.4",
+        "size": 192,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP224R1": {
+        "name": "brainpoolp224r1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.5",
+        "size": 224,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP224T1": {
+        "name": "brainpoolp224t1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.6",
+        "size": 224,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP256R1": {
+        "name": "brainpoolp256r1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.7",
+        "size": 256,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP256T1": {
+        "name": "brainpoolp256t1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.8",
+        "size": 256,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP320R1": {
+        "name": "brainpoolp320r1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.9",
+        "size": 320,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP320T1": {
+        "name": "brainpoolp320t1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.10",
+        "size": 320,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP384R1": {
+        "name": "brainpoolp384r1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.11",
+        "size": 384,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP384T1": {
+        "name": "brainpoolp384t1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.12",
+        "size": 384,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP512R1": {
+        "name": "brainpoolp512r1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.13",
+        "size": 512,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "BRAINPOOLP512T1": {
+        "name": "brainpoolp512t1",
+        "long_name": null,
+        "oid": "1.3.36.3.3.2.8.1.1.14",
+        "size": 512,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "CURVE25519": {
+        "name": "Curve25519",
+        "long_name": null,
+        "oid": "1.3.101.110",
+        "size": 256,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "CURVE448": {
+        "name": "Curve448",
+        "long_name": null,
+        "oid": "1.3.101.111",
+        "size": 448,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "FFDHE2048": {
+        "name": "ffdhe2048",
+        "long_name": null,
+        "oid": null,
+        "size": 2048,
+        "group_type": "DH_PARAM"
+    },
+    "FFDHE3072": {
+        "name": "ffdhe3072",
+        "long_name": null,
+        "oid": null,
+        "size": 3072,
+        "group_type": "DH_PARAM"
+    },
+    "FFDHE4096": {
+        "name": "ffdhe4096",
+        "long_name": null,
+        "oid": null,
+        "size": 4096,
+        "group_type": "DH_PARAM"
+    },
+    "FFDHE6144": {
+        "name": "ffdhe6144",
+        "long_name": null,
+        "oid": null,
+        "size": 6144,
+        "group_type": "DH_PARAM"
+    },
+    "FFDHE8192": {
+        "name": "ffdhe8192",
+        "long_name": null,
+        "oid": null,
+        "size": 8192,
+        "group_type": "DH_PARAM"
+    }
+}

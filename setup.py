@@ -51,6 +51,7 @@ setup(
     extras_require={
         ":python_version < '3'": [
             "enum34==1.1.6",
+            "pathlib2==2.3.7.post1",
             "Mock",
         ],
 
@@ -61,7 +62,16 @@ setup(
 
     packages=[
         'cryptodatahub',
+        'cryptodatahub.common',
+        'cryptodatahub.ssh',
+        'cryptodatahub.tls',
     ],
+
+    package_data={
+        'cryptodatahub.common': ['*.json'],
+        'cryptodatahub.ssh': ['*.json'],
+        'cryptodatahub.tls': ['*.json'],
+    },
 
     test_suite='setup.test_discover',
 

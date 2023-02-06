@@ -1,0 +1,287 @@
+{
+    "DIFFIE_HELLMAN_GROUP1_SHA1": {
+        "code": "diffie-hellman-group1-sha1",
+        "kex": "DHE",
+        "key_size": 1024
+    },
+    "DIFFIE_HELLMAN_GROUP1_SHA256": {
+        "code": "diffie-hellman-group1-sha256",
+        "kex": "DHE",
+        "key_size": 1024
+    },
+    "DIFFIE_HELLMAN_GROUP1_SHA1_WIN7_MICROSOFT_COM": {
+        "code": "diffie-hellman-group1-sha1-win7@microsoft.com",
+        "kex": "DHE",
+        "key_size": 1024
+    },
+    "DIFFIE_HELLMAN_GROUP14_SHA1": {
+        "code": "diffie-hellman-group14-sha1",
+        "kex": "DHE",
+        "key_size": 2048
+    },
+    "DIFFIE_HELLMAN_GROUP1_SHA14_WIN7_MICROSOFT_COM": {
+        "code": "diffie-hellman-group14-sha1-win7@microsoft.com",
+        "kex": "DHE",
+        "key_size": 2048
+    },
+    "DIFFIE_HELLMAN_GROUP14_SHA224_SSH_COM": {
+        "code": "diffie-hellman-group14-sha224@ssh.com",
+        "kex": "DHE",
+        "key_size": 2048
+    },
+    "DIFFIE_HELLMAN_GROUP14_SHA256": {
+        "code": "diffie-hellman-group14-sha256",
+        "kex": "DHE",
+        "key_size": 2048
+    },
+    "DIFFIE_HELLMAN_GROUP14_SHA256_SSH_COM": {
+        "code": "diffie-hellman-group14-sha256@ssh.com",
+        "kex": "DHE",
+        "key_size": 2048
+    },
+    "DIFFIE_HELLMAN_GROUP15_SHA256": {
+        "code": "diffie-hellman-group15-sha256",
+        "kex": "DHE",
+        "key_size": 3072
+    },
+    "DIFFIE_HELLMAN_GROUP15_SHA256_SSH_COM": {
+        "code": "diffie-hellman-group15-sha256@ssh.com",
+        "kex": "DHE",
+        "key_size": 3072
+    },
+    "DIFFIE_HELLMAN_GROUP15_SHA384_SSH_COM": {
+        "code": "diffie-hellman-group15-sha384@ssh.com",
+        "kex": "DHE",
+        "key_size": 3072
+    },
+    "DIFFIE_HELLMAN_GROUP15_SHA512": {
+        "code": "diffie-hellman-group15-sha512",
+        "kex": "DHE",
+        "key_size": 3072
+    },
+    "DIFFIE_HELLMAN_GROUP16_SHA256": {
+        "code": "diffie-hellman-group16-sha256",
+        "kex": "DHE",
+        "key_size": 4096
+    },
+    "DIFFIE_HELLMAN_GROUP16_SHA384_SSH_COM": {
+        "code": "diffie-hellman-group16-sha384@ssh.com",
+        "kex": "DHE",
+        "key_size": 4096
+    },
+    "DIFFIE_HELLMAN_GROUP16_SHA512": {
+        "code": "diffie-hellman-group16-sha512",
+        "kex": "DHE",
+        "key_size": 4096
+    },
+    "DIFFIE_HELLMAN_GROUP16_SHA512_SSH_COM": {
+        "code": "diffie-hellman-group16-sha512@ssh.com",
+        "kex": "DHE",
+        "key_size": 4096
+    },
+    "DIFFIE_HELLMAN_GROUP17_SHA512": {
+        "code": "diffie-hellman-group17-sha512",
+        "kex": "DHE",
+        "key_size": 6144
+    },
+    "DIFFIE_HELLMAN_GROUP18_SHA512": {
+        "code": "diffie-hellman-group18-sha512",
+        "kex": "DHE",
+        "key_size": 8192
+    },
+    "DIFFIE_HELLMAN_GROUP18_SHA512_SSH_COM": {
+        "code": "diffie-hellman-group18-sha512@ssh.com",
+        "kex": "DHE",
+        "key_size": 8192
+    },
+    "DIFFIE_HELLMAN_GROUP_EXCHANGE_SHA1": {
+        "code": "diffie-hellman-group-exchange-sha1",
+        "kex": "DHE",
+        "key_size": null
+    },
+    "DIFFIE_HELLMAN_GROUP_EXCHANGE_SHA256": {
+        "code": "diffie-hellman-group-exchange-sha256",
+        "kex": "DHE",
+        "key_size": null
+    },
+    "DIFFIE_HELLMAN_GROUP_EXCHANGE_SHA256_WIN7_MICROSOFT_COM": {
+        "code": "diffie-hellman-group-exchange-sha256-win7@microsoft.com",
+        "kex": "DHE",
+        "key_size": null
+    },
+    "DIFFIE_HELLMAN_GROUP_EXCHANGE_SHA512": {
+        "code": "diffie-hellman-group-exchange-sha512",
+        "kex": "DHE",
+        "key_size": null
+    },
+    "DIFFIE_HELLMAN_GROUP_EXCHANGE_SHA224_SSH_COM": {
+        "code": "diffie-hellman-group-exchange-sha224@ssh.com",
+        "kex": "DHE",
+        "key_size": null
+    },
+    "DIFFIE_HELLMAN_GROUP_EXCHANGE_SHA384_SSH_COM": {
+        "code": "diffie-hellman-group-exchange-sha384@ssh.com",
+        "kex": "DHE",
+        "key_size": null
+    },
+    "DIFFIE_HELLMAN_GROUP_EXCHANGE_SHA512_SSH_COM": {
+        "code": "diffie-hellman-group-exchange-sha512@ssh.com",
+        "kex": "DHE",
+        "key_size": null
+    },
+    "ECDH_SHA2_1_3_132_0_10": {
+        "code": "ecdh-sha2-1.3.132.0.10",
+        "kex": "ECDHE",
+        "key_size": 256
+    },
+    "ECDH_SHA2_BRAINPOOLP256R1_GENUA_DE": {
+        "code": "ecdh-sha2-brainpoolp256r1@genua.de",
+        "kex": "ECDHE",
+        "key_size": 256
+    },
+    "ECDH_SHA2_BRAINPOOLP384R1_GENUA_DE": {
+        "code": "ecdh-sha2-brainpoolp384r1@genua.de",
+        "kex": "ECDHE",
+        "key_size": 384
+    },
+    "ECDH_SHA2_BRAINPOOLP521R1_GENUA_DE": {
+        "code": "ecdh-sha2-brainpoolp521r1@genua.de",
+        "kex": "ECDHE",
+        "key_size": 521
+    },
+    "ECDH_SHA2_CURVE25519": {
+        "code": "ecdh-sha2-curve25519",
+        "kex": "ECDHE",
+        "key_size": 255
+    },
+    "ECDH_SHA2_NISTB233": {
+        "code": "ecdh-sha2-nistb233",
+        "kex": "ECDHE",
+        "key_size": 233
+    },
+    "ECDH_SHA2_NISTB409": {
+        "code": "ecdh-sha2-nistb409",
+        "kex": "ECDHE",
+        "key_size": 409
+    },
+    "ECDH_SHA2_NISTK163": {
+        "code": "ecdh-sha2-nistk163",
+        "kex": "ECDHE",
+        "key_size": 163
+    },
+    "ECDH_SHA2_NISTK233": {
+        "code": "ecdh-sha2-nistk233",
+        "kex": "ECDHE",
+        "key_size": 233
+    },
+    "ECDH_SHA2_NISTK283": {
+        "code": "ecdh-sha2-nistk283",
+        "kex": "ECDHE",
+        "key_size": 283
+    },
+    "ECDH_SHA2_NISTK409": {
+        "code": "ecdh-sha2-nistk409",
+        "kex": "ECDHE",
+        "key_size": 409
+    },
+    "ECDH_SHA2_NISTP192": {
+        "code": "ecdh-sha2-nistp192",
+        "kex": "ECDHE",
+        "key_size": 192
+    },
+    "ECDH_SHA2_NISTP224": {
+        "code": "ecdh-sha2-nistp224",
+        "kex": "ECDHE",
+        "key_size": 224
+    },
+    "ECDH_SHA2_NISTP256": {
+        "code": "ecdh-sha2-nistp256",
+        "kex": "ECDHE",
+        "key_size": 256
+    },
+    "ECDH_SHA2_NISTP256_WIN7_MICROSOFT_COM": {
+        "code": "ecdh-sha2-nistp256-win7@microsoft.com",
+        "kex": "ECDHE",
+        "key_size": 256
+    },
+    "ECDH_SHA2_NISTP384": {
+        "code": "ecdh-sha2-nistp384",
+        "kex": "ECDHE",
+        "key_size": 384
+    },
+    "ECDH_SHA2_NISTP384_WIN7_MICROSOFT_COM": {
+        "code": "ecdh-sha2-nistp384-win7@microsoft.com",
+        "kex": "ECDHE",
+        "key_size": 384
+    },
+    "ECDH_SHA2_NISTP521": {
+        "code": "ecdh-sha2-nistp521",
+        "kex": "ECDHE",
+        "key_size": 521
+    },
+    "ECDH_SHA2_NISTP521_WIN7_MICROSOFT_COM": {
+        "code": "ecdh-sha2-nistp521-win7@microsoft.com",
+        "kex": "ECDHE",
+        "key_size": 521
+    },
+    "ECDH_SHA2_NISTT571": {
+        "code": "ecdh-sha2-nistt571",
+        "kex": "ECDHE",
+        "key_size": 571
+    },
+    "ECMQV_SHA2": {
+        "code": "ecmqv-sha2",
+        "kex": "ECDHE",
+        "key_size": null
+    },
+    "CURVE25519_SHA256": {
+        "code": "curve25519-sha256",
+        "kex": "ECDHE",
+        "key_size": 255
+    },
+    "CURVE25519_SHA256_LIBSSH_ORG": {
+        "code": "curve25519-sha256@libssh.org",
+        "kex": "ECDHE",
+        "key_size": 255
+    },
+    "CURVE448_SHA512_LIBSSH_ORG": {
+        "code": "curve448-sha512",
+        "kex": "ECDHE",
+        "key_size": 448
+    },
+    "KEXGUESS2_MATT_UCC_ASN_AU": {
+        "code": "kexguess2@matt.ucc.asn.au",
+        "kex": "DHE",
+        "key_size": null
+    },
+    "M383_SHA384_LIBASSH_ORG": {
+        "code": "m383-sha384@libassh.org",
+        "kex": "ECDHE",
+        "key_size": 383
+    },
+    "M511_SHA512_LIBASSH_ORG": {
+        "code": "m511-sha512@libassh.org",
+        "kex": "ECDHE",
+        "key_size": 511
+    },
+    "RSA1024_SHA1": {
+        "code": "rsa1024-sha1",
+        "kex": "RSA",
+        "key_size": 1024
+    },
+    "RSA2048_SHA256": {
+        "code": "rsa2048-sha256",
+        "kex": "RSA",
+        "key_size": 2048
+    },
+    "SNTRUP4591761X25519_SHA512_TINYSSH_ORG": {
+        "code": "sntrup4591761x25519-sha512@tinyssh.org",
+        "kex": "SNTRUP_X25519",
+        "key_size": 10000
+    },
+    "SNTRUP761X25519_SHA512_OPENSSH_COM": {
+        "code": "sntrup761x25519-sha512@openssh.com",
+        "kex": "SNTRUP_X25519",
+        "key_size": 9264
+    }
+}

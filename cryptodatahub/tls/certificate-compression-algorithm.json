@@ -1,0 +1,14 @@
+{
+    "ZLIB": {
+        "code": 1,
+        "_code_in_hex": "0x0001"
+    },
+    "BROTLI": {
+        "code": 2,
+        "_code_in_hex": "0x0002"
+    },
+    "ZSTD": {
+        "code": 3,
+        "_code_in_hex": "0x0003"
+    }
+}

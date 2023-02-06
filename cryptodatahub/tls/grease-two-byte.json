@@ -1,0 +1,66 @@
+{
+    "GREASE_0A0A": {
+        "_code_in_hex": "0x0a0a",
+        "code": 2570
+    },
+    "GREASE_1A1A": {
+        "_code_in_hex": "0x1a1a",
+        "code": 6682
+    },
+    "GREASE_2A2A": {
+        "_code_in_hex": "0x2a2a",
+        "code": 10794
+    },
+    "GREASE_3A3A": {
+        "_code_in_hex": "0x3a3a",
+        "code": 14906
+    },
+    "GREASE_4A4A": {
+        "_code_in_hex": "0x4a4a",
+        "code": 19018
+    },
+    "GREASE_5A5A": {
+        "_code_in_hex": "0x5a5a",
+        "code": 23130
+    },
+    "GREASE_6A6A": {
+        "_code_in_hex": "0x6a6a",
+        "code": 27242
+    },
+    "GREASE_7A7A": {
+        "_code_in_hex": "0x7a7a",
+        "code": 31354
+    },
+    "GREASE_8A8A": {
+        "_code_in_hex": "0x8a8a",
+        "code": 35466
+    },
+    "GREASE_9A9A": {
+        "_code_in_hex": "0x9a9a",
+        "code": 39578
+    },
+    "GREASE_AAAA": {
+        "_code_in_hex": "0xaaaa",
+        "code": 43690
+    },
+    "GREASE_BABA": {
+        "_code_in_hex": "0xbaba",
+        "code": 47802
+    },
+    "GREASE_CACA": {
+        "_code_in_hex": "0xcaca",
+        "code": 51914
+    },
+    "GREASE_DADA": {
+        "_code_in_hex": "0xdada",
+        "code": 56026
+    },
+    "GREASE_EAEA": {
+        "_code_in_hex": "0xeaea",
+        "code": 60138
+    },
+    "GREASE_FAFA": {
+        "_code_in_hex": "0xfafa",
+        "code": 64250
+    }
+}

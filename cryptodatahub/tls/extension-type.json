@@ -1,0 +1,277 @@
+{
+    "SERVER_NAME": {
+        "_standard": "RFC6066",
+        "_code_in_hex": "0x0000",
+        "code": 0
+    },
+    "MAX_FRAGMENT_LENGTH": {
+        "_standard": "RFC6066",
+        "_code_in_hex": "0x0001",
+        "code": 1
+    },
+    "CLIENT_CERTIFICATE_URL": {
+        "_standard": "RFC6066",
+        "_code_in_hex": "0x0002",
+        "code": 2
+    },
+    "TRUSTED_CA_KEYS": {
+        "_standard": "RFC6066",
+        "_code_in_hex": "0x0003",
+        "code": 3
+    },
+    "TRUNCATED_HMAC": {
+        "_standard": "RFC6066",
+        "_code_in_hex": "0x0004",
+        "code": 4
+    },
+    "STATUS_REQUEST": {
+        "_standard": "RFC6066",
+        "_code_in_hex": "0x0005",
+        "code": 5
+    },
+    "USER_MAPPING": {
+        "_standard": "RFC4681",
+        "_code_in_hex": "0x0006",
+        "code": 6
+    },
+    "CLIENT_AUTHZ": {
+        "_standard": "RFC5878",
+        "_code_in_hex": "0x0007",
+        "code": 7
+    },
+    "SERVER_AUTHZ": {
+        "_standard": "RFC5878",
+        "_code_in_hex": "0x0008",
+        "code": 8
+    },
+    "CERT_TYPE": {
+        "_standard": "RFC6091",
+        "_code_in_hex": "0x0009",
+        "code": 9
+    },
+    "SUPPORTED_GROUPS": {
+        "_standard": "RFC-IETF-TLS-RFC",
+        "_code_in_hex": "0x000a",
+        "code": 10
+    },
+    "EC_POINT_FORMATS": {
+        "_standard": "RFC-IETF-TLS-RFC",
+        "_code_in_hex": "0x000b",
+        "code": 11
+    },
+    "SRP": {
+        "_standard": "RFC5054",
+        "_code_in_hex": "0x000c",
+        "code": 12
+    },
+    "SIGNATURE_ALGORITHMS": {
+        "_standard": "RFC5246",
+        "_code_in_hex": "0x000d",
+        "code": 13
+    },
+    "USE_SRTP": {
+        "_standard": "RFC5764",
+        "_code_in_hex": "0x000e",
+        "code": 14
+    },
+    "HEARTBEAT": {
+        "_standard": "RFC6520",
+        "_code_in_hex": "0x000f",
+        "code": 15
+    },
+    "APPLICATION_LAYER_PROTOCOL_NEGOTIATION": {
+        "_standard": "RFC7301",
+        "_code_in_hex": "0x0010",
+        "code": 16
+    },
+    "STATUS_REQUEST_V2": {
+        "_standard": "RFC6961",
+        "_code_in_hex": "0x0011",
+        "code": 17
+    },
+    "SIGNED_CERTIFICATE_TIMESTAMP": {
+        "_standard": "RFC6962",
+        "_code_in_hex": "0x0012",
+        "code": 18
+    },
+    "CLIENT_CERTIFICATE_TYPE": {
+        "_standard": "RFC7250",
+        "_code_in_hex": "0x0013",
+        "code": 19
+    },
+    "SERVER_CERTIFICATE_TYPE": {
+        "_standard": "RFC7250",
+        "_code_in_hex": "0x0014",
+        "code": 20
+    },
+    "PADDING": {
+        "_standard": "RFC7685",
+        "_code_in_hex": "0x0015",
+        "code": 21
+    },
+    "ENCRYPT_THEN_MAC": {
+        "_standard": "RFC7366",
+        "_code_in_hex": "0x0016",
+        "code": 22
+    },
+    "EXTENDED_MASTER_SECRET": {
+        "_standard": "RFC7627",
+        "_code_in_hex": "0x0017",
+        "code": 23
+    },
+    "TOKEN_BINDING": {
+        "_standard": "DRAFT-IETF-TOKBIND-NEGOTIATION",
+        "_code_in_hex": "0x0018",
+        "code": 24
+    },
+    "CACHED_INFO": {
+        "_standard": "RFC7924",
+        "_code_in_hex": "0x0019",
+        "code": 25
+    },
+    "COMPRESS_CERTIFICATE": {
+        "_standard": "RFC-ietf-tls-certificate-compression-09",
+        "_code_in_hex": "0x001b",
+        "code": 27
+    },
+    "RECORD_SIZE_LIMIT": {
+        "_standard": "RFC8849",
+        "_code_in_hex": "0x001c",
+        "code": 28
+    },
+    "PWD_PROTECT": {
+        "_standard": "RFC-HARKINS-TLS-DRAGONFLY-03",
+        "_code_in_hex": "0x001d",
+        "code": 29
+    },
+    "PWD_CLEAR": {
+        "_standard": "RFC-HARKINS-TLS-DRAGONFLY-03",
+        "_code_in_hex": "0x001e",
+        "code": 30
+    },
+    "PASSWORD_SALT": {
+        "_standard": "RFC-HARKINS-TLS-DRAGONFLY-03",
+        "_code_in_hex": "0x001f",
+        "code": 31
+    },
+    "TICKET_PINNING": {
+        "_standard": "RFC8672",
+        "_code_in_hex": "0x0020",
+        "code": 32
+    },
+    "TLS_CERT_WITH_EXTERN_PSK": {
+        "_standard": "RFC-IETF-TLS-TLS13-CERT-WITH-EXTERN-PSK-07",
+        "_code_in_hex": "0x0021",
+        "code": 33
+    },
+    "DELEGATED_CREDENTIALS": {
+        "_standard": "RFC-IETF-TLS-SUBCERTS-15",
+        "_code_in_hex": "0x0022",
+        "code": 34
+    },
+    "SESSION_TICKET": {
+        "_standard": "RFC4507",
+        "_code_in_hex": "0x0023",
+        "code": 35
+    },
+    "KEY_SHARE_RESERVED": {
+        "_standard": "DRAFT-IETF-TLS-TLS13-20",
+        "_code_in_hex": "0x0028",
+        "code": 40
+    },
+    "PRE_SHARED_KEY": {
+        "_standard": "DRAFT-IETF-TLS-TLS13-20",
+        "_code_in_hex": "0x0029",
+        "code": 41
+    },
+    "EARLY_DATA": {
+        "_standard": "DRAFT-IETF-TLS-TLS13-20",
+        "_code_in_hex": "0x002a",
+        "code": 42
+    },
+    "SUPPORTED_VERSIONS": {
+        "_standard": "DRAFT-IETF-TLS-TLS13-20",
+        "_code_in_hex": "0x002b",
+        "code": 43
+    },
+    "COOKIE": {
+        "_standard": "DRAFT-IETF-TLS-TLS13-20",
+        "_code_in_hex": "0x002c",
+        "code": 44
+    },
+    "PSK_KEY_EXCHANGE_MODES": {
+        "_standard": "DRAFT-IETF-TLS-TLS13-20",
+        "_code_in_hex": "0x002d",
+        "code": 45
+    },
+    "CERTIFICATE_AUTHORITIES": {
+        "_standard": "DRAFT-IETF-TLS-TLS13-20",
+        "_code_in_hex": "0x002f",
+        "code": 47
+    },
+    "OID_FILTERS": {
+        "_standard": "DRAFT-IETF-TLS-TLS13-20",
+        "_code_in_hex": "0x0030",
+        "code": 48
+    },
+    "POST_HANDSHAKE_AUTH": {
+        "_standard": "DRAFT-IETF-TLS-TLS13-20",
+        "_code_in_hex": "0x0031",
+        "code": 49
+    },
+    "SIGNATURE_ALGORITHMS_CERT": {
+        "_standard": "DRAFT-IETF-TLS-TLS13-23",
+        "_code_in_hex": "0x0032",
+        "code": 50
+    },
+    "KEY_SHARE": {
+        "_standard": "DRAFT-IETF-TLS-TLS13-23",
+        "_code_in_hex": "0x0033",
+        "code": 51
+    },
+    "TRANSPARENCY_INFO": {
+        "_standard": "DRAFT-IETF-TRANS-RFC6962-BIS",
+        "_code_in_hex": "0x0034",
+        "code": 52
+    },
+    "CONNECTION_ID": {
+        "_standard": "DRAFT-IETF-TLS-DTLS-CONNECTION-ID",
+        "_code_in_hex": "0x0035",
+        "code": 53
+    },
+    "EXTERNAL_ID_HASH": {
+        "_standard": "RFC-IETF-MMUSIC-SDP-UKS-07",
+        "_code_in_hex": "0x0037",
+        "code": 55
+    },
+    "EXTERNAL_SESSION_ID": {
+        "_standard": "RFC-IETF-MMUSIC-SDP-UKS-07",
+        "_code_in_hex": "0x0038",
+        "code": 56
+    },
+    "NEXT_PROTOCOL_NEGOTIATION": {
+        "_standard": "DRAFT-AGL-TLS-NEXTPROTONEG-04",
+        "_code_in_hex": "0x3374",
+        "code": 13172
+    },
+    "APPLICATION_LAYER_PROTOCOL_SETTINGS": {
+        "_standard": "DRAFT-VVV-TLS-ALPS",
+        "_code_in_hex": "0x4469",
+        "code": 17513
+    },
+    "CHANNEL_ID": {
+        "_standard": "DRAFT-BALFANZ-TLS-OBC-01",
+        "_code_in_hex": "0x7550",
+        "code": 30032
+    },
+    "RENEGOTIATION_INFO": {
+        "_standard": "DRAFT-AGL-TLS-NEXTPROTONEG-03",
+        "_code_in_hex": "0xff01",
+        "code": 65281
+    },
+    "SHORT_RECORD_HEADER": {
+        "_standard": "DRAFT-FOSSATI-TLS-EXT-HEADER",
+        "_code_in_hex": "0xff03",
+        "code": 65283
+    }
+}

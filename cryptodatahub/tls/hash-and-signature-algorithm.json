@@ -1,0 +1,248 @@
+{
+    "ANONYMOUS_NONE": {
+        "_code_in_hex": "0x0000",
+        "code": 0,
+        "hash_algorithm": null,
+        "signature_algorithm": "anon"
+    },
+    "ANONYMOUS_MD5": {
+        "_code_in_hex": "0x0100",
+        "code": 256,
+        "hash_algorithm": "MD5",
+        "signature_algorithm": "anon"
+    },
+    "ANONYMOUS_SHA1": {
+        "_code_in_hex": "0x0200",
+        "code": 512,
+        "hash_algorithm": "SHA1",
+        "signature_algorithm": "anon"
+    },
+    "ANONYMOUS_SHA224": {
+        "_code_in_hex": "0x0300",
+        "code": 768,
+        "hash_algorithm": "SHA2_224",
+        "signature_algorithm": "anon"
+    },
+    "ANONYMOUS_SHA256": {
+        "_code_in_hex": "0x0400",
+        "code": 1024,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "anon"
+    },
+    "ANONYMOUS_SHA384": {
+        "_code_in_hex": "0x0500",
+        "code": 1280,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "anon"
+    },
+    "ANONYMOUS_SHA512": {
+        "_code_in_hex": "0x0006",
+        "code": 6,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "anon"
+    },
+    "RSA_NONE": {
+        "_code_in_hex": "0x0001",
+        "code": 1,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA"
+    },
+    "RSA_MD5": {
+        "_code_in_hex": "0x0101",
+        "code": 257,
+        "hash_algorithm": "MD5",
+        "signature_algorithm": "RSA"
+    },
+    "RSA_SHA1": {
+        "_code_in_hex": "0x0201",
+        "code": 513,
+        "hash_algorithm": "SHA1",
+        "signature_algorithm": "RSA"
+    },
+    "RSA_SHA224": {
+        "_code_in_hex": "0x0301",
+        "code": 769,
+        "hash_algorithm": "SHA2_224",
+        "signature_algorithm": "RSA"
+    },
+    "RSA_SHA256": {
+        "_code_in_hex": "0x0401",
+        "code": 1025,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "RSA"
+    },
+    "RSA_SHA384": {
+        "_code_in_hex": "0x0501",
+        "code": 1281,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "RSA"
+    },
+    "RSA_SHA512": {
+        "_code_in_hex": "0x0601",
+        "code": 1537,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "RSA"
+    },
+    "DSA_NONE": {
+        "_code_in_hex": "0x0002",
+        "code": 2,
+        "hash_algorithm": null,
+        "signature_algorithm": "DSS"
+    },
+    "DSA_MD5": {
+        "_code_in_hex": "0x0102",
+        "code": 258,
+        "hash_algorithm": "MD5",
+        "signature_algorithm": "DSS"
+    },
+    "DSA_SHA1": {
+        "_code_in_hex": "0x0202",
+        "code": 514,
+        "hash_algorithm": "SHA1",
+        "signature_algorithm": "DSS"
+    },
+    "DSA_SHA224": {
+        "_code_in_hex": "0x0302",
+        "code": 770,
+        "hash_algorithm": "SHA2_224",
+        "signature_algorithm": "DSS"
+    },
+    "DSA_SHA256": {
+        "_code_in_hex": "0x0402",
+        "code": 1026,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "DSS"
+    },
+    "DSA_SHA384": {
+        "_code_in_hex": "0x0502",
+        "code": 1282,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "DSS"
+    },
+    "DSA_SHA512": {
+        "_code_in_hex": "0x0602",
+        "code": 1538,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "DSS"
+    },
+    "ECDSA_NONE": {
+        "_code_in_hex": "0x0003",
+        "code": 3,
+        "hash_algorithm": null,
+        "signature_algorithm": "ECDSA"
+    },
+    "ECDSA_MD5": {
+        "_code_in_hex": "0x0103",
+        "code": 259,
+        "hash_algorithm": "MD5",
+        "signature_algorithm": "ECDSA"
+    },
+    "ECDSA_SHA1": {
+        "_code_in_hex": "0x0203",
+        "code": 515,
+        "hash_algorithm": "SHA1",
+        "signature_algorithm": "ECDSA"
+    },
+    "ECDSA_SHA224": {
+        "_code_in_hex": "0x0303",
+        "code": 771,
+        "hash_algorithm": "SHA2_224",
+        "signature_algorithm": "ECDSA"
+    },
+    "ECDSA_SHA256": {
+        "_code_in_hex": "0x0403",
+        "code": 1027,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "ECDSA"
+    },
+    "ECDSA_SHA384": {
+        "_code_in_hex": "0x0503",
+        "code": 1283,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "ECDSA"
+    },
+    "ECDSA_SHA512": {
+        "_code_in_hex": "0x0603",
+        "code": 1539,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "ECDSA"
+    },
+    "GOST_R3410_01": {
+        "_code_in_hex": "0x00ed",
+        "code": 237,
+        "hash_algorithm": "GOST_R3411_94",
+        "signature_algorithm": "GOST_R3410_01"
+    },
+    "OLD_GOST_R3410_12_256": {
+        "_code_in_hex": "0x00ee",
+        "code": 238,
+        "hash_algorithm": "GOST_R3411_12_256",
+        "signature_algorithm": "GOST_R3410_12_256"
+    },
+    "OLD_GOST_R3410_12_512": {
+        "_code_in_hex": "0x00ef",
+        "code": 239,
+        "hash_algorithm": "GOST_R3411_12_512",
+        "signature_algorithm": "GOST_R3410_12_512"
+    },
+    "GOST_R3410_12_256": {
+        "_code_in_hex": "0x4008",
+        "code": 16392,
+        "hash_algorithm": "GOST_R3411_12_256",
+        "signature_algorithm": "GOST_R3410_12_256"
+    },
+    "GOST_R3410_12_512": {
+        "_code_in_hex": "0x4108",
+        "code": 16648,
+        "hash_algorithm": "GOST_R3411_12_512",
+        "signature_algorithm": "GOST_R3410_12_512"
+    },
+    "RSA_PSS_RSAE_SHA256": {
+        "_code_in_hex": "0x0804",
+        "code": 2052,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "RSA"
+    },
+    "RSA_PSS_RSAE_SHA384": {
+        "_code_in_hex": "0x0805",
+        "code": 2053,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "RSA"
+    },
+    "RSA_PSS_RSAE_SHA512": {
+        "_code_in_hex": "0x0806",
+        "code": 2054,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "RSA"
+    },
+    "ED25519": {
+        "_code_in_hex": "0x0807",
+        "code": 2055,
+        "hash_algorithm": "ED25519PH",
+        "signature_algorithm": "EDDSA"
+    },
+    "ED448": {
+        "_code_in_hex": "0x0808",
+        "code": 2056,
+        "hash_algorithm": "ED448PH",
+        "signature_algorithm": "EDDSA"
+    },
+    "RSA_PSS_PSS_SHA256": {
+        "_code_in_hex": "0x0809",
+        "code": 2057,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "RSA"
+    },
+    "RSA_PSS_PSS_SHA384": {
+        "_code_in_hex": "0x080a",
+        "code": 2058,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "RSA"
+    },
+    "RSA_PSS_PSS_SHA512": {
+        "_code_in_hex": "0x080b",
+        "code": 2059,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "RSA"
+    }
+}
