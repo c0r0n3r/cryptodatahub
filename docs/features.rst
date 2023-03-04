@@ -50,3 +50,14 @@ Attributes
   -  `encryption <https://www.rfc-editor.org/rfc/rfc4253#section-6.3>`__
   -  `message authentication code <https://www.rfc-editor.org/rfc/rfc4253#section-6.4>`__
   -  `compression <https://www.rfc-editor.org/rfc/rfc4253#section-6.2>`__
+
+Client Capabilities
+"""""""""""""""""""
+
+-  Transport Layer Security (TLS)
+
+  - Hypertext Transfer Protocol Secure (HTTPS)
+
+    -  `Chromium <https://en.wikipedia.org/wiki/Chromium_(web_browser)>`__
+    -  `Firefox <https://en.wikipedia.org/wiki/Firefox>`__
+    -  `Opera <https://en.wikipedia.org/wiki/Opera_(web_browser)>`__
