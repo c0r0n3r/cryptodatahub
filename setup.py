@@ -28,7 +28,7 @@ def test_discover():
 
 setup(
     name='cryptodatahub',
-    version='0.8.4',
+    version='0.8.5',
     description='Repository of cryptography-related data',
     long_description=long_description,
     long_description_content_type='text/x-rst',
