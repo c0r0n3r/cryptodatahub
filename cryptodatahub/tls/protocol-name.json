@@ -1,0 +1,71 @@
+{
+    "C_WEBRTC": {
+        "code": "c-webrtc"
+    },
+    "COAP": {
+        "code": "coap"
+    },
+    "FTP": {
+        "code": "ftp"
+    },
+    "H2": {
+        "code": "h2"
+    },
+    "H2_14": {
+        "code": "h2-14"
+    },
+    "H2_15": {
+        "code": "h2-15"
+    },
+    "H2_16": {
+        "code": "h2-16"
+    },
+    "H2C": {
+        "code": "h2c"
+    },
+    "HTTP_0_9": {
+        "code": "http/0.9"
+    },
+    "HTTP_1_0": {
+        "code": "http/1.0"
+    },
+    "HTTP_1_1": {
+        "code": "http/1.1"
+    },
+    "IMAP": {
+        "code": "imap"
+    },
+    "MANAGESIEVE": {
+        "code": "managesieve"
+    },
+    "POP3": {
+        "code": "pop3"
+    },
+    "SPDY_1": {
+        "code": "spdy/1"
+    },
+    "SPDY_2": {
+        "code": "spdy/2"
+    },
+    "SPDY_3": {
+        "code": "spdy/3"
+    },
+    "SPDY_3_1": {
+        "code": "spdy/3.1"
+    },
+    "STUN_NAT_DISCOVERY": {
+        "code": "stun.nat-discovery"
+    },
+    "STUN_TURN": {
+        "code": "stun.turn"
+    },
+    "WEBRTC": {
+        "code": "webrtc"
+    },
+    "XMPP_CLIENT": {
+        "code": "xmpp-client"
+    },
+    "XMPP_SERVER": {
+        "code": "xmpp-server"
+    }
+}

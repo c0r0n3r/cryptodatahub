@@ -1,0 +1,10 @@
+{
+    "FALLBACK_SCSV": {
+        "_code_in_hex": "0x5600",
+        "code": 22016
+    },
+    "EMPTY_RENEGOTIATION_INFO_SCSV": {
+        "_code_in_hex": "0x00ff",
+        "code": 255
+    }
+}

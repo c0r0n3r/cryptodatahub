@@ -1,0 +1,227 @@
+{
+    "SECT163K1": {
+        "_code_in_hex": "0x0001",
+        "code": 1,
+        "named_group": "SECT163K1"
+    },
+    "SECT163R1": {
+        "_code_in_hex": "0x0002",
+        "code": 2,
+        "named_group": "SECT163R1"
+    },
+    "SECT163R2": {
+        "_code_in_hex": "0x0003",
+        "code": 3,
+        "named_group": "SECT163R2"
+    },
+    "SECT193R1": {
+        "_code_in_hex": "0x0004",
+        "code": 4,
+        "named_group": "SECT193R1"
+    },
+    "SECT193R2": {
+        "_code_in_hex": "0x0005",
+        "code": 5,
+        "named_group": "SECT193R2"
+    },
+    "SECT233K1": {
+        "_code_in_hex": "0x0006",
+        "code": 6,
+        "named_group": "SECT233K1"
+    },
+    "SECT233R1": {
+        "_code_in_hex": "0x0007",
+        "code": 7,
+        "named_group": "SECT233R1"
+    },
+    "SECT239K1": {
+        "_code_in_hex": "0x0008",
+        "code": 8,
+        "named_group": "SECT239K1"
+    },
+    "SECT283K1": {
+        "_code_in_hex": "0x0009",
+        "code": 9,
+        "named_group": "SECT283K1"
+    },
+    "SECT283R1": {
+        "_code_in_hex": "0x000a",
+        "code": 10,
+        "named_group": "SECT283R1"
+    },
+    "SECT409K1": {
+        "_code_in_hex": "0x000b",
+        "code": 11,
+        "named_group": "SECT409K1"
+    },
+    "SECT409R1": {
+        "_code_in_hex": "0x000c",
+        "code": 12,
+        "named_group": "SECT409R1"
+    },
+    "SECT571K1": {
+        "_code_in_hex": "0x000d",
+        "code": 13,
+        "named_group": "SECT571K1"
+    },
+    "SECT571R1": {
+        "_code_in_hex": "0x000e",
+        "code": 14,
+        "named_group": "SECT571R1"
+    },
+    "SECP160K1": {
+        "_code_in_hex": "0x000f",
+        "code": 15,
+        "named_group": "SECP160K1"
+    },
+    "SECP160R1": {
+        "_code_in_hex": "0x0010",
+        "code": 16,
+        "named_group": "SECP160R1"
+    },
+    "SECP160R2": {
+        "_code_in_hex": "0x0011",
+        "code": 17,
+        "named_group": "SECP160R2"
+    },
+    "SECP192K1": {
+        "_code_in_hex": "0x0012",
+        "code": 18,
+        "named_group": "SECP192K1"
+    },
+    "SECP192R1": {
+        "_code_in_hex": "0x0013",
+        "code": 19,
+        "named_group": "PRIME192V1"
+    },
+    "SECP224K1": {
+        "_code_in_hex": "0x0014",
+        "code": 20,
+        "named_group": "SECP224K1"
+    },
+    "SECP224R1": {
+        "_code_in_hex": "0x0015",
+        "code": 21,
+        "named_group": "SECP224R1"
+    },
+    "SECP256K1": {
+        "_code_in_hex": "0x0016",
+        "code": 22,
+        "named_group": "SECP256K1"
+    },
+    "SECP256R1": {
+        "_code_in_hex": "0x0017",
+        "code": 23,
+        "named_group": "PRIME256V1"
+    },
+    "SECP384R1": {
+        "_code_in_hex": "0x0018",
+        "code": 24,
+        "named_group": "SECP384R1"
+    },
+    "SECP521R1": {
+        "_code_in_hex": "0x0019",
+        "code": 25,
+        "named_group": "SECP521R1"
+    },
+    "BRAINPOOLP256R1": {
+        "_code_in_hex": "0x001a",
+        "code": 26,
+        "named_group": "BRAINPOOLP256R1"
+    },
+    "BRAINPOOLP384R1": {
+        "_code_in_hex": "0x001b",
+        "code": 27,
+        "named_group": "BRAINPOOLP384R1"
+    },
+    "BRAINPOOLP512R1": {
+        "_code_in_hex": "0x001c",
+        "code": 28,
+        "named_group": "BRAINPOOLP512R1"
+    },
+    "X25519": {
+        "_code_in_hex": "0x001d",
+        "code": 29,
+        "named_group": "CURVE25519"
+    },
+    "X448": {
+        "_code_in_hex": "0x001e",
+        "code": 30,
+        "named_group": "CURVE448"
+    },
+    "GC256A": {
+        "_code_in_hex": "0x0022",
+        "code": 34,
+        "named_group": "GC256A"
+    },
+    "GC256B": {
+        "_code_in_hex": "0x0023",
+        "code": 35,
+        "named_group": "GC256B"
+    },
+    "GC256C": {
+        "_code_in_hex": "0x0024",
+        "code": 36,
+        "named_group": "GC256C"
+    },
+    "GC256D": {
+        "_code_in_hex": "0x0025",
+        "code": 37,
+        "named_group": "GC256D"
+    },
+    "GC512A": {
+        "_code_in_hex": "0x0026",
+        "code": 38,
+        "named_group": "GC512A"
+    },
+    "GC512B": {
+        "_code_in_hex": "0x0027",
+        "code": 39,
+        "named_group": "GC512B"
+    },
+    "GC512C": {
+        "_code_in_hex": "0x0028",
+        "code": 40,
+        "named_group": "GC512C"
+    },
+    "FFDHE2048": {
+        "_code_in_hex": "0x0100",
+        "code": 256,
+        "named_group": "FFDHE2048"
+    },
+    "FFDHE3072": {
+        "_code_in_hex": "0x0101",
+        "code": 257,
+        "named_group": "FFDHE3072"
+    },
+    "FFDHE4096": {
+        "_code_in_hex": "0x0102",
+        "code": 258,
+        "named_group": "FFDHE4096"
+    },
+    "FFDHE6144": {
+        "_code_in_hex": "0x0103",
+        "code": 259,
+        "named_group": "FFDHE6144"
+    },
+    "FFDHE8192": {
+        "_code_in_hex": "0x0104",
+        "code": 260,
+        "named_group": "FFDHE8192"
+    },
+    "CECPQ2": {
+        "_code_in_hex": "0x4138",
+        "code": 16696,
+        "named_group": "CECPQ2"
+    },
+    "ARBITRARY_EXPLICIT_PRIME_CURVES": {
+        "_code_in_hex": "0xff01",
+        "code": 65281,
+        "named_group": null
+    },
+    "ARBITRARY_EXPLICIT_CHAR2_CURVES": {
+        "_code_in_hex": "0xff02",
+        "code": 65282,
+        "named_group": null
+    }
+}

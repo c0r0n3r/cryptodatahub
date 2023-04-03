@@ -1,0 +1,20 @@
+{
+    "HTTP_1_1": {
+        "code": "http/1.1"
+    },
+    "SPDY_1": {
+        "code": "spdy/1"
+    },
+    "SPDY_2": {
+        "code": "spdy/2"
+    },
+    "SPDY_3": {
+        "code": "spdy/3"
+    },
+    "SPDY_3_1": {
+        "code": "spdy/3.1"
+    },
+    "SPDY_4_A_2": {
+        "code": "spdy/4a2"
+    }
+}

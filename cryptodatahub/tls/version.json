@@ -1,0 +1,154 @@
+{
+    "SSL2": {
+        "_code_in_hex": "0x0002",
+        "code": 2
+    },
+    "SSL3": {
+        "_code_in_hex": "0x0300",
+        "code": 768
+    },
+    "TLS1": {
+        "_code_in_hex": "0x0301",
+        "code": 769
+    },
+    "TLS1_1": {
+        "_code_in_hex": "0x0302",
+        "code": 770
+    },
+    "TLS1_2": {
+        "_code_in_hex": "0x0303",
+        "code": 771
+    },
+    "TLS1_3": {
+        "_code_in_hex": "0x0304",
+        "code": 772
+    },
+    "TLS1_3_GOOGLE_EXPERIMENT_1": {
+        "_code_in_hex": "0x7e01",
+        "code": 32257
+    },
+    "TLS1_3_GOOGLE_EXPERIMENT_2": {
+        "_code_in_hex": "0x7e02",
+        "code": 32258
+    },
+    "TLS1_3_GOOGLE_EXPERIMENT_3": {
+        "_code_in_hex": "0x7e03",
+        "code": 32259
+    },
+    "TLS1_3_DRAFT_0": {
+        "_code_in_hex": "0x7f00",
+        "code": 32512
+    },
+    "TLS1_3_DRAFT_1": {
+        "_code_in_hex": "0x7f01",
+        "code": 32513
+    },
+    "TLS1_3_DRAFT_2": {
+        "_code_in_hex": "0x7f02",
+        "code": 32514
+    },
+    "TLS1_3_DRAFT_3": {
+        "_code_in_hex": "0x7f03",
+        "code": 32515
+    },
+    "TLS1_3_DRAFT_4": {
+        "_code_in_hex": "0x7f04",
+        "code": 32516
+    },
+    "TLS1_3_DRAFT_5": {
+        "_code_in_hex": "0x7f05",
+        "code": 32517
+    },
+    "TLS1_3_DRAFT_6": {
+        "_code_in_hex": "0x7f06",
+        "code": 32518
+    },
+    "TLS1_3_DRAFT_7": {
+        "_code_in_hex": "0x7f07",
+        "code": 32519
+    },
+    "TLS1_3_DRAFT_8": {
+        "_code_in_hex": "0x7f08",
+        "code": 32520
+    },
+    "TLS1_3_DRAFT_9": {
+        "_code_in_hex": "0x7f09",
+        "code": 32521
+    },
+    "TLS1_3_DRAFT_10": {
+        "_code_in_hex": "0x7f0a",
+        "code": 32522
+    },
+    "TLS1_3_DRAFT_11": {
+        "_code_in_hex": "0x7f0b",
+        "code": 32523
+    },
+    "TLS1_3_DRAFT_12": {
+        "_code_in_hex": "0x7f0c",
+        "code": 32524
+    },
+    "TLS1_3_DRAFT_13": {
+        "_code_in_hex": "0x7f0d",
+        "code": 32525
+    },
+    "TLS1_3_DRAFT_14": {
+        "_code_in_hex": "0x7f0e",
+        "code": 32526
+    },
+    "TLS1_3_DRAFT_15": {
+        "_code_in_hex": "0x7f0f",
+        "code": 32527
+    },
+    "TLS1_3_DRAFT_16": {
+        "_code_in_hex": "0x7f10",
+        "code": 32528
+    },
+    "TLS1_3_DRAFT_17": {
+        "_code_in_hex": "0x7f11",
+        "code": 32529
+    },
+    "TLS1_3_DRAFT_18": {
+        "_code_in_hex": "0x7f12",
+        "code": 32530
+    },
+    "TLS1_3_DRAFT_19": {
+        "_code_in_hex": "0x7f13",
+        "code": 32531
+    },
+    "TLS1_3_DRAFT_20": {
+        "_code_in_hex": "0x7f14",
+        "code": 32532
+    },
+    "TLS1_3_DRAFT_21": {
+        "_code_in_hex": "0x7f15",
+        "code": 32533
+    },
+    "TLS1_3_DRAFT_22": {
+        "_code_in_hex": "0x7f16",
+        "code": 32534
+    },
+    "TLS1_3_DRAFT_23": {
+        "_code_in_hex": "0x7f17",
+        "code": 32535
+    },
+    "TLS1_3_DRAFT_24": {
+        "_code_in_hex": "0x7f18",
+        "code": 32536
+    },
+    "TLS1_3_DRAFT_25": {
+        "_code_in_hex": "0x7f19",
+        "code": 32537
+    },
+    "TLS1_3_DRAFT_26": {
+        "_code_in_hex": "0x7f1a",
+        "code": 32538
+    },
+    "TLS1_3_DRAFT_27": {
+        "_code_in_hex": "0x7f1b",
+        "code": 32539
+    },
+    "TLS1_3_DRAFT_28": {
+        "_code_in_hex": "0x7f1c",
+        "code": 32540
+    }
+}

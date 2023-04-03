@@ -1,0 +1,10 @@
+{
+    "PSK_KE": {
+        "code": 0,
+        "_code_in_hex": "0x00"
+    },
+    "PSK_DH_KE": {
+        "code": 1,
+        "_code_in_hex": "0x01"
+    }
+}

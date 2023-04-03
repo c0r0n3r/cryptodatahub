@@ -1,0 +1,34 @@
+{
+    "GREASE_0B": {
+        "_code_in_hex": "0x0b",
+        "code": 11
+    },
+    "GREASE_2A": {
+        "_code_in_hex": "0x2a",
+        "code": 42
+    },
+    "GREASE_49": {
+        "_code_in_hex": "0x49",
+        "code": 73
+    },
+    "GREASE_68": {
+        "_code_in_hex": "0x68",
+        "code": 104
+    },
+    "GREASE_87": {
+        "_code_in_hex": "0x87",
+        "code": 135
+    },
+    "GREASE_A6": {
+        "_code_in_hex": "0xa6",
+        "code": 166
+    },
+    "GREASE_C5": {
+        "_code_in_hex": "0xc5",
+        "code": 197
+    },
+    "GREASE_E4": {
+        "_code_in_hex": "0xe4",
+        "code": 228
+    }
+}

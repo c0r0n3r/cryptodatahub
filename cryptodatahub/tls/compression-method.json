@@ -1,0 +1,20 @@
+{
+    "NULL": {
+        "name": "null",
+        "long_name": "no compression",
+        "code": 0,
+        "_code_in_hex": "0x00"
+    },
+    "DEFLATE": {
+        "name": "DEFLATE",
+        "long_name": null,
+        "code": 1,
+        "_code_in_hex": "0x01"
+    },
+    "LZS": {
+        "name": "LZS",
+        "long_name": "Lempel-Ziv-Stac compression",
+        "code": 64,
+        "_code_in_hex": "0x40"
+    }
+}
