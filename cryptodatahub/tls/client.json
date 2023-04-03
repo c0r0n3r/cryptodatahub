@@ -1,0 +1,3919 @@
+{
+    "CHROMIUM_37": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "37.0.2062.120",
+            "last_version": "39.0.2171.99",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
+                "OLD_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "OLD_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "SPDY_3",
+                    "SPDY_3_1",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "CHROMIUM_40": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "40.0.2214.111",
+            "last_version": "40.0.2214.115",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
+                "OLD_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "OLD_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "SPDY_3_1",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "CHROMIUM_41": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "41.0.2272.76",
+            "last_version": "42.0.2311.152",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
+                "OLD_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "OLD_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "SPDY_3_1",
+                    "H2_14",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "CHROMIUM_43": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "43.0.2357.65",
+            "last_version": "44.0.2403.157",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
+                "OLD_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "OLD_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "SPDY_3_1",
+                    "H2_14",
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "CHROMIUM_45": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "45.0.2454.85",
+            "last_version": "45.0.2454.101",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
+                "OLD_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "OLD_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "SPDY_3_1",
+                    "H2_14",
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "CHROMIUM_46": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "46.0.2490.71",
+            "last_version": "46.0.2490.86",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
+                "OLD_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "OLD_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "OLD_TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "SUPPORTED_GROUPS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "HTTP_1_1",
+                    "SPDY_3_1",
+                    "H2_14",
+                    "H2"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA512",
+                    "ECDSA_SHA512",
+                    "RSA_SHA384",
+                    "ECDSA_SHA384",
+                    "RSA_SHA256",
+                    "ECDSA_SHA256",
+                    "RSA_SHA224",
+                    "ECDSA_SHA224",
+                    "RSA_SHA1",
+                    "ECDSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1"
+                ]
+            }
+        }
+    },
+    "CHROMIUM_47": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "47.0.2526.73",
+            "last_version": "47.0.2526.111",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
+                "OLD_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "OLD_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "SUPPORTED_GROUPS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "HTTP_1_1",
+                    "SPDY_3_1",
+                    "H2"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA512",
+                    "ECDSA_SHA512",
+                    "RSA_SHA384",
+                    "ECDSA_SHA384",
+                    "RSA_SHA256",
+                    "ECDSA_SHA256",
+                    "RSA_SHA224",
+                    "ECDSA_SHA224",
+                    "RSA_SHA1",
+                    "ECDSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1"
+                ]
+            }
+        }
+    },
+    "CHROMIUM_48": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "48.0.2564.82",
+            "last_version": "48.0.2564.116",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
+                "OLD_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "OLD_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "SUPPORTED_GROUPS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "SPDY_3_1",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA512",
+                    "ECDSA_SHA512",
+                    "RSA_SHA384",
+                    "ECDSA_SHA384",
+                    "RSA_SHA256",
+                    "ECDSA_SHA256",
+                    "RSA_SHA224",
+                    "ECDSA_SHA224",
+                    "RSA_SHA1",
+                    "ECDSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1"
+                ]
+            }
+        }
+    },
+    "CHROMIUM_59": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "59.0.3071.86",
+            "last_version": "61.0.3163.100",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "KEY_SHARE_RESERVED",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "SUPPORTED_GROUPS",
+                "TOKEN_BINDING",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share_reserved": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3_DRAFT_18",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ],
+                "token_binding": {
+                    "parameters": [
+                        "ECDSAP256"
+                    ],
+                    "protocol_version": "0.13"
+                }
+            }
+        }
+    },
+    "CHROMIUM_62": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "62.0.3202.62",
+            "last_version": "62.0.3202.94",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "KEY_SHARE_RESERVED",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "SUPPORTED_GROUPS",
+                "TOKEN_BINDING",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share_reserved": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3_GOOGLE_EXPERIMENT_1",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ],
+                "token_binding": {
+                    "parameters": [
+                        "ECDSAP256"
+                    ],
+                    "protocol_version": "0.13"
+                }
+            }
+        }
+    },
+    "CHROMIUM_63": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "63.0.3239.84",
+            "last_version": "64.0.3282.186",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "KEY_SHARE_RESERVED",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "SUPPORTED_GROUPS",
+                "TOKEN_BINDING",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share_reserved": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3_GOOGLE_EXPERIMENT_2",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ],
+                "token_binding": {
+                    "parameters": [
+                        "ECDSAP256"
+                    ],
+                    "protocol_version": "0.13"
+                }
+            }
+        }
+    },
+    "CHROMIUM_65": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "65.0.3325.146",
+            "last_version": "66.0.3359.181",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "SUPPORTED_GROUPS",
+                "TOKEN_BINDING",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3_DRAFT_23",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ],
+                "token_binding": {
+                    "parameters": [
+                        "ECDSAP256"
+                    ],
+                    "protocol_version": "0.13"
+                }
+            }
+        }
+    },
+    "CHROMIUM_67": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "67.0.3396.62",
+            "last_version": "67.0.3396.99",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "SUPPORTED_GROUPS",
+                "TOKEN_BINDING",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3_DRAFT_23",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ],
+                "token_binding": {
+                    "parameters": [
+                        "ECDSAP256"
+                    ],
+                    "protocol_version": "0.16"
+                }
+            }
+        }
+    },
+    "CHROMIUM_68": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "68.0.3440.75",
+            "last_version": "68.0.3440.106",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "EC_POINT_FORMATS",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "SUPPORTED_GROUPS",
+                "TOKEN_BINDING",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3_DRAFT_23",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ],
+                "token_binding": {
+                    "parameters": [
+                        "ECDSAP256"
+                    ],
+                    "protocol_version": "0.16"
+                }
+            }
+        }
+    },
+    "CHROMIUM_69": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "69.0.3497.81",
+            "last_version": "70.0.3538.110",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "SUPPORTED_GROUPS",
+                "TOKEN_BINDING",
+                "COMPRESS_CERTIFICATE",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "compress_certificate": [
+                    "BROTLI"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3_DRAFT_23",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ],
+                "token_binding": {
+                    "parameters": [
+                        "ECDSAP256"
+                    ],
+                    "protocol_version": "0.16"
+                }
+            }
+        }
+    },
+    "CHROMIUM_71": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "71.0.3578.80",
+            "last_version": "81.0.4044.138",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "COMPRESS_CERTIFICATE",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "compress_certificate": [
+                    "BROTLI"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ]
+            }
+        }
+    },
+    "CHROMIUM_83": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "83.0.4103.61",
+            "last_version": "94.0.4606.81",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "COMPRESS_CERTIFICATE",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "compress_certificate": [
+                    "BROTLI"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ]
+            }
+        }
+    },
+    "CHROMIUM_95": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "95.0.4638.69",
+            "last_version": "97.0.4692.99",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "COMPRESS_CERTIFICATE",
+                "APPLICATION_LAYER_PROTOCOL_SETTINGS",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "application_layer_protocol_settings": [
+                    "H2"
+                ],
+                "compress_certificate": [
+                    "BROTLI"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ]
+            }
+        }
+    },
+    "CHROMIUM_98": {
+        "meta": {
+            "client": "CHROMIUM",
+            "first_version": "98.0.4758.80",
+            "last_version": "107.0.5304.87",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "EXTENDED_MASTER_SECRET",
+                "SERVER_NAME",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "SUPPORTED_GROUPS",
+                "RENEGOTIATION_INFO",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "SUPPORTED_VERSIONS",
+                "SIGNATURE_ALGORITHMS",
+                "COMPRESS_CERTIFICATE",
+                "EC_POINT_FORMATS",
+                "APPLICATION_LAYER_PROTOCOL_SETTINGS",
+                "STATUS_REQUEST",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "application_layer_protocol_settings": [
+                    "H2"
+                ],
+                "compress_certificate": [
+                    "BROTLI"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3",
+                    "TLS1_2"
+                ]
+            }
+        }
+    },
+    "FIREFOX_4": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "4",
+            "last_version": "12",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_256_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_RC4_128_SHA",
+                "TLS_ECDH_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_SEED_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_FIPS_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": true,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET"
+            ],
+            "extension_params": {
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_12": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "12",
+            "last_version": "25",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_256_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_RC4_128_SHA",
+                "TLS_ECDH_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_SEED_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_FIPS_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": true,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET"
+            ],
+            "extension_params": {
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_25": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "25",
+            "last_version": "26",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_256_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_RC4_128_SHA",
+                "TLS_ECDH_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_SEED_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_FIPS_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": true,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION"
+            ],
+            "extension_params": {
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_26": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "26",
+            "last_version": "32",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_256_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_RC4_128_SHA",
+                "TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_SEED_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5",
+                "TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_FIPS_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": true,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST"
+            ],
+            "extension_params": {
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_32": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "32",
+            "last_version": "33",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_33": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "33",
+            "last_version": "34",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_34": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "34",
+            "last_version": "35",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "SPDY_3_1",
+                    "SPDY_3",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_35": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "35",
+            "last_version": "36",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2_14",
+                    "SPDY_3_1",
+                    "SPDY_3",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_36": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "36",
+            "last_version": "38",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2_15",
+                    "H2_14",
+                    "H2",
+                    "SPDY_3_1",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_38": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "38",
+            "last_version": "40",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2_16",
+                    "H2_15",
+                    "H2_14",
+                    "H2",
+                    "SPDY_3_1",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_40": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "40",
+            "last_version": "45",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2_16",
+                    "H2_15",
+                    "H2_14",
+                    "H2",
+                    "SPDY_3_1",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_45": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "45",
+            "last_version": "46",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "SPDY_3_1",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_46": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "46",
+            "last_version": "48",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "SPDY_3_1",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_48": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "48",
+            "last_version": "49",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "SPDY_3_1",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "ECDSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_49": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "49",
+            "last_version": "50",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "SPDY_3_1",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "ECDSA_SHA1",
+                    "DSA_SHA384",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_50": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "50",
+            "last_version": "51",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "RSA_SHA1",
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "ECDSA_SHA1",
+                    "DSA_SHA384",
+                    "DSA_SHA256",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_51": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "51",
+            "last_version": "52",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SHORT_RECORD_HEADER",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "ECDSA_SHA1",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "RSA_SHA1",
+                    "DSA_SHA256",
+                    "DSA_SHA384",
+                    "DSA_SHA512",
+                    "DSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_52": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "52",
+            "last_version": "55",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "SHORT_RECORD_HEADER",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "ECDSA_SHA1",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_55": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "55",
+            "last_version": "56",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "ECDSA_SHA1",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_56": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "56",
+            "last_version": "107",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "DELEGATED_CREDENTIALS",
+                "KEY_SHARE",
+                "SUPPORTED_VERSIONS",
+                "SIGNATURE_ALGORITHMS",
+                "PSK_KEY_EXCHANGE_MODES",
+                "RECORD_SIZE_LIMIT",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "delegated_credentials": [
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "ECDSA_SHA1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519",
+                    "SECP256R1"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "record_size_limit": 16385,
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "ECDSA_SHA1",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1",
+                    "FFDHE2048",
+                    "FFDHE3072"
+                ],
+                "supported_versions": [
+                    "TLS1_3",
+                    "TLS1_2"
+                ]
+            }
+        }
+    },
+    "OPERA_56": {
+        "meta": {
+            "client": "OPERA",
+            "first_version": "56.0.3051.31",
+            "last_version": "56.0.3051.116",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "SUPPORTED_GROUPS",
+                "COMPRESS_CERTIFICATE"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "compress_certificate": [
+                    "BROTLI"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ]
+            }
+        }
+    },
+    "OPERA_57": {
+        "meta": {
+            "client": "OPERA",
+            "first_version": "57.0.3098.76",
+            "last_version": "57.0.3098.116",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "SUPPORTED_GROUPS",
+                "COMPRESS_CERTIFICATE",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "compress_certificate": [
+                    "BROTLI"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ]
+            }
+        }
+    },
+    "OPERA_58": {
+        "meta": {
+            "client": "OPERA",
+            "first_version": "58.0.3135.47",
+            "last_version": "68.0.3618.173",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "COMPRESS_CERTIFICATE",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "compress_certificate": [
+                    "BROTLI"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ]
+            }
+        }
+    },
+    "OPERA_69": {
+        "meta": {
+            "client": "OPERA",
+            "first_version": "69.0.3686.36",
+            "last_version": "71.0.3770.148",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "COMPRESS_CERTIFICATE",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "compress_certificate": [
+                    "BROTLI"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ]
+            }
+        }
+    },
+    "OPERA_80": {
+        "meta": {
+            "client": "OPERA",
+            "first_version": "80.0.4170.16",
+            "last_version": "83.0.4254.19",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "COMPRESS_CERTIFICATE",
+                "APPLICATION_LAYER_PROTOCOL_SETTINGS",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "application_layer_protocol_settings": [
+                    "H2"
+                ],
+                "compress_certificate": [
+                    "BROTLI"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3",
+                    "TLS1_2",
+                    "TLS1_1",
+                    "TLS1"
+                ]
+            }
+        }
+    },
+    "OPERA_84": {
+        "meta": {
+            "client": "OPERA",
+            "first_version": "84.0.4316.14",
+            "last_version": "93.0.4585.37",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "SIGNATURE_ALGORITHMS",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "KEY_SHARE",
+                "PSK_KEY_EXCHANGE_MODES",
+                "SUPPORTED_VERSIONS",
+                "COMPRESS_CERTIFICATE",
+                "APPLICATION_LAYER_PROTOCOL_SETTINGS",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "application_layer_protocol_settings": [
+                    "H2"
+                ],
+                "compress_certificate": [
+                    "BROTLI"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ],
+                "supported_versions": [
+                    "TLS1_3",
+                    "TLS1_2"
+                ]
+            }
+        }
+    }
+}

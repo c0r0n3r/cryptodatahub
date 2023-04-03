@@ -18,8 +18,23 @@ from cryptodatahub.common.types import (
     CryptoDataParamsEnumNumeric,
     CryptoDataParamsEnumString,
     CryptoDataParamsOIDOptional,
+    CryptoDataParamsBase,
     CryptoDataParamsNamed,
+    convert_dict_to_object,
 )
+
+
+@attr.s
+class TestJsonObjectComplex(CryptoDataParamsBase):
+    attr = attr.ib()
+
+
+@attr.s
+class TestJsonObject(CryptoDataParamsBase):
+    attr_simple = attr.ib()
+    attr_iterable = attr.ib()
+    attr_complex = attr.ib(converter=convert_dict_to_object(TestJsonObjectComplex))
+    no_init_attr = attr.ib(init=False, default=None)
 
 
 class EnumTest(enum.Enum):

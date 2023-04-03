@@ -6,7 +6,9 @@ import enum
 import json
 import inspect
 import re
+
 import six
+from six.moves import collections_abc
 
 try:
     import pathlib
@@ -16,6 +18,28 @@ except ImportError:  # pragma: no cover
 import attr
 
 from cryptodatahub.common.exception import InvalidValue
+
+
+@attr.s(repr=False, slots=True, hash=True)
+class _DictObjectConverter(object):
+    object_type = attr.ib(validator=attr.validators.instance_of(type))
+
+    def __call__(self, value):
+        if value is None:
+            return None
+        try:
+            return self.object_type(**value)
+        except TypeError:
+            pass
+
+        return value
+
+    def __repr__(self):
+        return '<dict to object converter>'
+
+
+def convert_dict_to_object(object_type):
+    return _DictObjectConverter(object_type)
 
 
 @attr.s(repr=False, slots=True, hash=True)
@@ -44,8 +68,111 @@ def convert_enum(enum_type):
     return _EnumConverter(enum_type)
 
 
+@attr.s(repr=False, slots=True, hash=True)
+class _IterableConverter(object):
+    member_converter = attr.ib(validator=attr.validators.instance_of(collections_abc.Callable))
+
+    def __call__(self, iterable):
+        if iterable is None:
+            return None
+
+        try:
+            for idx, member in enumerate(iterable):
+                iterable[idx] = self.member_converter(member)
+        except (TypeError, ValueError):
+            pass
+
+        return iterable
+
+    def __repr__(self):
+        return '<iterable converter>'
+
+
+def convert_iterable(member_converter):
+    return _IterableConverter(member_converter)
+
+
+@attr.s(repr=False, slots=True, hash=True)
+class _MappingConverter(object):
+    key_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections_abc.Callable)))
+    value_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections_abc.Callable)))
+
+    def __call__(self, mapping):
+        if mapping is None:
+            return None
+
+        if not isinstance(mapping, collections_abc.Mapping):
+            return mapping
+
+        try:
+            key_value_pairs = [[key, value] for key, value in mapping.items()]
+            if self.key_converter is not None:
+                for pair in key_value_pairs:
+                    pair[0] = self.key_converter(pair[0])
+            if self.value_converter is not None:
+                for pair in key_value_pairs:
+                    pair[1] = self.value_converter(pair[1])
+            mapping = type(mapping)(key_value_pairs)
+        except (TypeError, ValueError):
+            pass
+
+        return mapping
+
+    def __repr__(self):
+        return '<mapping converter>'
+
+
+def convert_mapping(key_converter=None, value_converter=None):
+    return _MappingConverter(key_converter, value_converter)
+
+
 @attr.s(frozen=True)
-class CryptoDataParamsNamed(object):
+class ClientVersion(object):
+    parts = attr.ib(validator=attr.validators.deep_iterable(attr.validators.instance_of(int)))
+
+    @classmethod
+    def from_str(cls, version_str):
+        try:
+            return cls((int(version_str), ))
+        except ValueError:
+            pass
+
+        return cls(tuple(map(int, version_str.split('.'))))
+
+    def __str__(self):
+        return '.'.join(map(str, self.parts))
+
+
+@attr.s(repr=False, slots=True, hash=True)
+class _ClientVersionConverter(object):
+    def __call__(self, version):
+        if version is None:
+            return None
+
+        if not isinstance(version, six.string_types):
+            return version
+
+        try:
+            version = ClientVersion.from_str(version)
+        except (TypeError, ValueError):
+            pass
+
+        return version
+
+    def __repr__(self):
+        return '<client version converter>'
+
+
+def convert_client_version():
+    return _ClientVersionConverter()
+
+
+class CryptoDataParamsBase(object):
+    pass
+
+
+@attr.s(frozen=True)
+class CryptoDataParamsNamed(CryptoDataParamsBase):
     name = attr.ib(validator=attr.validators.instance_of(six.string_types))
     long_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
 
@@ -54,7 +181,7 @@ class CryptoDataParamsNamed(object):
 
 
 @attr.s(frozen=True)
-class CryptoDataParamsEnumNumeric(object):
+class CryptoDataParamsEnumNumeric(CryptoDataParamsBase):
     code = attr.ib()
 
     @code.validator
@@ -72,7 +199,7 @@ class CryptoDataParamsEnumNumeric(object):
 
 
 @attr.s(frozen=True)
-class CryptoDataParamsEnumString(object):
+class CryptoDataParamsEnumString(CryptoDataParamsBase):
     code = attr.ib(validator=attr.validators.instance_of(six.string_types))
 
     def __str__(self):
