@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 
+import base64
 import codecs
 import collections
+import datetime
 import enum
 import json
 import inspect
+import os
 import re
 
+import dateutil.parser
 import six
 from six.moves import collections_abc
 
@@ -67,6 +71,73 @@ class _EnumConverter(object):
 
 def convert_enum(enum_type):
     return _EnumConverter(enum_type)
+
+
+@attr.s
+class Base64Data(object):
+    value = attr.ib(validator=attr.validators.instance_of((bytes, bytearray)))
+
+    def _asdict(self):
+        return str(self)
+
+    def __str__(self):
+        return base64.b64encode(self.value).decode('ascii')
+
+
+@attr.s(repr=False, slots=True, hash=True)
+class _DateTimeConverter(object):
+    strptime_format = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
+
+    def __call__(self, date_time):
+        if date_time is None:
+            return None
+
+        if isinstance(date_time, datetime.datetime):
+            return date_time
+
+        try:
+            if self.strptime_format is None:
+                date_time = dateutil.parser.isoparse(date_time)
+            else:
+                date_time = datetime.datetime.strptime(date_time, self.strptime_format)
+        except (TypeError, ValueError):
+            pass
+
+        return date_time
+
+    def __repr__(self):
+        return '<datetime converter>'
+
+
+def convert_datetime(strptime_format=None):
+    return _DateTimeConverter(strptime_format)
+
+
+@attr.s(repr=False, slots=True, hash=True)
+class _Base64DataConverter(object):
+    def __call__(self, value):
+        if value is None:
+            return None
+
+        if isinstance(value, bytearray) or (six.PY3 and isinstance(value, bytes)):
+            return Base64Data(value)
+
+        if not isinstance(value, six.string_types):
+            return value
+
+        try:
+            value = Base64Data(base64.b64decode(value))
+        except (ValueError, TypeError):
+            pass
+
+        return value
+
+    def __repr__(self):
+        return '<base64 data converter>'
+
+
+def convert_base64_data():
+    return _Base64DataConverter()
 
 
 @attr.s(repr=False, slots=True, hash=True)
@@ -196,7 +267,13 @@ def convert_client_version():
 
 
 class CryptoDataParamsBase(object):
-    pass
+    @classmethod
+    def get_init_attribute_names(cls):
+        return [
+            six.ensure_text(name)
+            for name, attribute in attr.fields_dict(cls).items()
+            if attribute.init
+        ]
 
 
 @attr.s(frozen=True)
@@ -246,23 +323,16 @@ class CryptoDataParamsOIDOptional(CryptoDataParamsNamed):
 
 
 class CryptoDataEnumBase(enum.Enum):
-    def __new__(cls, value):
-        member = object.__new__(cls)
-        member._value_ = value
-        return member
-
-    @staticmethod
-    def get_json_records(param_class):
-        json_path = CryptoDataEnumBase.get_json_path(param_class)
-        with codecs.open(str(json_path), 'r', encoding='ascii') as json_file:
-            return collections.OrderedDict([
-                (name, param_class(**{
-                    init_param_name.replace('-', '_'): value
-                    for init_param_name, value in params.items()
-                    if not init_param_name.startswith('_')
-                }))
-                for name, params in json.load(json_file, object_pairs_hook=collections.OrderedDict).items()
-            ])
+    @classmethod
+    def get_json_records(cls, param_class):
+        return collections.OrderedDict([
+            (name, param_class(**{
+                init_param_name.replace('-', '_'): value
+                for init_param_name, value in params.items()
+                if not init_param_name.startswith('_')
+            }))
+            for name, params in cls.get_json_object(param_class).items()
+        ])
 
     @staticmethod
     def get_file_name_from_param_class(param_class):
@@ -284,6 +354,26 @@ class CryptoDataEnumBase(enum.Enum):
             pathlib.Path(inspect.getfile(param_class)).parent /
             CryptoDataEnumBase.get_file_name_from_param_class(param_class)
         )
+
+    @staticmethod
+    def get_json_object(param_class):
+        json_path = CryptoDataEnumBase.get_json_path(param_class)
+        with codecs.open(str(json_path), 'r', encoding='ascii') as json_file:
+            return json.load(json_file, object_pairs_hook=collections.OrderedDict)
+
+    @staticmethod
+    def dump_json(json_object):
+        return json.dumps(json_object, ensure_ascii=True, indent=4) + os.linesep
+
+    @staticmethod
+    def set_json(param_class, json_object):
+        json_path = CryptoDataEnumBase.get_json_path(param_class)
+        with codecs.open(str(json_path), 'w+', encoding='ascii') as json_file:
+            json_file.write(CryptoDataEnumBase.dump_json(json_object))
+
+    @classmethod
+    def get_json(cls, param_class):
+        return cls.get_json_object(param_class)
 
     @classmethod
     def _from_attr(cls, attr_name, value):

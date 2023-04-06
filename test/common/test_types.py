@@ -11,6 +11,7 @@ except ImportError:
     import pathlib
 
 import collections
+import datetime
 
 from test.common.classes import (
     TestEnumNamedParams,
@@ -22,16 +23,20 @@ from test.common.classes import (
     EnumTest,
 )
 
+import dateutil
 import pyfakefs.fake_filesystem_unittest
 
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.types import (
+    Base64Data,
     ClientVersion,
     CryptoDataEnumBase,
     CryptoDataEnumCodedBase,
     CryptoDataEnumOIDBase,
     convert_big_enum,
+    convert_base64_data,
     convert_client_version,
+    convert_datetime,
     convert_dict_to_object,
     convert_enum,
     convert_iterable,
@@ -62,6 +67,89 @@ class TestEnumConverter(unittest.TestCase):
 
     def test_repr(self):
         self.assertEqual(repr(convert_enum(EnumTest)), '<enum converter>')
+
+
+class TestDateTimeConverter(unittest.TestCase):
+    def test_error_invalid_type(self):
+        original_value = 1
+        converted_value = convert_datetime(None)(original_value)
+        self.assertEqual(id(original_value), id(converted_value))
+
+    def test_error_invalid_value(self):
+        original_value = 'not a date'
+        converted_value = convert_datetime(None)(original_value)
+        self.assertEqual(id(original_value), id(converted_value))
+
+    def test_none(self):
+        converted_value = convert_datetime(None)(None)
+        self.assertEqual(converted_value, None)
+
+    def test_convert(self):
+        original_value = '2023-04-15T20:01:02+00:00'
+        converted_value = convert_datetime(None)(original_value)
+
+        self.assertEqual(converted_value, datetime.datetime(2023, 4, 15, 20, 1, 2, tzinfo=dateutil.tz.UTC))
+        self.assertEqual(id(converted_value), id(convert_datetime(None)(converted_value)))
+
+        original_value = '21/11/06 16:30'
+        converted_value = convert_datetime('%d/%m/%y %H:%M')(original_value)
+
+        self.assertEqual(converted_value,  datetime.datetime(2006, 11, 21, 16, 30))
+        self.assertEqual(id(converted_value), id(convert_datetime(None)(converted_value)))
+
+    def test_repr(self):
+        self.assertEqual(repr(convert_datetime(None)), '<datetime converter>')
+
+
+class TestBase64Data(unittest.TestCase):
+    def test_str(self):
+        self.assertEqual(str(Base64Data(b'light work.')), 'bGlnaHQgd29yay4=')
+
+    def test_asdict(self):
+        base64_data = Base64Data(b'light work.')
+        self.assertEqual(str(base64_data), base64_data._asdict())
+
+
+class TestBase64DataConverter(unittest.TestCase):
+    def test_error_invalid_type(self):
+        original_value = 'not a binary value'
+        converted_value = convert_base64_data()(original_value)
+        self.assertEqual(id(original_value), id(converted_value))
+
+    def test_error_invalid_value(self):
+        original_value = 'not a base64 str'
+        converted_value = convert_base64_data()(original_value)
+        self.assertEqual(id(original_value), id(converted_value))
+
+    def test_error_invalid_padding(self):
+        original_value = 'invalid padding'
+        converted_value = convert_base64_data()(original_value)
+        self.assertEqual(id(original_value), id(converted_value))
+
+    def test_none(self):
+        converted_value = convert_base64_data()(None)
+        self.assertEqual(converted_value, None)
+
+    def test_binary_value(self):
+        original_value = bytearray(b'binary value')
+        converted_value = convert_base64_data()(original_value)
+        self.assertNotEqual(id(original_value), id(converted_value))
+
+    def test_convert(self):
+        original_value = 'bGlnaHQgd29yay4='
+        converted_value = convert_base64_data()(original_value)
+
+        self.assertEqual(converted_value, Base64Data(b'light work.'))
+        self.assertEqual(id(converted_value), id(convert_base64_data()(converted_value)))
+
+        original_value = 'bGlnaHQgd29yay4=='
+        converted_value = convert_base64_data()(original_value)
+
+        self.assertEqual(converted_value, Base64Data(b'light work.'))
+        self.assertEqual(id(converted_value), id(convert_base64_data()(converted_value)))
+
+    def test_repr(self):
+        self.assertEqual(repr(convert_base64_data()), '<base64 data converter>')
 
 
 class TestDictToObjectConverter(unittest.TestCase):
@@ -242,16 +330,16 @@ class TestCryptoDataBase(pyfakefs.fake_filesystem_unittest.TestCase):
     def setUp(self):  # pylint: disable=invalid-name
         self.setUpPyfakefs()
 
-    @staticmethod
-    def _get_json_path_as_str(param_class):
-        return str(CryptoDataEnumBase.get_json_path(param_class))
+    def _set_json(self, param_class, json_object):
+        self.fs.create_dir(str(CryptoDataEnumBase.get_json_path(param_class).parent))
+        CryptoDataEnumBase.set_json(param_class, json_object)
 
 
 class TestCryptoDataEnumNamed(TestCryptoDataBase):
     def test_str(self):
-        self.fs.create_file(
-            self._get_json_path_as_str(TestEnumNamedParams),
-            contents='{"NAME": {"name": "name", "long_name": "long_name"}}'
+        self._set_json(
+            TestEnumNamedParams,
+            {'NAME': {'name': 'name', 'long_name': 'long_name'}}
         )
         test_enum_named_class = CryptoDataEnumBase(
             'test_enum_named_class', CryptoDataEnumBase.get_json_records(TestEnumNamedParams)
@@ -262,7 +350,7 @@ class TestCryptoDataEnumNamed(TestCryptoDataBase):
 class TestCryptoDataEnumBase(TestCryptoDataBase):
     def test_error_get_json_path(self):
         with self.assertRaises(TypeError) as context_manager:
-            self._get_json_path_as_str(TestCryptoDataEnumBase)
+            self._set_json(TestCryptoDataEnumBase, {})
         self.assertEqual(context_manager.exception.args, (TestCryptoDataEnumBase, ))
 
     def test_get_json_path(self):
@@ -270,20 +358,28 @@ class TestCryptoDataEnumBase(TestCryptoDataBase):
         self.assertTrue(isinstance(json_path, pathlib.Path))
         self.assertEqual(json_path.name, 'test-enum-named.json')
 
+    def test_get_json(self):
+        json_object = {
+            'ONE': {
+                'code': 1
+            },
+            'TWO': {
+                'code': 2
+            }
+        }
+        self._set_json(TestEnumNumericParams, json_object)
+        self.assertEqual(CryptoDataEnumBase.get_json(TestEnumNumericParams), json_object)
+
     def test_get_records(self):
-        self.fs.create_file(
-             self._get_json_path_as_str(TestEnumNamedParams),
-             contents="""
-                 {
-                     "NAME": {
-                         "_hidden_key_1": "value",
-                         "name": "name",
-                         "_hidden_key_2": "value",
-                         "long-name": "long-name"
-                     }
-                 }
-             """
-        )
+        json_object = {
+            'NAME': {
+                '_hidden_key_1': 'value',
+                'name': 'name',
+                '_hidden_key_2': 'value',
+                'long-name': 'long-name'
+            }
+        }
+        self._set_json(TestEnumNamedParams, json_object)
         json_records = CryptoDataEnumBase.get_json_records(TestEnumNamedParams)
         self.assertEqual(json_records, collections.OrderedDict([
              ('NAME', TestEnumNamedParams(name='name', long_name='long-name')),
@@ -292,19 +388,15 @@ class TestCryptoDataEnumBase(TestCryptoDataBase):
 
 class TestCryptoDataEnumCodedBase(TestCryptoDataBase):
     def test_from_code(self):
-        self.fs.create_file(
-             self._get_json_path_as_str(TestEnumNumericParams),
-             contents="""
-                 {
-                     "ONE": {
-                         "code": 1
-                     },
-                     "TWO": {
-                         "code": 2
-                     }
-                 }
-             """
-        )
+        json_object = {
+             'ONE': {
+                 'code': 1
+             },
+             'TWO': {
+                 'code': 2
+             }
+         }
+        self._set_json(TestEnumNumericParams, json_object)
         test_enum_numeric_class = CryptoDataEnumCodedBase(
             'test_enum_numeric_class', CryptoDataEnumCodedBase.get_json_records(TestEnumNumericParams)
         )
@@ -317,23 +409,19 @@ class TestCryptoDataEnumCodedBase(TestCryptoDataBase):
 
 class TestCryptoDataEnumOidBase(TestCryptoDataBase):
     def test_from_oid(self):
-        self.fs.create_file(
-             self._get_json_path_as_str(TestEnumOidParams),
-             contents="""
-                 {
-                     "ONE": {
-                         "name": "one",
-                         "long_name": null,
-                         "oid": "1.1.1.1.1.1"
-                     },
-                     "TWO": {
-                         "name": "two",
-                         "long_name": null,
-                         "oid": "2.2.2.2.2.2"
-                     }
-                 }
-             """
-        )
+        json_object = {
+            'ONE': {
+                'name': 'one',
+                'long_name': None,
+                'oid': '1.1.1.1.1.1'
+            },
+            'TWO': {
+                'name': 'two',
+                'long_name': None,
+                'oid': '2.2.2.2.2.2'
+            }
+        }
+        self._set_json(TestEnumOidParams, json_object)
         test_enum_oid_class = CryptoDataEnumOIDBase(
             'test_enum_oid_class', CryptoDataEnumCodedBase.get_json_records(TestEnumOidParams)
         )
@@ -343,7 +431,7 @@ class TestCryptoDataEnumOidBase(TestCryptoDataBase):
 
 class TestCryptoDataEnumNumeric(TestCryptoDataBase):
     def test_error_code_negativ(self):
-        self.fs.create_file(self._get_json_path_as_str(TestEnumNumericParams), contents='{"NAME": {"code": -1}}')
+        self._set_json(TestEnumNumericParams, {'NAME': {'code': -1}})
         with self.assertRaises(ValueError) as context_manager:
             CryptoDataEnumBase(
                 'TestEnumNumeric', CryptoDataEnumBase.get_json_records(TestEnumNumericParams)
@@ -351,7 +439,7 @@ class TestCryptoDataEnumNumeric(TestCryptoDataBase):
         self.assertEqual(context_manager.exception.args, (-1, ))
 
     def test_error_code_too_large(self):
-        self.fs.create_file(self._get_json_path_as_str(TestEnumNumericParams), contents='{"NAME": {"code": 256}}')
+        self._set_json(TestEnumNumericParams, {'NAME': {'code': 256}})
         with self.assertRaises(ValueError) as context_manager:
             CryptoDataEnumBase(
                 'TestEnumNumeric', CryptoDataEnumBase.get_json_records(TestEnumNumericParams)
@@ -359,10 +447,7 @@ class TestCryptoDataEnumNumeric(TestCryptoDataBase):
         self.assertEqual(context_manager.exception.args, (256, ))
 
     def test_error_non_numeric(self):
-        self.fs.create_file(
-            self._get_json_path_as_str(TestEnumNumericParams),
-            contents='{"NAME": {"code": "non-numeric"}}'
-        )
+        self._set_json(TestEnumNumericParams, {'NAME': {'code': 'non-numeric'}})
         with self.assertRaises(ValueError) as context_manager:
             CryptoDataEnumBase(
                 'TestEnumNumeric', CryptoDataEnumBase.get_json_records(TestEnumNumericParams)
@@ -372,10 +457,7 @@ class TestCryptoDataEnumNumeric(TestCryptoDataBase):
 
 class TestCryptoDataEnumString(TestCryptoDataBase):
     def test_str(self):
-        self.fs.create_file(
-            self._get_json_path_as_str(TestEnumStringParams),
-            contents='{"NAME": {"code": "string"}}'
-        )
+        self._set_json(TestEnumStringParams, {'NAME': {'code': 'string'}})
         test_enum_string_class = CryptoDataEnumBase(
             'test_enum_string_class', CryptoDataEnumBase.get_json_records(TestEnumStringParams)
         )
@@ -383,10 +465,7 @@ class TestCryptoDataEnumString(TestCryptoDataBase):
         self.assertEqual(str(test_enum_string_class.NAME.value), 'string')
 
     def test_asdict(self):
-        self.fs.create_file(
-            self._get_json_path_as_str(TestEnumStringParams),
-            contents='{"NAME": {"code": "dict"}}'
-        )
+        self._set_json(TestEnumStringParams, {'NAME': {'code': 'dict'}})
         test_enum_string_class = CryptoDataEnumBase(
             'test_enum_string_class', CryptoDataEnumBase.get_json_records(TestEnumStringParams)
         )
@@ -394,10 +473,7 @@ class TestCryptoDataEnumString(TestCryptoDataBase):
         self.assertEqual(test_enum_string_class.NAME.value._asdict(), 'dict')
 
     def test_get_code_size(self):
-        self.fs.create_file(
-            self._get_json_path_as_str(TestEnumStringParams),
-            contents='{"NAME": {"code": "four"}}'
-        )
+        self._set_json(TestEnumStringParams, {'NAME': {'code': 'four'}})
         test_enum_string_class = CryptoDataEnumBase(
             'test_enum_string_class', CryptoDataEnumBase.get_json_records(TestEnumStringParams)
         )
