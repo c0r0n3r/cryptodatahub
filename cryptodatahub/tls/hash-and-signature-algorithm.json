@@ -3,43 +3,43 @@
         "_code_in_hex": "0x0000",
         "code": 0,
         "hash_algorithm": null,
-        "signature_algorithm": "anon"
+        "signature_algorithm": "anonymous"
     },
     "ANONYMOUS_MD5": {
         "_code_in_hex": "0x0100",
         "code": 256,
         "hash_algorithm": "MD5",
-        "signature_algorithm": "anon"
+        "signature_algorithm": "anonymous"
     },
     "ANONYMOUS_SHA1": {
         "_code_in_hex": "0x0200",
         "code": 512,
         "hash_algorithm": "SHA1",
-        "signature_algorithm": "anon"
+        "signature_algorithm": "anonymous"
     },
     "ANONYMOUS_SHA224": {
         "_code_in_hex": "0x0300",
         "code": 768,
         "hash_algorithm": "SHA2_224",
-        "signature_algorithm": "anon"
+        "signature_algorithm": "anonymous"
     },
     "ANONYMOUS_SHA256": {
         "_code_in_hex": "0x0400",
         "code": 1024,
         "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "anon"
+        "signature_algorithm": "anonymous"
     },
     "ANONYMOUS_SHA384": {
         "_code_in_hex": "0x0500",
         "code": 1280,
         "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "anon"
+        "signature_algorithm": "anonymous"
     },
     "ANONYMOUS_SHA512": {
         "_code_in_hex": "0x0006",
         "code": 6,
         "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "anon"
+        "signature_algorithm": "anonymous"
     },
     "RSA_NONE": {
         "_code_in_hex": "0x0001",

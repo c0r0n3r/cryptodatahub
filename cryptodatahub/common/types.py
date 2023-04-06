@@ -27,6 +27,7 @@ class _DictObjectConverter(object):
     def __call__(self, value):
         if value is None:
             return None
+
         try:
             return self.object_type(**value)
         except TypeError:
@@ -54,7 +55,7 @@ class _EnumConverter(object):
             return value
 
         try:
-            value = getattr(self.enum_type, value)
+            value = getattr(self.enum_type, value.upper())
         except AttributeError:
             pass
 
