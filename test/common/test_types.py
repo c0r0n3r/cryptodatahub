@@ -30,6 +30,7 @@ from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataEnumCodedBase,
     CryptoDataEnumOIDBase,
+    convert_big_enum,
     convert_client_version,
     convert_dict_to_object,
     convert_enum,
@@ -99,6 +100,46 @@ class TestDictToObjectConverter(unittest.TestCase):
 
     def test_repr(self):
         self.assertEqual(repr(convert_dict_to_object(str)), '<dict to object converter>')
+
+
+class TestBigNumberConverter(unittest.TestCase):
+    def test_error_invalid_type(self):
+        original_value = 1234
+        converted_value = convert_big_enum()(original_value)
+        self.assertEqual(id(original_value), id(convert_big_enum()(converted_value)))
+
+    def test_error_invalid_value(self):
+        original_value = 'not a big number'
+        converted_value = convert_big_enum()(original_value)
+        self.assertEqual(id(converted_value), id(convert_big_enum()(converted_value)))
+
+        original_value = [1, 2, 3, 4]
+        converted_value = convert_big_enum()(original_value)
+        self.assertEqual(id(converted_value), id(convert_big_enum()(converted_value)))
+
+    def test_none(self):
+        converted_value = convert_big_enum()(None)
+        self.assertEqual(converted_value, None)
+
+    def test_convert(self):
+        # C code-style
+        original_value = [
+            '0x01, 0x23',
+            '0x45, 0x67'
+        ]
+        converted_value = convert_big_enum()(original_value)
+        self.assertEqual(converted_value, 0x1234567)
+
+        # RFC-style
+        original_value = [
+            '01234567 89abcdef',
+            '89abcdef 01234567',
+        ]
+        converted_value = convert_big_enum()(original_value)
+        self.assertEqual(converted_value, 0x0123456789abcdef89abcdef01234567)
+
+    def test_repr(self):
+        self.assertEqual(repr(convert_big_enum()), '<big number converter>')
 
 
 class TestIterableConverter(unittest.TestCase):
