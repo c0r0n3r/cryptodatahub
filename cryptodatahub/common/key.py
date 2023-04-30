@@ -242,6 +242,10 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
         return False
 
     @property
+    def serial_number(self):
+        return self._certificate.serial_number
+
+    @property
     def subject(self):
         return OrderedDict([
             (six.ensure_str(name), value)

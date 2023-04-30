@@ -10,6 +10,7 @@ import json
 import inspect
 import os
 import re
+import unicodedata
 
 import dateutil.parser
 import six
@@ -84,7 +85,7 @@ def convert_enum(enum_type):
     return _EnumConverter(enum_type)
 
 
-@attr.s
+@attr.s(frozen=True)
 class Base64Data(object):
     value = attr.ib(validator=attr.validators.instance_of((bytes, bytearray)))
 
@@ -311,6 +312,35 @@ class CryptoDataParamsBase(object):
             if attribute.init
         ]
 
+    def _asdict_filter(self, attribute, _):
+        return not attribute.name.startswith('_')
+
+    def _asdict_serializer(self, _, __, value):
+        if hasattr(value, '_asdict'):
+            return getattr(value, '_asdict')()
+        if isinstance(value, enum.Enum):
+            return value.name
+        if isinstance(value, datetime.datetime):
+            return str(value)
+
+        return value
+
+    def _asdict(self):
+        return attr.asdict(
+            self,
+            filter=self._asdict_filter,
+            dict_factory=collections.OrderedDict,
+            value_serializer=self._asdict_serializer
+        )
+
+
+@attr.s(frozen=True)
+class CryptoDataParamsFetchedBase(CryptoDataParamsBase):
+    @property
+    @abc.abstractmethod
+    def identifier(self):
+        raise NotImplementedError()
+
 
 @attr.s(frozen=True)
 class CryptoDataParamsNamed(CryptoDataParamsBase):
@@ -362,7 +392,7 @@ class CryptoDataEnumBase(enum.Enum):
     @classmethod
     def get_json_records(cls, param_class):
         return collections.OrderedDict([
-            (name, param_class(**{
+            (six.ensure_str(unicodedata.normalize('NFD', name).encode('ascii', 'ignore')), param_class(**{
                 init_param_name.replace('-', '_'): value
                 for init_param_name, value in params.items()
                 if not init_param_name.startswith('_')

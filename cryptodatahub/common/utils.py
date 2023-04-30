@@ -24,3 +24,14 @@ def bytes_from_hex_string(hex_string, separator=''):
         six.raise_from(ValueError(*e.args), e)
 
     return binary_data
+
+
+def name_to_enum_item_name(name):
+    converted_name = ''
+    for char in name:
+        if char.isalnum():
+            converted_name += char
+        elif converted_name and converted_name[-1] != '_':
+            converted_name += '_'
+
+    return converted_name.rstrip('_').upper()

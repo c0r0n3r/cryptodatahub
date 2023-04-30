@@ -2,7 +2,9 @@
 
 import unittest
 
-from cryptodatahub.common.utils import bytes_from_hex_string, bytes_to_hex_string
+import six
+
+from cryptodatahub.common.utils import bytes_from_hex_string, bytes_to_hex_string, name_to_enum_item_name
 
 
 class TestBytesToHexString(unittest.TestCase):
@@ -32,3 +34,17 @@ class TestBytesFromHexString(unittest.TestCase):
         self.assertEqual(bytes_from_hex_string(''), b'')
         self.assertEqual(bytes_from_hex_string('DEADBEEF'), b'\xde\xad\xbe\xef')
         self.assertEqual(bytes_from_hex_string('DE:AD:BE:EF', separator=':'), b'\xde\xad\xbe\xef')
+
+
+class TestNameToEnumItemName(unittest.TestCase):
+    def test_convert_simple_name(self):
+        self.assertEqual(name_to_enum_item_name('lower'), 'LOWER')
+
+    def test_convert_multipart_name(self):
+        self.assertEqual(name_to_enum_item_name('multiple part'), 'MULTIPLE_PART')
+        self.assertEqual(name_to_enum_item_name('aplha 123'), 'APLHA_123')
+        self.assertEqual(name_to_enum_item_name('m  u  l  t  i  s  p  a  c  e'), 'M_U_L_T_I_S_P_A_C_E')
+        self.assertEqual(name_to_enum_item_name('trailing space  '), 'TRAILING_SPACE')
+
+    def test_convert_i18n_name(self):
+        self.assertEqual(name_to_enum_item_name(six.ensure_text('αβγ')), six.ensure_text('ΑΒΓ'))

@@ -117,6 +117,7 @@
         "long_name": "Mozilla Foundation",
         "type": "NONPROFIT_ORG",
         "activities": [
+            "CA_TRUST_STORE_OWNER",
             "CLIENT_DEVELOPER"
         ]
     },
