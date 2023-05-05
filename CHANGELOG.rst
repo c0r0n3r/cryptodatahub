@@ -7,6 +7,7 @@ Changelog
 -  Generic
 
    -  add well-know Diffie-Hellman parameters (#3)
+   -  add certificate transparency (CT) logs (#5)
 
 0.8.5 - 2023-04-02
 ------------------
