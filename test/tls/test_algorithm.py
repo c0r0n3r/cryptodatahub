@@ -122,6 +122,8 @@ class TestTlsSignatureAndHashAlgorithm(TestClasses.TestJsonCodeNumericBase):
         return TlsSignatureAndHashAlgorithm
 
     def test_str(self):
+        self.assertEqual(str(TlsSignatureAndHashAlgorithm.ANONYMOUS_NONE.value), 'none with no encryption')
+        self.assertEqual(str(TlsSignatureAndHashAlgorithm.ANONYMOUS_SHA1.value), 'SHA-1 with no encryption')
         self.assertEqual(str(TlsSignatureAndHashAlgorithm.RSA_SHA1.value), 'SHA-1 with RSA encryption')
 
 

@@ -67,7 +67,17 @@ class HashAndSignatureAlgorithmParams(CryptoDataParamsEnumNumeric):
     )
 
     def __str__(self):
-        return '{} with {} encryption'.format(self.hash_algorithm.value, self.signature_algorithm.value)
+        if self.hash_algorithm:
+            hash_algorithm = self.hash_algorithm.value
+        else:
+            hash_algorithm = 'none'
+
+        if self.signature_algorithm == Authentication.ANONYMOUS:
+            signature_algorithm = 'no'
+        else:
+            signature_algorithm = self.signature_algorithm.value
+
+        return '{} with {} encryption'.format(hash_algorithm, signature_algorithm)
 
     @classmethod
     def get_code_size(cls):
