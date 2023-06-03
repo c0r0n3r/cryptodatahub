@@ -69,6 +69,33 @@ def convert_enum(enum_type):
 
 
 @attr.s(repr=False, slots=True, hash=True)
+class _BigNumberConverter(object):
+    def __call__(self, value):
+        if value is None:
+            return None
+
+        if not isinstance(value, collections_abc.Iterable):
+            return value
+
+        if not all(map(lambda big_number_part: isinstance(big_number_part, six.string_types), value)):
+            return value
+
+        try:
+            value = int(''.join(value).replace('0x', '').replace(' ', '').replace(',', ''), 16)
+        except ValueError:
+            pass
+
+        return value
+
+    def __repr__(self):
+        return '<big number converter>'
+
+
+def convert_big_enum():
+    return _BigNumberConverter()
+
+
+@attr.s(repr=False, slots=True, hash=True)
 class _IterableConverter(object):
     member_converter = attr.ib(validator=attr.validators.instance_of(collections_abc.Callable))
 
@@ -237,7 +264,7 @@ class CryptoDataEnumBase(enum.Enum):
             ])
 
     @staticmethod
-    def get_json_path(param_class):
+    def get_file_name_from_param_class(param_class):
         if not param_class.__name__.endswith('Params'):
             raise TypeError(param_class)
 
@@ -248,7 +275,14 @@ class CryptoDataEnumBase(enum.Enum):
             if name_part
         ]
 
-        return pathlib.Path(inspect.getfile(param_class)).parent / ('-'.join(enum_class_name_parts) + '.json')
+        return '-'.join(enum_class_name_parts) + '.json'
+
+    @staticmethod
+    def get_json_path(param_class):
+        return (
+            pathlib.Path(inspect.getfile(param_class)).parent /
+            CryptoDataEnumBase.get_file_name_from_param_class(param_class)
+        )
 
     @classmethod
     def _from_attr(cls, attr_name, value):

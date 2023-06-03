@@ -125,7 +125,7 @@ class TestClasses:
             self.assertEqual(wrong_indents, [])
 
         def test_param_list_len(self):
-            self.assertEqual(len(self._get_class()), len(self.json_data))
+            self.assertEqual(set(map(lambda item: item.name, self._get_class())), set(self.json_data))
 
         def test_param_attribute_names_protected(self):
             protected_names = self._get_protected_names()
