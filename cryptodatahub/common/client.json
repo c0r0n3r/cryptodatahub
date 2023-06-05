@@ -1,0 +1,20 @@
+{
+    "CHROMIUM": {
+        "name": "Chromium",
+        "long_name": null,
+        "type": "WEB_BROWSER",
+        "developer": "GOOGLE"
+    },
+    "FIREFOX": {
+        "name": "Firefox",
+        "long_name": null,
+        "type": "WEB_BROWSER",
+        "developer": "MOZILLA"
+    },
+    "OPERA": {
+        "name": "Opera",
+        "long_name": null,
+        "type": "WEB_BROWSER",
+        "developer": "OPERA"
+    }
+}

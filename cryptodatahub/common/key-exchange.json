@@ -1,5 +1,5 @@
 {
-    "null": {
+    "NULL": {
         "name": "null",
         "long_name": "null encryption",
         "forward_secret": false

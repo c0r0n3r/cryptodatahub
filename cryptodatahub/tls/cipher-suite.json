@@ -4,7 +4,7 @@
         "code": 0,
         "iana_name": "TLS_NULL_WITH_NULL_NULL",
         "openssl_name": null,
-        "key_exchange": "null",
+        "key_exchange": "NULL",
         "authentication": "anonymous",
         "bulk_cipher": null,
         "block_cipher_mode": null,

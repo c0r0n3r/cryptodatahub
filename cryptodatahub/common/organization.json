@@ -1,0 +1,14 @@
+{
+    "GOOGLE": {
+        "name": "Google",
+        "long_name": null
+    },
+    "MOZILLA": {
+        "name": "Mozilla",
+        "long_name": null
+    },
+    "OPERA": {
+        "name": "Opera",
+        "long_name": null
+    }
+}
