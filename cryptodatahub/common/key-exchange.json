@@ -1,4 +1,9 @@
 {
+    "null": {
+        "name": "null",
+        "long_name": "null encryption",
+        "forward_secret": false
+    },
     "AECDH": {
         "name": "AECDH",
         "long_name": "Anonymous Elliptic-curve Diffie-Hellman",
