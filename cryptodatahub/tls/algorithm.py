@@ -52,7 +52,7 @@ class NamedCurveParams(CryptoDataParamsEnumNumeric):
         return 2
 
 
-TlsNamedCurve = CryptoDataEnumCodedBase('NamedCurve', CryptoDataEnumCodedBase.get_json_records(NamedCurveParams))
+TlsNamedCurve = CryptoDataEnumCodedBase('TlsNamedCurve', CryptoDataEnumCodedBase.get_json_records(NamedCurveParams))
 
 
 @attr.s(frozen=True)
