@@ -9,8 +9,12 @@
             ],
             "g": 2
         },
-        "name": "768-bit MODP Group",
-        "source": "RFC2409/RFC2539/Oakley Group 1",
+        "name": "768-bit MODP Group/Oakley Group 1",
+        "source": "IETF",
+        "standards": [
+            "RFC_2409",
+            "RFC_2539"
+        ],
         "key_size": 768,
         "safe_prime": true
     },
@@ -26,8 +30,12 @@
             ],
             "g": 2
         },
-        "name": "1024-bit MODP Group",
-        "source": "RFC2409/RFC2539/Oakley Group 2",
+        "name": "1024-bit MODP Group/Oakley Group 2",
+        "source": "IETF",
+        "standards": [
+            "RFC_2409",
+            "RFC_2539"
+        ],
         "key_size": 1024,
         "safe_prime": true
     },
@@ -45,8 +53,11 @@
             ],
             "g": 2
         },
-        "name": "1536-bit MODP Group",
-        "source": "RFC3526/Oakley Group 5",
+        "name": "1536-bit MODP Group/Oakley Group 5",
+        "source": "IETF",
+        "standards": [
+            "RFC_3526"
+        ],
         "key_size": 1536,
         "safe_prime": true
     },
@@ -67,8 +78,11 @@
             ],
             "g": 2
         },
-        "name": "2048-bit MODP Group",
-        "source": "RFC3526/Oakley Group 14",
+        "name": "2048-bit MODP Group/Oakley Group 14",
+        "source": "IETF",
+        "standards": [
+            "RFC_3526"
+        ],
         "key_size": 2048,
         "safe_prime": true
     },
@@ -94,8 +108,11 @@
             ],
             "g": 2
         },
-        "name": "3072-bit MODP Group",
-        "source": "RFC3526/Oakley Group 15",
+        "name": "3072-bit MODP Group/Oakley Group 15",
+        "source": "IETF",
+        "standards": [
+            "RFC_3526"
+        ],
         "key_size": 3072,
         "safe_prime": true
     },
@@ -127,8 +144,11 @@
             ],
             "g": 2
         },
-        "name": "4096-bit MODP Group",
-        "source": "RFC3526/Oakley Group 16",
+        "name": "4096-bit MODP Group/Oakley Group 16",
+        "source": "IETF",
+        "standards": [
+            "RFC_3526"
+        ],
         "key_size": 4096,
         "safe_prime": true
     },
@@ -167,7 +187,10 @@
             "g": 2
         },
         "name": "6144-bit MODP Group/Oakley Group 17",
-        "source": "RFC3526",
+        "source": "IETF",
+        "standards": [
+            "RFC_3526"
+        ],
         "key_size": 6144,
         "safe_prime": true
     },
@@ -220,8 +243,11 @@
             ],
             "g": 2
         },
-        "name": "8192-bit MODP Group",
-        "source": "RFC3526/Oakley Group 18",
+        "name": "8192-bit MODP Group/Oakley Group 18",
+        "source": "IETF",
+        "standards": [
+            "RFC_3526"
+        ],
         "key_size": 8192,
         "safe_prime": true
     },
@@ -248,7 +274,10 @@
             ]
         },
         "name": "1024-bit MODP Group with 160-bit Prime Order Subgroup",
-        "source": "RFC5114",
+        "source": "IETF",
+        "standards": [
+            "RFC_5114"
+        ],
         "key_size": 1024,
         "safe_prime": false
     },
@@ -286,7 +315,10 @@
             ]
         },
         "name": "2048-bit MODP Group with 224-bit Prime Order Subgroup",
-        "source": "RFC5114",
+        "source": "IETF",
+        "standards": [
+            "RFC_5114"
+        ],
         "key_size": 2048,
         "safe_prime": false
     },
@@ -324,7 +356,10 @@
             ]
         },
         "name": "2048-bit MODP Group with 256-bit Prime Order Subgroup",
-        "source": "RFC5114",
+        "source": "IETF",
+        "standards": [
+            "RFC_5114"
+        ],
         "key_size": 2048,
         "safe_prime": false
     },
@@ -359,7 +394,10 @@
             ]
         },
         "name": "2048-bit Finite Field Diffie-Hellman group",
-        "source": "RFC7919",
+        "source": "IETF",
+        "standards": [
+            "RFC_7919"
+        ],
         "key_size": 2048,
         "safe_prime": true
     },
@@ -404,7 +442,10 @@
             ]
         },
         "name": "3072-bit Finite Field Diffie-Hellman group",
-        "source": "RFC7919",
+        "source": "IETF",
+        "standards": [
+            "RFC_7919"
+        ],
         "key_size": 3072,
         "safe_prime": true
     },
@@ -461,7 +502,10 @@
             ]
         },
         "name": "4096-bit Finite Field Diffie-Hellman group",
-        "source": "RFC7919",
+        "source": "IETF",
+        "standards": [
+            "RFC_7919"
+        ],
         "key_size": 4096,
         "safe_prime": true
     },
@@ -538,7 +582,10 @@
             ]
         },
         "name": "6144-bit Finite Field Diffie-Hellman group",
-        "source": "RFC7919",
+        "source": "IETF",
+        "standards": [
+            "RFC_7919"
+        ],
         "key_size": 6144,
         "safe_prime": true
     },
@@ -637,7 +684,10 @@
             ]
         },
         "name": "8192-bit Finite Field Diffie-Hellman group",
-        "source": "RFC7919",
+        "source": "IETF",
+        "standards": [
+            "RFC_7919"
+        ],
         "key_size": 8192,
         "safe_prime": true
     },
@@ -653,8 +703,9 @@
             ],
             "g": 2
         },
-        "name": "Postfix 2.2 builtin DH 512-bit",
-        "source": "Postfix source code",
+        "name": "2.2 builtin",
+        "source": "POSTFIX",
+        "standards": [],
         "key_size": 512,
         "safe_prime": true
     },
@@ -675,8 +726,9 @@
             ],
             "g": 2
         },
-        "name": "Postfix 2.2 builtin DH 1024-bit",
-        "source": "Postfix source code",
+        "name": "2.2 builtin",
+        "source": "POSTFIX",
+        "standards": [],
         "key_size": 1024,
         "safe_prime": true
     },
@@ -692,8 +744,9 @@
             ],
             "g": 2
         },
-        "name": "Postfix 3.1 builtin DH 512-bit",
-        "source": "Postfix source code",
+        "name": "3.1 builtin",
+        "source": "POSTFIX",
+        "standards": [],
         "key_size": 512,
         "safe_prime": true
     },
@@ -726,8 +779,9 @@
             ],
             "g": 2
         },
-        "name": "Postfix 3.1 builtin DH 2048-bit",
-        "source": "Postfix source code",
+        "name": "3.1 builtin",
+        "source": "POSTFIX",
+        "standards": [],
         "key_size": 2048,
         "safe_prime": true
     },
@@ -760,8 +814,9 @@
             ],
             "g": 2
         },
-        "name": "Postfix 3.6 builtin DH 2048-bit",
-        "source": "Postfix source code",
+        "name": "3.6 builtin",
+        "source": "POSTFIX",
+        "standards": [],
         "key_size": 2048,
         "safe_prime": true
     },
@@ -794,8 +849,9 @@
             ],
             "g": 2
         },
-        "name": "Postfix 3.7 builtin DH 2048-bit",
-        "source": "Postfix source code",
+        "name": "3.7 builtin",
+        "source": "POSTFIX",
+        "standards": [],
         "key_size": 2048,
         "safe_prime": true
     },
@@ -816,8 +872,9 @@
             ],
             "g": 2
         },
-        "name": "HAProxy 1.6 builtin DH 1024-bit",
-        "source": "HAProxy source code",
+        "name": "1.6 builtin",
+        "source": "HAPROXY",
+        "standards": [],
         "key_size": 1024,
         "safe_prime": true
     },
@@ -849,8 +906,9 @@
             ],
             "g": 2
         },
-        "name": "HAProxy 1.6 builtin DH 2048-bit",
-        "source": "HAProxy source code",
+        "name": "1.6 builtin",
+        "source": "HAPROXY",
+        "standards": [],
         "key_size": 2048,
         "safe_prime": true
     },
@@ -903,8 +961,9 @@
             ],
             "g": 2
         },
-        "name": "HAProxy 1.6 builtin DH 4096-bit",
-        "source": "HAProxy source code",
+        "name": "1.6 builtin",
+        "source": "HAPROXY",
+        "standards": [],
         "key_size": 4096,
         "safe_prime": true
     },
@@ -920,8 +979,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.2.8 builtin DH 512-bit",
-        "source": "ProFTPD source code",
+        "name": "1.2.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 512,
         "safe_prime": true
     },
@@ -939,8 +999,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.2.8 builtin DH 768-bit",
-        "source": "ProFTPD source code",
+        "name": "1.2.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 768,
         "safe_prime": true
     },
@@ -961,8 +1022,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.2.8 builtin DH 1024-bit",
-        "source": "ProFTPD source code",
+        "name": "1.2.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 1024,
         "safe_prime": true
     },
@@ -988,8 +1050,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.2.8 builtin DH 1536-bit",
-        "source": "ProFTPD source code",
+        "name": "1.2.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 1536,
         "safe_prime": true
     },
@@ -1021,8 +1084,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.2.8 builtin DH 2048-bit",
-        "source": "ProFTPD source code",
+        "name": "1.2.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 2048,
         "safe_prime": true
     },
@@ -1038,8 +1102,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.3.2 builtin DH 512-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.2 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 512,
         "safe_prime": true
     },
@@ -1057,8 +1122,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.3.2 builtin DH 768-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.2 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 768,
         "safe_prime": true
     },
@@ -1079,8 +1145,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.3.2 builtin DH 1024-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.2 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 1024,
         "safe_prime": true
     },
@@ -1106,8 +1173,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.3.2 builtin DH 1536-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.2 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 1536,
         "safe_prime": true
     },
@@ -1123,8 +1191,9 @@
             ],
             "g": 5
         },
-        "name": "ProFTPD 1.3.5 builtin DH 512-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.5 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 512,
         "safe_prime": true
     },
@@ -1142,8 +1211,9 @@
             ],
             "g": 5
         },
-        "name": "ProFTPD 1.3.5 builtin DH 768-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.5 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 768,
         "safe_prime": true
     },
@@ -1164,8 +1234,9 @@
             ],
             "g": 5
         },
-        "name": "ProFTPD 1.3.5 builtin DH 1024-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.5 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 1024,
         "safe_prime": true
     },
@@ -1191,8 +1262,9 @@
             ],
             "g": 5
         },
-        "name": "ProFTPD 1.3.5 builtin DH 1536-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.5 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 1536,
         "safe_prime": true
     },
@@ -1224,8 +1296,9 @@
             ],
             "g": 5
         },
-        "name": "ProFTPD 1.3.5 builtin DH 2048-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.5 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 2048,
         "safe_prime": true
     },
@@ -1242,8 +1315,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.3.7 builtin DH 512-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.7 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 512,
         "safe_prime": true
     },
@@ -1263,8 +1337,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.3.7 builtin DH 768-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.7 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 768,
         "safe_prime": true
     },
@@ -1287,8 +1362,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.3.7 builtin DH 1024-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.7 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 1024,
         "safe_prime": true
     },
@@ -1318,8 +1394,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.3.7 builtin DH 1536-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.7 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 1536,
         "safe_prime": true
     },
@@ -1355,8 +1432,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.3.2 builtin DH 2048-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.2 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 2048,
         "safe_prime": true
     },
@@ -1372,8 +1450,9 @@
             ],
             "g": 5
         },
-        "name": "ProFTPD 1.3.8 builtin DH 512-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 512,
         "safe_prime": true
     },
@@ -1391,8 +1470,9 @@
             ],
             "g": 5
         },
-        "name": "ProFTPD 1.3.8 builtin DH 768-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 768,
         "safe_prime": true
     },
@@ -1413,8 +1493,9 @@
             ],
             "g": 5
         },
-        "name": "ProFTPD 1.3.8 builtin DH 1024-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 1024,
         "safe_prime": true
     },
@@ -1440,8 +1521,9 @@
             ],
             "g": 5
         },
-        "name": "ProFTPD 1.3.8 builtin DH 1536-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 1536,
         "safe_prime": true
     },
@@ -1473,8 +1555,9 @@
             ],
             "g": 5
         },
-        "name": "ProFTPD 1.3.8 builtin DH 2048-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 2048,
         "safe_prime": true
     },
@@ -1516,8 +1599,9 @@
             ],
             "g": 2
         },
-        "name": "ProFTPD 1.3.8 builtin DH 3072-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 3072,
         "safe_prime": true
     },
@@ -1570,8 +1654,9 @@
             ],
             "g": 5
         },
-        "name": "ProFTPD 1.3.8 builtin DH 4096-bit",
-        "source": "ProFTPD source code",
+        "name": "1.3.8 builtin",
+        "source": "PROFTPD",
+        "standards": [],
         "key_size": 4096,
         "safe_prime": true
     },
@@ -1592,8 +1677,9 @@
             ],
             "g": 2
         },
-        "name": "NGINX 0.7.2 builtin DH 1024-bit",
-        "source": "NGINX source code",
+        "name": "0.7.2 builtin",
+        "source": "NGINX",
+        "standards": [],
         "key_size": 1024,
         "safe_prime": true
     },
@@ -1609,8 +1695,9 @@
             ],
             "g": 2
         },
-        "name": "Apache 2.0.18 builtin DH 512-bit",
-        "source": "Apache source code",
+        "name": "2.0.18 builtin",
+        "source": "APACHE_HTTP_SERVER",
+        "standards": [],
         "key_size": 512,
         "safe_prime": true
     },
@@ -1631,8 +1718,9 @@
             ],
             "g": 2
         },
-        "name": "Apache 2.0.18 builtin DH 1024-bit",
-        "source": "Apache source code",
+        "name": "2.0.18 builtin",
+        "source": "APACHE_HTTP_SERVER",
+        "standards": [],
         "key_size": 1024,
         "safe_prime": true
     },
@@ -1648,8 +1736,9 @@
             ],
             "g": 2
         },
-        "name": "Apache 2.1.5 builtin DH 512-bit",
-        "source": "Apache source code",
+        "name": "2.1.5 builtin",
+        "source": "APACHE_HTTP_SERVER",
+        "standards": [],
         "key_size": 512,
         "safe_prime": true
     },
@@ -1670,8 +1759,9 @@
             ],
             "g": 2
         },
-        "name": "Apache 2.1.5 builtin DH 1024-bit",
-        "source": "Apache source code",
+        "name": "2.1.5 builtin",
+        "source": "APACHE_HTTP_SERVER",
+        "standards": [],
         "key_size": 1024,
         "safe_prime": true
     },
@@ -1699,8 +1789,9 @@
             ],
             "g": 2
         },
-        "name": "socat 1.7.3 builtin DH 2048-bit",
-        "source": "socat source code",
+        "name": "1.7.3 builtin",
+        "source": "SOCAT",
+        "standards": [],
         "key_size": 2048,
         "safe_prime": true
     }

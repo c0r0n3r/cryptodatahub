@@ -18,6 +18,8 @@ class EntityType(enum.Enum):
 class EntityRole(enum.Enum):
     CLIENT_DEVELOPER = 'client developer'
     CT_LOG_OPERATOR = 'certificate transparency log operator'
+    SERVER_DEVELOPER = 'server developer'
+    STANDARD_DEVELOPER = 'standard developer'
 
 
 @attr.s(frozen=True)
@@ -56,3 +58,31 @@ class ClientParams(CryptoDataParamsNamed):
 
 
 Client = CryptoDataEnumBase('Client', CryptoDataEnumBase.get_json_records(ClientParams))
+
+
+class ServerType(enum.Enum):
+    FTP_SERVER = 'ftp server'
+    MAIL_SERVER = 'mail server'
+    WEB_SERVER = 'web server'
+    TCP_SERVER = 'tcp server'
+
+
+@attr.s(frozen=True)
+class ServerParams(CryptoDataParamsNamed):
+    types = attr.ib(
+        converter=convert_iterable(convert_enum(ServerType)),
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(ServerType))
+    )
+    developers = attr.ib(
+        converter=convert_iterable(convert_enum(Entity)),
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(Entity))
+    )
+
+    def __str__(self):
+        server_str = self.name
+        if self.developers:
+            server_str += ' ({})'.format(','.join(map(lambda developer: developer.value.name, self.developers)))
+        return server_str
+
+
+Server = CryptoDataEnumBase('Server', CryptoDataEnumBase.get_json_records(ServerParams))

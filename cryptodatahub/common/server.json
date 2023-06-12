@@ -1,0 +1,56 @@
+{
+    "APACHE_HTTP_SERVER": {
+        "name": "Apache",
+        "long_name": "Apache HTTP Server",
+        "types": [
+            "WEB_SERVER"
+        ],
+        "developers": [
+            "ASF"
+        ]
+    },
+    "HAPROXY": {
+        "name": "HAProxy",
+        "long_name": null,
+        "types": [
+            "WEB_SERVER"
+        ],
+        "developers": []
+    },
+    "NGINX": {
+        "name": "NGINX",
+        "long_name": null,
+        "types": [
+            "WEB_SERVER"
+        ],
+        "developers": [
+            "F5"
+        ]
+    },
+    "POSTFIX": {
+        "name": "Postfix",
+        "long_name": null,
+        "types": [
+            "MAIL_SERVER"
+        ],
+        "developers": [
+            "WIETSE_VENEMA"
+        ]
+    },
+    "PROFTPD": {
+        "name": "ProFTPD",
+        "long_name": "Pro FTP Daemon",
+        "types": [
+            "FTP_SERVER"
+        ],
+        "developers": []
+    },
+    "SOCAT": {
+        "name": "socat",
+        "long_name": "Socket CAT",
+        "types": [
+            "TCP_SERVER"
+        ],
+        "developers": []
+    }
+}

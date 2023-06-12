@@ -20,6 +20,7 @@ from test.common.classes import (
     TestEnumStringParams,
     TestJsonObject,
     TestJsonObjectComplex,
+    EnumIntTest,
     EnumTest,
 )
 
@@ -41,6 +42,7 @@ from cryptodatahub.common.types import (
     convert_enum,
     convert_iterable,
     convert_mapping,
+    convert_variadic,
 )
 
 
@@ -292,6 +294,36 @@ class TestMappingConverter(unittest.TestCase):
 
     def test_repr(self):
         self.assertEqual(repr(convert_mapping(str)), '<mapping converter>')
+
+
+class TestClientVariadicConverter(unittest.TestCase):
+    def test_repr(self):
+        self.assertEqual(repr(convert_variadic([])), '<variadic converter>')
+
+    def test_error_invalid_value(self):
+        original_value = 'non-enum'
+        converted_value = convert_variadic([convert_enum(EnumIntTest)])(original_value)
+        self.assertEqual(id(original_value), id(converted_value))
+
+    def test_none(self):
+        converted_value = convert_variadic([])(None)
+        self.assertEqual(converted_value, None)
+
+    def test_convert_value(self):
+        original_value = 'ONE'
+        converted_value = convert_variadic([convert_enum(EnumIntTest)])(original_value)
+
+        self.assertEqual(converted_value, EnumIntTest.ONE)
+        self.assertEqual(id(converted_value), id(convert_variadic([convert_enum(EnumIntTest)])(converted_value)))
+
+        original_value = 'NONE'
+        converted_value = convert_variadic([convert_enum(EnumIntTest), convert_enum(EnumTest)])(original_value)
+
+        self.assertEqual(converted_value, EnumTest.NONE)
+        self.assertEqual(
+            id(converted_value),
+            id(convert_variadic([convert_enum(EnumIntTest), convert_enum(EnumTest)])(converted_value))
+        )
 
 
 class TestClientVersionConverter(unittest.TestCase):
