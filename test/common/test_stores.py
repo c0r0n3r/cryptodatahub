@@ -283,6 +283,7 @@ class TestRootCertificate(unittest.TestCase):
         root_certificate_count_by_owner = collections.OrderedDict([
             (Entity.MOZILLA, 141),
             (Entity.MICROSOFT, 299),
+            (Entity.APPLE, 172),
         ])
 
         for owner, certificate_count in root_certificate_count_by_owner.items():

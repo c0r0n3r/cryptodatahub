@@ -8,6 +8,7 @@ Changelog
 
    -  add trusted root CA certificates from notable stores (#6)
 
+      -  `Apple <https://en.wikipedia.org/wiki/Apple_Inc.>`__
       -  `Microsoft <https://en.wikipedia.org/wiki/Microsoft>`__
       -  `Mozilla <https://en.wikipedia.org/wiki/Mozilla>`__
 

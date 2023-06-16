@@ -84,6 +84,7 @@
         "long_name": "Google LLC",
         "type": "FOR_PROFIT_ORG",
         "activities": [
+            "CA_TRUST_STORE_OWNER",
             "CT_LOG_OPERATOR",
             "CLIENT_DEVELOPER"
         ]

@@ -49,6 +49,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -262,6 +266,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -321,6 +329,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -441,6 +453,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -591,6 +607,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -636,6 +656,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -694,6 +718,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -732,6 +760,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -778,6 +810,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -836,6 +872,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -873,6 +913,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -912,6 +956,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -1040,6 +1088,79 @@
             }
         ]
     },
+    "ANF_GLOBAL_ROOT_CA_1370886338534": {
+        "_meta": {
+            "_subject": {
+                "country_name": "ES",
+                "state_or_province_name": "Barcelona",
+                "locality_name": "Barcelona (see current address at http://www.anf.es/es/address-direccion.html )",
+                "organization_name": "ANF Autoridad de Certificacion",
+                "organizational_unit_name": "ANF Clase 1 CA",
+                "email_address": "info@anf.es",
+                "serial_number": "G63287510",
+                "common_name": "ANF Global Root CA"
+            },
+            "_fingerprints": {
+                "MD5": "1D:67:BF:1E:F0:EA:72:38:27:87:9D:C2:D2:56:64:07",
+                "SHA1": "26:CA:FF:09:A7:AF:BA:E9:68:10:CF:FF:82:1A:94:32:6D:28:45:AA",
+                "SHA2_256": "E3:26:8F:61:06:BA:8B:66:5A:1A:96:2D:DE:A1:45:9D:2A:46:97:2F:1F:24:40:32:9B:39:0B:89:57:49:AD:45"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIIGDCCBgCgAwIBAgIGAT8vMXfmMA0GCSqGSIb3DQEBCwUAMIIBCjELMAkGA1UE",
+            "BhMCRVMxEjAQBgNVBAgMCUJhcmNlbG9uYTFYMFYGA1UEBwxPQmFyY2Vsb25hIChz",
+            "ZWUgY3VycmVudCBhZGRyZXNzIGF0IGh0dHA6Ly93d3cuYW5mLmVzL2VzL2FkZHJl",
+            "c3MtZGlyZWNjaW9uLmh0bWwgKTEnMCUGA1UECgweQU5GIEF1dG9yaWRhZCBkZSBD",
+            "ZXJ0aWZpY2FjaW9uMRcwFQYDVQQLDA5BTkYgQ2xhc2UgMSBDQTEaMBgGCSqGSIb3",
+            "DQEJARYLaW5mb0BhbmYuZXMxEjAQBgNVBAUTCUc2MzI4NzUxMDEbMBkGA1UEAwwS",
+            "QU5GIEdsb2JhbCBSb290IENBMB4XDTEzMDYxMDE3NDUzOFoXDTMzMDYwNTE3NDUz",
+            "OFowggEKMQswCQYDVQQGEwJFUzESMBAGA1UECAwJQmFyY2Vsb25hMVgwVgYDVQQH",
+            "DE9CYXJjZWxvbmEgKHNlZSBjdXJyZW50IGFkZHJlc3MgYXQgaHR0cDovL3d3dy5h",
+            "bmYuZXMvZXMvYWRkcmVzcy1kaXJlY2Npb24uaHRtbCApMScwJQYDVQQKDB5BTkYg",
+            "QXV0b3JpZGFkIGRlIENlcnRpZmljYWNpb24xFzAVBgNVBAsMDkFORiBDbGFzZSAx",
+            "IENBMRowGAYJKoZIhvcNAQkBFgtpbmZvQGFuZi5lczESMBAGA1UEBRMJRzYzMjg3",
+            "NTEwMRswGQYDVQQDDBJBTkYgR2xvYmFsIFJvb3QgQ0EwggIiMA0GCSqGSIb3DQEB",
+            "AQUAA4ICDwAwggIKAoICAQDHPi9xy4wynbcUbWjorVUgQKeUAVh937J7P37XmsfH",
+            "ZLOBZKIIlhhCtRwnDlg7x+BUvtJOTkIbEGMujDygUQ2s3HDYr5I41hTyM2Pl0cq2",
+            "EuSGEbPIHb3dEX8NAguFexM0jqNjrreN3hM2/+TOkAxSdDJP2aMurlySC5zwl47K",
+            "ZLHtcVrkZnkDa0o5iN24hJT4vBDT4t2q9khQ+qb1D8KgCOb02r1PxWXu3vfd6Ha2",
+            "mkdB97iGuEh5gO2n4yOmFS5goFlVA2UdPbbhJsb8oKVKDd+YdCKGQDCkQyG4AjmC",
+            "YiNm3UPG/qtftTH5cWri67DlLtm6fyUFOMmO6NSh0RtR745pL8GyWJUanyq/Q4bF",
+            "HQB21E+WtTsCaqjGaoFcrBunMypmCd+jUZXl27TYENRFbrwNdAh7m2UztcIyb+Sg",
+            "VJFyfvVsBQNvnp7GPimVxXZNc4VpxEXObRuPWQN1oZN/90PcZVqTia/SHzEyTryL",
+            "ckhiLG3jZiaFZ7pTZ5I9wti9Pn+4kOHvE3Y/4nEnUo4mTxPX9pOlinF+VCiybtV2",
+            "u1KSlc+YaIM7VmuyndDZCJRXm3v0/qTE7t5A5fArZl9lvibigMbWB8fpD+c1GpGH",
+            "Eo8NRY0lkaM+DkIqQoaziIsz3IKJrfdKaq9bQMSlIfameKBZ8fNYTBZrH9KZAIhz",
+            "YwIDAQABo4IBfjCCAXowHQYDVR0OBBYEFIf6nt9SdnXsSUogb1twlo+d77sXMB8G",
+            "A1UdIwQYMBaAFIf6nt9SdnXsSUogb1twlo+d77sXMA8GA1UdEwEB/wQFMAMBAf8w",
+            "DgYDVR0PAQH/BAQDAgEGMIIBFQYDVR0RBIIBDDCCAQiCEWh0dHA6Ly93d3cuYW5m",
+            "LmVzgQtpbmZvQGFuZi5lc6SB5TCB4jE0MDIGA1UECQwrR3JhbiBWaWEgZGUgbGVz",
+            "IENvcnRzIENhdGFsYW5lcy4gOTk2LiAwODAxODESMBAGA1UEBwwJQmFyY2Vsb25h",
+            "MScwJQYDVQQKDB5BTkYgQXV0b3JpZGFkIGRlIENlcnRpZmljYWNpb24xEjAQBgNV",
+            "BAUTCUc2MzI4NzUxMDFZMFcGA1UECwxQSW5zY3JpdGEgZW4gZWwgTWluaXN0ZXJp",
+            "byBkZWwgSW50ZXJpb3IgZGUgRXNwYcOxYSBjb24gZWwgbnVtZXJvIG5hY2lvbmFs",
+            "IDE3MS40NDMwDQYJKoZIhvcNAQELBQADggIBAIgR9tFTZ9BCYg+HViMxOfF0MHN2",
+            "Pe/eC128ARdS+GH8A4thtbqiH/SOYbWofO/0zssHhNKa5iQEj45lCAb8BANpWJMD",
+            "nWkPr6jq2+50a6d0MMgSS2l1rvjSF+3nIrEuicshHXSTi3q/vBLKr7uGKMVFaM68",
+            "XAropIwk6ndlA0JseARSPsbetv7ALESMIZAxlHV1TcctYHd0bB3c/Jz+PLszJQqs",
+            "Cg/kBPo2D111OXZkIY8W/fJuG9veR783khAK2gUnC0zLLCNsYzEbdGt8zUmBsAsM",
+            "cGxqGm6B6vDXd65OxWqw13xdq/24+5R8Ng1PF9tvfjZkUFBF30CxjWur7P90WiKI",
+            "G7IGfr6BE1NgXlhEQQu4F+HizB1ypEPzGWltecXQ4yOzO+H0WfFTjLTYX6VSveyW",
+            "DQV18ixF8M4tHP/SwNE+yyv2b2JJ3/3RpxjtFlLk+opJ574x0gD/dMJuWTH0JqVY",
+            "3PbRfE1jIxFpk164Qz/Xp7H7w7f6xh+tQCkBs3PUYmnGIZcPwq44Q6JHlCNsKx4K",
+            "hxfggTvRCk4w79cUID45c2qDsRCqTPoOo/cbOpcfVhbH9LdMORpmuLwNogRZEUSE",
+            "fWpqR9q+0kcQf4zGSWIURIyDrogdpDgoHDxktqgMgc+qA4ZE2WQl1D8hmev53A46",
+            "lUSrWUiWfDXtK3ux",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
     "ANF_SECURE_SERVER_ROOT_CA_996390341000653745": {
         "_meta": {
             "_subject": {
@@ -1098,6 +1219,206 @@
             }
         ]
     },
+    "APPLE_ROOT_CA_2": {
+        "_meta": {
+            "_subject": {
+                "country_name": "US",
+                "organization_name": "Apple Inc.",
+                "organizational_unit_name": "Apple Certification Authority",
+                "common_name": "Apple Root CA"
+            },
+            "_fingerprints": {
+                "MD5": "7E:61:1E:0F:7B:A3:1B:51:98:6F:41:3B:41:38:3E:F0",
+                "SHA1": "61:1E:5B:66:2C:59:3A:08:FF:58:D1:4A:E2:24:52:D1:98:DF:6C:60",
+                "SHA2_256": "B0:B1:73:0E:CB:C7:FF:45:05:14:2C:49:F1:29:5E:6E:DA:6B:CA:ED:7E:2C:68:C5:BE:91:B5:A1:10:01:F0:24"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIEuzCCA6OgAwIBAgIBAjANBgkqhkiG9w0BAQUFADBiMQswCQYDVQQGEwJVUzET",
+            "MBEGA1UEChMKQXBwbGUgSW5jLjEmMCQGA1UECxMdQXBwbGUgQ2VydGlmaWNhdGlv",
+            "biBBdXRob3JpdHkxFjAUBgNVBAMTDUFwcGxlIFJvb3QgQ0EwHhcNMDYwNDI1MjE0",
+            "MDM2WhcNMzUwMjA5MjE0MDM2WjBiMQswCQYDVQQGEwJVUzETMBEGA1UEChMKQXBw",
+            "bGUgSW5jLjEmMCQGA1UECxMdQXBwbGUgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkx",
+            "FjAUBgNVBAMTDUFwcGxlIFJvb3QgQ0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw",
+            "ggEKAoIBAQDkkakJH5HbHkdQ6wXtXnmELes2oldMVeyLGYne+Uts9QerIjAC6Bg+",
+            "+FAJ039BqJj50cpmnCRrEdCju+QbKsMflZ56DKRHi1vUFjczy8QPTc4UadHJGXL1",
+            "XQ7Vf1+b8iUDulWPTV0N8WQ1IxVLFVkds5T39pyez1C6wVhQZ48ItCD3y6wsIG9w",
+            "tj8BMIy3Q88PnT3zK0koGsj+zrW5DtleHNbLPbU6rfQPDgCSC7EhFi501TwN22IW",
+            "q6NxkkdTVcGvL0Gz+PvjcM3mo0xFfh9Ma1CWQYnEdGILEINBhzOKgbEwWOxaBDKM",
+            "aLOPHd5lc/9nXmW8Sdh2nzMUZaF3lMktAgMBAAGjggF6MIIBdjAOBgNVHQ8BAf8E",
+            "BAMCAQYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUK9BpR5R2Cf70a40uQKb3",
+            "R01/CF4wHwYDVR0jBBgwFoAUK9BpR5R2Cf70a40uQKb3R01/CF4wggERBgNVHSAE",
+            "ggEIMIIBBDCCAQAGCSqGSIb3Y2QFATCB8jAqBggrBgEFBQcCARYeaHR0cHM6Ly93",
+            "d3cuYXBwbGUuY29tL2FwcGxlY2EvMIHDBggrBgEFBQcCAjCBthqBs1JlbGlhbmNl",
+            "IG9uIHRoaXMgY2VydGlmaWNhdGUgYnkgYW55IHBhcnR5IGFzc3VtZXMgYWNjZXB0",
+            "YW5jZSBvZiB0aGUgdGhlbiBhcHBsaWNhYmxlIHN0YW5kYXJkIHRlcm1zIGFuZCBj",
+            "b25kaXRpb25zIG9mIHVzZSwgY2VydGlmaWNhdGUgcG9saWN5IGFuZCBjZXJ0aWZp",
+            "Y2F0aW9uIHByYWN0aWNlIHN0YXRlbWVudHMuMA0GCSqGSIb3DQEBBQUAA4IBAQBc",
+            "NplMLXi37Yyb3PN3m/J20ncwT8EfhYOFG5k9RzfyqZtAjizUsZAS2L70c5vu0mQP",
+            "y3lPNNiiPvl4/2vIB+x9OYOLUyDTOMSxv5pPCmv/K/xZpwUJfBdAVhEedNO3iyM7",
+            "R6PVbyTi69G3cN8PReEnyvFteO3ntRcXqNx+IjXKJdXZD9Zr1KIkIxH3oayPc4Fg",
+            "xhtbCS+SsvhESPBgOJ4V9T0mZyCKM2r3DYLP3uujL/lTaltkwGMzd/c6ByxW69oP",
+            "IQ7aunMZT7XZNn/Bh1XZp5m5MkL72NVxnn6hUrcbvZNCJBIqxw8dtk2cXmPIS4AX",
+            "UKqK1drk/NAJBzewdXUh",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "APPLE_ROOT_CA_G2_135360556577563616": {
+        "_meta": {
+            "_subject": {
+                "common_name": "Apple Root CA - G2",
+                "organizational_unit_name": "Apple Certification Authority",
+                "organization_name": "Apple Inc.",
+                "country_name": "US"
+            },
+            "_fingerprints": {
+                "MD5": "F5:FE:73:5C:E8:C1:CB:6B:CD:B5:16:E6:92:3A:C6:B7",
+                "SHA1": "14:69:89:89:BF:B2:95:09:21:A4:24:52:64:6D:37:B5:0A:F0:17:E2",
+                "SHA2_256": "C2:B9:B0:42:DD:57:83:0E:7D:11:7D:AC:55:AC:8A:E1:94:07:D3:8E:41:D8:8F:32:15:BC:3A:89:04:44:A0:50"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFkjCCA3qgAwIBAgIIAeDltYNno+AwDQYJKoZIhvcNAQEMBQAwZzEbMBkGA1UE",
+            "AwwSQXBwbGUgUm9vdCBDQSAtIEcyMSYwJAYDVQQLDB1BcHBsZSBDZXJ0aWZpY2F0",
+            "aW9uIEF1dGhvcml0eTETMBEGA1UECgwKQXBwbGUgSW5jLjELMAkGA1UEBhMCVVMw",
+            "HhcNMTQwNDMwMTgxMDA5WhcNMzkwNDMwMTgxMDA5WjBnMRswGQYDVQQDDBJBcHBs",
+            "ZSBSb290IENBIC0gRzIxJjAkBgNVBAsMHUFwcGxlIENlcnRpZmljYXRpb24gQXV0",
+            "aG9yaXR5MRMwEQYDVQQKDApBcHBsZSBJbmMuMQswCQYDVQQGEwJVUzCCAiIwDQYJ",
+            "KoZIhvcNAQEBBQADggIPADCCAgoCggIBANgREkhI2imKScUcx+xuM23+TfvgHN6s",
+            "XuI2pyT5f1BrTM65MFQn5bPW7SXmMLYFN14UIhHF6Kob0vuy0gmVOKTvKkmMXT5x",
+            "ZgM4+xb1hYjkWpIMBDLyyED7Ul+f9sDx47pFoFDVEovy3d6RhiPw9bZyLgHaC/Yu",
+            "OQhfGaFjQQscp5TBhsRTL3b2CtcM0YM/GlMZ81fVJ3/8E7j4ko380yhDPLVoACVd",
+            "J2LT3VXdRCCQgzWTxb+4Gftr49wIQuavbfqeQMpOhYV4SbHXw8EwOTKrfl+q04tv",
+            "ny0aIWhwZ7Oj8ZhBbZF8+NfbqOdfIRqMM78xdLe40fTgIvS/cjTf94FNcX1RoeKz",
+            "8NMoFnNvzcytN31O661A4T+B/fc9Cj6i8b0xlilZ3MIZgIxbdMYs0xBTJh0UT8TU",
+            "gWY8h2czJxQI6bR3hDRSj4n4aJgXv8O7qhOTH11UL6jHfPsNFL4VPSQ08prcdUFm",
+            "IrQB1guvkJ4M6mL4m1k8COKWNORj3rw31OsMiANDC1CvoDTdUE0V+1ok2Az6DGOe",
+            "HwOx4e7hqkP0ZmUoNwIx7wHHHtHMn23KVDpA287PT0aLSmWaasZobNfMmRtHsHLD",
+            "d4/E92GcdB/O/WuhwpyUgquUoue9G7q5cDmVF8Up8zlYNPXEpMZ7YLlmQ1A/bmH8",
+            "DvmGqmAMQ0uVAgMBAAGjQjBAMB0GA1UdDgQWBBTEmRNsGAPCe8CjoA1/coB6HHcm",
+            "jTAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjANBgkqhkiG9w0BAQwF",
+            "AAOCAgEAUabz4vS4PZO/Lc4Pu1vhVRROTtHlznldgX/+tvCHM/jvlOV+3Gp5pxy+",
+            "8JS3ptEwnMgNCnWefZKVfhidfsJxaXwU6s+DDuQUQp50DhDNqxq6EWGBeNjxtUVA",
+            "eKuowM77fWM3aPbn+6/Gw0vsHzYmE1SGlHKy6gLti23kDKaQwFd1z4xCfVzmMX3z",
+            "ybKSaUYOiPjjLUKyOKimGY3xn83uamW8GrAlvacp/fQ+onVJv57byfenHmOZ4VxG",
+            "/5IFjPoeIPmGlFYl5bRXOJ3riGQUIUkhOb9iZqmxospvPyFgxYnURTbImHy99v6Z",
+            "SYA7LNKmp4gDBDEZt7Y6YUX6yfIjyGNzv1aJMbDZfGKnexWoiIqrOEDCzBL/FePw",
+            "N983csvMmOa/orz6JopxVtfnJBtIRD6e/J/JzBrsQzwBvDR4yGn1xuZW7AYJNpDr",
+            "FEobXsmII9oDMJELuDY++ee1KG++P+w8j2Ud5cAeh6Squpj9kuNsJnfdBrRkBof0",
+            "Tta6SqoWqPQFZ2aWuuJVecMsXUmPgEkrihLHdoBR37q9ZV0+N0djMenl9MU/S60E",
+            "inpxLK8JQzcPqOMyT/RFtm2XNuyE9QoB6he7hY1Ck3DDUOUUi78/w0EP3SIEIwiK",
+            "um1xRKtzCTrJ+VKACd+66eYWyi4uTLLT3OUEVLLUNIAytbwPF+E=",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "APPLE_ROOT_CA_G3_3298319966700653461": {
+        "_meta": {
+            "_subject": {
+                "common_name": "Apple Root CA - G3",
+                "organizational_unit_name": "Apple Certification Authority",
+                "organization_name": "Apple Inc.",
+                "country_name": "US"
+            },
+            "_fingerprints": {
+                "MD5": "1F:73:F7:58:73:6F:F0:46:30:96:CB:37:4E:D3:A9:C2",
+                "SHA1": "B5:2C:B0:2F:D5:67:E0:35:9F:E8:FA:4D:4C:41:03:79:70:FE:01:B0",
+                "SHA2_256": "63:34:3A:BF:B8:9A:6A:03:EB:B5:7E:9B:3F:5F:A7:BE:7C:4F:5C:75:6F:30:17:B3:A8:C4:88:C3:65:3E:91:79"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIICQzCCAcmgAwIBAgIILcX8iNLFS5UwCgYIKoZIzj0EAwMwZzEbMBkGA1UEAwwS",
+            "QXBwbGUgUm9vdCBDQSAtIEczMSYwJAYDVQQLDB1BcHBsZSBDZXJ0aWZpY2F0aW9u",
+            "IEF1dGhvcml0eTETMBEGA1UECgwKQXBwbGUgSW5jLjELMAkGA1UEBhMCVVMwHhcN",
+            "MTQwNDMwMTgxOTA2WhcNMzkwNDMwMTgxOTA2WjBnMRswGQYDVQQDDBJBcHBsZSBS",
+            "b290IENBIC0gRzMxJjAkBgNVBAsMHUFwcGxlIENlcnRpZmljYXRpb24gQXV0aG9y",
+            "aXR5MRMwEQYDVQQKDApBcHBsZSBJbmMuMQswCQYDVQQGEwJVUzB2MBAGByqGSM49",
+            "AgEGBSuBBAAiA2IABJjpLz1AcqTtkyJygRMc3RCV8cWjTnHcFBbZDuWmBSp3ZHtf",
+            "TjjTuxxEtX/1H7YyYl3J6YRbTzBPEVoA/VhYDKX1DyxNB0cTddqXl5dvMVztK517",
+            "IDvYuVTZXpmkOlEKMaNCMEAwHQYDVR0OBBYEFLuw3qFYM4iapIqZ3r6966/ayySr",
+            "MA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgEGMAoGCCqGSM49BAMDA2gA",
+            "MGUCMQCD6cHEFl4aXTQY2e3v9GwOAEZLuN+yRhHFD/3meoyhpmvOwgPUnPWTxnS4",
+            "at+qIxUCMG1mihDK1A3UT82NQz60imOlM27jbdoXt2QfyFMm+YhidDkLF1vLUagM",
+            "6BgD56KyKA==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "APPLE_ROOT_CERTIFICATE_AUTHORITY_1": {
+        "_meta": {
+            "_subject": {
+                "country_name": "US",
+                "organization_name": "Apple Computer, Inc.",
+                "organizational_unit_name": "Apple Computer Certificate Authority",
+                "common_name": "Apple Root Certificate Authority"
+            },
+            "_fingerprints": {
+                "MD5": "FA:40:29:17:72:53:4C:48:EC:9E:8E:1D:5A:75:A3:D1",
+                "SHA1": "58:0F:80:47:92:AB:C6:3B:BB:80:15:4D:4D:FD:DD:8B:2E:F2:67:4E",
+                "SHA2_256": "0D:83:B6:11:B6:48:A1:A7:5E:B8:55:84:00:79:53:75:CA:D9:2E:26:4E:D8:E9:D7:A7:57:C1:F5:EE:2B:B2:2D"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFujCCBKKgAwIBAgIBATANBgkqhkiG9w0BAQUFADCBhjELMAkGA1UEBhMCVVMx",
+            "HTAbBgNVBAoTFEFwcGxlIENvbXB1dGVyLCBJbmMuMS0wKwYDVQQLEyRBcHBsZSBD",
+            "b21wdXRlciBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkxKTAnBgNVBAMTIEFwcGxlIFJv",
+            "b3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5MB4XDTA1MDIxMDAwMTgxNFoXDTI1MDIx",
+            "MDAwMTgxNFowgYYxCzAJBgNVBAYTAlVTMR0wGwYDVQQKExRBcHBsZSBDb21wdXRl",
+            "ciwgSW5jLjEtMCsGA1UECxMkQXBwbGUgQ29tcHV0ZXIgQ2VydGlmaWNhdGUgQXV0",
+            "aG9yaXR5MSkwJwYDVQQDEyBBcHBsZSBSb290IENlcnRpZmljYXRlIEF1dGhvcml0",
+            "eTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOSRqQkfkdseR1DrBe1e",
+            "eYQt6zaiV0xV7IsZid75S2z1B6siMALoGD74UAnTf0GomPnRymacJGsR0KO75Bsq",
+            "wx+VnnoMpEeLW9QWNzPLxA9NzhRp0ckZcvVdDtV/X5vyJQO6VY9NXQ3xZDUjFUsV",
+            "WR2zlPf2nJ7PULrBWFBnjwi0IPfLrCwgb3C2PwEwjLdDzw+dPfMrSSgayP7OtbkO",
+            "2V4c1ss9tTqt9A8OAJILsSEWLnTVPA3bYharo3GSR1NVwa8vQbP4++NwzeajTEV+",
+            "H0xrUJZBicR0YgsQg0GHM4qBsTBY7FoEMoxos48d3mVz/2deZbxJ2HafMxRloXeU",
+            "yS0CAwEAAaOCAi8wggIrMA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/",
+            "MB0GA1UdDgQWBBQr0GlHlHYJ/vRrjS5ApvdHTX8IXjAfBgNVHSMEGDAWgBQr0GlH",
+            "lHYJ/vRrjS5ApvdHTX8IXjCCASkGA1UdIASCASAwggEcMIIBGAYJKoZIhvdjZAUB",
+            "MIIBCTBBBggrBgEFBQcCARY1aHR0cHM6Ly93d3cuYXBwbGUuY29tL2NlcnRpZmlj",
+            "YXRlYXV0aG9yaXR5L3Rlcm1zLmh0bWwwgcMGCCsGAQUFBwICMIG2GoGzUmVsaWFu",
+            "Y2Ugb24gdGhpcyBjZXJ0aWZpY2F0ZSBieSBhbnkgcGFydHkgYXNzdW1lcyBhY2Nl",
+            "cHRhbmNlIG9mIHRoZSB0aGVuIGFwcGxpY2FibGUgc3RhbmRhcmQgdGVybXMgYW5k",
+            "IGNvbmRpdGlvbnMgb2YgdXNlLCBjZXJ0aWZpY2F0ZSBwb2xpY3kgYW5kIGNlcnRp",
+            "ZmljYXRpb24gcHJhY3RpY2Ugc3RhdGVtZW50cy4wRAYDVR0fBD0wOzA5oDegNYYz",
+            "aHR0cHM6Ly93d3cuYXBwbGUuY29tL2NlcnRpZmljYXRlYXV0aG9yaXR5L3Jvb3Qu",
+            "Y3JsMFUGCCsGAQUFBwEBBEkwRzBFBggrBgEFBQcwAoY5aHR0cHM6Ly93d3cuYXBw",
+            "bGUuY29tL2NlcnRpZmljYXRlYXV0aG9yaXR5L2Nhc2lnbmVycy5odG1sMA0GCSqG",
+            "SIb3DQEBBQUAA4IBAQCd2i0oWC99dgS5BNM+zrdmY06PL9T+S61yvaM5xlJNBZhS",
+            "9YlRASR5vhoy9+VEi0tEBzmC1lrKtCBe2a4VXR2MHTK/ODFiSF3H4ZCx+CRA+F9Y",
+            "m1FdV53B5f88zHIhbsTp6aF31ywXJsM/65roCwO66bNKcuszCVut5mIxauivL9Wv",
+            "Hld2j383LS4CXN1jyfJxuCZA3xWNdUQ/eb3mHZnhQyw+rW++uaT+DjUZUWOxw961",
+            "kj5ReAFziqQjyqSI8R5cH0EWLX6VCqrpiUGYGxrdyyC/R14MJsVVNU3GMIuZZxTH",
+            "CR+6R8faAQmHJEKVvRNgGQrv6n8Obs3BREM6StXj",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
     "ATOS_TRUSTEDROOT_2011_6643877497813316402": {
         "_meta": {
             "_subject": {
@@ -1141,6 +1462,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -1613,6 +1938,90 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "AUTORIDAD_DE_CERTIFICACION_RAIZ_DEL_ESTADO_VENEZOLANO_1": {
+        "_meta": {
+            "_subject": {
+                "common_name": "Autoridad de Certificacion Raiz del Estado Venezolano",
+                "country_name": "VE",
+                "locality_name": "Caracas",
+                "state_or_province_name": "Distrito Capital",
+                "organization_name": "Sistema Nacional de Certificacion Electronica",
+                "organizational_unit_name": "Superintendencia de Servicios de Certificacion Electronica",
+                "email_address": "acraiz@suscerte.gob.ve"
+            },
+            "_fingerprints": {
+                "MD5": "32:30:DA:2D:72:27:CC:E5:F3:EB:93:78:72:0A:E6:F8",
+                "SHA1": "12:1F:9F:AC:62:9F:F1:33:88:7C:1B:45:64:0C:1A:03:4F:03:F2:8F",
+                "SHA2_256": "0E:D3:FF:AB:6C:14:9C:8B:4E:71:05:8E:86:68:D4:29:AB:FD:A6:81:C2:FF:F5:08:20:76:41:F0:D7:51:A3:E5"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIJmzCCB4OgAwIBAgIBATANBgkqhkiG9w0BAQwFADCCAR4xPjA8BgNVBAMTNUF1",
+            "dG9yaWRhZCBkZSBDZXJ0aWZpY2FjaW9uIFJhaXogZGVsIEVzdGFkbyBWZW5lem9s",
+            "YW5vMQswCQYDVQQGEwJWRTEQMA4GA1UEBxMHQ2FyYWNhczEZMBcGA1UECBMQRGlz",
+            "dHJpdG8gQ2FwaXRhbDE2MDQGA1UEChMtU2lzdGVtYSBOYWNpb25hbCBkZSBDZXJ0",
+            "aWZpY2FjaW9uIEVsZWN0cm9uaWNhMUMwQQYDVQQLEzpTdXBlcmludGVuZGVuY2lh",
+            "IGRlIFNlcnZpY2lvcyBkZSBDZXJ0aWZpY2FjaW9uIEVsZWN0cm9uaWNhMSUwIwYJ",
+            "KoZIhvcNAQkBFhZhY3JhaXpAc3VzY2VydGUuZ29iLnZlMB4XDTEwMTIyMjE4MDgy",
+            "MVoXDTMwMTIxNzIzNTk1OVowggEeMT4wPAYDVQQDEzVBdXRvcmlkYWQgZGUgQ2Vy",
+            "dGlmaWNhY2lvbiBSYWl6IGRlbCBFc3RhZG8gVmVuZXpvbGFubzELMAkGA1UEBhMC",
+            "VkUxEDAOBgNVBAcTB0NhcmFjYXMxGTAXBgNVBAgTEERpc3RyaXRvIENhcGl0YWwx",
+            "NjA0BgNVBAoTLVNpc3RlbWEgTmFjaW9uYWwgZGUgQ2VydGlmaWNhY2lvbiBFbGVj",
+            "dHJvbmljYTFDMEEGA1UECxM6U3VwZXJpbnRlbmRlbmNpYSBkZSBTZXJ2aWNpb3Mg",
+            "ZGUgQ2VydGlmaWNhY2lvbiBFbGVjdHJvbmljYTElMCMGCSqGSIb3DQEJARYWYWNy",
+            "YWl6QHN1c2NlcnRlLmdvYi52ZTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoC",
+            "ggIBAME77xNS8ZlW47RsBeEaaRZhJoZ4rw785UAFCuPZOAVMqNS1wMYqzy95q6Gk",
+            "UO81ER/ugiQX/KMcq/4HBn83fwdYWxPZfwBfK7BP2p/JsFgzYeFP0BXOLmvoJIzl",
+            "Jb6FW+1MPwGBjuaZGFImWZsSmGUclb51mRYMZETh9/J5CLThR1exStxHQptwSzra",
+            "zNFpkQY/zmj7+YZNA9yDoroVFv6sybYOZ7OxNDo7zkSLo45I7gMwtxqWZ8VkJZkC",
+            "8+p0dX6mkhUT0QAV64Zc9HsZiH/oLhEkXjhrgZ28cF73MXIqLx1fyM4kPH1yOJi/",
+            "R72nMwL7D+Sd6mZgI035TxuHXc2/uOwXfKrrTjaJDz8Jp6DdessOkxIgkKXRjP+F",
+            "K3ze3n4NUIRGhGRtyvEjK95/2g02t6PeYiYVGur6ruS49n0RAaSS0/LJb6XzaAAe",
+            "0mmO2evnEqxIKwy2mZRNPfAVW1l3wCnWiUwryBU6OsbFcFFrQm+00wOicXvOTHBM",
+            "aiCVAVZTb9RSLyi+LJ1llzJZO3pq3IRiiBj38Nooo+2ZNbMEciSgmig7YXaUcmud",
+            "SVQvLSL+Yw+SqawyezwZuASbp7d/0rutQ59d81zlbMt3J7yB567rT2IqIydQ8qBW",
+            "k+fmXzghX+/FidYsh/aK+zZ7Wy68kKHuzEw1Vqkat5DGs+VzAgMBAAGjggLeMIIC",
+            "2jASBgNVHRMBAf8ECDAGAQH/AgECMDcGA1UdEgQwMC6CD3N1c2NlcnRlLmdvYi52",
+            "ZaAbBgVghl4CAqASDBBSSUYtRy0yMDAwNDAzNi0wMB0GA1UdDgQWBBStuyIdxuDS",
+            "Aaj9dlBSk+2YwU2u0zCCAVAGA1UdIwSCAUcwggFDgBStuyIdxuDSAaj9dlBSk+2Y",
+            "wU2u06GCASakggEiMIIBHjE+MDwGA1UEAxM1QXV0b3JpZGFkIGRlIENlcnRpZmlj",
+            "YWNpb24gUmFpeiBkZWwgRXN0YWRvIFZlbmV6b2xhbm8xCzAJBgNVBAYTAlZFMRAw",
+            "DgYDVQQHEwdDYXJhY2FzMRkwFwYDVQQIExBEaXN0cml0byBDYXBpdGFsMTYwNAYD",
+            "VQQKEy1TaXN0ZW1hIE5hY2lvbmFsIGRlIENlcnRpZmljYWNpb24gRWxlY3Ryb25p",
+            "Y2ExQzBBBgNVBAsTOlN1cGVyaW50ZW5kZW5jaWEgZGUgU2VydmljaW9zIGRlIENl",
+            "cnRpZmljYWNpb24gRWxlY3Ryb25pY2ExJTAjBgkqhkiG9w0BCQEWFmFjcmFpekBz",
+            "dXNjZXJ0ZS5nb2IudmWCAQEwDgYDVR0PAQH/BAQDAgEGMDcGA1UdEQQwMC6CD3N1",
+            "c2NlcnRlLmdvYi52ZaAbBgVghl4CAqASDBBSSUYtRy0yMDAwNDAzNi0wMFQGA1Ud",
+            "HwRNMEswJKAioCCGHmhodHA6Ly93d3cuc3VzY2VydGUuZ29iLnZlL2xjcjAjoCGg",
+            "H4YdbGRhcDovL2FjcmFpei5zdXNjZXJ0ZS5nb2IudmUwNwYIKwYBBQUHAQEEKzAp",
+            "MCcGCCsGAQUFBzABhhtoaHRwOi8vb2NzcC5zdXNjZXJ0ZS5nb2IudmUwQAYDVR0g",
+            "BDkwNzA1BgVghl4BAjAsMCoGCCsGAQUFBwIBFh5odHRwOi8vd3d3LnN1c2NlcnRl",
+            "LmdvYi52ZS9kcGMwDQYJKoZIhvcNAQEMBQADggIBAK4qy/zmZ9zBwfW3yOYtLcBT",
+            "Oy4szJyPz7/RhNH3bPVH7HbDTGpi6JZ4YXdXMBeJE5qBF4a590Kgj8Rlnltt+Rbo",
+            "OFQOU1UDqKuTdBsA//Zry5899fmn8jBUkg4nh09jhHHbLlaUScdz704Zz2+UVg7i",
+            "s/r3Legxap60KzmdrmTAE9VKte1TQRgavQwVX5/2mO/J+SCas//UngI+h8SyOucq",
+            "mjudYEgBrZaodUsagUfn/+AzFNrGLy+al+5nZeHb8JnCfLHWS0M9ZyhgoeO/czyn",
+            "99+5G93VWNv4zfc4KiavHZKrkn8F9pg0ycIZh+OwPT/RE2zq4gTazBMlP3ACIe/p",
+            "olkNaOEa8KvgzW96sjBZpMW49zFmyINYkcj+uaNCJrVGsXgdBmkuRGJNWFZ9r0cG",
+            "woIaxViFBypsz045r1ESfYPlfDOavBhZ/giR/Xocm9CHkPRY2BApMMR0DUCyGETg",
+            "Ql+L3kfdTKzuDjUp2DM9FqysQmaM81YDZufWkMhlZPfHwC7KbNougoLroa5Umeos",
+            "bqAXWmk46SwIdWRPLLqbUpDTKooynZKpSYIkkotdgJoVZUUCY+RCO8jsVPEU6ece",
+            "SxztNUm5UOta1OJPMwSAKRHOo3ilVb9c6lAixDdvV8MeNbqe6asM1mpCHWbJ/0rg",
+            "5Ls9Cxx8hracyp0ev7b0",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -1712,6 +2121,53 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "BELGIUM_ROOT_CA2_3098404661496965511": {
+        "_meta": {
+            "_subject": {
+                "country_name": "BE",
+                "common_name": "Belgium Root CA2"
+            },
+            "_fingerprints": {
+                "MD5": "E9:AC:47:CC:78:B6:CF:02:50:5E:E2:48:1B:EC:95:DC",
+                "SHA1": "51:CC:A0:71:0A:F7:73:3D:34:AC:DC:19:45:09:9F:43:5C:7F:C5:9F",
+                "SHA2_256": "9F:97:44:46:3B:E1:37:14:75:4E:1A:3B:EC:F9:8C:08:CC:20:5E:4A:B3:20:28:F4:E2:83:0C:4A:1B:27:75:B8"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIDjjCCAnagAwIBAgIIKv++n6Lw6YcwDQYJKoZIhvcNAQEFBQAwKDELMAkGA1UE",
+            "BhMCQkUxGTAXBgNVBAMTEEJlbGdpdW0gUm9vdCBDQTIwHhcNMDcxMDA0MTAwMDAw",
+            "WhcNMjExMjE1MDgwMDAwWjAoMQswCQYDVQQGEwJCRTEZMBcGA1UEAxMQQmVsZ2l1",
+            "bSBSb290IENBMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMZzQh6S",
+            "/3UPi790hqc/7bIYLS2X+an7mEoj39WN4IzGMhwWLQdC1i22bi+n9fzGhYJdld61",
+            "IgDMqFNAn68KNaJ6x+HK92AQZw6nUHMXU5WfIp8MXW+2QbyM69odRr2nlL/zGsvU",
+            "+40OHjPIltfsjFPekx40HopQcSZYtF3CiInaYNKJIT/e1wEYNm7hLHADBGXvmAYr",
+            "XR5i3FVr/mZkIV/4L+HXmymvb82fqgxG0YjFnaKVn6w/Fa7yYd/vw2uaItgscf1Y",
+            "HewApDgglVrH1Tdjuk+bqv5WRi5j2Qsj1Yr6tSPwiRuhFA0m2kHwOI8w7QUmecFL",
+            "TqG4flVSOmlGhHUCAwEAAaOBuzCBuDAOBgNVHQ8BAf8EBAMCAQYwDwYDVR0TAQH/",
+            "BAUwAwEB/zBCBgNVHSAEOzA5MDcGBWA4CQEBMC4wLAYIKwYBBQUHAgEWIGh0dHA6",
+            "Ly9yZXBvc2l0b3J5LmVpZC5iZWxnaXVtLmJlMB0GA1UdDgQWBBSFiuv0xbu+DlkD",
+            "lN7WgAEV4xCcOTARBglghkgBhvhCAQEEBAMCAAcwHwYDVR0jBBgwFoAUhYrr9MW7",
+            "vg5ZA5Te1oABFeMQnDkwDQYJKoZIhvcNAQEFBQADggEBAFHYhd27V2/MoGy1oyCc",
+            "UwnzSgEMdL8rs5qauhjyC4isHLMzr87lEwEnkoRYmhC598wUkmt0FoqW6FHvv/pK",
+            "JaeJtmMrXZRY0c8RcrYeuTlBFk0pvDVTC9rejg7NqZV3JcqUWumyaa7YwBO+mPyW",
+            "nIR/VRPmPIfjvCCkpDZoa01gZhz5v6yAlGYuuUGK02XThIAC71AdXkbc98m6tTR8",
+            "KvPG2F9fVJ3bTc0R5/0UAoNmXsimABKgX77OFP67H6dh96tK8QYUn8pJQsKpvO2F",
+            "sauBQeYNxUJpU4c5nUwfAA4+Bw11V0SoU7Q2dmSZ3G7rPUZuFF1eR1ONeE3gJ7uO",
+            "hXY=",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -1860,6 +2316,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -1916,6 +2376,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -2240,6 +2704,60 @@
             }
         ]
     },
+    "CA_DISIG_ROOT_R1_14052245610670616104": {
+        "_meta": {
+            "_subject": {
+                "country_name": "SK",
+                "locality_name": "Bratislava",
+                "organization_name": "Disig a.s.",
+                "common_name": "CA Disig Root R1"
+            },
+            "_fingerprints": {
+                "MD5": "BE:EC:11:93:9A:F5:69:21:BC:D7:C1:C0:67:89:CC:2A",
+                "SHA1": "8E:1C:74:F8:A6:20:B9:E5:8A:F4:61:FA:EC:2B:47:56:51:1A:52:C6",
+                "SHA2_256": "F9:6F:23:F4:C3:E7:9C:07:7A:46:98:8D:5A:F5:90:06:76:A0:F0:39:CB:64:5D:D1:75:49:B2:16:C8:24:40:CE"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFaTCCA1GgAwIBAgIJAMMDmu5QkG4oMA0GCSqGSIb3DQEBBQUAMFIxCzAJBgNV",
+            "BAYTAlNLMRMwEQYDVQQHEwpCcmF0aXNsYXZhMRMwEQYDVQQKEwpEaXNpZyBhLnMu",
+            "MRkwFwYDVQQDExBDQSBEaXNpZyBSb290IFIxMB4XDTEyMDcxOTA5MDY1NloXDTQy",
+            "MDcxOTA5MDY1NlowUjELMAkGA1UEBhMCU0sxEzARBgNVBAcTCkJyYXRpc2xhdmEx",
+            "EzARBgNVBAoTCkRpc2lnIGEucy4xGTAXBgNVBAMTEENBIERpc2lnIFJvb3QgUjEw",
+            "ggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCqw3j33Jijp1pedxiy3QRk",
+            "D2P9m5YJgNXoqqXinCaUOuiZc4yd39ffg/N4T0Dhf9Kn0uXKE5Pn7cZ3Xza1lK/o",
+            "OI7bm+V8u8yN63Vz4STN5qctGS7Y1oprFOsIYgrY3LMATcMjfF9DCCMyEtztDK3A",
+            "fQ+lekLZWnDZv6fXARz2m6uOt0qGeKAeVjGu74IKgEH3G8muqzIm1Cxr7X1r5OJe",
+            "IgpFy4QxTaz+29FHuvlglzmxZcfe+5nkCiKxLU3lSCZpq+Kq8/v8kiky6bM+TR8n",
+            "oc2OuRf7JT7JbvN32g0S9l3HuzYQ1VTW8+DiR0jm3hTaYVKvJrT1cU/J19IG32PK",
+            "/yHoWQbgCNWEFVP3Q+V8xaCJmGtzxmjOZd69fwX3se72V6FglcXM6pM6vpmumwKj",
+            "rckWtc7dXpl4fho5frLABaTAgqWjR56M6ly2vGfb5ipN0gTco65F97yLnByn1tUD",
+            "3AjLLhbKXEAz6GfDLuemROoRRRw1ZS0eRWEkG4IupZ0zXWX4Qfkuy5Q/H6MMMSRE",
+            "7cderVC6xkGbrPAXZcD4XW9boAo0PO7X6oifmPmvTiT6l7Jkdtqr9O3jw2Dv1fkC",
+            "yC2fg69naQanMVXVz0tv/wQFx1isXxYb5dKj6zHbHzMVTdDypVP1y+E9Tmgt2BLd",
+            "qvLmTZtJ5cUoobqwWsagtQIDAQABo0IwQDAPBgNVHRMBAf8EBTADAQH/MA4GA1Ud",
+            "DwEB/wQEAwIBBjAdBgNVHQ4EFgQUiQq0OJMa5qvum5EY+fU8PjXQ04IwDQYJKoZI",
+            "hvcNAQEFBQADggIBADKL9p1Kyb4U5YysOMo6CdQbzoaz3evUuii+Eq5FLAR0rBNR",
+            "xVgYZk2C2tXck8An4b58n1KeElb21Zyp9HWc+jcSjxyT7Ff+Bw+r1RL3D65hXlaA",
+            "SfX8MPWbTx9BLxyE04nH4toCdu0Jz2zBuByDHBb6lM19oMgY0sidbvW9adRtPTXo",
+            "HqJPYNcHKfyyo6SdbhWSVhlMCrDpfNIZTUJG7L399ldb3Zh+pE3McgODWF3vkzpB",
+            "emOqfDqo9ayk0d2iLbYq/J8BjuIQscTK5GfbVSUZP/3oNn6z4eGBrxEWi1CXYBmC",
+            "AMBrTXO40RMHPuq2MU/wQppt4hF05ZSsjYSVPCGvxdpHyN85YmLLW1AL14FABZyb",
+            "7bq2ix4Eb5YgOe2kfSnbSM6C3NQCjR0EMVrHS/BsYVLXtFHCgWzN4funodKSds+x",
+            "DzdYpPJScWc/DIh4gInByLUfkmO+p3qKViwaqKactV2zY9ATIKHrkWzQjX2v3wvk",
+            "F7mGnjixlAxYjOBVqjtjbZqJYLhkKpLGN/R+Q0O3c+gB53+XD9fyexn9GtePyfqF",
+            "a3qdnom2piiZk4hA9z7NUaPK6u95RyG1/jLix8NRb76AdPCkwzryT+lf3xkK8jsT",
+            "Q6wxpLPn6/wY1gGp8yqPNg7rtLG8t0zJa7+h89n07eLw4+1knj0vllJPgFOL",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
     "CA_DISIG_ROOT_R2_10572350602393338211": {
         "_meta": {
             "_subject": {
@@ -2294,6 +2812,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -2565,6 +3087,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -2631,6 +3157,61 @@
             }
         ]
     },
+    "CERTINOMIS_AUTORITÉ_RACINE_1": {
+        "_meta": {
+            "_subject": {
+                "country_name": "FR",
+                "organization_name": "Certinomis",
+                "organizational_unit_name": "0002 433998903",
+                "common_name": "Certinomis - Autorité Racine"
+            },
+            "_fingerprints": {
+                "MD5": "7F:30:78:8C:03:E3:CA:C9:0A:E2:C9:EA:1E:AA:55:1A",
+                "SHA1": "2E:14:DA:EC:28:F0:FA:1E:8E:38:9A:4E:AB:EB:26:C0:0A:D3:83:C3",
+                "SHA2_256": "FC:BF:E2:88:62:06:F7:2B:27:59:3C:8B:07:02:97:E1:2D:76:9E:D1:0E:D7:93:07:05:A8:09:8E:FF:C1:4D:17"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFnDCCA4SgAwIBAgIBATANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJGUjET",
+            "MBEGA1UEChMKQ2VydGlub21pczEXMBUGA1UECxMOMDAwMiA0MzM5OTg5MDMxJjAk",
+            "BgNVBAMMHUNlcnRpbm9taXMgLSBBdXRvcml0w6kgUmFjaW5lMB4XDTA4MDkxNzA4",
+            "Mjg1OVoXDTI4MDkxNzA4Mjg1OVowYzELMAkGA1UEBhMCRlIxEzARBgNVBAoTCkNl",
+            "cnRpbm9taXMxFzAVBgNVBAsTDjAwMDIgNDMzOTk4OTAzMSYwJAYDVQQDDB1DZXJ0",
+            "aW5vbWlzIC0gQXV0b3JpdMOpIFJhY2luZTCCAiIwDQYJKoZIhvcNAQEBBQADggIP",
+            "ADCCAgoCggIBAJ2Fn4bT46/HsmtuM+Cet0I0VZ35gb5j2CN2DpdUzZlMGvE5x4jY",
+            "F1AMnmHawE5V3udauHpOd4cN5bjr+p5eex7Ezyh0x5P1FMYiKAT5kcOrJ3NqDi5N",
+            "8y4oH3DfVS9O7cdxbwlyLu3VMpfQ8Vh30WC8Tl7bmoT2R2FFK/ZQpn9qcSdIhDWe",
+            "rP5pqZ56XjUl+rSnSTV3lqc2W+HN3yNw2F1MpQiD8aYkOBOo7C+ooWfHpi2GR+6K",
+            "/OybDnT0K0kCe5B1jPyZOQE51kqJ5Z52qz6WKDgmi92NjMD2AR5vpTESOH2VwnHu",
+            "7XSu5DaiQ3XV8QCb4uTXzEIDS3h65X27uK4uIJPT5GHfceF2Z5c/tt9qc1pkIuVC",
+            "28+BA5PY9OMQ4HL2AHCs8MF6DwV/zzRpRbWT5BnbUhYjBYkOjUjkJW+zeL9i9Qf6",
+            "lSTClrLooyPCXQP8w9PlfMl1I9f09bze5N/NgL+RiH2nE7Q5uiy6vdFrzPOlKO1E",
+            "nn1So2+WLhl+HPNbxxaOu2B9d2ZHVIIAEWBsMsGoOBvrbpgT1u449fCfDu/+MYHB",
+            "0iSVL1N6aaLwD4ZFjliCK0wi1F6g530mJ0jfJUaNSih8hp75mxpZuWW/Bd22Ql09",
+            "5gBIgl4g9xGC3srYn+Y3RyYe63j3YcNBZFgCQfna4NH4+ej9Uji29YnfAgMBAAGj",
+            "WzBZMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBQN",
+            "jLZh2kS40RR9w759XkjwzspqsDAXBgNVHSAEEDAOMAwGCiqBegFWAgIAAQEwDQYJ",
+            "KoZIhvcNAQEFBQADggIBACQ+YAZ+He86PtvqrxyaLAEL9MW12Ukx9F1BjYkMTv9s",
+            "ov3/4gbIOZ/xWqndIlgVqIrTseYyCYIDbNc/CMf4uboAbbnW/FIyXaR/pDGUu7ZM",
+            "OH8oMDX/nyNTt7buFHAAQCvaR6s0fl6nVjBhK4tDrP22iCj1a7Y+YEq6QpA0Z43q",
+            "619FVDsXrIvkxmUP7tCMXWY5zjKn2BCXwH40nJ+U8/aGH88bc62UeYdocMMzpXDn",
+            "2NU4lG9jeeu/Cg4I58UvD0KgKxRA/yHgBcUn4YQRE7rWhh1BCxMjidPJC+iKunqj",
+            "o3M3NYB9Ergzd0A4wPpeMNLytqOx1qKVl4GbUu1pTP+A5FPbVFsDbVRfsbjvJL1v",
+            "nxHDx2TCDyhihWZeGnuyt++uNckZM6i4J9szVb9o4XVIRFb7zdNIu0eJOqxp9YDG",
+            "5ERQL1TEqkPFMTFYvZbF6nVsmnWxTfj3l/+WFvKXTej28xH5On2KOG4Ey+HTRRWq",
+            "pdEdnV1j6CTmNhTih60bWfVEm/vXd3wfAXBioSAaosUaKPQhA+4u2cGA6rnZgtZb",
+            "dsLLO7XSAPCjDuGtbkD326C00EauFddEwk01+dIL8hf2rGbVJLJP0RyZwG71fet0",
+            "BLj5TXcJ17TPBzAJ8bgAVtkXFhYKK4bfjwEZGuW7gmP/vgt2Fl43N+bYdJeimUV5",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
     "CERTINOMIS_ROOT_CA_1": {
         "_meta": {
             "_subject": {
@@ -2683,6 +3264,99 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "CERTPLUS_ROOT_CA_G1_1491911565779898356709731176965615564637713": {
+        "_meta": {
+            "_subject": {
+                "country_name": "FR",
+                "organization_name": "Certplus",
+                "common_name": "Certplus Root CA G1"
+            },
+            "_fingerprints": {
+                "MD5": "7F:09:9C:F7:D9:B9:5C:69:69:56:D5:37:3E:14:0D:42",
+                "SHA1": "22:FD:D0:B7:FD:A2:4E:0D:AC:49:2C:A0:AC:A6:7B:6A:1F:E3:F7:66",
+                "SHA2_256": "15:2A:40:2B:FC:DF:2C:D5:48:05:4D:22:75:B3:9C:7F:CA:3E:C0:97:80:78:B0:F0:EA:76:E5:61:A6:C7:43:3E"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFazCCA1OgAwIBAgISESBVg+QtPlRWhS2DN7cs3EYRMA0GCSqGSIb3DQEBDQUA",
+            "MD4xCzAJBgNVBAYTAkZSMREwDwYDVQQKDAhDZXJ0cGx1czEcMBoGA1UEAwwTQ2Vy",
+            "dHBsdXMgUm9vdCBDQSBHMTAeFw0xNDA1MjYwMDAwMDBaFw0zODAxMTUwMDAwMDBa",
+            "MD4xCzAJBgNVBAYTAkZSMREwDwYDVQQKDAhDZXJ0cGx1czEcMBoGA1UEAwwTQ2Vy",
+            "dHBsdXMgUm9vdCBDQSBHMTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIB",
+            "ANpQh7bauKk+nWT6VjOaVj0W5QOVsjQcmm1iBdTYj+eJZJ+622SLZOZ5KmHNr49a",
+            "iZFluVj8tANfkT8tEBXgfs+8/H9DZ6itXjYj2JizTfNDnjl8KvzsiNWI7nC9hRYt",
+            "6kuJPKNxQv4c/dMcLRC4hlTqQ7jbxofaqK6AJc96Jh2qkbBIb6613p7Y1/oA/caP",
+            "0FG7Yn2ksYyy/yARujVjBYZHYEMzkPZHogNPlk2dT8Hq6pyi/jQu3rfKG3akt62f",
+            "6ajUeD94/vI4CTYd0hYCyOwqaK/1jpTvLRN6HkJKHRUxrgwEV/xhc/MxVoYxgKDE",
+            "EW4wduOU8F8ExKyHcomYxZ3MVwia9Az8fXoFOvpHgDm2z4QTd28n6v+WZxcIbekN",
+            "1iNQMLAVdBM+5S//Ds3EC0pd8NgAM0lm66EYfFkuPSi5YXHLtaW6uOrc4nBvCGrc",
+            "h2c0798wct3zyT8j/zXhviEpIDCB5BmlIOklynMxdCm+4kLV87ImZsdo/Rmz5yCT",
+            "mehd4F6H50boJZwKKSTUzViGUkAksnsPmBIgJPaQbEfIDbsYIC7Z/fyL8inqh3SV",
+            "4EJQeIQEQWGw9CEjjy3LKCHyamz0GqbFFLQ3ZU+V/YDI+HLlJWvEYLF7bY5KinPO",
+            "WftwenMGE9nTdDckQQoRb5fc5+R+ob0V8rqHDz1oihYHAgMBAAGjYzBhMA4GA1Ud",
+            "DwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBSowcCbkahDFXxd",
+            "Bie0KlHYlwuBsTAfBgNVHSMEGDAWgBSowcCbkahDFXxdBie0KlHYlwuBsTANBgkq",
+            "hkiG9w0BAQ0FAAOCAgEAnFZvAX7RvUz1isbwJh/k4DgYzDLDKTudQSk0YcbX8ACh",
+            "66Ryj5QXvBMsdbRX7gp8CXrc1cqh0DQT+Hern+X+2B50ioUHj3/MeXrKls3N/U/7",
+            "/SMNkPX0XtPGYX2eEeAC7gkE2Qfdpoq3DIMku4NQkv5gdRE+2J2winq14J2by5BS",
+            "S7CTKtQ+FjPlnsZlFT5kOwQ/2wyPX1wdaR+v8+khjPPvl/aatxm2hHSco1S1cE5j",
+            "2FddUyGbQJJD+tZ3VTNPZNX70Cxqjm0lpu+F6ALEUz65noe8zDUa3qHpimOHZR4R",
+            "Kttjd5cUvpoUmRGywO6wT/gUITJDT5+rosuoD6o7BlXGEilXCNQ314cnrUlZp5Gr",
+            "RHpejXDbl85IULFzk/bwg2D5zfHhMf1bfHEhYxQUqq/F3pN+aLHsIqKqkHWetUNy",
+            "6mSjhEv9DKgma3GX7lZjZuhCVPnHHd/Qj1vfyDBviP4NxDMcU6ij/UgQ8uQKTuEV",
+            "V/xuZDDCVRHc6qnNSlSsKWNEz0pAoNZoWRsz+e86i9sgktxChL8Bq4fA1SCC28a5",
+            "g4VCXA9DO2pJNdWY9BW/+mGBDAkgGNLQFwzLSABQ6XaCjGTXOqAHVcweMcDvOrRl",
+            "++O/QmueD6i9a5jc2NvLi6Td11n0bt3+qsOR0C5CB8AMTVPNJLFMWx5R9N/pkvo=",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "CERTPLUS_ROOT_CA_G2_1492087096131536844209563509228951875861589": {
+        "_meta": {
+            "_subject": {
+                "country_name": "FR",
+                "organization_name": "Certplus",
+                "common_name": "Certplus Root CA G2"
+            },
+            "_fingerprints": {
+                "MD5": "A7:EE:C4:78:2D:1B:EE:2D:B9:29:CE:D6:A7:96:32:31",
+                "SHA1": "4F:65:8E:1F:E9:06:D8:28:02:E9:54:47:41:C9:54:25:5D:69:CC:1A",
+                "SHA2_256": "6C:C0:50:41:E6:44:5E:74:69:6C:4C:FB:C9:F8:0F:54:3B:7E:AB:BB:44:B4:CE:6F:78:7C:6A:99:71:C4:2F:17"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIICHDCCAaKgAwIBAgISESDZkc6uo+jF5//pAq/Pc7xVMAoGCCqGSM49BAMDMD4x",
+            "CzAJBgNVBAYTAkZSMREwDwYDVQQKDAhDZXJ0cGx1czEcMBoGA1UEAwwTQ2VydHBs",
+            "dXMgUm9vdCBDQSBHMjAeFw0xNDA1MjYwMDAwMDBaFw0zODAxMTUwMDAwMDBaMD4x",
+            "CzAJBgNVBAYTAkZSMREwDwYDVQQKDAhDZXJ0cGx1czEcMBoGA1UEAwwTQ2VydHBs",
+            "dXMgUm9vdCBDQSBHMjB2MBAGByqGSM49AgEGBSuBBAAiA2IABM0PW1aC3/BFGtat",
+            "93nwHcmsltaeTpwftEIRyoa/bfuFo8XlGVzX7qY/aWfYeOKmycTbLXku54uNAm8x",
+            "Ik0G42ByRZ0OQneezs/lf4WbGOT8zC5y0xaTTsqZY1yhBSpsBqNjMGEwDgYDVR0P",
+            "AQH/BAQDAgEGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFNqDYwJ5jtpMxjwj",
+            "FNiPwyCrKGBZMB8GA1UdIwQYMBaAFNqDYwJ5jtpMxjwjFNiPwyCrKGBZMAoGCCqG",
+            "SM49BAMDA2gAMGUCMHD+sAvZ94OX7PNVHdTcswYO/jOYnYs5kGuUIe22113WTNch",
+            "p+e/IQ8rzfcq3IUHnQIxAIYUFuXcsGXCwI4Un78kFmjlvPl5adytRSv3tjFzzAal",
+            "U5ORGpOucGpnutee5WEaXw==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -2728,6 +3402,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -2827,6 +3505,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -2918,6 +3600,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -2978,6 +3664,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -3096,6 +3786,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -3249,6 +3943,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -3314,6 +4012,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -3431,6 +4133,10 @@
                         "date": "2004-05-14T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -3590,6 +4296,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -3681,6 +4391,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -3743,6 +4457,54 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "COMSIGN_CA_26686266302633440650041100291258414916": {
+        "_meta": {
+            "_subject": {
+                "common_name": "ComSign CA",
+                "organization_name": "ComSign",
+                "country_name": "IL"
+            },
+            "_fingerprints": {
+                "MD5": "CD:F4:39:F3:B5:18:50:D7:3E:A4:C5:91:A0:3E:21:4B",
+                "SHA1": "E1:A4:5B:14:1A:21:DA:1A:79:F4:1A:42:A9:61:D6:69:CD:06:34:C1",
+                "SHA2_256": "AE:44:57:B4:0D:9E:DA:96:67:7B:0D:3C:92:D5:7B:51:77:AB:D7:AC:10:37:95:83:56:D1:E0:94:51:8B:E5:F2"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIDkzCCAnugAwIBAgIQFBOWgxRVjOp7Y+X8NId3RDANBgkqhkiG9w0BAQUFADA0",
+            "MRMwEQYDVQQDEwpDb21TaWduIENBMRAwDgYDVQQKEwdDb21TaWduMQswCQYDVQQG",
+            "EwJJTDAeFw0wNDAzMjQxMTMyMThaFw0yOTAzMTkxNTAyMThaMDQxEzARBgNVBAMT",
+            "CkNvbVNpZ24gQ0ExEDAOBgNVBAoTB0NvbVNpZ24xCzAJBgNVBAYTAklMMIIBIjAN",
+            "BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8ORUaSvTx49qROR+WCf4C9DklBKK",
+            "8Rs4OC8fMZwG1Cyn3gsqrhqg455qv588x26i+YtkbDqthVVRVKU4VbirgwTyP2Q2",
+            "98CNQ0NqZtH3FyrV7zb6MBBC11PN+fozc0yz6YQgitZBJzXkOPqUm7h65HkfM/sb",
+            "2CEJKHxNGGleZIp6GZPKfuzzcuc3B1hZKKxC+cX/zT/npfo4sdAMx9lSGlPWgcxC",
+            "ejVb7Us6eva1jsz/D3zkYDaHL63woSV9/9JLEYhwVKZBqGdTUkJe5DSe5L6j7Kpi",
+            "Xd3DTKaCQeQzC6zJMw9kglcq/QytNuEMrkvF7zuZ2SOzW120V+x0cAwqTwIDAQAB",
+            "o4GgMIGdMAwGA1UdEwQFMAMBAf8wPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2Zl",
+            "ZGlyLmNvbXNpZ24uY28uaWwvY3JsL0NvbVNpZ25DQS5jcmwwDgYDVR0PAQH/BAQD",
+            "AgGGMB8GA1UdIwQYMBaAFEsBmz5WGmU2dst7l6qSBe4y5ygxMB0GA1UdDgQWBBRL",
+            "AZs+VhplNnbLe5eqkgXuMucoMTANBgkqhkiG9w0BAQUFAAOCAQEA0Nmlfv4pYEWd",
+            "foPPbrxHbvUanlR2QnG0PFg/LUAlQvaBnPGJEMgOqnhPOAlXsDzACPw1jvFIUY0M",
+            "cXS6hMTXcpuEfDhOZAYnKuGntewImbQKDdSFc8gS4TXt8QUxHXOZDOuWyt3T5oWq",
+            "8Ir7dcHyCTxlZWTzTNity4hp8+SDtwy9F1qWF8pb/627HOkthIDYIb6FUtnUdLlp",
+            "hbpN7Sgy6/lhSuTENh4Z3G+EER+V9YMoGKgzkkMn3V0TBEVPh9VGzT2ouvDzuFYk",
+            "Res3x+F2T3I5GN9+dHLHcy056mDmrRGiVod7w2ia/viMcKjfZTL0pECMocJEAw6U",
+            "AGegcQCCSA==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -3799,6 +4561,54 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "COMSIGN_SECURED_CA_264725503855295744117309814499492384489": {
+        "_meta": {
+            "_subject": {
+                "common_name": "ComSign Secured CA",
+                "organization_name": "ComSign",
+                "country_name": "IL"
+            },
+            "_fingerprints": {
+                "MD5": "40:01:25:06:8D:21:43:6A:0E:43:00:9C:E7:43:F3:D5",
+                "SHA1": "F9:CD:0E:2C:DA:76:24:C1:8F:BD:F0:F0:AB:B6:45:B8:F7:FE:D5:7A",
+                "SHA2_256": "50:79:41:C7:44:60:A0:B4:70:86:22:0D:4E:99:32:57:2A:B5:D1:B5:BB:CB:89:80:AB:1C:B1:76:51:A8:44:D2"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIDqzCCApOgAwIBAgIRAMcoRwmzuGxFjB36JPU2TukwDQYJKoZIhvcNAQEFBQAw",
+            "PDEbMBkGA1UEAxMSQ29tU2lnbiBTZWN1cmVkIENBMRAwDgYDVQQKEwdDb21TaWdu",
+            "MQswCQYDVQQGEwJJTDAeFw0wNDAzMjQxMTM3MjBaFw0yOTAzMTYxNTA0NTZaMDwx",
+            "GzAZBgNVBAMTEkNvbVNpZ24gU2VjdXJlZCBDQTEQMA4GA1UEChMHQ29tU2lnbjEL",
+            "MAkGA1UEBhMCSUwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDGtWhf",
+            "HZQVw6QIVS3joFd67+l0Kru5fFdJGhFeTymHDEjWaueP1H5XJLkGieQcPOqs49oh",
+            "gHMhCu95mGwfCP+hUH3ymBvJVG8+pSjsIQQPRbsHPaHA+iqYHU4Gk/v1iDurX8sW",
+            "v+bznkqH7Rnqwp9D5PGBpX8QTz7RSmKtUxvLg/8HZaWSLWapW7ha9B20IZFKF3ue",
+            "Mv5WJDmyVIRD9YTC2LxBkMyd1mja6YJQqTtoz7VdApRgFrFD2UNd3V2Hbuq7s8lr",
+            "9gOUCXDeFhF6K+h2j0kQmHe5Y1yLM5d19guMsqtb3nQgJT/j8xH5h2iGNXHDHYwt",
+            "6+UarA9z1YJZQIDTAgMBAAGjgacwgaQwDAYDVR0TBAUwAwEB/zBEBgNVHR8EPTA7",
+            "MDmgN6A1hjNodHRwOi8vZmVkaXIuY29tc2lnbi5jby5pbC9jcmwvQ29tU2lnblNl",
+            "Y3VyZWRDQS5jcmwwDgYDVR0PAQH/BAQDAgGGMB8GA1UdIwQYMBaAFMFL7XC29z58",
+            "ADsAj8c+DkWfHl3sMB0GA1UdDgQWBBTBS+1wtvc+fAA7AI/HPg5Fnx5d7DANBgkq",
+            "hkiG9w0BAQUFAAOCAQEAFs/ukhNQq3sUnjO2QiBq1BW9Cav8cujvR3qQrFHBZE7p",
+            "iL1DRYHjZiM/EoZNGeQFsOY3wo3aBijJD4mkU6l1P7CW+6tMM1X5eCZGbxs2mPtC",
+            "dsGCuY7e+0X5YxtiOzkGynd6qDwJz2w2PQ8KRUtpFhpFfTMDZflScZAmlaxMDPWL",
+            "kz/MdXSFmLr/YnpNH4n+rr2UAJm/EaXc4HnFFgt9AmEd6oX5AhVP51qJThRv4zdL",
+            "hfXBPGHg/QVBspJ/wx2g0K5SZGBrGMYmnNj1ZOQ2GmKfig8+/21OGVZOIJFsnzQz",
+            "OjRXUDpvgV4GxvU+fE6OK85lBi5d0ipTdF7Tbieejw==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -3981,6 +4791,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -4030,6 +4844,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -4071,6 +4889,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -4335,6 +5157,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -4384,6 +5210,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -4425,6 +5255,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -4475,6 +5309,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -4774,6 +5612,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -4833,6 +5675,47 @@
                         "date": "2018-07-10T00:00:00"
                     }
                 ]
+            }
+        ]
+    },
+    "DST_ROOT_CA_X3_91299735575339953335919266965803778155": {
+        "_meta": {
+            "_subject": {
+                "organization_name": "Digital Signature Trust Co.",
+                "common_name": "DST Root CA X3"
+            },
+            "_fingerprints": {
+                "MD5": "41:03:52:DC:0F:F7:50:1B:16:F0:02:8E:BA:6F:45:C5",
+                "SHA1": "DA:C9:02:4F:54:D8:F6:DF:94:93:5F:B1:73:26:38:CA:6A:D7:7C:13",
+                "SHA2_256": "06:87:26:03:31:A7:24:03:D9:09:F1:05:E6:9B:CF:0D:32:E1:BD:24:93:FF:C6:D9:20:6D:11:BC:D6:77:07:39"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIDSjCCAjKgAwIBAgIQRK+wgNajJ7qJMDmGLvhAazANBgkqhkiG9w0BAQUFADA/",
+            "MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT",
+            "DkRTVCBSb290IENBIFgzMB4XDTAwMDkzMDIxMTIxOVoXDTIxMDkzMDE0MDExNVow",
+            "PzEkMCIGA1UEChMbRGlnaXRhbCBTaWduYXR1cmUgVHJ1c3QgQ28uMRcwFQYDVQQD",
+            "Ew5EU1QgUm9vdCBDQSBYMzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB",
+            "AN+v6ZdQCINXtMxiZfaQguzH0yxrMMpb7NnDfcdAwRgUi+DoM3ZJKuM/IUmTrE4O",
+            "rz5Iy2Xu/NMhD2XSKtkyj4zl93ewEnu1lcCJo6m67XMuegwGMoOifooUMM0RoOEq",
+            "OLl5CjH9UL2AZd+3UWODyOKIYepLYYHsUmu5ouJLGiifSKOeDNoJjj4XLh7dIN9b",
+            "xiqKqy69cK3FCxolkHRyxXtqqzTWMIn/5WgTe1QLyNau7Fqckh49ZLOMxt+/yUFw",
+            "7BZy1SbsOFU5Q9D8/RhcQPGX69Wam40dutolucbY38EVAjqr2m7xPi71XAicPNaD",
+            "aeQQmxkqtilX4+U9m5/wAl0CAwEAAaNCMEAwDwYDVR0TAQH/BAUwAwEB/zAOBgNV",
+            "HQ8BAf8EBAMCAQYwHQYDVR0OBBYEFMSnsaR7LHH62+FLkHX/xBVghYkQMA0GCSqG",
+            "SIb3DQEBBQUAA4IBAQCjGiybFwBcqR7uKGY3Or+Dxz9LwwmglSBd49lZRNI+DT69",
+            "ikugdB/OEIKcdBodfpga3csTS7MgROSR6cz8faXbauX+5v3gTt23ADq1cEmv8uXr",
+            "AvHRAosZy5Q6XkjEGB5YGV8eAlrwDPGxrancWYaLbumR9YbK+rlmM6pZW87ipxZz",
+            "R8srzJmwN0jP41ZL9c8PDHIyh8bwRLtTcm1D9SZImlJnt1ir/md2cXjbDaJWFBM5",
+            "JDGFoqgCWjBH4d1QB7wCCZAA62RjYJsWvIjJEubSfZGL+T0yjWW06XyxV3bqxbYo",
+            "Ob8VZRzI9neWagqNdwvYkQsEjgfbKbYK7p2CNTUQ",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -5065,6 +5948,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -5116,6 +6003,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -5166,6 +6057,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -5220,6 +6115,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -5475,6 +6374,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -5626,6 +6529,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -5791,6 +6698,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -5848,6 +6759,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -5895,6 +6810,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -5950,6 +6869,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -6017,6 +6940,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -6075,6 +7002,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -6347,6 +7278,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -6666,6 +7601,52 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "GEOTRUST_GLOBAL_CA_144470": {
+        "_meta": {
+            "_subject": {
+                "country_name": "US",
+                "organization_name": "GeoTrust Inc.",
+                "common_name": "GeoTrust Global CA"
+            },
+            "_fingerprints": {
+                "MD5": "F7:75:AB:29:FB:51:4E:B7:77:5E:FF:05:3C:99:8E:F5",
+                "SHA1": "DE:28:F4:A4:FF:E5:B9:2F:A3:C5:03:D1:A3:49:A7:F9:96:2A:82:12",
+                "SHA2_256": "FF:85:6A:2D:25:1D:CD:88:D3:66:56:F4:50:12:67:98:CF:AB:AA:DE:40:79:9C:72:2D:E4:D2:B5:DB:36:A7:3A"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIDVDCCAjygAwIBAgIDAjRWMA0GCSqGSIb3DQEBBQUAMEIxCzAJBgNVBAYTAlVT",
+            "MRYwFAYDVQQKEw1HZW9UcnVzdCBJbmMuMRswGQYDVQQDExJHZW9UcnVzdCBHbG9i",
+            "YWwgQ0EwHhcNMDIwNTIxMDQwMDAwWhcNMjIwNTIxMDQwMDAwWjBCMQswCQYDVQQG",
+            "EwJVUzEWMBQGA1UEChMNR2VvVHJ1c3QgSW5jLjEbMBkGA1UEAxMSR2VvVHJ1c3Qg",
+            "R2xvYmFsIENBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2swYYzD9",
+            "9BcjGlZ+W988bDjkcbd4kdS8odhM+KhDtgPpTSEHCIjaWC9mOSm9BXiLnTjoBbdq",
+            "fnGk5sRgprDvgOSJKA+eJdbtg/OtppHHmMlCGDUUna2YRpIuT8rxh0PBFpVXLVDv",
+            "iS2Aelet8u5fa9IAjbkU+BQVNdnARqN7csiRv8lVK83Qlz6cJmTM386DGXHKTubU",
+            "1XupGc1V3sjs0l44U+VcT4wt/lAjNvxm5suOpDkZALeVAjmRCw7+OC7RHQWa9k0+",
+            "bw8HHa8sHo9gOeL6NlMTOdReJivbPagUvTLrGAMoUgRx5aszPeE4uwc2hGKceeoW",
+            "MPRfwCvocWvk+QIDAQABo1MwUTAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBTA",
+            "ephojYn7qwVkDBF9qn1luMrMTjAfBgNVHSMEGDAWgBTAephojYn7qwVkDBF9qn1l",
+            "uMrMTjANBgkqhkiG9w0BAQUFAAOCAQEANeMpauUvXVSOKVCUn5kaFOSPeCpilKIn",
+            "Z57QzxpeR+nBsqTP3UEaBU6bS+5Kb1VSsyShNwrrZHYqLizz/Tt1kL/6cdjHPTfS",
+            "tQWVYrmm3ok9Nns4d0iXrKYgjy6myQzCsplFAMfOEVEiIuCl6rYVSAlk6l5PdPcF",
+            "PseKUgzbFbS9bZvlxrFUaKnjaZC2mqUPuLk/IH2uSrW4nOQdtqvmlKXBx4Ot2/Un",
+            "hw4EbNX/3aBd7YdStysVAq45pmp06drE57xNNB6pXE0zX5IJL4hmXXeXxx12E6nV",
+            "5fEWCRE11azbJHFwLJhWC9kXtNHjUStedejV0NxPNO3CBWaAocvmMw==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -6715,6 +7696,10 @@
                         "date": "2006-11-27T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -6761,6 +7746,10 @@
                         "date": "2007-11-05T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -6814,6 +7803,10 @@
                         "date": "2008-04-02T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -6931,6 +7924,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -6965,6 +7962,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -7040,6 +8041,54 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "GLOBALSIGN_4835703278459682885658125": {
+        "_meta": {
+            "_subject": {
+                "organizational_unit_name": "GlobalSign Root CA - R2",
+                "organization_name": "GlobalSign",
+                "common_name": "GlobalSign"
+            },
+            "_fingerprints": {
+                "MD5": "94:14:77:7E:3E:5E:FD:8F:30:BD:41:B0:CF:E7:D0:30",
+                "SHA1": "75:E0:AB:B6:13:85:12:27:1C:04:F8:5F:DD:DE:38:E4:B7:24:2E:FE",
+                "SHA2_256": "CA:42:DD:41:74:5F:D0:B8:1E:B9:02:36:2C:F9:D8:BF:71:9D:A1:BD:1B:1E:FC:94:6F:5B:4C:99:F4:2C:1B:9E"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIDujCCAqKgAwIBAgILBAAAAAABD4Ym5g0wDQYJKoZIhvcNAQEFBQAwTDEgMB4G",
+            "A1UECxMXR2xvYmFsU2lnbiBSb290IENBIC0gUjIxEzARBgNVBAoTCkdsb2JhbFNp",
+            "Z24xEzARBgNVBAMTCkdsb2JhbFNpZ24wHhcNMDYxMjE1MDgwMDAwWhcNMjExMjE1",
+            "MDgwMDAwWjBMMSAwHgYDVQQLExdHbG9iYWxTaWduIFJvb3QgQ0EgLSBSMjETMBEG",
+            "A1UEChMKR2xvYmFsU2lnbjETMBEGA1UEAxMKR2xvYmFsU2lnbjCCASIwDQYJKoZI",
+            "hvcNAQEBBQADggEPADCCAQoCggEBAKbPJA6+Lm8omUVCxKs+IVSbC9N/hHD6ErPL",
+            "v4dfxn+G07IwXNb9rfF73OX4YJYJkhD10FPe+3t+c4isUoh7SqbKSaZeqKeMWhG8",
+            "eoLrvozps6yWJQeXSpkqBy+0Hne/ig+1AnwblrjFuTosvNYSuetZfeLQBoZfXklq",
+            "tTleiDTsvHgMCJiEbKjNS7SgfQx5TfC4LcshytVsW33hoCmEofnTlEnLJGKRILzd",
+            "C9XZzPnqJworc5HGnRusyMvo4KD0L5CLTfuwNhv2GXqF4G3yYROIXJ/gkwpRl4pa",
+            "zq+r1feqCapgvdzZX99yqWATXgAByUr6P6TqBwMhAo6CygPCm48CAwEAAaOBnDCB",
+            "mTAOBgNVHQ8BAf8EBAMCAQYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUm+IH",
+            "V2ccHsBqBt5ZtJot39wZhi4wNgYDVR0fBC8wLTAroCmgJ4YlaHR0cDovL2NybC5n",
+            "bG9iYWxzaWduLm5ldC9yb290LXIyLmNybDAfBgNVHSMEGDAWgBSb4gdXZxwewGoG",
+            "3lm0mi3f3BmGLjANBgkqhkiG9w0BAQUFAAOCAQEAmYFThxxol4aR7OBKuEQLq4Gs",
+            "J0/WwbgcQ3izDJr86iw8bmEbTUsp9Z8FHSbBuOmDAGJFtqkIk7mpM0sYmsL4h4hO",
+            "291xNBrBVNpGP+DTKqttVCL1OmLNIG+6KYnX3ZHu01yiPqFbQfXf5WRDLenVOavS",
+            "ot+3i9DAgBkcRcAtjOj4LaR0VknFBbVPFd5uRHg5h6h+u/N5GJG79G+dwfCMNYxd",
+            "AfvDbbnvRG15RjF+Cv6pgsH/76tuIMRQyV+dTZsXjAzlAcmgQWpzU/qlULRuJQ/7",
+            "TBj0/VLZjmmx6BEP3ojY+x1J96relc8geMJgEtslQIxq/H5COEBkEveegeGTLg==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -7086,6 +8135,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -7405,6 +8458,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -7443,6 +8500,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -7501,6 +8562,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -7536,6 +8601,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -7590,6 +8659,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -7891,6 +8964,10 @@
                         "date": "2003-09-30T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -7955,6 +9032,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -8083,6 +9164,10 @@
                         "date": "2012-09-28T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -8192,6 +9277,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -8242,6 +9331,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -8339,6 +9432,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -8446,6 +9543,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -8534,6 +9635,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -8603,6 +9708,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -9011,6 +10120,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -9057,6 +10170,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -9119,6 +10236,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -9222,6 +10343,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -9343,6 +10468,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -9453,6 +10582,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -9510,6 +10643,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -9566,6 +10703,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -9669,6 +10810,10 @@
                         "date": "2007-12-13T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -9728,6 +10873,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -10030,6 +11179,10 @@
                         "date": "2005-08-24T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -10191,6 +11344,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -10274,6 +11431,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -10548,6 +11709,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -10774,6 +11939,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -10889,6 +12058,51 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            }
+        ]
+    },
+    "NETWORK_SOLUTIONS_CERTIFICATE_AUTHORITY_116697915152937497490437556386812487904": {
+        "_meta": {
+            "_subject": {
+                "country_name": "US",
+                "organization_name": "Network Solutions L.L.C.",
+                "common_name": "Network Solutions Certificate Authority"
+            },
+            "_fingerprints": {
+                "MD5": "D3:F3:A6:16:C0:FA:6B:1D:59:B1:2D:96:4D:0E:11:2E",
+                "SHA1": "74:F8:A3:C3:EF:E7:B3:90:06:4B:83:90:3C:21:64:60:20:E5:DF:CE",
+                "SHA2_256": "15:F0:BA:00:A3:AC:7A:F3:AC:88:4C:07:2B:10:11:A0:77:BD:77:C0:97:F4:01:64:B2:F8:59:8A:BD:83:86:0C"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIID5jCCAs6gAwIBAgIQV8szb8JcFuZHFhfjkDFo4DANBgkqhkiG9w0BAQUFADBi",
+            "MQswCQYDVQQGEwJVUzEhMB8GA1UEChMYTmV0d29yayBTb2x1dGlvbnMgTC5MLkMu",
+            "MTAwLgYDVQQDEydOZXR3b3JrIFNvbHV0aW9ucyBDZXJ0aWZpY2F0ZSBBdXRob3Jp",
+            "dHkwHhcNMDYxMjAxMDAwMDAwWhcNMjkxMjMxMjM1OTU5WjBiMQswCQYDVQQGEwJV",
+            "UzEhMB8GA1UEChMYTmV0d29yayBTb2x1dGlvbnMgTC5MLkMuMTAwLgYDVQQDEydO",
+            "ZXR3b3JrIFNvbHV0aW9ucyBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwggEiMA0GCSqG",
+            "SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDkvH6SMG3G2I4rC7xGzuAnlt7e+foS0zwz",
+            "c7MEL7xxjOWftiJgPl9dzgn/ggwbmlFQGiaJ3dVhXRncEg8tCqJDXRfQNJIg6nPP",
+            "OCwGJgl6cvf6UDL4wpPTaaIjzkGxzOTVHzbRijr4jGPiFFlp7Q3Tf2vouAPlT2rl",
+            "mGNpSAW+Lv8ztumXWWn4Zxmuk2GWRBXTcrA/vGp97Eh/jcOrqnErU2lBUzS1sLnF",
+            "BgrEsEX1QV1uiUV7PTsmjHTC5dLRfbIR1PtYMiKagMnc/Qzpf14Dl847ABSHJ3A4",
+            "qY5usyd2mFHgBeMhqxrVhSI8KbWaFsWAqPS7azCPL0YCorEMIuDTAgMBAAGjgZcw",
+            "gZQwHQYDVR0OBBYEFCEwyfsA106Y2oeqKtCnLrFAMadMMA4GA1UdDwEB/wQEAwIB",
+            "BjAPBgNVHRMBAf8EBTADAQH/MFIGA1UdHwRLMEkwR6BFoEOGQWh0dHA6Ly9jcmwu",
+            "bmV0c29sc3NsLmNvbS9OZXR3b3JrU29sdXRpb25zQ2VydGlmaWNhdGVBdXRob3Jp",
+            "dHkuY3JsMA0GCSqGSIb3DQEBBQUAA4IBAQC7rkvnt1frf6ott3NHhWrB5KUd5Oc8",
+            "6fRZZXe1eltajSU24HqXLjjAV2CDmAaDn7l2em5Q4LqILPxFzBiwmZVRDuwduIj/",
+            "h1AcgsLj4DKAv6ALR8jDMe+ZZzKATxcheQxpXN5eNK4CtSbqUN9/GGUsyfJj4akH",
+            "/nxxH2szJGoeBfcFaMBqEssuXmHLrijTfsK0ZpEmXzwuJF/LWA/rKOyvEZbz3Htv",
+            "wKeI8lN3s2Berq4o2jUsbzRF0ybh3uxbTydrFny9RAQYgrOJeRcQcT16ohZO9QHN",
+            "pGxlaKFJdlxDydi8NmdspZS11My5vWo1ViHe2MPr+8ukYEywVaCge1ey",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -11292,6 +12506,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -11341,6 +12559,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -11382,6 +12604,154 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "OPENTRUST_ROOT_CA_G1_1492036577811947013770400127034825178844775": {
+        "_meta": {
+            "_subject": {
+                "country_name": "FR",
+                "organization_name": "OpenTrust",
+                "common_name": "OpenTrust Root CA G1"
+            },
+            "_fingerprints": {
+                "MD5": "76:00:CC:81:29:CD:55:5E:88:6A:7A:2E:F7:4D:39:DA",
+                "SHA1": "79:91:E8:34:F7:E2:EE:DD:08:95:01:52:E9:55:2D:14:E9:58:D5:7E",
+                "SHA2_256": "56:C7:71:28:D9:8C:18:D9:1B:4C:FD:FF:BC:25:EE:91:03:D4:75:8E:A2:AB:AD:82:6A:90:F3:45:7D:46:0E:B4"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFbzCCA1egAwIBAgISESCzkFU5fX82bWTCp59rY45nMA0GCSqGSIb3DQEBCwUA",
+            "MEAxCzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlPcGVuVHJ1c3QxHTAbBgNVBAMMFE9w",
+            "ZW5UcnVzdCBSb290IENBIEcxMB4XDTE0MDUyNjA4NDU1MFoXDTM4MDExNTAwMDAw",
+            "MFowQDELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCU9wZW5UcnVzdDEdMBsGA1UEAwwU",
+            "T3BlblRydXN0IFJvb3QgQ0EgRzEwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIK",
+            "AoICAQD4eUbalsUwXopxAy1wpLuwxQjczeY1wICkES3d5oeuXT2R0odsN7faYp6b",
+            "wiTXj/HbpqbfRm9RpnHLPhsxZ2L3EVs0J9V5ToybWL0iEA1cJwzdMOWo010hOHQX",
+            "/uMftk87ay3bfWAfjH1MBcLrARYVmBSO0ZB3Ij/swjm4eTrwSSTilZHcYTSSjFR0",
+            "77F9jAHiOH3BX2pfJLKOYheteSCtqx234LSWSE9mQxAGFiQD4eCcjsZGT44ameGP",
+            "uY4zbGneWK2gDqdkVBFpRGZPTBKnjix9xNRbxQA0MMHZmf4yzgeEtE7NCv82TWLx",
+            "p2NX5Ntqp66/K7nJ5rInieV+mhxNaMbBGN4zK1FGSxyO9z0M+Yo0FMT7MzUj8czx",
+            "Kselu7Cizv5Ta01BG2Yospb6p64KTrk5M0ScdMGTHPjgniQlQ/GbI4Kq3ywgsNw2",
+            "TgOzfALU5nsaqocTvz6hdLubDuHAk5/XpGbKuxs74zD0M1mKB3IDVedzagMxbm+W",
+            "G+Oin6+Sx+31QrclTDsTBM8clq8cIqPQqwWyTBIjUtz9GVsnnB47ev1CI9sjgBPw",
+            "vFEVVJSmdz7QdFG9URQIOTfLHzSpMJ1ShC5VkLG631UAC9hWLbFJSXKAqWLXwPYY",
+            "EQRVzXR7z2FwefR7LFxckvzluFqrTJOVoSfupb7PcSNCupt2LQIDAQABo2MwYTAO",
+            "BgNVHQ8BAf8EBAMCAQYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUl0YhVyE1",
+            "2jZVx/PxN3DlCPaTKbYwHwYDVR0jBBgwFoAUl0YhVyE12jZVx/PxN3DlCPaTKbYw",
+            "DQYJKoZIhvcNAQELBQADggIBAB3dAmB84DWn5ph76kTOZ0BP8pNuZtQ5iSas000E",
+            "PLuHIT839HEl2ku6q5aCgZG27dmxpGWX4m9kWaSW7mDKHyP7Rbr/jyTwyqkxf3kf",
+            "gLMtMrpkZ2CvuVnN35pJ06iCsfmYlIrM4LvgBBuZYLFGZdwIorJGnkSI6pN+VxbS",
+            "FXJfLkur1J1juONI5f6ELlgKn0Md/rcYkoZDSw6cMoYsYPXpSOqV7XAp8dUv/TW0",
+            "V8/bhUiZucJvbI/NeJWsZCj9VrDDb8O+WVLhX4SPgPL0DTatdrOjteFkdjpY3H1P",
+            "XlZs5VVZV6Xf8YpmMIzUUmI4d7S+KNfKNsSbBfD4Fdvb8e80nR14SohWZ25g/4/I",
+            "i+GOvUKpMwpZQhISKvqxnUOOBZuZ2mKtVzazHbYNeS2WuOvyDEsMpZTGMKcmGS3t",
+            "TAZQMPH9WD25SxdfGbRqhFS0OE85og2WaMMolP3tLR9Ka0OWLpABEPs4poEL0L91",
+            "09S5zvE/bw4cHjdx5RiHdRk/ULlepEU0rbDK5uUTdg8xFKmOLZTW1YVNcxVPS/Ky",
+            "Pu1svf0OnWZzsD2097+o4BGkxK51CUpjAEggpsadCwmKtODmzj7HPiY46SvepghJ",
+            "AwSQiumPv+i2tCqjI40cHLI5kqiPAlxAOXXUc0ECd97N4EOH1uS6SsNsEn/+KuYj",
+            "1oxx",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "OPENTRUST_ROOT_CA_G2_1492012448042702096986875987676935573415441": {
+        "_meta": {
+            "_subject": {
+                "country_name": "FR",
+                "organization_name": "OpenTrust",
+                "common_name": "OpenTrust Root CA G2"
+            },
+            "_fingerprints": {
+                "MD5": "57:24:B6:59:24:6B:AE:C8:FE:1C:0C:20:F2:C0:4E:EB",
+                "SHA1": "79:5F:88:60:C5:AB:7C:3D:92:E6:CB:F4:8D:E1:45:CD:11:EF:60:0B",
+                "SHA2_256": "27:99:58:29:FE:6A:75:15:C1:BF:E8:48:F9:C4:76:1D:B1:6C:22:59:29:25:7B:F4:0D:08:94:F2:9E:A8:BA:F2"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFbzCCA1egAwIBAgISESChaRu/vbm9UpaPI+hIvyYRMA0GCSqGSIb3DQEBDQUA",
+            "MEAxCzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlPcGVuVHJ1c3QxHTAbBgNVBAMMFE9w",
+            "ZW5UcnVzdCBSb290IENBIEcyMB4XDTE0MDUyNjAwMDAwMFoXDTM4MDExNTAwMDAw",
+            "MFowQDELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCU9wZW5UcnVzdDEdMBsGA1UEAwwU",
+            "T3BlblRydXN0IFJvb3QgQ0EgRzIwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIK",
+            "AoICAQDMtlelM5QQgTJT32F+D3Y5z1zCU3UdSXqWON2ic2rxb95eolq5cSG+Ntmh",
+            "/LzubKh8NBpxGuga2F8ORAbtp+Dz0mEL4DKiltE48MLaARf85KxP6O6JHnSrT78e",
+            "CbY2albz4e6WiWYkBuTNQjpK3eCasMSCRbP+yatcfD7J6xcvDH1urqWPyKwlCm/6",
+            "1UWY0jUJ9gNDlP7ZvyCVeYCYitmJNbtRG6Q3ffyZO6v/v6wNj0OxmXsWEH4db0fE",
+            "FY8ElggGQgT4hNYdvJGmQr5J1WqIP7wtUdGejeBSzFfdNTVY27SPJIjki9/ca1TS",
+            "gSuyzpJLHB9G+h3Ykst2Z7UJmQnlrBcUVXDGPKBWCgOz3GIZ38i1MH/1PCZ1Eb3X",
+            "G7OHngevZXHloM8apwkQHZOJZlvoPGIytbU6bumFAYueQ4xncyhZW+vj3CzMpSZy",
+            "YhK05pyDRPZRpOLAeiRXyg6lPzq1O4vldu5w5pLeFlwoW5cZJ5L+epJUzpM5ChaH",
+            "vGOz9bGTXOBut9Dq+WIyiET7vycotjCVXRIouZW+j1MY5aIYFuJWpLIsEPUdN6b4",
+            "t/bQWVyJ98LVtZR00dX+G7bw5tYee9I8y6jj9RjzIR9u701oBnstXW5DiabA+aC/",
+            "gh7PU3+06yzbXfZqfUAkBXKJOAGTy3HCOV0GEfZvePg3DTmEJwIDAQABo2MwYTAO",
+            "BgNVHQ8BAf8EBAMCAQYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUajn6QiL3",
+            "5okATV59M4PLuG53hq8wHwYDVR0jBBgwFoAUajn6QiL35okATV59M4PLuG53hq8w",
+            "DQYJKoZIhvcNAQENBQADggIBAJjLq0A85TMCl38th6aP1F5Kr7ge57tx+4BkJamz",
+            "Gj5oXScmp7oq4fBXgwpkTx4idBvpkF/wrM//T2h6OKQQbA2xx6R3gBi2oihEdqc0",
+            "nXGEL8pZ0keImUEiyTCYYW49qKgFbdEfwFFEVn8nNQLdXpgKQuswv42hm1GqO+qT",
+            "RmTFAHneIWv2V6CG1wZy7HBGS4tz3aAhdT7cHcCP009zHIXZ/n9iyJVvttN7jLpT",
+            "wm+bREx50B1ws9efAvSyB7DH5fitIw6mVskpEndI2S9G/Tvw/HRwkqWOOAgfZDC2",
+            "t0v7NqwQjqBSM2OdAzVWxWm9xiNaJ5T2pBL4LTM8oValX9YZ6e18CL13zSdkzJTa",
+            "TkZQh+D5wVOAHrut+0dSixv9ovneDiK3PTNZbNTe9ZUGMg1RGUFcPk8G97krgCf2",
+            "o6p6fAbhQ8MTOWIaNr3gKC6UAuQpLmBVrkA9sHSSXvAgZJY/X0VdiLWK2gKgW0VU",
+            "3jg9CcCoSmVGFvyqv1ROTVu+OEO3KMqLM6oaJbolXCkvW0pujOotnCr2BXbgd5eA",
+            "iN1nE28daCSLT7d0geX0YJ96Vdc+N9oWaz53rK4YcJUIeSkDiv7BO7M/Gg+kO14f",
+            "WKGVyasvc0rQLW6aWQ9VGHgtPFGml4vmu7JwqkwR3v98KzfUetF3NI/n+UL3PIEM",
+            "S1IK",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "OPENTRUST_ROOT_CA_G3_1492104908271485653071219941864171170455615": {
+        "_meta": {
+            "_subject": {
+                "country_name": "FR",
+                "organization_name": "OpenTrust",
+                "common_name": "OpenTrust Root CA G3"
+            },
+            "_fingerprints": {
+                "MD5": "21:37:B4:17:16:92:7B:67:46:70:A9:96:D7:A8:13:24",
+                "SHA1": "6E:26:64:F3:56:BF:34:55:BF:D1:93:3F:7C:01:DE:D8:13:DA:8A:A6",
+                "SHA2_256": "B7:C3:62:31:70:6E:81:07:8C:36:7C:B8:96:19:8F:1E:32:08:DD:92:69:49:DD:8F:57:09:A4:10:F7:5B:62:92"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIICITCCAaagAwIBAgISESDm+Ez8JLC+BUCs2oMbNGA/MAoGCCqGSM49BAMDMEAx",
+            "CzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlPcGVuVHJ1c3QxHTAbBgNVBAMMFE9wZW5U",
+            "cnVzdCBSb290IENBIEczMB4XDTE0MDUyNjAwMDAwMFoXDTM4MDExNTAwMDAwMFow",
+            "QDELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCU9wZW5UcnVzdDEdMBsGA1UEAwwUT3Bl",
+            "blRydXN0IFJvb3QgQ0EgRzMwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAARK7liuTcpm",
+            "3gY6oxH84Bjwbhy6LTAMidnW7ptzg6kjFYwvWYpa3RTqnVkrQ7cG7DK2uu5Bta1d",
+            "oYXM6h0UZqNnfkbilPPntlahFVmhTzeXuSIevRHr9LIfXsMUmuXZl5mjYzBhMA4G",
+            "A1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBRHd8MUi2I5",
+            "DMlv4VBN0BBY3JWIbTAfBgNVHSMEGDAWgBRHd8MUi2I5DMlv4VBN0BBY3JWIbTAK",
+            "BggqhkjOPQQDAwNpADBmAjEAj6jcnboMBBf6Fek9LykBl7+BFjNAk2z8+e2AcG+q",
+            "j9uEwov1NcoG3GRvaBbhj5G5AjEA2Euly8LQCGzpGPta3U1fJAuwACEl74+nBCZx",
+            "4nxp5V2a+EEfOzmTk51V6s2N8fvB",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -11558,6 +12928,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -11617,6 +12991,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -11673,6 +13051,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -11738,6 +13120,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -11794,6 +13180,67 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "QUOVADIS_ROOT_CERTIFICATION_AUTHORITY_985026699": {
+        "_meta": {
+            "_subject": {
+                "country_name": "BM",
+                "organization_name": "QuoVadis Limited",
+                "organizational_unit_name": "Root Certification Authority",
+                "common_name": "QuoVadis Root Certification Authority"
+            },
+            "_fingerprints": {
+                "MD5": "27:DE:36:FE:72:B7:00:03:00:9D:F4:F0:1E:6C:04:24",
+                "SHA1": "DE:3F:40:BD:50:93:D3:9B:6C:60:F6:DA:BC:07:62:01:00:89:76:C9",
+                "SHA2_256": "A4:5E:DE:3B:BB:F0:9C:8A:E1:5C:72:EF:C0:72:68:D6:93:A2:1C:99:6F:D5:1E:67:CA:07:94:60:FD:6D:88:73"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIF0DCCBLigAwIBAgIEOrZQizANBgkqhkiG9w0BAQUFADB/MQswCQYDVQQGEwJC",
+            "TTEZMBcGA1UEChMQUXVvVmFkaXMgTGltaXRlZDElMCMGA1UECxMcUm9vdCBDZXJ0",
+            "aWZpY2F0aW9uIEF1dGhvcml0eTEuMCwGA1UEAxMlUXVvVmFkaXMgUm9vdCBDZXJ0",
+            "aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0wMTAzMTkxODMzMzNaFw0yMTAzMTcxODMz",
+            "MzNaMH8xCzAJBgNVBAYTAkJNMRkwFwYDVQQKExBRdW9WYWRpcyBMaW1pdGVkMSUw",
+            "IwYDVQQLExxSb290IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MS4wLAYDVQQDEyVR",
+            "dW9WYWRpcyBSb290IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MIIBIjANBgkqhkiG",
+            "9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv2G1lVO6V/z68mcLOhrfEYBklbTRvM16z/Yp",
+            "li4kVEAkOPcahdxYTMukJ0KX0J+DisPkBgNbAKVRHnAEdOLB1Dqr1607BxgFjv2D",
+            "rOpm2RgbaIr1VxqYuvXtdj182d6UajtLF8HVj71lODqV0D1VNk7feVcxKh7YWWVJ",
+            "WCCYfqtffp/p1k3sg3Spx2zY7ilKhSoGFPlU5tPaZQeLYzcS19Dsw3sgQUSj7cug",
+            "F+FxZc4dZjH3dgEZyH0DWLaVSR2mEiboxgx24ONmy+pdpibu5cxfvWenAScOospU",
+            "xbF6lR1xHkopigPcakXBpBlebzbNw6Kwt/5cOOJSvPhEQ+aQuwIDAQABo4ICUjCC",
+            "Ak4wPQYIKwYBBQUHAQEEMTAvMC0GCCsGAQUFBzABhiFodHRwczovL29jc3AucXVv",
+            "dmFkaXNvZmZzaG9yZS5jb20wDwYDVR0TAQH/BAUwAwEB/zCCARoGA1UdIASCAREw",
+            "ggENMIIBCQYJKwYBBAG+WAABMIH7MIHUBggrBgEFBQcCAjCBxxqBxFJlbGlhbmNl",
+            "IG9uIHRoZSBRdW9WYWRpcyBSb290IENlcnRpZmljYXRlIGJ5IGFueSBwYXJ0eSBh",
+            "c3N1bWVzIGFjY2VwdGFuY2Ugb2YgdGhlIHRoZW4gYXBwbGljYWJsZSBzdGFuZGFy",
+            "ZCB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZiB1c2UsIGNlcnRpZmljYXRpb24gcHJh",
+            "Y3RpY2VzLCBhbmQgdGhlIFF1b1ZhZGlzIENlcnRpZmljYXRlIFBvbGljeS4wIgYI",
+            "KwYBBQUHAgEWFmh0dHA6Ly93d3cucXVvdmFkaXMuYm0wHQYDVR0OBBYEFItLbe3T",
+            "KbkGGew5Oanwl4Rqy+/fMIGuBgNVHSMEgaYwgaOAFItLbe3TKbkGGew5Oanwl4Rq",
+            "y+/foYGEpIGBMH8xCzAJBgNVBAYTAkJNMRkwFwYDVQQKExBRdW9WYWRpcyBMaW1p",
+            "dGVkMSUwIwYDVQQLExxSb290IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MS4wLAYD",
+            "VQQDEyVRdW9WYWRpcyBSb290IENlcnRpZmljYXRpb24gQXV0aG9yaXR5ggQ6tlCL",
+            "MA4GA1UdDwEB/wQEAwIBBjANBgkqhkiG9w0BAQUFAAOCAQEAitQUtf70mpKnGdSk",
+            "fnIYj9lofFIk3WdvOXrEql494liwTXCYhGHoG+NpGA7O+0dQoE7/8CQfvbLO9Sf8",
+            "7C9TqnN7Az10buYWnuulLsS/VidQK2K6vkscPFVcQR0kvoIgR13VRH56FmjffU1R",
+            "cHhXHTMe/QKZnAzNCgVPx7uOpHX6Sm2xgI4JVrmcGmD+XcHXetwReNDWXcG31a0y",
+            "mQM6isxUJTkxgXsTIlG6Rmyhu576BGxJJnSP0nPrzDCi5upZIof4l/UO/erMkqQW",
+            "xFIY6iHOsfHmhIHluqmGKPJDWl0Snawe2ajlCmqnf6CHKc/yiU3U7MXi5nrQNiOK",
+            "SnQ2+Q==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -12758,6 +14205,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -12806,6 +14257,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -12845,6 +14300,49 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            }
+        ]
+    },
+    "SECURITY_COMMUNICATION_EV_ROOTCA1_0": {
+        "_meta": {
+            "_subject": {
+                "country_name": "JP",
+                "organization_name": "SECOM Trust Systems CO.,LTD.",
+                "organizational_unit_name": "Security Communication EV RootCA1"
+            },
+            "_fingerprints": {
+                "MD5": "22:2D:A6:01:EA:7C:0A:F7:F0:6C:56:43:3F:77:76:D3",
+                "SHA1": "FE:B8:C4:32:DC:F9:76:9A:CE:AE:3D:D8:90:8F:FD:28:86:65:64:7D",
+                "SHA2_256": "A2:2D:BA:68:1E:97:37:6E:2D:39:7D:72:8A:AE:3A:9B:62:96:B9:FD:BA:60:BC:2E:11:F6:47:F2:C6:75:FB:37"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIDfTCCAmWgAwIBAgIBADANBgkqhkiG9w0BAQUFADBgMQswCQYDVQQGEwJKUDEl",
+            "MCMGA1UEChMcU0VDT00gVHJ1c3QgU3lzdGVtcyBDTy4sTFRELjEqMCgGA1UECxMh",
+            "U2VjdXJpdHkgQ29tbXVuaWNhdGlvbiBFViBSb290Q0ExMB4XDTA3MDYwNjAyMTIz",
+            "MloXDTM3MDYwNjAyMTIzMlowYDELMAkGA1UEBhMCSlAxJTAjBgNVBAoTHFNFQ09N",
+            "IFRydXN0IFN5c3RlbXMgQ08uLExURC4xKjAoBgNVBAsTIVNlY3VyaXR5IENvbW11",
+            "bmljYXRpb24gRVYgUm9vdENBMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC",
+            "ggEBALx/7FebJOD+nLpCeamIivqA4PUHKUPqjgo0No0c+qe1OXj/l3X3L+SqawSE",
+            "RMqm4miO/VVQYg+kcQ7OBzgtQoVQrTyWb4vVog7P3kmJPdZkLjjlHmy1V4qe70gO",
+            "zXppFodEtZDkBp2uoQSXWHnvIEqCa4wiv+wfD+mEce3xDuS4GBPMVjZd0ZoeUWs5",
+            "bmB2iDQL87PRsJ3KYeJkHcFGB7hj3R4zZbOOCVVSPbW9/wfrrWFVGCypaZhKqkDF",
+            "MxRldAD5kd6vA0jFQFTcD4SQaCDFkpbcLuUCRarAX1T4bepJz11sS6/vmsJWXMY1",
+            "VkJqMF/Cq/biPT+zyRGPMUzXn0kCAwEAAaNCMEAwHQYDVR0OBBYEFDVK9U2vP9eC",
+            "OKyrcWUXdYydVZPmMA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MA0G",
+            "CSqGSIb3DQEBBQUAA4IBAQCoh+ns+EBnXcPBZsdAS5f8hxOQWsTvoMpfi7ent/HW",
+            "tWS3irO4G8za+6xmiEHO6Pzk2x6Ipu0nUBsCMCRGef4Eh3CXQHPRwMFXGZpppSeZ",
+            "q51ihPZRwSzJIxXYKLerJRO1RuGGAv8mjMSIkh1W/hln8lXkgKNrnKt34VFxDSDb",
+            "EJrbvXZ5B3eZKK2aXtqxT0QsNY6llsf9g/BYxnnWmHyojf6GPgcWkuF75x3sM3Z+",
+            "Qi5KhfmRiWiEA4Glm5q+4zfFVKtWOxgtQaQM+ELbmaDgcm+7XeEWT1MKZPlO9L9O",
+            "VL14bIjqv5wTJMJwaaJ/D8g8rQjJsJhAoyrniIPtd490",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -12892,6 +14390,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -12938,6 +14440,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -13110,6 +14616,47 @@
             }
         ]
     },
+    "SONERA_CLASS2_CA_29": {
+        "_meta": {
+            "_subject": {
+                "country_name": "FI",
+                "organization_name": "Sonera",
+                "common_name": "Sonera Class2 CA"
+            },
+            "_fingerprints": {
+                "MD5": "A3:EC:75:0F:2E:88:DF:FA:48:01:4E:0B:5C:48:6F:FB",
+                "SHA1": "37:F7:6D:E6:07:7C:90:C5:B1:3E:93:1A:B7:41:10:B4:F2:E4:9A:27",
+                "SHA2_256": "79:08:B4:03:14:C1:38:10:0B:51:8D:07:35:80:7F:FB:FC:F8:51:8A:00:95:33:71:05:BA:38:6B:15:3D:D9:27"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIDIDCCAgigAwIBAgIBHTANBgkqhkiG9w0BAQUFADA5MQswCQYDVQQGEwJGSTEP",
+            "MA0GA1UEChMGU29uZXJhMRkwFwYDVQQDExBTb25lcmEgQ2xhc3MyIENBMB4XDTAx",
+            "MDQwNjA3Mjk0MFoXDTIxMDQwNjA3Mjk0MFowOTELMAkGA1UEBhMCRkkxDzANBgNV",
+            "BAoTBlNvbmVyYTEZMBcGA1UEAxMQU29uZXJhIENsYXNzMiBDQTCCASIwDQYJKoZI",
+            "hvcNAQEBBQADggEPADCCAQoCggEBAJAXSjWdyvANlsdE+hY3/Ei9vX+ALTU74W+o",
+            "Z6m/AxxNjG8yR9VBaKQTBME1DJqEQ/xcHf+Js+gXGM2RX/uJ4+q/Tl18GybTdXnt",
+            "5oTjV+WtKcT0OijnpXuENmmz/V52vaMtmdOQTiMofRhj8VQ7Jp12W5dCsv+u8E7s",
+            "3TmVToMGf+dJQMjFAbJUWmYdPfz56TwKnoG4cPABi+QjVHzIrviQHgCWctRUz2Ej",
+            "vOr7nQKV0ba5cTppCD8PtOFCx4j1P5iop7oc4HFx71hXgVB6XGt0Rg6DA5jDjqhu",
+            "8nYybieDwnPz3BjotJPqdURrBGAgcVeHnfO+oJAjPYok4doh28MCAwEAAaMzMDEw",
+            "DwYDVR0TAQH/BAUwAwEB/zARBgNVHQ4ECgQISqCqWITTXjwwCwYDVR0PBAQDAgEG",
+            "MA0GCSqGSIb3DQEBBQUAA4IBAQBazof5FnIVV0sd2ZvnoiYw7JNn39Yt0jSv9zil",
+            "zqsWuasvfDXLrNAPtEwr/IDva4yRXzZ299uzGxnq9LIR/WFxRL8oszodv7ND6J+/",
+            "3DEIcbCdjdY0RzKQxmUk96BKfARzjzlvF4xytb1LyHr4e4PDKE6cCepnP7JnBBvD",
+            "FNr450kkkdAdavphOe9r5yF1BgfYErQhIHBCcYHaPJo2vqZbDWpsmh+Re/n570K6",
+            "Tk6ezAyNlNzZRZxe7EJQY670XcSxEtzKO6gunRRaBXW37Ndj4ro1tgQIkejanZz2",
+            "ZrUYrAqmVCY0M9IbwdR/GjqOC6oybtv8TyWf2TLHllpwrN9M",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
     "SSL_COM_EV_ROOT_CERTIFICATION_AUTHORITY_ECC_3182246526754555285": {
         "_meta": {
             "_subject": {
@@ -13150,6 +14697,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -13213,6 +14764,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -13256,6 +14811,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -13319,6 +14878,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -13372,6 +14935,65 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "STAAT_DER_NEDERLANDEN_ROOT_CA_G2_10000012": {
+        "_meta": {
+            "_subject": {
+                "country_name": "NL",
+                "organization_name": "Staat der Nederlanden",
+                "common_name": "Staat der Nederlanden Root CA - G2"
+            },
+            "_fingerprints": {
+                "MD5": "7C:A5:0F:F8:5B:9A:7D:6D:30:AE:54:5A:E3:42:A2:8A",
+                "SHA1": "59:AF:82:79:91:86:C7:B4:75:07:CB:CF:03:57:46:EB:04:DD:B7:16",
+                "SHA2_256": "66:8C:83:94:7D:A6:3B:72:4B:EC:E1:74:3C:31:A0:E6:AE:D0:DB:8E:C5:B3:1B:E3:77:BB:78:4F:91:B6:71:6F"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFyjCCA7KgAwIBAgIEAJiWjDANBgkqhkiG9w0BAQsFADBaMQswCQYDVQQGEwJO",
+            "TDEeMBwGA1UECgwVU3RhYXQgZGVyIE5lZGVybGFuZGVuMSswKQYDVQQDDCJTdGFh",
+            "dCBkZXIgTmVkZXJsYW5kZW4gUm9vdCBDQSAtIEcyMB4XDTA4MDMyNjExMTgxN1oX",
+            "DTIwMDMyNTExMDMxMFowWjELMAkGA1UEBhMCTkwxHjAcBgNVBAoMFVN0YWF0IGRl",
+            "ciBOZWRlcmxhbmRlbjErMCkGA1UEAwwiU3RhYXQgZGVyIE5lZGVybGFuZGVuIFJv",
+            "b3QgQ0EgLSBHMjCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAMVZ5291",
+            "qj5LnLW4rJ4L5PnZyqtdj7U5EILXr1HgO+EASGrP2uEGQxGZqhQlEq0i6ABtQ8Sp",
+            "uOUfiUtnvWFI7/3S4GCI5bkYYCjDdyutsDeqN95kWSpGV+RLufg3fNU254DBtvPU",
+            "Z5uW6M7XxgpT0GtJlvOjCwV3SPcl5XCsMBQgJeN/dVrlSPhOewMHBPqCYYdu8DvE",
+            "pMfQ9XQ+pV0aCPKbJdL2rAQmPlU6Yiile7Iwr/g3wtG61jj99O9JMDeZJiFIhQGp",
+            "5Rbn3JBV3w/oOM2ZNyFPXfUib2rFEhZgF1XyZWampzCROME4HYYEhLoaJXhena/M",
+            "UGDWE4dS7WMfbWV9whUYdMrhfmQpjHLYFhN9C0lK8SgbIHRrxT3dsKpICT0ugpTN",
+            "GmXZK4iambwYfp/ufWZ8Pr2UuIHOzZgweMFvZ9C+X+Bo7d7iscksWXiSqt8rYGPy",
+            "5V6548r6f1CGPqI0GAwJaCgRHOThuVw+R7oyPxjMW4T182t0xHJ04eOLoEq9jWYv",
+            "6q012iDTiIJh8BIitrzQ1aTsr1SIJSQ8p22xcik/Plemf1WvbibG/ufMQFxRRIEK",
+            "eN5KzlW/HdXZt1bv8Hb/C3m1r737qWmRRpdogBQ2HbN/uymYNqUg+oJgYjOk7Na6",
+            "B6duxc8UpufWkjTYgfX8HV2qXB72o007uPc5AgMBAAGjgZcwgZQwDwYDVR0TAQH/",
+            "BAUwAwEB/zBSBgNVHSAESzBJMEcGBFUdIAAwPzA9BggrBgEFBQcCARYxaHR0cDov",
+            "L3d3dy5wa2lvdmVyaGVpZC5ubC9wb2xpY2llcy9yb290LXBvbGljeS1HMjAOBgNV",
+            "HQ8BAf8EBAMCAQYwHQYDVR0OBBYEFJFoMocVHYnitfGsNig0jQt8YojrMA0GCSqG",
+            "SIb3DQEBCwUAA4ICAQCoQUpnKpKBglBu4dfYszk78wIVCVBR7y29JHuIhjv5tLyS",
+            "CZa59sCrI2AGeYwRTlHSeYAz+51IvuxBQ4EffkdAHOV6CMqqi3WtFMTC6GY8ggen",
+            "5ieCWxjmD27ZUD6KQhgpxrRW/FYQoAUXvQwjf/ST7ZwaUb7dRUG/kSS0H4zpX897",
+            "IZmflZ85OkYcbPnNe5yQzSipx6lVu6xiNGI1E0sUOlWDuYaNkqbG9AclVMwWVxJK",
+            "gnjIFNkXgiYtXSAfea7+1HAWFpWD2DU5/1JddRwWxRNVz0fMdWVSSt7wsKfkCpYL",
+            "+63C4iWEst3kvX5ZbJvw8NjnyvLplzh+ib7M+zkXYT9y2zqR2GUBGR2tUKRXCnxL",
+            "vJxxcypFURmFzI79R6d0lR2o0a9OF7FpJsKqeFdbxU2n5Z4FF5TKsl+gSRiNNOkm",
+            "bEgeqmiSBeGCc1qb3AdbCG19ndeNIdn8FCCqwkXfP+cAslHkwvgFuXkajDTznlvk",
+            "N1trSt8sV4pAWja63XVECDdCcAz+3F4hoKOKwJCcaNpQ5kUQR3i2TtJlycM33+FC",
+            "Y7BXN0Ute4qcvwXqZVUz9zkQxSgqIXobisQk+T8VyJoVIPVVYpbtbZNQvOSqeK3Z",
+            "ywplh6ZmwcSBo3c6WB4L7oOLnR7SUqTMHW+wmG2UMbX4cQrcufx9MmDm66+KAQ==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -13427,6 +15049,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -13476,6 +15102,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -13528,6 +15158,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -13579,6 +15213,196 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "STARTCOM_CERTIFICATION_AUTHORITY_1": {
+        "_meta": {
+            "_subject": {
+                "country_name": "IL",
+                "organization_name": "StartCom Ltd.",
+                "organizational_unit_name": "Secure Digital Certificate Signing",
+                "common_name": "StartCom Certification Authority"
+            },
+            "_fingerprints": {
+                "MD5": "22:4D:8F:8A:FC:F7:35:C2:BB:57:34:90:7B:8B:22:16",
+                "SHA1": "3E:2B:F7:F2:03:1B:96:F3:8C:E6:C4:D8:A8:5D:3E:2D:58:47:6A:0F",
+                "SHA2_256": "C7:66:A9:BE:F2:D4:07:1C:86:3A:31:AA:49:20:E8:13:B2:D1:98:60:8C:B7:B7:CF:E2:11:43:B8:36:DF:09:EA"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIHyTCCBbGgAwIBAgIBATANBgkqhkiG9w0BAQUFADB9MQswCQYDVQQGEwJJTDEW",
+            "MBQGA1UEChMNU3RhcnRDb20gTHRkLjErMCkGA1UECxMiU2VjdXJlIERpZ2l0YWwg",
+            "Q2VydGlmaWNhdGUgU2lnbmluZzEpMCcGA1UEAxMgU3RhcnRDb20gQ2VydGlmaWNh",
+            "dGlvbiBBdXRob3JpdHkwHhcNMDYwOTE3MTk0NjM2WhcNMzYwOTE3MTk0NjM2WjB9",
+            "MQswCQYDVQQGEwJJTDEWMBQGA1UEChMNU3RhcnRDb20gTHRkLjErMCkGA1UECxMi",
+            "U2VjdXJlIERpZ2l0YWwgQ2VydGlmaWNhdGUgU2lnbmluZzEpMCcGA1UEAxMgU3Rh",
+            "cnRDb20gQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwggIiMA0GCSqGSIb3DQEBAQUA",
+            "A4ICDwAwggIKAoICAQDBiNsJvGxGfHiflXu1M5DycmLWwTYgIiRezul38kMKogZk",
+            "pMyONvg45iPwbm2xPN1yo4UcodM9tDMr0y+v/uqwQVlntsQGfQqedIXWeUyAN3rf",
+            "OQVSWff0G0ZDpNKFhdLDcfN1YjS6LIp/Ho/u7TTQEceWzVI9ujPW3U3eCztKS5/C",
+            "Ji/6tRYccjV3yjxd5srhJosaNnZcAdt0FCX+7bWgiA/deMotHweXMAEtcnn6RtYT",
+            "Kqi5pquDSR3l8u/d5AGOGAqPY1MWhWKpDhk6zLVmpsJrdAfkK+F2PrRt2PZE4XNi",
+            "HzvEvqBTViVsUQn3qqvKv3b9bZvzndu/PWa8DFaqr5hIlTpL36dYUNk4dalb6kMM",
+            "Av+Z6+hsTXBbKWWc3apdzK8BMewM69KN6Oqce+Zu9ydmDBpI125C4z/eIT574Q1w",
+            "+2OqqGwaVLRcJXrJosmLFqa7LH4XXgVNWG4SHQHuEhANxjJ/GP/89PrNbpHoNkm+",
+            "Gkhpi8KWTRoSsmkXwQqQ1vp5Iki/untp+HDH+no32NgN0nZPV/+Qt+OR0t3vwmC3",
+            "Zzrd/qqc8NSLf3Iizsafl7b4r4qgEKjZ+xjGtrVcUjyJthkqcwEKDwOzEmDyei+B",
+            "26Nu/yYwl/WL3YlXtq09s68rxbd2AvCl1iuahhQqcvbjM4xdCUsT37uMdBNSSwID",
+            "AQABo4ICUjCCAk4wDAYDVR0TBAUwAwEB/zALBgNVHQ8EBAMCAa4wHQYDVR0OBBYE",
+            "FE4L7xqkQFulF2mHMMo0aEPQQa7yMGQGA1UdHwRdMFswLKAqoCiGJmh0dHA6Ly9j",
+            "ZXJ0LnN0YXJ0Y29tLm9yZy9zZnNjYS1jcmwuY3JsMCugKaAnhiVodHRwOi8vY3Js",
+            "LnN0YXJ0Y29tLm9yZy9zZnNjYS1jcmwuY3JsMIIBXQYDVR0gBIIBVDCCAVAwggFM",
+            "BgsrBgEEAYG1NwEBATCCATswLwYIKwYBBQUHAgEWI2h0dHA6Ly9jZXJ0LnN0YXJ0",
+            "Y29tLm9yZy9wb2xpY3kucGRmMDUGCCsGAQUFBwIBFilodHRwOi8vY2VydC5zdGFy",
+            "dGNvbS5vcmcvaW50ZXJtZWRpYXRlLnBkZjCB0AYIKwYBBQUHAgIwgcMwJxYgU3Rh",
+            "cnQgQ29tbWVyY2lhbCAoU3RhcnRDb20pIEx0ZC4wAwIBARqBl0xpbWl0ZWQgTGlh",
+            "YmlsaXR5LCByZWFkIHRoZSBzZWN0aW9uICpMZWdhbCBMaW1pdGF0aW9ucyogb2Yg",
+            "dGhlIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0aG9yaXR5IFBvbGljeSBhdmFp",
+            "bGFibGUgYXQgaHR0cDovL2NlcnQuc3RhcnRjb20ub3JnL3BvbGljeS5wZGYwEQYJ",
+            "YIZIAYb4QgEBBAQDAgAHMDgGCWCGSAGG+EIBDQQrFilTdGFydENvbSBGcmVlIFNT",
+            "TCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTANBgkqhkiG9w0BAQUFAAOCAgEAFmyZ",
+            "9GYMNPXQhV59CuzaEE44HF7fpiUFS5Eyweg78T3dRAlbB0mKKctmArexmvclmAk8",
+            "jhvh3TaHK0u7aNM5Zj2gJsfyOZEdUauCe37Vzlrk4gNXcGmXCPleWKYK34wGmkUW",
+            "FjgKXlf2Ysd6AgXmvB618p70qSmD+LIU424oh0TDkBreOKk8rENNZEXO3SipXPJz",
+            "ewT4F+irsfMuXGRuczE6Eri8sxHkfY+BUZo7jYn0TZNmezwD7dOaHZrzZVD1oNB1",
+            "ny+v8OqCQ5j4aZyJecRDjkZy42Q2Eq/3JR44iZB3fsNrarnDy0RLrHiQi+fHLB5L",
+            "EUTINFInzQpdn4XBidUaePKVEFMy3YCEZnXZtWgo+2EuvoSoOMCZEoalHmdkrQYu",
+            "L6lwhceWD3yJZfWOQ1QOq92lgDmUYMA0yZZwLKMS9R9Ie70cfmu3nZD0Ijuu+Pwq",
+            "yvqCUqDvr0tVk+vBtfAii6w0TiYiBKGHLHVKt+V9E9e4DGTANtLJL4YSjCMJwRuC",
+            "O3NJo2pXh5Tl1njFmUNj403gdy3hZZlyaQQaRwnmDwFWJPsfvw55qVguucQJAX6V",
+            "um0ABj6y6koQOdjQK/W/7HW/lwLFCRsI3FU34oH7N4RDYiDK51ZLZer+bMEkkySh",
+            "NOsF/5oirpt9P/FlUQqmMGqz9IgcgA38corog14=",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "STARTCOM_CERTIFICATION_AUTHORITY_45": {
+        "_meta": {
+            "_subject": {
+                "country_name": "IL",
+                "organization_name": "StartCom Ltd.",
+                "organizational_unit_name": "Secure Digital Certificate Signing",
+                "common_name": "StartCom Certification Authority"
+            },
+            "_fingerprints": {
+                "MD5": "C9:3B:0D:84:41:FC:A4:76:79:23:08:57:DE:10:19:16",
+                "SHA1": "A3:F1:33:3F:E2:42:BF:CF:C5:D1:4E:8F:39:42:98:40:68:10:D1:A0",
+                "SHA2_256": "E1:78:90:EE:09:A3:FB:F4:F4:8B:9C:41:4A:17:D6:37:B7:A5:06:47:E9:BC:75:23:22:72:7F:CC:17:42:A9:11"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIHhzCCBW+gAwIBAgIBLTANBgkqhkiG9w0BAQsFADB9MQswCQYDVQQGEwJJTDEW",
+            "MBQGA1UEChMNU3RhcnRDb20gTHRkLjErMCkGA1UECxMiU2VjdXJlIERpZ2l0YWwg",
+            "Q2VydGlmaWNhdGUgU2lnbmluZzEpMCcGA1UEAxMgU3RhcnRDb20gQ2VydGlmaWNh",
+            "dGlvbiBBdXRob3JpdHkwHhcNMDYwOTE3MTk0NjM3WhcNMzYwOTE3MTk0NjM2WjB9",
+            "MQswCQYDVQQGEwJJTDEWMBQGA1UEChMNU3RhcnRDb20gTHRkLjErMCkGA1UECxMi",
+            "U2VjdXJlIERpZ2l0YWwgQ2VydGlmaWNhdGUgU2lnbmluZzEpMCcGA1UEAxMgU3Rh",
+            "cnRDb20gQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwggIiMA0GCSqGSIb3DQEBAQUA",
+            "A4ICDwAwggIKAoICAQDBiNsJvGxGfHiflXu1M5DycmLWwTYgIiRezul38kMKogZk",
+            "pMyONvg45iPwbm2xPN1yo4UcodM9tDMr0y+v/uqwQVlntsQGfQqedIXWeUyAN3rf",
+            "OQVSWff0G0ZDpNKFhdLDcfN1YjS6LIp/Ho/u7TTQEceWzVI9ujPW3U3eCztKS5/C",
+            "Ji/6tRYccjV3yjxd5srhJosaNnZcAdt0FCX+7bWgiA/deMotHweXMAEtcnn6RtYT",
+            "Kqi5pquDSR3l8u/d5AGOGAqPY1MWhWKpDhk6zLVmpsJrdAfkK+F2PrRt2PZE4XNi",
+            "HzvEvqBTViVsUQn3qqvKv3b9bZvzndu/PWa8DFaqr5hIlTpL36dYUNk4dalb6kMM",
+            "Av+Z6+hsTXBbKWWc3apdzK8BMewM69KN6Oqce+Zu9ydmDBpI125C4z/eIT574Q1w",
+            "+2OqqGwaVLRcJXrJosmLFqa7LH4XXgVNWG4SHQHuEhANxjJ/GP/89PrNbpHoNkm+",
+            "Gkhpi8KWTRoSsmkXwQqQ1vp5Iki/untp+HDH+no32NgN0nZPV/+Qt+OR0t3vwmC3",
+            "Zzrd/qqc8NSLf3Iizsafl7b4r4qgEKjZ+xjGtrVcUjyJthkqcwEKDwOzEmDyei+B",
+            "26Nu/yYwl/WL3YlXtq09s68rxbd2AvCl1iuahhQqcvbjM4xdCUsT37uMdBNSSwID",
+            "AQABo4ICEDCCAgwwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYwHQYD",
+            "VR0OBBYEFE4L7xqkQFulF2mHMMo0aEPQQa7yMB8GA1UdIwQYMBaAFE4L7xqkQFul",
+            "F2mHMMo0aEPQQa7yMIIBWgYDVR0gBIIBUTCCAU0wggFJBgsrBgEEAYG1NwEBATCC",
+            "ATgwLgYIKwYBBQUHAgEWImh0dHA6Ly93d3cuc3RhcnRzc2wuY29tL3BvbGljeS5w",
+            "ZGYwNAYIKwYBBQUHAgEWKGh0dHA6Ly93d3cuc3RhcnRzc2wuY29tL2ludGVybWVk",
+            "aWF0ZS5wZGYwgc8GCCsGAQUFBwICMIHCMCcWIFN0YXJ0IENvbW1lcmNpYWwgKFN0",
+            "YXJ0Q29tKSBMdGQuMAMCAQEagZZMaW1pdGVkIExpYWJpbGl0eSwgcmVhZCB0aGUg",
+            "c2VjdGlvbiAqTGVnYWwgTGltaXRhdGlvbnMqIG9mIHRoZSBTdGFydENvbSBDZXJ0",
+            "aWZpY2F0aW9uIEF1dGhvcml0eSBQb2xpY3kgYXZhaWxhYmxlIGF0IGh0dHA6Ly93",
+            "d3cuc3RhcnRzc2wuY29tL3BvbGljeS5wZGYwEQYJYIZIAYb4QgEBBAQDAgAHMDgG",
+            "CWCGSAGG+EIBDQQrFilTdGFydENvbSBGcmVlIFNTTCBDZXJ0aWZpY2F0aW9uIEF1",
+            "dGhvcml0eTANBgkqhkiG9w0BAQsFAAOCAgEAjo/n3JR5fPGFf59Jb2vKXfuM/gTF",
+            "wWLRfUKKvFO3lANmMD+x5wqnUCBVJX92ehQN6wQOQOY+2IirByeDqXWmN3PH/UvS",
+            "Ta0XQMhGvjt/UfzDtgUx3M2FIk5xt/JxXrAaxrqTi3iSSoX4eA+D/i+tLPfkpLst",
+            "0OcNOrg+zvZ49q5HJMqjNTbOx8aHmNrs++myziebiMMEofYLWWivydsQD032ZGNc",
+            "pRJvkrKTlMeIFw6Ttn5ii5B/q06f/ON1FE8qMt9bDeD1e5MNq6HPh+GlBEXoPBKl",
+            "CcWw0bdT82AUuoVpaiF8H3VhFyAXe2w7QSlc4axa0c2Mm+tgHRns9+Ww2vl5GKVF",
+            "P0lDV9LdJNUso/2RjSe15esUBppMeyG7Oq0wBhjA2MFrLH9ZXF2RsXAiV+uKa0hK",
+            "1Q8p7MZAwC+ITGgBF3f0JBlPvfrhsiAhS90a2Cl9qrjeVOwhVYBsHvUwyKMQ5bLm",
+            "KhQxw4UtjJixhlpPiVktucf3HMiKf8CdBUrmQk9io20ppB+Fq9vlgcitKj1MXVuE",
+            "JnHEhV5xJMqlG2zYYdMa4FTbzrqpMrUi9nNBCV24F10OD5mQ1kfabwo6YigUZ4LZ",
+            "8dCAWZvLMdibD4x3TrVoivJs9iQOLWxwxXPR3hTQcY+203sC9uO41Alua551hDnm",
+            "fyWl8kgAwKQB2j8=",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "STARTCOM_CERTIFICATION_AUTHORITY_G2_59": {
+        "_meta": {
+            "_subject": {
+                "country_name": "IL",
+                "organization_name": "StartCom Ltd.",
+                "common_name": "StartCom Certification Authority G2"
+            },
+            "_fingerprints": {
+                "MD5": "78:4B:FB:9E:64:82:0A:D3:B8:4C:62:F3:64:F2:90:64",
+                "SHA1": "31:F1:FD:68:22:63:20:EE:C6:3B:3F:9D:EA:4A:3E:53:7C:7C:39:17",
+                "SHA2_256": "C7:BA:65:67:DE:93:A7:98:AE:1F:AA:79:1E:71:2D:37:8F:AE:1F:93:C4:39:7F:EA:44:1B:B7:CB:E6:FD:59:95"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFYzCCA0ugAwIBAgIBOzANBgkqhkiG9w0BAQsFADBTMQswCQYDVQQGEwJJTDEW",
+            "MBQGA1UEChMNU3RhcnRDb20gTHRkLjEsMCoGA1UEAxMjU3RhcnRDb20gQ2VydGlm",
+            "aWNhdGlvbiBBdXRob3JpdHkgRzIwHhcNMTAwMTAxMDEwMDAxWhcNMzkxMjMxMjM1",
+            "OTAxWjBTMQswCQYDVQQGEwJJTDEWMBQGA1UEChMNU3RhcnRDb20gTHRkLjEsMCoG",
+            "A1UEAxMjU3RhcnRDb20gQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkgRzIwggIiMA0G",
+            "CSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQC2iTZbB7cgNr2Cu+EWIAOVeq8Oo1XJ",
+            "JZlKxdBWQYeQTSFgpBSHO839sj60ZwNq7eEPS8CRhXBF4EKe3ikj1AENoBB5uNsD",
+            "vfOpL9HG4A/LnooUCri99lZi8cVytjIl2bLzvWXFDSxu1ZJvGIsAQRSCb0AgJnoo",
+            "D/Uefyf3lLE3PbfHkffiAez9lInhzG7TNtYKGXmu1zSCZf98Qru23QumNK9LYP5/",
+            "Q0kGi4xDuFby2X8hQxfqp0iVAXV16iulQ5XqFYSdCI0mblWbq9zSOdIxHWDirMxW",
+            "RST1HFSr7obdljKF+ExP6JV2tgXdNiNnvP8V4so75qbsO+wmETRIjfaAKxojAuuK",
+            "HDp2KntWFhxyKrOq42ClAJ8Em+JvHhRYW6Vsi1g8w7pOOlz34ZYrPu8HvKTlXcxN",
+            "nw3h3Kq74W4a7I/htkxNeXJdFzULHdfBR9qWJODQcqhaX2YtENwvKhOuJv4KHBnM",
+            "0D4LnMgJLvlblnpHnOl68wVQdJVznjAJ85eCXuaPOQgeWeU1FEIT/wCc976qUM/i",
+            "UUjXuG+v+E5+M5iSFGI6dWPPe/regjupuznixL0sAA7IF6wT700ljtizkC+p2il9",
+            "Ha90OrInwMEePnWjFqmveiJdnxMaz6eg6+OGCtP95paV1yPIN93EfKo2rJgaErHg",
+            "TuixO/XWb/Ew1wIDAQABo0IwQDAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQE",
+            "AwIBBjAdBgNVHQ4EFgQUS8W0QGutHLOlHGVuRjaJhwUMDrYwDQYJKoZIhvcNAQEL",
+            "BQADggIBAHNXPyzVlTJ+N9uWkusZXn5T50HsEbZH77Xe7XRcxfGOSeD8bpkTzZ+K",
+            "2s06Ctg6Wgk/XzTQLwPSZh0avZyQN8gMjgdalEVGKua+etqhqaRpEpKwfTbURIfX",
+            "UfEpY9Z1zRbkJ4kd+MIySP3bmdCPX1R0zKxnNBFi2QwKN4fRoxdIjtIXHfbX/dtl",
+            "6/2o1PXWT6RbdejF0mCy2wl+JYt7ulKSnj7oxXehPOBKc2thz4bcQ///If4jXSRK",
+            "9dNtD2IEBVeC2m6kMyV5Sy5UGYvMLD0w6dEG/+gyRr61M3Z3qAFdlsHB1b6uJcDJ",
+            "HgoJIIihDsnzb02CVAAgp9KP5DlUFy6NHrgbuxu9mk47EDTcnIhT76IxW1hPkWLI",
+            "wpqazRVdOKnWvvgTtZ8SafJQYqz7Fzf07rh1Z2AQ+4NQ+US1dZxAF7L+/XldblhY",
+            "XzD8AK6vM8EOTmy6p6ahfzLbOOCxchcKK5HsamMm7YnUeMx0HgX4a/6ManY5Ka5l",
+            "IxKVCCIcl85bBu4M4ru8H0ST9tg4RQUh7eStqxK2A6RCLi3ECToDZ2mEmuFZkIoo",
+            "hdVddLHRDiBYmxOlsGOm7XtH/UVVMKTumtTm4ofvmMkyghEpIrwACjFeLQ/Ajulr",
+            "so8uBtjRkcfGEvRM/TAXw8HaOFvjqermobp573PYtlNXLfbQ4ddI",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -13638,6 +15462,177 @@
             }
         ]
     },
+    "SWISSCOM_ROOT_CA_1_122348795730808398873664200247279986742": {
+        "_meta": {
+            "_subject": {
+                "country_name": "ch",
+                "organization_name": "Swisscom",
+                "organizational_unit_name": "Digital Certificate Services",
+                "common_name": "Swisscom Root CA 1"
+            },
+            "_fingerprints": {
+                "MD5": "F8:38:7C:77:88:DF:2C:16:68:2E:C2:E2:52:4B:B8:F9",
+                "SHA1": "5F:3A:FC:0A:8B:64:F6:86:67:34:74:DF:7E:A9:A2:FE:F9:FA:7A:51",
+                "SHA2_256": "21:DB:20:12:36:60:BB:2E:D4:18:20:5D:A1:1E:E7:A8:5A:65:E2:BC:6E:55:B5:AF:7E:78:99:C8:A2:66:D9:2E"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIF2TCCA8GgAwIBAgIQXAuFXAvnWUHfV8w/f52oNjANBgkqhkiG9w0BAQUFADBk",
+            "MQswCQYDVQQGEwJjaDERMA8GA1UEChMIU3dpc3Njb20xJTAjBgNVBAsTHERpZ2l0",
+            "YWwgQ2VydGlmaWNhdGUgU2VydmljZXMxGzAZBgNVBAMTElN3aXNzY29tIFJvb3Qg",
+            "Q0EgMTAeFw0wNTA4MTgxMjA2MjBaFw0yNTA4MTgyMjA2MjBaMGQxCzAJBgNVBAYT",
+            "AmNoMREwDwYDVQQKEwhTd2lzc2NvbTElMCMGA1UECxMcRGlnaXRhbCBDZXJ0aWZp",
+            "Y2F0ZSBTZXJ2aWNlczEbMBkGA1UEAxMSU3dpc3Njb20gUm9vdCBDQSAxMIICIjAN",
+            "BgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA0LmwqAzZuz8h+BvVM5OAFmUgdbI9",
+            "m2BtRsiMMW8Xw/qabFbtPMWRV8PNq5ZJkCoZSx6jbVfd8StiKHVFXqrWW/oLJdih",
+            "FvkcxC7mlSpnzNApbjyFNDhhSbEAn9Y6cV9Nbc5fuankiX9qUvrKm/LcqfmdmUc/",
+            "TilftKaNXXsLmREDA/7n29uj/x2lzZAeAR81sH8A25Bvxn570e56eqeqDFdvpG3F",
+            "EzuwpdntMhy0XmeLVNxzh+XTF3xmUHJd1BpYwdnP2IkCb6dJtDZd0KTeByy2dbco",
+            "kdaXvij1mB7qWybJvbCXc9qukSbraMH5ORXWZ0sKbU/Lz7DkQnGMU3nn7uHbHaBu",
+            "HYwadzVcFh4rUx80i9Fs/PJnB3r1re3WmquhsUvhzDdf/X/NTa64H5xD+SpYVUNF",
+            "vJbNcA78yeNmuk6NO4HLFWR7uZToXTNShXEuT46iBhFRyePLoW4xCGQMwtI89Tbo",
+            "19AOeCMgkckkKmUpWyL3Ic6DXqTz3kvTaI9GdVyDCW4pa8RwjPWd1yAv/0bSKzjC",
+            "L3UcPX7ape8eYIVpQtPM+GP+HkM5haa2Y0EQs3MevNP6yn0WR+Kn1dCjigoIlmJW",
+            "bjTb2QK5MHXjBNLnj8KwEUAKrNVxAmKLMb7dxiNYMUJDLXT5xp6mig/p/r+D5kNX",
+            "JLrvRjSq1xIBOO0CAwEAAaOBhjCBgzAOBgNVHQ8BAf8EBAMCAYYwHQYDVR0hBBYw",
+            "FDASBgdghXQBUwABBgdghXQBUwABMBIGA1UdEwEB/wQIMAYBAf8CAQcwHwYDVR0j",
+            "BBgwFoAUAyUv3m+CATpcLNwroWm1Z9SM0/0wHQYDVR0OBBYEFAMlL95vggE6XCzc",
+            "K6FptWfUjNP9MA0GCSqGSIb3DQEBBQUAA4ICAQA1EMvspgQNDQ/NwNurqPKIlwzf",
+            "ky9NfEBWMXrrpA9gzXrzvsMnjgM+pN0S734edAY8PzHyHHuRMSG08NBsl9Tpl7Ik",
+            "Vh5WwzW9iAUPWxAaZOHHgjD5Mq2eUCzneAXQMbFamIp1TpBcahQq4FJHgmDmHtqB",
+            "sfsUC1rxn9KVuj7QG9YVHaO+htXbD8BJZLsuUBlL0iT43R4HVtA4oJVwIHaM190e",
+            "3p9xxCPvgxNcoyQVTSlAPGrEqdi3pkSlDfTgnXceQHAm/NrZNuR55LU/vJtlvrsR",
+            "ls/bxig5OgjOR1tTWsWZ/l2p3e9M1MalrQLmjAcSHm8D0W+go/MpvRLHUKKwf4ip",
+            "mXeascClOS5cfGniLLDqN2qk4Vrh9VDlg++luyqI54zb/W1elxmofmZ1a3Hqv7HH",
+            "b6D0jqTsNFFbjCYDcKF31QESVwA12yPeDooomf2xEG9L/zgtYE4snOtnta1J7ksf",
+            "rK/7DZBaZmBwXarNeNQk7shBoJMBkpxqnvy5JMWzFYJ+vq6VK+uxwNrjAWALXmms",
+            "hFZhvnEX/h0TD/7Gh0Xp/jKgGg0TpJRVcaUWi7rKibCyx/yP2FS1k2Kdzs9Z+z0Y",
+            "zirLNRWCXf9UIltxUvu3yf5gmwBBZPCqKuy2QkPOiWaByIufOVQDJdMWNY6E0F/6",
+            "MBr1mmz0DlP5OlvRHA==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "SWISSCOM_ROOT_CA_2_40698052477090394928831521023204026294": {
+        "_meta": {
+            "_subject": {
+                "country_name": "ch",
+                "organization_name": "Swisscom",
+                "organizational_unit_name": "Digital Certificate Services",
+                "common_name": "Swisscom Root CA 2"
+            },
+            "_fingerprints": {
+                "MD5": "5B:04:69:EC:A5:83:94:63:18:A7:86:D0:E4:F2:6E:19",
+                "SHA1": "77:47:4F:C6:30:E4:0F:4C:47:64:3F:84:BA:B8:C6:95:4A:8A:41:EC",
+                "SHA2_256": "F0:9B:12:2C:71:14:F4:A0:9B:D4:EA:4F:4A:99:D5:58:B4:6E:4C:25:CD:81:14:0D:29:C0:56:13:91:4C:38:41"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIF2TCCA8GgAwIBAgIQHp4o6Ejy5e/DfEoeWhhntjANBgkqhkiG9w0BAQsFADBk",
+            "MQswCQYDVQQGEwJjaDERMA8GA1UEChMIU3dpc3Njb20xJTAjBgNVBAsTHERpZ2l0",
+            "YWwgQ2VydGlmaWNhdGUgU2VydmljZXMxGzAZBgNVBAMTElN3aXNzY29tIFJvb3Qg",
+            "Q0EgMjAeFw0xMTA2MjQwODM4MTRaFw0zMTA2MjUwNzM4MTRaMGQxCzAJBgNVBAYT",
+            "AmNoMREwDwYDVQQKEwhTd2lzc2NvbTElMCMGA1UECxMcRGlnaXRhbCBDZXJ0aWZp",
+            "Y2F0ZSBTZXJ2aWNlczEbMBkGA1UEAxMSU3dpc3Njb20gUm9vdCBDQSAyMIICIjAN",
+            "BgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAlUJOhJ1R5tMJ6HJaI2nbeHCOFvEr",
+            "jw0DzpPMLgAIe6szjPTpQOYXTKueuEcUMncy3SgM3hhLX3af+Dk7/E6J2HzFZ++r",
+            "0rk0X2s682Q2zsKwzxNoysjL67XiPS4h3+os1OD5cJZM/2pYmLcX5BtS5X4HAB1f",
+            "2uY+lQS3aYg5oUFgJWFLlTloYhyxCwWJwDaCFCE/rtuh/bxvHGCGtlOUSbkrRsVP",
+            "ACu/obvLP+DHVxxX6NZp+MEkUp2IVd3Chy50I9AU/SpHWrumnf2U5NGKpV+GY3aF",
+            "y6//SSj8gO1MedK75MDvAe5QQQg1I3ArqRa0jG6F6bYRzzHdUyYb3y1aSgJA/MTA",
+            "tukxGggo5WDDH8SQjhBiYEQN7Aq+VRhxLKX0srwVYv8c474d2h5Xszx+zYIdkeNL",
+            "6yxSNLCK/RJOlrDrcH+eOfdmQrGrrFLadkBXeyq96G4DsguAhYidDMfCd7Camlf0",
+            "uPoTXGiTOmekl9AbmbeGMktg2M7v0Ax/lZ9vh0+Hio5fCHyqW/xavqGRn1V9TrAL",
+            "acywlKinh/LTSlDcX3KwFnUey7QYYpqwpzmqm59m2I2mbJYV4+by+PGDYmy7Velh",
+            "k6M99bFXi08jsJvllGov34zflVEpYKELKeRcVVi3qPyZ7iVNTA6z00yPhOgpD/0Q",
+            "VAKFyPnlw4vP5w8CAwEAAaOBhjCBgzAOBgNVHQ8BAf8EBAMCAYYwHQYDVR0hBBYw",
+            "FDASBgdghXQBUwIBBgdghXQBUwIBMBIGA1UdEwEB/wQIMAYBAf8CAQcwHQYDVR0O",
+            "BBYEFE0mICKJS9PVpAqhb97iEoHF8TwuMB8GA1UdIwQYMBaAFE0mICKJS9PVpAqh",
+            "b97iEoHF8TwuMA0GCSqGSIb3DQEBCwUAA4ICAQAyCrKkG8t9voJXiblqf/P0wS4R",
+            "fbgZPnm3qKhyN2abGu2sEzsOv2LwnN+ee6FTSA5BesogpxcbtnjsQJHzQq0Qw1zv",
+            "/2BZf82Fo4s9SBwlAjxnffUy6S8w5X2lejjQ82YqZh6NM4OKb3xuqFp1mrjX2lhI",
+            "REeoTPpMSQpKwhI3qEAMw8jh0FcNlzKVxzqfl9NX+Ave5XLzo9v/tdhZsnPdTSpx",
+            "srpJ9csc1fV5yJmz/MFMdOO0vSk3FQQoHt5FRnDsr7p4DooqzgB53MBfGWcsa0vv",
+            "aGgLQ+OswWIJ76bdZWGgr4RVSJFSHMYlkSrQwSIjYVmvRRGFHQEkNI/Ps/8XciAT",
+            "woCqISxxOQ7Qj1zB09GOInJGTB2Wrk9xseEFKZZZ9LuedT3PDTcNYtsmjGOpI99n",
+            "Bjx8Oto0QuFmtEYE3saWmA9LSHokMnWRn6z3aOkquVVlzl1h0ydw2Df+n7mvoC5W",
+            "t6NlUe07qxS/TFED6F+KBZvuim6c779o+sjaC+NCydAXFJy3SuCvkychVSa1ZC+N",
+            "8f+mQAWFBVzKBxlcCxMoTFh/wqXvRdpg065lYZ1Tg3TCrvJcwhbtkj6EPnNgiLx2",
+            "9CzP0H1907he0ZESEOnN3col49XtmS++dYFLJPlFRpTJKSFTnCZFqhMX5OfNeOI5",
+            "wSsSnqaeG8XmDtkx2Q==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "SWISSCOM_ROOT_EV_CA_2_322973295377129385374608406479535262296": {
+        "_meta": {
+            "_subject": {
+                "country_name": "ch",
+                "organization_name": "Swisscom",
+                "organizational_unit_name": "Digital Certificate Services",
+                "common_name": "Swisscom Root EV CA 2"
+            },
+            "_fingerprints": {
+                "MD5": "7B:30:34:9F:DD:0A:4B:6B:35:CA:31:51:28:5D:AE:EC",
+                "SHA1": "E7:A1:90:29:D3:D5:52:DC:0D:0F:C6:92:D3:EA:88:0D:15:2E:1A:6B",
+                "SHA2_256": "D9:5F:EA:3C:A4:EE:DC:E7:4C:D7:6E:75:FC:6D:1F:F6:2C:44:1F:0F:A8:BC:77:F0:34:B1:9E:5D:B2:58:01:5D"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIF4DCCA8igAwIBAgIRAPL6ZOJ0Y9ON/RAdBB92ylgwDQYJKoZIhvcNAQELBQAw",
+            "ZzELMAkGA1UEBhMCY2gxETAPBgNVBAoTCFN3aXNzY29tMSUwIwYDVQQLExxEaWdp",
+            "dGFsIENlcnRpZmljYXRlIFNlcnZpY2VzMR4wHAYDVQQDExVTd2lzc2NvbSBSb290",
+            "IEVWIENBIDIwHhcNMTEwNjI0MDk0NTA4WhcNMzEwNjI1MDg0NTA4WjBnMQswCQYD",
+            "VQQGEwJjaDERMA8GA1UEChMIU3dpc3Njb20xJTAjBgNVBAsTHERpZ2l0YWwgQ2Vy",
+            "dGlmaWNhdGUgU2VydmljZXMxHjAcBgNVBAMTFVN3aXNzY29tIFJvb3QgRVYgQ0Eg",
+            "MjCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAMT3HS9X6lds93BdY7Bx",
+            "UglgRCgzo3pOCvrY6myLURYaVa5UJsTMRQdBTxB5f3HSek4/OE6zAMaVylvNwSqD",
+            "1ycfMQ4jFrclyxy0uYAyXhqdk/HoPGAsp15XGVhRXrwsVgu42O+LgrQ8uMIkqBPH",
+            "oCE2G3pXKSinLr9xJZDzRINpUKTk4RtiGZQJo/PDvO/0vezbE53PnUgJUmfANykR",
+            "HvvSEaeFGHR55E+FFOtSN+KxRdjMDUN/rhPSays/p8LiqG12W0OfvrSdsyaGOx9/",
+            "5fLoZigWJdBLlzin5M8J0TbDC77aO0RYjb7xnglrPvMyxyuHxuxenPaHZa0zKcQv",
+            "idm5y8kDnftslFGXEBuGCxobP/YCfnvUxVFkKJ3106yDgYjTdLRZncHrYTNaRdHL",
+            "OdAGalNgHa/2+2m8atwBz735j9m9W8E6X47aD0upm50qKGsaCnw8qyIL5XctcfaC",
+            "NYGu+HuB5ur+rPQam3Rc6I8k9l2dRsQs0h4rIWqDJ2dVSqTjyDKXZpBy2uPUZC5f",
+            "46Fq9mDU5zXNysRojddxyNMkM3OxbPlq4SjbX8Y96L5V5jcb7STZDxmPX2MYWFCB",
+            "UWVv8p9+agTnNCRxunZLWB4ZvRVgRaoMEkABnRDixzgHcgplwLa7JSnaFp6LNYth",
+            "7eVxV4O1PHGf40+/fh6Bn0GXAgMBAAGjgYYwgYMwDgYDVR0PAQH/BAQDAgGGMB0G",
+            "A1UdIQQWMBQwEgYHYIV0AVMCAgYHYIV0AVMCAjASBgNVHRMBAf8ECDAGAQH/AgED",
+            "MB0GA1UdDgQWBBRF2aWBbj2ITY1x0kbBbkUe88SAnTAfBgNVHSMEGDAWgBRF2aWB",
+            "bj2ITY1x0kbBbkUe88SAnTANBgkqhkiG9w0BAQsFAAOCAgEAlDpzBp9SSzBc1P6x",
+            "XCX5145v9Ydkn+0UjrgEjihLj6p7jjm02Vj2e6E1CqGdivdj5eu9OYLU43otb98T",
+            "PLr+flaYC/NUn81ETm484T4VvwYmneTwkLbUwp4wLh/vx3rEUMfqe9pQy3omywC0",
+            "Wqu1kx+AiYQElY2NfwmTv9SoqORjbdlk5LgpWgi/UOGED1V7XwgiG/W9mR4U9s70",
+            "WBCCswo9GcG/W6uqmdjyMb3lOGbcWAXH7WMaLgqXfIeTK7KK4/HsGOV1timH59yL",
+            "Gn602MnTihdsfSlEvoqq9X46Lmgxk7lq2prg2+kupYTNHAq4Sgj5nPFhJpiTt3tm",
+            "7JFe3VE/23MPrQRYCd0EApUKPtN236YQHoA96M2kZNEzx5LH4k5E4wnJTsJdhw4S",
+            "nr8PyQUQ3nqjsTzyP6WqJ3mtMX0f/fwZacXduT98zca0wjAefm6S139hdlqP65VN",
+            "vBFuIXxZN5nQBrz5Bm0yFqXZaajh3DyAHmBR3NdUIR7KYndP+tiPsys6DXhyyWhB",
+            "WkdKwqPrGtcKqzwyVcgKEZzfdNbwQBUdyLmPtTbFr/giuMod89a2GQ+fYWVq6nTI",
+            "fI/DT11lgh/ZDYnadXL77/FHZxOzyNEZiCcmmpl5fx7kLD977vHeTYuWl8PVP3wb",
+            "I+2ksx0WckNLIOFZfsLorSa/ovc=",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
     "SWISSSIGN_GOLD_CA_G2_13492815561806991280": {
         "_meta": {
             "_subject": {
@@ -13693,6 +15688,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -13755,6 +15754,10 @@
                         "date": "2006-10-25T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -13813,6 +15816,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -13933,6 +15940,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -13979,6 +15990,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -14139,6 +16154,10 @@
                         "date": "2011-12-06T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -14193,6 +16212,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -14369,6 +16392,10 @@
                         "date": "2006-11-17T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -14471,6 +16498,10 @@
                         "date": "2008-04-02T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -14586,6 +16617,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -14652,6 +16687,10 @@
                         "date": "2016-02-04T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -14718,6 +16757,10 @@
                         "date": "2016-02-04T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -14795,6 +16838,10 @@
                         "date": "2016-02-04T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -14972,6 +17019,10 @@
                         "date": "2003-12-23T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -15184,6 +17235,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -15362,6 +17417,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -15409,6 +17468,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -15460,6 +17523,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -15509,6 +17576,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -15668,6 +17739,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -15730,6 +17805,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -15780,6 +17859,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -15829,6 +17912,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -15886,6 +17973,57 @@
                         "date": "1999-10-01T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
+    "VERISIGN_CLASS_3_PUBLIC_PRIMARY_CERTIFICATION_AUTHORITY_G4_63143484348153506665311985501458640051": {
+        "_meta": {
+            "_subject": {
+                "country_name": "US",
+                "organization_name": "VeriSign, Inc.",
+                "organizational_unit_name": [
+                    "VeriSign Trust Network",
+                    "(c) 2007 VeriSign, Inc. - For authorized use only"
+                ],
+                "common_name": "VeriSign Class 3 Public Primary Certification Authority - G4"
+            },
+            "_fingerprints": {
+                "MD5": "3A:52:E1:E7:FD:6F:3A:E3:6F:F3:6F:99:1B:F9:22:41",
+                "SHA1": "22:D5:D8:DF:8F:02:31:D1:8D:F7:9D:B7:CF:8A:2D:64:C9:3F:6C:3A",
+                "SHA2_256": "69:DD:D7:EA:90:BB:57:C9:3E:13:5D:C8:5E:A6:FC:D5:48:0B:60:32:39:BD:C4:54:FC:75:8B:2A:26:CF:7F:79"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIDhDCCAwqgAwIBAgIQL4D+I4wOIg9IZxIokYesszAKBggqhkjOPQQDAzCByjEL",
+            "MAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZW",
+            "ZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwNyBWZXJpU2ln",
+            "biwgSW5jLiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MUUwQwYDVQQDEzxWZXJp",
+            "U2lnbiBDbGFzcyAzIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9y",
+            "aXR5IC0gRzQwHhcNMDcxMTA1MDAwMDAwWhcNMzgwMTE4MjM1OTU5WjCByjELMAkG",
+            "A1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZWZXJp",
+            "U2lnbiBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwNyBWZXJpU2lnbiwg",
+            "SW5jLiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MUUwQwYDVQQDEzxWZXJpU2ln",
+            "biBDbGFzcyAzIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5",
+            "IC0gRzQwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAASnVnp8Utpkmw4tXNherJI9/gHm",
+            "GUo9FANL+mAnINmDiWn6VMaaGF5VKmTeBvaNSjutEDxlPZCIBIngMGGzrl0Bp3ve",
+            "fLK+ymVhAIau2o970ImtTR1ZmkGxvEeA3J5iw/mjgbIwga8wDwYDVR0TAQH/BAUw",
+            "AwEB/zAOBgNVHQ8BAf8EBAMCAQYwbQYIKwYBBQUHAQwEYTBfoV2gWzBZMFcwVRYJ",
+            "aW1hZ2UvZ2lmMCEwHzAHBgUrDgMCGgQUj+XTGoasjY5rw8+AatRIGCx7GS4wJRYj",
+            "aHR0cDovL2xvZ28udmVyaXNpZ24uY29tL3ZzbG9nby5naWYwHQYDVR0OBBYEFLMW",
+            "kf3upm7ktS5Jj4d4gYDs5bG1MAoGCCqGSM49BAMDA2gAMGUCMGYhDBgmYFo4e1ZC",
+            "4Kf8NoRRkSAsdk1DPcQdhCPQrNZ8NQbOzWm9kA3bbEhCHQ6qQgIxAJw9SDkjOVga",
+            "FRJZap7v1VmyHVIsmXHNxynfGyphe3HR3vPA5Q06Sqotp9iGKt0uEA==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -15946,6 +18084,10 @@
                         "date": "2006-11-08T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -16000,6 +18142,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "APPLE",
+                "constraints": []
             }
         ]
     },
@@ -16047,6 +18193,51 @@
             }
         ]
     },
+    "VISA_ECOMMERCE_ROOT_25952180776285836048024890241505565794": {
+        "_meta": {
+            "_subject": {
+                "country_name": "US",
+                "organization_name": "VISA",
+                "organizational_unit_name": "Visa International Service Association",
+                "common_name": "Visa eCommerce Root"
+            },
+            "_fingerprints": {
+                "MD5": "FC:11:B8:D8:08:93:30:00:6D:23:F9:7E:EB:52:1E:02",
+                "SHA1": "70:17:9B:86:8C:00:A4:FA:60:91:52:22:3F:9F:3E:32:BD:E0:05:62",
+                "SHA2_256": "69:FA:C9:BD:55:FB:0A:C7:8D:53:BB:EE:5C:F1:D5:97:98:9F:D0:AA:AB:20:A2:51:51:BD:F1:73:3E:E7:D1:22"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIDojCCAoqgAwIBAgIQE4Y1TR0/BvLB+WUF1ZAcYjANBgkqhkiG9w0BAQUFADBr",
+            "MQswCQYDVQQGEwJVUzENMAsGA1UEChMEVklTQTEvMC0GA1UECxMmVmlzYSBJbnRl",
+            "cm5hdGlvbmFsIFNlcnZpY2UgQXNzb2NpYXRpb24xHDAaBgNVBAMTE1Zpc2EgZUNv",
+            "bW1lcmNlIFJvb3QwHhcNMDIwNjI2MDIxODM2WhcNMjIwNjI0MDAxNjEyWjBrMQsw",
+            "CQYDVQQGEwJVUzENMAsGA1UEChMEVklTQTEvMC0GA1UECxMmVmlzYSBJbnRlcm5h",
+            "dGlvbmFsIFNlcnZpY2UgQXNzb2NpYXRpb24xHDAaBgNVBAMTE1Zpc2EgZUNvbW1l",
+            "cmNlIFJvb3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCvV95WHm6h",
+            "2mCxlCfLF9sHP4CFT8icttD0b0/Pmdjh28JIXDqsOTPHH2qLJj0rNfVIsZHBAk4E",
+            "lpF7sDPwsRROEW+1QK8bRaVK7362rPKgH1g/EkZgPI2h4H3PVz4zHvtH8aoVlwdV",
+            "ZqW1LS7YgFmypw23RuwhY/81q6UCzyr0TP579ZRdhE2o8mCP2w4lPJ9zcc+U30rq",
+            "299yOIzzlr3xF7zSujtFWsan9sYXiwGd/BmoKoMWuDpI/k4+oKsGGelT84ATB+0t",
+            "vz8KPFUgOSwsAGl0lUq8ILKpeeUYiZGo3BxN77t+Nwtd/jmliFKMAGzsGHxBvfaL",
+            "dXe6YJ2E5/4tAgMBAAGjQjBAMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQD",
+            "AgEGMB0GA1UdDgQWBBQVOIMPPyw/cDMezUb+B4wg4NfDtzANBgkqhkiG9w0BAQUF",
+            "AAOCAQEAX/FBfXxcCLkr4NWSR/pnXKUTwwMhmytMiUbPWU3J/qVAtmPN3XEolWcR",
+            "zCSs00Rsca4BIGsDoo8Ytyk6feUWYFN4PMCvFYP3j1IzJL1kk5fui/fbGKhtcbP3",
+            "LBfQdCVp9/5rPJS+TUtBjE7ic9DjkCJzQ83z7+pzzkWKsKZJ/0x9nXGIxHYdkFsd",
+            "7v3M9+79YKWxehZx0RbQfBI8bGmX265fOZpwLwU8GUYEmSA20GBuYQa7FkKMcPcw",
+            "++DbZqMAAb3mLNqRX6BGi01qnD093QVG/na/oAo85ADmJ7f/hC3euiInlhBx6yLt",
+            "398znM/jra6O1I7mT1GvFpLgXPYHDw==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "constraints": []
+            }
+        ]
+    },
     "VISA_INFORMATION_DELIVERY_ROOT_CA_121415851495250424066466305397098862306": {
         "_meta": {
             "_subject": {
@@ -16090,6 +18281,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -16235,6 +18430,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -16437,6 +18636,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
