@@ -47,6 +47,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -264,6 +268,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -325,6 +333,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -452,6 +464,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -497,6 +513,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -605,6 +625,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -652,6 +676,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -716,6 +744,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -756,6 +788,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -806,6 +842,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -870,6 +910,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -909,6 +953,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -952,6 +1000,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -1216,6 +1268,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
+                "constraints": []
             }
         ]
     },
@@ -1458,6 +1514,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -1876,6 +1936,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -1933,6 +1997,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -2119,6 +2187,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
             {
                 "owner": "MICROSOFT",
                 "constraints": []
@@ -2314,6 +2386,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -2372,6 +2448,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -2811,6 +2891,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -2986,6 +3070,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
+                "constraints": []
             }
         ]
     },
@@ -3039,6 +3127,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
+                "constraints": []
             }
         ]
     },
@@ -3082,6 +3174,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -3149,6 +3245,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -3401,6 +3501,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -3459,6 +3563,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -3549,6 +3657,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -3595,6 +3707,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -3663,6 +3779,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -3727,6 +3847,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -3782,6 +3906,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -4298,6 +4426,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             }
@@ -4389,6 +4521,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -4452,6 +4588,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -4789,6 +4929,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -4842,6 +4986,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -4885,6 +5033,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -5155,6 +5307,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -5208,6 +5364,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -5251,6 +5411,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -5305,6 +5469,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -5494,6 +5662,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -5548,6 +5720,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -5607,6 +5783,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -5862,6 +6042,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
+                "constraints": []
             }
         ]
     },
@@ -5901,6 +6085,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             }
         ]
@@ -6001,6 +6189,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -6053,6 +6245,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -6330,6 +6526,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -6369,6 +6569,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -6421,6 +6625,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -6525,6 +6733,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -6696,6 +6908,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -6757,6 +6973,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -6806,6 +7026,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -6865,6 +7089,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -6938,6 +7166,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -6998,6 +7230,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -7210,6 +7446,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -7599,6 +7839,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -7922,6 +8166,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -8001,6 +8249,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
+                "constraints": []
             }
         ]
     },
@@ -8036,6 +8288,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -8131,6 +8387,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -8456,6 +8716,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -8496,6 +8760,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -8557,6 +8825,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -8902,6 +9174,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -9275,6 +9551,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -9327,6 +9607,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -9490,6 +9774,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
+                "constraints": []
             }
         ]
     },
@@ -9600,6 +9888,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
+                "constraints": []
             }
         ]
     },
@@ -9674,6 +9966,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
+                "constraints": []
             }
         ]
     },
@@ -9747,6 +10043,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             }
         ]
@@ -10015,6 +10315,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -10074,6 +10378,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -10115,6 +10423,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -10235,6 +10547,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -10296,6 +10612,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -10339,6 +10659,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -10466,6 +10790,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -10580,6 +10908,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -10638,6 +10970,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -10702,6 +11038,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -10743,6 +11083,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -10869,6 +11213,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -11342,6 +11690,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -11427,6 +11779,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -11707,6 +12063,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -11885,6 +12245,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -11934,6 +12298,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -12557,6 +12925,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -12600,6 +12972,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -12926,6 +13302,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -12989,6 +13369,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -13047,6 +13431,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -13118,6 +13506,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -13176,6 +13568,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -14022,6 +14418,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -14203,6 +14603,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -14255,6 +14659,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -14296,6 +14704,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -14388,6 +14800,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -14436,6 +14852,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -14498,6 +14918,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -14696,6 +15120,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -14762,6 +15190,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -14807,6 +15239,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -14873,6 +15309,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -15101,6 +15541,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -15153,6 +15597,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -15209,6 +15657,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -15687,6 +16139,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -15812,6 +16268,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -16103,6 +16563,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -16211,6 +16675,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -16270,6 +16738,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -17083,6 +17555,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -17123,6 +17599,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -17168,6 +17648,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -17231,6 +17715,10 @@
                         "date": null
                     }
                 ]
+            },
+            {
+                "owner": "GOOGLE",
+                "constraints": []
             },
             {
                 "owner": "MICROSOFT",
@@ -17357,6 +17845,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -17415,6 +17907,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -17464,6 +17960,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -17521,6 +18021,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -17572,6 +18076,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -17636,6 +18144,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -17693,6 +18205,10 @@
                 "constraints": []
             },
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -17734,6 +18250,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -17800,6 +18320,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {
@@ -18532,6 +19056,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
+                "constraints": []
             }
         ]
     },
@@ -18585,6 +19113,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
+                "constraints": []
             }
         ]
     },
@@ -18632,6 +19164,10 @@
         "trust_stores": [
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "GOOGLE",
                 "constraints": []
             },
             {

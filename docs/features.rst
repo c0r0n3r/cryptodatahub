@@ -42,6 +42,7 @@ Stores
 -  Trusted root CA certificate trust stores
 
    -  `Apple <https://en.wikipedia.org/wiki/Apple_Inc.>`__
+   -  `Google <https://en.wikipedia.org/wiki/Google>`__
    -  `Microsoft <https://en.wikipedia.org/wiki/Microsoft>`__
    -  `Mozilla <https://en.wikipedia.org/wiki/Mozilla>`__
 

@@ -284,6 +284,7 @@ class TestRootCertificate(unittest.TestCase):
             (Entity.MOZILLA, 141),
             (Entity.MICROSOFT, 299),
             (Entity.APPLE, 172),
+            (Entity.GOOGLE, 134),
         ])
 
         for owner, certificate_count in root_certificate_count_by_owner.items():
