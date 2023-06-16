@@ -41,6 +41,7 @@ Stores
 
 -  Trusted root CA certificate trust stores
 
+   -  `Microsoft <https://en.wikipedia.org/wiki/Microsoft>`__
    -  `Mozilla <https://en.wikipedia.org/wiki/Mozilla>`__
 
 -  `Certificate Transaprency <https://certificate.transparency.dev>`__ (CT)

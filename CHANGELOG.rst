@@ -8,6 +8,7 @@ Changelog
 
    -  add trusted root CA certificates from notable stores (#6)
 
+      -  `Microsoft <https://en.wikipedia.org/wiki/Microsoft>`__
       -  `Mozilla <https://en.wikipedia.org/wiki/Mozilla>`__
 
 0.9.1 - 2023-06-22

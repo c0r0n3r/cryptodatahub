@@ -281,7 +281,8 @@ class TestRootCertificateParamCertificateConverter(unittest.TestCase):
 class TestRootCertificate(unittest.TestCase):
     def test_get_items_by_trust_owner(self):
         root_certificate_count_by_owner = collections.OrderedDict([
-            (Entity.MOZILLA, 142),
+            (Entity.MOZILLA, 141),
+            (Entity.MICROSOFT, 299),
         ])
 
         for owner, certificate_count in root_certificate_count_by_owner.items():
