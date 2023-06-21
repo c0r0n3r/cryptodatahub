@@ -87,7 +87,8 @@ coveralls:
   stage: deploy
   script:
     - pip install coveralls
-    - coverage run --source=cryptodatahub setup.py test
+    - pip install -r requirements.txt
+    - coverage run -m unittest -v -f
     - coveralls
   only:
     refs:
