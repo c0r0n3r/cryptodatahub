@@ -137,17 +137,21 @@ class TestClasses:
             ], [])
 
         def test_param_attribute_order(self):
-            attribute_names = [
-                six.ensure_text(name)
-                for name, attribute in attr.fields_dict(self._get_params_class()).items()
-                if attribute.init
-            ]
+            attribute_names = self._get_params_class().get_init_attribute_names()
 
-            self.assertEqual([
-                name
-                for name, item in self.json_data.items()
-                if [key for key in item.keys() if not key.startswith(six.u('_'))] != attribute_names
-            ], [])
+            items_with_surplus_attributes = []
+            for name, item in self.json_data.items():
+                item_keys = item.keys()
+                json_attr_names = [key for key in item_keys if not key.startswith(six.u('_'))]
+
+                item_keys = set(item_keys)
+                param_calss_attr_names = [
+                    attribute_name for attribute_name in attribute_names if attribute_name in item_keys
+                ]
+
+                if json_attr_names != param_calss_attr_names:
+                    items_with_surplus_attributes.append(name)
+            self.assertEqual(items_with_surplus_attributes, [])
 
             attribute_names_not_ordered = []
             for name, item in self.json_data.items():
@@ -167,6 +171,13 @@ class TestClasses:
                     attribute_names_not_ordered.append(key)
 
             self.assertEqual(attribute_names_not_ordered, [])
+
+        def test_str_works_for_all_items(self):
+            if '__str__' not in dict(self._get_params_class().__dict__.items()):
+                return
+
+            for enum_item in self._get_class():
+                self.assertTrue(str(enum_item))
 
     class TestJsonCodeStringBase(TestJsonBase):
         @classmethod

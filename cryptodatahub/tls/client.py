@@ -6,6 +6,7 @@ import six
 
 import attr
 
+from cryptodatahub.common.entity import Client
 from cryptodatahub.common.types import (
     ClientVersion,
     CryptoDataEnumBase,
@@ -57,13 +58,13 @@ class ClientConfigurationChange(enum.IntEnum):
 
 @attr.s(frozen=True)
 class ClientVersionedParamsBase(CryptoDataParamsBase):
-    client = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    client = attr.ib(converter=convert_enum(Client), validator=attr.validators.instance_of(Client))
     first_version = attr.ib(converter=convert_client_version(), validator=attr.validators.instance_of(ClientVersion))
     last_version = attr.ib(converter=convert_client_version(), validator=attr.validators.instance_of(ClientVersion))
 
     def __str__(self):
         return '{} ({} - {})'.format(
-            self.client, self.first_version, self.last_version
+            self.client.value, self.first_version, self.last_version
         )
 
 

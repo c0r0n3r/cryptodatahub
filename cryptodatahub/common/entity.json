@@ -1,0 +1,187 @@
+{
+    "AKAMAI": {
+        "name": "Akamai Technologies",
+        "long_name": "Akamai Technologies, Inc.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "BEIJING_PUCHUANGSIDA_TECHNOLOGY_LTD": {
+        "name": "Beijing PuChuangSiDa Technology Ltd.",
+        "long_name": null,
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "CERTLY": {
+        "name": "Certly",
+        "long_name": "Certly VOF",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "CLOUDFLARE": {
+        "name": "Cloudflare",
+        "long_name": "Cloudflare, Inc.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "CNNIC": {
+        "name": "CNNIC",
+        "long_name": "China Internet Network Information Center",
+        "type": "GOV_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "DIGICERT": {
+        "name": "DigiCert",
+        "long_name": "DigiCert, Inc.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "GDCA": {
+        "name": "Guangdong CA",
+        "long_name": "Digital Security Times Technology Co., Ltd.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "GOOGLE": {
+        "name": "Google",
+        "long_name": "Google LLC",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR",
+            "CLIENT_DEVELOPER"
+        ]
+    },
+    "IZENPE": {
+        "name": "Izenpe SA",
+        "long_name": null,
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "LETS_ENCRYPT": {
+        "name": "Let's Encrypt",
+        "long_name": null,
+        "type": "NONPROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "MATT_PALMER": {
+        "name": "Matt Palmer",
+        "long_name": null,
+        "type": "PRIV_PERSON",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "MOZILLA": {
+        "name": "Mozilla",
+        "long_name": "Mozilla Foundation",
+        "type": "NONPROFIT_ORG",
+        "activities": [
+            "CLIENT_DEVELOPER"
+        ]
+    },
+    "NORDUNET": {
+        "name": "NORDUnet",
+        "long_name": "Arctic Gateway for Research & Education",
+        "type": "NOT_FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "OPERA": {
+        "name": "Opera",
+        "long_name": "Opera, Ltd.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CLIENT_DEVELOPER"
+        ]
+    },
+    "QIHOO_360": {
+        "name": "Qihoo 360",
+        "long_name": "360 Security Technology Inc.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "SECTIGO": {
+        "name": "Sectigo",
+        "long_name": null,
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "SHECA": {
+        "name": "Shanghai CA",
+        "long_name": "Shanghai Digital Certificate Certification Center Co., Ltd.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "STARTCOM": {
+        "name": "StartCom",
+        "long_name": "StartCom Ltd.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "TRUSTASIA": {
+        "name": "TrustAsia",
+        "long_name": "TrustAsia Technologies, Inc.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "UP_IN_THE_AIR_CONSULTING": {
+        "name": "Up In The Air Consulting",
+        "long_name": null,
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "VENAFI": {
+        "name": "Venafi",
+        "long_name": "Venafi, Inc.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "FILIPPO_VALSORDA": {
+        "name": "Filippo Valsorda",
+        "long_name": null,
+        "type": "PRIV_PERSON",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "WOSIGN": {
+        "name": "WoSign",
+        "long_name": null,
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    }
+}

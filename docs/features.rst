@@ -36,6 +36,20 @@ Parameters
       - `ProFTPD <https://en.wikipedia.org/wiki/ProFTPD>`__
       - SOcket CAT (socat)
 
+Stores
+""""""
+
+-  `Certificate Transaprency <https://certificate.transparency.dev>`__ (CT)
+   `Logs <https://certificate.transparency.dev/logs>`__
+
+   -  Cloudflare
+   -  DigiCert
+   -  Google
+   -  Let's Encrypt
+   -  Sectigo
+   -  TrustAsia
+   -  ...
+
 Protocol-dependent
 ^^^^^^^^^^^^^^^^^^
 
