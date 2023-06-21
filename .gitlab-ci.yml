@@ -9,7 +9,7 @@ before_script:
 - pip install -r dev-requirements.txt
 
 pylint:
-  image: python:3.7-slim
+  image: python:3.11-slim
   stage: earlytest
   script: tox -e pylint
 
@@ -41,6 +41,11 @@ python36:
   image: python:3.6-slim
   stage: fulltest
   script: tox -e py36
+
+python37:
+  image: python:3.7-slim
+  stage: fulltest
+  script: tox -e py37
 
 python38:
   image: python:3.8-slim
@@ -78,7 +83,7 @@ pypy3:
   script: tox -e pypy3
 
 coveralls:
-  image: python:3.11
+  image: python:3.11-slim
   variables:
     CI_NAME: gitlab
     CI_BUILD_NUMBER: "${CI_JOB_ID}"
