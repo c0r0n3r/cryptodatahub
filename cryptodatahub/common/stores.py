@@ -63,7 +63,7 @@ class CertificateTransparencyLogParamsBase(CryptoDataParamsBase):
     log_id = attr.ib(
         converter=convert_base64_data(),
         validator=attr.validators.instance_of(Base64Data),
-        metadata={'human_readable_name': 'Log ID'},
+        metadata={'human_readable_name': 'ID'},
     )
 
 
@@ -77,35 +77,42 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
 ):
     operator = attr.ib(
         converter=convert_enum(Entity),
-        validator=attr.validators.instance_of(Entity)
+        validator=attr.validators.instance_of(Entity),
+        metadata={'human_friendly': False},
     )
     key = attr.ib(
         converter=convert_base64_data(),
         validator=attr.validators.instance_of(Base64Data),
+        metadata={'human_friendly': False},
     )
     url = attr.ib(
         validator=attr.validators.instance_of(six.string_types),
-        metadata={'human_readable_name': 'URL'},
+        metadata={'human_readable_name': 'URL', 'human_friendly': False},
     )
     mmd = attr.ib(
         validator=attr.validators.instance_of(int),
-        metadata={'human_readable_name': 'Maximum Merge Delay'},
+        metadata={'human_readable_name': 'Maximum Merge Delay', 'human_friendly': False},
     )
     description = attr.ib(
         default=None,
-        validator=attr.validators.optional(attr.validators.instance_of(six.string_types))
+        validator=attr.validators.optional(attr.validators.instance_of(six.string_types)),
     )
-    dns = attr.ib(default=None, validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
+    dns = attr.ib(
+        default=None,
+        validator=attr.validators.optional(attr.validators.instance_of(six.string_types)),
+        metadata={'human_friendly': False},
+    )
     temporal_interval = attr.ib(
         default=None,
         converter=convert_dict_to_object(CertificateTransparencyLogTemporalInterval),
         validator=attr.validators.optional(attr.validators.instance_of(CertificateTransparencyLogTemporalInterval)),
-        metadata={'human_readable_name': 'DNS'},
+        metadata={'human_readable_name': 'DNS', 'human_friendly': False},
     )
     log_type = attr.ib(
         default=None,
         converter=convert_enum(CertificateTransparencyLogType),
-        validator=attr.validators.optional(attr.validators.instance_of(CertificateTransparencyLogType))
+        validator=attr.validators.optional(attr.validators.instance_of(CertificateTransparencyLogType)),
+        metadata={'human_friendly': False},
     )
     log_state = attr.ib(
         default=None,
