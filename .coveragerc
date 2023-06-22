@@ -2,6 +2,8 @@
 source =
     cryptodatahub
     updaters
+omit =
+    cryptodatahub/__setup__.py
 
 [report]
 exclude_lines =

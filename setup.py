@@ -7,17 +7,15 @@ import unittest
 
 from setuptools import setup
 
+from cryptodatahub import __setup__
+
+
 this_directory = os.getenv('REQUIREMENTS_DIR', '')
 with open(os.path.join(this_directory, 'requirements.txt')) as f:
     install_requirements = f.read().splitlines()
 this_directory = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(this_directory, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
-
-
-test_requirements = [
-    "coverage",
-]
 
 
 def test_discover():
@@ -27,23 +25,23 @@ def test_discover():
 
 
 setup(
-    name='cryptodatahub',
-    version='0.8.5',
-    description='Repository of cryptography-related data',
+    name=__setup__.__title__,
+    version=__setup__.__version__,
+    description=__setup__.__description__,
     long_description=long_description,
     long_description_content_type='text/x-rst',
-    author='Szilárd Pfeiffer',
-    author_email='coroner@pfeifferszilard.hu',
-    maintainer='Szilárd Pfeiffer',
-    maintainer_email='coroner@pfeifferszilard.hu',
-    license='MPL-2.0',
+    author=__setup__.__author__,
+    author_email=__setup__.__author_email__,
+    maintainer=__setup__.__author__,
+    maintainer_email=__setup__.__author_email__,
+    license=__setup__.__license__,
     license_files=['LICENSE.txt', ],
     project_urls={
-        'Homepage': 'https://gitlab.com/coroner/cryptodatahub',
-        'Changelog': 'https://cryptodatahub.readthedocs.io/en/latest/changelog',
-        'Documentation': 'https://cryptodatahub.readthedocs.io/en/latest/',
-        'Issues': 'https://gitlab.com/coroner/cryptodatahub/-/issues',
-        'Source': 'https://gitlab.com/coroner/cryptodatahub',
+        'Homepage': __setup__.__url__,
+        'Changelog': 'https://' + __setup__.__technical_name__ + '.readthedocs.io/en/latest/changelog',
+        'Documentation': 'https://' + __setup__.__technical_name__ + '.readthedocs.io/en/latest/',
+        'Issues': __setup__.__url__ + '/-/issues',
+        'Source': __setup__.__url__,
     },
     keywords='ssl tls ssh',
 
@@ -53,9 +51,9 @@ setup(
             "enum34==1.1.6",
             "pathlib2==2.3.7.post1",
             "Mock",
+            "unittest2",
         ],
-
-        "test": test_requirements,
+        "test": ["coverage", ],
         "pep8": ["flake8", ],
         "pylint": ["pylint", ],
     },
