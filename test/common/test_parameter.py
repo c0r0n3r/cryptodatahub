@@ -7,7 +7,7 @@ except ImportError:
 
 from test.common.classes import TestClasses
 
-from cryptodatahub.common.parameter import DHParameterNumbers, DHParamWellKnown, DHParamWellKnownParams
+from cryptodatahub.common.parameter import DHParameterNumbers, DHParamWellKnown
 
 
 class TestDHParamWellKnownParams(unittest.TestCase):
@@ -24,30 +24,12 @@ class TestDHParamWellKnown(TestClasses.TestJsonBase):
     def _get_class(cls):
         return DHParamWellKnown
 
-    def test_eq(self):
-        self.assertEqual(
-            DHParamWellKnownParams(DHParameterNumbers(1, 2), 'name1', 'source1', 1, False),
-            DHParamWellKnownParams(DHParameterNumbers(1, 2), 'name1', 'source1', 1, False)
-        )
-        self.assertEqual(
-            DHParamWellKnownParams(DHParameterNumbers(1, 2), 'name1', 'source1', 1, False),
-            DHParamWellKnownParams(DHParameterNumbers(1, 2), 'name2', 'source1', 1, False)
-        )
-        self.assertEqual(
-            DHParamWellKnownParams(DHParameterNumbers(1, 2), 'name1', 'source1', 1, False),
-            DHParamWellKnownParams(DHParameterNumbers(1, 2), 'name1', 'source2', 1, False)
-        )
-        self.assertEqual(
-            DHParamWellKnownParams(DHParameterNumbers(1, 2), 'name1', 'source1', 1, False),
-            DHParamWellKnownParams(DHParameterNumbers(1, 2), 'name1', 'source1', 2, False)
-        )
-        self.assertEqual(
-            DHParamWellKnownParams(DHParameterNumbers(1, 2), 'name1', 'source1', 1, False),
-            DHParamWellKnownParams(DHParameterNumbers(1, 2), 'name1', 'source1', 1, True)
-        )
-
     def test_str(self):
         self.assertEqual(
             str(DHParamWellKnown.RFC2539_768_BIT_MODP_GROUP.value),
-            '768-bit MODP Group (RFC2409/RFC2539/Oakley Group 1)'
+            '768-bit MODP Group/Oakley Group 1 (RFC 2409, RFC 2539)'
+        )
+        self.assertEqual(
+            str(DHParamWellKnown.APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_1024.value),
+            '1024-bit Apache 2.0.18 builtin DH parameter'
         )

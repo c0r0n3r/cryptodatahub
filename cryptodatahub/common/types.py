@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import abc
 import base64
 import codecs
 import collections
@@ -24,8 +25,18 @@ import attr
 from cryptodatahub.common.exception import InvalidValue
 
 
+class _ConverterBase(object):
+    @abc.abstractmethod
+    def __call__(self, value):
+        raise NotImplementedError()
+
+    @abc.abstractmethod
+    def __repr__(self):
+        raise NotImplementedError()
+
+
 @attr.s(repr=False, slots=True, hash=True)
-class _DictObjectConverter(object):
+class _DictObjectConverter(_ConverterBase):
     object_type = attr.ib(validator=attr.validators.instance_of(type))
 
     def __call__(self, value):
@@ -48,7 +59,7 @@ def convert_dict_to_object(object_type):
 
 
 @attr.s(repr=False, slots=True, hash=True)
-class _EnumConverter(object):
+class _EnumConverter(_ConverterBase):
     enum_type = attr.ib(validator=attr.validators.instance_of(type))
 
     def __call__(self, value):
@@ -85,7 +96,7 @@ class Base64Data(object):
 
 
 @attr.s(repr=False, slots=True, hash=True)
-class _DateTimeConverter(object):
+class _DateTimeConverter(_ConverterBase):
     strptime_format = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
 
     def __call__(self, date_time):
@@ -114,7 +125,7 @@ def convert_datetime(strptime_format=None):
 
 
 @attr.s(repr=False, slots=True, hash=True)
-class _Base64DataConverter(object):
+class _Base64DataConverter(_ConverterBase):
     def __call__(self, value):
         if value is None:
             return None
@@ -141,7 +152,7 @@ def convert_base64_data():
 
 
 @attr.s(repr=False, slots=True, hash=True)
-class _BigNumberConverter(object):
+class _BigNumberConverter(_ConverterBase):
     def __call__(self, value):
         if value is None:
             return None
@@ -168,7 +179,7 @@ def convert_big_enum():
 
 
 @attr.s(repr=False, slots=True, hash=True)
-class _IterableConverter(object):
+class _IterableConverter(_ConverterBase):
     member_converter = attr.ib(validator=attr.validators.instance_of(collections_abc.Callable))
 
     def __call__(self, iterable):
@@ -192,7 +203,7 @@ def convert_iterable(member_converter):
 
 
 @attr.s(repr=False, slots=True, hash=True)
-class _MappingConverter(object):
+class _MappingConverter(_ConverterBase):
     key_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections_abc.Callable)))
     value_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections_abc.Callable)))
 
@@ -243,7 +254,7 @@ class ClientVersion(object):
 
 
 @attr.s(repr=False, slots=True, hash=True)
-class _ClientVersionConverter(object):
+class _ClientVersionConverter(_ConverterBase):
     def __call__(self, version):
         if version is None:
             return None
@@ -264,6 +275,31 @@ class _ClientVersionConverter(object):
 
 def convert_client_version():
     return _ClientVersionConverter()
+
+
+@attr.s(repr=False, slots=True, hash=True)
+class _VariadicConverter(_ConverterBase):
+    converters = attr.ib(
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(_ConverterBase))
+    )
+
+    def __call__(self, convertable):
+        if convertable is None:
+            return None
+
+        for converter in self.converters:
+            converted = converter(convertable)
+            if id(converted) != id(convertable):
+                return converted
+
+        return convertable
+
+    def __repr__(self):
+        return '<variadic converter>'
+
+
+def convert_variadic(converters):
+    return _VariadicConverter(converters)
 
 
 class CryptoDataParamsBase(object):

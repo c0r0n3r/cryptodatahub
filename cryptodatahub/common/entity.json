@@ -7,6 +7,14 @@
             "CT_LOG_OPERATOR"
         ]
     },
+    "ASF": {
+        "name": "Apache Software Foundation",
+        "long_name": null,
+        "type": "NOT_FOR_PROFIT_ORG",
+        "activities": [
+            "SERVER_DEVELOPER"
+        ]
+    },
     "BEIJING_PUCHUANGSIDA_TECHNOLOGY_LTD": {
         "name": "Beijing PuChuangSiDa Technology Ltd.",
         "long_name": null,
@@ -47,6 +55,14 @@
             "CT_LOG_OPERATOR"
         ]
     },
+    "F5": {
+        "name": "F5",
+        "long_name": "F5, Inc.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "SERVER_DEVELOPER"
+        ]
+    },
     "GDCA": {
         "name": "Guangdong CA",
         "long_name": "Digital Security Times Technology Co., Ltd.",
@@ -62,6 +78,14 @@
         "activities": [
             "CT_LOG_OPERATOR",
             "CLIENT_DEVELOPER"
+        ]
+    },
+    "IETF": {
+        "name": "IETF",
+        "long_name": "Internet Engineering Task Force",
+        "type": "NONPROFIT_ORG",
+        "activities": [
+            "STANDARD_DEVELOPER"
         ]
     },
     "IZENPE": {
@@ -171,6 +195,14 @@
     "FILIPPO_VALSORDA": {
         "name": "Filippo Valsorda",
         "long_name": null,
+        "type": "PRIV_PERSON",
+        "activities": [
+            "CT_LOG_OPERATOR"
+        ]
+    },
+    "WIETSE_VENEMA": {
+        "name": "Wietse Venema",
+        "long_name": "Wietse Zweitze Venema",
         "type": "PRIV_PERSON",
         "activities": [
             "CT_LOG_OPERATOR"

@@ -1,0 +1,22 @@
+{
+    "RFC_2409": {
+        "name": "RFC 2409",
+        "long_name": "The Internet Key Exchange (IKE)"
+    },
+    "RFC_2539": {
+        "name": "RFC 2539",
+        "long_name": "Storage of Diffie-Hellman Keys in the Domain Name System (DNS)"
+    },
+    "RFC_3526": {
+        "name": "RFC 3526",
+        "long_name": "More Modular Exponential (MODP) Diffie-Hellman groups for Internet Key Exchange (IKE)"
+    },
+    "RFC_5114": {
+        "name": "RFC 5114",
+        "long_name": "Additional Diffie-Hellman Groups for Use with IETF Standards"
+    },
+    "RFC_7919": {
+        "name": "RFC 7919",
+        "long_name": "Negotiated Finite Field Diffie-Hellman Ephemeral Parameters for Transport Layer Security (TLS)"
+    }
+}
