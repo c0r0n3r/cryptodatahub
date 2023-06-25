@@ -8,7 +8,7 @@ import re
 import urllib3
 
 from cryptodatahub.common.entity import Entity
-from cryptodatahub.common.stores import CertificateTransparencyLogParams
+from cryptodatahub.common.stores import CertificateTransparencyLog, CertificateTransparencyLogParams
 
 from updaters.common import UpdaterBase
 
@@ -67,6 +67,9 @@ class UpdaterCertificateTransparencyLogs(UpdaterBase):
             (self.convert_description(log['description']), log)
             for log in transformed_logs
         ])
+
+    def _get_enum_class(self):
+        return CertificateTransparencyLog
 
     def _get_param_class(self):
         return CertificateTransparencyLogParams

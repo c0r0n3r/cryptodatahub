@@ -384,28 +384,36 @@ class CryptoDataEnumBase(enum.Enum):
 
         return '-'.join(enum_class_name_parts) + '.json'
 
-    @staticmethod
-    def get_json_path(param_class):
+    @classmethod
+    def get_json_path(cls, param_class):
         return (
             pathlib.Path(inspect.getfile(param_class)).parent /
-            CryptoDataEnumBase.get_file_name_from_param_class(param_class)
+            cls.get_file_name_from_param_class(param_class)
         )
 
-    @staticmethod
-    def get_json_object(param_class):
-        json_path = CryptoDataEnumBase.get_json_path(param_class)
-        with codecs.open(str(json_path), 'r', encoding='ascii') as json_file:
+    @classmethod
+    def get_json_encoding(cls):
+        return 'ascii'
+
+    @classmethod
+    def is_json_encoding_ascii(cls):
+        return cls.get_json_encoding() == 'ascii'
+
+    @classmethod
+    def get_json_object(cls, param_class):
+        json_path = cls.get_json_path(param_class)
+        with codecs.open(str(json_path), 'r', encoding=cls.get_json_encoding()) as json_file:
             return json.load(json_file, object_pairs_hook=collections.OrderedDict)
 
-    @staticmethod
-    def dump_json(json_object):
-        return json.dumps(json_object, ensure_ascii=True, indent=4) + os.linesep
+    @classmethod
+    def dump_json(cls, json_object):
+        return json.dumps(json_object, ensure_ascii=cls.is_json_encoding_ascii(), indent=4) + os.linesep
 
-    @staticmethod
-    def set_json(param_class, json_object):
-        json_path = CryptoDataEnumBase.get_json_path(param_class)
-        with codecs.open(str(json_path), 'w+', encoding='ascii') as json_file:
-            json_file.write(CryptoDataEnumBase.dump_json(json_object))
+    @classmethod
+    def set_json(cls, param_class, json_object):
+        json_path = cls.get_json_path(param_class)
+        with codecs.open(str(json_path), 'w+', encoding=cls.get_json_encoding()) as json_file:
+            json_file.write(cls.dump_json(json_object))
 
     @classmethod
     def get_json(cls, param_class):
