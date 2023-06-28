@@ -264,6 +264,13 @@ class RootCertificateParams(CryptoDataParamsFetchedBase):
 
         return collections.OrderedDict([('_meta', meta)] + list(dict_value.items()))
 
+    def get_constraints_by_owner(self, owner):
+        for trust_store_constraint in self.trust_stores:
+            if trust_store_constraint.owner == owner:
+                return trust_store_constraint.constraints
+
+        raise KeyError(owner)
+
 
 class RootCertificateBase(CryptoDataEnumBase):
     @classmethod

@@ -20,6 +20,7 @@ from cryptodatahub.common.stores import (
     CertificateTransparencyLogUnknown,
     RootCertificate,
     RootCertificateParams,
+    RootCertificateTrustStoreConstraint,
     convert_root_certificate_params,
 )
 
@@ -228,6 +229,26 @@ class TestRootCertificateParams(TestClasses.TestKeyBase):
                 ('trust_stores', [])
             ])
         )
+
+    def test_get_constraints_by_owner(self):
+        root_certificate_param = RootCertificateParams(RootCertificate.AAA_CERTIFICATE_SERVICES_1.value.certificate)
+        with self.assertRaises(KeyError) as context_manager:
+            root_certificate_param.get_constraints_by_owner(Entity.APPLE)
+        self.assertEqual(context_manager.exception.args, (Entity.APPLE, ))
+
+        root_certificate_param = RootCertificateParams(
+            RootCertificate.AAA_CERTIFICATE_SERVICES_1.value.certificate,
+            [RootCertificateTrustStoreConstraint(Entity.GOOGLE)]
+        )
+        with self.assertRaises(KeyError) as context_manager:
+            root_certificate_param.get_constraints_by_owner(Entity.APPLE)
+        self.assertEqual(context_manager.exception.args, (Entity.APPLE, ))
+
+        root_certificate_param = RootCertificateParams(
+            RootCertificate.AAA_CERTIFICATE_SERVICES_1.value.certificate,
+            [RootCertificateTrustStoreConstraint(Entity.APPLE)]
+        )
+        self.assertEqual(root_certificate_param.get_constraints_by_owner(Entity.APPLE), ())
 
 
 class TestRootCertificateParamCertificateConverter(unittest.TestCase):
