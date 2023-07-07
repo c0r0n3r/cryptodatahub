@@ -112,6 +112,14 @@
             "CT_LOG_OPERATOR"
         ]
     },
+    "MICROSOFT": {
+        "name": "Microsoft",
+        "long_name": "Microsoft Corporation",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CA_TRUST_STORE_OWNER"
+        ]
+    },
     "MOZILLA": {
         "name": "Mozilla",
         "long_name": "Mozilla Foundation",

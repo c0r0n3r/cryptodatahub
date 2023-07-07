@@ -8,6 +8,7 @@ import six
 
 import attr
 
+from cryptodatahub.common.algorithm import Hash
 from cryptodatahub.common.entity import Entity, EntityRole
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.key import PublicKeyX509Base
@@ -22,7 +23,7 @@ from cryptodatahub.common.types import (
     convert_enum,
     convert_iterable,
 )
-from cryptodatahub.common.utils import name_to_enum_item_name
+from cryptodatahub.common.utils import bytes_to_hex_string, name_to_enum_item_name
 
 
 @attr.s(frozen=True)
@@ -268,6 +269,18 @@ class RootCertificateBase(CryptoDataEnumBase):
     @classmethod
     def get_json_encoding(cls):
         return 'utf-8'
+
+    @classmethod
+    def get_item_by_sha2_256_fingerprint(cls, fingerprint_value):
+        if not hasattr(cls, '_ITEMS_BY_SHA2_256_HASH'):
+            cls._ITEMS_BY_SHA2_256_HASH = {
+                bytes_to_hex_string(
+                    item.value.certificate.get_digest(Hash.SHA2_256, item.value.certificate.der)
+                ): item
+                for item in cls
+            }
+
+        return cls._ITEMS_BY_SHA2_256_HASH[fingerprint_value.upper().replace(':', '')]
 
     @classmethod
     def get_items_by_trust_owner(cls, trust_owner):
