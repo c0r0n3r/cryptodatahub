@@ -7,6 +7,7 @@ except ImportError:
 
 import csv
 import datetime
+import os
 
 from test.common.classes import TestClasses
 
@@ -15,6 +16,7 @@ import six
 from updaters.common import HttpFetcher, UpdaterBase
 from updaters.trust_stores import (
     FetcherRootCertificateStore,
+    FetcherRootCertificateStoreApple,
     FetcherRootCertificateStoreMicrosoft,
     FetcherRootCertificateStoreMozilla,
 )
@@ -67,6 +69,49 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
             dict_writer.writerow(dict(options[i], **{'SHA-256 Fingerprint': sha2_256_fingerprint}))
 
         return mock_data.getvalue().encode('ascii')
+
+    def _get_mock_data_apple(self, public_keys=()):
+        mock_data = os.linesep.join([
+            '<h2 id="trusted">Trusted Certificates</h2>',
+            '<tbody>',
+            '<tr>',
+        ] + [
+            '<th>{}</th>'.format(field_name)
+            for field_name in FetcherRootCertificateStoreApple.FIELDS
+        ] + [
+            '</tr>',
+        ])
+
+        for public_key in public_keys:
+            mock_data += '<tr>' + os.linesep
+            for field_name in FetcherRootCertificateStoreApple.FIELDS:
+                if field_name == 'Fingerprint (SHA-256)':
+                    data = public_key.fingerprints[Hash.SHA2_256].replace(':', ' ')
+                else:
+                    data = field_name
+
+                mock_data += '<td>{}</td>'.format(data) + os.linesep
+            mock_data += '</tr>' + os.linesep
+
+        return mock_data.encode('ascii')
+
+
+class TestUpdaterRootCertificateStoreApple(TestRootCertificateBase):
+    def test_parse_empty(self):
+        with mock.patch.object(HttpFetcher, '__call__', return_value=self._get_mock_data_apple()):
+            root_certificate_store = FetcherRootCertificateStoreApple.from_current_data()
+        self.assertEqual(len(root_certificate_store.parsed_data), 0)
+
+    def test_parse_pem(self):
+        public_key_x509 = self._get_public_key_x509('snakeoil_ca_cert')
+        mock_data_apple = self._get_mock_data_apple([public_key_x509])
+        mock_data_crt_sh = public_key_x509.pem.encode('ascii')
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=[mock_data_apple, mock_data_crt_sh]):
+            root_certificate_store = FetcherRootCertificateStoreApple.from_current_data()
+        self.assertEqual(len(root_certificate_store.parsed_data), 1)
+        self.assertEqual(root_certificate_store.parsed_data, {
+            tuple(public_key_x509.pem.splitlines()): (),
+        })
 
 
 class TestUpdaterRootCertificateStoreMicrosoft(TestRootCertificateBase):
@@ -206,6 +251,7 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
         http_fetcher_results = [
             self._get_mock_data_mozilla(),
             self._get_mock_data_microsoft(),
+            self._get_mock_data_apple(),
         ]
         with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results):
             fetched_data = FetcherRootCertificateStore.from_current_data()
@@ -219,6 +265,7 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             mock_data_mozilla,
             mock_data_microsoft,
             self.public_key_x509_snakeoil_ca.pem.encode('ascii'),
+            self._get_mock_data_apple(),
         ]
         with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results):
             fetched_data = FetcherRootCertificateStore.from_current_data()
@@ -241,6 +288,7 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             mock_data_mozilla,
             mock_data_microsoft,
             self.public_key_x509_snakeoil_ca.pem.encode('ascii'),
+            self._get_mock_data_apple(),
         ]
         with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results):
             fetched_data = FetcherRootCertificateStore.from_current_data()

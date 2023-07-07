@@ -10,6 +10,8 @@ from six.moves import collections_abc
 import attr
 import urllib3
 
+from cryptodatahub.common.stores import RootCertificate
+
 
 @attr.s(frozen=True)
 class HttpFetcher(object):
@@ -42,6 +44,26 @@ class HttpFetcher(object):
         pool_manager.clear()
 
         return response.data
+
+
+@attr.s(frozen=True)
+class CertificatePemFetcher(object):
+    http_fetcher = attr.ib(
+        init=False,
+        default=HttpFetcher(connect_timeout=5, read_timeout=30, retry=10),
+        validator=attr.validators.instance_of(HttpFetcher),
+    )
+
+    def __call__(self, sha2_256_fingerprint):
+        try:
+            return RootCertificate.get_item_by_sha2_256_fingerprint(
+                sha2_256_fingerprint
+            ).value.certificate.pem
+        except KeyError:
+            data = self.http_fetcher(
+                'https://crt.sh/?d={}'.format(sha2_256_fingerprint),
+            )
+            return six.ensure_str(data).strip()
 
 
 @attr.s

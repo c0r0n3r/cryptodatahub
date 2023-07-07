@@ -5,8 +5,7 @@ import collections
 import datetime
 
 import attr
-
-import six
+import bs4
 
 from cryptodatahub.common.entity import Entity
 from cryptodatahub.common.stores import (
@@ -18,7 +17,7 @@ from cryptodatahub.common.stores import (
 )
 from cryptodatahub.common.types import Base64Data, CryptoDataParamsBase
 
-from updaters.common import FetcherBase, FetcherCsvBase, HttpFetcher, UpdaterBase
+from updaters.common import CertificatePemFetcher, FetcherBase, FetcherCsvBase, HttpFetcher, UpdaterBase
 
 
 @attr.s
@@ -32,41 +31,42 @@ class RootCertificateStore(CryptoDataParamsBase):
     )
 
 
-class FetcherRootCertificateStoreBase(FetcherCsvBase):
-    @classmethod
-    def _get_root_certificate_class(cls):
-        return RootCertificate
+class FetcherRootCertificateStoreApple(FetcherBase):
+    FIELDS = (
+        'Certificate name',
+        'Issued by',
+        'Type',
+        'Key size',
+        'Sig alg',
+        'Serial number',
+        'Expires',
+        'EV policy',
+        'Fingerprint (SHA-256)',
+    )
 
     @classmethod
-    def _get_certificate_pem(cls, sha2_256_fingerprint):
-        try:
-            root_certificate_class = cls._get_root_certificate_class()
-            return root_certificate_class.get_item_by_sha2_256_fingerprint(
-                sha2_256_fingerprint
-            ).value.certificate.pem
-        except KeyError:
-            data = HttpFetcher(
-                connect_timeout=5, read_timeout=30, retry=10,
-            )(
-                'https://crt.sh/?d={}'.format(sha2_256_fingerprint),
-            )
-
-            return six.ensure_str(data).strip()
-
-    @classmethod
-    def _get_csv_url(cls):
-        raise NotImplementedError()
-
-    @classmethod
-    def _get_csv_fields(cls):
-        raise NotImplementedError()
+    def _get_current_data(cls):
+        response = HttpFetcher()('https://support.apple.com/en-us/HT213080')
+        page = bs4.BeautifulSoup(response.decode('utf-8'), 'html.parser')
+        trusted_cas = page.find("h2", {"id": "trusted"})
+        return [
+            dict(zip(cls.FIELDS, map(lambda value: value.text.strip(), row.findAll('td'))))
+            for row in trusted_cas.findNext('tbody').findAll('tr')[1:]
+        ]
 
     @classmethod
     def _transform_data(cls, current_data):
-        raise NotImplementedError()
+        certificate_pem_fetcher = CertificatePemFetcher()
+        certificates = {}
+        for row in current_data:
+            sha2_256_fingerprint = row['Fingerprint (SHA-256)'].replace(' ', '')
+            root_certificate_pem = certificate_pem_fetcher(sha2_256_fingerprint)
+            certificates[tuple(root_certificate_pem.splitlines())] = ()
+
+        return certificates
 
 
-class FetcherRootCertificateStoreMicrosoft(FetcherRootCertificateStoreBase):
+class FetcherRootCertificateStoreMicrosoft(FetcherCsvBase):
     CSV_FIELDS = (
         'Microsoft Status',
         'CA Owner',
@@ -90,6 +90,7 @@ class FetcherRootCertificateStoreMicrosoft(FetcherRootCertificateStoreBase):
 
     @classmethod
     def _transform_data(cls, current_data):
+        certificate_pem_fetcher = CertificatePemFetcher()
         certificates = {}
 
         for row in current_data:
@@ -107,7 +108,7 @@ class FetcherRootCertificateStoreMicrosoft(FetcherRootCertificateStoreBase):
                 constraints.append(constraint)
 
             sha2_256_fingerprint = row['SHA-256 Fingerprint']
-            root_certificate_pem = cls._get_certificate_pem(sha2_256_fingerprint)
+            root_certificate_pem = certificate_pem_fetcher(sha2_256_fingerprint)
 
             certificates[tuple(root_certificate_pem.splitlines())] = tuple(constraints)
 
@@ -159,6 +160,7 @@ class FetcherRootCertificateStore(FetcherBase):
     _ROOT_CERTIFICATE_STORE_UPDATERS = collections.OrderedDict([
         (Entity.MOZILLA, FetcherRootCertificateStoreMozilla),
         (Entity.MICROSOFT, FetcherRootCertificateStoreMicrosoft),
+        (Entity.APPLE, FetcherRootCertificateStoreApple),
     ])
 
     @classmethod
