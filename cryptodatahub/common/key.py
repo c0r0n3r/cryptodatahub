@@ -9,6 +9,7 @@ import os
 from collections import OrderedDict
 
 import six
+import asn1crypto.keys
 import asn1crypto.pem
 import asn1crypto.x509
 import attr
@@ -17,6 +18,7 @@ from cryptodatahub.common.algorithm import Authentication, Hash, Signature
 from cryptodatahub.common.utils import bytes_to_hex_string
 
 
+@attr.s(eq=False)
 class PublicKey(object):
     _HASHLIB_FUNCS = {
         Hash.MD5: hashlib.md5,
@@ -24,20 +26,58 @@ class PublicKey(object):
         Hash.SHA2_256: hashlib.sha256
     }
 
+    _public_key = attr.ib(validator=attr.validators.instance_of(asn1crypto.keys.PublicKeyInfo))
+
+    @classmethod
+    def from_der(cls, der):
+        return cls(asn1crypto.keys.PublicKeyInfo.load(der))
+
+    @classmethod
+    def from_pem(cls, pem):
+        return cls.from_der(asn1crypto.pem.unarmor(pem.encode('ascii'))[2])
+
+    @classmethod
+    def from_pem_lines(cls, pem_lines):
+        return cls.from_pem(os.linesep.join(pem_lines))
+
+    @classmethod
+    def _get_type_name(cls):
+        return 'public key'
+
+    def __eq__(self, other):
+        return self.der == other.der
+
     @property
-    @abc.abstractmethod
+    def der(self):
+        return self._public_key.dump()
+
+    @property
+    def pem(self):
+        return six.ensure_str(asn1crypto.pem.armor(six.u(self._get_type_name().upper()), self.der))
+
+    @property
     def key_type(self):
-        raise NotImplementedError()
+        try:
+            key_type_oid = self._public_key['algorithm']['algorithm'].dotted
+        except KeyError as e:
+            key_type_oid = e.args[0]
+
+        return Authentication.from_oid(key_type_oid)
 
     @property
-    @abc.abstractmethod
     def key_size(self):
-        raise NotImplementedError()
+        if self.key_type == Authentication.GOST_R3410_12_256:
+            return 256
+        if self.key_type == Authentication.GOST_R3410_12_512:
+            return 512
+        if self.key_type == Authentication.GOST_R3410_01:
+            return 256
+
+        return int(self._public_key.bit_size)
 
     @property
-    @abc.abstractmethod
     def key_bytes(self):
-        raise NotImplementedError()
+        return PublicKey.der.fget(self)
 
     @classmethod
     def get_digest(cls, hash_type, key_bytes):
@@ -48,23 +88,18 @@ class PublicKey(object):
 
         return hashlib_funcs(key_bytes).digest()
 
+    def fingerprint(self, hash_type):
+        return bytes_to_hex_string(self.get_digest(hash_type, self.der), ':')
+
+    @property
+    def fingerprints(self):
+        return OrderedDict([
+            (hash_type, self.fingerprint(hash_type))
+            for hash_type in [Hash.MD5, Hash.SHA1, Hash.SHA2_256]
+        ])
+
 
 class PublicKeySigned(PublicKey):
-    @property
-    @abc.abstractmethod
-    def key_type(self):
-        raise NotImplementedError()
-
-    @property
-    @abc.abstractmethod
-    def key_size(self):
-        raise NotImplementedError()
-
-    @property
-    @abc.abstractmethod
-    def key_bytes(self):
-        raise NotImplementedError()
-
     @property
     @abc.abstractmethod
     def valid_not_before(self):
@@ -76,14 +111,17 @@ class PublicKeySigned(PublicKey):
         raise NotImplementedError()
 
     @property
-    @abc.abstractmethod
     def validity_period(self):
-        raise NotImplementedError()
+        return self.valid_not_after - self.valid_not_before
 
     @property
-    @abc.abstractmethod
     def validity_remaining_time(self):
-        raise NotImplementedError()
+        now = datetime.datetime.now(asn1crypto.util.timezone.utc)
+        return self.valid_not_after - now if now < self.valid_not_after else None
+
+    @property
+    def expired(self):
+        return datetime.datetime.now(asn1crypto.util.timezone.utc) > self.valid_not_after
 
     @property
     @abc.abstractmethod
@@ -91,7 +129,7 @@ class PublicKeySigned(PublicKey):
         raise NotImplementedError()
 
 
-@attr.s(eq=False)
+@attr.s(eq=False, init=False)
 class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-methods
     _EV_OIDS_BY_CA = {
         'A-Trust': ('1.2.40.0.17.1.22', ),
@@ -147,99 +185,56 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
         'WoSign': ('1.3.6.1.4.1.36305.2', ),
     }
 
-    certificate = attr.ib(validator=attr.validators.instance_of(asn1crypto.x509.Certificate))
+    _certificate = attr.ib(validator=attr.validators.instance_of(asn1crypto.x509.Certificate))
+
+    def __init__(self, certificate):
+        super(PublicKeySigned, self).__init__(certificate.public_key)
+
+        self._certificate = certificate
+
+    @classmethod
+    def _get_type_name(cls):
+        return 'certificate'
 
     @classmethod
     def from_der(cls, der):
         return cls(asn1crypto.x509.Certificate.load(der))
 
-    @classmethod
-    def from_pem(cls, pem):
-        return cls.from_der(asn1crypto.pem.unarmor(pem.encode('ascii'))[2])
-
-    @classmethod
-    def from_pem_lines(cls, pem_lines):
-        return cls.from_pem(os.linesep.join(pem_lines))
-
     @property
-    def pem(self):
-        return six.ensure_str(asn1crypto.pem.armor(six.u('CERTIFICATE'), self.certificate.dump()))
-
-    @property
-    def key_bytes(self):
-        return self.certificate.dump()
-
-    def __eq__(self, other):
-        return self.key_bytes == other.key_bytes
+    def der(self):
+        return self._certificate.dump()
 
     @property
     def valid_not_before(self):
-        return self.certificate.not_valid_before
+        return self._certificate.not_valid_before
 
     @property
     def valid_not_after(self):
-        return self.certificate.not_valid_after
-
-    @property
-    def expired(self):
-        return datetime.datetime.now(asn1crypto.util.timezone.utc) > self.certificate.not_valid_after
-
-    @property
-    def validity_period(self):
-        return self.certificate.not_valid_after - self.certificate.not_valid_before
-
-    @property
-    def validity_remaining_time(self):
-        now = datetime.datetime.now(asn1crypto.util.timezone.utc)
-        return self.certificate.not_valid_after - now if now < self.certificate.not_valid_after else None
-
-    @property
-    def key_type(self):
-        try:
-            subject_public_key_info = self.certificate['tbs_certificate']['subject_public_key_info']
-            key_type_oid = subject_public_key_info['algorithm']['algorithm'].dotted
-        except KeyError as e:
-            key_type_oid = e.args[0]
-
-        return Authentication.from_oid(key_type_oid)
-
-    @property
-    def key_size(self):
-        if self.key_type == Authentication.GOST_R3410_12_256:
-            return 256
-        if self.key_type == Authentication.GOST_R3410_12_512:
-            return 512
-        if self.key_type == Authentication.GOST_R3410_01:
-            return 256
-
-        return int(self.certificate['tbs_certificate']['subject_public_key_info'].bit_size)
+        return self._certificate.not_valid_after
 
     @property
     def signature_hash_algorithm(self):
         try:
-            signature_oid = self.certificate['signature_algorithm']['algorithm'].dotted
+            signature_oid = self._certificate['signature_algorithm']['algorithm'].dotted
         except KeyError as e:
             signature_oid = e.args[0]
 
         return Signature.from_oid(signature_oid)
 
     @property
-    def fingerprints(self):
-        return OrderedDict([
-            (hash_type, bytes_to_hex_string(self.get_digest(hash_type, self.key_bytes), ':'))
-            for hash_type in [Hash.MD5, Hash.SHA1, Hash.SHA2_256]
-        ])
+    def public_key(self):
+        return PublicKey(self._public_key)
 
     @property
     def public_key_pin(self):
-        return base64.b64encode(self.get_digest(Hash.SHA2_256, self.certificate.public_key.dump())).decode('ascii')
+        return base64.b64encode(self.get_digest(Hash.SHA2_256, self.key_bytes)).decode('ascii')
 
     @property
     def extended_validation(self):
-        if self.certificate.certificate_policies_value is None:
+        if self._certificate.certificate_policies_value is None:
             return False
 
-        for policy_information in self.certificate.certificate_policies_value:
+        for policy_information in self._certificate.certificate_policies_value:
             for ca_ev_oid_list in self._EV_OIDS_BY_CA.values():
                 if policy_information['policy_identifier'].dotted in ca_ev_oid_list:
                     return True
@@ -250,45 +245,45 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
     def subject(self):
         return OrderedDict([
             (six.ensure_str(name), value)
-            for name, value in self.certificate.subject.native.items()
+            for name, value in self._certificate.subject.native.items()
         ])
 
     @property
     def issuer(self):
-        return self.certificate.issuer.native
+        return self._certificate.issuer.native
 
     @property
     def valid_domains(self):
-        return self.certificate.valid_domains
+        return self._certificate.valid_domains
 
     def is_subject_matches(self, host_name):
-        return self.certificate.is_valid_domain_ip(six.u(host_name))
+        return self._certificate.is_valid_domain_ip(six.u(host_name))
 
     @property
     def subject_alternative_names(self):
-        if self.certificate.subject_alt_name_value is None:
+        if self._certificate.subject_alt_name_value is None:
             return []
 
-        return self.certificate.subject_alt_name_value.native
+        return self._certificate.subject_alt_name_value.native
 
     @property
     def crl_distribution_points(self):
-        if self.certificate.crl_distribution_points_value is None:
+        if self._certificate.crl_distribution_points_value is None:
             return []
 
         return [
             crl_distribution_point.url
-            for crl_distribution_point in self.certificate.crl_distribution_points_value
+            for crl_distribution_point in self._certificate.crl_distribution_points_value
         ]
 
     @property
     def ocsp_responders(self):
-        return self.certificate.ocsp_urls
+        return self._certificate.ocsp_urls
 
     @property
     def is_ca(self):
-        return self.certificate.ca
+        return self._certificate.ca
 
     @property
     def is_self_signed(self):
-        return self.certificate.self_issued
+        return self._certificate.self_issued
