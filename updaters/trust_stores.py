@@ -3,9 +3,11 @@
 
 import collections
 import datetime
+import tarfile
 
 import attr
 import bs4
+import six
 
 from cryptodatahub.common.entity import Entity
 from cryptodatahub.common.stores import (
@@ -29,6 +31,30 @@ class RootCertificateStore(CryptoDataParamsBase):
             value_validator=attr.validators.instance_of(RootCertificateTrustConstraintAction)
         )
     )
+
+
+class FetcherRootCertificateStoreGoogle(FetcherBase):
+    @classmethod
+    def _get_current_data(cls):
+        data = HttpFetcher()(
+            'https://android.googlesource.com/platform/system/ca-certificates/+archive/refs/heads/master/files.tar.gz'
+        )
+        with tarfile.open(fileobj=six.BytesIO(data), mode='r') as tar:
+            for member in tar.getmembers():
+                yield tar.extractfile(member).read().decode('ascii')
+
+    @classmethod
+    def _transform_data(cls, current_data):
+        certificates = {}
+        for root_certificate_pem in current_data:
+            root_certificate_pem_lines = root_certificate_pem.splitlines()
+            root_certificate_pem_lines = root_certificate_pem_lines[
+                :root_certificate_pem_lines.index('-----END CERTIFICATE-----') + 1
+            ]
+
+            certificates[tuple(root_certificate_pem_lines)] = tuple()
+
+        return certificates
 
 
 class FetcherRootCertificateStoreApple(FetcherBase):
@@ -159,6 +185,7 @@ class FetcherRootCertificateStoreMozilla(FetcherCsvBase):
 class FetcherRootCertificateStore(FetcherBase):
     _ROOT_CERTIFICATE_STORE_UPDATERS = collections.OrderedDict([
         (Entity.MOZILLA, FetcherRootCertificateStoreMozilla),
+        (Entity.GOOGLE, FetcherRootCertificateStoreGoogle),
         (Entity.MICROSOFT, FetcherRootCertificateStoreMicrosoft),
         (Entity.APPLE, FetcherRootCertificateStoreApple),
     ])

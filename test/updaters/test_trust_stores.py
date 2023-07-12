@@ -8,6 +8,7 @@ except ImportError:
 import csv
 import datetime
 import os
+import tarfile
 
 from test.common.classes import TestClasses
 
@@ -17,6 +18,7 @@ from updaters.common import HttpFetcher, UpdaterBase
 from updaters.trust_stores import (
     FetcherRootCertificateStore,
     FetcherRootCertificateStoreApple,
+    FetcherRootCertificateStoreGoogle,
     FetcherRootCertificateStoreMicrosoft,
     FetcherRootCertificateStoreMozilla,
 )
@@ -94,6 +96,35 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
             mock_data += '</tr>' + os.linesep
 
         return mock_data.encode('ascii')
+
+    def _get_mock_data_google(self, public_keys=()):
+        mock_data = six.BytesIO()
+
+        with tarfile.open(fileobj=mock_data, mode='w:gz') as tar:
+            for public_key in public_keys:
+                content = public_key.pem.encode('ascii')
+                tarinfo = tarfile.TarInfo(public_key.fingerprints[Hash.SHA2_256])
+                tarinfo.size = len(content)
+                tar.addfile(tarinfo, six.BytesIO(content))
+
+        return mock_data.getvalue()
+
+
+class TestUpdaterRootCertificateStoreGoogle(TestRootCertificateBase):
+    def test_parse_empty(self):
+        with mock.patch.object(HttpFetcher, '__call__', return_value=self._get_mock_data_google()):
+            root_certificate_store = FetcherRootCertificateStoreGoogle.from_current_data()
+        self.assertEqual(len(root_certificate_store.parsed_data), 0)
+
+    def test_parse_pem(self):
+        public_key_x509 = self._get_public_key_x509('snakeoil_ca_cert')
+        mock_data = self._get_mock_data_google([public_key_x509])
+        with mock.patch.object(HttpFetcher, '__call__', return_value=mock_data):
+            root_certificate_store = FetcherRootCertificateStoreGoogle.from_current_data()
+        self.assertEqual(len(root_certificate_store.parsed_data), 1)
+        self.assertEqual(root_certificate_store.parsed_data, {
+            tuple(public_key_x509.pem.splitlines()): (),
+        })
 
 
 class TestUpdaterRootCertificateStoreApple(TestRootCertificateBase):
@@ -250,6 +281,7 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
     def test_parse_empty(self):
         http_fetcher_results = [
             self._get_mock_data_mozilla(),
+            self._get_mock_data_google(),
             self._get_mock_data_microsoft(),
             self._get_mock_data_apple(),
         ]
@@ -263,6 +295,7 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
         mock_data_microsoft = self._get_mock_data_microsoft([self.public_key_x509_snakeoil_ca])
         http_fetcher_results = [
             mock_data_mozilla,
+            self._get_mock_data_google(),
             mock_data_microsoft,
             self.public_key_x509_snakeoil_ca.pem.encode('ascii'),
             self._get_mock_data_apple(),
@@ -286,6 +319,7 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
         ])
         http_fetcher_results = [
             mock_data_mozilla,
+            self._get_mock_data_google(),
             mock_data_microsoft,
             self.public_key_x509_snakeoil_ca.pem.encode('ascii'),
             self._get_mock_data_apple(),
