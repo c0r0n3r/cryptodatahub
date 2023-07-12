@@ -10,6 +10,7 @@ import json
 import inspect
 import os
 import re
+import unicodedata
 
 import dateutil.parser
 import six
@@ -84,7 +85,7 @@ def convert_enum(enum_type):
     return _EnumConverter(enum_type)
 
 
-@attr.s
+@attr.s(frozen=True)
 class Base64Data(object):
     value = attr.ib(validator=attr.validators.instance_of((bytes, bytearray)))
 
@@ -311,6 +312,35 @@ class CryptoDataParamsBase(object):
             if attribute.init
         ]
 
+    def _asdict_filter(self, attribute, _):
+        return not attribute.name.startswith('_')
+
+    def _asdict_serializer(self, _, __, value):
+        if hasattr(value, '_asdict'):
+            return getattr(value, '_asdict')()
+        if isinstance(value, enum.Enum):
+            return value.name
+        if isinstance(value, datetime.datetime):
+            return str(value)
+
+        return value
+
+    def _asdict(self):
+        return attr.asdict(
+            self,
+            filter=self._asdict_filter,
+            dict_factory=collections.OrderedDict,
+            value_serializer=self._asdict_serializer
+        )
+
+
+@attr.s(frozen=True)
+class CryptoDataParamsFetchedBase(CryptoDataParamsBase):
+    @property
+    @abc.abstractmethod
+    def identifier(self):
+        raise NotImplementedError()
+
 
 @attr.s(frozen=True)
 class CryptoDataParamsNamed(CryptoDataParamsBase):
@@ -362,7 +392,7 @@ class CryptoDataEnumBase(enum.Enum):
     @classmethod
     def get_json_records(cls, param_class):
         return collections.OrderedDict([
-            (name, param_class(**{
+            (six.ensure_str(unicodedata.normalize('NFD', name).encode('ascii', 'ignore')), param_class(**{
                 init_param_name.replace('-', '_'): value
                 for init_param_name, value in params.items()
                 if not init_param_name.startswith('_')
@@ -384,28 +414,36 @@ class CryptoDataEnumBase(enum.Enum):
 
         return '-'.join(enum_class_name_parts) + '.json'
 
-    @staticmethod
-    def get_json_path(param_class):
+    @classmethod
+    def get_json_path(cls, param_class):
         return (
             pathlib.Path(inspect.getfile(param_class)).parent /
-            CryptoDataEnumBase.get_file_name_from_param_class(param_class)
+            cls.get_file_name_from_param_class(param_class)
         )
 
-    @staticmethod
-    def get_json_object(param_class):
-        json_path = CryptoDataEnumBase.get_json_path(param_class)
-        with codecs.open(str(json_path), 'r', encoding='ascii') as json_file:
+    @classmethod
+    def get_json_encoding(cls):
+        return 'ascii'
+
+    @classmethod
+    def is_json_encoding_ascii(cls):
+        return cls.get_json_encoding() == 'ascii'
+
+    @classmethod
+    def get_json_object(cls, param_class):
+        json_path = cls.get_json_path(param_class)
+        with codecs.open(str(json_path), 'r', encoding=cls.get_json_encoding()) as json_file:
             return json.load(json_file, object_pairs_hook=collections.OrderedDict)
 
-    @staticmethod
-    def dump_json(json_object):
-        return json.dumps(json_object, ensure_ascii=True, indent=4) + os.linesep
+    @classmethod
+    def dump_json(cls, json_object):
+        return json.dumps(json_object, ensure_ascii=cls.is_json_encoding_ascii(), indent=4) + os.linesep
 
-    @staticmethod
-    def set_json(param_class, json_object):
-        json_path = CryptoDataEnumBase.get_json_path(param_class)
-        with codecs.open(str(json_path), 'w+', encoding='ascii') as json_file:
-            json_file.write(CryptoDataEnumBase.dump_json(json_object))
+    @classmethod
+    def set_json(cls, param_class, json_object):
+        json_path = cls.get_json_path(param_class)
+        with codecs.open(str(json_path), 'w+', encoding=cls.get_json_encoding()) as json_file:
+            json_file.write(cls.dump_json(json_object))
 
     @classmethod
     def get_json(cls, param_class):

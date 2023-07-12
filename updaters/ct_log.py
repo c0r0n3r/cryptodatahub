@@ -3,48 +3,35 @@
 
 import collections
 import json
-import re
 
+import attr
 import urllib3
 
 from cryptodatahub.common.entity import Entity
-from cryptodatahub.common.stores import CertificateTransparencyLogParams
+from cryptodatahub.common.stores import CertificateTransparencyLog, CertificateTransparencyLogParams
+from cryptodatahub.common.utils import name_to_enum_item_name
 
-from updaters.common import UpdaterBase
+from updaters.common import FetcherBase, UpdaterBase
 
 
-class UpdaterCertificateTransparencyLogs(UpdaterBase):
+@attr.s
+class FetcherCertificateTransparencyLogs(FetcherBase):
     _CT_LOGS_ALL_JSON_URL = 'https://www.gstatic.com/ct/log_list/v3/all_logs_list.json'
     _CT_LOG_OPERATOR_NAME_GOOGLE_NAME = {
         'Up In The Air Consulting': 'Filippo Valsorda',
         'Wang Shengnan': 'GDCA',
     }
 
-    def _get_current_data(self):
+    @classmethod
+    def _get_current_data(cls):
         http = urllib3.PoolManager()
-        response = http.request('GET', self._CT_LOGS_ALL_JSON_URL, preload_content=False)
+        response = http.request('GET', cls._CT_LOGS_ALL_JSON_URL, preload_content=False)
         response.release_conn()
 
         return json.loads(response.data, object_pairs_hook=collections.OrderedDict)
 
-    @staticmethod
-    def convert_name(name):
-        name = re.sub('\'', '', name.upper())
-
-        name = re.sub('[^A-Z0-9]', '_', name)
-        name = re.sub('__', '_', name)
-
-        return name.strip('_')
-
-    @staticmethod
-    def convert_description(description):
-        name = UpdaterCertificateTransparencyLogs.convert_name(description)
-
-        name = re.sub('([^_])(20[12][0-9][_0-9]*)(H[1-2])?(_LOG)?$', '\\1_\\2\\3\\4', name)
-
-        return name
-
-    def _transform_data(self, current_data):
+    @classmethod
+    def _transform_data(cls, current_data):
         transformed_logs = []
 
         for operator in current_data['operators']:
@@ -58,22 +45,25 @@ class UpdaterCertificateTransparencyLogs(UpdaterBase):
                     log.update(collections.OrderedDict([('log_state', state_args)]))
 
                 operator_name = operator['name']
-                operator_name = self._CT_LOG_OPERATOR_NAME_GOOGLE_NAME.get(operator_name, operator_name)
-                log['operator'] = Entity[self.convert_name(operator_name)].name
+                operator_name = cls._CT_LOG_OPERATOR_NAME_GOOGLE_NAME.get(operator_name, operator_name)
+                log['operator'] = Entity[name_to_enum_item_name(operator_name)].name
 
-                transformed_logs.append(log)
+                transformed_logs.append(CertificateTransparencyLogParams(**log))
 
-        return collections.OrderedDict([
-            (self.convert_description(log['description']), log)
-            for log in transformed_logs
-        ])
+        return transformed_logs
 
-    def _get_param_class(self):
-        return CertificateTransparencyLogParams
+
+class UpdaterCertificateTransparencyLogs(UpdaterBase):
+    def __init__(self):
+        super(UpdaterCertificateTransparencyLogs, self).__init__(
+            FetcherCertificateTransparencyLogs,
+            CertificateTransparencyLog,
+            CertificateTransparencyLogParams,
+        )
 
 
 def main():
-    UpdaterCertificateTransparencyLogs().update()  # pragma: no cover
+    UpdaterCertificateTransparencyLogs()()  # pragma: no cover
 
 
 if __name__ == '__main__':

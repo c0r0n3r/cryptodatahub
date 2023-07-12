@@ -7,6 +7,14 @@
             "CT_LOG_OPERATOR"
         ]
     },
+    "APPLE": {
+        "name": "Apple",
+        "long_name": "Apple Inc.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CA_TRUST_STORE_OWNER"
+        ]
+    },
     "ASF": {
         "name": "Apache Software Foundation",
         "long_name": null,
@@ -76,6 +84,7 @@
         "long_name": "Google LLC",
         "type": "FOR_PROFIT_ORG",
         "activities": [
+            "CA_TRUST_STORE_OWNER",
             "CT_LOG_OPERATOR",
             "CLIENT_DEVELOPER"
         ]
@@ -112,11 +121,20 @@
             "CT_LOG_OPERATOR"
         ]
     },
+    "MICROSOFT": {
+        "name": "Microsoft",
+        "long_name": "Microsoft Corporation",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CA_TRUST_STORE_OWNER"
+        ]
+    },
     "MOZILLA": {
         "name": "Mozilla",
         "long_name": "Mozilla Foundation",
         "type": "NONPROFIT_ORG",
         "activities": [
+            "CA_TRUST_STORE_OWNER",
             "CLIENT_DEVELOPER"
         ]
     },

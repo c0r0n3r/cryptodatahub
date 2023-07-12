@@ -11,9 +11,16 @@ import collections
 import enum
 import json
 
+try:
+    import pathlib
+except ImportError:  # pragma: no cover
+    import pathlib2 as pathlib  # pragma: no cover
+
 import attr
+import pyfakefs.fake_filesystem_unittest
 import six
 
+from cryptodatahub.common.key import PublicKey, PublicKeyX509Base
 from cryptodatahub.common.types import (
     CryptoDataParamsEnumNumeric,
     CryptoDataParamsEnumString,
@@ -204,3 +211,21 @@ class TestClasses:
                 for item in self.json_data.values()
                 if int(item['code']) != int(item['_code_in_hex'], 16)
             ], [])
+
+    class TestKeyBase(pyfakefs.fake_filesystem_unittest.TestCase):
+        def setUp(self):
+            self.setUpPyfakefs()
+
+            self.__certs_dir = pathlib.PurePath(__file__).parent.parent / 'common' / 'certs'
+            self.fs.add_real_directory(str(self.__certs_dir))
+
+        def _get_public_key_pem(self, public_key_file_name):
+            public_key_path = self.__certs_dir / (public_key_file_name + '.pem')
+            with codecs.open(str(public_key_path), 'r', encoding='ascii') as pem_file:
+                return pem_file.read()
+
+        def _get_public_key(self, public_key_file_name):
+            return PublicKey.from_pem(self._get_public_key_pem(public_key_file_name))
+
+        def _get_public_key_x509(self, public_key_file_name):
+            return PublicKeyX509Base.from_pem(self._get_public_key_pem(public_key_file_name))

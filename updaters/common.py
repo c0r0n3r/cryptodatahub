@@ -1,48 +1,156 @@
 # -*- coding: utf-8 -*-
 
+import abc
 import collections
+import csv
+import six
 
-from cryptodatahub.common.types import CryptoDataEnumBase
+from six.moves import collections_abc
+
+import attr
+import urllib3
+
+from cryptodatahub.common.stores import RootCertificate
 
 
+@attr.s(frozen=True)
+class HttpFetcher(object):
+    connect_timeout = attr.ib(default=2, validator=attr.validators.instance_of((int, float)))
+    read_timeout = attr.ib(default=1, validator=attr.validators.instance_of((int, float)))
+    retry = attr.ib(default=1, validator=attr.validators.instance_of(int))
+    _request_params = attr.ib(default=None, init=False)
+
+    def __attrs_post_init__(self):
+        request_params = {
+            'preload_content': False,
+            'timeout': urllib3.Timeout(connect=self.connect_timeout, read=self.read_timeout),
+            'retries': urllib3.Retry(
+                self.retry, status_forcelist=urllib3.Retry.RETRY_AFTER_STATUS_CODES | frozenset([502])
+            ),
+        }
+
+        object.__setattr__(self, '_request_params', request_params)
+
+    def __call__(self, url):
+        pool_manager = urllib3.PoolManager()
+        try:
+            response = pool_manager.request('GET', url, **self._request_params)
+        except BaseException as e:  # pylint: disable=broad-except
+            if e.__class__.__name__ != 'TimeoutError' and not isinstance(e, urllib3.exceptions.HTTPError):
+                raise e
+
+            return None
+
+        pool_manager.clear()
+
+        return response.data
+
+
+@attr.s(frozen=True)
+class CertificatePemFetcher(object):
+    http_fetcher = attr.ib(
+        init=False,
+        default=HttpFetcher(connect_timeout=5, read_timeout=30, retry=10),
+        validator=attr.validators.instance_of(HttpFetcher),
+    )
+
+    def __call__(self, sha2_256_fingerprint):
+        try:
+            return RootCertificate.get_item_by_sha2_256_fingerprint(
+                sha2_256_fingerprint
+            ).value.certificate.pem
+        except KeyError:
+            data = self.http_fetcher(
+                'https://crt.sh/?d={}'.format(sha2_256_fingerprint),
+            )
+            return six.ensure_str(data).strip()
+
+
+@attr.s
 class FetcherBase(object):
-    def _get_current_data(self):
+    parsed_data = attr.ib(validator=attr.validators.instance_of(collections_abc.Iterable))
+
+    @classmethod
+    @abc.abstractmethod
+    def _get_current_data(cls):
         raise NotImplementedError()
 
-    def _transform_data(self, current_data):
+    @classmethod
+    @abc.abstractmethod
+    def _transform_data(cls, current_data):
         raise NotImplementedError()
 
-    def _get_param_class(self):
+    @classmethod
+    def from_current_data(cls):
+        current_data = cls._get_current_data()
+        transformed_data = cls._transform_data(current_data)
+
+        return cls(transformed_data)
+
+
+@attr.s
+class FetcherCsvBase(FetcherBase):
+    @classmethod
+    @abc.abstractmethod
+    def _get_csv_url(cls):
         raise NotImplementedError()
 
-    def get_current_data(self):
-        current_data = self._get_current_data()
-        transformed_data = self._transform_data(current_data)
-        param_class_init_attribute_names = self._get_param_class().get_init_attribute_names()
-        return collections.OrderedDict([
-            (param_name, collections.OrderedDict([
-                (attr_name, param_attrs[attr_name])
-                for attr_name in param_class_init_attribute_names
-                if attr_name in param_attrs
+    @classmethod
+    @abc.abstractmethod
+    def _get_csv_fields(cls):
+        raise NotImplementedError()
+
+    @classmethod
+    def _get_fetcher(cls):
+        return HttpFetcher()
+
+    @classmethod
+    def _get_current_data(cls):
+        data = cls._get_fetcher()(cls._get_csv_url())
+
+        csv_reader = csv.DictReader(
+            six.StringIO(six.ensure_str(data)),
+            fieldnames=cls._get_csv_fields(),
+        )
+
+        sample = six.ensure_str(data[:4096])
+        if csv.Sniffer().has_header(sample):
+            next(csv_reader, None)
+
+        return csv_reader
+
+    @classmethod
+    @abc.abstractmethod
+    def _transform_data(cls, current_data):
+        raise NotImplementedError()
+
+
+@attr.s
+class UpdaterBase(object):
+    fetcher_class = attr.ib(validator=attr.validators.instance_of(type))
+    enum_class = attr.ib(validator=attr.validators.instance_of(type))
+    enum_param_class = attr.ib(validator=attr.validators.instance_of(type))
+
+    def _has_item_changed(self, enum_item_name, enum_item_value):
+        try:
+            return self.enum_class[enum_item_name].value != enum_item_value
+        except KeyError:
+            return True
+
+    def _has_data_changed(self, current_data_items_by_name):
+        return any(map(
+            lambda item: self._has_item_changed(*item),
+            current_data_items_by_name.items()
+        ))
+
+    def __call__(self):
+        current_data = self.fetcher_class.from_current_data()
+        current_data_items_by_name = {
+            fetched_data_item.identifier: fetched_data_item
+            for fetched_data_item in current_data.parsed_data
+        }
+        if self._has_data_changed(current_data_items_by_name):
+            self.enum_class.set_json(self.enum_param_class, collections.OrderedDict([
+                (identifier, current_data_items_by_name[identifier]._asdict())
+                for identifier in sorted(current_data_items_by_name.keys())
             ]))
-            for param_name, param_attrs in sorted(transformed_data.items())
-        ])
-
-
-class UpdaterBase(FetcherBase):
-    def _get_current_data(self):
-        raise NotImplementedError()
-
-    def _transform_data(self, current_data):
-        raise NotImplementedError()
-
-    def _get_param_class(self):
-        raise NotImplementedError()
-
-    def _compare_data(self, current_data):
-        return CryptoDataEnumBase.get_json(self._get_param_class()) == current_data
-
-    def update(self):
-        current_data = self.get_current_data()
-        if not self._compare_data(current_data):
-            CryptoDataEnumBase.set_json(self._get_param_class(), current_data)

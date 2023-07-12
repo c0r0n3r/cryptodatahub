@@ -16,6 +16,7 @@ class EntityType(enum.Enum):
 
 
 class EntityRole(enum.Enum):
+    CA_TRUST_STORE_OWNER = 'CA trust store owner'
     CLIENT_DEVELOPER = 'client developer'
     CT_LOG_OPERATOR = 'certificate transparency log operator'
     SERVER_DEVELOPER = 'server developer'
@@ -34,7 +35,28 @@ class EntityParams(CryptoDataParamsNamed):
     )
 
 
-Entity = CryptoDataEnumBase('Entity', CryptoDataEnumBase.get_json_records(EntityParams))
+class EntityBase(CryptoDataEnumBase):
+    @classmethod
+    def get_items_by_role(cls, role):
+        if not hasattr(cls, '_ITEMS_BY_ROLE'):
+            items_by_role = {}
+
+            for activity in EntityRole:
+                items_by_role[activity] = []
+
+            for entity in cls:
+                for activity in entity.value.activities:
+                    items_by_role[activity].append(entity)
+
+            cls._ITEMS_BY_ROLE = {
+                role: tuple(activities)
+                for role, activities in items_by_role.items()
+            }
+
+        return cls._ITEMS_BY_ROLE[role]
+
+
+Entity = EntityBase('Entity', EntityBase.get_json_records(EntityParams))
 
 
 class ClientType(enum.Enum):
