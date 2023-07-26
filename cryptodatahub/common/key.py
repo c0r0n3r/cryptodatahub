@@ -3,6 +3,7 @@
 import abc
 import hashlib
 import base64
+import collections
 import datetime
 import os
 
@@ -98,6 +99,13 @@ class PublicKey(object):
         return OrderedDict([
             (hash_type, self.fingerprint(hash_type))
             for hash_type in [Hash.MD5, Hash.SHA1, Hash.SHA2_256]
+        ])
+
+    def _asdict(self):
+        return collections.OrderedDict([
+            ('key_type', self.key_type),
+            ('key_size', self.key_size),
+            ('fingerprints', self.fingerprints),
         ])
 
 
