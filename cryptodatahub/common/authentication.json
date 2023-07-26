@@ -77,10 +77,16 @@
         "oid": null,
         "anonymous": false
     },
-    "EDDSA": {
-        "name": "EdDSA",
-        "long_name": "Edwards-curve Digital Signature Algorithm",
-        "oid": null,
+    "ED25519": {
+        "name": "Ed25519",
+        "long_name": "Edwards-curve Digital Signature Algorithm Ed25519",
+        "oid": "1.3.101.112",
+        "anonymous": false
+    },
+    "ED448": {
+        "name": "Ed448",
+        "long_name": "Edwards-curve Digital Signature Algorithm Ed448",
+        "oid": "1.3.101.113",
         "anonymous": false
     }
 }

@@ -166,5 +166,19 @@
         "oid": "1.2.643.7.1.1.3.3",
         "key_type": "GOST_R3410_12_512",
         "hash_algorithm": "GOST_R3411_12_512"
+    },
+    "ED25519": {
+        "name": "Ed25519",
+        "long_name": null,
+        "oid": "1.3.101.112",
+        "key_type": "ED25519",
+        "hash_algorithm": null
+    },
+    "ED448": {
+        "name": "Ed448",
+        "long_name": null,
+        "oid": "1.3.101.113",
+        "key_type": "ED448",
+        "hash_algorithm": null
     }
 }

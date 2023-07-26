@@ -75,6 +75,8 @@ class PublicKey(object):
             return 512
         if self.key_type == Authentication.GOST_R3410_01:
             return 256
+        if self.key_type == Authentication.ED25519:
+            return 256
 
         return int(self._public_key.bit_size)
 
