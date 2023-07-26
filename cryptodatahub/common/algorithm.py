@@ -91,7 +91,7 @@ class SignatureParams(CryptoDataParamsOIDOptional):
     )
     hash_algorithm = attr.ib(
         converter=convert_enum(Hash),
-        validator=attr.validators.instance_of(Hash),
+        validator=attr.validators.optional(attr.validators.instance_of(Hash)),
     )
 
 
