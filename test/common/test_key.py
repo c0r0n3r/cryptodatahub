@@ -17,6 +17,8 @@ from cryptodatahub.common.algorithm import Authentication, Hash, Signature
 from cryptodatahub.common.key import PublicKey, PublicKeyX509Base
 from cryptodatahub.common.utils import bytes_from_hex_string
 
+from cryptodatahub.tls.algorithm import TlsExtensionType
+
 
 class TestPublicKey(TestClasses.TestKeyBase):
     def test_pem(self):
@@ -259,6 +261,13 @@ class TestPublicKeyX509(TestClasses.TestKeyBase):  # pylint: disable=too-many-pu
         ) as prop_mock:
             prop_mock.return_value = None
             self.assertFalse(public_key_x509.extended_validation)
+
+    def test_tls_features(self):
+        public_key_x509 = self._get_public_key_x509('badssl.com')
+        self.assertEqual(public_key_x509.tls_features, [])
+
+        public_key_x509 = self._get_public_key_x509('bitnami.com')
+        self.assertEqual(public_key_x509.tls_features, [TlsExtensionType.STATUS_REQUEST])
 
     def test_signature_algorithm_unknown(self):
         public_key_x509 = self._get_public_key_x509('sha1-intermediate.badssl.com')

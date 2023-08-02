@@ -17,6 +17,8 @@ import attr
 from cryptodatahub.common.algorithm import Authentication, Hash, Signature
 from cryptodatahub.common.utils import bytes_to_hex_string
 
+from cryptodatahub.tls.algorithm import TlsExtensionType
+
 
 @attr.s(eq=False)
 class PublicKey(object):
@@ -229,17 +231,27 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
     def public_key_pin(self):
         return base64.b64encode(self.get_digest(Hash.SHA2_256, self.key_bytes)).decode('ascii')
 
-    @property
-    def extended_validation(self):
+    def _has_any_policy_value(self, oid_values):
         if self._certificate.certificate_policies_value is None:
             return False
 
         for policy_information in self._certificate.certificate_policies_value:
-            for ca_ev_oid_list in self._EV_OIDS_BY_CA.values():
-                if policy_information['policy_identifier'].dotted in ca_ev_oid_list:
-                    return True
+            if policy_information['policy_identifier'].dotted in oid_values:
+                return True
 
         return False
+
+    @property
+    def extended_validation(self):
+        return any(map(self._has_any_policy_value, self._EV_OIDS_BY_CA.values()))
+
+    @property
+    def tls_features(self):
+        tls_feature_value = self._certificate.tls_feature_value
+        if tls_feature_value is None:
+            return []
+
+        return list(map(lambda feature: TlsExtensionType.from_code(feature.native), tls_feature_value))
 
     @property
     def serial_number(self):
