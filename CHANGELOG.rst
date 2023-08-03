@@ -1,8 +1,11 @@
 Changelog
 =========
 
-0.10.0
-------
+0.10.0 - 2023-08-03
+-------------------
+
+Features
+~~~~~~~~
 
 -  Generic
 
@@ -13,8 +16,22 @@ Changelog
       -  `Microsoft <https://en.wikipedia.org/wiki/Microsoft>`__
       -  `Mozilla <https://en.wikipedia.org/wiki/Mozilla>`__
 
+   -  add TLS feature querying function for X.509 certificates (#7)
+
+      -  Status request (OCSP must staple) extension
+
+Notable fixes
+~~~~~~~~~~~~~
+
+-  Generic
+
+   -  X.509 extended validation checker
+
 0.9.1 - 2023-06-22
 ------------------
+
+Features
+~~~~~~~~
 
 -  Generic
 
@@ -23,6 +40,9 @@ Changelog
 
 0.8.5 - 2023-04-02
 ------------------
+
+Features
+~~~~~~~~
 
 -  Generic
 
