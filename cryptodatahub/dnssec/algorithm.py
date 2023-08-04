@@ -4,7 +4,7 @@ import attr
 
 import six
 
-from cryptodatahub.common.algorithm import KeyExchange, Signature
+from cryptodatahub.common.algorithm import Hash, KeyExchange, Signature
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataEnumCodedBase,
@@ -33,3 +33,24 @@ class AlgorithmParams(CryptoDataParamsEnumNumeric):
 
 
 DnsSecAlgorithm = CryptoDataEnumCodedBase('DnsSecAlgorithm', CryptoDataEnumCodedBase.get_json_records(AlgorithmParams))
+
+
+@attr.s(frozen=True)
+class DigestTypeParams(CryptoDataParamsEnumNumeric):
+    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    hash = attr.ib(
+        converter=convert_enum(Hash),
+        validator=attr.validators.instance_of(Hash),
+    )
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+    def __str__(self):
+        return self.name
+
+
+DnsSecDigestType = CryptoDataEnumCodedBase(
+    'DnsSecDigestType', CryptoDataEnumCodedBase.get_json_records(DigestTypeParams)
+)

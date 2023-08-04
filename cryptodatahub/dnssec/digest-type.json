@@ -1,0 +1,26 @@
+{
+    "SHA1": {
+        "_code_in_hex": "0x01",
+        "code": 1,
+        "name": "SHA-1",
+        "hash": "SHA1"
+    },
+    "SHA_256": {
+        "_code_in_hex": "0x02",
+        "code": 2,
+        "name": "SHA-256",
+        "hash": "SHA2_256"
+    },
+    "GOST_R3411_94": {
+        "_code_in_hex": "0x03",
+        "code": 3,
+        "name": "GOST R 34.11-94",
+        "hash": "GOST_R3411_94"
+    },
+    "SHA_384": {
+        "_code_in_hex": "0x04",
+        "code": 4,
+        "name": "SHA-384",
+        "hash": "SHA2_384"
+    }
+}
