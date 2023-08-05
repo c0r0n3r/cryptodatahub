@@ -2,7 +2,16 @@
 
 from test.common.classes import TestClasses
 
-from cryptodatahub.dnssec.algorithm import DnsSecAlgorithm, DnsSecDigestType
+from cryptodatahub.dnssec.algorithm import DnsRrType, DnsSecAlgorithm, DnsSecDigestType
+
+
+class TestDnsRrType(TestClasses.TestJsonCodeNumericBase):
+    @classmethod
+    def _get_class(cls):
+        return DnsRrType
+
+    def test_name(self):
+        self.assertEqual(str(DnsRrType.CAA.value), 'CAA')
 
 
 class TestDnsSecAlgorithm(TestClasses.TestJsonCodeNumericBase):

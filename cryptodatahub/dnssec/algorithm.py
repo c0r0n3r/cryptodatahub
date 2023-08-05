@@ -54,3 +54,21 @@ class DigestTypeParams(CryptoDataParamsEnumNumeric):
 DnsSecDigestType = CryptoDataEnumCodedBase(
     'DnsSecDigestType', CryptoDataEnumCodedBase.get_json_records(DigestTypeParams)
 )
+
+
+@attr.s(frozen=True)
+class RrTypeParams(CryptoDataParamsEnumNumeric):
+    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    description = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+    def __str__(self):
+        return self.name
+
+
+DnsRrType = CryptoDataEnumCodedBase(
+    'DnsRrType', CryptoDataEnumCodedBase.get_json_records(RrTypeParams)
+)
