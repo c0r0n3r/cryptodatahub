@@ -26,6 +26,7 @@ from test.common.classes import (
 
 import dateutil
 import pyfakefs.fake_filesystem_unittest
+import urllib3
 
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.types import (
@@ -42,6 +43,7 @@ from cryptodatahub.common.types import (
     convert_enum,
     convert_iterable,
     convert_mapping,
+    convert_url,
     convert_variadic,
 )
 
@@ -294,6 +296,31 @@ class TestMappingConverter(unittest.TestCase):
 
     def test_repr(self):
         self.assertEqual(repr(convert_mapping(str)), '<mapping converter>')
+
+
+class TestUrlConverter(unittest.TestCase):
+    def test_error_invalid_value(self):
+        original_value = 'https://example.com:123456'
+        converted_value = convert_url()(original_value)
+        print(repr(converted_value))
+        self.assertEqual(id(original_value), id(converted_value))
+
+    def test_none(self):
+        converted_value = convert_url()(None)
+        self.assertEqual(converted_value, None)
+
+    def test_convert_value(self):
+        original_value = 'https://example.com'
+        converted_value = convert_url()(original_value)
+
+        self.assertEqual(
+            converted_value,
+            urllib3.util.url.Url(scheme='https', host='example.com')
+        )
+        self.assertEqual(id(converted_value), id(convert_url()(converted_value)))
+
+    def test_repr(self):
+        self.assertEqual(repr(convert_url()), '<url converter>')
 
 
 class TestClientVariadicConverter(unittest.TestCase):

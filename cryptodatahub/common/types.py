@@ -22,6 +22,7 @@ except ImportError:  # pragma: no cover
     import pathlib2 as pathlib  # pragma: no cover
 
 import attr
+import urllib3
 
 from cryptodatahub.common.exception import InvalidValue
 
@@ -276,6 +277,30 @@ class _ClientVersionConverter(_ConverterBase):
 
 def convert_client_version():
     return _ClientVersionConverter()
+
+
+@attr.s(repr=False, slots=True, hash=True)
+class _UrlConverter(_ConverterBase):
+    def __call__(self, value):
+        if value is None:
+            return None
+
+        if not isinstance(value, six.string_types):
+            return value
+
+        try:
+            value = urllib3.util.parse_url(value)
+        except urllib3.exceptions.LocationParseError:
+            pass
+
+        return value
+
+    def __repr__(self):
+        return '<url converter>'
+
+
+def convert_url():
+    return _UrlConverter()
 
 
 @attr.s(repr=False, slots=True, hash=True)
