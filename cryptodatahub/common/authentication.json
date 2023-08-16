@@ -3,84 +3,98 @@
         "name": "anon",
         "long_name": "anonymous",
         "oid": null,
+        "vulnerabilities": null,
         "anonymous": true
     },
     "DSS": {
         "name": "DSS",
         "long_name": "Digital Signature Standard",
         "oid": "1.2.840.10040.4.1",
+        "vulnerabilities": null,
         "anonymous": false
     },
     "ECDSA": {
         "name": "ECDSA",
         "long_name": "Elliptic Curve Digital Signature Algorithm",
         "oid": "1.2.840.10045.2.1",
+        "vulnerabilities": null,
         "anonymous": false
     },
     "FORTEZZA": {
         "name": "Fortezza",
         "long_name": null,
         "oid": null,
+        "vulnerabilities": null,
         "anonymous": false
     },
     "GOST2814789": {
         "name": "GOST 28147-89",
         "long_name": null,
         "oid": "1.2.643.2.2.21",
+        "vulnerabilities": null,
         "anonymous": false
     },
     "GOST_R3410_01": {
         "name": "GOST R 34.10-2001",
         "long_name": null,
         "oid": "1.2.643.2.2.19",
+        "vulnerabilities": null,
         "anonymous": false
     },
     "GOST_R3410_12_256": {
         "name": "GOST R 34.10-2012 (256)",
         "long_name": null,
         "oid": "1.2.643.7.1.1.1.1",
+        "vulnerabilities": null,
         "anonymous": false
     },
     "GOST_R3410_12_512": {
         "name": "GOST R 34.10-2012 (512)",
         "long_name": null,
         "oid": "1.2.643.7.1.1.1.2",
+        "vulnerabilities": null,
         "anonymous": false
     },
     "GOST_R3410_94": {
         "name": "GOST R 34.10-94",
         "long_name": null,
         "oid": "1.2.643.2.2.20",
+        "vulnerabilities": null,
         "anonymous": false
     },
     "KRB5": {
         "name": "KRB5",
         "long_name": "Kerberos V5",
         "oid": null,
+        "vulnerabilities": null,
         "anonymous": false
     },
     "PSK": {
         "name": "PSK",
         "long_name": "Pre-shared Key",
         "oid": null,
+        "vulnerabilities": null,
         "anonymous": false
     },
     "RSA": {
         "name": "RSA",
         "long_name": "Rivest-Shamir-Adleman",
         "oid": "1.2.840.113549.1.1.1",
+        "vulnerabilities": null,
         "anonymous": false
     },
     "SRP": {
         "name": "SRP",
         "long_name": "Secure Remote Password",
         "oid": null,
+        "vulnerabilities": null,
         "anonymous": false
     },
     "EDDSA": {
         "name": "EDDSA",
         "long_name": "Edwards-curve Digital Signature Algorithm",
         "oid": null,
+        "vulnerabilities": null,
         "anonymous": false
     }
 }

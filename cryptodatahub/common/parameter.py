@@ -4,6 +4,7 @@ import six
 import attr
 
 from cryptodatahub.common.entity import Entity, Server
+from cryptodatahub.common.grade import GradeableVulnerabilities
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataParamsBase,
@@ -48,7 +49,7 @@ class DHParameterNumbers(object):
 
 
 @attr.s(eq=False)
-class DHParamWellKnownParams(CryptoDataParamsBase):
+class DHParamWellKnownParams(CryptoDataParamsBase, GradeableVulnerabilities):
     parameter_numbers = attr.ib(
         converter=convert_dict_to_object(DHParameterNumbers),
         validator=attr.validators.instance_of(DHParameterNumbers)
@@ -64,6 +65,10 @@ class DHParamWellKnownParams(CryptoDataParamsBase):
     )
     key_size = attr.ib(validator=attr.validators.instance_of(six.integer_types))
     safe_prime = attr.ib(default=True, validator=attr.validators.instance_of(bool))
+
+    @classmethod
+    def get_gradeable_name(cls):
+        return 'DH parameter'
 
     def __str__(self):
         if self.standards:

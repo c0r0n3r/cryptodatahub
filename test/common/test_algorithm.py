@@ -65,7 +65,7 @@ class TestMAC(TestClasses.TestJsonBase):
 class TestMACParams(unittest.TestCase):
     def test_error_both_attributes_are_null(self):
         with self.assertRaises(ValueError):
-            MACParams('name', 'long_name', None, None, None)
+            MACParams('name', 'long_name', None, None, None, None)
 
 
 class TestSignature(TestClasses.TestJsonBase):
