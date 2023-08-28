@@ -45,6 +45,7 @@ from cryptodatahub.common.types import (
     convert_mapping,
     convert_url,
     convert_variadic,
+    convert_value_to_object,
 )
 
 
@@ -192,6 +193,25 @@ class TestDictToObjectConverter(unittest.TestCase):
 
     def test_repr(self):
         self.assertEqual(repr(convert_dict_to_object(str)), '<dict to object converter>')
+
+
+class TestValueToObjectConverter(unittest.TestCase):
+    def test_none(self):
+        converted_value = convert_value_to_object(TestJsonObjectComplex)(None)
+        self.assertEqual(converted_value, None)
+
+    def test_convert_object_class(self):
+        original_value = TestJsonObjectComplex('value')
+        converted_value = convert_value_to_object(TestJsonObjectComplex)(original_value)
+        self.assertEqual(original_value, converted_value)
+
+    def test_convert_converter(self):
+        original_value = '1970-01-01'
+        converted_value = convert_value_to_object(TestJsonObjectComplex, convert_datetime())(original_value)
+        self.assertEqual(converted_value.attr, datetime.datetime(1970, 1, 1, 0, 0))
+
+    def test_repr(self):
+        self.assertEqual(repr(convert_value_to_object(str)), '<value to object converter>')
 
 
 class TestBigNumberConverter(unittest.TestCase):
