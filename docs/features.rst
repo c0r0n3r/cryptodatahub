@@ -91,6 +91,13 @@ Attributes
    -  `encryption <https://www.rfc-editor.org/rfc/rfc4253#section-6.3>`__
    -  `message authentication code <https://www.rfc-editor.org/rfc/rfc4253#section-6.4>`__
    -  `compression <https://www.rfc-editor.org/rfc/rfc4253#section-6.2>`__
+   -  `elliptic curve domain parameter identifier <https://www.rfc-editor.org/rfc/rfc5656.html#section-6.1>`__
+
+-  Domain Name System
+
+   -  `DNS resource record (RR) types <https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4>`__
+   -  `DNSSEC algorithm types <https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml#dns-sec-alg-numbers-1>`__
+   -  `DNSSEC digest types <https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml>`__
 
 Client Capabilities
 """""""""""""""""""
