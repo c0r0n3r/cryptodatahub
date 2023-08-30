@@ -3,6 +3,7 @@
 from test.common.classes import TestClasses
 
 from cryptodatahub.ssh.algorithm import (
+    SshEllipticCurveIdentifier,
     SshEncryptionAlgorithm,
     SshMacAlgorithm,
     SshKexAlgorithm,
@@ -43,3 +44,9 @@ class TestSshCompressionAlgorithm(TestClasses.TestJsonCodeStringBase):
     @classmethod
     def _get_class(cls):
         return SshCompressionAlgorithm
+
+
+class TestSshEllipticCurveIdentifier(TestClasses.TestJsonCodeStringBase):
+    @classmethod
+    def _get_class(cls):
+        return SshEllipticCurveIdentifier

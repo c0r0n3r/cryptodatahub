@@ -2,7 +2,7 @@
     "SSH_ED25519": {
         "code": "ssh-ed25519",
         "key_type": "KEY",
-        "authentication": "EDDSA"
+        "authentication": "ED25519"
     },
     "SSH_RSA": {
         "code": "ssh-rsa",
@@ -97,12 +97,12 @@
     "SK_SSH_ED25519_OPENSSH_COM": {
         "code": "sk-ssh-ed25519@openssh.com",
         "key_type": "KEY",
-        "authentication": "EDDSA"
+        "authentication": "ED25519"
     },
     "SK_SSH_ED25519_CERT_V01_OPENSSH_COM": {
         "code": "sk-ssh-ed25519-cert-v01@openssh.com",
         "key_type": "CERTIFICATE",
-        "authentication": "EDDSA"
+        "authentication": "ED25519"
     },
     "SSH_RSA_CERT_V00_OPENSSH_COM": {
         "code": "ssh-rsa-cert-v00@openssh.com",
@@ -192,17 +192,17 @@
     "SSH_ED25519_CERT_V01_OPENSSH_COM": {
         "code": "ssh-ed25519-cert-v01@openssh.com",
         "key_type": "CERTIFICATE",
-        "authentication": "EDDSA"
+        "authentication": "ED25519"
     },
     "SSH_ED448": {
         "code": "ssh-ed448",
         "key_type": "KEY",
-        "authentication": "DSS"
+        "authentication": "ED448"
     },
     "SSH_ED448_CERT_V01_OPENSSH_COM": {
         "code": "ssh-ed448-cert-v01@openssh.com",
         "key_type": "KEY",
-        "authentication": "DSS"
+        "authentication": "ED448"
     },
     "SSH_RSA_SHA224_SSH_COM": {
         "code": "ssh-rsa-sha224@ssh.com",
@@ -322,11 +322,11 @@
     "X509V3_SSH_ED25519": {
         "code": "x509v3-ssh-ed25519",
         "key_type": "X509_CERTIFICATE",
-        "authentication": "DSS"
+        "authentication": "ED25519"
     },
     "X509V3_SSH_ED448": {
         "code": "x509v3-ssh-ed448",
         "key_type": "X509_CERTIFICATE",
-        "authentication": "DSS"
+        "authentication": "ED448"
     }
 }

@@ -1,6 +1,19 @@
 Changelog
 =========
 
+0.10.1
+------
+
+-  DNS
+
+   -  add `DNS resource record types <https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4>`__ (#8)
+   -  add `DNSSEC algorithm types <https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml#dns-sec-alg-numbers-1>`__ (#8)
+   -  add `DNSSEC digest types <https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml>`__ (#8)
+
+-  SSH
+
+   -  add `elliptic curve domain parameters identifier <https://www.rfc-editor.org/rfc/rfc5656.html#section-6.1>`__ (#8)
+
 0.10.0 - 2023-08-03
 -------------------
 

@@ -1,0 +1,114 @@
+{
+    "DELETE": {
+        "_code_in_hex": "0x00",
+        "code": 0,
+        "name": "Delete DS",
+        "zone_transfer": false,
+        "transaction_security": false,
+        "algorithm": null
+    },
+    "RSAMD5": {
+        "_code_in_hex": "0x01",
+        "code": 1,
+        "name": "RSA/MD5",
+        "zone_transfer": false,
+        "transaction_security": true,
+        "algorithm": "RSA_WITH_MD5"
+    },
+    "DH": {
+        "_code_in_hex": "0x02",
+        "code": 2,
+        "name": "Diffie-Hellman",
+        "zone_transfer": false,
+        "transaction_security": true,
+        "algorithm": "DH"
+    },
+    "DSA": {
+        "_code_in_hex": "0x03",
+        "code": 3,
+        "name": "DSA/SHA1",
+        "zone_transfer": true,
+        "transaction_security": true,
+        "algorithm": "DSA_WITH_SHA1"
+    },
+    "RSASHA1": {
+        "_code_in_hex": "0x05",
+        "code": 5,
+        "name": "RSA/SHA-1",
+        "zone_transfer": true,
+        "transaction_security": true,
+        "algorithm": "RSA_WITH_SHA1"
+    },
+    "DSA-NSEC3-SHA1": {
+        "_code_in_hex": "0x06",
+        "code": 6,
+        "name": "DSA-NSEC3-SHA1",
+        "zone_transfer": true,
+        "transaction_security": true,
+        "algorithm": "DSA_WITH_SHA1"
+    },
+    "RSASHA1-NSEC3-SHA1": {
+        "_code_in_hex": "0x07",
+        "code": 7,
+        "name": "RSASHA1-NSEC3-SHA1",
+        "zone_transfer": true,
+        "transaction_security": true,
+        "algorithm": "RSA_WITH_SHA1"
+    },
+    "RSASHA256": {
+        "_code_in_hex": "0x08",
+        "code": 8,
+        "name": "RSA/SHA-256",
+        "zone_transfer": true,
+        "transaction_security": null,
+        "algorithm": "RSA_WITH_SHA2_256"
+    },
+    "RSASHA512": {
+        "_code_in_hex": "0x0A",
+        "code": 10,
+        "name": "RSA/SHA-512",
+        "zone_transfer": true,
+        "transaction_security": null,
+        "algorithm": "RSA_WITH_SHA2_256"
+    },
+    "ECCGOST": {
+        "_code_in_hex": "0x0C",
+        "code": 12,
+        "name": "GOST R 34.10-2001",
+        "zone_transfer": true,
+        "transaction_security": null,
+        "algorithm": "GOST_R3410_01"
+    },
+    "ECDSAP256SHA256": {
+        "_code_in_hex": "0x0D",
+        "code": 13,
+        "name": "ECDSA Curve P-256 with SHA-256",
+        "zone_transfer": true,
+        "transaction_security": null,
+        "algorithm": "ECDSA_WITH_SHA2_256"
+    },
+    "ECDSAP384SHA384": {
+        "_code_in_hex": "0x0E",
+        "code": 14,
+        "name": "ECDSA Curve P-384 with SHA-384",
+        "zone_transfer": true,
+        "transaction_security": null,
+        "algorithm": "ECDSA_WITH_SHA2_256"
+    },
+    "ED25519": {
+        "_code_in_hex": "0x0F",
+        "code": 15,
+        "name": "Ed25519",
+        "zone_transfer": true,
+        "transaction_security": null,
+        "algorithm": "ED25519"
+    },
+    "ED448": {
+        "_code_in_hex": "0x10",
+        "code": 16,
+        "name": "Ed448",
+        "zone_transfer": true,
+        "transaction_security": null,
+        "algorithm": "ED448"
+    }
+}

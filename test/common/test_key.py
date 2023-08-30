@@ -13,14 +13,79 @@ from test.common.classes import TestClasses
 
 import asn1crypto
 
-from cryptodatahub.common.algorithm import Authentication, Hash, Signature
-from cryptodatahub.common.key import PublicKey, PublicKeyX509Base
+from cryptodatahub.common.algorithm import Authentication, Hash, NamedGroup, Signature
+from cryptodatahub.common.key import (
+    PublicKey,
+    PublicKeyParamsDsa,
+    PublicKeyParamsEddsa,
+    PublicKeyParamsEcdsa,
+    PublicKeyParamsRsa,
+    PublicKeyX509Base,
+)
 from cryptodatahub.common.utils import bytes_from_hex_string
 
 from cryptodatahub.tls.algorithm import TlsExtensionType
 
 
+class TestPublicKeyParamsEcdsa(TestClasses.TestKeyBase):
+    def test_from_octet_bit_string(self):
+        public_key = self._get_public_key('gitlab.com_ssh_ecdsa_key')
+        public_key_params = public_key.params
+
+        self.assertEqual(
+            public_key_params,
+            PublicKeyParamsEcdsa.from_octet_bit_string(
+                public_key_params.named_group,
+                public_key_params.octet_bit_string,
+            )
+        )
+
+
 class TestPublicKey(TestClasses.TestKeyBase):
+    def test_from_params(self):
+        public_key = self._get_public_key('gitlab.com_ssh_dsa_key')
+        public_key_params = public_key.params
+        params = PublicKeyParamsDsa(
+            prime=public_key_params.prime,
+            generator=public_key_params.generator,
+            order=public_key_params.order,
+            public_key_value=public_key_params.public_key_value,
+        )
+        public_key = PublicKey.from_params(params)
+        self.assertEqual(params, public_key.params)
+        self.assertEqual(public_key.key_size, 1024)
+
+        public_key = self._get_public_key('gitlab.com_ssh_ecdsa_key')
+        public_key_params = public_key.params
+        params = PublicKeyParamsEcdsa(
+            named_group=NamedGroup.PRIME256V1,
+            point_x=public_key_params.point_x,
+            point_y=public_key_params.point_y,
+        )
+        public_key = PublicKey.from_params(params)
+        self.assertEqual(params, public_key.params)
+        self.assertEqual(public_key.key_size, 256)
+
+        public_key = self._get_public_key('gitlab.com_ssh_eddsa_key')
+        public_key_params = public_key.params
+        params = PublicKeyParamsEddsa(
+            key_type=public_key_params.key_type,
+            key_data=public_key_params.key_data,
+        )
+        public_key = PublicKey.from_params(params)
+        self.assertEqual(params, public_key.params)
+        self.assertEqual(public_key.key_size, 256)
+
+        public_key = self._get_public_key('gitlab.com_ssh_rsa_key')
+        public_key_params = public_key.params
+        params = PublicKeyParamsRsa(
+            modulus=public_key_params.modulus,
+            public_exponent=public_key_params.public_exponent
+        )
+        public_key = PublicKey.from_params(params)
+        self.assertEqual(params, public_key.params)
+        self.assertEqual(public_key.key_size, 2048)
+
     def test_pem(self):
         public_key = self._get_public_key('snakeoil_cert_pubkey')
         self.assertEqual(public_key.pem, self._get_public_key_pem('snakeoil_cert_pubkey'))

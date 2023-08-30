@@ -3,6 +3,7 @@
 import abc
 import hashlib
 import base64
+import collections
 import datetime
 import os
 
@@ -14,10 +15,55 @@ import asn1crypto.pem
 import asn1crypto.x509
 import attr
 
-from cryptodatahub.common.algorithm import Authentication, Hash, Signature
+from cryptodatahub.common.algorithm import Authentication, Hash, NamedGroup, Signature
 from cryptodatahub.common.utils import bytes_to_hex_string
 
 from cryptodatahub.tls.algorithm import TlsExtensionType
+
+
+@attr.s
+class PublicKeyParamBase(object):
+    pass
+
+
+@attr.s
+class PublicKeyParamsDsa(PublicKeyParamBase):
+    prime = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    generator = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    order = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    public_key_value = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+
+
+@attr.s
+class PublicKeyParamsEcdsa(PublicKeyParamBase):
+    named_group = attr.ib(validator=attr.validators.instance_of(NamedGroup))
+    point_x = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    point_y = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+
+    @classmethod
+    def from_octet_bit_string(cls, named_group, octet_bit_string):
+        point_x, point_y = asn1crypto.keys.ECPointBitString(bytes(octet_bit_string)).to_coords()
+        return cls(
+            named_group,
+            point_x,
+            point_y,
+        )
+
+    @property
+    def octet_bit_string(self):
+        return bytes(asn1crypto.keys.ECPointBitString.from_coords(self.point_x, self.point_y))
+
+
+@attr.s
+class PublicKeyParamsEddsa(PublicKeyParamBase):
+    key_type = attr.ib(validator=attr.validators.instance_of(Authentication))
+    key_data = attr.ib(validator=attr.validators.instance_of((bytes, bytearray)))
+
+
+@attr.s
+class PublicKeyParamsRsa(PublicKeyParamBase):
+    modulus = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    public_exponent = attr.ib(validator=attr.validators.instance_of(six.integer_types))
 
 
 @attr.s(eq=False)
@@ -41,6 +87,87 @@ class PublicKey(object):
     @classmethod
     def from_pem_lines(cls, pem_lines):
         return cls.from_pem(os.linesep.join(pem_lines))
+
+    @classmethod
+    def from_params(cls, params):
+        if isinstance(params, PublicKeyParamsDsa):
+            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(six.u('dsa'))
+            parameters = asn1crypto.keys.DSAParams({
+                'p': params.prime, 'g': params.generator, 'q': params.order,
+            })
+            public_key = asn1crypto.keys.PublicKeyInfo({
+                'algorithm': asn1crypto.keys.PublicKeyAlgorithm({
+                    'algorithm': algorithm_id,
+                    'parameters': parameters,
+                }),
+                'public_key': params.public_key_value,
+            })
+        elif isinstance(params, PublicKeyParamsEddsa):
+            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(params.key_type.value.name.lower())
+            public_key = asn1crypto.keys.PublicKeyInfo({
+                'algorithm': asn1crypto.keys.PublicKeyAlgorithm({
+                    'algorithm': algorithm_id,
+                }),
+                'public_key': asn1crypto.core.OctetBitString(bytes(params.key_data)),
+            })
+        elif isinstance(params, PublicKeyParamsRsa):
+            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(six.u('rsa'))
+            public_key = asn1crypto.keys.PublicKeyInfo({
+                'algorithm': asn1crypto.keys.PublicKeyAlgorithm({'algorithm': algorithm_id}),
+                'public_key': asn1crypto.keys.RSAPublicKey(
+                    attr.asdict(params, recurse=False, value_serializer=None)
+                )
+            })
+        elif isinstance(params, PublicKeyParamsEcdsa):
+            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(six.u('ec'))
+            parameters = asn1crypto.keys.ECDomainParameters({
+                'named': params.named_group.value.oid
+            })
+
+            public_key = asn1crypto.keys.PublicKeyInfo({
+                'algorithm': asn1crypto.keys.PublicKeyAlgorithm({
+                    'algorithm': algorithm_id,
+                    'parameters': parameters,
+                }),
+                'public_key': asn1crypto.keys.ECPointBitString.from_coords(params.point_x, params.point_y)
+            })
+        else:
+            raise NotImplementedError(type(params))
+
+        return cls(public_key)
+
+    @property
+    def params(self):
+        if self.key_type == Authentication.DSS:
+            public_key = self._public_key['public_key'].parsed
+            parameters = self._public_key['algorithm']['parameters']
+            return PublicKeyParamsDsa(
+                prime=parameters['p'].native,
+                generator=parameters['g'].native,
+                order=parameters['q'].native,
+                public_key_value=public_key.native,
+            )
+        if self.key_type == Authentication.ECDSA:
+            public_key = self._public_key['public_key']
+            parameters = self._public_key['algorithm']['parameters']
+
+            return PublicKeyParamsEcdsa(
+                NamedGroup.from_oid(parameters.chosen.dotted),
+                *public_key.to_coords()
+            )
+        if self.key_type in (Authentication.ED25519, Authentication.ED448):
+            return PublicKeyParamsEddsa(
+                key_type=self.key_type,
+                key_data=self._public_key['public_key'].native
+            )
+        if self.key_type == Authentication.RSA:
+            public_key = self._public_key['public_key'].parsed
+            return PublicKeyParamsRsa(
+                modulus=public_key['modulus'].native,
+                public_exponent=public_key['public_exponent'].native,
+            )
+
+        raise NotImplementedError(self.key_type)
 
     @classmethod
     def _get_type_name(cls):
@@ -74,6 +201,8 @@ class PublicKey(object):
             return 512
         if self.key_type == Authentication.GOST_R3410_01:
             return 256
+        if self.key_type == Authentication.ED25519:
+            return 256
 
         return int(self._public_key.bit_size)
 
@@ -98,6 +227,13 @@ class PublicKey(object):
         return OrderedDict([
             (hash_type, self.fingerprint(hash_type))
             for hash_type in [Hash.MD5, Hash.SHA1, Hash.SHA2_256]
+        ])
+
+    def _asdict(self):
+        return collections.OrderedDict([
+            ('key_type', self.key_type),
+            ('key_size', self.key_size),
+            ('fingerprints', self.fingerprints),
         ])
 
 

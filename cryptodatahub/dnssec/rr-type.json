@@ -1,0 +1,805 @@
+{
+    "A": {
+        "_code_in_hex": "0x0001",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 1,
+        "name": "A",
+        "description": "a host address"
+    },
+    "NS": {
+        "_code_in_hex": "0x0002",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 2,
+        "name": "NS",
+        "description": "an authoritative name server"
+    },
+    "MD": {
+        "_code_in_hex": "0x0003",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 3,
+        "name": "MD",
+        "description": "a mail destination"
+    },
+    "MF": {
+        "_code_in_hex": "0x0004",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 4,
+        "name": "MF",
+        "description": "a mail forwarder"
+    },
+    "CNAME": {
+        "_code_in_hex": "0x0005",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 5,
+        "name": "CNAME",
+        "description": "the canonical name for an alias"
+    },
+    "SOA": {
+        "_code_in_hex": "0x0006",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 6,
+        "name": "SOA",
+        "description": "marks the start of a zone of authority"
+    },
+    "MB": {
+        "_code_in_hex": "0x0007",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 7,
+        "name": "MB",
+        "description": "a mailbox domain name"
+    },
+    "MG": {
+        "_code_in_hex": "0x0008",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 8,
+        "name": "MG",
+        "description": "a mail group member"
+    },
+    "MR": {
+        "_code_in_hex": "0x0009",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 9,
+        "name": "MR",
+        "description": "a mail rename domain name"
+    },
+    "NULL": {
+        "_code_in_hex": "0x000A",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 10,
+        "name": "NULL",
+        "description": "a null RR"
+    },
+    "WKS": {
+        "_code_in_hex": "0x000B",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 11,
+        "name": "WKS",
+        "description": "a well known service description"
+    },
+    "PTR": {
+        "_code_in_hex": "0x000C",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 12,
+        "name": "PTR",
+        "description": "a domain name pointer"
+    },
+    "HINFO": {
+        "_code_in_hex": "0x000D",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 13,
+        "name": "HINFO",
+        "description": "host information"
+    },
+    "MINFO": {
+        "_code_in_hex": "0x000E",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 14,
+        "name": "MINFO",
+        "description": "mailbox or mail list information"
+    },
+    "MX": {
+        "_code_in_hex": "0x000F",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 15,
+        "name": "MX",
+        "description": "mail exchange"
+    },
+    "TXT": {
+        "_code_in_hex": "0x0010",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 16,
+        "name": "TXT",
+        "description": "text strings"
+    },
+    "RP": {
+        "_code_in_hex": "0x0011",
+        "_standards": [
+            "RFC1183"
+        ],
+        "code": 17,
+        "name": "RP",
+        "description": "for Responsible Person"
+    },
+    "AFSDB": {
+        "_code_in_hex": "0x0012",
+        "_standards": [
+            "RFC1183",
+            "RFC5864"
+        ],
+        "code": 18,
+        "name": "AFSDB",
+        "description": "for AFS Data Base location"
+    },
+    "X25": {
+        "_code_in_hex": "0x0013",
+        "_standards": [
+            "RFC1183"
+        ],
+        "code": 19,
+        "name": "X25",
+        "description": "for X.25 PSDN address"
+    },
+    "ISDN": {
+        "_code_in_hex": "0x0014",
+        "_standards": [
+            "RFC1183"
+        ],
+        "code": 20,
+        "name": "ISDN",
+        "description": "for ISDN address"
+    },
+    "RT": {
+        "_code_in_hex": "0x0015",
+        "_standards": [
+            "RFC1183"
+        ],
+        "code": 21,
+        "name": "RT",
+        "description": "for Route Through"
+    },
+    "NSAP": {
+        "_code_in_hex": "0x0016",
+        "_standards": [
+            "RFC1706",
+            "status-change-int-tlds-to-historic"
+        ],
+        "code": 22,
+        "name": "NSAP",
+        "description": "for NSAP address, NSAP style A record"
+    },
+    "NSAP-PTR": {
+        "_code_in_hex": "0x0017",
+        "_standards": [
+            "RFC1706",
+            "status-change-int-tlds-to-historic"
+        ],
+        "code": 23,
+        "name": "NSAP-PTR",
+        "description": "for domain name pointer, NSAP style"
+    },
+    "SIG": {
+        "_code_in_hex": "0x0018",
+        "_standards": [
+            "RFC2536",
+            "RFC2931",
+            "RFC3110",
+            "RFC4034"
+        ],
+        "code": 24,
+        "name": "SIG",
+        "description": "for security signature"
+    },
+    "KEY": {
+        "_code_in_hex": "0x0019",
+        "_standards": [
+            "RFC2536",
+            "RFC2539",
+            "RFC3110",
+            "RFC4034"
+        ],
+        "code": 25,
+        "name": "KEY",
+        "description": "for security key"
+    },
+    "PX": {
+        "_code_in_hex": "0x001A",
+        "_standards": [
+            "RFC2163"
+        ],
+        "code": 26,
+        "name": "PX",
+        "description": "X.400 mail mapping information"
+    },
+    "GPOS": {
+        "_code_in_hex": "0x001B",
+        "_standards": [
+            "RFC1712"
+        ],
+        "code": 27,
+        "name": "GPOS",
+        "description": "Geographical Position"
+    },
+    "AAAA": {
+        "_code_in_hex": "0x001C",
+        "_standards": [
+            "RFC3596"
+        ],
+        "code": 28,
+        "name": "AAAA",
+        "description": "IP6 Address"
+    },
+    "LOC": {
+        "_code_in_hex": "0x001D",
+        "_standards": [
+            "RFC1876"
+        ],
+        "code": 29,
+        "name": "LOC",
+        "description": "Location Information"
+    },
+    "NXT": {
+        "_code_in_hex": "0x001E",
+        "_standards": [
+            "RFC2535",
+            "RFC3755"
+        ],
+        "code": 30,
+        "name": "NXT",
+        "description": "Next Domain"
+    },
+    "EID": {
+        "_code_in_hex": "0x001F",
+        "_standards": [
+            "RFC6676"
+        ],
+        "code": 31,
+        "name": "EID",
+        "description": "Endpoint Identifier"
+    },
+    "NIMLOC": {
+        "_code_in_hex": "0x0020",
+        "_standards": [
+            "RFC6741"
+        ],
+        "code": 32,
+        "name": "NIMLOC",
+        "description": "Nimrod Locator"
+    },
+    "SRV": {
+        "_code_in_hex": "0x0021",
+        "_standards": [
+            "RFC2782"
+        ],
+        "code": 33,
+        "name": "SRV",
+        "description": "Server Selection"
+    },
+    "ATMA": {
+        "_code_in_hex": "0x0022",
+        "_standards": [
+            "RFC2937"
+        ],
+        "code": 34,
+        "name": "ATMA",
+        "description": "ATM Address"
+    },
+    "NAPTR": {
+        "_code_in_hex": "0x0023",
+        "_standards": [
+            "RFC2915"
+        ],
+        "code": 35,
+        "name": "NAPTR",
+        "description": "Naming Authority Pointer"
+    },
+    "KX": {
+        "_code_in_hex": "0x0024",
+        "_standards": [
+            "RFC2230"
+        ],
+        "code": 36,
+        "name": "KX",
+        "description": "Key Exchanger"
+    },
+    "CERT": {
+        "_code_in_hex": "0x0025",
+        "_standards": [
+            "RFC4398"
+        ],
+        "code": 37,
+        "name": "CERT",
+        "description": "CERT"
+    },
+    "A6": {
+        "_code_in_hex": "0x0026",
+        "_standards": [
+            "RFC2874",
+            "RFC3226",
+            "RFC6563"
+        ],
+        "code": 38,
+        "name": "A6",
+        "description": "A6"
+    },
+    "DNAME": {
+        "_code_in_hex": "0x0027",
+        "_standards": [
+            "RFC6672"
+        ],
+        "code": 39,
+        "name": "DNAME",
+        "description": "DNAME"
+    },
+    "SINK": {
+        "_code_in_hex": "0x0028",
+        "_standards": [
+            "draft-eastlake-kitchen-sink"
+        ],
+        "code": 40,
+        "name": "SINK",
+        "description": "SINK"
+    },
+    "OPT": {
+        "_code_in_hex": "0x0029",
+        "_standards": [
+            "RFC6891"
+        ],
+        "code": 41,
+        "name": "OPT",
+        "description": "OPT"
+    },
+    "APL": {
+        "_code_in_hex": "0x002A",
+        "_standards": [
+            "RFC3123"
+        ],
+        "code": 42,
+        "name": "APL",
+        "description": "APL"
+    },
+    "DS": {
+        "_code_in_hex": "0x002B",
+        "_standards": [
+            "RFC4034"
+        ],
+        "code": 43,
+        "name": "DS",
+        "description": "Delegation Signer"
+    },
+    "SSHFP": {
+        "_code_in_hex": "0x002C",
+        "_standards": [
+            "RFC4255"
+        ],
+        "code": 44,
+        "name": "SSHFP",
+        "description": "SSH Key Fingerprint"
+    },
+    "IPSECKEY": {
+        "_code_in_hex": "0x002D",
+        "_standards": [
+            "RFC4025"
+        ],
+        "code": 45,
+        "name": "IPSECKEY",
+        "description": "IPSECKEY"
+    },
+    "RRSIG": {
+        "_code_in_hex": "0x002E",
+        "_standards": [
+            "RFC4034"
+        ],
+        "code": 46,
+        "name": "RRSIG",
+        "description": "RRSIG"
+    },
+    "NSEC": {
+        "_code_in_hex": "0x002F",
+        "_standards": [
+            "RFC4034",
+            "RFC9077"
+        ],
+        "code": 47,
+        "name": "NSEC",
+        "description": "NSEC"
+    },
+    "DNSKEY": {
+        "_code_in_hex": "0x0030",
+        "_standards": [
+            "RFC4034"
+        ],
+        "code": 48,
+        "name": "DNSKEY",
+        "description": "DNSKEY"
+    },
+    "DHCID": {
+        "_code_in_hex": "0x0031",
+        "_standards": [
+            "RFC4701"
+        ],
+        "code": 49,
+        "name": "DHCID",
+        "description": "DHCID"
+    },
+    "NSEC3": {
+        "_code_in_hex": "0x0032",
+        "_standards": [
+            "RFC5155",
+            "RFC9077"
+        ],
+        "code": 50,
+        "name": "NSEC3",
+        "description": "NSEC3"
+    },
+    "NSEC3PARAM": {
+        "_code_in_hex": "0x0033",
+        "_standards": [
+            "RFC5155"
+        ],
+        "code": 51,
+        "name": "NSEC3PARAM",
+        "description": "NSEC3PARAM"
+    },
+    "TLSA": {
+        "_code_in_hex": "0x0034",
+        "_standards": [
+            "RFC6698"
+        ],
+        "code": 52,
+        "name": "TLSA",
+        "description": "TLSA"
+    },
+    "SMIMEA": {
+        "_code_in_hex": "0x0035",
+        "_standards": [
+            "RFC8162"
+        ],
+        "code": 53,
+        "name": "SMIMEA",
+        "description": "S/MIME cert association"
+    },
+    "HIP": {
+        "_code_in_hex": "0x0037",
+        "_standards": [
+            "RFC8005"
+        ],
+        "code": 55,
+        "name": "HIP",
+        "description": "Host Identity Protocol"
+    },
+    "NINFO": {
+        "_code_in_hex": "0x0038",
+        "_standards": [
+        ],
+        "code": 56,
+        "name": "NINFO",
+        "description": "NINFO"
+    },
+    "RKEY": {
+        "_code_in_hex": "0x0039",
+        "_standards": [
+        ],
+        "code": 57,
+        "name": "RKEY",
+        "description": "RKEY"
+    },
+    "TALINK": {
+        "_code_in_hex": "0x003A",
+        "_standards": [
+        ],
+        "code": 58,
+        "name": "TALINK",
+        "description": "Trust Anchor LINK"
+    },
+    "CDS": {
+        "_code_in_hex": "0x003B",
+        "_standards": [
+            "RFC7344"
+        ],
+        "code": 59,
+        "name": "CDS",
+        "description": "Child DS"
+    },
+    "CDNSKEY": {
+        "_code_in_hex": "0x003C",
+        "_standards": [
+            "RFC7344"
+        ],
+        "code": 60,
+        "name": "CDNSKEY",
+        "description": "DNSKEY(s) the Child wants reflected in DS"
+    },
+    "OPENPGPKEY": {
+        "_code_in_hex": "0x003D",
+        "_standards": [
+            "RFC7929"
+        ],
+        "code": 61,
+        "name": "OPENPGPKEY",
+        "description": "OpenPGP Key"
+    },
+    "CSYNC": {
+        "_code_in_hex": "0x003E",
+        "_standards": [
+            "RFC7477"
+        ],
+        "code": 62,
+        "name": "CSYNC",
+        "description": "Child-To-Parent Synchronization"
+    },
+    "ZONEMD": {
+        "_code_in_hex": "0x003F",
+        "_standards": [
+            "RFC8976"
+        ],
+        "code": 63,
+        "name": "ZONEMD",
+        "description": "Message Digest Over Zone Data"
+    },
+    "SVCB": {
+        "_code_in_hex": "0x0040",
+        "_standards": [
+            "RFC-ietf-dnsop-svcb-https-12"
+        ],
+        "code": 64,
+        "name": "SVCB",
+        "description": "General Purpose Service Binding"
+    },
+    "HTTPS": {
+        "_code_in_hex": "0x0041",
+        "_standards": [
+            "RFC-ietf-dnsop-svcb-https-12"
+        ],
+        "code": 65,
+        "name": "HTTPS",
+        "description": "Service Binding type for use with HTTP"
+    },
+    "SPF": {
+        "_code_in_hex": "0x0063",
+        "_standards": [
+            "RFC7208"
+        ],
+        "code": 99,
+        "name": "SPF",
+        "description": null
+    },
+    "UINFO": {
+        "_code_in_hex": "0x0064",
+        "_standards": [
+            "IANA-Reserved"
+        ],
+        "code": 100,
+        "name": "UINFO",
+        "description": null
+    },
+    "UID": {
+        "_code_in_hex": "0x0065",
+        "_standards": [
+            "IANA-Reserved"
+        ],
+        "code": 101,
+        "name": "UID",
+        "description": null
+    },
+    "GID": {
+        "_code_in_hex": "0x0066",
+        "_standards": [
+            "IANA-Reserved"
+        ],
+        "code": 102,
+        "name": "GID",
+        "description": null
+    },
+    "UNSPEC": {
+        "_code_in_hex": "0x0067",
+        "_standards": [
+            "IANA-Reserved"
+        ],
+        "code": 103,
+        "name": "UNSPEC",
+        "description": null
+    },
+    "NID": {
+        "_code_in_hex": "0x0068",
+        "_standards": [
+            "RFC6742"
+        ],
+        "code": 104,
+        "name": "NID",
+        "description": null
+    },
+    "L32": {
+        "_code_in_hex": "0x0069",
+        "_standards": [
+            "RFC6742"
+        ],
+        "code": 105,
+        "name": "L32",
+        "description": null
+    },
+    "L64": {
+        "_code_in_hex": "0x006A",
+        "_standards": [
+            "RFC6742"
+        ],
+        "code": 106,
+        "name": "L64",
+        "description": null
+    },
+    "LP": {
+        "_code_in_hex": "0x006B",
+        "_standards": [
+            "RFC6742"
+        ],
+        "code": 107,
+        "name": "LP",
+        "description": null
+    },
+    "EUI48": {
+        "_code_in_hex": "0x006C",
+        "_standards": [
+            "RFC7043"
+        ],
+        "code": 108,
+        "name": "EUI48",
+        "description": "an EUI-48 address"
+    },
+    "EUI64": {
+        "_code_in_hex": "0x006D",
+        "_standards": [
+            "RFC7043"
+        ],
+        "code": 109,
+        "name": "EUI64",
+        "description": "an EUI-64 address"
+    },
+    "TKEY": {
+        "_code_in_hex": "0x00F9",
+        "_standards": [
+            "RFC2930"
+        ],
+        "code": 249,
+        "name": "TKEY",
+        "description": "Transaction Key"
+    },
+    "TSIG": {
+        "_code_in_hex": "0x00FA",
+        "_standards": [
+            "RFC8945"
+        ],
+        "code": 250,
+        "name": "TSIG",
+        "description": "Transaction Signature"
+    },
+    "IXFR": {
+        "_code_in_hex": "0x00FB",
+        "_standards": [
+            "RFC1995"
+        ],
+        "code": 251,
+        "name": "IXFR",
+        "description": "incremental transfer"
+    },
+    "AXFR": {
+        "_code_in_hex": "0x00FC",
+        "_standards": [
+            "RFC1035",
+            "RFC5936"
+        ],
+        "code": 252,
+        "name": "AXFR",
+        "description": "transfer of an entire zone"
+    },
+    "MAILB": {
+        "_code_in_hex": "0x00FD",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 253,
+        "name": "MAILB",
+        "description": "mailbox-related RRs"
+    },
+    "MAILA": {
+        "_code_in_hex": "0x00FE",
+        "_standards": [
+            "RFC1035"
+        ],
+        "code": 254,
+        "name": "MAILA",
+        "description": "mail agent RRs"
+    },
+    "URI": {
+        "_code_in_hex": "0x0100",
+        "_standards": [
+            "RFC7553"
+        ],
+        "code": 256,
+        "name": "URI",
+        "description": "URI"
+    },
+    "CAA": {
+        "_code_in_hex": "0x0101",
+        "_standards": [
+            "RFC8659"
+        ],
+        "code": 257,
+        "name": "CAA",
+        "description": "Certification Authority Restriction"
+    },
+    "AVC": {
+        "_code_in_hex": "0x0102",
+        "_standards": [
+        ],
+        "code": 258,
+        "name": "AVC",
+        "description": "Application Visibility and Control"
+    },
+    "DOA": {
+        "_code_in_hex": "0x0103",
+        "_standards": [
+            "draft-durand-doa-over-dns"
+        ],
+        "code": 259,
+        "name": "DOA",
+        "description": "Digital Object Architecture"
+    },
+    "AMTRELAY": {
+        "_code_in_hex": "0x0104",
+        "_standards": [
+            "RFC8777"
+        ],
+        "code": 260,
+        "name": "AMTRELAY",
+        "description": "Automatic Multicast Tunneling Relay"
+    },
+    "TA": {
+        "_code_in_hex": "0x8000",
+        "_standards": [
+        ],
+        "code": 32768,
+        "name": "TA",
+        "description": "DNSSEC Trust Authorities"
+    },
+    "DLV": {
+        "_code_in_hex": "0x8001",
+        "_standards": [
+            "RFC8749",
+            "RFC4431"
+        ],
+        "code": 32769,
+        "name": "DLV",
+        "description": "DNSSEC Lookaside Validation"
+    }
+}

@@ -5,8 +5,8 @@ import attr
 
 import six
 
-from cryptodatahub.common.algorithm import Authentication, BlockCipher, BlockCipherMode, KeyExchange, MAC
-from cryptodatahub.common.types import CryptoDataEnumCodedBase, CryptoDataParamsEnumString
+from cryptodatahub.common.algorithm import Authentication, BlockCipher, BlockCipherMode, KeyExchange, MAC, NamedGroup
+from cryptodatahub.common.types import CryptoDataEnumCodedBase, CryptoDataParamsEnumString, convert_enum
 
 
 @attr.s
@@ -93,6 +93,14 @@ class CompressionAlgorithmParams(CryptoDataParamsEnumString):
     pass
 
 
+@attr.s
+class EllipticCurveIdentifierParams(CryptoDataParamsEnumString):
+    named_group = attr.ib(
+        converter=convert_enum(NamedGroup),
+        validator=attr.validators.instance_of(NamedGroup)
+    )
+
+
 SshEncryptionAlgorithm = CryptoDataEnumCodedBase(
     'SshEncryptionAlgorithm', CryptoDataEnumCodedBase.get_json_records(EncryptionAlgorithmParams)
 )
@@ -107,4 +115,7 @@ SshHostKeyAlgorithm = CryptoDataEnumCodedBase(
 )
 SshCompressionAlgorithm = CryptoDataEnumCodedBase(
     'SshCompressionAlgorithm', CryptoDataEnumCodedBase.get_json_records(CompressionAlgorithmParams)
+)
+SshEllipticCurveIdentifier = CryptoDataEnumCodedBase(
+    'SshEllipticCurveIdentifier', CryptoDataEnumCodedBase.get_json_records(EllipticCurveIdentifierParams)
 )

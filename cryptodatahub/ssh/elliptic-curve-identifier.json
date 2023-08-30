@@ -1,0 +1,50 @@
+{
+    "SECP256R1": {
+        "code": "nistp256",
+        "named_group": "PRIME256V1"
+    },
+    "SECP384R1": {
+        "code": "nistp384",
+        "named_group": "SECP384R1"
+    },
+    "SECP521R1": {
+        "code": "nistp521",
+        "named_group": "SECP521R1"
+    },
+    "SECT163K1": {
+        "code": "1.3.132.0.1",
+        "named_group": "SECT163K1"
+    },
+    "SECP192R1": {
+        "code": "1.2.840.10045.3.1.1",
+        "named_group": "PRIME192V1"
+    },
+    "SECP224R1": {
+        "code": "1.3.132.0.33",
+        "named_group": "SECP224R1"
+    },
+    "SECT233K1": {
+        "code": "1.3.132.0.26",
+        "named_group": "SECT233K1"
+    },
+    "SECT233R1": {
+        "code": "1.3.132.0.27",
+        "named_group": "SECT233R1"
+    },
+    "SECT283K1": {
+        "code": "1.3.132.0.16",
+        "named_group": "SECT283K1"
+    },
+    "SECT409K1": {
+        "code": "1.3.132.0.36",
+        "named_group": "SECT409K1"
+    },
+    "SECT409R1": {
+        "code": "1.3.132.0.37",
+        "named_group": "SECT409R1"
+    },
+    "SECT571K1": {
+        "code": "1.3.132.0.38",
+        "named_group": "SECT571K1"
+    }
+}
