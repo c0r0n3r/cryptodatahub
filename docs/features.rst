@@ -23,18 +23,18 @@ Parameters
 
    -  defined by standard
 
-      - `RFC 2539 <https://www.rfc-editor.org/rfc/rfc2539.html#appendix-A>`__ (a.k.a MODP, Oakley Group)
-      - `RFC 3526 <https://www.rfc-editor.org/rfc/rfc3526.html>`__ (a.k.a MODP for IKE)
-      - `RFC 5114 <https://www.rfc-editor.org/rfc/rfc5114.html>`__
-      - `RFC 7919 <https://www.rfc-editor.org/rfc/rfc7919.html#appendix-A>`__ (a.k.a FFDH)
+      -  `RFC 2539 <https://www.rfc-editor.org/rfc/rfc2539.html#appendix-A>`__ (a.k.a MODP, Oakley Group)
+      -  `RFC 3526 <https://www.rfc-editor.org/rfc/rfc3526.html>`__ (a.k.a MODP for IKE)
+      -  `RFC 5114 <https://www.rfc-editor.org/rfc/rfc5114.html>`__
+      -  `RFC 7919 <https://www.rfc-editor.org/rfc/rfc7919.html#appendix-A>`__ (a.k.a FFDH)
 
    -  software built-in
 
-      - `Apache HTTP Server <https://en.wikipedia.org/wiki/Apache_HTTP_Server>`__
-      - `HAProxy <https://en.wikipedia.org/wiki/HAProxy>`__
-      - `Postfix <https://en.wikipedia.org/wiki/Postfix_(software)>`__
-      - `ProFTPD <https://en.wikipedia.org/wiki/ProFTPD>`__
-      - SOcket CAT (socat)
+      -  `Apache HTTP Server <https://en.wikipedia.org/wiki/Apache_HTTP_Server>`__
+      -  `HAProxy <https://en.wikipedia.org/wiki/HAProxy>`__
+      -  `Postfix <https://en.wikipedia.org/wiki/Postfix_(software)>`__
+      -  `ProFTPD <https://en.wikipedia.org/wiki/ProFTPD>`__
+      -  SOcket CAT (socat)
 
 Stores
 """"""
