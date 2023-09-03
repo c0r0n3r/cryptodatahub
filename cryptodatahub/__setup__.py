@@ -2,7 +2,7 @@
 
 __title__ = 'CryptoDataHub'
 __technical_name__ = __title__.lower()
-__version__ = '0.10.0'
+__version__ = '0.10.1'
 __description__ = 'Repository of cryptography-related data'
 __author__ = 'Szilárd Pfeiffer'
 __author_email__ = 'coroner@pfeifferszilard.hu'
