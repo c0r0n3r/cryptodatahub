@@ -26,6 +26,12 @@ Operating systems
 -  macOS
 -  Windows
 
+Documentation
+-------------
+
+Detailed `documentation <https://cryptodatahub.readthedocs.io>`__ is available on the project's
+`Read the Docs <https://readthedocs.com>`__ site.
+
 License
 -------
 
