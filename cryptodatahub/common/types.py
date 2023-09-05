@@ -61,6 +61,31 @@ def convert_dict_to_object(object_type):
 
 
 @attr.s(repr=False, slots=True, hash=True)
+class _ValueToObjectConverter(_ConverterBase):
+    object_type = attr.ib(validator=attr.validators.instance_of(type))
+    value_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(_ConverterBase)))
+
+    def __call__(self, value):
+        if value is None:
+            return None
+
+        if isinstance(value, self.object_type):
+            return value
+
+        if self.value_converter is not None:
+            value = self.value_converter(value)
+
+        return self.object_type(value)
+
+    def __repr__(self):
+        return '<value to object converter>'
+
+
+def convert_value_to_object(object_type, value_converter=None):
+    return _ValueToObjectConverter(object_type, value_converter)
+
+
+@attr.s(repr=False, slots=True, hash=True)
 class _EnumConverter(_ConverterBase):
     enum_type = attr.ib(validator=attr.validators.instance_of(type))
 
