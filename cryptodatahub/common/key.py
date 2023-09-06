@@ -16,6 +16,7 @@ import asn1crypto.x509
 import attr
 
 from cryptodatahub.common.algorithm import Authentication, Hash, NamedGroup, Signature
+from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.utils import bytes_to_hex_string
 
 from cryptodatahub.tls.algorithm import TlsExtensionType
@@ -56,7 +57,7 @@ class PublicKeyParamsEcdsa(PublicKeyParamBase):
 
 @attr.s
 class PublicKeyParamsEddsa(PublicKeyParamBase):
-    key_type = attr.ib(validator=attr.validators.instance_of(Authentication))
+    curve_type = attr.ib(validator=attr.validators.instance_of(NamedGroup))
     key_data = attr.ib(validator=attr.validators.instance_of((bytes, bytearray)))
 
 
@@ -103,7 +104,14 @@ class PublicKey(object):
                 'public_key': params.public_key_value,
             })
         elif isinstance(params, PublicKeyParamsEddsa):
-            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(params.key_type.value.name.lower())
+            if params.curve_type == NamedGroup.CURVE25519:
+                algorithm_name = six.u('ed25519')
+            elif params.curve_type == NamedGroup.CURVE448:
+                algorithm_name = six.u('ed448')
+            else:
+                raise NotImplementedError()
+
+            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(algorithm_name)
             public_key = asn1crypto.keys.PublicKeyInfo({
                 'algorithm': asn1crypto.keys.PublicKeyAlgorithm({
                     'algorithm': algorithm_id,
@@ -155,9 +163,18 @@ class PublicKey(object):
                 NamedGroup.from_oid(parameters.chosen.dotted),
                 *public_key.to_coords()
             )
-        if self.key_type in (Authentication.ED25519, Authentication.ED448):
+        if self.key_type == Authentication.EDDSA:
+            algorithm = self._public_key['algorithm']['algorithm']
+            signature = Signature.from_oid(algorithm.dotted)
+            if signature == Signature.ED25519:
+                curve_type = NamedGroup.CURVE25519
+            elif signature == Signature.ED448:
+                curve_type = NamedGroup.CURVE448
+            else:
+                raise NotImplementedError()
+
             return PublicKeyParamsEddsa(
-                key_type=self.key_type,
+                curve_type=curve_type,
                 key_data=self._public_key['public_key'].native
             )
         if self.key_type == Authentication.RSA:
@@ -191,7 +208,10 @@ class PublicKey(object):
         except KeyError as e:
             key_type_oid = e.args[0]
 
-        return Authentication.from_oid(key_type_oid)
+        try:
+            return Signature.from_oid(key_type_oid).value.key_type
+        except InvalidValue:
+            return Authentication.from_oid(key_type_oid)
 
     @property
     def key_size(self):
@@ -201,8 +221,8 @@ class PublicKey(object):
             return 512
         if self.key_type == Authentication.GOST_R3410_01:
             return 256
-        if self.key_type == Authentication.ED25519:
-            return 256
+        if self.key_type == Authentication.EDDSA:
+            return self.params.curve_type.value.size
 
         return int(self._public_key.bit_size)
 

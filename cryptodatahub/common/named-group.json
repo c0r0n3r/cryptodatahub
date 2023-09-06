@@ -573,6 +573,20 @@
         "size": 448,
         "group_type": "ELLIPTIC_CURVE"
     },
+    "E384": {
+        "name": "E384",
+        "long_name": null,
+        "oid": null,
+        "size": 384,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "E521": {
+        "name": "E521",
+        "long_name": null,
+        "oid": null,
+        "size": 521,
+        "group_type": "ELLIPTIC_CURVE"
+    },
     "FFDHE2048": {
         "name": "ffdhe2048",
         "long_name": null,

@@ -5,7 +5,7 @@ import attr
 
 import six
 
-from cryptodatahub.common.algorithm import Authentication, BlockCipher, BlockCipherMode, KeyExchange, MAC, NamedGroup
+from cryptodatahub.common.algorithm import BlockCipher, BlockCipherMode, KeyExchange, MAC, NamedGroup, Signature
 from cryptodatahub.common.types import CryptoDataEnumCodedBase, CryptoDataParamsEnumString, convert_enum
 
 
@@ -76,16 +76,16 @@ SshHostKeyType = enum.Enum('SshHostKeyType', 'KEY CERTIFICATE PGP_KEY SPKI_KEY X
 @attr.s
 class HostKeyAlgorithmParams(CryptoDataParamsEnumString):
     key_type = attr.ib(validator=attr.validators.instance_of((SshHostKeyType, six.string_types)))
-    authentication = attr.ib(
-        validator=attr.validators.optional(attr.validators.instance_of((Authentication, six.string_types)))
-    )
+    signature = attr.ib(
+        validator=attr.validators.optional(attr.validators.instance_of((Signature, six.string_types)))
+     )
 
     def __attrs_post_init__(self):
         if isinstance(self.key_type, six.string_types):
             object.__setattr__(self, 'key_type', SshHostKeyType[self.key_type])
 
-        if isinstance(self.authentication, six.string_types):
-            object.__setattr__(self, 'authentication', Authentication[self.authentication])
+        if isinstance(self.signature, six.string_types):
+            object.__setattr__(self, 'signature', Signature[self.signature])
 
 
 @attr.s

@@ -167,18 +167,6 @@
         "oid": null,
         "digest_size": 96
     },
-    "ED25519PH": {
-        "name": "Ed25519ph",
-        "long_name": null,
-        "oid": "1.3.101.114",
-        "digest_size": 255
-    },
-    "ED448PH": {
-        "name": "Ed448ph",
-        "long_name": null,
-        "oid": "1.3.101.115",
-        "digest_size": 448
-    },
     "WHIRLPOOL": {
         "name": "Whirlpool",
         "long_name": null,

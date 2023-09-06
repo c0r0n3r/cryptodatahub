@@ -76,6 +76,20 @@
         "key_type": "DSS",
         "hash_algorithm": "SHA2_256"
     },
+    "DSA_WITH_SHA2_384": {
+        "name": "DSA with SHA-384",
+        "long_name": null,
+        "oid": "2.16.840.1.101.3.4.3.3",
+        "key_type": "DSS",
+        "hash_algorithm": "SHA2_384"
+    },
+    "DSA_WITH_SHA2_512": {
+        "name": "DSA with SHA-512",
+        "long_name": null,
+        "oid": "2.16.840.1.101.3.4.3.4",
+        "key_type": "DSS",
+        "hash_algorithm": "SHA2_512"
+    },
     "ECDSA_WITH_SHA1": {
         "name": "ECDSA with SHA-1",
         "long_name": null,
@@ -169,16 +183,44 @@
     },
     "ED25519": {
         "name": "Ed25519",
-        "long_name": null,
+        "long_name": "Edwards-curve Digital Signature Algorithm Ed25519",
         "oid": "1.3.101.112",
-        "key_type": "ED25519",
-        "hash_algorithm": null
+        "key_type": "EDDSA",
+        "hash_algorithm": "SHA2_512"
+    },
+    "ED25519PH": {
+        "name": "Ed25519ph",
+        "long_name": "Edwards-curve Digital Signature Algorithm Ed25519 with pre-hashing",
+        "oid": "1.3.101.114",
+        "key_type": "EDDSA",
+        "hash_algorithm": "SHA2_512"
     },
     "ED448": {
         "name": "Ed448",
-        "long_name": null,
+        "long_name": "Edwards-curve Digital Signature Algorithm Ed448",
         "oid": "1.3.101.113",
-        "key_type": "ED448",
-        "hash_algorithm": null
+        "key_type": "EDDSA",
+        "hash_algorithm": "SHAKE_256"
+    },
+    "ED448PH": {
+        "name": "Ed448ph",
+        "long_name": "Edwards-curve Digital Signature Algorithm Ed448 with pre-hashing",
+        "oid": "1.3.101.115",
+        "key_type": "EDDSA",
+        "hash_algorithm": "SHAKE_256"
+    },
+    "E382": {
+        "name": "E382",
+        "long_name": null,
+        "oid": null,
+        "key_type": "EDDSA",
+        "hash_algorithm": "SHAKE_256"
+    },
+    "E521": {
+        "name": "E521",
+        "long_name": null,
+        "oid": null,
+        "key_type": "EDDSA",
+        "hash_algorithm": "SHAKE_256"
     }
 }

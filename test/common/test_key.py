@@ -69,12 +69,22 @@ class TestPublicKey(TestClasses.TestKeyBase):
         public_key = self._get_public_key('gitlab.com_ssh_eddsa_key')
         public_key_params = public_key.params
         params = PublicKeyParamsEddsa(
-            key_type=public_key_params.key_type,
+            curve_type=public_key_params.curve_type,
             key_data=public_key_params.key_data,
         )
         public_key = PublicKey.from_params(params)
         self.assertEqual(params, public_key.params)
         self.assertEqual(public_key.key_size, 256)
+
+        public_key = self._get_public_key('ssh_ed448_key')
+        public_key_params = public_key.params
+        params = PublicKeyParamsEddsa(
+            curve_type=public_key_params.curve_type,
+            key_data=public_key_params.key_data,
+        )
+        public_key = PublicKey.from_params(params)
+        self.assertEqual(params, public_key.params)
+        self.assertEqual(public_key.key_size, 448)
 
         public_key = self._get_public_key('gitlab.com_ssh_rsa_key')
         public_key_params = public_key.params
