@@ -28,29 +28,27 @@ class MACMode(enum.Enum):
 
 @attr.s
 class EncryptionAlgorithmParams(CryptoDataParamsEnumString):
-    cipher = attr.ib(validator=attr.validators.optional(attr.validators.instance_of((BlockCipher, six.string_types))))
-    mode = attr.ib(validator=attr.validators.optional(attr.validators.instance_of((BlockCipherMode, six.string_types))))
-
-    def __attrs_post_init__(self):
-        if isinstance(self.cipher, six.string_types):
-            object.__setattr__(self, 'cipher', BlockCipher[self.cipher])
-
-        if isinstance(self.mode, six.string_types):
-            object.__setattr__(self, 'mode', BlockCipherMode[self.mode])
+    cipher = attr.ib(
+        converter=convert_enum(BlockCipher),
+        validator=attr.validators.optional(attr.validators.instance_of((BlockCipher, six.string_types)))
+    )
+    mode = attr.ib(
+        converter=convert_enum(BlockCipherMode),
+        validator=attr.validators.optional(attr.validators.instance_of((BlockCipherMode, six.string_types)))
+    )
 
 
 @attr.s
 class MacAlgorithmParams(CryptoDataParamsEnumString):
     truncated_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
-    mac = attr.ib(validator=attr.validators.optional(attr.validators.instance_of((MAC, six.string_types))))
-    mode = attr.ib(validator=attr.validators.optional(attr.validators.instance_of((MACMode, six.string_types))))
-
-    def __attrs_post_init__(self):
-        if isinstance(self.mac, six.string_types):
-            object.__setattr__(self, 'mac', MAC[self.mac])
-
-        if isinstance(self.mode, six.string_types):
-            object.__setattr__(self, 'mode', MACMode[self.mode])
+    mac = attr.ib(
+        converter=convert_enum(MAC),
+        validator=attr.validators.optional(attr.validators.instance_of((MAC, six.string_types)))
+    )
+    mode = attr.ib(
+        converter=convert_enum(MACMode),
+        validator=attr.validators.optional(attr.validators.instance_of((MACMode, six.string_types)))
+    )
 
     @property
     def size(self):
@@ -62,12 +60,11 @@ class MacAlgorithmParams(CryptoDataParamsEnumString):
 
 @attr.s
 class KexAlgorithmParams(CryptoDataParamsEnumString):
-    kex = attr.ib(validator=attr.validators.optional(attr.validators.instance_of((KeyExchange, six.string_types))))
+    kex = attr.ib(
+        converter=convert_enum(KeyExchange),
+        validator=attr.validators.optional(attr.validators.instance_of((KeyExchange, six.string_types)))
+    )
     key_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
-
-    def __attrs_post_init__(self):
-        if isinstance(self.kex, six.string_types):
-            object.__setattr__(self, 'kex', KeyExchange[self.kex])
 
 
 SshHostKeyType = enum.Enum('SshHostKeyType', 'KEY CERTIFICATE PGP_KEY SPKI_KEY X509_CERTIFICATE')
@@ -75,17 +72,14 @@ SshHostKeyType = enum.Enum('SshHostKeyType', 'KEY CERTIFICATE PGP_KEY SPKI_KEY X
 
 @attr.s
 class HostKeyAlgorithmParams(CryptoDataParamsEnumString):
-    key_type = attr.ib(validator=attr.validators.instance_of((SshHostKeyType, six.string_types)))
+    key_type = attr.ib(
+        converter=convert_enum(SshHostKeyType),
+        validator=attr.validators.instance_of((SshHostKeyType, six.string_types))
+    )
     signature = attr.ib(
+        converter=convert_enum(Signature),
         validator=attr.validators.optional(attr.validators.instance_of((Signature, six.string_types)))
-     )
-
-    def __attrs_post_init__(self):
-        if isinstance(self.key_type, six.string_types):
-            object.__setattr__(self, 'key_type', SshHostKeyType[self.key_type])
-
-        if isinstance(self.signature, six.string_types):
-            object.__setattr__(self, 'signature', Signature[self.signature])
+    )
 
 
 @attr.s
