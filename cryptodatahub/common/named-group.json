@@ -710,5 +710,21 @@
         "vulnerabilities": null,
         "size": 8192,
         "group_type": "DH_PARAM"
+    },
+    "M383": {
+        "name": "M383",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": null,
+        "size": 383,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "M511": {
+        "name": "M511",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": null,
+        "size": 511,
+        "group_type": "ELLIPTIC_CURVE"
     }
 }
