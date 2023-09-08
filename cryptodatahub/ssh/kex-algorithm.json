@@ -19,7 +19,7 @@
         "kex": "DHE",
         "key_size": 2048
     },
-    "DIFFIE_HELLMAN_GROUP1_SHA14_WIN7_MICROSOFT_COM": {
+    "DIFFIE_HELLMAN_GROUP14_SHA1_WIN7_MICROSOFT_COM": {
         "code": "diffie-hellman-group14-sha1-win7@microsoft.com",
         "kex": "DHE",
         "key_size": 2048
