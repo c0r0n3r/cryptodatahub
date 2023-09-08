@@ -1,11 +1,20 @@
 {
     "ZLIB_OPENSSH_COM": {
-        "code": "zlib@openssh.com"
+        "code": "zlib@openssh.com",
+        "vulnerabilities": []
     },
     "ZLIB": {
-        "code": "zlib"
+        "code": "zlib",
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "WEAK",
+                "named": "CRIME"
+            }
+        ]
     },
     "NONE": {
-        "code": "none"
+        "code": "none",
+        "vulnerabilities": []
     }
 }

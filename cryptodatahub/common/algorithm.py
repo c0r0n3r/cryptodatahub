@@ -6,12 +6,16 @@ import six
 import attr
 
 from cryptodatahub.common.grade import (
+    AttackType,
+    Grade,
     GradeableComplex,
     GradeableVulnerabilities,
+    Vulnerability,
 )
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataEnumOIDBase,
+    CryptoDataParamsEnumString,
     CryptoDataParamsNamed,
     CryptoDataParamsOIDOptional,
     convert_enum,
@@ -111,6 +115,35 @@ class MACParams(CryptoDataParamsOIDOptional, GradeableVulnerabilities):
 
 
 MAC = CryptoDataEnumOIDBase('MAC', CryptoDataEnumOIDBase.get_json_records(MACParams))
+
+
+@attr.s
+class MACModeParams(CryptoDataParamsEnumString, GradeableVulnerabilities):
+    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
+
+    @classmethod
+    def get_gradeable_name(cls):
+        return 'MAC mode'
+
+
+class MACMode(enum.Enum):
+    ENCRYPT_THEN_MAC = MACModeParams(
+        code='encrypt_then_mac',
+        name='encrypt then MAC',
+        vulnerabilities=[],
+    )
+    ENCRYPT_AND_MAC = MACModeParams(
+        code='encrypt_and_mac',
+        name='encrypt and MAC',
+        vulnerabilities=[
+            Vulnerability(attack_type=AttackType.FORGERY_ATTACK, grade=Grade.WEAK, named=None),
+        ],
+    )
+    MAC_THEN_ENCRYP = MACModeParams(
+        code='mac_then_encrypt',
+        name='MAC then encrypt',
+        vulnerabilities=[],
+    )
 
 
 @attr.s(frozen=True)

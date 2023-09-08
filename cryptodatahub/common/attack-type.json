@@ -15,6 +15,22 @@
         "name": "collision attack",
         "long_name": null
     },
+    "COMPRESSION_ORACLE": {
+        "name": "compression oracle attack",
+        "long_name": null
+    },
+    "DOS_ATTACK": {
+        "name": "(D)DoS attack",
+        "long_name": "(distributed) denial-of-service attack"
+    },
+    "DISCRETE_LOGARITHM": {
+        "name": "discrete logarithm",
+        "long_name": null
+    },
+    "FORGERY_ATTACK": {
+        "name": "forgery attack",
+        "long_name": null
+    },
     "INTEGER_FACTORIZATION": {
         "name": "integer factorization",
         "long_name": null

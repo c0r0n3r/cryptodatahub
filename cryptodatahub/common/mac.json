@@ -43,7 +43,13 @@
         "name": "MAC GOST 28147-89",
         "long_name": null,
         "oid": "1.2.643.2.2.22",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "FORGERY_ATTACK",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "digest_size": 32,
         "hash_algorithm": null
     },
@@ -83,7 +89,13 @@
         "name": "CTR OMAC GOST R 34.12-2015 \"Magma\"",
         "long_name": null,
         "oid": "1.2.643.7.1.1.5.1.2",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "FORGERY_ATTACK",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "digest_size": 64,
         "hash_algorithm": null
     },
@@ -105,7 +117,7 @@
         "name": "POLY1305",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 128,
         "hash_algorithm": null
     },
@@ -279,7 +291,13 @@
         "name": "UMAC-32",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "FORGERY_ATTACK",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "digest_size": 32,
         "hash_algorithm": null
     },
@@ -287,7 +305,13 @@
         "name": "UMAC-64",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "FORGERY_ATTACK",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "digest_size": 64,
         "hash_algorithm": null
     },
@@ -295,7 +319,13 @@
         "name": "UMAC-96",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "FORGERY_ATTACK",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "digest_size": 96,
         "hash_algorithm": null
     },
@@ -303,7 +333,7 @@
         "name": "UMAC-128",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 128,
         "hash_algorithm": null
     },

@@ -1,4 +1,16 @@
 {
+    "CRIME": {
+        "name": "CRIME",
+        "long_name": "Compression Ratio Info-leak Made Easy",
+        "grade": "WEAK",
+        "attack_type": "COMPRESSION_ORACLE"
+    },
+    "DHEAT_ATTACK": {
+        "name": "D(HE)at attack",
+        "long_name": null,
+        "grade": "WEAK",
+        "attack_type": "DOS_ATTACK"
+    },
     "DROWN_ATTACK": {
         "name": "DROWN",
         "long_name": "Decrypting RSA with Obsolete and Weakened eNcryption",

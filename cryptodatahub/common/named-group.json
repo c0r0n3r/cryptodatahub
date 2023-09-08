@@ -3,7 +3,7 @@
         "name": "c2pnb163v1",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 163,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -11,7 +11,7 @@
         "name": "c2pnb163v2",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.2",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 163,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -19,7 +19,7 @@
         "name": "c2pnb163v3",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.3",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 163,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -27,7 +27,7 @@
         "name": "c2pnb176w1",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.4",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 176,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -35,7 +35,7 @@
         "name": "c2tnb191v1",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.5",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 191,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -43,7 +43,7 @@
         "name": "c2tnb191v2",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.6",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 191,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -51,7 +51,7 @@
         "name": "c2tnb191v3",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.7",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 191,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -59,7 +59,7 @@
         "name": "c2onb191v4",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.8",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 191,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -67,7 +67,7 @@
         "name": "c2onb191v5",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.9",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 191,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -75,7 +75,7 @@
         "name": "c2pnb208w1",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.10",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 208,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -83,7 +83,7 @@
         "name": "c2tnb239v1",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.11",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 239,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -91,7 +91,7 @@
         "name": "c2tnb239v2",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.12",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 239,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -99,7 +99,7 @@
         "name": "c2tnb239v3",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.13",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 239,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -107,7 +107,7 @@
         "name": "c2onb239v4",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.14",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 239,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -115,7 +115,7 @@
         "name": "c2onb239v5",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.15",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 239,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -123,7 +123,7 @@
         "name": "c2pnb272w1",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.16",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 272,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -131,7 +131,7 @@
         "name": "c2pnb304w1",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.17",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 304,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -139,7 +139,7 @@
         "name": "c2tnb359v1",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.18",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 359,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -147,7 +147,7 @@
         "name": "c2pnb368w1",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.19",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 368,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -155,7 +155,7 @@
         "name": "c2tnb431r1",
         "long_name": null,
         "oid": "1.2.840.10045.3.0.20",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 431,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -163,7 +163,7 @@
         "name": "CECPQ2",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 256,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -171,7 +171,7 @@
         "name": "tc26-gost-3410-2012-256-paramSetA",
         "long_name": null,
         "oid": "1.2.643.7.1.2.1.1.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 256,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -179,7 +179,7 @@
         "name": "GostR3410-2001-CryptoPro-A-ParamSet",
         "long_name": null,
         "oid": "1.2.643.2.2.35.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 256,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -187,7 +187,7 @@
         "name": "GostR3410-2001-CryptoPro-B-ParamSet",
         "long_name": null,
         "oid": "1.2.643.2.2.35.2",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 256,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -195,7 +195,7 @@
         "name": "GostR3410-2001-CryptoPro-C-ParamSet",
         "long_name": null,
         "oid": "1.2.643.2.2.35.3",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 256,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -203,7 +203,7 @@
         "name": "tc26-gost-3410-12-512-paramSetA",
         "long_name": null,
         "oid": "1.2.643.7.1.2.1.2.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 512,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -211,7 +211,7 @@
         "name": "tc26-gost-3410-12-512-paramSetB",
         "long_name": null,
         "oid": "1.2.643.7.1.2.1.2.2",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 512,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -219,7 +219,7 @@
         "name": "tc26-gost-3410-2012-512-paramSetC",
         "long_name": null,
         "oid": "1.2.643.7.1.2.1.2.3",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 512,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -227,7 +227,7 @@
         "name": "prime239v1",
         "long_name": null,
         "oid": "1.2.840.10045.3.1.4",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 239,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -235,7 +235,7 @@
         "name": "prime239v2",
         "long_name": null,
         "oid": "1.2.840.10045.3.1.5",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 239,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -243,7 +243,7 @@
         "name": "prime239v3",
         "long_name": null,
         "oid": "1.2.840.10045.3.1.6",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 239,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -251,7 +251,13 @@
         "name": "secp112r1",
         "long_name": null,
         "oid": "1.3.132.0.6",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "size": 112,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -259,7 +265,13 @@
         "name": "secp112r2",
         "long_name": null,
         "oid": "1.3.132.0.7",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "size": 112,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -267,7 +279,13 @@
         "name": "secp128r1",
         "long_name": null,
         "oid": "1.3.132.0.28",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "size": 128,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -275,7 +293,13 @@
         "name": "secp128r2",
         "long_name": null,
         "oid": "1.3.132.0.29",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "size": 128,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -283,7 +307,13 @@
         "name": "sect113r1",
         "long_name": null,
         "oid": "1.3.132.0.4",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "size": 113,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -291,7 +321,13 @@
         "name": "sect113r2",
         "long_name": null,
         "oid": "1.3.132.0.5",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "size": 113,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -299,7 +335,13 @@
         "name": "sect131r1",
         "long_name": null,
         "oid": "1.3.132.0.22",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "size": 131,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -307,7 +349,13 @@
         "name": "sect131r2",
         "long_name": null,
         "oid": "1.3.132.0.23",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "size": 131,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -315,7 +363,7 @@
         "name": "sect163k1",
         "long_name": null,
         "oid": "1.3.132.0.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 163,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -323,7 +371,7 @@
         "name": "sect163r1",
         "long_name": null,
         "oid": "1.3.132.0.2",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 163,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -331,7 +379,7 @@
         "name": "sect163r2",
         "long_name": null,
         "oid": "1.3.132.0.15",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 163,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -339,7 +387,7 @@
         "name": "sect193r1",
         "long_name": null,
         "oid": "1.3.132.0.24",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 193,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -347,7 +395,7 @@
         "name": "sect193r2",
         "long_name": null,
         "oid": "1.3.132.0.25",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 193,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -355,7 +403,7 @@
         "name": "sect233k1",
         "long_name": null,
         "oid": "1.3.132.0.26",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 233,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -363,7 +411,7 @@
         "name": "sect233r1",
         "long_name": null,
         "oid": "1.3.132.0.27",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 233,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -371,7 +419,7 @@
         "name": "sect239k1",
         "long_name": null,
         "oid": "1.3.132.0.3",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 239,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -379,7 +427,7 @@
         "name": "sect283k1",
         "long_name": null,
         "oid": "1.3.132.0.16",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 283,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -387,7 +435,7 @@
         "name": "sect283r1",
         "long_name": null,
         "oid": "1.3.132.0.17",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 283,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -395,7 +443,7 @@
         "name": "sect409k1",
         "long_name": null,
         "oid": "1.3.132.0.36",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 409,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -403,7 +451,7 @@
         "name": "sect409r1",
         "long_name": null,
         "oid": "1.3.132.0.37",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 409,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -411,7 +459,7 @@
         "name": "sect571k1",
         "long_name": null,
         "oid": "1.3.132.0.38",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 571,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -419,7 +467,7 @@
         "name": "sect571r1",
         "long_name": null,
         "oid": "1.3.132.0.39",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 571,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -427,7 +475,7 @@
         "name": "secp160k1",
         "long_name": null,
         "oid": "1.3.132.0.9",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 160,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -435,7 +483,13 @@
         "name": "secp160r1",
         "long_name": null,
         "oid": "1.3.132.0.8",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "size": 160,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -443,7 +497,13 @@
         "name": "secp160r2",
         "long_name": null,
         "oid": "1.3.132.0.30",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "size": 160,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -451,7 +511,7 @@
         "name": "secp192k1",
         "long_name": null,
         "oid": "1.3.132.0.31",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 192,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -459,7 +519,7 @@
         "name": "prime192v1",
         "long_name": null,
         "oid": "1.2.840.10045.3.1.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 192,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -467,7 +527,7 @@
         "name": "prime192v2",
         "long_name": null,
         "oid": "1.2.840.10045.3.1.2",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 192,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -475,7 +535,7 @@
         "name": "prime192v3",
         "long_name": null,
         "oid": "1.2.840.10045.3.1.3",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 192,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -483,7 +543,7 @@
         "name": "secp224k1",
         "long_name": null,
         "oid": "1.3.132.0.32",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 224,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -491,7 +551,7 @@
         "name": "secp224r1",
         "long_name": null,
         "oid": "1.3.132.0.33",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 224,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -499,7 +559,7 @@
         "name": "secp256k1",
         "long_name": null,
         "oid": "1.3.132.0.10",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 256,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -507,7 +567,7 @@
         "name": "prime256v1",
         "long_name": null,
         "oid": "1.2.840.10045.3.1.7",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 256,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -515,7 +575,7 @@
         "name": "secp384r1",
         "long_name": null,
         "oid": "1.3.132.0.34",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 384,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -523,7 +583,7 @@
         "name": "secp521r1",
         "long_name": null,
         "oid": "1.3.132.0.35",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 521,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -531,7 +591,13 @@
         "name": "brainpoolp160r1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "size": 160,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -539,7 +605,13 @@
         "name": "brainpoolp160t1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.2",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "size": 160,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -547,7 +619,7 @@
         "name": "brainpoolp192r1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.3",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 192,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -555,7 +627,7 @@
         "name": "brainpoolp192t1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.4",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 192,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -563,7 +635,7 @@
         "name": "brainpoolp224r1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.5",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 224,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -571,7 +643,7 @@
         "name": "brainpoolp224t1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.6",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 224,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -579,7 +651,7 @@
         "name": "brainpoolp256r1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.7",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 256,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -587,7 +659,7 @@
         "name": "brainpoolp256t1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.8",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 256,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -595,7 +667,7 @@
         "name": "brainpoolp320r1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.9",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 320,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -603,7 +675,7 @@
         "name": "brainpoolp320t1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.10",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 320,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -611,7 +683,7 @@
         "name": "brainpoolp384r1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.11",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 384,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -619,7 +691,7 @@
         "name": "brainpoolp384t1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.12",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 384,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -627,7 +699,7 @@
         "name": "brainpoolp512r1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.13",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 512,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -635,7 +707,7 @@
         "name": "brainpoolp512t1",
         "long_name": null,
         "oid": "1.3.36.3.3.2.8.1.1.14",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 512,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -643,7 +715,7 @@
         "name": "Curve25519",
         "long_name": null,
         "oid": "1.3.101.110",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 256,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -651,7 +723,7 @@
         "name": "Curve448",
         "long_name": null,
         "oid": "1.3.101.111",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 448,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -659,7 +731,7 @@
         "name": "E384",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 384,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -667,7 +739,7 @@
         "name": "E521",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 521,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -675,7 +747,7 @@
         "name": "ffdhe2048",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 2048,
         "group_type": "DH_PARAM"
     },
@@ -683,7 +755,7 @@
         "name": "ffdhe3072",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 3072,
         "group_type": "DH_PARAM"
     },
@@ -691,7 +763,7 @@
         "name": "ffdhe4096",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 4096,
         "group_type": "DH_PARAM"
     },
@@ -699,7 +771,13 @@
         "name": "ffdhe6144",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DOS_ATTACK",
+                "grade": "WEAK",
+                "named": "DHEAT_ATTACK"
+            }
+        ],
         "size": 6144,
         "group_type": "DH_PARAM"
     },
@@ -707,7 +785,13 @@
         "name": "ffdhe8192",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DOS_ATTACK",
+                "grade": "WEAK",
+                "named": "DHEAT_ATTACK"
+            }
+        ],
         "size": 8192,
         "group_type": "DH_PARAM"
     },
@@ -715,7 +799,7 @@
         "name": "M383",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 383,
         "group_type": "ELLIPTIC_CURVE"
     },
@@ -723,7 +807,7 @@
         "name": "M511",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "size": 511,
         "group_type": "ELLIPTIC_CURVE"
     }

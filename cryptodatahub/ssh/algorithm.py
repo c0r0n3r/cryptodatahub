@@ -1,11 +1,22 @@
 # -*- coding: utf-8 -*-
 
+import abc
 import enum
 import attr
 
 import six
 
-from cryptodatahub.common.algorithm import BlockCipher, BlockCipherMode, Hash, KeyExchange, MAC, NamedGroup, Signature
+from cryptodatahub.common.algorithm import (
+    BlockCipher,
+    BlockCipherMode,
+    Hash,
+    KeyExchange,
+    MAC,
+    MACMode,
+    NamedGroup,
+    Signature,
+)
+from cryptodatahub.common.grade import GradeableComplex, GradeableVulnerabilities
 from cryptodatahub.common.parameter import DHParamWellKnown
 from cryptodatahub.common.types import (
     CryptoDataEnumCodedBase,
@@ -16,24 +27,32 @@ from cryptodatahub.common.types import (
 
 
 @attr.s
-class MACModeParams(CryptoDataParamsEnumString):
-    pass
+class SshAlgorithmParams(CryptoDataParamsEnumString, GradeableComplex):
+    @property
+    @abc.abstractmethod
+    def _gradeable_algorithms(self):
+        raise NotImplementedError()
 
+    def __attrs_post_init__(self):
+        gradeables = []
+        for algorithm in self._gradeable_algorithms:
+            if isinstance(algorithm, six.string_types):
+                gradeable = getattr(self, algorithm)
+                if gradeable is not None:
+                    gradeable = gradeable.value
+            else:
+                gradeable = algorithm
 
-class MACMode(enum.Enum):
-    ENCRYPT_THEN_MAC = MACModeParams(
-        code='encrypt_then_mac',
-    )
-    ENCRYPT_AND_MAC = MACModeParams(
-        code='encrypt_and_mac',
-    )
-    MAC_THEN_ENCRYP = MACModeParams(
-        code='mac_then_encrypt',
-    )
+            if gradeable is not None:
+                gradeables.append(gradeable)
+
+        object.__setattr__(self, 'gradeables', gradeables)
+
+        attr.validate(self)
 
 
 @attr.s
-class EncryptionAlgorithmParams(CryptoDataParamsEnumString):
+class EncryptionAlgorithmParams(SshAlgorithmParams):
     cipher = attr.ib(
         converter=convert_enum(BlockCipher),
         validator=attr.validators.optional(attr.validators.instance_of((BlockCipher, six.string_types)))
@@ -43,9 +62,13 @@ class EncryptionAlgorithmParams(CryptoDataParamsEnumString):
         validator=attr.validators.optional(attr.validators.instance_of((BlockCipherMode, six.string_types)))
     )
 
+    @property
+    def _gradeable_algorithms(self):
+        return ('cipher', 'mode')
+
 
 @attr.s
-class MacAlgorithmParams(CryptoDataParamsEnumString):
+class MacAlgorithmParams(SshAlgorithmParams):
     truncated_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
     mac = attr.ib(
         converter=convert_enum(MAC),
@@ -63,9 +86,13 @@ class MacAlgorithmParams(CryptoDataParamsEnumString):
 
         return self.mac.value.digest_size
 
+    @property
+    def _gradeable_algorithms(self):
+        return ('mac', 'mode')
+
 
 @attr.s
-class KexAlgorithmParams(CryptoDataParamsEnumString):
+class KexAlgorithmParams(SshAlgorithmParams):
     kex = attr.ib(
         converter=convert_enum(KeyExchange),
         validator=attr.validators.optional(attr.validators.instance_of((KeyExchange, six.string_types)))
@@ -82,12 +109,21 @@ class KexAlgorithmParams(CryptoDataParamsEnumString):
     )
     key_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
 
+    @property
+    def _gradeable_algorithms(self):
+        gradeables = ['kex', 'exchange_hash']
+
+        if isinstance(self.key_parameter, DHParamWellKnown):
+            gradeables.append(self.key_parameter.value)
+
+        return gradeables
+
 
 SshHostKeyType = enum.Enum('SshHostKeyType', 'KEY CERTIFICATE PGP_KEY SPKI_KEY X509_CERTIFICATE')
 
 
 @attr.s
-class HostKeyAlgorithmParams(CryptoDataParamsEnumString):
+class HostKeyAlgorithmParams(SshAlgorithmParams):
     key_type = attr.ib(
         converter=convert_enum(SshHostKeyType),
         validator=attr.validators.instance_of((SshHostKeyType, six.string_types))
@@ -97,10 +133,16 @@ class HostKeyAlgorithmParams(CryptoDataParamsEnumString):
         validator=attr.validators.optional(attr.validators.instance_of((Signature, six.string_types)))
     )
 
+    @property
+    def _gradeable_algorithms(self):
+        return ('signature',)
+
 
 @attr.s
-class CompressionAlgorithmParams(CryptoDataParamsEnumString):
-    pass
+class CompressionAlgorithmParams(CryptoDataParamsEnumString, GradeableVulnerabilities):
+    @classmethod
+    def get_gradeable_name(cls):
+        return 'compression'
 
 
 @attr.s
