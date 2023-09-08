@@ -5,7 +5,7 @@ import attr
 
 import six
 
-from cryptodatahub.common.algorithm import BlockCipher, BlockCipherMode, KeyExchange, MAC, NamedGroup, Signature
+from cryptodatahub.common.algorithm import BlockCipher, BlockCipherMode, Hash, KeyExchange, MAC, NamedGroup, Signature
 from cryptodatahub.common.types import CryptoDataEnumCodedBase, CryptoDataParamsEnumString, convert_enum
 
 
@@ -63,6 +63,10 @@ class KexAlgorithmParams(CryptoDataParamsEnumString):
     kex = attr.ib(
         converter=convert_enum(KeyExchange),
         validator=attr.validators.optional(attr.validators.instance_of((KeyExchange, six.string_types)))
+    )
+    exchange_hash = attr.ib(
+        converter=convert_enum(Hash),
+        validator=attr.validators.optional(attr.validators.instance_of((Hash, six.string_types)))
     )
     key_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
 
