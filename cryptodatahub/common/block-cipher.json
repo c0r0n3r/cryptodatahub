@@ -147,7 +147,7 @@
         "name": "IDEA",
         "long_name": null,
         "key_size": 64,
-        "block_size": 6
+        "block_size": 64
     },
     "IDEA_128": {
         "name": "IDEA-128",
