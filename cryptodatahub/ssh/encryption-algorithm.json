@@ -231,27 +231,27 @@
     },
     "RIJNDAEL128_CBC": {
         "code": "rijndael128-cbc",
-        "cipher": "AES_128",
+        "cipher": "RIJNDAEL_128",
         "mode": "CBC"
     },
     "RIJNDAEL192_CBC": {
         "code": "rijndael192-cbc",
-        "cipher": "AES_192",
+        "cipher": "RIJNDAEL_192",
         "mode": "CBC"
     },
     "RIJNDAEL256_CBC": {
         "code": "rijndael256-cbc",
-        "cipher": "AES_256",
+        "cipher": "RIJNDAEL_256",
         "mode": "CBC"
     },
     "RIJNDAEL_CBC_LYSATOR_LIU_SE": {
         "code": "rijndael-cbc@lysator.liu.se",
-        "cipher": "AES_256",
+        "cipher": "RIJNDAEL_256",
         "mode": "CBC"
     },
     "RIJNDAEL_CBC_SSH_COM": {
         "code": "rijndael-cbc@ssh.com",
-        "cipher": "AES_256",
+        "cipher": "RIJNDAEL_256",
         "mode": "CBC"
     },
     "SEED_CBC_SSH_COM": {
