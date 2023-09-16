@@ -15,11 +15,98 @@ import asn1crypto.pem
 import asn1crypto.x509
 import attr
 
-from cryptodatahub.common.algorithm import Authentication, Hash, NamedGroup, Signature
+from cryptodatahub.common.algorithm import Authentication, KeyExchange, Hash, NamedGroup, Signature
 from cryptodatahub.common.exception import InvalidValue
+from cryptodatahub.common.grade import (
+    AttackNamed,
+    AttackType,
+    Grade,
+    GradeableComplex,
+    GradeableVulnerabilities,
+    Vulnerability,
+)
+from cryptodatahub.common.types import _ConverterBase
 from cryptodatahub.common.utils import bytes_to_hex_string
 
 from cryptodatahub.tls.algorithm import TlsExtensionType
+
+
+@attr.s(frozen=True)
+class _PublicKeySizeGradeable(GradeableVulnerabilities):
+    @classmethod
+    def get_gradeable_name(cls):
+        return 'public key size'
+
+
+@attr.s
+class PublicKeySize(GradeableComplex):
+    _FINITE_FIELD_TYPES = [Authentication.RSA, Authentication.DSS, KeyExchange.ADH, KeyExchange.DH, KeyExchange.DHE]
+    _ELLIPTIC_CURVE_TYPES = [Authentication.ECDSA, Authentication.EDDSA, KeyExchange.ECDH, KeyExchange.ECDHE]
+
+    key_type = attr.ib(validator=attr.validators.instance_of((Authentication, KeyExchange)))
+    value = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+
+    @value.validator
+    def _value_validator(self, attribute, value):  # pylint: disable=unused-argument
+        if value <= 0:
+            raise InvalidValue(value, type(self), 'value')
+
+    def __attrs_post_init__(self):
+        if self.key_type in self._ELLIPTIC_CURVE_TYPES:
+            gradeables = []
+            attack_type = AttackType.DISCRETE_LOGARITHM
+            if self.value <= 112:
+                gradeables.append(Vulnerability(attack_type=attack_type, grade=Grade.INSECURE, named=None))
+            elif self.value <= 160:
+                gradeables.append(Vulnerability(attack_type=attack_type, grade=Grade.WEAK, named=None))
+            gradeables = [_PublicKeySizeGradeable(gradeables)]
+        elif self.key_type in self._FINITE_FIELD_TYPES:
+            gradeables = []
+            attack_type = AttackType.INTEGER_FACTORIZATION
+            if self.value <= 768:
+                if self.key_type == Authentication.RSA:
+                    attack_named = AttackNamed.FREAK
+                elif isinstance(self.key_type, KeyExchange):
+                    attack_named = AttackNamed.WEAK_DH
+                else:
+                    attack_named = None
+
+                gradeables.append(Vulnerability(attack_type=attack_type, grade=Grade.INSECURE, named=attack_named))
+            elif self.value <= 1024:
+                gradeables.append(Vulnerability(attack_type=attack_type, grade=Grade.WEAK, named=None))
+            elif self.key_type in [KeyExchange.ADH, KeyExchange.DH, KeyExchange.DHE] and self.value > 4096:
+                gradeables.append(
+                    Vulnerability(attack_type=AttackType.DOS_ATTACK, grade=Grade.WEAK, named=AttackNamed.DHEAT_ATTACK)
+                )
+            gradeables = [_PublicKeySizeGradeable(gradeables)]
+        else:
+            gradeables = None
+
+        object.__setattr__(self, 'gradeables', gradeables)
+
+    def __str__(self):
+        return str(self.value)
+
+
+@attr.s(repr=False, slots=True, hash=True)
+class _PublicKeySizeConverter(_ConverterBase):
+    key_exchange = attr.ib(validator=attr.validators.instance_of(KeyExchange))
+
+    def __call__(self, value):
+        if value is None:
+            return None
+
+        try:
+            return PublicKeySize(self.key_exchange, value)
+        except (TypeError, InvalidValue):
+            return value
+
+    def __repr__(self):
+        return '<public key size converter>'
+
+
+def convert_public_key_size(key_exchange):
+    return _PublicKeySizeConverter(key_exchange)
 
 
 @attr.s
@@ -252,7 +339,7 @@ class PublicKey(object):
     def _asdict(self):
         return collections.OrderedDict([
             ('key_type', self.key_type),
-            ('key_size', self.key_size),
+            ('key_size', PublicKeySize(self.key_type, self.key_size)),
             ('fingerprints', self.fingerprints),
         ])
 

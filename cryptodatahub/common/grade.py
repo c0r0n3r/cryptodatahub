@@ -175,6 +175,11 @@ class GradeableVulnerabilities(Gradeable):
         )
     )
 
+    @classmethod
+    @abc.abstractmethod
+    def get_gradeable_name(cls):
+        raise NotImplementedError()
+
     @property
     def min_grade(self):
         return self.get_min_grade(self.vulnerabilities)

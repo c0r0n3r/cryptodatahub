@@ -17,6 +17,7 @@ from cryptodatahub.common.algorithm import (
     Signature,
 )
 from cryptodatahub.common.grade import GradeableComplex, GradeableVulnerabilities
+from cryptodatahub.common.key import PublicKeySize
 from cryptodatahub.common.parameter import DHParamWellKnown
 from cryptodatahub.common.types import (
     CryptoDataEnumCodedBase,
@@ -108,6 +109,18 @@ class KexAlgorithmParams(SshAlgorithmParams):
         validator=attr.validators.optional(attr.validators.instance_of((Hash, six.string_types)))
     )
     key_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
+
+    def __attrs_post_init__(self):
+        super(KexAlgorithmParams, self).__attrs_post_init__()
+
+        if self.key_size is not None:
+            gradeables = PublicKeySize(self.kex, self.key_size).gradeables
+            if gradeables is None:
+                self.gradeables.append(gradeables)
+            else:
+                self.gradeables.extend(gradeables)
+
+        attr.validate(self)
 
     @property
     def _gradeable_algorithms(self):

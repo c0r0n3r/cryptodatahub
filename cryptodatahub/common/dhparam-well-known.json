@@ -171,7 +171,13 @@
         "safe_prime": true
     },
     "RFC3526_6144_BIT_MODP_GROUP": {
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DOS_ATTACK",
+                "grade": "WEAK",
+                "named": "DHEAT_ATTACK"
+            }
+        ],
         "parameter_numbers": {
             "p": [
                 "FFFFFFFF FFFFFFFF C90FDAA2 2168C234 C4C6628B 80DC1CD1 29024E08",
@@ -214,7 +220,13 @@
         "safe_prime": true
     },
     "RFC3526_8192_BIT_MODP_GROUP": {
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DOS_ATTACK",
+                "grade": "WEAK",
+                "named": "DHEAT_ATTACK"
+            }
+        ],
         "parameter_numbers": {
             "p": [
                 "FFFFFFFF FFFFFFFF C90FDAA2 2168C234 C4C6628B 80DC1CD1",
@@ -542,7 +554,13 @@
         "safe_prime": true
     },
     "RFC7919_6144_BIT_FINITE_FIELD_DIFFIE_HELLMAN_GROUP": {
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DOS_ATTACK",
+                "grade": "WEAK",
+                "named": "DHEAT_ATTACK"
+            }
+        ],
         "parameter_numbers": {
             "p": [
                 "FFFFFFFF FFFFFFFF ADF85458 A2BB4A9A AFDC5620 273D3CF1",
@@ -623,7 +641,13 @@
         "safe_prime": true
     },
     "RFC7919_8192_BIT_FINITE_FIELD_DIFFIE_HELLMAN_GROUP": {
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DOS_ATTACK",
+                "grade": "WEAK",
+                "named": "DHEAT_ATTACK"
+            }
+        ],
         "parameter_numbers": {
             "p": [
                 "FFFFFFFF FFFFFFFF ADF85458 A2BB4A9A AFDC5620 273D3CF1",

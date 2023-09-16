@@ -23,6 +23,12 @@
         "grade": "INSECURE",
         "attack_type": "MITM"
     },
+    "FREAK": {
+        "name": "FREAK",
+        "long_name": "Factoring RSA Export Keys",
+        "grade": "INSECURE",
+        "attack_type": "MITM"
+    },
     "LUCKY13": {
         "name": "Lucky Thirteen attack",
         "long_name": null,
@@ -58,5 +64,11 @@
         "long_name": null,
         "grade": "INSECURE",
         "attack_type": "COLLISION"
+    },
+    "WEAK_DH": {
+        "name": "weak DH",
+        "long_name": "weak Diffie-Hellman",
+        "grade": "INSECURE",
+        "attack_type": "INTEGER_FACTORIZATION"
     }
 }
