@@ -2,17 +2,23 @@
     "CBC": {
         "name": "CBC",
         "long_name": "cipher block chaining",
-        "vulnerabilities": null
+        "vulnerabilities": [
+            {
+                "attack_type": "PADDING_ORACLE",
+                "grade": "WEAK",
+                "named": "POODLE"
+            }
+        ]
     },
     "CCM": {
         "name": "CCM",
         "long_name": "counter with CBC-MAC",
-        "vulnerabilities": null
+        "vulnerabilities": []
     },
     "CCM_8": {
         "name": "CCM-8",
         "long_name": "counter with CBC-MAC (8)",
-        "vulnerabilities": null
+        "vulnerabilities": []
     },
     "CFB": {
         "name": "CFB",
@@ -27,12 +33,24 @@
     "CTR": {
         "name": "CTR",
         "long_name": "counter",
-        "vulnerabilities": null
+        "vulnerabilities": [
+            {
+                "attack_type": "REUSED_KEY_ATTACK",
+                "grade": "WEAK",
+                "named": null
+            }
+        ]
     },
     "ECB": {
         "name": "ECB",
         "long_name": "electronic codebook",
-        "vulnerabilities": null
+        "vulnerabilities": [
+            {
+                "attack_type": "CHOSEN_PLAINTEXT_ATTACK",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ]
     },
     "EAX": {
         "name": "EAX",
@@ -42,7 +60,7 @@
     "GCM": {
         "name": "GCM",
         "long_name": "Galois/counter mode",
-        "vulnerabilities": null
+        "vulnerabilities": []
     },
     "MGM": {
         "name": "MGM",
@@ -52,6 +70,12 @@
     "OFB": {
         "name": "OFB",
         "long_name": "output feedback",
-        "vulnerabilities": null
+        "vulnerabilities": [
+            {
+                "attack_type": "REUSED_KEY_ATTACK",
+                "grade": "WEAK",
+                "named": null
+            }
+        ]
     }
 }

@@ -125,7 +125,7 @@ class SignatureParams(CryptoDataParamsOIDOptional, GradeableComplex):
     )
 
     def __attrs_post_init__(self):
-        object.__setattr__(self, 'vulnerabilities', [self.hash_algorithm.value])
+        object.__setattr__(self, 'gradeables', [self.hash_algorithm.value])
 
         attr.validate(self)
 

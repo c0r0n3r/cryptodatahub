@@ -9,21 +9,21 @@
     "AES_128": {
         "name": "AES-128",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "key_size": 128,
         "block_size": 128
     },
     "AES_192": {
         "name": "AES-192",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "key_size": 192,
         "block_size": 128
     },
     "AES_256": {
         "name": "AES-256",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "key_size": 256,
         "block_size": 128
     },
@@ -51,28 +51,52 @@
     "BLOWFISH": {
         "name": "Blowfish",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "WEAK",
+                "named": "SWEET32"
+            }
+        ],
         "key_size": 32,
         "block_size": 64
     },
     "TWOFISH128": {
         "name": "Twofish-128",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "WEAK",
+                "named": "SWEET32"
+            }
+        ],
         "key_size": 128,
         "block_size": 128
     },
     "TWOFISH192": {
         "name": "Twofish-192",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "DEPRECATED",
+                "named": "SWEET32"
+            }
+        ],
         "key_size": 192,
         "block_size": 192
     },
     "TWOFISH256": {
         "name": "Twofish-256",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "DEPRECATED",
+                "named": "SWEET32"
+            }
+        ],
         "key_size": 256,
         "block_size": 256
     },
@@ -93,7 +117,13 @@
     "CAST_128": {
         "name": "CAST-128",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "DEPRECATED",
+                "named": "SWEET32"
+            }
+        ],
         "key_size": 40,
         "block_size": 64
     },
@@ -107,7 +137,7 @@
     "CHACHA20": {
         "name": "ChaCha20",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "key_size": 128,
         "block_size": null
     },
@@ -123,12 +153,35 @@
         "long_name": null,
         "vulnerabilities": null,
         "key_size": 56,
+        "vulnerabilities": [
+            {
+                "attack_type": "BRUTE_FORCE",
+                "grade": "INSECURE",
+                "named": null
+            },
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "INSECURE",
+                "named": "SWEET32"
+            }
+        ],
         "block_size": 64
     },
     "DES40": {
         "name": "DES-40",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BRUTE_FORCE",
+                "grade": "INSECURE",
+                "named": null
+            },
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "INSECURE",
+                "named": "SWEET32"
+            }
+        ],
         "key_size": 40,
         "block_size": 64
     },
@@ -170,7 +223,13 @@
     "IDEA": {
         "name": "IDEA",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "key_size": 64,
         "block_size": 64
     },
@@ -212,105 +271,189 @@
     "RC4_40": {
         "name": "RC4-40",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": "NOMORE"
+            }
+        ],
         "key_size": 40,
         "block_size": null
     },
     "RC4_56": {
         "name": "RC4-56",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": "NOMORE"
+            }
+        ],
         "key_size": 56,
         "block_size": null
     },
     "RC4_64": {
         "name": "RC4-64",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": "NOMORE"
+            }
+        ],
         "key_size": 64,
         "block_size": null
     },
     "RC4_128": {
         "name": "RC4-128",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": "NOMORE"
+            }
+        ],
         "key_size": 128,
         "block_size": null
     },
     "RC4_256": {
         "name": "RC4-256",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": "NOMORE"
+            }
+        ],
         "key_size": 256,
         "block_size": null
     },
     "RIJNDAEL_128": {
         "name": "Rijndael 128",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "key_size": 128,
         "block_size": 128
     },
     "RIJNDAEL_192": {
         "name": "Rijndael 192",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "key_size": 192,
         "block_size": 128
     },
     "RIJNDAEL_256": {
         "name": "Rijndael 256",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "key_size": 256,
         "block_size": 128
     },
     "SALSA20": {
         "name": "Salsa20",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "key_size": 256,
         "block_size": null
     },
     "SEED": {
         "name": "SEED",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "key_size": 128,
         "block_size": 128
     },
     "SERPENT_128": {
         "name": "Serpent-128",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "key_size": 128,
         "block_size": 128
     },
     "SERPENT_192": {
         "name": "Serpent-192",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "key_size": 192,
         "block_size": 128
     },
     "SERPENT_256": {
         "name": "Serpent-256",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "key_size": 256,
         "block_size": 128
     },
     "TRIPLE_DES": {
         "name": "3DES",
         "long_name": "Triple DES",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "DEPRECATED",
+                "named": "SWEET32"
+            }
+        ],
         "key_size": 128,
         "block_size": 64
     },
     "TRIPLE_DES_EDE": {
         "name": "3DES EDE",
         "long_name": "Triple DES EDE",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "DEPRECATED",
+                "named": "SWEET32"
+            }
+        ],
         "key_size": 128,
         "block_size": 64
     }

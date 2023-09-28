@@ -3,7 +3,7 @@
         "name": "AEAD_AES_128_CCM",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 128,
         "hash_algorithm": null
     },
@@ -11,7 +11,7 @@
         "name": "AEAD_AES_128_GCM",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 128,
         "hash_algorithm": null
     },
@@ -19,7 +19,7 @@
         "name": "AEAD_AES_256_CCM",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 256,
         "hash_algorithm": null
     },
@@ -27,7 +27,7 @@
         "name": "AEAD_AES_256_GCM",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 256,
         "hash_algorithm": null
     },
@@ -91,7 +91,13 @@
         "name": "MD5",
         "long_name": null,
         "oid": "1.2.840.113549.2.6",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "digest_size": null,
         "hash_algorithm": "MD5"
     },
@@ -131,7 +137,13 @@
         "name": "SHA-1",
         "long_name": null,
         "oid": "1.2.840.113549.2.7",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "digest_size": null,
         "hash_algorithm": "SHA1"
     },
@@ -139,7 +151,7 @@
         "name": "SHA2-224",
         "long_name": null,
         "oid": "1.2.840.113549.2.8",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": null,
         "hash_algorithm": "SHA2_224"
     },
@@ -147,7 +159,7 @@
         "name": "SHA2-256",
         "long_name": null,
         "oid": "1.2.840.113549.2.9",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": null,
         "hash_algorithm": "SHA2_256"
     },
@@ -155,7 +167,7 @@
         "name": "SHA2-384",
         "long_name": null,
         "oid": "1.2.840.113549.2.10",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": null,
         "hash_algorithm": "SHA2_384"
     },
@@ -163,7 +175,7 @@
         "name": "SHA2-512",
         "long_name": null,
         "oid": "1.2.840.113549.2.11",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": null,
         "hash_algorithm": "SHA2_512"
     },
@@ -171,7 +183,7 @@
         "name": "SHA-512/224",
         "long_name": null,
         "oid": "1.2.840.113549.2.12",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": null,
         "hash_algorithm": "SHA2_512_224"
     },
@@ -179,7 +191,7 @@
         "name": "SHA-512/256",
         "long_name": null,
         "oid": "1.2.840.113549.2.13",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": null,
         "hash_algorithm": "SHA2_512_256"
     },
@@ -187,7 +199,7 @@
         "name": "SHA3-224",
         "long_name": null,
         "oid": "2.16.840.1.101.3.4.2.13",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": null,
         "hash_algorithm": "SHA3_224"
     },
@@ -195,7 +207,7 @@
         "name": "SHA3-256",
         "long_name": null,
         "oid": "2.16.840.1.101.3.4.2.14",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": null,
         "hash_algorithm": "SHA3_256"
     },
@@ -203,7 +215,7 @@
         "name": "SHA3-384",
         "long_name": null,
         "oid": "2.16.840.1.101.3.4.2.15",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": null,
         "hash_algorithm": "SHA3_384"
     },
@@ -211,7 +223,7 @@
         "name": "SHA3-512",
         "long_name": null,
         "oid": "2.16.840.1.101.3.4.2.16",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": null,
         "hash_algorithm": "SHA3_512"
     },

@@ -38,105 +38,135 @@
         "name": "MD5",
         "long_name": null,
         "oid": "1.2.840.113549.2.5",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "digest_size": 64
     },
     "RIPEMD128": {
         "name": "RIPEMD-128",
         "long_name": "RIPE Message Digest (128)",
         "oid": "1.3.36.3.2.2",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "digest_size": 128
     },
     "RIPEMD160": {
         "name": "RIPEMD-160",
         "long_name": "RIPE Message Digest (160)",
         "oid": "1.3.36.3.2.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "digest_size": 160
     },
     "RIPEMD256": {
         "name": "RIPEMD-256",
         "long_name": "RIPE Message Digest (256)",
         "oid": "1.3.36.3.2.3",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
         "digest_size": 256
     },
     "SHA1": {
         "name": "SHA-1",
         "long_name": "Secure Hash Algorithm 1",
         "oid": "1.3.14.3.2.18",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "INSECURE",
+                "named": "SHATTERED"
+            }
+        ],
         "digest_size": 160
     },
     "SHA2_224": {
         "name": "SHA-224",
         "long_name": "Secure Hash Algorithm 2 (224)",
         "oid": "2.16.840.1.101.3.4.2.4",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 224
     },
     "SHA2_256": {
         "name": "SHA-256",
         "long_name": "Secure Hash Algorithm 2 (256)",
         "oid": "2.16.840.1.101.3.4.2.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 256
     },
     "SHA2_384": {
         "name": "SHA-384",
         "long_name": "Secure Hash Algorithm 2 (384)",
         "oid": "2.16.840.1.101.3.4.2.2",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 384
     },
     "SHA2_512": {
         "name": "SHA-512",
         "long_name": "Secure Hash Algorithm 2 (512)",
         "oid": "2.16.840.1.101.3.4.2.3",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 512
     },
     "SHA2_512_224": {
         "name": "SHA-512/224",
         "long_name": "Secure Hash Algorithm 2 (512/224)",
         "oid": "2.16.840.1.101.3.4.2.5",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 224
     },
     "SHA2_512_256": {
         "name": "SHA-512/256",
         "long_name": "Secure Hash Algorithm 2 (512/256)",
         "oid": "2.16.840.1.101.3.4.2.6",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 256
     },
     "SHA3_224": {
         "name": "SHA-224",
         "long_name": "Secure Hash Algorithm 3 (224)",
         "oid": "2.16.840.1.101.3.4.2.7",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 224
     },
     "SHA3_256": {
         "name": "SHA-256",
         "long_name": "Secure Hash Algorithm 3 (256)",
         "oid": "2.16.840.1.101.3.4.2.8",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 256
     },
     "SHA3_384": {
         "name": "SHA-384",
         "long_name": "Secure Hash Algorithm 3 (384)",
         "oid": "2.16.840.1.101.3.4.2.9",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 384
     },
     "SHA3_512": {
         "name": "SHA-512",
         "long_name": "Secure Hash Algorithm 3 (512)",
         "oid": "2.16.840.1.101.3.4.2.10",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "digest_size": 512
     },
     "SHAKE_128": {

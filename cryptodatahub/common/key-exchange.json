@@ -2,19 +2,37 @@
     "NULL": {
         "name": "null",
         "long_name": "null encryption",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "forward_secret": false
     },
     "AECDH": {
         "name": "AECDH",
         "long_name": "Anonymous Elliptic-curve Diffie-Hellman",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "forward_secret": true
     },
     "ADH": {
         "name": "ADH",
         "long_name": "Anonymous Diffie-Hellman",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "forward_secret": true
     },
     "CECPQ1": {
@@ -26,25 +44,37 @@
     "DH": {
         "name": "DH",
         "long_name": "Fixed Diffie-Hellman Ephemeral",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "forward_secret": false
     },
     "DHE": {
         "name": "DHE",
         "long_name": "Diffie-Hellman Ephemeral",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "forward_secret": true
     },
     "ECDH": {
         "name": "ECDH",
         "long_name": "Fixed Elliptic-curve Diffie-Hellman",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "forward_secret": false
     },
     "ECDHE": {
         "name": "ECDHE",
         "long_name": "Elliptic-curve Diffie-Hellman Ephemeral",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "forward_secret": true
     },
     "FORTEZZA_KEA": {
@@ -86,7 +116,13 @@
     "RSA": {
         "name": "RSA",
         "long_name": "Rivest-Shamir-Adleman",
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "WEAK",
+                "named": "NOFS"
+            }
+        ],
         "forward_secret": false
     },
     "SNTRUP_X25519": {

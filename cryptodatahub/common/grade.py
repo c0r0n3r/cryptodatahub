@@ -14,6 +14,7 @@ from cryptodatahub.common.types import (
     CryptoDataParamsNamed,
     convert_enum,
     convert_iterable,
+    convert_dict_to_object,
 )
 
 
@@ -53,11 +54,26 @@ class Grade(enum.Enum):
 
 
 @attr.s(frozen=True)
-class VulnerabilityParams(CryptoDataParamsNamed):
-    grade = attr.ib(converter=convert_enum(Grade), validator=attr.validators.instance_of(Grade))
+class AttackTypeParams(CryptoDataParamsNamed):
+    pass
 
 
-Vulnerability = CryptoDataEnumOIDBase('Vulnerability', CryptoDataEnumBase.get_json_records(VulnerabilityParams))
+AttackType = CryptoDataEnumOIDBase('AttackType', CryptoDataEnumBase.get_json_records(AttackTypeParams))
+
+
+@attr.s(frozen=True)
+class AttackNamedParams(CryptoDataParamsNamed):
+    grade = attr.ib(
+        converter=convert_enum(Grade),
+        validator=attr.validators.instance_of(Grade)
+    )
+    attack_type = attr.ib(
+        converter=convert_enum(AttackType),
+        validator=attr.validators.optional(attr.validators.instance_of(AttackType))
+    )
+
+
+AttackNamed = CryptoDataEnumOIDBase('AttackNamed', CryptoDataEnumBase.get_json_records(AttackNamedParams))
 
 
 @attr.s(frozen=True, eq=False)
@@ -82,7 +98,7 @@ class Gradeable(object):
 
             return result
 
-        raise NotImplementedError()
+        raise NotImplementedError(type(obj))
 
     @staticmethod
     def _flatten_vulnerabilities(vulnerabilities):
@@ -118,10 +134,42 @@ class Gradeable(object):
         raise NotImplementedError()
 
 
+@attr.s(frozen=True)
+class Vulnerability(object):
+    attack_type = attr.ib(
+        converter=convert_enum(AttackType),
+        validator=attr.validators.optional(attr.validators.instance_of(AttackType))
+    )
+    grade = attr.ib(
+        converter=convert_enum(Grade),
+        validator=attr.validators.instance_of(Grade)
+    )
+    named = attr.ib(
+        converter=convert_enum(AttackNamed),
+        validator=attr.validators.optional(attr.validators.instance_of(AttackNamed))
+    )
+
+
+@attr.s(frozen=True, eq=False)
+class GradeableSimple(Gradeable):
+    @property
+    @abc.abstractmethod
+    def grade(self):
+        raise NotImplementedError()
+
+    @abc.abstractmethod
+    def __str__(self):
+        raise NotImplementedError()
+
+    @property
+    def min_grade(self):
+        return self.grade
+
+
 @attr.s(frozen=True, eq=False)
 class GradeableVulnerabilities(Gradeable):
     vulnerabilities = attr.ib(
-        converter=convert_iterable(convert_enum(Vulnerability)),
+        converter=convert_iterable(convert_dict_to_object(Vulnerability)),
         validator=attr.validators.optional(
             validator=attr.validators.deep_iterable(member_validator=attr.validators.instance_of(Vulnerability))
         )

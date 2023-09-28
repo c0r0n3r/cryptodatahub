@@ -20,7 +20,7 @@ import attr
 import pyfakefs.fake_filesystem_unittest
 import six
 
-from cryptodatahub.common.grade import Gradeable, GradeableVulnerabilities
+from cryptodatahub.common.grade import Grade, Gradeable, GradeableSimple, GradeableVulnerabilities
 from cryptodatahub.common.key import PublicKey, PublicKeyX509Base
 from cryptodatahub.common.types import (
     CryptoDataParamsEnumNumeric,
@@ -74,6 +74,15 @@ class TestEnumStringParams(CryptoDataParamsEnumString):
 
 class TestEnumOidParams(CryptoDataParamsOIDOptional):
     pass
+
+
+class TestGradeableSimple(GradeableSimple):
+    @property
+    def grade(self):
+        return Grade.INSECURE
+
+    def __str__(self):
+        return self.grade.value.name
 
 
 class TestClasses:

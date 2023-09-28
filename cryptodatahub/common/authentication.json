@@ -3,21 +3,27 @@
         "name": "anon",
         "long_name": "anonymous",
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "anonymous": true
     },
     "DSS": {
         "name": "DSS",
         "long_name": "Digital Signature Standard",
         "oid": "1.2.840.10040.4.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "anonymous": false
     },
     "ECDSA": {
         "name": "ECDSA",
         "long_name": "Elliptic Curve Digital Signature Algorithm",
         "oid": "1.2.840.10045.2.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "anonymous": false
     },
     "FORTEZZA": {
@@ -80,7 +86,7 @@
         "name": "RSA",
         "long_name": "Rivest-Shamir-Adleman",
         "oid": "1.2.840.113549.1.1.1",
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "anonymous": false
     },
     "SRP": {
@@ -94,7 +100,7 @@
         "name": "EDDSA",
         "long_name": "Edwards-curve Digital Signature Algorithm",
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "anonymous": false
     }
 }
