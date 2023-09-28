@@ -1,6 +1,16 @@
 Changelog
 =========
 
+0.10.2 - 2023-09-28
+-------------------
+
+Improvements
+~~~~~~~~~~~~
+
+-  Generic
+
+   -  implement value to object converter (#11)
+
 0.10.1 - 2023-08-29
 -------------------
 
