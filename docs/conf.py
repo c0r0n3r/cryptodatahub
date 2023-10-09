@@ -31,5 +31,4 @@ html_sidebars = {
 html_theme_options = {
     'description': 'Cryptography-related data repository with Python wrapper',
     'fixed_sidebar': True,
-    'collapse_navigation': False,
 }
