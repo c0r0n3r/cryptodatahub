@@ -297,6 +297,21 @@ class TestPublicKey(TestClasses.TestKeyBase):
         self.assertEqual(self._get_public_key_x509('gost_2012_256_cert').key_size, 256)
         self.assertEqual(self._get_public_key_x509('gost_2012_512_cert').key_size, 512)
 
+    def test_asdict(self):
+        public_key_x509 = self._get_public_key('gitlab.com_ssh_rsa_key')
+        self.assertEqual(public_key_x509._asdict(), collections.OrderedDict([
+            ('key_type', Authentication.RSA),
+            ('key_size', PublicKeySize(key_type=Authentication.RSA, value=2048)),
+            ('fingerprints', collections.OrderedDict([
+                (Hash.MD5, '94:33:7E:9C:56:1B:CE:19:FF:D3:50:DA:D4:AA:45:D7'),
+                (Hash.SHA1, 'BC:14:22:BF:0B:65:89:FB:9E:1C:95:C3:B6:5C:2A:16:1D:82:DB:AE'),
+                (
+                    Hash.SHA2_256,
+                    '34:8E:31:C3:D5:88:1E:09:A4:A9:30:8A:90:D9:46:5B:73:07:79:DE:DA:D2:D8:F2:C3:81:F2:54:24:6B:73:D7'
+                )
+            ]))
+        ]))
+
 
 class TestPublicKeyX509(TestClasses.TestKeyBase):  # pylint: disable=too-many-public-methods
     def test_eq(self):
@@ -515,3 +530,46 @@ class TestPublicKeyX509(TestClasses.TestKeyBase):  # pylint: disable=too-many-pu
         self.assertTrue(public_key_x509.is_subject_matches('expired.badssl.com'))
         self.assertTrue(public_key_x509.is_subject_matches('whatever.badssl.com'))
         self.assertFalse(public_key_x509.is_subject_matches('what.ever.badssl.com'))
+
+    def test_asdict(self):
+        public_key_x509 = self._get_public_key_x509('rsa2048.badssl.com')
+        self.assertEqual(public_key_x509._asdict(), collections.OrderedDict([
+            ('version', 'v3'),
+            ('serial_number', '398674370847804942957222553262670217215220'),
+            ('subject', collections.OrderedDict([('common_name', '*.badssl.com')])),
+            ('subject_alternative_names', ['*.badssl.com', 'badssl.com']),
+            ('issuer', collections.OrderedDict([
+                ('country_name', 'US'),
+                ('organization_name', "Let's Encrypt"),
+                ('common_name', 'R3')
+            ])),
+            ('key_type', Authentication.RSA),
+            ('key_size', PublicKeySize(
+                key_type=Authentication.RSA,
+                value=2048,
+            )),
+            ('signature_hash_algorithm', Signature.RSA_WITH_SHA2_256),
+            ('validity', collections.OrderedDict([
+                ('not_before', '2023-04-23 23:00:10+00:00'),
+                ('not_after', '2023-07-22 23:00:09+00:00'),
+                ('period', '89 days, 23:59:59'),
+                ('remaining', None)
+            ])),
+            ('revocation', collections.OrderedDict([
+                ('crl_distribution_points', []),
+                ('ocsp_responders', ['http://r3.o.lencr.org'])
+            ])),
+            ('fingerprints', collections.OrderedDict([
+                (Hash.MD5, 'E5:CE:F4:ED:BB:42:C4:59:01:63:29:4B:DD:55:64:E2'),
+                (Hash.SHA1, 'B8:68:EC:8E:5C:9F:C2:EC:B2:E5:A7:12:C5:B8:F2:34:B7:33:CD:44'),
+                (
+                    Hash.SHA2_256,
+                    '17:7D:74:6A:01:B5:8C:CD:E4:5D:F9:09:48:E4:01:72:4D:83:6A:C6:E1:44:7F:11:2F:7E:20:C3:40:C0:2A:63'
+                )
+            ])),
+            ('public_key_pin', '6Lkip0FxqykIPcMKjlwSSxNYRqG1EHcSNLMvN4uV1zc='),
+            ('end_entity', collections.OrderedDict([
+                ('extended_validation', False),
+                ('tls_features', [])
+            ]))
+        ]))
