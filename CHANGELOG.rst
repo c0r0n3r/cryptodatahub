@@ -1,6 +1,16 @@
 Changelog
 =========
 
+0.10.3 - 2023-10-12
+-------------------
+
+Notable fixes
+~~~~~~~~~~~~~
+
+-  Generic
+
+   -  add missing dnsrec module to the packaging (#13)
+
 0.10.2 - 2023-09-28
 -------------------
 
