@@ -43,7 +43,7 @@ setup(
         'Issues': __setup__.__url__ + '/-/issues',
         'Source': __setup__.__url__,
     },
-    keywords='ssl tls ssh',
+    keywords='ssl tls ssh dns',
 
     install_requires=install_requirements,
     extras_require={
@@ -61,12 +61,14 @@ setup(
     packages=[
         'cryptodatahub',
         'cryptodatahub.common',
+        'cryptodatahub.dnsrec',
         'cryptodatahub.ssh',
         'cryptodatahub.tls',
     ],
 
     package_data={
         'cryptodatahub.common': ['*.json'],
+        'cryptodatahub.dnsrec': ['*.json'],
         'cryptodatahub.ssh': ['*.json'],
         'cryptodatahub.tls': ['*.json'],
     },
