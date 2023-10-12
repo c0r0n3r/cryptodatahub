@@ -322,7 +322,6 @@ class TestUrlConverter(unittest.TestCase):
     def test_error_invalid_value(self):
         original_value = 'https://example.com:123456'
         converted_value = convert_url()(original_value)
-        print(repr(converted_value))
         self.assertEqual(id(original_value), id(converted_value))
 
     def test_none(self):
