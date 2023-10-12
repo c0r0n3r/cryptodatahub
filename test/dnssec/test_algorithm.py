@@ -2,7 +2,7 @@
 
 from test.common.classes import TestClasses
 
-from cryptodatahub.dnssec.algorithm import DnsRrType, DnsSecAlgorithm, DnsSecDigestType
+from cryptodatahub.dnsrec.algorithm import DnsRrType, DnsSecAlgorithm, DnsSecDigestType
 
 
 class TestDnsRrType(TestClasses.TestJsonCodeNumericBase):
