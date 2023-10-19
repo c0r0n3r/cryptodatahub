@@ -300,8 +300,8 @@ class TestPublicKey(TestClasses.TestKeyBase):
     def test_asdict(self):
         public_key_x509 = self._get_public_key('gitlab.com_ssh_rsa_key')
         self.assertEqual(public_key_x509._asdict(), collections.OrderedDict([
-            ('key_type', Authentication.RSA),
-            ('key_size', PublicKeySize(key_type=Authentication.RSA, value=2048)),
+            ('algorithm', Authentication.RSA),
+            ('size', PublicKeySize(key_type=Authentication.RSA, value=2048)),
             ('fingerprints', collections.OrderedDict([
                 (Hash.MD5, '94:33:7E:9C:56:1B:CE:19:FF:D3:50:DA:D4:AA:45:D7'),
                 (Hash.SHA1, 'BC:14:22:BF:0B:65:89:FB:9E:1C:95:C3:B6:5C:2A:16:1D:82:DB:AE'),
@@ -534,6 +534,11 @@ class TestPublicKeyX509(TestClasses.TestKeyBase):  # pylint: disable=too-many-pu
     def test_asdict(self):
         public_key_x509 = self._get_public_key_x509('rsa2048.badssl.com')
         self.assertEqual(public_key_x509._asdict(), collections.OrderedDict([
+            ('algorithm', Authentication.RSA),
+            ('size', PublicKeySize(
+                key_type=Authentication.RSA,
+                value=2048,
+            )),
             ('version', 'v3'),
             ('serial_number', '398674370847804942957222553262670217215220'),
             ('subject', collections.OrderedDict([('common_name', '*.badssl.com')])),
@@ -543,11 +548,6 @@ class TestPublicKeyX509(TestClasses.TestKeyBase):  # pylint: disable=too-many-pu
                 ('organization_name', "Let's Encrypt"),
                 ('common_name', 'R3')
             ])),
-            ('key_type', Authentication.RSA),
-            ('key_size', PublicKeySize(
-                key_type=Authentication.RSA,
-                value=2048,
-            )),
             ('signature_hash_algorithm', Signature.RSA_WITH_SHA2_256),
             ('validity', collections.OrderedDict([
                 ('not_before', '2023-04-23 23:00:10+00:00'),
