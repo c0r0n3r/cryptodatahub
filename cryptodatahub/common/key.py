@@ -166,7 +166,7 @@ class PublicKey(object):
 
     @classmethod
     def from_der(cls, der):
-        return cls(asn1crypto.keys.PublicKeyInfo.load(der))
+        return cls(asn1crypto.keys.PublicKeyInfo.load(bytes(der)))
 
     @classmethod
     def from_pem(cls, pem):
@@ -443,7 +443,7 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
 
     @classmethod
     def from_der(cls, der):
-        return cls(asn1crypto.x509.Certificate.load(der))
+        return cls(asn1crypto.x509.Certificate.load(bytes(der)))
 
     @property
     def der(self):
