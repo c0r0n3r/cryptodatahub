@@ -251,7 +251,7 @@
     },
     "X509V3_SIGN_DSS_SHA1": {
         "code": "x509v3-sign-dss-sha1",
-        "key_type": "X509_CERTIFICATE_CHAIN",
+        "key_type": "X509_CERTIFICATE",
         "signature": "DSA_WITH_SHA1"
     },
     "X509V3_SIGN_RSA": {
@@ -261,32 +261,32 @@
     },
     "X509V3_SIGN_RSA_SHA1": {
         "code": "x509v3-sign-rsa-sha1",
-        "key_type": "X509_CERTIFICATE_CHAIN",
+        "key_type": "X509_CERTIFICATE",
         "signature": "RSA_WITH_SHA1"
     },
     "X509V3_SSH_RSA": {
         "code": "x509v3-ssh-rsa",
-        "key_type": "X509_CERTIFICATE",
+        "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "RSA_WITH_SHA1"
     },
     "X509V3_SIGN_RSA_SHA224_SSH_COM": {
         "code": "x509v3-sign-rsa-sha224@ssh.com",
-        "key_type": "X509_CERTIFICATE_CHAIN",
+        "key_type": "X509_CERTIFICATE",
         "signature": "RSA_WITH_SHA2_224"
     },
     "X509V3_SIGN_RSA_SHA256_SSH_COM": {
         "code": "x509v3-sign-rsa-sha256@ssh.com",
-        "key_type": "X509_CERTIFICATE_CHAIN",
+        "key_type": "X509_CERTIFICATE",
         "signature": "RSA_WITH_SHA2_256"
     },
     "X509V3_SIGN_RSA_SHA384_SSH_COM": {
         "code": "x509v3-sign-rsa-sha384@ssh.com",
-        "key_type": "X509_CERTIFICATE_CHAIN",
+        "key_type": "X509_CERTIFICATE",
         "signature": "RSA_WITH_SHA2_384"
     },
     "X509V3_SIGN_RSA_SHA512_SSH_COM": {
         "code": "x509v3-sign-rsa-sha512@ssh.com",
-        "key_type": "X509_CERTIFICATE_CHAIN",
+        "key_type": "X509_CERTIFICATE",
         "signature": "RSA_WITH_SHA2_512"
     },
     "X509V3_SIGN_DSS": {
@@ -301,22 +301,22 @@
     },
     "X509V3_SIGN_DSS_SHA224_SSH_COM": {
         "code": "x509v3-sign-dss-sha224@ssh.com",
-        "key_type": "X509_CERTIFICATE_CHAIN",
+        "key_type": "X509_CERTIFICATE",
         "signature": "DSA_WITH_SHA2_224"
     },
     "X509V3_SIGN_DSS_SHA256_SSH_COM": {
         "code": "x509v3-sign-dss-sha256@ssh.com",
-        "key_type": "X509_CERTIFICATE_CHAIN",
+        "key_type": "X509_CERTIFICATE",
         "signature": "DSA_WITH_SHA2_256"
     },
     "X509V3_SIGN_DSS_SHA384_SSH_COM": {
         "code": "x509v3-sign-dss-sha384@ssh.com",
-        "key_type": "X509_CERTIFICATE_CHAIN",
+        "key_type": "X509_CERTIFICATE",
         "signature": "DSA_WITH_SHA2_384"
     },
     "X509V3_SIGN_DSS_SHA512_SSH_COM": {
         "code": "x509v3-sign-dss-sha512@ssh.com",
-        "key_type": "X509_CERTIFICATE_CHAIN",
+        "key_type": "X509_CERTIFICATE",
         "signature": "DSA_WITH_SHA2_512"
     },
     "X509V3_SSH_ED25519": {
