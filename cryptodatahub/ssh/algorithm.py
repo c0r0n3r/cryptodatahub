@@ -132,7 +132,10 @@ class KexAlgorithmParams(SshAlgorithmParams):
         return gradeables
 
 
-SshHostKeyType = enum.Enum('SshHostKeyType', 'KEY CERTIFICATE PGP_KEY SPKI_KEY X509_CERTIFICATE X509_CERTIFICATE_CHAIN')
+SshHostKeyType = enum.Enum(
+    'SshHostKeyType',
+    'HOST_KEY HOST_CERTIFICATE PGP_KEY SPKI_KEY X509_CERTIFICATE X509_CERTIFICATE_CHAIN'
+)
 
 
 @attr.s
