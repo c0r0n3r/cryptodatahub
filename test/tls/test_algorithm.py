@@ -2,6 +2,8 @@
 
 from test.common.classes import TestClasses
 
+from cryptodatahub.common.algorithm import Authentication, BlockCipher, BlockCipherMode, KeyExchange, MAC
+
 from cryptodatahub.tls.algorithm import (
     SslCipherKind,
     TlsCertificateCompressionAlgorithm,
@@ -50,6 +52,25 @@ class TestTlsCipherSuite(TestClasses.TestJsonCodeNumericBase):
         self.assertEqual(
             str(TlsCipherSuite.OLD_TLS_ECDH_ECDSA_WITH_NULL_SHA.value),
             'OLD_TLS_ECDH_ECDSA_WITH_NULL_SHA'
+        )
+
+    def test_gradeables(self):
+        self.assertEqual(
+            TlsCipherSuite.TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256.value.gradeables, [
+                KeyExchange.ECDHE.value,
+                Authentication.RSA.value,
+                BlockCipher.AES_128.value,
+                BlockCipherMode.GCM.value,
+                MAC.SHA2_256.value,
+            ]
+        )
+        self.assertEqual(
+            TlsCipherSuite.TLS_RSA_EXPORT_WITH_RC4_40_MD5.value.gradeables, [
+                KeyExchange.RSA.value,
+                Authentication.RSA.value,
+                BlockCipher.RC4_40.value,
+                MAC.MD5.value,
+            ]
         )
 
 

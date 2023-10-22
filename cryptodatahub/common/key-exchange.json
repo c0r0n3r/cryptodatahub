@@ -2,86 +2,139 @@
     "NULL": {
         "name": "null",
         "long_name": "null encryption",
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "forward_secret": false
     },
     "AECDH": {
         "name": "AECDH",
         "long_name": "Anonymous Elliptic-curve Diffie-Hellman",
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "forward_secret": true
     },
     "ADH": {
         "name": "ADH",
         "long_name": "Anonymous Diffie-Hellman",
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "forward_secret": true
     },
     "CECPQ1": {
         "name": "CECPQ1",
         "long_name": "Combined Elliptic-Curve and Post-Quantum 1",
+        "vulnerabilities": null,
         "forward_secret": false
     },
     "DH": {
         "name": "DH",
         "long_name": "Fixed Diffie-Hellman Ephemeral",
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "forward_secret": false
     },
     "DHE": {
         "name": "DHE",
         "long_name": "Diffie-Hellman Ephemeral",
+        "vulnerabilities": [],
         "forward_secret": true
     },
     "ECDH": {
         "name": "ECDH",
         "long_name": "Fixed Elliptic-curve Diffie-Hellman",
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "forward_secret": false
     },
     "ECDHE": {
         "name": "ECDHE",
         "long_name": "Elliptic-curve Diffie-Hellman Ephemeral",
+        "vulnerabilities": [],
         "forward_secret": true
     },
     "FORTEZZA_KEA": {
         "name": "FORTEZZA_KEA",
         "long_name": "Fortezza Key Exchange Algortihm",
+        "vulnerabilities": null,
         "forward_secret": false
     },
     "GOST_R3410_94": {
         "name": "GOST_R3410_94",
         "long_name": null,
+        "vulnerabilities": null,
         "forward_secret": true
     },
     "GOST_R3410_01": {
         "name": "GOST_R3410_01",
         "long_name": null,
+        "vulnerabilities": null,
         "forward_secret": true
     },
     "GOST_R3411_12_256": {
         "name": "GOST_R3411_12_256",
         "long_name": null,
+        "vulnerabilities": null,
         "forward_secret": true
     },
     "KRB5": {
         "name": "KRB5",
         "long_name": "Kerberos V5",
+        "vulnerabilities": null,
         "forward_secret": false
     },
     "PSK": {
         "name": "PSK",
         "long_name": "Pre-shared Key",
+        "vulnerabilities": null,
         "forward_secret": false
     },
     "RSA": {
         "name": "RSA",
         "long_name": "Rivest-Shamir-Adleman",
+        "vulnerabilities": [
+            {
+                "attack_type": "MITM",
+                "grade": "WEAK",
+                "named": "NOFS"
+            }
+        ],
         "forward_secret": false
     },
     "SNTRUP_X25519": {
         "name": "SNTRUP X25519",
         "long_name": "Streamlined NTRU Prime coupled with X25519",
+        "vulnerabilities": null,
         "forward_secret": false
     },
     "SRP": {
         "name": "SRP",
         "long_name": "Secure Remote Password",
+        "vulnerabilities": null,
         "forward_secret": false
     }
 }

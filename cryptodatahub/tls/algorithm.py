@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import abc
+import collections
 import six
 
 import attr
@@ -14,6 +15,7 @@ from cryptodatahub.common.algorithm import (
     MAC,
     NamedGroup,
 )
+from cryptodatahub.common.grade import GradeableComplex
 from cryptodatahub.common.types import (
     CryptoDataEnumCodedBase,
     CryptoDataParamsEnumNumeric,
@@ -38,11 +40,17 @@ TlsCompressionMethod = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
-class NamedCurveParams(CryptoDataParamsEnumNumeric):
+class NamedCurveParams(CryptoDataParamsEnumNumeric, GradeableComplex):
     named_group = attr.ib(
         converter=convert_enum(NamedGroup),
         validator=attr.validators.optional(attr.validators.instance_of(NamedGroup)),
     )
+
+    def __attrs_post_init__(self):
+        if self.named_group is not None:
+            object.__setattr__(self, 'gradeables', [self.named_group.value])
+
+        attr.validate(self)
 
     def __str__(self):
         return str(self.named_group.value)
@@ -56,7 +64,7 @@ TlsNamedCurve = CryptoDataEnumCodedBase('TlsNamedCurve', CryptoDataEnumCodedBase
 
 
 @attr.s(frozen=True)
-class HashAndSignatureAlgorithmParams(CryptoDataParamsEnumNumeric):
+class HashAndSignatureAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComplex):
     hash_algorithm = attr.ib(
         converter=convert_enum(Hash),
         validator=attr.validators.optional(attr.validators.instance_of(Hash)),
@@ -65,6 +73,15 @@ class HashAndSignatureAlgorithmParams(CryptoDataParamsEnumNumeric):
         converter=convert_enum(Authentication),
         validator=attr.validators.optional(attr.validators.instance_of(Authentication)),
     )
+
+    def __attrs_post_init__(self):
+        vulnerabilities = []
+        if self.hash_algorithm is not None:
+            vulnerabilities.append(self.hash_algorithm.value)
+
+        object.__setattr__(self, 'gradeables', vulnerabilities)
+
+        attr.validate(self)
 
     def __str__(self):
         if self.hash_algorithm:
@@ -237,10 +254,32 @@ class CipherParamsBase(CryptoDataParamsEnumNumeric):  # pylint: disable=too-many
 
 
 @attr.s
-class CipherSuiteParams(CipherParamsBase):
+class CipherSuiteParams(CipherParamsBase, GradeableComplex):
     @classmethod
     def get_code_size(cls):
         return 2
+
+    def __attrs_post_init__(self):
+        super(CipherSuiteParams, self).__attrs_post_init__()
+
+        vulnerability_parts = collections.OrderedDict([
+            (KeyExchange, self.key_exchange),
+            (Authentication, self.authentication),
+            (BlockCipher, self.bulk_cipher),
+            (BlockCipherMode, self.block_cipher_mode),
+            (MAC, self.mac),
+        ])
+
+        gradeables = []
+        for algorithm in vulnerability_parts.values():
+            if algorithm is None:
+                continue
+
+            gradeables.append(algorithm.value)
+
+        object.__setattr__(self, 'gradeables', gradeables)
+
+        attr.validate(self)
 
 
 TlsCipherSuite = CryptoDataEnumCodedBase('TlsCipherSuite', CryptoDataEnumCodedBase.get_json_records(CipherSuiteParams))

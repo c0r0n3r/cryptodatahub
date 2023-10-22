@@ -1,0 +1,74 @@
+{
+    "CRIME": {
+        "name": "CRIME",
+        "long_name": "Compression Ratio Info-leak Made Easy",
+        "grade": "WEAK",
+        "attack_type": "COMPRESSION_ORACLE"
+    },
+    "DHEAT_ATTACK": {
+        "name": "D(HE)at attack",
+        "long_name": null,
+        "grade": "WEAK",
+        "attack_type": "DOS_ATTACK"
+    },
+    "DROWN_ATTACK": {
+        "name": "DROWN",
+        "long_name": "Decrypting RSA with Obsolete and Weakened eNcryption",
+        "grade": "INSECURE",
+        "attack_type": "MITM"
+    },
+    "EXPORT_GRADE": {
+        "name": "export-grade",
+        "long_name": null,
+        "grade": "INSECURE",
+        "attack_type": "MITM"
+    },
+    "FREAK": {
+        "name": "FREAK",
+        "long_name": "Factoring RSA Export Keys",
+        "grade": "INSECURE",
+        "attack_type": "MITM"
+    },
+    "LUCKY13": {
+        "name": "Lucky Thirteen attack",
+        "long_name": null,
+        "grade": "DEPRECATED",
+        "attack_type": "TIMING"
+    },
+    "NOFS": {
+        "name": "non-forward secret",
+        "long_name": null,
+        "grade": "DEPRECATED",
+        "attack_type": "MITM"
+    },
+    "NOMORE": {
+        "name": "NOMORE attack",
+        "long_name": "Numerous Occurrence MOnitoring & Recovery Exploit",
+        "grade": "INSECURE",
+        "attack_type": null
+    },
+    "POODLE": {
+        "name": "POODLE",
+        "long_name": "Padding Oracle On Downgraded Legacy Encryption",
+        "grade": "INSECURE",
+        "attack_type": "PADDING_ORACLE"
+    },
+    "SWEET32": {
+        "name": "Sweet32",
+        "long_name": null,
+        "grade": "INSECURE",
+        "attack_type": "BIRTHDAY"
+    },
+    "SHATTERED": {
+        "name": "SHAttered attack",
+        "long_name": null,
+        "grade": "INSECURE",
+        "attack_type": "COLLISION"
+    },
+    "WEAK_DH": {
+        "name": "weak DH",
+        "long_name": "weak Diffie-Hellman",
+        "grade": "INSECURE",
+        "attack_type": "INTEGER_FACTORIZATION"
+    }
+}

@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 
 try:
+    import unittest
+except ImportError:
+    import unittest2 as unittest
+
+try:
     from unittest import mock
 except ImportError:
     import mock
@@ -13,18 +18,150 @@ from test.common.classes import TestClasses
 
 import asn1crypto
 
-from cryptodatahub.common.algorithm import Authentication, Hash, NamedGroup, Signature
+from cryptodatahub.common.algorithm import Authentication, Hash, KeyExchange, NamedGroup, Signature
 from cryptodatahub.common.key import (
+    _PublicKeySizeGradeable,
     PublicKey,
     PublicKeyParamsDsa,
     PublicKeyParamsEddsa,
     PublicKeyParamsEcdsa,
     PublicKeyParamsRsa,
+    PublicKeySize,
     PublicKeyX509Base,
+    convert_public_key_size,
 )
+from cryptodatahub.common.grade import AttackNamed, AttackType, Grade, Vulnerability
 from cryptodatahub.common.utils import bytes_from_hex_string
 
 from cryptodatahub.tls.algorithm import TlsExtensionType
+
+
+class TestPublicKeyConverter(unittest.TestCase):
+    def test_error_invalid_type(self):
+        original_value = '1234'
+        converted_value = convert_public_key_size(KeyExchange.DHE)(original_value)
+        self.assertEqual(id(original_value), id(convert_public_key_size(KeyExchange.DHE)(converted_value)))
+
+    def test_error_invalid_value(self):
+        original_value = -1
+        converted_value = convert_public_key_size(KeyExchange.DHE)(original_value)
+        self.assertEqual(id(converted_value), id(convert_public_key_size(KeyExchange.DHE)(converted_value)))
+
+    def test_none(self):
+        converted_value = convert_public_key_size(KeyExchange.DHE)(None)
+        self.assertEqual(converted_value, None)
+
+    def test_convert(self):
+        original_value = 2048
+        converted_value = convert_public_key_size(KeyExchange.DHE)(original_value)
+
+        self.assertEqual(converted_value, PublicKeySize(KeyExchange.DHE, 2048))
+
+    def test_repr(self):
+        self.assertEqual(repr(convert_public_key_size(KeyExchange.DHE)), '<public key size converter>')
+
+
+class TestPublicKeySizeGradeable(unittest.TestCase):
+    def test_gradeable(self):
+        self.assertTrue(len(_PublicKeySizeGradeable.get_gradeable_name()))
+
+
+class TestPublicKeySize(unittest.TestCase):
+    @staticmethod
+    def _get_vulnerability_values(key_type, key_size):
+        return list(PublicKeySize(key_type, key_size).gradeables)
+
+    def test_vulnerabilities(self):
+        vulnerability_integer_factorization_weak = Vulnerability(
+            attack_type=AttackType.INTEGER_FACTORIZATION,
+            grade=Grade.WEAK,
+            named=None
+        )
+        vulnerability_discrete_logarithm_insecure = Vulnerability(
+            attack_type=AttackType.DISCRETE_LOGARITHM,
+            grade=Grade.INSECURE,
+            named=None
+        )
+        vulnerability_discrete_logarithm_weak = Vulnerability(
+            attack_type=AttackType.DISCRETE_LOGARITHM,
+            grade=Grade.WEAK,
+            named=None
+        )
+        vulnerability_dheat = Vulnerability(
+            attack_type=AttackType.DOS_ATTACK,
+            grade=Grade.WEAK,
+            named=AttackNamed.DHEAT_ATTACK
+        )
+
+        self.assertEqual(PublicKeySize(Authentication.RSA, 2048).gradeables, [_PublicKeySizeGradeable([])])
+        self.assertEqual(
+            self._get_vulnerability_values(Authentication.RSA, 1024),
+            [_PublicKeySizeGradeable([vulnerability_integer_factorization_weak])]
+        )
+        self.assertEqual(
+            self._get_vulnerability_values(Authentication.RSA, 768), [_PublicKeySizeGradeable([Vulnerability(
+                attack_type=AttackType.INTEGER_FACTORIZATION,
+                grade=Grade.INSECURE,
+                named=AttackNamed.FREAK
+            )])]
+        )
+
+        self.assertEqual(PublicKeySize(Authentication.DSS, 2048).gradeables, [_PublicKeySizeGradeable([])])
+        self.assertEqual(
+            self._get_vulnerability_values(Authentication.DSS, 1024),
+            [_PublicKeySizeGradeable([vulnerability_integer_factorization_weak])]
+        )
+        self.assertEqual(
+            self._get_vulnerability_values(Authentication.DSS, 768), [_PublicKeySizeGradeable([Vulnerability(
+                attack_type=AttackType.INTEGER_FACTORIZATION,
+                grade=Grade.INSECURE,
+                named=None
+            )])]
+
+        )
+
+        self.assertEqual(PublicKeySize(KeyExchange.DHE, 2048).gradeables, [_PublicKeySizeGradeable([])])
+        self.assertEqual(
+            self._get_vulnerability_values(KeyExchange.DHE, 1024),
+            [_PublicKeySizeGradeable([vulnerability_integer_factorization_weak])]
+        )
+        self.assertEqual(
+            self._get_vulnerability_values(KeyExchange.DHE, 768), [_PublicKeySizeGradeable([Vulnerability(
+                attack_type=AttackType.INTEGER_FACTORIZATION,
+                grade=Grade.INSECURE,
+                named=AttackNamed.WEAK_DH
+            )])]
+        )
+        self.assertEqual(
+            self._get_vulnerability_values(KeyExchange.DHE, 6144),
+            [_PublicKeySizeGradeable([vulnerability_dheat])]
+        )
+
+        self.assertEqual(PublicKeySize(Authentication.ECDSA, 256).gradeables, [_PublicKeySizeGradeable([])])
+        self.assertEqual(
+            self._get_vulnerability_values(Authentication.ECDSA, 160),
+            [_PublicKeySizeGradeable([vulnerability_discrete_logarithm_weak])]
+        )
+        self.assertEqual(
+            self._get_vulnerability_values(Authentication.ECDSA, 112),
+            [_PublicKeySizeGradeable([vulnerability_discrete_logarithm_insecure])]
+        )
+
+        self.assertEqual(PublicKeySize(Authentication.EDDSA, 256).gradeables, [_PublicKeySizeGradeable([])])
+        self.assertEqual(
+            self._get_vulnerability_values(Authentication.EDDSA, 160),
+            [_PublicKeySizeGradeable([vulnerability_discrete_logarithm_weak])]
+        )
+        self.assertEqual(
+            self._get_vulnerability_values(Authentication.EDDSA, 112),
+            [_PublicKeySizeGradeable([vulnerability_discrete_logarithm_insecure])]
+        )
+
+        self.assertEqual(PublicKeySize(Authentication.PSK, 2048).gradeables, None)
+
+    def test_str(self):
+        self.assertEqual(str(PublicKeySize(Authentication.RSA, 1024)), '1024')
+        self.assertEqual(str(PublicKeySize(Authentication.EDDSA, 256)), '256')
 
 
 class TestPublicKeyParamsEcdsa(TestClasses.TestKeyBase):
@@ -69,12 +206,22 @@ class TestPublicKey(TestClasses.TestKeyBase):
         public_key = self._get_public_key('gitlab.com_ssh_eddsa_key')
         public_key_params = public_key.params
         params = PublicKeyParamsEddsa(
-            key_type=public_key_params.key_type,
+            curve_type=public_key_params.curve_type,
             key_data=public_key_params.key_data,
         )
         public_key = PublicKey.from_params(params)
         self.assertEqual(params, public_key.params)
         self.assertEqual(public_key.key_size, 256)
+
+        public_key = self._get_public_key('ssh_ed448_key')
+        public_key_params = public_key.params
+        params = PublicKeyParamsEddsa(
+            curve_type=public_key_params.curve_type,
+            key_data=public_key_params.key_data,
+        )
+        public_key = PublicKey.from_params(params)
+        self.assertEqual(params, public_key.params)
+        self.assertEqual(public_key.key_size, 448)
 
         public_key = self._get_public_key('gitlab.com_ssh_rsa_key')
         public_key_params = public_key.params

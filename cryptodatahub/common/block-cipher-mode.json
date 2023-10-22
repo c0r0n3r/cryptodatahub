@@ -1,46 +1,81 @@
 {
     "CBC": {
         "name": "CBC",
-        "long_name": "Cipher Block Chaining"
+        "long_name": "cipher block chaining",
+        "vulnerabilities": [
+            {
+                "attack_type": "PADDING_ORACLE",
+                "grade": "WEAK",
+                "named": "POODLE"
+            }
+        ]
     },
     "CCM": {
         "name": "CCM",
-        "long_name": "Counter with CBC-MAC"
+        "long_name": "counter with CBC-MAC",
+        "vulnerabilities": []
     },
     "CCM_8": {
         "name": "CCM-8",
-        "long_name": "Counter with CBC-MAC (8)"
+        "long_name": "counter with CBC-MAC (8)",
+        "vulnerabilities": []
     },
     "CFB": {
         "name": "CFB",
-        "long_name": "Cipher Feedback"
+        "long_name": "cipher feedback",
+        "vulnerabilities": null
     },
     "CNT": {
         "name": "CNT",
-        "long_name": "GOST Counter"
+        "long_name": "GOST counter",
+        "vulnerabilities": null
     },
     "CTR": {
         "name": "CTR",
-        "long_name": "Counter"
+        "long_name": "counter",
+        "vulnerabilities": [
+            {
+                "attack_type": "REUSED_KEY_ATTACK",
+                "grade": "WEAK",
+                "named": null
+            }
+        ]
     },
     "ECB": {
         "name": "ECB",
-        "long_name": "Electronic Codebook"
+        "long_name": "electronic codebook",
+        "vulnerabilities": [
+            {
+                "attack_type": "CHOSEN_PLAINTEXT_ATTACK",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ]
     },
     "EAX": {
         "name": "EAX",
-        "long_name": "encrypt-then-authenticate-then-translate"
+        "long_name": "encrypt-then-authenticate-then-translate",
+        "vulnerabilities": null
     },
     "GCM": {
         "name": "GCM",
-        "long_name": "Galois/Counter Mode"
+        "long_name": "Galois/counter mode",
+        "vulnerabilities": []
     },
     "MGM": {
         "name": "MGM",
-        "long_name": "GOST Magma"
+        "long_name": "GOST Magma",
+        "vulnerabilities": null
     },
     "OFB": {
         "name": "OFB",
-        "long_name": "Output Feedback"
+        "long_name": "output feedback",
+        "vulnerabilities": [
+            {
+                "attack_type": "REUSED_KEY_ATTACK",
+                "grade": "WEAK",
+                "named": null
+            }
+        ]
     }
 }

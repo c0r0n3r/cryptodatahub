@@ -1,0 +1,58 @@
+{
+    "BIRTHDAY": {
+        "name": "birthday attack",
+        "long_name": null
+    },
+    "BRUTE_FORCE": {
+        "name": "brute-force attack",
+        "long_name": null
+    },
+    "CHOSEN_PLAINTEXT_ATTACK": {
+        "name": "chosen-plaintext attack",
+        "long_name": null
+    },
+    "COLLISION": {
+        "name": "collision attack",
+        "long_name": null
+    },
+    "COMPRESSION_ORACLE": {
+        "name": "compression oracle attack",
+        "long_name": null
+    },
+    "DOS_ATTACK": {
+        "name": "(D)DoS attack",
+        "long_name": "(distributed) denial-of-service attack"
+    },
+    "DISCRETE_LOGARITHM": {
+        "name": "discrete logarithm",
+        "long_name": null
+    },
+    "FORGERY_ATTACK": {
+        "name": "forgery attack",
+        "long_name": null
+    },
+    "INTEGER_FACTORIZATION": {
+        "name": "integer factorization",
+        "long_name": null
+    },
+    "MITM": {
+        "name": "MITM attack",
+        "long_name": "man-in-the-middle attack"
+    },
+    "PADDING_ORACLE": {
+        "name": "padding oracle attack",
+        "long_name": null
+    },
+    "REUSED_KEY_ATTACK": {
+        "name": "reused key attack",
+        "long_name": null
+    },
+    "SNIFFING": {
+        "name": "sniffing attack",
+        "long_name": null
+    },
+    "TIMING": {
+        "name": "timing attack",
+        "long_name": null
+    }
+}

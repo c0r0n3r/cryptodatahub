@@ -215,18 +215,6 @@
         "hash_algorithm": "SHA2_512",
         "signature_algorithm": "RSA"
     },
-    "ED25519": {
-        "_code_in_hex": "0x0807",
-        "code": 2055,
-        "hash_algorithm": "ED25519PH",
-        "signature_algorithm": "ED25519"
-    },
-    "ED448": {
-        "_code_in_hex": "0x0808",
-        "code": 2056,
-        "hash_algorithm": "ED448PH",
-        "signature_algorithm": "ED448"
-    },
     "RSA_PSS_PSS_SHA256": {
         "_code_in_hex": "0x0809",
         "code": 2057,
