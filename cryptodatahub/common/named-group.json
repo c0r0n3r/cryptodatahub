@@ -749,7 +749,7 @@
         "oid": null,
         "vulnerabilities": [],
         "size": 2048,
-        "group_type": "DH_PARAM"
+        "group_type": "FINITE_FIELD"
     },
     "FFDHE3072": {
         "name": "ffdhe3072",
@@ -757,7 +757,7 @@
         "oid": null,
         "vulnerabilities": [],
         "size": 3072,
-        "group_type": "DH_PARAM"
+        "group_type": "FINITE_FIELD"
     },
     "FFDHE4096": {
         "name": "ffdhe4096",
@@ -765,7 +765,7 @@
         "oid": null,
         "vulnerabilities": [],
         "size": 4096,
-        "group_type": "DH_PARAM"
+        "group_type": "FINITE_FIELD"
     },
     "FFDHE6144": {
         "name": "ffdhe6144",
@@ -779,7 +779,7 @@
             }
         ],
         "size": 6144,
-        "group_type": "DH_PARAM"
+        "group_type": "FINITE_FIELD"
     },
     "FFDHE8192": {
         "name": "ffdhe8192",
@@ -793,7 +793,7 @@
             }
         ],
         "size": 8192,
-        "group_type": "DH_PARAM"
+        "group_type": "FINITE_FIELD"
     },
     "M383": {
         "name": "M383",
@@ -810,5 +810,21 @@
         "vulnerabilities": [],
         "size": 511,
         "group_type": "ELLIPTIC_CURVE"
+    },
+    "X25519_KYBER_512_DRAFT00": {
+        "name": "X25519Kyber512Draft00",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 512,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_KYBER_768_DRAFT00": {
+        "name": "X25519Kyber768Draft00",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 768,
+        "group_type": "HYBRID_PQS"
     }
 }

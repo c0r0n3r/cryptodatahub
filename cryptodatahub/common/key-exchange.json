@@ -125,11 +125,11 @@
         ],
         "forward_secret": false
     },
-    "SNTRUP_X25519": {
-        "name": "SNTRUP X25519",
-        "long_name": "Streamlined NTRU Prime coupled with X25519",
+    "HYBRID_PQS": {
+        "name": "hybrid post-quantum safe",
+        "long_name": null,
         "vulnerabilities": null,
-        "forward_secret": false
+        "forward_secret": true
     },
     "SRP": {
         "name": "SRP",
