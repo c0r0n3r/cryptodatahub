@@ -1,31 +1,35 @@
+=========
 Changelog
 =========
 
+-------------------
 0.10.3 - 2023-10-12
 -------------------
 
 Notable fixes
-~~~~~~~~~~~~~
+=============
 
 -  Generic
 
    -  add missing dnsrec module to the packaging (#13)
 
+-------------------
 0.10.2 - 2023-09-28
 -------------------
 
 Improvements
-~~~~~~~~~~~~
+============
 
 -  Generic
 
    -  implement value to object converter (#11)
 
+-------------------
 0.10.1 - 2023-08-29
 -------------------
 
 Features
-~~~~~~~~
+========
 
 -  DNS
 
@@ -37,11 +41,12 @@ Features
 
    -  add `elliptic curve domain parameters identifier <https://www.rfc-editor.org/rfc/rfc5656.html#section-6.1>`__ (#8)
 
+-------------------
 0.10.0 - 2023-08-03
 -------------------
 
 Features
-~~~~~~~~
+========
 
 -  Generic
 
@@ -57,28 +62,30 @@ Features
       -  Status request (OCSP must staple) extension
 
 Notable fixes
-~~~~~~~~~~~~~
+=============
 
 -  Generic
 
    -  X.509 extended validation checker
 
+------------------
 0.9.1 - 2023-06-22
 ------------------
 
 Features
-~~~~~~~~
+========
 
 -  Generic
 
    -  add well-know Diffie-Hellman parameters (#3)
    -  add certificate transparency (CT) logs (#5)
 
+------------------
 0.8.5 - 2023-04-02
 ------------------
 
 Features
-~~~~~~~~
+========
 
 -  Generic
 

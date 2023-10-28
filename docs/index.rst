@@ -1,8 +1,10 @@
+=======
 Summary
 =======
 
 .. include:: ../README.rst
 
+=======
 Details
 =======
 
@@ -11,6 +13,7 @@ Details
 
     features
 
+=======
 History
 =======
 

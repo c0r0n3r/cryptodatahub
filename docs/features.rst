@@ -1,11 +1,12 @@
+--------
 Features
 --------
 
 Protocol-independent
-^^^^^^^^^^^^^^^^^^^^
+====================
 
 Algorithms
-""""""""""
+----------
 
 -  `public key <https://en.wikipedia.org/wiki/Public-key_cryptography>`__
 -  `digital signature <https://en.wikipedia.org/wiki/Digital_signature>`__
@@ -17,7 +18,7 @@ Algorithms
 -  `message authentication code <https://en.wikipedia.org/wiki/Message_authentication_code>`__
 
 Parameters
-""""""""""
+----------
 
 -  Diffie-Hellman (finite field)
 
@@ -37,7 +38,7 @@ Parameters
       -  SOcket CAT (socat)
 
 Stores
-""""""
+------
 
 -  Trusted root CA certificate trust stores
 
@@ -58,10 +59,10 @@ Stores
    -  ...
 
 Protocol-dependent
-^^^^^^^^^^^^^^^^^^
+==================
 
 Attributes
-""""""""""
+----------
 
 -  Secure Socket Layer (SSL)
 
@@ -100,7 +101,7 @@ Attributes
    -  `DNSSEC digest types <https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml>`__
 
 Client Capabilities
-"""""""""""""""""""
+-------------------
 
 -  Transport Layer Security (TLS)
 
