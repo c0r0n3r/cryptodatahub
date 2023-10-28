@@ -3,6 +3,34 @@ Changelog
 =========
 
 -------------------
+0.11.0 - 2023-10-28
+-------------------
+
+Features
+========
+
+-  Generic
+
+   -  add named attacks (#10)
+   -  add well-known attack types (#10)
+   -  add grade for common cryptographic algorithms (#10)
+   -  add grade for public key sizes (#10)
+
+-  DNS
+
+   -  add grade for DNSSEC algorithms (#10)
+
+-  TLS
+
+   -  add grade for cipher suites (#10)
+   -  add grade for named groups (#10)
+   -  add grade for signature and hash algorithms (#10)
+
+-  SSH
+
+   -  add grade for SSH algorithms (#10)
+
+-------------------
 0.10.3 - 2023-10-12
 -------------------
 
