@@ -1,152 +1,152 @@
 {
     "SSH_ED25519": {
         "code": "ssh-ed25519",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "ED25519"
     },
     "SSH_RSA": {
         "code": "ssh-rsa",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "RSA_WITH_SHA1"
     },
     "RSA_SHA2_256": {
         "code": "rsa-sha2-256",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "RSA_WITH_SHA2_256"
     },
     "RSA_SHA2_256_CERT_V01_OPENSSH_COM": {
         "code": "rsa-sha2-256-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "RSA_WITH_SHA2_256"
     },
     "RSA_SHA2_512": {
         "code": "rsa-sha2-512",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "RSA_WITH_SHA2_512"
     },
     "RSA_SHA2_512_CERT_V01_OPENSSH_COM": {
         "code": "rsa-sha2-512-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "RSA_WITH_SHA2_512"
     },
     "SSH_DSS": {
         "code": "ssh-dss",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "DSA_WITH_SHA1"
     },
     "DSA2048_SHA224_LIBASSH_ORG": {
         "code": "dsa2048-sha224@libassh.org",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "DSA_WITH_SHA2_224"
     },
     "DSA2048_SHA256_LIBASSH_ORG": {
         "code": "dsa2048-sha256@libassh.org",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "DSA_WITH_SHA2_256"
     },
     "DSA3072_SHA256_LIBASSH_ORG": {
         "code": "dsa3072-sha256@libassh.org",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "DSA_WITH_SHA2_256"
     },
     "ECDSA_SHA2_1_3_132_0_10": {
         "code": "ecdsa-sha2-1.3.132.0.10",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "ECDSA_SHA2_1_3_132_0_10_CERT_V01_OPENSSH_COM": {
         "code": "ecdsa-sha2-1.3.132.0.10-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "ECDSA_SHA2_NISTP256": {
         "code": "ecdsa-sha2-nistp256",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "ECDSA_SHA2_NISTP384": {
         "code": "ecdsa-sha2-nistp384",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "ECDSA_WITH_SHA2_384"
     },
     "ECDSA_SHA2_NISTP521": {
         "code": "ecdsa-sha2-nistp521",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "ECDSA_WITH_SHA2_512"
     },
     "EDDSA_E382_SHAKE256_LIBASSH_ORG": {
         "code": "eddsa-e382-shake256@libassh.org",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "E382"
     },
     "EDDSA_E521_SHAKE256_LIBASSH_ORG": {
         "code": "eddsa-e521-shake256@libassh.org",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "E521"
     },
     "SK_ECDSA_SHA2_NISTP256_OPENSSH_COM": {
         "code": "sk-ecdsa-sha2-nistp256@openssh.com",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "SK_ECDSA_SHA2_NISTP256_CERT_V01_OPENSSH_COM": {
         "code": "sk-ecdsa-sha2-nistp256-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "SK_SSH_ED25519_OPENSSH_COM": {
         "code": "sk-ssh-ed25519@openssh.com",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "ED25519"
     },
     "SK_SSH_ED25519_CERT_V01_OPENSSH_COM": {
         "code": "sk-ssh-ed25519-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "ED25519"
     },
     "SSH_RSA_CERT_V00_OPENSSH_COM": {
         "code": "ssh-rsa-cert-v00@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "RSA_WITH_SHA1"
     },
     "SSH_RSA_CERT_V01_OPENSSH_COM": {
         "code": "ssh-rsa-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "RSA_WITH_SHA1"
     },
     "SSH_RSA_SHA2_256_CERT_V01_OPENSSH_COM": {
         "code": "ssh-rsa-sha2-256-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "RSA_WITH_SHA2_256"
     },
     "SSH_RSA_SHA2_512_CERT_V01_OPENSSH_COM": {
         "code": "ssh-rsa-sha2-512-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "RSA_WITH_SHA2_512"
     },
     "SSH_DSS_CERT_V00_OPENSSH_COM": {
         "code": "ssh-dss-cert-v00@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "DSA_WITH_SHA1"
     },
     "SSH_DSS_CERT_V01_OPENSSH_COM": {
         "code": "ssh-dss-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "DSA_WITH_SHA1"
     },
     "ECDSA_SHA2_NISTP256_CERT_V01_OPENSSH_COM": {
         "code": "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "ECDSA_SHA2_NISTP384_CERT_V01_OPENSSH_COM": {
         "code": "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "ECDSA_WITH_SHA2_384"
     },
     "ECDSA_SHA2_NISTP521_CERT_V01_OPENSSH_COM": {
         "code": "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "ECDSA_WITH_SHA2_512"
     },
     "PGP_SIGN_DSS": {
@@ -171,82 +171,82 @@
     },
     "SSH_DSS_SHA224_SSH_COM": {
         "code": "ssh-dss-sha224@ssh.com",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "DSA_WITH_SHA2_224"
     },
     "SSH_DSS_SHA256_SSH_COM": {
         "code": "ssh-dss-sha256@ssh.com",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "DSA_WITH_SHA2_256"
     },
     "SSH_DSS_SHA384_SSH_COM": {
         "code": "ssh-dss-sha384@ssh.com",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "DSA_WITH_SHA2_384"
     },
     "SSH_DSS_SHA512_SSH_COM": {
         "code": "ssh-dss-sha512@ssh.com",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "DSA_WITH_SHA2_512"
     },
     "SSH_ED25519_CERT_V01_OPENSSH_COM": {
         "code": "ssh-ed25519-cert-v01@openssh.com",
-        "key_type": "CERTIFICATE",
+        "key_type": "HOST_CERTIFICATE",
         "signature": "ED25519"
     },
     "SSH_ED448": {
         "code": "ssh-ed448",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "ED448"
     },
     "SSH_ED448_CERT_V01_OPENSSH_COM": {
         "code": "ssh-ed448-cert-v01@openssh.com",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "ED448"
     },
     "SSH_RSA_SHA224_SSH_COM": {
         "code": "ssh-rsa-sha224@ssh.com",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "RSA_WITH_SHA2_224"
     },
     "SSH_RSA_SHA256_SSH_COM": {
         "code": "ssh-rsa-sha256@ssh.com",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "RSA_WITH_SHA2_256"
     },
     "SSH_RSA_SHA384_SSH_COM": {
         "code": "ssh-rsa-sha384@ssh.com",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "RSA_WITH_SHA2_384"
     },
     "SSH_RSA_SHA512_SSH_COM": {
         "code": "ssh-rsa-sha512@ssh.com",
-        "key_type": "KEY",
+        "key_type": "HOST_KEY",
         "signature": "RSA_WITH_SHA2_512"
     },
     "X509V3_ECDSA_SHA2_1_3_132_0_10": {
         "code": "x509v3-ecdsa-sha2-1.3.132.0.10",
-        "key_type": "X509_CERTIFICATE",
+        "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "X509V3_ECDSA_SHA2_NISTP256": {
         "code": "x509v3-ecdsa-sha2-nistp256",
-        "key_type": "X509_CERTIFICATE",
+        "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "X509V3_ECDSA_SHA2_NISTP384": {
         "code": "x509v3-ecdsa-sha2-nistp384",
-        "key_type": "X509_CERTIFICATE",
+        "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "ECDSA_WITH_SHA2_384"
     },
     "X509V3_ECDSA_SHA2_NISTP521": {
         "code": "x509v3-ecdsa-sha2-nistp521",
-        "key_type": "X509_CERTIFICATE",
+        "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "ECDSA_WITH_SHA2_512"
     },
     "X509V3_RSA2048_SHA256": {
         "code": "x509v3-rsa2048-sha256",
-        "key_type": "X509_CERTIFICATE",
+        "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "RSA_WITH_SHA2_256"
     },
     "X509V3_SIGN_DSS_SHA1": {
@@ -266,7 +266,7 @@
     },
     "X509V3_SSH_RSA": {
         "code": "x509v3-ssh-rsa",
-        "key_type": "X509_CERTIFICATE",
+        "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "RSA_WITH_SHA1"
     },
     "X509V3_SIGN_RSA_SHA224_SSH_COM": {
@@ -296,7 +296,7 @@
     },
     "X509V3_SSH_DSS": {
         "code": "x509v3-ssh-dss",
-        "key_type": "X509_CERTIFICATE",
+        "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "DSA_WITH_SHA1"
     },
     "X509V3_SIGN_DSS_SHA224_SSH_COM": {
@@ -321,12 +321,12 @@
     },
     "X509V3_SSH_ED25519": {
         "code": "x509v3-ssh-ed25519",
-        "key_type": "X509_CERTIFICATE",
+        "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "ED25519"
     },
     "X509V3_SSH_ED448": {
         "code": "x509v3-ssh-ed448",
-        "key_type": "X509_CERTIFICATE",
+        "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "ED448"
     }
 }

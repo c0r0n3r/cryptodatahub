@@ -166,7 +166,7 @@ class PublicKey(object):
 
     @classmethod
     def from_der(cls, der):
-        return cls(asn1crypto.keys.PublicKeyInfo.load(der))
+        return cls(asn1crypto.keys.PublicKeyInfo.load(bytes(der)))
 
     @classmethod
     def from_pem(cls, pem):
@@ -338,8 +338,8 @@ class PublicKey(object):
 
     def _asdict(self):
         return collections.OrderedDict([
-            ('key_type', self.key_type),
-            ('key_size', PublicKeySize(self.key_type, self.key_size)),
+            ('algorithm', self.key_type),
+            ('size', PublicKeySize(self.key_type, self.key_size)),
             ('fingerprints', self.fingerprints),
         ])
 
@@ -443,7 +443,7 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
 
     @classmethod
     def from_der(cls, der):
-        return cls(asn1crypto.x509.Certificate.load(der))
+        return cls(asn1crypto.x509.Certificate.load(bytes(der)))
 
     @property
     def der(self):
@@ -546,3 +546,37 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
     @property
     def is_self_signed(self):
         return self._certificate.self_issued
+
+    def _asdict(self):
+        items = [
+            ('algorithm', self.key_type),
+            ('size', PublicKeySize(self.key_type, self.key_size)),
+            ('version', self._certificate['tbs_certificate']['version'].native),
+            ('serial_number', str(self.serial_number)),
+            ('subject', self.subject),
+            ('subject_alternative_names', sorted(self.subject_alternative_names)),
+            ('issuer', self.issuer),
+            ('signature_hash_algorithm', self.signature_hash_algorithm),
+            ('validity', collections.OrderedDict([
+                ('not_before', str(self.valid_not_before)),
+                ('not_after', str(self.valid_not_after)),
+                ('period', str(self.validity_period)),
+                ('remaining', str(self.validity_remaining_time.days) if self.validity_remaining_time else None),
+            ])),
+            ('revocation', collections.OrderedDict([
+                ('crl_distribution_points', self.crl_distribution_points),
+                ('ocsp_responders', self.ocsp_responders),
+            ])),
+            ('fingerprints', self.fingerprints),
+            ('public_key_pin', self.public_key_pin),
+        ]
+
+        if not self.is_ca:
+            items += [
+                ('end_entity', collections.OrderedDict([
+                    ('extended_validation', self.extended_validation),
+                    ('tls_features', list(map(lambda feature: feature.name, self.tls_features))),
+                ]))
+            ]
+
+        return collections.OrderedDict(items)
