@@ -45,7 +45,10 @@ def name_to_enum_item_name(name):
 _HASHLIB_FUNCS = {
     Hash.MD5: hashlib.md5,
     Hash.SHA1: hashlib.sha1,
+    Hash.SHA2_224: hashlib.sha224,
     Hash.SHA2_256: hashlib.sha256,
+    Hash.SHA2_384: hashlib.sha384,
+    Hash.SHA2_512: hashlib.sha512,
 }
 
 
