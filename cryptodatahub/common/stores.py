@@ -281,9 +281,7 @@ class RootCertificateBase(CryptoDataEnumBase):
     def get_item_by_sha2_256_fingerprint(cls, fingerprint_value):
         if not hasattr(cls, '_ITEMS_BY_SHA2_256_HASH'):
             cls._ITEMS_BY_SHA2_256_HASH = {
-                bytes_to_hex_string(
-                    item.value.certificate.get_digest(Hash.SHA2_256, item.value.certificate.der)
-                ): item
+                bytes_to_hex_string(item.value.certificate.get_digest(Hash.SHA2_256)): item
                 for item in cls
             }
 

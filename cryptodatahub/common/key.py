@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import abc
-import hashlib
 import base64
 import collections
 import datetime
@@ -26,7 +25,7 @@ from cryptodatahub.common.grade import (
     Vulnerability,
 )
 from cryptodatahub.common.types import _ConverterBase
-from cryptodatahub.common.utils import bytes_to_hex_string
+from cryptodatahub.common.utils import bytes_to_hex_string, hash_bytes
 
 from cryptodatahub.tls.algorithm import TlsExtensionType
 
@@ -156,12 +155,6 @@ class PublicKeyParamsRsa(PublicKeyParamBase):
 
 @attr.s(eq=False)
 class PublicKey(object):
-    _HASHLIB_FUNCS = {
-        Hash.MD5: hashlib.md5,
-        Hash.SHA1: hashlib.sha1,
-        Hash.SHA2_256: hashlib.sha256
-    }
-
     _public_key = attr.ib(validator=attr.validators.instance_of(asn1crypto.keys.PublicKeyInfo))
 
     @classmethod
@@ -317,17 +310,11 @@ class PublicKey(object):
     def key_bytes(self):
         return PublicKey.der.fget(self)
 
-    @classmethod
-    def get_digest(cls, hash_type, key_bytes):
-        try:
-            hashlib_funcs = cls._HASHLIB_FUNCS[hash_type]
-        except KeyError as e:
-            six.raise_from(NotImplementedError(hash_type), e)
-
-        return hashlib_funcs(key_bytes).digest()
+    def get_digest(self, hash_type):
+        return hash_bytes(hash_type, self.der)
 
     def fingerprint(self, hash_type):
-        return bytes_to_hex_string(self.get_digest(hash_type, self.der), ':')
+        return bytes_to_hex_string(self.get_digest(hash_type), ':')
 
     @property
     def fingerprints(self):
@@ -472,7 +459,7 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
 
     @property
     def public_key_pin(self):
-        return base64.b64encode(self.get_digest(Hash.SHA2_256, self.key_bytes)).decode('ascii')
+        return base64.b64encode(hash_bytes(Hash.SHA2_256, self.key_bytes)).decode('ascii')
 
     def _has_any_policy_value(self, oid_values):
         if self._certificate.certificate_policies_value is None:

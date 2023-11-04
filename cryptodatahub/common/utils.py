@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import binascii
+import hashlib
 
 import attr
 import six
 import urllib3
+
+from cryptodatahub.common.algorithm import Hash
 
 
 def bytes_to_hex_string(byte_array, separator='', lowercase=False):
@@ -37,6 +40,22 @@ def name_to_enum_item_name(name):
             converted_name += '_'
 
     return converted_name.rstrip('_').upper()
+
+
+_HASHLIB_FUNCS = {
+    Hash.MD5: hashlib.md5,
+    Hash.SHA1: hashlib.sha1,
+    Hash.SHA2_256: hashlib.sha256,
+}
+
+
+def hash_bytes(hash_algorithm, hashable_value):
+    try:
+        hashlib_funcs = _HASHLIB_FUNCS[hash_algorithm]
+    except KeyError as e:
+        six.raise_from(NotImplementedError(hash_algorithm), e)
+
+    return hashlib_funcs(hashable_value).digest()
 
 
 @attr.s
