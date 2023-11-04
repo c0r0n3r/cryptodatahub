@@ -1,10 +1,18 @@
 # -*- coding: utf-8 -*-
 
-import unittest
+try:
+    import unittest
+    from unittest import mock
+except ImportError:
+    import unittest2 as unittest
+    import mock
+
+from test.common.classes import TEST_URL_PREFIX
 
 import six
+import urllib3
 
-from cryptodatahub.common.utils import bytes_from_hex_string, bytes_to_hex_string, name_to_enum_item_name
+from cryptodatahub.common.utils import bytes_from_hex_string, bytes_to_hex_string, name_to_enum_item_name, HttpFetcher
 
 
 class TestBytesToHexString(unittest.TestCase):
@@ -48,3 +56,34 @@ class TestNameToEnumItemName(unittest.TestCase):
 
     def test_convert_i18n_name(self):
         self.assertEqual(name_to_enum_item_name(six.ensure_text('αβγ')), six.ensure_text('ΑΒΓ'))
+
+
+class TestHttpFetcher(unittest.TestCase):
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request', side_effect=NotImplementedError)
+    def test_error_unhandaled_exception(self, _):
+        with self.assertRaises(NotImplementedError):
+            HttpFetcher()('http://example.com')
+
+    def test_error_fetch_timeout(self):
+        http_fetcher = HttpFetcher(
+            connect_timeout=0.001, read_timeout=0.001, retry=0
+        )
+        with self.assertRaises(AttributeError):
+            http_fetcher(TEST_URL_PREFIX + 'test.csv')
+        with self.assertRaises(AttributeError):
+            http_fetcher.get_response_header('Server')
+        with self.assertRaises(AttributeError):
+            _ = http_fetcher.response_data
+
+    def test_fetch(self):
+        http_fetcher = HttpFetcher()
+        http_fetcher.fetch(TEST_URL_PREFIX + 'test.html')
+        self.assertEqual(http_fetcher.get_response_header('Content-Type'), 'text/plain; charset=utf-8')
+        self.assertEqual(http_fetcher.response_data, b'\n'.join([
+            b'<!DOCTYPE html>',
+            b'<html>',
+            b'  <body>',
+            b'    Page content',
+            b'  </body>',
+            b'</html>',
+        ]))

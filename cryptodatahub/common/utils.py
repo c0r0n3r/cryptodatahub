@@ -2,7 +2,9 @@
 
 import binascii
 
+import attr
 import six
+import urllib3
 
 
 def bytes_to_hex_string(byte_array, separator='', lowercase=False):
@@ -35,3 +37,52 @@ def name_to_enum_item_name(name):
             converted_name += '_'
 
     return converted_name.rstrip('_').upper()
+
+
+@attr.s
+class HttpFetcher(object):
+    connect_timeout = attr.ib(default=2, validator=attr.validators.instance_of((int, float)))
+    read_timeout = attr.ib(default=1, validator=attr.validators.instance_of((int, float)))
+    retry = attr.ib(default=1, validator=attr.validators.instance_of(int))
+    _request_params = attr.ib(default=None, init=False)
+    _response = attr.ib(default=None, init=False)
+
+    def __attrs_post_init__(self):
+        request_params = {
+            'preload_content': False,
+            'timeout': urllib3.Timeout(connect=self.connect_timeout, read=self.read_timeout),
+            'retries': urllib3.Retry(
+                self.retry, status_forcelist=urllib3.Retry.RETRY_AFTER_STATUS_CODES | frozenset([502])
+            ),
+        }
+
+        object.__setattr__(self, '_request_params', request_params)
+
+    def get_response_header(self, header_name):
+        if self._response is None:
+            raise AttributeError()
+
+        return self._response.headers.get(header_name, None)
+
+    @property
+    def response_data(self):
+        if self._response is None:
+            raise AttributeError()
+
+        return self._response.data
+
+    def fetch(self, url):
+        pool_manager = urllib3.PoolManager()
+
+        try:
+            self._response = pool_manager.request('GET', str(url), **self._request_params)
+        except BaseException as e:  # pylint: disable=broad-except
+            if e.__class__.__name__ != 'TimeoutError' and not isinstance(e, urllib3.exceptions.HTTPError):
+                raise e
+
+        pool_manager.clear()
+
+    def __call__(self, url):
+        self.fetch(url)
+
+        return self.response_data

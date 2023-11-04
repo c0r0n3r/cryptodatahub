@@ -8,42 +8,9 @@ import six
 from six.moves import collections_abc
 
 import attr
-import urllib3
 
+from cryptodatahub.common.utils import HttpFetcher
 from cryptodatahub.common.stores import RootCertificate
-
-
-@attr.s(frozen=True)
-class HttpFetcher(object):
-    connect_timeout = attr.ib(default=2, validator=attr.validators.instance_of((int, float)))
-    read_timeout = attr.ib(default=1, validator=attr.validators.instance_of((int, float)))
-    retry = attr.ib(default=1, validator=attr.validators.instance_of(int))
-    _request_params = attr.ib(default=None, init=False)
-
-    def __attrs_post_init__(self):
-        request_params = {
-            'preload_content': False,
-            'timeout': urllib3.Timeout(connect=self.connect_timeout, read=self.read_timeout),
-            'retries': urllib3.Retry(
-                self.retry, status_forcelist=urllib3.Retry.RETRY_AFTER_STATUS_CODES | frozenset([502])
-            ),
-        }
-
-        object.__setattr__(self, '_request_params', request_params)
-
-    def __call__(self, url):
-        pool_manager = urllib3.PoolManager()
-        try:
-            response = pool_manager.request('GET', url, **self._request_params)
-        except BaseException as e:  # pylint: disable=broad-except
-            if e.__class__.__name__ != 'TimeoutError' and not isinstance(e, urllib3.exceptions.HTTPError):
-                raise e
-
-            return None
-
-        pool_manager.clear()
-
-        return response.data
 
 
 @attr.s(frozen=True)
