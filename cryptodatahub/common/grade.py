@@ -32,22 +32,22 @@ class GradeTypeParams(CryptoDataParamsNamed):
 
 class Grade(enum.Enum):
     SECURE = GradeTypeParams(
-        name="secure",
+        name='secure',
         long_name=None,
         numeric=0,
     )
     DEPRECATED = GradeTypeParams(
-        name="deprecated",
+        name='deprecated',
         long_name=None,
         numeric=-1,
     )
     WEAK = GradeTypeParams(
-        name="weak",
+        name='weak',
         long_name=None,
         numeric=-2,
     )
     INSECURE = GradeTypeParams(
-        name="insecure",
+        name='insecure',
         long_name=None,
         numeric=-3,
     )

@@ -66,9 +66,7 @@ class KeyExchangeParams(CryptoDataParamsNamed, GradeableVulnerabilities):
         return 'key exchange'
 
 
-class NamedGroupType(enum.IntEnum):
-    ELLIPTIC_CURVE = 1
-    DH_PARAM = 2
+NamedGroupType = enum.Enum('NamedGroupType', 'ELLIPTIC_CURVE FINITE_FIELD HYBRID_PQS')
 
 
 @attr.s(frozen=True)

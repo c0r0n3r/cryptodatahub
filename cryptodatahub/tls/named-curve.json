@@ -223,5 +223,15 @@
         "_code_in_hex": "0xff02",
         "code": 65282,
         "named_group": null
+    },
+    "X25519_KYBER_512_DRAFT00": {
+        "_code_in_hex": "0xfe30",
+        "code": 65072,
+        "named_group": "X25519_KYBER_512_DRAFT00"
+    },
+    "X25519_KYBER_768_DRAFT00": {
+        "_code_in_hex": "0x6399",
+        "code": 25497,
+        "named_group": "X25519_KYBER_768_DRAFT00"
     }
 }
