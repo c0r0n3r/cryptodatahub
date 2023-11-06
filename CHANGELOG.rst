@@ -3,6 +3,21 @@ Changelog
 =========
 
 -------------------
+0.11.1 - 2023-11-06
+-------------------
+
+Features
+========
+
+-  TLS
+
+   -  add post-quantum safe hybrid curves (#14)
+
+-  SSH
+
+   -  distinguish host key algorithms use X.509 certificate from the one that use certificate chain (#12)
+
+-------------------
 0.11.0 - 2023-10-28
 -------------------
 
