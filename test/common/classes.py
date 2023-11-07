@@ -32,6 +32,16 @@ from cryptodatahub.common.types import (
 )
 
 
+TEST_URL_PREFIX = '/'.join([
+    'https://gist.githubusercontent.com',
+    'c0r0n3r',
+    '54386701406df6e7299bd95c46a4c8d1',
+    'raw',
+    'e0b9cf606739d3fc1d97cc7f21e501e118bc4e07',
+    ''
+])
+
+
 @attr.s
 class TestJsonObjectComplex(CryptoDataParamsBase):
     attr = attr.ib()

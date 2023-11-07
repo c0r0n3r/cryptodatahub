@@ -244,13 +244,9 @@ class TestPublicKey(TestClasses.TestKeyBase):
     def test_digest(self):
         public_key = self._get_public_key('snakeoil_cert_pubkey')
         self.assertEqual(
-            PublicKey.get_digest(Hash.MD5, public_key.der),
+            public_key.get_digest(Hash.MD5),
             bytes_from_hex_string('5D:B2:D9:9F:97:5C:C6:19:B3:91:7E:F8:1A:37:2C:78', ':')
         )
-
-        with self.assertRaises(NotImplementedError) as context_manager:
-            PublicKey.get_digest(Hash.SHA2_512, public_key.der)
-        self.assertEqual(context_manager.exception.args, (Hash.SHA2_512, ))
 
     def test_fingerprints(self):
         public_key = self._get_public_key('snakeoil_cert_pubkey')
@@ -341,7 +337,7 @@ class TestPublicKeyX509(TestClasses.TestKeyBase):  # pylint: disable=too-many-pu
     def test_digest(self):
         public_key_x509 = self._get_public_key_x509('expired.badssl.com')
         self.assertEqual(
-            PublicKeyX509Base.get_digest(Hash.MD5, public_key_x509.der),
+            public_key_x509.get_digest(Hash.MD5),
             bytes_from_hex_string('67:34:4E:61:C0:43:1C:F1:F7:25:7C:1D:6D:E7:A7:85', ':')
         )
 
