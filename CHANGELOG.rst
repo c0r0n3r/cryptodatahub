@@ -3,6 +3,24 @@ Changelog
 =========
 
 -------------------
+0.11.2 - 2023-11-13
+-------------------
+
+Notable fixes
+=============
+
+-  Generic
+
+   -  add missing garde for PQC algorithms
+
+Refactor
+========
+
+-  Generic
+
+   -  move HTTP fetcher and digest generation to common utils
+
+-------------------
 0.11.1 - 2023-11-06
 -------------------
 
