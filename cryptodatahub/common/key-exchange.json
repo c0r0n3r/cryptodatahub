@@ -128,7 +128,7 @@
     "HYBRID_PQS": {
         "name": "hybrid post-quantum safe",
         "long_name": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [],
         "forward_secret": true
     },
     "SRP": {

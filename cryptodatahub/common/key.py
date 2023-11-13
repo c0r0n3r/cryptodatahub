@@ -78,6 +78,8 @@ class PublicKeySize(GradeableComplex):
                     Vulnerability(attack_type=AttackType.DOS_ATTACK, grade=Grade.WEAK, named=AttackNamed.DHEAT_ATTACK)
                 )
             gradeables = [_PublicKeySizeGradeable(gradeables)]
+        elif self.key_type == KeyExchange.HYBRID_PQS:
+            gradeables = []
         else:
             gradeables = None
 
