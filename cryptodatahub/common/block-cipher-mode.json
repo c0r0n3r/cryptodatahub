@@ -33,13 +33,7 @@
     "CTR": {
         "name": "CTR",
         "long_name": "counter",
-        "vulnerabilities": [
-            {
-                "attack_type": "REUSED_KEY_ATTACK",
-                "grade": "WEAK",
-                "named": null
-            }
-        ]
+        "vulnerabilities": []
     },
     "ECB": {
         "name": "ECB",
