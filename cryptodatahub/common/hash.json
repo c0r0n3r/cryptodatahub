@@ -194,7 +194,13 @@
         "name": "Tiger/128(96)",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "digest_size": 96
     },
     "TIGER_160": {
@@ -208,7 +214,13 @@
         "name": "Tiger/160(96)",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "digest_size": 96
     },
     "TIGER_192": {
@@ -222,7 +234,13 @@
         "name": "Tiger/192(96)",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "digest_size": 96
     },
     "WHIRLPOOL": {
