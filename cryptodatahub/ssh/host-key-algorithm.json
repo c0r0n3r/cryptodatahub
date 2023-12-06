@@ -49,12 +49,12 @@
         "key_type": "HOST_KEY",
         "signature": "DSA_WITH_SHA2_256"
     },
-    "ECDSA_SHA2_1_3_132_0_10": {
+    "ECDSA_SHA2_SECP256K1_OID": {
         "code": "ecdsa-sha2-1.3.132.0.10",
         "key_type": "HOST_KEY",
         "signature": "ECDSA_WITH_SHA2_256"
     },
-    "ECDSA_SHA2_1_3_132_0_10_CERT_V01_OPENSSH_COM": {
+    "ECDSA_SHA2_SECP256K1_OID_CERT_V01_OPENSSH_COM": {
         "code": "ecdsa-sha2-1.3.132.0.10-cert-v01@openssh.com",
         "key_type": "HOST_CERTIFICATE",
         "signature": "ECDSA_WITH_SHA2_256"
@@ -224,7 +224,7 @@
         "key_type": "HOST_KEY",
         "signature": "RSA_WITH_SHA2_512"
     },
-    "X509V3_ECDSA_SHA2_1_3_132_0_10": {
+    "X509V3_ECDSA_SHA2_SECP256K1_OID": {
         "code": "x509v3-ecdsa-sha2-1.3.132.0.10",
         "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "ECDSA_WITH_SHA2_256"

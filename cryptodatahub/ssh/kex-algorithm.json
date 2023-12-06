@@ -181,13 +181,6 @@
         "exchange_hash": "SHA2_512",
         "key_size": null
     },
-    "ECDH_SHA2_1_3_132_0_10": {
-        "code": "ecdh-sha2-1.3.132.0.10",
-        "kex": "ECDHE",
-        "key_parameter": "SECP256K1",
-        "exchange_hash": "SHA2_256",
-        "key_size": 256
-    },
     "ECDH_SHA2_BRAINPOOLP256R1_GENUA_DE": {
         "code": "ecdh-sha2-brainpoolp256r1@genua.de",
         "kex": "ECDHE",
@@ -320,6 +313,13 @@
         "key_parameter": "SECT571K1",
         "exchange_hash": "SHA2_512",
         "key_size": 571
+    },
+    "ECDH_SHA2_SECP256K1_OID": {
+        "code": "ecdh-sha2-1.3.132.0.10",
+        "kex": "ECDHE",
+        "key_parameter": "SECP256K1",
+        "exchange_hash": "SHA2_256",
+        "key_size": 256
     },
     "ECMQV_SHA2": {
         "code": "ecmqv-sha2",
