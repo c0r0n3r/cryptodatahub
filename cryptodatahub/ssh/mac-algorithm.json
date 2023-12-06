@@ -77,6 +77,18 @@
         "mac": "GOST_R3411_12_256",
         "mode": "ENCRYPT_AND_MAC"
     },
+    "HMAC_MD5": {
+        "code": "hmac-md5",
+        "truncated_size": null,
+        "mac": "MD5",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "HMAC_MD5_96": {
+        "code": "hmac-md5-96",
+        "truncated_size": null,
+        "mac": "MD5",
+        "mode": "ENCRYPT_AND_MAC"
+    },
     "HMAC_SHA256": {
         "code": "hmac-sha256",
         "truncated_size": null,
@@ -201,42 +213,6 @@
         "code": "hmac-sha256-2@ssh.com",
         "truncated_size": null,
         "mac": "SHA2_256",
-        "mode": "ENCRYPT_AND_MAC"
-    },
-    "HMAC_MD5": {
-        "code": "hmac-md5",
-        "truncated_size": null,
-        "mac": "MD5",
-        "mode": "ENCRYPT_AND_MAC"
-    },
-    "HMAC_MD5_96": {
-        "code": "hmac-md5-96",
-        "truncated_size": null,
-        "mac": "MD5",
-        "mode": "ENCRYPT_AND_MAC"
-    },
-    "UMAC_32_OPENSSH_COM": {
-        "code": "umac-32@openssh.com",
-        "truncated_size": null,
-        "mac": "UMAC_32",
-        "mode": "ENCRYPT_AND_MAC"
-    },
-    "UMAC_64_OPENSSH_COM": {
-        "code": "umac-64@openssh.com",
-        "truncated_size": null,
-        "mac": "UMAC_64",
-        "mode": "ENCRYPT_AND_MAC"
-    },
-    "UMAC_96_OPENSSH_COM": {
-        "code": "umac-96@openssh.com",
-        "truncated_size": null,
-        "mac": "UMAC_96",
-        "mode": "ENCRYPT_AND_MAC"
-    },
-    "UMAC_128_OPENSSH_COM": {
-        "code": "umac-128@openssh.com",
-        "truncated_size": null,
-        "mac": "UMAC_128",
         "mode": "ENCRYPT_AND_MAC"
     },
     "HMAC_SHA1_ETM_OPENSSH_COM": {
@@ -395,11 +371,35 @@
         "mac": "WHIRLPOOL",
         "mode": "ENCRYPT_AND_MAC"
     },
+    "UMAC_32_OPENSSH_COM": {
+        "code": "umac-32@openssh.com",
+        "truncated_size": null,
+        "mac": "UMAC_32",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "UMAC_64_OPENSSH_COM": {
+        "code": "umac-64@openssh.com",
+        "truncated_size": null,
+        "mac": "UMAC_64",
+        "mode": "ENCRYPT_AND_MAC"
+    },
     "UMAC_64_ETM_OPENSSH_COM": {
         "code": "umac-64-etm@openssh.com",
         "truncated_size": null,
         "mac": "UMAC_64",
         "mode": "ENCRYPT_THEN_MAC"
+    },
+    "UMAC_96_OPENSSH_COM": {
+        "code": "umac-96@openssh.com",
+        "truncated_size": null,
+        "mac": "UMAC_96",
+        "mode": "ENCRYPT_AND_MAC"
+    },
+    "UMAC_128_OPENSSH_COM": {
+        "code": "umac-128@openssh.com",
+        "truncated_size": null,
+        "mac": "UMAC_128",
+        "mode": "ENCRYPT_AND_MAC"
     },
     "UMAC_128_ETM_OPENSSH_COM": {
         "code": "umac-128-etm@openssh.com",

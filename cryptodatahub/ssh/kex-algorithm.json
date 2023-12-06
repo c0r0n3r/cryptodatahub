@@ -1,4 +1,25 @@
 {
+    "CURVE25519_SHA256": {
+        "code": "curve25519-sha256",
+        "kex": "ECDHE",
+        "key_parameter": "CURVE25519",
+        "exchange_hash": "SHA2_256",
+        "key_size": 255
+    },
+    "CURVE25519_SHA256_LIBSSH_ORG": {
+        "code": "curve25519-sha256@libssh.org",
+        "kex": "ECDHE",
+        "key_parameter": "CURVE25519",
+        "exchange_hash": "SHA2_256",
+        "key_size": 255
+    },
+    "CURVE448_SHA512_LIBSSH_ORG": {
+        "code": "curve448-sha512",
+        "kex": "ECDHE",
+        "key_parameter": "CURVE448",
+        "exchange_hash": "SHA2_512",
+        "key_size": 448
+    },
     "DIFFIE_HELLMAN_GROUP1_SHA1": {
         "code": "diffie-hellman-group1-sha1",
         "kex": "DHE",
@@ -327,27 +348,6 @@
         "key_parameter": null,
         "exchange_hash": null,
         "key_size": null
-    },
-    "CURVE25519_SHA256": {
-        "code": "curve25519-sha256",
-        "kex": "ECDHE",
-        "key_parameter": "CURVE25519",
-        "exchange_hash": "SHA2_256",
-        "key_size": 255
-    },
-    "CURVE25519_SHA256_LIBSSH_ORG": {
-        "code": "curve25519-sha256@libssh.org",
-        "kex": "ECDHE",
-        "key_parameter": "CURVE25519",
-        "exchange_hash": "SHA2_256",
-        "key_size": 255
-    },
-    "CURVE448_SHA512_LIBSSH_ORG": {
-        "code": "curve448-sha512",
-        "kex": "ECDHE",
-        "key_parameter": "CURVE448",
-        "exchange_hash": "SHA2_512",
-        "key_size": 448
     },
     "KEXGUESS2_MATT_UCC_ASN_AU": {
         "code": "kexguess2@matt.ucc.asn.au",
