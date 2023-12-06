@@ -247,7 +247,7 @@
     "ECDH_SHA2_NISTK283": {
         "code": "ecdh-sha2-nistk283",
         "kex": "ECDHE",
-        "key_parameter": "SECT283R1",
+        "key_parameter": "SECT283K1",
         "exchange_hash": "SHA2_384",
         "key_size": 283
     },
