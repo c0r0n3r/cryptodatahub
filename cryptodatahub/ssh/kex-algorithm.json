@@ -14,7 +14,7 @@
         "key_size": 255
     },
     "CURVE448_SHA512_LIBSSH_ORG": {
-        "code": "curve448-sha512",
+        "code": "curve448-sha512@libssh.org",
         "kex": "ECDHE",
         "key_parameter": "CURVE448",
         "exchange_hash": "SHA2_512",
