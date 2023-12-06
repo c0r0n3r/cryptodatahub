@@ -45,7 +45,7 @@
                 "named": null
             }
         ],
-        "digest_size": 64
+        "digest_size": 128
     },
     "RIPEMD128": {
         "name": "RIPEMD-128",
