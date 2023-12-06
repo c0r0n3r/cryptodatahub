@@ -99,6 +99,19 @@
         ],
         "digest_size": 160
     },
+    "SHA1_96": {
+        "name": "SHA-1/96",
+        "long_name": "Secure Hash Algorithm 1 (96)",
+        "oid": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
+        "digest_size": 96
+    },
     "SHA2_224": {
         "name": "SHA-224",
         "long_name": "Secure Hash Algorithm 2 (224)",
@@ -180,6 +193,13 @@
         "name": "SHAKE256",
         "long_name": null,
         "oid": "2.16.840.1.101.3.4.2.12",
+        "vulnerabilities": null,
+        "digest_size": 256
+    },
+    "SM3": {
+        "name": "SM3",
+        "long_name": "ShangMi 3",
+        "oid": "1.2.156.10197.1.401",
         "vulnerabilities": null,
         "digest_size": 256
     },

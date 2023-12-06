@@ -107,6 +107,13 @@
         "key_size": 128,
         "block_size": 128
     },
+    "CAMELLIA_192": {
+        "name": "Camellia-192",
+        "long_name": null,
+        "vulnerabilities": null,
+        "key_size": 192,
+        "block_size": 128
+    },
     "CAMELLIA_256": {
         "name": "Camellia-256",
         "long_name": null,
@@ -429,6 +436,13 @@
             }
         ],
         "key_size": 256,
+        "block_size": 128
+    },
+    "SM4": {
+        "name": "SM4",
+        "long_name": "ShangMi 4",
+        "vulnerabilities": [],
+        "key_size": 128,
         "block_size": 128
     },
     "TRIPLE_DES": {

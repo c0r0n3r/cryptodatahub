@@ -13,6 +13,10 @@
             }
         ]
     },
+    "LZ4_SENSORSDATA_CN": {
+        "code": "lz4@sensorsdata.cn",
+        "vulnerabilities": []
+    },
     "NONE": {
         "code": "none",
         "vulnerabilities": []
