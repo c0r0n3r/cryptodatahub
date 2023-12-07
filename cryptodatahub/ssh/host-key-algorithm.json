@@ -86,22 +86,22 @@
     },
     "SK_ECDSA_SHA2_NISTP256_OPENSSH_COM": {
         "code": "sk-ecdsa-sha2-nistp256@openssh.com",
-        "key_type": "HOST_KEY",
+        "key_type": "SECURE_KEY",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "SK_ECDSA_SHA2_NISTP256_CERT_V01_OPENSSH_COM": {
         "code": "sk-ecdsa-sha2-nistp256-cert-v01@openssh.com",
-        "key_type": "HOST_CERTIFICATE",
+        "key_type": "SECURE_CERTIFICATE",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "SK_SSH_ED25519_OPENSSH_COM": {
         "code": "sk-ssh-ed25519@openssh.com",
-        "key_type": "HOST_KEY",
+        "key_type": "SECURE_KEY",
         "signature": "ED25519"
     },
     "SK_SSH_ED25519_CERT_V01_OPENSSH_COM": {
         "code": "sk-ssh-ed25519-cert-v01@openssh.com",
-        "key_type": "HOST_CERTIFICATE",
+        "key_type": "SECURE_CERTIFICATE",
         "signature": "ED25519"
     },
     "SSH_RSA_CERT_V00_OPENSSH_COM": {

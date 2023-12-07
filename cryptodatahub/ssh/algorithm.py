@@ -136,6 +136,8 @@ class SshHostKeyType(enum.Enum):
     HOST_KEY = 'host key'
     HOST_CERTIFICATE = 'host certificate'
     PGP_KEY = 'PGP key'
+    SECURE_KEY = 'secure key'
+    SECURE_CERTIFICATE = 'secure certificate'
     SPKI_KEY = 'SPKI key'
     X509_CERTIFICATE = 'X.509 certificate'
     X509_CERTIFICATE_CHAIN = 'X.509 certificate chain'
