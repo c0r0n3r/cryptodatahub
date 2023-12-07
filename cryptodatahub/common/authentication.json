@@ -102,5 +102,12 @@
         "oid": null,
         "vulnerabilities": [],
         "anonymous": false
+    },
+    "XMSS": {
+        "name": "XMSS",
+        "long_name": "eXtended Merkle Signature Scheme",
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
     }
 }

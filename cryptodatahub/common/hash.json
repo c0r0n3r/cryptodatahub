@@ -45,7 +45,7 @@
                 "named": null
             }
         ],
-        "digest_size": 64
+        "digest_size": 128
     },
     "RIPEMD128": {
         "name": "RIPEMD-128",
@@ -98,6 +98,19 @@
             }
         ],
         "digest_size": 160
+    },
+    "SHA1_96": {
+        "name": "SHA-1/96",
+        "long_name": "Secure Hash Algorithm 1 (96)",
+        "oid": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
+        "digest_size": 96
     },
     "SHA2_224": {
         "name": "SHA-224",
@@ -183,6 +196,13 @@
         "vulnerabilities": null,
         "digest_size": 256
     },
+    "SM3": {
+        "name": "SM3",
+        "long_name": "ShangMi 3",
+        "oid": "1.2.156.10197.1.401",
+        "vulnerabilities": null,
+        "digest_size": 256
+    },
     "TIGER_128": {
         "name": "Tiger/128",
         "long_name": null,
@@ -194,7 +214,13 @@
         "name": "Tiger/128(96)",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "digest_size": 96
     },
     "TIGER_160": {
@@ -208,7 +234,13 @@
         "name": "Tiger/160(96)",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "digest_size": 96
     },
     "TIGER_192": {
@@ -222,7 +254,13 @@
         "name": "Tiger/192(96)",
         "long_name": null,
         "oid": null,
-        "vulnerabilities": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "COLLISION",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "digest_size": 96
     },
     "WHIRLPOOL": {

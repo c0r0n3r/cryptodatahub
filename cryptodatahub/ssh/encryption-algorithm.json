@@ -14,6 +14,11 @@
         "cipher": "AES_128",
         "mode": "CBC"
     },
+    "AES128_CFB": {
+        "code": "aes128-cfb",
+        "cipher": "AES_128",
+        "mode": "CFB"
+    },
     "AES128_CTR": {
         "code": "aes128-ctr",
         "cipher": "AES_128",
@@ -39,15 +44,35 @@
         "cipher": "AES_192",
         "mode": "CTR"
     },
+    "AES192_GCM": {
+        "code": "aes192-gcm",
+        "cipher": "AES_192",
+        "mode": "GCM"
+    },
+    "AES192_GCM_OPENSSH_COM": {
+        "code": "aes192-gcm@openssh.com",
+        "cipher": "AES_192",
+        "mode": "GCM"
+    },
     "AES256_CBC": {
         "code": "aes256-cbc",
         "cipher": "AES_256",
         "mode": "CBC"
     },
+    "AES256_CFB": {
+        "code": "aes256-cfb",
+        "cipher": "AES_256",
+        "mode": "CFB"
+    },
     "AES256_CTR": {
         "code": "aes256-ctr",
         "cipher": "AES_256",
         "mode": "CTR"
+    },
+    "AES256_GCM": {
+        "code": "aes256-gcm",
+        "cipher": "AES_256",
+        "mode": "GCM"
     },
     "AES256_GCM_OPENSSH_COM": {
         "code": "aes256-gcm@openssh.com",
@@ -68,6 +93,11 @@
         "code": "arcfour256",
         "cipher": "RC4_256",
         "mode": null
+    },
+    "BLOWFISH": {
+        "code": "blowfish",
+        "cipher": "BLOWFISH",
+        "mode": "CBC"
     },
     "BLOWFISH_CBC": {
         "code": "blowfish-cbc",
@@ -94,6 +124,66 @@
         "cipher": "BLOWFISH",
         "mode": "OFB"
     },
+    "CAMELLIA128_CBC_OPENSSH_ORG": {
+        "code": "camellia128-cbc@openssh.org",
+        "cipher": "CAMELLIA_128",
+        "mode": "CBC"
+    },
+    "CAMELLIA128_CBC": {
+        "code": "camellia128-cbc",
+        "cipher": "CAMELLIA_128",
+        "mode": "CBC"
+    },
+    "CAMELLIA128_CTR": {
+        "code": "camellia128-ctr",
+        "cipher": "CAMELLIA_128",
+        "mode": "CTR"
+    },
+    "CAMELLIA128_CTR_OPENSSH_ORG": {
+        "code": "camellia128-ctr@openssh.org",
+        "cipher": "CAMELLIA_128",
+        "mode": "CTR"
+    },
+    "CAMELLIA192_CBC_OPENSSH_ORG": {
+        "code": "camellia192-cbc@openssh.org",
+        "cipher": "CAMELLIA_192",
+        "mode": "CBC"
+    },
+    "CAMELLIA192_CBC": {
+        "code": "camellia192-cbc",
+        "cipher": "CAMELLIA_192",
+        "mode": "CBC"
+    },
+    "CAMELLIA192_CTR": {
+        "code": "camellia192-ctr",
+        "cipher": "CAMELLIA_192",
+        "mode": "CTR"
+    },
+    "CAMELLIA192_CTR_OPENSSH_ORG": {
+        "code": "camellia192-ctr@openssh.org",
+        "cipher": "CAMELLIA_192",
+        "mode": "CTR"
+    },
+    "CAMELLIA256_CBC_OPENSSH_ORG": {
+        "code": "camellia256-cbc@openssh.org",
+        "cipher": "CAMELLIA_256",
+        "mode": "CBC"
+    },
+    "CAMELLIA256_CBC": {
+        "code": "camellia256-cbc",
+        "cipher": "CAMELLIA_256",
+        "mode": "CBC"
+    },
+    "CAMELLIA256_CTR": {
+        "code": "camellia256-ctr",
+        "cipher": "CAMELLIA_256",
+        "mode": "CTR"
+    },
+    "CAMELLIA256_CTR_OPENSSH_ORG": {
+        "code": "camellia256-ctr@openssh.org",
+        "cipher": "CAMELLIA_256",
+        "mode": "CTR"
+    },
     "CAST128_CBC": {
         "code": "cast128-cbc",
         "cipher": "CAST_128",
@@ -119,20 +209,40 @@
         "cipher": "CAST_128",
         "mode": "OFB"
     },
+    "CAST128_12_CBC": {
+        "code": "cast128-12-cbc",
+        "cipher": "CAST_128",
+        "mode": "CBC"
+    },
     "CAST128_12_CBC_SSH_COM": {
         "code": "cast128-12-cbc@ssh.com",
         "cipher": "CAST_128",
         "mode": "CBC"
+    },
+    "CAST128_12_CFB": {
+        "code": "cast128-12-cfb",
+        "cipher": "CAST_128",
+        "mode": "CFB"
     },
     "CAST128_12_CFB_SSH_COM": {
         "code": "cast128-12-cfb@ssh.com",
         "cipher": "CAST_128",
         "mode": "CFB"
     },
+    "CAST128_12_ECB": {
+        "code": "cast128-12-ecb",
+        "cipher": "CAST_128",
+        "mode": "ECB"
+    },
     "CAST128_12_ECB_SSH_COM": {
         "code": "cast128-12-ecb@ssh.com",
         "cipher": "CAST_128",
         "mode": "ECB"
+    },
+    "CAST128_12_OFB": {
+        "code": "cast128-12-ofb",
+        "cipher": "CAST_128",
+        "mode": "OFB"
     },
     "CAST128_12_OFB_SSH_COM": {
         "code": "cast128-12-ofb@ssh.com",
@@ -144,6 +254,11 @@
         "cipher": "CAST_256",
         "mode": "CBC"
     },
+    "CHACHA20_POLY1305": {
+        "code": "chacha20-poly1305",
+        "cipher": "CHACHA20",
+        "mode": null
+    },
     "CHACHA20_POLY1305_OPENSSH_COM": {
         "code": "chacha20-poly1305@openssh.com",
         "cipher": "CHACHA20",
@@ -153,6 +268,11 @@
         "code": "crypticore128@ssh.com",
         "cipher": "CRYPTICORE",
         "mode": null
+    },
+    "DES": {
+        "code": "des",
+        "cipher": "DES",
+        "mode": "CBC"
     },
     "DES_CBC": {
         "code": "des-cbc",
@@ -194,6 +314,11 @@
         "cipher": "GOST_R3412_15_128",
         "mode": "CTR"
     },
+    "GRASSHOPPER_CTR128": {
+        "code": "grasshopper-ctr128",
+        "cipher": "GOST_R3412_15_128",
+        "mode": "CTR"
+    },
     "GOST89": {
         "code": "gost89",
         "cipher": "GOST2814789",
@@ -204,6 +329,11 @@
         "cipher": "GOST2814789",
         "mode": "CNT"
     },
+    "IDEA_CBC": {
+        "code": "idea-cbc",
+        "cipher": "IDEA",
+        "mode": "CBC"
+    },
     "IDEA_CFB": {
         "code": "idea-cfb",
         "cipher": "IDEA",
@@ -213,6 +343,21 @@
         "code": "idea-ctr",
         "cipher": "IDEA",
         "mode": "CTR"
+    },
+    "IDEA_ECB": {
+        "code": "idea-ecb",
+        "cipher": "IDEA",
+        "mode": "ECB"
+    },
+    "IDEA_OFB": {
+        "code": "idea-ofb",
+        "cipher": "IDEA",
+        "mode": "OFB"
+    },
+    "KUZNECHIK_OFB": {
+        "code": "kuznechik-ofb",
+        "cipher": "GOST_R3412_15_128",
+        "mode": "OFB"
     },
     "RC2_CBC": {
         "code": "rc2-cbc",
@@ -228,6 +373,11 @@
         "code": "rc2-ctr",
         "cipher": "RC2",
         "mode": "CTR"
+    },
+    "RIJNDAEL128": {
+        "code": "rijndael128",
+        "cipher": "RIJNDAEL_128",
+        "mode": "CBC"
     },
     "RIJNDAEL128_CBC": {
         "code": "rijndael128-cbc",
@@ -259,6 +409,11 @@
         "cipher": "SEED",
         "mode": "CBC"
     },
+    "SEED_CTR_SSH_COM": {
+        "code": "seed-ctr@ssh.com",
+        "cipher": "SEED",
+        "mode": "CTR"
+    },
     "SERPENT128_CBC": {
         "code": "serpent128-cbc",
         "cipher": "SERPENT_128",
@@ -268,6 +423,16 @@
         "code": "serpent128-ctr",
         "cipher": "SERPENT_128",
         "mode": "CTR"
+    },
+    "SERPENT128_GCM": {
+        "code": "serpent128-gcm",
+        "cipher": "SERPENT_128",
+        "mode": "GCM"
+    },
+    "SERPENT128_GCM_LIBASSH_ORG": {
+        "code": "serpent128-gcm@libassh.org",
+        "cipher": "SERPENT_128",
+        "mode": "GCM"
     },
     "SERPENT192_CBC": {
         "code": "serpent192-cbc",
@@ -288,6 +453,36 @@
         "code": "serpent256-ctr",
         "cipher": "SERPENT_256",
         "mode": "CTR"
+    },
+    "SERPENT256_GCM": {
+        "code": "serpent256-gcm",
+        "cipher": "SERPENT_256",
+        "mode": "GCM"
+    },
+    "SERPENT256_GCM_LIBASSH_ORG": {
+        "code": "serpent256-gcm@libassh.org",
+        "cipher": "SERPENT_256",
+        "mode": "GCM"
+    },
+    "SM4": {
+        "code": "sm4",
+        "cipher": "SM4",
+        "mode": "CBC"
+    },
+    "SM4_CBC": {
+        "code": "sm4-cbc",
+        "cipher": "SM4",
+        "mode": "CBC"
+    },
+    "SM4_CTR": {
+        "code": "sm4-ctr",
+        "cipher": "SM4",
+        "mode": "CTR"
+    },
+    "SM4_CBC_HUAWEI": {
+        "code": "sm4-cbc@huawei",
+        "cipher": "SM4",
+        "mode": "CBC"
     },
     "TRIPLE_DES_CBC": {
         "code": "3des-cbc",
@@ -349,6 +544,16 @@
         "cipher": "TWOFISH128",
         "mode": "CTR"
     },
+    "TWOFISH128_GCM": {
+        "code": "twofish128-gcm",
+        "cipher": "TWOFISH128",
+        "mode": "GCM"
+    },
+    "TWOFISH128_GCM_LIBASSH_ORG": {
+        "code": "twofish128-gcm@libassh.org",
+        "cipher": "TWOFISH128",
+        "mode": "GCM"
+    },
     "TWOFISH192_CBC": {
         "code": "twofish192-cbc",
         "cipher": "TWOFISH192",
@@ -368,5 +573,15 @@
         "code": "twofish256-ctr",
         "cipher": "TWOFISH256",
         "mode": "CTR"
+    },
+    "TWOFISH256_GCM": {
+        "code": "twofish256-gcm",
+        "cipher": "TWOFISH256",
+        "mode": "GCM"
+    },
+    "TWOFISH256_GCM_LIBASSH_ORG": {
+        "code": "twofish256-gcm@libassh.org",
+        "cipher": "TWOFISH256",
+        "mode": "GCM"
     }
 }

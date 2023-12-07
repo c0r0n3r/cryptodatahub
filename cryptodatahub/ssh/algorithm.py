@@ -56,11 +56,11 @@ class SshAlgorithmParams(CryptoDataParamsEnumString, GradeableComplex):
 class EncryptionAlgorithmParams(SshAlgorithmParams):
     cipher = attr.ib(
         converter=convert_enum(BlockCipher),
-        validator=attr.validators.optional(attr.validators.instance_of((BlockCipher, six.string_types)))
+        validator=attr.validators.optional(attr.validators.instance_of(BlockCipher))
     )
     mode = attr.ib(
         converter=convert_enum(BlockCipherMode),
-        validator=attr.validators.optional(attr.validators.instance_of((BlockCipherMode, six.string_types)))
+        validator=attr.validators.optional(attr.validators.instance_of(BlockCipherMode))
     )
 
     @property
@@ -73,11 +73,11 @@ class MacAlgorithmParams(SshAlgorithmParams):
     truncated_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
     mac = attr.ib(
         converter=convert_enum(MAC),
-        validator=attr.validators.optional(attr.validators.instance_of((MAC, six.string_types)))
+        validator=attr.validators.optional(attr.validators.instance_of(MAC))
     )
     mode = attr.ib(
         converter=convert_enum(MACMode),
-        validator=attr.validators.optional(attr.validators.instance_of((MACMode, six.string_types)))
+        validator=attr.validators.optional(attr.validators.instance_of(MACMode))
     )
 
     @property
@@ -96,7 +96,7 @@ class MacAlgorithmParams(SshAlgorithmParams):
 class KexAlgorithmParams(SshAlgorithmParams):
     kex = attr.ib(
         converter=convert_enum(KeyExchange),
-        validator=attr.validators.optional(attr.validators.instance_of((KeyExchange, six.string_types)))
+        validator=attr.validators.optional(attr.validators.instance_of(KeyExchange))
     )
     key_parameter = attr.ib(
         converter=convert_variadic((convert_enum(NamedGroup), convert_enum(DHParamWellKnown))),
@@ -106,7 +106,7 @@ class KexAlgorithmParams(SshAlgorithmParams):
     )
     exchange_hash = attr.ib(
         converter=convert_enum(Hash),
-        validator=attr.validators.optional(attr.validators.instance_of((Hash, six.string_types)))
+        validator=attr.validators.optional(attr.validators.instance_of(Hash))
     )
     key_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
 
@@ -136,6 +136,8 @@ class SshHostKeyType(enum.Enum):
     HOST_KEY = 'host key'
     HOST_CERTIFICATE = 'host certificate'
     PGP_KEY = 'PGP key'
+    SECURE_KEY = 'secure key'
+    SECURE_CERTIFICATE = 'secure certificate'
     SPKI_KEY = 'SPKI key'
     X509_CERTIFICATE = 'X.509 certificate'
     X509_CERTIFICATE_CHAIN = 'X.509 certificate chain'
@@ -145,11 +147,11 @@ class SshHostKeyType(enum.Enum):
 class HostKeyAlgorithmParams(SshAlgorithmParams):
     key_type = attr.ib(
         converter=convert_enum(SshHostKeyType),
-        validator=attr.validators.instance_of((SshHostKeyType, six.string_types))
+        validator=attr.validators.instance_of(SshHostKeyType)
     )
     signature = attr.ib(
         converter=convert_enum(Signature),
-        validator=attr.validators.optional(attr.validators.instance_of((Signature, six.string_types)))
+        validator=attr.validators.optional(attr.validators.instance_of(Signature))
     )
 
     @property

@@ -31,6 +31,54 @@
         "digest_size": 256,
         "hash_algorithm": null
     },
+    "CBCMAC_3DES": {
+        "name": "CBC-MAC 3DES",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": null,
+        "digest_size": 64,
+        "hash_algorithm": null
+    },
+    "CBCMAC_AES": {
+        "name": "CBC-MAC AES",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": null,
+        "digest_size": 128,
+        "hash_algorithm": null
+    },
+    "CBCMAC_BLOWFISH": {
+        "name": "CBC-MAC Blowfish",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": null,
+        "digest_size": 64,
+        "hash_algorithm": null
+    },
+    "CBCMAC_DES": {
+        "name": "CBC-MAC DES",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": null,
+        "digest_size": 64,
+        "hash_algorithm": null
+    },
+    "CBCMAC_RIJNDAEL": {
+        "name": "CBC-MAC Rijndael",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": null,
+        "digest_size": 128,
+        "hash_algorithm": null
+    },
+    "CBCMAC_TWOFISH": {
+        "name": "CBC-MAC Twofish",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": null,
+        "digest_size": 128,
+        "hash_algorithm": null
+    },
     "CRYPTICORE": {
         "name": "CryptiCore",
         "long_name": "CryptiCore (Badger)",
@@ -238,6 +286,14 @@
         "vulnerabilities": [],
         "digest_size": null,
         "hash_algorithm": "SHA3_512"
+    },
+    "SM3": {
+        "name": "SM3",
+        "long_name": "ShangMi 3",
+        "oid": "1.2.156.10197.1.401.2",
+        "vulnerabilities": [],
+        "digest_size": null,
+        "hash_algorithm": "SM3"
     },
     "TIGER_128": {
         "name": "Tiger/128",

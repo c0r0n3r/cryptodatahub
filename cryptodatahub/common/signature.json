@@ -222,5 +222,12 @@
         "oid": null,
         "key_type": "EDDSA",
         "hash_algorithm": "SHAKE_256"
+    },
+    "XMSS": {
+        "name": "XMSS",
+        "long_name": null,
+        "oid": null,
+        "key_type": "XMSS",
+        "hash_algorithm": "SHA2_256"
     }
 }

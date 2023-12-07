@@ -4,10 +4,40 @@
         "key_type": "HOST_KEY",
         "signature": "ED25519"
     },
+    "SSH_GOST2001": {
+        "code": "ssh-gost2001",
+        "key_type": "HOST_KEY",
+        "signature": "GOST_R3410_01"
+    },
+    "SSH_GOST2012_256": {
+        "code": "ssh-gost2012-256",
+        "key_type": "HOST_KEY",
+        "signature": "GOST_R3411_12_256_R3410"
+    },
+    "SSH_GOST2012_512": {
+        "code": "ssh-gost2012-512",
+        "key_type": "HOST_KEY",
+        "signature": "GOST_R3411_12_512_R3410"
+    },
     "SSH_RSA": {
         "code": "ssh-rsa",
         "key_type": "HOST_KEY",
         "signature": "RSA_WITH_SHA1"
+    },
+    "SSH_RSA_SHA2_256": {
+        "code": "ssh-rsa-sha2-256",
+        "key_type": "HOST_KEY",
+        "signature": "RSA_WITH_SHA2_256"
+    },
+    "SSH_RSA_SHA2_256_ATTACHMATE_COM": {
+        "code": "ssh-rsa-sha2-256@attachmate.com",
+        "key_type": "HOST_KEY",
+        "signature": "RSA_WITH_SHA2_256"
+    },
+    "SSH_RSA_SHA2_512": {
+        "code": "ssh-rsa-sha2-512",
+        "key_type": "HOST_KEY",
+        "signature": "RSA_WITH_SHA2_512"
     },
     "RSA_SHA2_256": {
         "code": "rsa-sha2-256",
@@ -29,6 +59,11 @@
         "key_type": "HOST_CERTIFICATE",
         "signature": "RSA_WITH_SHA2_512"
     },
+    "SSH_DSA": {
+        "code": "ssh-dsa",
+        "key_type": "HOST_KEY",
+        "signature": "DSA_WITH_SHA1"
+    },
     "SSH_DSS": {
         "code": "ssh-dss",
         "key_type": "HOST_KEY",
@@ -49,14 +84,54 @@
         "key_type": "HOST_KEY",
         "signature": "DSA_WITH_SHA2_256"
     },
-    "ECDSA_SHA2_1_3_132_0_10": {
+    "ECDSA_SHA2_SECP256K1_OID": {
         "code": "ecdsa-sha2-1.3.132.0.10",
         "key_type": "HOST_KEY",
         "signature": "ECDSA_WITH_SHA2_256"
     },
-    "ECDSA_SHA2_1_3_132_0_10_CERT_V01_OPENSSH_COM": {
+    "ECDSA_SHA2_SECP256K1_OID_CERT_V01_OPENSSH_COM": {
         "code": "ecdsa-sha2-1.3.132.0.10-cert-v01@openssh.com",
         "key_type": "HOST_CERTIFICATE",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "ECDSA_SHA2_NISTB233": {
+        "code": "ecdsa-sha2-nistb233",
+        "key_type": "HOST_KEY",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "ECDSA_SHA2_NISTB409": {
+        "code": "ecdsa-sha2-nistb409",
+        "key_type": "HOST_KEY",
+        "signature": "ECDSA_WITH_SHA2_512"
+    },
+    "ECDSA_SHA2_NISTK163": {
+        "code": "ecdsa-sha2-nistk163",
+        "key_type": "HOST_KEY",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "ECDSA_SHA2_NISTK233": {
+        "code": "ecdsa-sha2-nistk233",
+        "key_type": "HOST_KEY",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "ECDSA_SHA2_NISTK283": {
+        "code": "ecdsa-sha2-nistk283",
+        "key_type": "HOST_KEY",
+        "signature": "ECDSA_WITH_SHA2_384"
+    },
+    "ECDSA_SHA2_NISTK409": {
+        "code": "ecdsa-sha2-nistk409",
+        "key_type": "HOST_KEY",
+        "signature": "ECDSA_WITH_SHA2_512"
+    },
+    "ECDSA_SHA2_NISTP192": {
+        "code": "ecdsa-sha2-nistp192",
+        "key_type": "HOST_KEY",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "ECDSA_SHA2_NISTP224": {
+        "code": "ecdsa-sha2-nistp224",
+        "key_type": "HOST_KEY",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "ECDSA_SHA2_NISTP256": {
@@ -74,6 +149,11 @@
         "key_type": "HOST_KEY",
         "signature": "ECDSA_WITH_SHA2_512"
     },
+    "ECDSA_SHA2_NISTP571": {
+        "code": "ecdsa-sha2-nistt571",
+        "key_type": "HOST_KEY",
+        "signature": "ECDSA_WITH_SHA2_512"
+    },
     "EDDSA_E382_SHAKE256_LIBASSH_ORG": {
         "code": "eddsa-e382-shake256@libassh.org",
         "key_type": "HOST_KEY",
@@ -86,22 +166,22 @@
     },
     "SK_ECDSA_SHA2_NISTP256_OPENSSH_COM": {
         "code": "sk-ecdsa-sha2-nistp256@openssh.com",
-        "key_type": "HOST_KEY",
+        "key_type": "SECURE_KEY",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "SK_ECDSA_SHA2_NISTP256_CERT_V01_OPENSSH_COM": {
         "code": "sk-ecdsa-sha2-nistp256-cert-v01@openssh.com",
-        "key_type": "HOST_CERTIFICATE",
+        "key_type": "SECURE_CERTIFICATE",
         "signature": "ECDSA_WITH_SHA2_256"
     },
     "SK_SSH_ED25519_OPENSSH_COM": {
         "code": "sk-ssh-ed25519@openssh.com",
-        "key_type": "HOST_KEY",
+        "key_type": "SECURE_KEY",
         "signature": "ED25519"
     },
     "SK_SSH_ED25519_CERT_V01_OPENSSH_COM": {
         "code": "sk-ssh-ed25519-cert-v01@openssh.com",
-        "key_type": "HOST_CERTIFICATE",
+        "key_type": "SECURE_CERTIFICATE",
         "signature": "ED25519"
     },
     "SSH_RSA_CERT_V00_OPENSSH_COM": {
@@ -133,6 +213,11 @@
         "code": "ssh-dss-cert-v01@openssh.com",
         "key_type": "HOST_CERTIFICATE",
         "signature": "DSA_WITH_SHA1"
+    },
+    "ECDSA_SHA2_CURVE25519": {
+        "code": "ecdsa-sha2-curve25519",
+        "key_type": "HOST_KEY",
+        "signature": "ED25519"
     },
     "ECDSA_SHA2_NISTP256_CERT_V01_OPENSSH_COM": {
         "code": "ecdsa-sha2-nistp256-cert-v01@openssh.com",
@@ -224,13 +309,68 @@
         "key_type": "HOST_KEY",
         "signature": "RSA_WITH_SHA2_512"
     },
-    "X509V3_ECDSA_SHA2_1_3_132_0_10": {
+    "SSH_XMSS_OPENSSH_COM": {
+        "code": "ssh-xmss@openssh.com",
+        "key_type": "HOST_KEY",
+        "signature": "XMSS"
+    },
+    "SSH_XMSS_CERT_V01_OPENSSH_COM": {
+        "code": "ssh-xmss-cert-v01@openssh.com",
+        "key_type": "HOST_CERTIFICATE",
+        "signature": "XMSS"
+    },
+    "WEBAUTHN_SK_ECDSA_SHA2_NISTP256_OPENSSH_COM": {
+        "code": "webauthn-sk-ecdsa-sha2-nistp256@openssh.com",
+        "key_type": "SECURE_KEY",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "X509V3_ECDSA_SHA2_SECP256K1_OID": {
         "code": "x509v3-ecdsa-sha2-1.3.132.0.10",
         "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "ECDSA_WITH_SHA2_256"
     },
+    "X509V3_ECDSA_SHA2_NISTB233": {
+        "code": "x509v3-ecdsa-sha2-nistb233",
+        "key_type": "X509_CERTIFICATE_CHAIN",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "X509V3_ECDSA_SHA2_NISTB409": {
+        "code": "x509v3-ecdsa-sha2-nistb409",
+        "key_type": "X509_CERTIFICATE_CHAIN",
+        "signature": "ECDSA_WITH_SHA2_512"
+    },
+    "X509V3_ECDSA_SHA2_NISTK163": {
+        "code": "x509v3-ecdsa-sha2-nistk163",
+        "key_type": "X509_CERTIFICATE_CHAIN",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "X509V3_ECDSA_SHA2_NISTK233": {
+        "code": "x509v3-ecdsa-sha2-nistk233",
+        "key_type": "X509_CERTIFICATE_CHAIN",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "X509V3_ECDSA_SHA2_NISTK283": {
+        "code": "x509v3-ecdsa-sha2-nistk283",
+        "key_type": "X509_CERTIFICATE_CHAIN",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "X509V3_ECDSA_SHA2_NISTK409": {
+        "code": "x509v3-ecdsa-sha2-nistk409",
+        "key_type": "X509_CERTIFICATE_CHAIN",
+        "signature": "ECDSA_WITH_SHA2_512"
+    },
     "X509V3_ECDSA_SHA2_NISTP256": {
         "code": "x509v3-ecdsa-sha2-nistp256",
+        "key_type": "X509_CERTIFICATE_CHAIN",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "X509V3_ECDSA_SHA2_NISTP192": {
+        "code": "x509v3-ecdsa-sha2-nistp192",
+        "key_type": "X509_CERTIFICATE_CHAIN",
+        "signature": "ECDSA_WITH_SHA2_256"
+    },
+    "X509V3_ECDSA_SHA2_NISTP224": {
+        "code": "x509v3-ecdsa-sha2-nistp224",
         "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "ECDSA_WITH_SHA2_256"
     },
@@ -241,6 +381,16 @@
     },
     "X509V3_ECDSA_SHA2_NISTP521": {
         "code": "x509v3-ecdsa-sha2-nistp521",
+        "key_type": "X509_CERTIFICATE_CHAIN",
+        "signature": "ECDSA_WITH_SHA2_512"
+    },
+    "X509V3_ECDSA_SHA2_CURVE25519": {
+        "code": "x509v3-ecdsa-sha2-curve25519",
+        "key_type": "X509_CERTIFICATE_CHAIN",
+        "signature": "ED25519"
+    },
+    "X509V3_ECDSA_SHA2_NISTT571": {
+        "code": "x509v3-ecdsa-sha2-nistt571",
         "key_type": "X509_CERTIFICATE_CHAIN",
         "signature": "ECDSA_WITH_SHA2_512"
     },
