@@ -188,7 +188,8 @@ TlsCertificateCompressionAlgorithm = CryptoDataEnumCodedBase(
 
 
 @attr.s
-class CipherParamsBase(CryptoDataParamsEnumNumeric):  # pylint: disable=too-many-instance-attributes
+class CipherParamsBase(CryptoDataParamsEnumNumeric, GradeableComplex):  # pylint: disable=too-many-instance-attributes
+    iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
     iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
     openssl_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
     key_exchange = attr.ib(
@@ -235,6 +236,23 @@ class CipherParamsBase(CryptoDataParamsEnumNumeric):  # pylint: disable=too-many
 
         object.__setattr__(self, 'export_grade', self.iana_name is not None and '_EXPORT' in self.iana_name)
 
+        vulnerability_parts = collections.OrderedDict([
+            (KeyExchange, self.key_exchange),
+            (Authentication, self.authentication),
+            (BlockCipher, self.bulk_cipher),
+            (BlockCipherMode, self.block_cipher_mode),
+            (MAC, self.mac),
+        ])
+
+        gradeables = []
+        for algorithm in vulnerability_parts.values():
+            if algorithm is None:
+                continue
+
+            gradeables.append(algorithm.value)
+
+        object.__setattr__(self, 'gradeables', gradeables)
+
         attr.validate(self)
 
     def __str__(self):
@@ -254,32 +272,10 @@ class CipherParamsBase(CryptoDataParamsEnumNumeric):  # pylint: disable=too-many
 
 
 @attr.s
-class CipherSuiteParams(CipherParamsBase, GradeableComplex):
+class CipherSuiteParams(CipherParamsBase):
     @classmethod
     def get_code_size(cls):
         return 2
-
-    def __attrs_post_init__(self):
-        super(CipherSuiteParams, self).__attrs_post_init__()
-
-        vulnerability_parts = collections.OrderedDict([
-            (KeyExchange, self.key_exchange),
-            (Authentication, self.authentication),
-            (BlockCipher, self.bulk_cipher),
-            (BlockCipherMode, self.block_cipher_mode),
-            (MAC, self.mac),
-        ])
-
-        gradeables = []
-        for algorithm in vulnerability_parts.values():
-            if algorithm is None:
-                continue
-
-            gradeables.append(algorithm.value)
-
-        object.__setattr__(self, 'gradeables', gradeables)
-
-        attr.validate(self)
 
 
 TlsCipherSuite = CryptoDataEnumCodedBase('TlsCipherSuite', CryptoDataEnumCodedBase.get_json_records(CipherSuiteParams))
