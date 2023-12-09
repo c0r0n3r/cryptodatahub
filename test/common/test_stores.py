@@ -112,6 +112,16 @@ class TestCertificateTransparencyLog(TestClasses.TestJsonBase):
             'ORGANIZATION_CT_LOG_2023'
         )
 
+    def test_str(self):
+        self.assertEqual(
+            str(CertificateTransparencyLog.from_log_id(bytearray(b'unknown log'))),
+            'dW5rbm93biBsb2c='
+        )
+        self.assertEqual(
+            str(CertificateTransparencyLog.AKAMAI_CT_LOG.value),
+            'Akamai CT Log (lgbALGkAM6odFF9ZxuJkjQVJ8N+WqrjbkVpw2OzzkKU=)'
+        )
+
 
 class TestRootCertificateParams(TestClasses.TestKeyBase):
     def test_subject_to_enum_item_name(self):
