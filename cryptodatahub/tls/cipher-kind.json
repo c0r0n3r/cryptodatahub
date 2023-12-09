@@ -160,7 +160,7 @@
         "code": 16744464,
         "iana_name": "SSL_CK_NULL",
         "openssl_name": null,
-        "key_exchange": null,
+        "key_exchange": "NULL",
         "authentication": null,
         "bulk_cipher": null,
         "block_cipher_mode": null,
