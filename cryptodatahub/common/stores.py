@@ -75,7 +75,8 @@ class CertificateTransparencyLogParamsBase(CryptoDataParamsBase):
 
 
 class CertificateTransparencyLogUnknown(CertificateTransparencyLogParamsBase):
-    pass
+    def __str__(self):
+        return str(self.log_id)
 
 
 @attr.s(frozen=True)
@@ -130,6 +131,11 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
     def __attrs_post_init__(self):
         if self.mmd < 1:
             raise ValueError(self.mmd)
+
+    def __str__(self):
+        return '{} ({})'.format(
+            self.description, self.log_id
+        )
 
     @classmethod
     def description_to_enum_item_name(cls, description):
