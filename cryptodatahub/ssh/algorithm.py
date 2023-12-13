@@ -27,7 +27,7 @@ from cryptodatahub.common.types import (
 )
 
 
-@attr.s
+@attr.s(frozen=True)
 class SshAlgorithmParams(CryptoDataParamsEnumString, GradeableComplex):
     @property
     @abc.abstractmethod
@@ -52,7 +52,7 @@ class SshAlgorithmParams(CryptoDataParamsEnumString, GradeableComplex):
         attr.validate(self)
 
 
-@attr.s
+@attr.s(frozen=True)
 class EncryptionAlgorithmParams(SshAlgorithmParams):
     cipher = attr.ib(
         converter=convert_enum(BlockCipher),
@@ -68,7 +68,7 @@ class EncryptionAlgorithmParams(SshAlgorithmParams):
         return ('cipher', 'mode')
 
 
-@attr.s
+@attr.s(frozen=True)
 class MacAlgorithmParams(SshAlgorithmParams):
     truncated_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
     mac = attr.ib(
@@ -92,7 +92,7 @@ class MacAlgorithmParams(SshAlgorithmParams):
         return ('mac', 'mode')
 
 
-@attr.s
+@attr.s(frozen=True)
 class KexAlgorithmParams(SshAlgorithmParams):
     kex = attr.ib(
         converter=convert_enum(KeyExchange),
@@ -143,7 +143,7 @@ class SshHostKeyType(enum.Enum):
     X509_CERTIFICATE_CHAIN = 'X.509 certificate chain'
 
 
-@attr.s
+@attr.s(frozen=True)
 class HostKeyAlgorithmParams(SshAlgorithmParams):
     key_type = attr.ib(
         converter=convert_enum(SshHostKeyType),
@@ -159,14 +159,14 @@ class HostKeyAlgorithmParams(SshAlgorithmParams):
         return ('signature',)
 
 
-@attr.s
+@attr.s(frozen=True)
 class CompressionAlgorithmParams(CryptoDataParamsEnumString, GradeableVulnerabilities):
     @classmethod
     def get_gradeable_name(cls):
         return 'compression'
 
 
-@attr.s
+@attr.s(frozen=True)
 class EllipticCurveIdentifierParams(CryptoDataParamsEnumString):
     named_group = attr.ib(
         converter=convert_enum(NamedGroup),

@@ -48,7 +48,7 @@ class DHParameterNumbers(object):
         return self.p == other.p and self.g == other.g and (self.q is None or self.q == other.q)
 
 
-@attr.s(eq=False)
+@attr.s(eq=False, frozen=True)
 class DHParamWellKnownParams(CryptoDataParamsBase, GradeableVulnerabilities):
     parameter_numbers = attr.ib(
         converter=convert_dict_to_object(DHParameterNumbers),

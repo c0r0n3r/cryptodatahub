@@ -187,7 +187,7 @@ TlsCertificateCompressionAlgorithm = CryptoDataEnumCodedBase(
 )
 
 
-@attr.s
+@attr.s(frozen=True)
 class CipherParamsBase(CryptoDataParamsEnumNumeric, GradeableComplex):  # pylint: disable=too-many-instance-attributes
     iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
     iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
@@ -271,7 +271,7 @@ class CipherParamsBase(CryptoDataParamsEnumNumeric, GradeableComplex):  # pylint
         return result
 
 
-@attr.s
+@attr.s(frozen=True)
 class CipherSuiteParams(CipherParamsBase):
     @classmethod
     def get_code_size(cls):
@@ -281,7 +281,7 @@ class CipherSuiteParams(CipherParamsBase):
 TlsCipherSuite = CryptoDataEnumCodedBase('TlsCipherSuite', CryptoDataEnumCodedBase.get_json_records(CipherSuiteParams))
 
 
-@attr.s
+@attr.s(frozen=True)
 class CipherKindParams(CipherParamsBase):
     @classmethod
     def get_code_size(cls):

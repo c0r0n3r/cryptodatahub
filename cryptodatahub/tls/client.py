@@ -32,7 +32,7 @@ from cryptodatahub.tls.algorithm import (
 from cryptodatahub.tls.version import TlsVersion
 
 
-@attr.s
+@attr.s(frozen=True)
 class ClientTokenBindingParams(CryptoDataParamsBase):
     parameters = attr.ib(
         converter=convert_iterable(convert_enum(TlsTokenBindingParamater)),
@@ -41,7 +41,7 @@ class ClientTokenBindingParams(CryptoDataParamsBase):
     protocol_version = attr.ib(validator=attr.validators.instance_of(six.string_types))
 
 
-@attr.s
+@attr.s(frozen=True)
 class ClientGreaseParams(CryptoDataParamsBase):
     cipher_suites = attr.ib(default=False, validator=attr.validators.instance_of(bool))
     extension_types = attr.ib(default=False, validator=attr.validators.instance_of(bool))
@@ -76,7 +76,7 @@ class ClientVersionedParams(ClientVersionedParamsBase):
     )
 
 
-@attr.s
+@attr.s(frozen=True)
 class ClientExtensionParams(CryptoDataParamsBase):  # pylint: disable=too-many-instance-attributes
     application_layer_protocol_negotiation = attr.ib(
         default=None,
@@ -163,7 +163,7 @@ class ClientExtensionParams(CryptoDataParamsBase):  # pylint: disable=too-many-i
     )
 
 
-@attr.s
+@attr.s(frozen=True)
 class ClientCapabilities(CryptoDataParamsBase):
     cipher_suites = attr.ib(
         converter=convert_iterable(convert_enum(TlsCipherSuite)),
@@ -200,7 +200,7 @@ class ClientCapabilities(CryptoDataParamsBase):
         return capabilities_dict
 
 
-@attr.s
+@attr.s(frozen=True)
 class ClientParams(CryptoDataParamsBase):  # pylint: disable=too-many-instance-attributes
     meta = attr.ib(
         converter=convert_dict_to_object(ClientVersionedParams),

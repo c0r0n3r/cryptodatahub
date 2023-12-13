@@ -37,7 +37,7 @@ class _PublicKeySizeGradeable(GradeableVulnerabilities):
         return 'public key size'
 
 
-@attr.s
+@attr.s(frozen=True)
 class PublicKeySize(GradeableComplex):
     _FINITE_FIELD_TYPES = [Authentication.RSA, Authentication.DSS, KeyExchange.ADH, KeyExchange.DH, KeyExchange.DHE]
     _ELLIPTIC_CURVE_TYPES = [Authentication.ECDSA, Authentication.EDDSA, KeyExchange.ECDH, KeyExchange.ECDHE]
@@ -110,12 +110,12 @@ def convert_public_key_size(key_exchange):
     return _PublicKeySizeConverter(key_exchange)
 
 
-@attr.s
+@attr.s(frozen=True)
 class PublicKeyParamBase(object):
     pass
 
 
-@attr.s
+@attr.s(frozen=True)
 class PublicKeyParamsDsa(PublicKeyParamBase):
     prime = attr.ib(validator=attr.validators.instance_of(six.integer_types))
     generator = attr.ib(validator=attr.validators.instance_of(six.integer_types))
@@ -123,7 +123,7 @@ class PublicKeyParamsDsa(PublicKeyParamBase):
     public_key_value = attr.ib(validator=attr.validators.instance_of(six.integer_types))
 
 
-@attr.s
+@attr.s(frozen=True)
 class PublicKeyParamsEcdsa(PublicKeyParamBase):
     named_group = attr.ib(validator=attr.validators.instance_of(NamedGroup))
     point_x = attr.ib(validator=attr.validators.instance_of(six.integer_types))
@@ -143,19 +143,19 @@ class PublicKeyParamsEcdsa(PublicKeyParamBase):
         return bytes(asn1crypto.keys.ECPointBitString.from_coords(self.point_x, self.point_y))
 
 
-@attr.s
+@attr.s(frozen=True)
 class PublicKeyParamsEddsa(PublicKeyParamBase):
     curve_type = attr.ib(validator=attr.validators.instance_of(NamedGroup))
     key_data = attr.ib(validator=attr.validators.instance_of((bytes, bytearray)))
 
 
-@attr.s
+@attr.s(frozen=True)
 class PublicKeyParamsRsa(PublicKeyParamBase):
     modulus = attr.ib(validator=attr.validators.instance_of(six.integer_types))
     public_exponent = attr.ib(validator=attr.validators.instance_of(six.integer_types))
 
 
-@attr.s(eq=False)
+@attr.s(eq=False, frozen=True)
 class PublicKey(object):
     _public_key = attr.ib(validator=attr.validators.instance_of(asn1crypto.keys.PublicKeyInfo))
 
@@ -363,7 +363,7 @@ class PublicKeySigned(PublicKey):
         raise NotImplementedError()
 
 
-@attr.s(eq=False, init=False)
+@attr.s(eq=False, init=False, frozen=True)
 class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-methods
     _EV_OIDS_BY_CA = {
         'A-Trust': ('1.2.40.0.17.1.22', ),
@@ -424,7 +424,7 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
     def __init__(self, certificate):
         super(PublicKeySigned, self).__init__(certificate.public_key)
 
-        self._certificate = certificate
+        object.__setattr__(self, '_certificate', certificate)
 
     @classmethod
     def _get_type_name(cls):

@@ -115,7 +115,7 @@ class MACParams(CryptoDataParamsOIDOptional, GradeableVulnerabilities):
 MAC = CryptoDataEnumOIDBase('MAC', CryptoDataEnumOIDBase.get_json_records(MACParams))
 
 
-@attr.s
+@attr.s(frozen=True)
 class MACModeParams(CryptoDataParamsEnumString, GradeableVulnerabilities):
     name = attr.ib(validator=attr.validators.instance_of(six.string_types))
 

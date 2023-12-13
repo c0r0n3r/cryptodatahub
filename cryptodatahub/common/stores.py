@@ -41,7 +41,7 @@ CertificateTransparencyLogStateType = enum.Enum(
 )
 
 
-@attr.s
+@attr.s(frozen=True)
 class CertificateTransparencyLogState(CryptoDataParamsBase):
     state_type = attr.ib(
         converter=convert_enum(CertificateTransparencyLogStateType),
@@ -53,7 +53,7 @@ class CertificateTransparencyLogState(CryptoDataParamsBase):
     )
 
 
-@attr.s
+@attr.s(frozen=True)
 class CertificateTransparencyLogTemporalInterval(CryptoDataParamsBase):
     start_inclusive = attr.ib(
         converter=convert_datetime(),
@@ -65,7 +65,7 @@ class CertificateTransparencyLogTemporalInterval(CryptoDataParamsBase):
     )
 
 
-@attr.s
+@attr.s(frozen=True)
 class CertificateTransparencyLogParamsBase(CryptoDataParamsBase):
     log_id = attr.ib(
         converter=convert_base64_data(),
@@ -214,7 +214,7 @@ def convert_root_certificate_params():
     return _RootCertificateParamCertificateConverter()
 
 
-@attr.s
+@attr.s(frozen=True)
 class RootCertificateTrustStoreConstraint(CryptoDataParamsBase):
     owner = attr.ib(
         converter=convert_enum(Entity),
@@ -227,7 +227,7 @@ class RootCertificateTrustStoreConstraint(CryptoDataParamsBase):
     )
 
 
-@attr.s
+@attr.s(frozen=True)
 class RootCertificateParams(CryptoDataParamsFetchedBase):
     certificate = attr.ib(
         converter=convert_root_certificate_params(),
