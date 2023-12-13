@@ -3,6 +3,24 @@ Changelog
 =========
 
 -------------------
+0.12.1 - 2023-12-13
+-------------------
+
+Improvements
+============
+
+-  SSH
+
+   -  add missing compression algorithms (#16)
+   -  add missing encryption algorithms (#16)
+   -  add missing host key algorithms (#16)
+   -  add missing KEX algorithms (#16)
+
+-  TLS
+
+   -  add grade for SSL cipher kinds (#18)
+
+-------------------
 0.11.2 - 2023-11-13
 -------------------
 
