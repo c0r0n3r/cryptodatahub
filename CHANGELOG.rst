@@ -23,10 +23,72 @@ Improvements
 
 -  SSH
 
-   -  add missing compression algorithms (#16)
-   -  add missing encryption algorithms (#16)
    -  add missing host key algorithms (#16)
+
+      | ``ecdsa-sha2-curve25519``, ``ecdsa-sha2-nistb233``, ``ecdsa-sha2-nistb409``,
+      | ``ecdsa-sha2-nistk163``, ``ecdsa-sha2-nistk233``, ``ecdsa-sha2-nistk283``,
+      | ``ecdsa-sha2-nistk409``, ``ecdsa-sha2-nistp192``, ``ecdsa-sha2-nistp224``,
+      | ``ecdsa-sha2-nistt571``, ``ssh-dsa``, ``ssh-gost2001``, ``ssh-gost2012-256``,
+      | ``ssh-gost2012-512``, ``ssh-rsa-sha2-256``,
+      | ``ssh-rsa-sha2-256@attachmate.com``, ``ssh-rsa-sha2-512``,
+      | ``ssh-xmss-cert-v01@openssh.com``, ``ssh-xmss@openssh.com``,
+      | ``webauthn-sk-ecdsa-sha2-nistp256@openssh.com``,
+      | ``x509v3-ecdsa-sha2-curve25519``, ``x509v3-ecdsa-sha2-nistb233``,
+      | ``x509v3-ecdsa-sha2-nistb409``, ``x509v3-ecdsa-sha2-nistk163``,
+      | ``x509v3-ecdsa-sha2-nistk233``, ``x509v3-ecdsa-sha2-nistk283``,
+      | ``x509v3-ecdsa-sha2-nistk409``, ``x509v3-ecdsa-sha2-nistp192``,
+      | ``x509v3-ecdsa-sha2-nistp224``, ``x509v3-ecdsa-sha2-nistt571``
+
    -  add missing KEX algorithms (#16)
+
+      | ``curve25519-sha256``, ``curve448-sha512``, ``curve448-sha512@libssh.org``,
+      | ``diffie-hellman-group-exchange-sha256@ssh.com``,
+      | ``ecdh-sha2-1.2.840.10045.3.1.1``, ``ecdh-sha2-1.2.840.10045.3.1.7``,
+      | ``ecdh-sha2-1.3.132.0.1``, ``ecdh-sha2-1.3.132.0.16``,
+      | ``ecdh-sha2-1.3.132.0.26``, ``ecdh-sha2-1.3.132.0.27``,
+      | ``ecdh-sha2-1.3.132.0.33``, ``ecdh-sha2-1.3.132.0.34``,
+      | ``ecdh-sha2-1.3.132.0.35``, ``ecdh-sha2-1.3.132.0.36``,
+      | ``ecdh-sha2-1.3.132.0.37``, ``ecdh-sha2-1.3.132.0.38``,
+      | ``ecdh-sha2-4MHB+NBt3AlaSRQ7MnB4cg==``,
+      | ``ecdh-sha2-5pPrSUQtIaTjUSt5VZNBjg==``,
+      | ``ecdh-sha2-9UzNcgwTlEnSCECZa7V1mw==``,
+      | ``ecdh-sha2-D3FefCjYoJ/kfXgAyLddYA==``,
+      | ``ecdh-sha2-h/SsxnLCtRBh7I9ATyeB3A==``,
+      | ``ecdh-sha2-m/FtSAmrV4j/Wy6RVUaK7A==``,
+      | ``ecdh-sha2-mNVwCXAoS1HGmHpLvBC94w==``,
+      | ``ecdh-sha2-qCbG5Cn/jjsZ7nBeR7EnOA==``,
+      | ``ecdh-sha2-qcFQaMAMGhTziMT0z+Tuzw==``, ``ecdh-sha2-secp256k1``,
+      | ``ecdh-sha2-VqBg4QRPjxx1EXZdV0GdWQ==``,
+      | ``ecdh-sha2-wiRIU8TKjMZ418sMqlqtvQ==``,
+      | ``ecdh-sha2-zD/b3hu/71952ArpUG4OjQ==``,
+      | ``gss-curve25519-sha256-*``, ``gss-curve448-sha512-*``, ``gss-gex-sha1-*``,
+      | ``gss-gex-sha256-*``, ``gss-group14-sha1-*``, ``gss-group14-sha256-*``,
+      | ``gss-group15-sha512-*``, ``gss-group16-sha512-*``, ``gss-group17-sha512-*``,
+      | ``gss-group18-sha512-*``, ``gss-group1-sha1-*``, ``gss-nistp256-sha256-*``,
+      | ``gss-nistp384-sha256-*``, ``gss-nistp521-sha512-*``,
+      | ``sm2kep-sha2-nistp256``
+
+   -  add missing encryption algorithms (#16)
+
+      | ``aes128-cfb``, ``aes192-gcm``, ``aes192-gcm@openssh.com``, ``aes256-cfb``,
+      | ``aes256-gcm``, ``blowfish``, ``camellia128-cbc``,
+      | ``camellia128-cbc@openssh.org``, ``camellia128-ctr``,
+      | ``camellia128-ctr@openssh.org``, ``camellia192-cbc``,
+      | ``camellia192-cbc@openssh.org``, ``camellia192-ctr``,
+      | ``camellia192-ctr@openssh.org``, ``camellia256-cbc``,
+      | ``camellia256-cbc@openssh.org``, ``camellia256-ctr``,
+      | ``camellia256-ctr@openssh.org``, ``cast128-12-cbc``, ``cast128-12-cfb``,
+      | ``cast128-12-ecb``, ``cast128-12-ofb``, ``chacha20-poly1305``, ``des``,
+      | ``grasshopper-ctr128``, ``idea-cbc``, ``idea-ecb``, ``idea-ofb``,
+      | ``kuznechik-ofb``, ``rijndael128``, ``seed-ctr@ssh.com``, ``serpent128-gcm``,
+      | ``serpent128-gcm@libassh.org``, ``serpent256-gcm``,
+      | ``serpent256-gcm@libassh.org``, ``sm4``, ``sm4-cbc``, ``sm4-cbc@huawei``,
+      | ``sm4-ctr``, ``twofish128-gcm``, ``twofish128-gcm@libassh.org``,
+      | ``twofish256-gcm``, ``twofish256-gcm@libassh.org``
+
+   -  add missing compression algorithms (#16)
+
+      | ``lz4@sensorsdata.cn``
 
 -  TLS
 
@@ -182,6 +244,117 @@ Features
 
    -  convert Python classes of CryptoParser to JSON (#1)
    -  add Python warepper to JSON data (#1)
+
+-  SSH
+
+   -  add missing host key algorithms (#16)
+
+      | ``dsa2048-sha224@libassh.org``, ``dsa2048-sha256@libassh.org``,
+      | ``dsa3072-sha256@libassh.org``,
+      | ``ecdsa-sha2-1.3.132.0.10-cert-v01@openssh.com``,
+      | ``ecdsa-sha2-1.3.132.0.10``, ``ecdsa-sha2-nistp256-cert-v01@openssh.com``,
+      | ``ecdsa-sha2-nistp256``, ``ecdsa-sha2-nistp384-cert-v01@openssh.com``,
+      | ``ecdsa-sha2-nistp384``, ``ecdsa-sha2-nistp521-cert-v01@openssh.com``,
+      | ``ecdsa-sha2-nistp521``, ``eddsa-e382-shake256@libassh.org``,
+      | ``eddsa-e521-shake256@libassh.org``, ``pgp-sign-dss``, ``pgp-sign-rsa``,
+      | ``rsa-sha2-256-cert-v01@openssh.com``, ``rsa-sha2-256``,
+      | ``rsa-sha2-512-cert-v01@openssh.com``, ``rsa-sha2-512``,
+      | ``sk-ecdsa-sha2-nistp256-cert-v01@openssh.com``,
+      | ``sk-ecdsa-sha2-nistp256@openssh.com``,
+      | ``sk-ssh-ed25519-cert-v01@openssh.com``,
+      | ``sk-ssh-ed25519@openssh.com``, ``spki-sign-dss``, ``spki-sign-rsa``,
+      | ``ssh-dss-cert-v00@openssh.com``, ``ssh-dss-cert-v01@openssh.com``,
+      | ``ssh-dss-sha224@ssh.com``, ``ssh-dss-sha256@ssh.com``,
+      | ``ssh-dss-sha384@ssh.com``, ``ssh-dss-sha512@ssh.com``,
+      | ``ssh-dss``, ``ssh-ed25519-cert-v01@openssh.com``, ``ssh-ed25519``,
+      | ``ssh-ed448-cert-v01@openssh.com``, ``ssh-ed448``,
+      | ``ssh-rsa-cert-v00@openssh.com``, ``ssh-rsa-cert-v01@openssh.com``,
+      | ``ssh-rsa-sha2-256-cert-v01@openssh.com``,
+      | ``ssh-rsa-sha2-512-cert-v01@openssh.com``,
+      | ``ssh-rsa-sha224@ssh.com``, ``ssh-rsa-sha256@ssh.com``,
+      | ``ssh-rsa-sha384@ssh.com``, ``ssh-rsa-sha512@ssh.com``,
+      | ``ssh-rsa``, ``x509v3-ecdsa-sha2-1.3.132.0.10``,
+      | ``x509v3-ecdsa-sha2-nistp256``, ``x509v3-ecdsa-sha2-nistp384``,
+      | ``x509v3-ecdsa-sha2-nistp521``, ``x509v3-rsa2048-sha256``,
+      | ``x509v3-sign-dss-sha1``, ``x509v3-sign-dss-sha224@ssh.com``,
+      | ``x509v3-sign-dss-sha256@ssh.com``, ``x509v3-sign-dss-sha384@ssh.com``,
+      | ``x509v3-sign-dss-sha512@ssh.com``, ``x509v3-sign-dss``,
+      | ``x509v3-sign-rsa-sha1``, ``x509v3-sign-rsa-sha224@ssh.com``,
+      | ``x509v3-sign-rsa-sha256@ssh.com``, ``x509v3-sign-rsa-sha384@ssh.com``,
+      | ``x509v3-sign-rsa-sha512@ssh.com``, ``x509v3-sign-rsa``, ``x509v3-ssh-dss``,
+      | ``x509v3-ssh-ed25519``, ``x509v3-ssh-ed448``, ``x509v3-ssh-rsa``
+
+   -  add missing KEX algorithms (#16)
+
+      | ``diffie-hellman-group1-sha1``, ``diffie-hellman-group1-sha256``,
+      | ``diffie-hellman-group1-sha1-win7@microsoft.com``,
+      | ``diffie-hellman-group14-sha1``,
+      | ``diffie-hellman-group14-sha1-win7@microsoft.com``,
+      | ``diffie-hellman-group14-sha224@ssh.com``,
+      | ``diffie-hellman-group14-sha256``,
+      | ``diffie-hellman-group14-sha256@ssh.com``,
+      | ``diffie-hellman-group15-sha256``,
+      | ``diffie-hellman-group15-sha256@ssh.com``,
+      | ``diffie-hellman-group15-sha384@ssh.com``,
+      | ``diffie-hellman-group15-sha512``,
+      | ``diffie-hellman-group16-sha256``,
+      | ``diffie-hellman-group16-sha384@ssh.com``,
+      | ``diffie-hellman-group16-sha512``,
+      | ``diffie-hellman-group16-sha512@ssh.com``,
+      | ``diffie-hellman-group17-sha512``,
+      | ``diffie-hellman-group18-sha512``,
+      | ``diffie-hellman-group18-sha512@ssh.com``,
+      | ``diffie-hellman-group-exchange-sha1``,
+      | ``diffie-hellman-group-exchange-sha256``,
+      | ``diffie-hellman-group-exchange-sha256-win7@microsoft.com``,
+      | ``diffie-hellman-group-exchange-sha512``,
+      | ``diffie-hellman-group-exchange-sha224@ssh.com``,
+      | ``diffie-hellman-group-exchange-sha384@ssh.com``,
+      | ``diffie-hellman-group-exchange-sha512@ssh.com``,
+      | ``ecdh-sha2-1.3.132.0.10``, ``ecdh-sha2-brainpoolp256r1@genua.de``,
+      | ``ecdh-sha2-brainpoolp384r1@genua.de``,
+      | ``ecdh-sha2-brainpoolp521r1@genua.de``,
+      | ``ecdh-sha2-curve25519``, ``ecdh-sha2-nistb233``, ``ecdh-sha2-nistb409``,
+      | ``ecdh-sha2-nistk163``, ``ecdh-sha2-nistk233``, ``ecdh-sha2-nistk283``,
+      | ``ecdh-sha2-nistk409``, ``ecdh-sha2-nistp192``, ``ecdh-sha2-nistp224``,
+      | ``ecdh-sha2-nistp256``, ``ecdh-sha2-nistp256-win7@microsoft.com``,
+      | ``ecdh-sha2-nistp384``, ``ecdh-sha2-nistp384-win7@microsoft.com``,
+      | ``ecdh-sha2-nistp521``, ``ecdh-sha2-nistp521-win7@microsoft.com``,
+      | ``ecdh-sha2-nistt571``, ``ecmqv-sha2``, ``curve25519-sha256``,
+      | ``curve25519-sha256@libssh.org``, ``curve448-sha512``,
+      | ``kexguess2@matt.ucc.asn.au``, ``m383-sha384@libassh.org``,
+      | ``m511-sha512@libassh.org``, ``rsa1024-sha1``, ``rsa2048-sha256``,
+      | ``sntrup4591761x25519-sha512@tinyssh.org``,
+      | ``sntrup761x25519-sha512@openssh.com``
+
+   -  add missing encryption algorithms (#1)
+
+      | ``3des-cbc``, ``3des-cfb``, ``3des-ctr``, ``3des-ecb``, ``3des-ofb``,
+      | ``acss@openssh.org``, ``aes128-cbc``, ``aes128-ctr``,
+      | ``aes128-gcm@openssh.com``, ``aes128-gcm``, ``aes192-cbc``, ``aes192-ctr``,
+      | ``aes256-cbc``, ``aes256-ctr``, ``aes256-gcm@openssh.com``, ``arcfour128``,
+      | ``arcfour256``, ``arcfour``, ``blowfish-cbc``, ``blowfish-cfb``,
+      | ``blowfish-ctr``, ``blowfish-ecb``, ``blowfish-ofb``,
+      | ``cast128-12-cbc@ssh.com``, ``cast128-12-cfb@ssh.com``,
+      | ``cast128-12-ecb@ssh.com``, ``cast128-12-ofb@ssh.com``,
+      | ``cast128-cbc``, ``cast128-cfb``, ``cast128-ctr``, ``cast128-ecb``,
+      | ``cast128-ofb``, ``cast256-cbc``, ``chacha20-poly1305@openssh.com``,
+      | ``crypticore128@ssh.com``, ``des-cbc@ssh.com``, ``des-cbc``, ``des-cfb``,
+      | ``des-ctr``, ``des-ecb``, ``des-ofb``, ``gost89-cnt``, ``gost89``,
+      | ``grasshopper-cbc``, ``grasshopper-ctr``, ``idea-cfb``, ``idea-ctr``,
+      | ``none``, ``rc2-cbc@ssh.com``, ``rc2-cbc``, ``rc2-ctr``,
+      | ``rijndael-cbc@lysator.liu.se``, ``rijndael-cbc@ssh.com``,
+      | ``rijndael128-cbc``, ``rijndael192-cbc``, ``rijndael256-cbc``,
+      | ``seed-cbc@ssh.com``, ``serpent128-cbc``, ``serpent128-ctr``,
+      | ``serpent192-cbc``, ``serpent192-ctr``, ``serpent256-cbc``,
+      | ``serpent256-ctr``, ``twofish-cbc``, ``twofish-cfb``, ``twofish-ctr``,
+      | ``twofish-ecb``, ``twofish-ofb``, ``twofish128-cbc``, ``twofish128-ctr``,
+      | ``twofish192-cbc``, ``twofish192-ctr``, ``twofish256-cbc``,
+      | ``twofish256-ctr``
+
+   -  add missing compression algorithms (#1)
+
+      | ``none``, ``zlib@openssh.com``, ``zlib``
 
 -  TLS
 
