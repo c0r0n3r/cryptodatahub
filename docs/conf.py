@@ -3,9 +3,16 @@
 # pylint: disable=invalid-name
 
 import datetime
+import os
+import sys
 
-__author__ = 'Szilárd Pfeiffer'
-__title__ = 'CryptoDataHub'
+sys.path.insert(0, os.path.abspath('..'))
+from cryptodatahub.__setup__ import (  # noqa: E402, pylint: disable=wrong-import-position
+    __author__,
+    __description__,
+    __title__,
+    __version__,
+)
 
 
 extensions = []
@@ -15,6 +22,7 @@ master_doc = 'index'
 
 project = __title__
 copyright = f'{datetime.datetime.now().year}, {__author__}'  # pylint: disable=redefined-builtin
+version = __version__
 
 exclude_patterns = ['_build']
 
@@ -29,6 +37,6 @@ html_sidebars = {
     ]
 }
 html_theme_options = {
-    'description': 'Cryptography-related data repository with Python wrapper',
+    'description': __description__,
     'fixed_sidebar': True,
 }
