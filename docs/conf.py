@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# pylint: disable=invalid-name
+
 import datetime
 
 __author__ = 'Szilárd Pfeiffer'
@@ -10,7 +14,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 project = __title__
-copyright = f'{datetime.datetime.now().year}, {__author__}'
+copyright = f'{datetime.datetime.now().year}, {__author__}'  # pylint: disable=redefined-builtin
 
 exclude_patterns = ['_build']
 
