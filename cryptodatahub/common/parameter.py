@@ -77,4 +77,12 @@ class DHParamWellKnownParams(CryptoDataParamsBase, GradeableVulnerabilities):
         return '{}-bit {} {} DH parameter'.format(self.key_size, self.source.value.name, self.name)
 
 
-DHParamWellKnown = CryptoDataEnumBase('DHParamWellKnown', CryptoDataEnumBase.get_json_records(DHParamWellKnownParams))
+class DHParamWellKnownBase(CryptoDataEnumBase):
+    @classmethod
+    def from_parameter_numbers(cls, parameter_numbers):
+        return cls._from_attr('parameter_numbers', parameter_numbers)
+
+
+DHParamWellKnown = DHParamWellKnownBase(
+    'DHParamWellKnown', DHParamWellKnownBase.get_json_records(DHParamWellKnownParams)
+)

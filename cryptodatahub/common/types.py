@@ -502,7 +502,7 @@ class CryptoDataEnumBase(enum.Enum):
     @classmethod
     def _from_attr(cls, attr_name, value):
         for item in cls:
-            if getattr(item.value, attr_name) == value:
+            if value == getattr(item.value, attr_name):
                 return item
 
         raise InvalidValue(value, cls, attr_name)
