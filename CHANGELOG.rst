@@ -3,6 +3,18 @@ Changelog
 =========
 
 -------------------
+0.12.2 - 2024-01-11
+-------------------
+
+Improvements
+============
+
+-  Generic
+
+   -  add metadata to documentation
+   -  add getter for well-know DH parameter by parameter numbers
+
+-------------------
 0.12.1 - 2023-12-13
 -------------------
 
