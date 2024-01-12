@@ -231,6 +231,18 @@ Features
 -  Generic
 
    -  add well-know Diffie-Hellman parameters (#3)
+
+      | *768-bit MODP Group/Oakley Group 1*, *1024-bit MODP Group/Oakley Group 2*, *1536-bit MODP Group/Oakley Group 5*
+        *2048-bit MODP Group/Oakley Group 14*, *3072-bit MODP Group/Oakley Group 15*
+        *4096-bit MODP Group/Oakley Group 16*, *6144-bit MODP Group/Oakley Group 17*,
+        *8192-bit MODP Group/Oakley Group 18*, *1024-bit MODP Group with 160-bit Prime Order Subgroup*,
+        *2048-bit MODP Group with 224-bit Prime Order Subgroup*,
+        *2048-bit MODP Group with 256-bit Prime Order Subgroup*, *2048-bit Finite Field Diffie-Hellman group*,
+        *3072-bit Finite Field Diffie-Hellman group*, *4096-bit Finite Field Diffie-Hellman group*,
+        *6144-bit Finite Field Diffie-Hellman group*, *8192-bit Finite Field Diffie-Hellman group*,
+        Apache builtins (2.0.18, 2.1.5), HAProxy builtins (1.6), NGINX builtins (0.7.2), Postfix builtins (2.2, 3.1,
+        3.6, 3.7), ProFTPD builtins (1.2.8, 1.3.2, 1.3.5, 1.3.7, 1.3.8), SOCAT builtins (1.7.3),
+
    -  add certificate transparency (CT) logs (#5)
 
       | *Akamai CT Log*, *Alpha CT Log*, *Certly.IO log*, *Cloudflare 'Nimbus2017' Log*, *Cloudflare 'Nimbus2018' Log*,
