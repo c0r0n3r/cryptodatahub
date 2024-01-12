@@ -233,6 +233,37 @@ Features
    -  add well-know Diffie-Hellman parameters (#3)
    -  add certificate transparency (CT) logs (#5)
 
+      | *Akamai CT Log*, *Alpha CT Log*, *Certly.IO log*, *Cloudflare 'Nimbus2017' Log*, *Cloudflare 'Nimbus2018' Log*,
+        *Cloudflare 'Nimbus2019' Log*, *Cloudflare 'Nimbus2020' Log*, *Cloudflare 'Nimbus2021' Log*,
+        *Cloudflare 'Nimbus2022' Log*, *Cloudflare 'Nimbus2023' Log*, *Cloudflare 'Nimbus2024' Log*,
+        *CNNIC CT log*, *DigiCert Log Server*, *DigiCert Log Server 2*, *DigiCert Nessie2018 Log*,
+        *DigiCert Nessie2019 Log*, *DigiCert Nessie2020 Log*, *DigiCert Nessie2021 Log*, *DigiCert Nessie2022 Log*,
+        *DigiCert Nessie2023 Log*, *DigiCert Nessie2024 Log*, *DigiCert Nessie2025 Log*, *DigiCert Yeti2018 Log*,
+        *DigiCert Yeti2019 Log*, *DigiCert Yeti2020 Log*, *DigiCert Yeti2021 Log*, *DigiCert Yeti2022-2 Log*,
+        *DigiCert Yeti2022 Log*, *DigiCert Yeti2023 Log*, *DigiCert Yeti2024 Log*, *DigiCert Yeti2025 Log*,
+        *GDCA CT log #1*, *GDCA CT log #2*, *GDCA Log 1*, *GDCA Log 2*, *Google 'Argon2017' log*,
+        *Google 'Argon2018' log*, *Google 'Argon2019' log*, *Google 'Argon2020' log*, *Google 'Argon2021' log*,
+        *Google 'Argon2022' log*, *Google 'Argon2023' log*, *Google 'Argon2024' log*, *Google 'Aviator' log*,
+        *Google 'Crucible' log*, *Google 'Daedalus' log*, *Google 'Icarus' log*, *Google 'Pilot' log*,
+        *Google 'Rocketeer' log*, *Google 'Skydiver' log*, *Google 'Solera2018' log*, *Google 'Solera2019' log*,
+        *Google 'Solera2020' log*, *Google 'Solera2021' log*, *Google 'Solera2022' log*, *Google 'Solera2023' log*,
+        *Google 'Solera2024' log*, *Google 'Submariner' log*, *Google 'Testtube' log*, *Google 'Xenon2018' log*,
+        *Google 'Xenon2019' log*, *Google 'Xenon2020' log*, *Google 'Xenon2021' log*, *Google 'Xenon2022' log*,
+        *Google 'Xenon2023' log*, *Google 'Xenon2024' log*, *Izenpe 'Argi' log*, *Izenpe log*,
+        *Let's Encrypt 'Clicky' log*, *Let's Encrypt 'Oak2019' log*, *Let's Encrypt 'Oak2020' log*,
+        *Let's Encrypt 'Oak2021' log*, *Let's Encrypt 'Oak2022' log*, *Let's Encrypt 'Oak2023' log*,
+        *Let's Encrypt 'Oak2024H1' log*, *Let's Encrypt 'Oak2024H2' log*, *Let's Encrypt 'Sapling 2022h2' log*,
+        *Let's Encrypt 'Sapling 2023h1' log*, *Let's Encrypt 'Testflume2019' log*, *Let's Encrypt 'Testflume2020' log*,
+        *Let's Encrypt 'Testflume2021' log*, *Let's Encrypt 'Testflume2022' log*, *Let's Encrypt 'Testflume2023' log*,
+        *Nordu 'flimsy' log*, *Nordu 'plausible' log*, *PuChuangSiDa CT log*, *Qihoo 360 2020*, *Qihoo 360 2021*,
+        *Qihoo 360 2022*, *Qihoo 360 2023*, *Qihoo 360 v1 2020*, *Qihoo 360 v1 2021*, *Qihoo 360 v1 2022*,
+        *Qihoo 360 v1 2023*, *Sectigo 'Dodo' CT log*, *Sectigo 'Mammoth' CT log*, *Sectigo 'Sabre' CT log*,
+        *SHECA CT log 1*, *SHECA CT log 2*, *StartCom log*, *Symantec Deneb*, *Symantec log*, *Symantec 'Sirius' log*,
+        *Symantec 'Vega' log*, *Trust Asia CT2021*, *Trust Asia Log1*, *Trust Asia Log2020*, *Trust Asia Log2021*,
+        *Trust Asia Log2022*, *Trust Asia Log2023*, *Trust Asia Log2024*, *Trust Asia Log2024-2*,
+        *Up In The Air 'Behind the Sofa' log*, *Venafi Gen2 CT log*, *Venafi log*, *WoSign CT log #1*, *WoSign log*,
+        *WoSign log 2*,
+
 ------------------
 0.8.5 - 2023-04-02
 ------------------
