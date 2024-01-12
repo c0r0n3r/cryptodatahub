@@ -188,7 +188,14 @@ Features
 
    -  add `DNS resource record types <https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4>`__ (#8)
    -  add `DNSSEC algorithm types <https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml#dns-sec-alg-numbers-1>`__ (#8)
+
+      | *Delete DS*, *RSA/MD5*, *Diffie-Hellman*, *DSA/SHA1*, *RSA/SHA-1*, *DSA-NSEC3-SHA1*, *RSASHA1-NSEC3-SHA1*,
+        *RSA/SHA-256*, *RSA/SHA-512*, *GOST R 34.10-2001*, *ECDSA Curve P-256 with SHA-256*,
+        *ECDSA Curve P-384 with SHA-384*, *Ed25519*, *Ed448*
+
    -  add `DNSSEC digest types <https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml>`__ (#8)
+
+      | *SHA-1*, *SHA-256*, *GOST R 34.11-94*, *SHA-384*
 
 -  SSH
 
