@@ -123,6 +123,8 @@ Features
 
    -  add post-quantum safe hybrid curves (#14)
 
+      | *X25519Kyber512Draft00*, *X25519Kyber768Draft00*
+
 -  SSH
 
    -  distinguish host key algorithms use X.509 certificate from the one that use certificate chain (#12)
