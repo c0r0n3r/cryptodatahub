@@ -4701,7 +4701,7 @@
         "authentication": null,
         "bulk_cipher": "AES_128",
         "block_cipher_mode": "GCM",
-        "mac": "SHA2_256",
+        "mac": null,
         "authenticated_encryption": true,
         "initial_version": "TLS1_3_DRAFT_15"
     },
@@ -4714,7 +4714,7 @@
         "authentication": null,
         "bulk_cipher": "AES_256",
         "block_cipher_mode": "GCM",
-        "mac": "SHA2_384",
+        "mac": null,
         "authenticated_encryption": true,
         "initial_version": "TLS1_3_DRAFT_15"
     },
@@ -4727,7 +4727,7 @@
         "authentication": null,
         "bulk_cipher": "CHACHA20",
         "block_cipher_mode": null,
-        "mac": "POLY1305",
+        "mac": null,
         "authenticated_encryption": true,
         "initial_version": "TLS1_3_DRAFT_15"
     },
@@ -4740,7 +4740,7 @@
         "authentication": null,
         "bulk_cipher": "AES_128",
         "block_cipher_mode": "CCM",
-        "mac": "SHA2_256",
+        "mac": null,
         "authenticated_encryption": true,
         "initial_version": "TLS1_3_DRAFT_15"
     },
@@ -4753,7 +4753,7 @@
         "authentication": null,
         "bulk_cipher": "AES_128",
         "block_cipher_mode": "CCM_8",
-        "mac": "SHA2_256",
+        "mac": null,
         "authenticated_encryption": true,
         "initial_version": "TLS1_3_DRAFT_15"
     },
