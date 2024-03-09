@@ -1,4 +1,6 @@
-**CryptoDataHub** is a repository of cryptography-related data available under a free license.
+**CryptoDataHub** is a repository of cryptography-related data available under a free license. The main goal of the
+repository is to support cryptographic library tester and client/server cryptographic settings analyzer applications
+such as `CryptoLyzer <https://cryptolyzer.readthedocs.io/>`__ with reliable and freely available data.
 
 --------------
 Python Wrapper
