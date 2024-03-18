@@ -7,6 +7,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -90,6 +95,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -172,6 +182,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -255,6 +270,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -334,6 +354,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -415,6 +440,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -497,6 +527,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -577,6 +612,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -657,6 +697,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -760,6 +806,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -863,6 +915,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -966,6 +1024,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -1069,6 +1133,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -1172,6 +1242,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -1274,6 +1350,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -1381,6 +1463,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -1480,6 +1568,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -1577,6 +1671,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -1678,6 +1778,10 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -1777,6 +1881,9 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
                 "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
@@ -1852,6 +1959,9 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
                 "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
@@ -1927,6 +2037,9 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
                 "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
@@ -1999,10 +2112,95 @@
         "meta": {
             "client": "FIREFOX",
             "first_version": "26",
+            "last_version": "26",
+            "changes": []
+        },
+        "capabilities": {
+            "tls_versions": [
+                "TLS1"
+            ],
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_256_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+                "TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_RC4_128_SHA",
+                "TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_SEED_CBC_SHA",
+                "TLS_RSA_WITH_CAMELLIA_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_RC4_128_SHA",
+                "TLS_RSA_WITH_RC4_128_MD5",
+                "TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_FIPS_WITH_3DES_EDE_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": true,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "NEXT_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST"
+            ],
+            "extension_params": {
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "supported_groups": [
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1"
+                ]
+            }
+        }
+    },
+    "FIREFOX_27": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "27",
             "last_version": "32",
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
                 "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
@@ -2080,6 +2278,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2158,6 +2361,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2229,6 +2437,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2306,6 +2519,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2384,6 +2602,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2459,6 +2682,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2534,6 +2762,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2611,6 +2844,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2685,6 +2923,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2760,6 +3003,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2837,6 +3085,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2917,6 +3170,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -2996,6 +3254,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -3080,6 +3343,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -3161,6 +3429,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -3236,10 +3509,128 @@
         "meta": {
             "client": "FIREFOX",
             "first_version": "56",
+            "last_version": "72",
+            "changes": []
+        },
+        "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
+            "cipher_suites": [
+                "TLS_AES_128_GCM_SHA256",
+                "TLS_CHACHA20_POLY1305_SHA256",
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+                "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": false,
+                "extension_types": false,
+                "extensions": [
+                    "SIGNATURE_ALGORITHMS",
+                    "SUPPORTED_GROUPS",
+                    "SUPPORTED_VERSIONS"
+                ]
+            },
+            "extension_types": [
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "RENEGOTIATION_INFO",
+                "SUPPORTED_GROUPS",
+                "EC_POINT_FORMATS",
+                "SESSION_TICKET",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "STATUS_REQUEST",
+                "DELEGATED_CREDENTIALS",
+                "KEY_SHARE",
+                "SUPPORTED_VERSIONS",
+                "SIGNATURE_ALGORITHMS",
+                "PSK_KEY_EXCHANGE_MODES",
+                "RECORD_SIZE_LIMIT",
+                "PADDING"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "delegated_credentials": [
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "ECDSA_SHA1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "key_share": [
+                    "X25519",
+                    "SECP256R1"
+                ],
+                "psk_key_exchange_modes": [
+                    "PSK_DH_KE"
+                ],
+                "record_size_limit": 16385,
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "ECDSA_SHA384",
+                    "ECDSA_SHA512",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA256",
+                    "RSA_SHA384",
+                    "RSA_SHA512",
+                    "ECDSA_SHA1",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1",
+                    "SECP521R1",
+                    "FFDHE2048",
+                    "FFDHE3072"
+                ],
+                "supported_versions": [
+                    "TLS1_3",
+                    "TLS1_2"
+                ]
+            }
+        }
+    },
+    "FIREFOX_72": {
+        "meta": {
+            "client": "FIREFOX",
+            "first_version": "72",
             "last_version": "107",
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_CHACHA20_POLY1305_SHA256",
@@ -3348,6 +3739,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -3423,6 +3819,11 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2"
+            ],
             "cipher_suites": [
                 "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
                 "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
@@ -3503,6 +3904,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -3603,6 +4010,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -3702,6 +4115,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -3799,6 +4218,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
@@ -3900,6 +4325,12 @@
             "changes": []
         },
         "capabilities": {
+            "tls_versions": [
+                "TLS1",
+                "TLS1_1",
+                "TLS1_2",
+                "TLS1_3"
+            ],
             "cipher_suites": [
                 "TLS_AES_128_GCM_SHA256",
                 "TLS_AES_256_GCM_SHA384",
