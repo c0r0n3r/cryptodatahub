@@ -3340,6 +3340,81 @@
             }
         }
     },
+    "OPERA_51": {
+        "meta": {
+            "client": "OPERA",
+            "first_version": "51.0.2830.26",
+            "last_version": "56.0.3051.31",
+            "changes": []
+        },
+        "capabilities": {
+            "cipher_suites": [
+                "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_AES_128_GCM_SHA256",
+                "TLS_RSA_WITH_AES_256_GCM_SHA384",
+                "TLS_RSA_WITH_AES_128_CBC_SHA",
+                "TLS_RSA_WITH_AES_256_CBC_SHA",
+                "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+            ],
+            "compression_methods": [
+                "NULL"
+            ],
+            "fallback_scsv": false,
+            "empty_renegotiation_info_scsv": false,
+            "grease": {
+                "cipher_suites": true,
+                "extension_types": true,
+                "extensions": [
+                    "SUPPORTED_GROUPS"
+                ]
+            },
+            "extension_types": [
+                "RENEGOTIATION_INFO",
+                "SERVER_NAME",
+                "EXTENDED_MASTER_SECRET",
+                "SESSION_TICKET",
+                "SIGNATURE_ALGORITHMS",
+                "STATUS_REQUEST",
+                "SIGNED_CERTIFICATE_TIMESTAMP",
+                "APPLICATION_LAYER_PROTOCOL_NEGOTIATION",
+                "CHANNEL_ID",
+                "EC_POINT_FORMATS",
+                "SUPPORTED_GROUPS"
+            ],
+            "extension_params": {
+                "application_layer_protocol_negotiation": [
+                    "H2",
+                    "HTTP_1_1"
+                ],
+                "ec_point_formats": [
+                    "UNCOMPRESSED"
+                ],
+                "signature_algorithms": [
+                    "ECDSA_SHA256",
+                    "RSA_PSS_RSAE_SHA256",
+                    "RSA_SHA256",
+                    "ECDSA_SHA384",
+                    "RSA_PSS_RSAE_SHA384",
+                    "RSA_SHA384",
+                    "RSA_PSS_RSAE_SHA512",
+                    "RSA_SHA512",
+                    "RSA_SHA1"
+                ],
+                "supported_groups": [
+                    "X25519",
+                    "SECP256R1",
+                    "SECP384R1"
+                ]
+            }
+        }
+    },
     "OPERA_56": {
         "meta": {
             "client": "OPERA",
