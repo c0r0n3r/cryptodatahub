@@ -2,6 +2,17 @@
 Changelog
 =========
 
+------
+0.12.4
+------
+
+Features
+========
+
+-  TLS
+
+   -  add supported protocol version to clients (#23)
+
 -------------------
 0.12.3 - 2024-0-051
 -------------------

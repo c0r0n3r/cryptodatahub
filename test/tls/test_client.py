@@ -18,4 +18,4 @@ class TestTlsClient(TestClasses.TestJsonBase):
         )
 
     def test_str(self):
-        self.assertEqual(str(TlsClient.FIREFOX_56.value.meta), 'Mozilla Firefox (56 - 107)')
+        self.assertEqual(str(TlsClient.FIREFOX_56.value.meta), 'Mozilla Firefox (56 - 72)')
