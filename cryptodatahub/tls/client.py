@@ -164,7 +164,11 @@ class ClientExtensionParams(CryptoDataParamsBase):  # pylint: disable=too-many-i
 
 
 @attr.s(frozen=True)
-class ClientCapabilities(CryptoDataParamsBase):
+class ClientCapabilities(CryptoDataParamsBase):  # pylint: disable=too-many-instance-attributes
+    tls_versions = attr.ib(
+        converter=convert_iterable(convert_enum(TlsVersion)),
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(TlsVersion))
+    )
     cipher_suites = attr.ib(
         converter=convert_iterable(convert_enum(TlsCipherSuite)),
         validator=attr.validators.deep_iterable(attr.validators.instance_of(TlsCipherSuite))
