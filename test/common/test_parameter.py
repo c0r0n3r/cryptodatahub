@@ -7,7 +7,11 @@ except ImportError:
 
 from test.common.classes import TestClasses
 
-from cryptodatahub.common.parameter import DHParameterNumbers, DHParamWellKnown
+import six
+
+from cryptodatahub.common.algorithm import NamedGroup
+from cryptodatahub.common.exception import InvalidValue
+from cryptodatahub.common.parameter import DHParameterNumbers, DHParamWellKnown, ECParamWellKnown
 
 
 class TestDHParamWellKnownParams(unittest.TestCase):
@@ -39,4 +43,29 @@ class TestDHParamWellKnown(TestClasses.TestJsonBase):
         self.assertEqual(
             str(DHParamWellKnown.APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_1024.value),
             '1024-bit Apache 2.0.18 builtin DH parameter'
+        )
+
+
+class TestECParamWellKnown(TestClasses.TestJsonBase):
+    @classmethod
+    def _get_class(cls):
+        return ECParamWellKnown
+
+    def test_from_named_group(self):
+        self.assertEqual(
+           ECParamWellKnown.from_named_group(NamedGroup.PRIME256V1),
+           ECParamWellKnown.PRIME256V1
+        )
+
+        with six.assertRaisesRegex(
+                self, InvalidValue, "NamedGroup.C2ONB239V4.* is not a valid ECParamWellKnown"
+        ) as context_manager:
+            ECParamWellKnown.from_named_group(NamedGroup.C2ONB239V4)
+        self.assertEqual(context_manager.exception.value, NamedGroup.C2ONB239V4)
+
+    def test_from_parameter_numbers(self):
+        ec_param = ECParamWellKnown.PRIME256V1
+        self.assertEqual(
+           ECParamWellKnown.from_parameter_numbers(ec_param.value.parameter_numbers),
+           ec_param
         )
