@@ -4,6 +4,7 @@ import six
 import attr
 
 from cryptodatahub.common.entity import Entity, Server
+from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.grade import GradeableVulnerabilities
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
@@ -19,7 +20,10 @@ from cryptodatahub.common.types import (
 
 @attr.s(frozen=True)
 class StandardParams(CryptoDataParamsNamed):
-    pass
+    publisher = attr.ib(
+        converter=convert_enum(Entity),
+        validator=attr.validators.instance_of(Entity),
+    )
 
 
 Standard = CryptoDataEnumBase('Standard', CryptoDataEnumBase.get_json_records(StandardParams))
@@ -85,4 +89,61 @@ class DHParamWellKnownBase(CryptoDataEnumBase):
 
 DHParamWellKnown = DHParamWellKnownBase(
     'DHParamWellKnown', DHParamWellKnownBase.get_json_records(DHParamWellKnownParams)
+)
+
+
+@attr.s
+class ECParameterNumbers(object):
+    a = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(six.integer_types),
+        metadata={'human_readable_name': 'a'},
+    )
+    b = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(six.integer_types),
+        metadata={'human_readable_name': 'b'},
+    )
+    x = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(six.integer_types),
+        metadata={'human_readable_name': 'x'},
+    )
+    y = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(six.integer_types),
+        metadata={'human_readable_name': 'y'},
+    )
+
+
+@attr.s(eq=False, frozen=True)
+class ECParamWellKnownParams(CryptoDataParamsNamed):
+    standards = attr.ib(
+        converter=convert_iterable(convert_enum(Standard)),
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(Standard))
+    )
+    aliases = attr.ib(validator=attr.validators.deep_iterable(attr.validators.instance_of(six.string_types)))
+    parameter_numbers = attr.ib(
+        converter=convert_dict_to_object(ECParameterNumbers),
+        validator=attr.validators.instance_of(ECParameterNumbers)
+    )
+
+
+class ECParamWellKnownBase(CryptoDataEnumBase):
+    @classmethod
+    def from_parameter_numbers(cls, parameter_numbers):
+        return cls._from_attr('parameter_numbers', parameter_numbers)
+
+    @classmethod
+    def from_named_group(cls, named_group):
+        try:
+            ec_param = cls[named_group.name]
+        except KeyError as e:
+            six.raise_from(InvalidValue(named_group, cls), e)
+
+        return ec_param
+
+
+ECParamWellKnown = ECParamWellKnownBase(
+    'ECParamWellKnown', ECParamWellKnownBase.get_json_records(ECParamWellKnownParams)
 )

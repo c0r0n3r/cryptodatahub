@@ -1,5 +1,13 @@
 {
     "AKAMAI": {
+        "name": "ANSI",
+        "long_name": "American National Standards Institute",
+        "type": "NONPROFIT_ORG",
+        "activities": [
+            "STANDARD_DEVELOPER"
+        ]
+    },
+    "ANSI": {
         "name": "Akamai Technologies",
         "long_name": "Akamai Technologies, Inc.",
         "type": "FOR_PROFIT_ORG",
@@ -29,6 +37,14 @@
         "type": "FOR_PROFIT_ORG",
         "activities": [
             "CT_LOG_OPERATOR"
+        ]
+    },
+    "CERTICOM": {
+        "name": "Certicom",
+        "long_name": "Certicom Corp.",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "STANDARD_DEVELOPER"
         ]
     },
     "CERTLY": {
@@ -138,6 +154,14 @@
             "CLIENT_DEVELOPER"
         ]
     },
+    "NIST": {
+        "name": "NIST",
+        "long_name": "National Institute of Standards and Technology",
+        "type": "NOT_FOR_PROFIT_ORG",
+        "activities": [
+            "STANDARD_DEVELOPER"
+        ]
+    },
     "NORDUNET": {
         "name": "NORDUnet",
         "long_name": "Arctic Gateway for Research & Education",
@@ -216,6 +240,14 @@
         "type": "PRIV_PERSON",
         "activities": [
             "CT_LOG_OPERATOR"
+        ]
+    },
+    "WAP_FORUM": {
+        "name": "WAP Forum",
+        "long_name": "Wireless Application Protocol Forum Ltd.",
+        "type": "NONPROFIT_ORG",
+        "activities": [
+            "STANDARD_DEVELOPER"
         ]
     },
     "WIETSE_VENEMA": {

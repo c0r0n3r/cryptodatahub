@@ -1,22 +1,57 @@
 {
     "RFC_2409": {
         "name": "RFC 2409",
-        "long_name": "The Internet Key Exchange (IKE)"
+        "long_name": "The Internet Key Exchange (IKE)",
+        "publisher": "IETF"
     },
     "RFC_2539": {
         "name": "RFC 2539",
-        "long_name": "Storage of Diffie-Hellman Keys in the Domain Name System (DNS)"
+        "long_name": "Storage of Diffie-Hellman Keys in the Domain Name System (DNS)",
+        "publisher": "IETF"
     },
     "RFC_3526": {
         "name": "RFC 3526",
-        "long_name": "More Modular Exponential (MODP) Diffie-Hellman groups for Internet Key Exchange (IKE)"
+        "long_name": "More Modular Exponential (MODP) Diffie-Hellman groups for Internet Key Exchange (IKE)",
+        "publisher": "IETF"
     },
     "RFC_5114": {
         "name": "RFC 5114",
-        "long_name": "Additional Diffie-Hellman Groups for Use with IETF Standards"
+        "long_name": "Additional Diffie-Hellman Groups for Use with IETF Standards",
+        "publisher": "IETF"
+    },
+    "RFC_5639": {
+        "name": "RFC 5639",
+        "long_name": "Elliptic Curve Cryptography (ECC) Brainpool Standard Curves and Curve Generation",
+        "publisher": "IETF"
     },
     "RFC_7919": {
         "name": "RFC 7919",
-        "long_name": "Negotiated Finite Field Diffie-Hellman Ephemeral Parameters for Transport Layer Security (TLS)"
+        "long_name": "Negotiated Finite Field Diffie-Hellman Ephemeral Parameters for Transport Layer Security (TLS)",
+        "publisher": "IETF"
+    },
+    "SEC_2": {
+        "name": "SEC2",
+        "long_name": "SEC 2: Recommended Elliptic Curve Domain Parameters",
+        "publisher": "CERTICOM"
+    },
+    "SP_800_186": {
+        "name": "NIST SP 800-186",
+        "long_name": "NIST Special Publication NIST SP 800-186 Recommendations for Discrete Logarithm-based Cryptography: Elliptic Curve Domain Parameters",
+        "publisher": "NIST"
+    },
+    "WTLS": {
+        "name": "WTLS",
+        "long_name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+        "publisher": "WAP_FORUM"
+    },
+    "X9_62": {
+        "name": "X9.62",
+        "long_name": "Public Key Cryptography For The Financial Services Industry: The Elliptic Curve Digital Signature Algorithm (ECDSA)",
+        "publisher": "ANSI"
+    },
+    "X9_63": {
+        "name": "X9.63",
+        "long_name": "Public Key Cryptography For The Financial Services Industry - Key Agreement And Key Transport Using Elliptic Curve Cryptography",
+        "publisher": "ANSI"
     }
 }
