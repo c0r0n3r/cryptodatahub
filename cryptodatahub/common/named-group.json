@@ -811,16 +811,72 @@
         "size": 511,
         "group_type": "ELLIPTIC_CURVE"
     },
-    "X25519_KYBER_512_DRAFT00": {
-        "name": "X25519Kyber512Draft00",
+    "KYBER_512_R3": {
+        "name": "Kyber-512-r3",
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
         "size": 512,
         "group_type": "HYBRID_PQS"
     },
-    "X25519_KYBER_768_DRAFT00": {
-        "name": "X25519Kyber768Draft00",
+    "KYBER_768_R3": {
+        "name": "Kyber-768-r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 768,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_1024_R3": {
+        "name": "Kyber-1024-r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1024,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_KYBER_512_R3": {
+        "name": "secp256r1/Kyber-512-r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 512,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_KYBER_768_R3": {
+        "name": "secp256r1/Kyber-768-r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 768,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_KYBER_768_R3": {
+        "name": "secp384r1/Kyber-768-r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 768,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP521R1_KYBER_1024_R3": {
+        "name": "secp384r1/Kyber-1024-r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1024,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_KYBER_512_R3": {
+        "name": "x25519/Kyber-512-r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 512,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_KYBER_768_R3": {
+        "name": "x25519/Kyber-768-r3",
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],

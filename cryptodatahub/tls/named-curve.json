@@ -224,14 +224,59 @@
         "code": 65282,
         "named_group": null
     },
-    "X25519_KYBER_512_DRAFT00": {
+    "KYBER_512_R3": {
+        "_code_in_hex": "0x023a",
+        "code": 570,
+        "named_group": "KYBER_512_R3"
+    },
+    "KYBER_768_R3": {
+        "_code_in_hex": "0x023c",
+        "code": 572,
+        "named_group": "KYBER_768_R3"
+    },
+    "KYBER_1024_R3": {
+        "_code_in_hex": "0x023d",
+        "code": 573,
+        "named_group": "KYBER_1024_R3"
+    },
+    "X25519_KYBER_512_R3_CLOUDFLARE": {
         "_code_in_hex": "0xfe30",
         "code": 65072,
-        "named_group": "X25519_KYBER_512_DRAFT00"
+        "named_group": "X25519_KYBER_512_R3"
     },
-    "X25519_KYBER_768_DRAFT00": {
+    "X25519_KYBER_768_R3_CLOUDFLARE": {
+        "_code_in_hex": "0xfe31",
+        "code": 65073,
+        "named_group": "X25519_KYBER_768_R3"
+    },
+    "SECP256R1_KYBER_512_R3": {
+        "_code_in_hex": "0x2f3a",
+        "code": 12090,
+        "named_group": "SECP256R1_KYBER_512_R3"
+    },
+    "SECP256R1_KYBER_768_R3": {
+        "_code_in_hex": "0x639a",
+        "code": 25498,
+        "named_group": "SECP256R1_KYBER_768_R3"
+    },
+    "SECP384R1_KYBER_768_R3": {
+        "_code_in_hex": "0x2f3c",
+        "code": 12092,
+        "named_group": "SECP384R1_KYBER_768_R3"
+    },
+    "SECP521R1_KYBER_1024_R3": {
+        "_code_in_hex": "0x2f3d",
+        "code": 12093,
+        "named_group": "SECP521R1_KYBER_1024_R3"
+    },
+    "X25519_KYBER_512_R3": {
+        "_code_in_hex": "0x2f39",
+        "code": 12089,
+        "named_group": "X25519_KYBER_512_R3"
+    },
+    "X25519_KYBER_768_R3": {
         "_code_in_hex": "0x6399",
         "code": 25497,
-        "named_group": "X25519_KYBER_768_DRAFT00"
+        "named_group": "X25519_KYBER_768_R3"
     }
 }
