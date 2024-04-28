@@ -2,6 +2,26 @@
 Changelog
 =========
 
+------
+0.12.5
+------
+
+-  Generic
+
+   -  add missing PQC named curves (#25)
+
+      | ``Kyber-512-r3``, ``Kyber-768-r3``, ``Kyber-1024-r3``, ``secp256r1/Kyber-512-r3``,
+      | ``secp256r1/Kyber-768-r3``, ``secp384r1/Kyber-768-r3``,
+      | ``secp384r1/Kyber-1024-r3``
+
+-  TLS
+
+   -  add missing PQC named curves (#25)
+
+      | ``KYBER_512_R3``, ``KYBER_768_R3``, ``KYBER_1024_R3``, ``SECP256R1_KYBER_512_R3``,
+      | ``SECP256R1_KYBER_768_R3``, ``SECP384R1_KYBER_768_R3``,
+      | ``SECP521R1_KYBER_1024_R3``, ``X25519_KYBER_512_R3``, ``X25519_KYBER_768_R3``
+
 -------------------
 0.12.4 - 2024-04-28
 -------------------
@@ -141,11 +161,17 @@ Refactor
 Features
 ========
 
+-  Generic
+
+   -  add missing PQC named curves (#14)
+
+      | ``x25519/Kyber-512-r3``, ``x25519/Kyber-768-r3``
+
 -  TLS
 
    -  add post-quantum safe hybrid curves (#14)
 
-      | *X25519Kyber512Draft00*, *X25519Kyber768Draft00*
+      | ``X25519_KYBER_512_R3_CLOUDFLARE``, ``X25519_KYBER_768_R3_CLOUDFLARE``
 
 -  SSH
 
