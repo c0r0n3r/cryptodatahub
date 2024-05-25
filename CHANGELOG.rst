@@ -2,9 +2,12 @@
 Changelog
 =========
 
-------
-0.12.5
-------
+-------------------
+0.12.5 - 2024-05-25
+-------------------
+
+Improvements
+============
 
 -  Generic
 
@@ -13,6 +16,8 @@ Changelog
       | ``Kyber-512-r3``, ``Kyber-768-r3``, ``Kyber-1024-r3``, ``secp256r1/Kyber-512-r3``,
       | ``secp256r1/Kyber-768-r3``, ``secp384r1/Kyber-768-r3``,
       | ``secp384r1/Kyber-1024-r3``
+
+   -  test on Python 3.13 RC
 
 -  TLS
 
