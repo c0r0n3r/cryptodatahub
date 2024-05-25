@@ -67,10 +67,15 @@ python311:
   stage: fulltest
   script: tox -e py311
 
-pythonrc:
-  image: python:3.12-rc-slim
+python312:
+  image: python:3.12-slim
   stage: fulltest
   script: tox -e py312
+
+pythonrc:
+  image: python:3.13-rc-slim
+  stage: fulltest
+  script: tox -e py313
 
 pypy:
   image: pypy:2-slim
