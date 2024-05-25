@@ -62,11 +62,6 @@ python310:
   stage: fulltest
   script: tox -e py310
 
-python311:
-  image: python:3.11-slim
-  stage: fulltest
-  script: tox -e py311
-
 python312:
   image: python:3.12-slim
   stage: fulltest
