@@ -23,9 +23,9 @@ python2:
   script: tox -e py27
 
 python3:
-  image: python:3.7-slim
+  image: python:3.11-slim
   stage: earlytest
-  script: tox -e py37
+  script: tox -e py311
 
 python34:
   image: python:3.4-slim
