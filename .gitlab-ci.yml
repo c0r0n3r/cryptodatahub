@@ -100,7 +100,7 @@ coveralls:
       - master
 
 obs:
-  image: coroner/cryptolyzer:obs
+  image: coroner/python_obs
   stage: deploy
   variables:
     GIT_SUBMODULE_STRATEGY: recursive
