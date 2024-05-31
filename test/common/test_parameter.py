@@ -27,8 +27,8 @@ class TestDHParamWellKnown(TestClasses.TestJsonBase):
     def test_from_parameter_numbers(self):
         dh_param = DHParamWellKnown.RFC2539_1024_BIT_MODP_GROUP
         self.assertEqual(
-           DHParamWellKnown.from_parameter_numbers(dh_param.value.parameter_numbers),
-           dh_param
+            DHParamWellKnown.from_parameter_numbers(dh_param.value.parameter_numbers),
+            dh_param
         )
 
     def test_str(self):

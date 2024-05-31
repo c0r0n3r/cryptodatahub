@@ -62,12 +62,12 @@ class TestUpdaterCertificateTransparencyLogs(pyfakefs.fake_filesystem_unittest.T
          mmd=86400,
          description='description',
          temporal_interval=CertificateTransparencyLogTemporalInterval(
-           start_inclusive=datetime.datetime(1970, 1, 1, 0, 0, 0, tzinfo=dateutil.tz.UTC),
-           end_exclusive=datetime.datetime(1970, 1, 1, 0, 0, 0, tzinfo=dateutil.tz.UTC),
+            start_inclusive=datetime.datetime(1970, 1, 1, 0, 0, 0, tzinfo=dateutil.tz.UTC),
+            end_exclusive=datetime.datetime(1970, 1, 1, 0, 0, 0, tzinfo=dateutil.tz.UTC),
          ),
          log_state=CertificateTransparencyLogState(
-           state_type=CertificateTransparencyLogStateType.REJECTED,
-           timestamp=datetime.datetime(1970, 1, 1, 0, 0, 0, tzinfo=dateutil.tz.UTC),
+            state_type=CertificateTransparencyLogStateType.REJECTED,
+            timestamp=datetime.datetime(1970, 1, 1, 0, 0, 0, tzinfo=dateutil.tz.UTC),
          ),
     )
 
