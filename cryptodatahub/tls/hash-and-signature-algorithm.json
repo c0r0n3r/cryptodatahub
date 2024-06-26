@@ -167,6 +167,24 @@
         "hash_algorithm": "SHA2_512",
         "signature_algorithm": "ECDSA"
     },
+    "ECDSA_BRAINPOOLP256R1TLS13_SHA256": {
+        "_code_in_hex": "0x081a",
+        "code": 2074,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "ECDSA"
+    },
+    "ECDSA_BRAINPOOLP384R1TLS13_SHA384": {
+        "_code_in_hex": "0x081b",
+        "code": 2075,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "ECDSA"
+    },
+    "ECDSA_BRAINPOOLP512R1TLS13_SHA512": {
+        "_code_in_hex": "0x081c",
+        "code": 2076,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "ECDSA"
+    },
     "GOST_R3410_01": {
         "_code_in_hex": "0x00ed",
         "code": 237,
@@ -214,6 +232,18 @@
         "code": 2054,
         "hash_algorithm": "SHA2_512",
         "signature_algorithm": "RSA"
+    },
+    "ED25519": {
+        "_code_in_hex": "0x0807",
+        "code": 2055,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "EDDSA"
+    },
+    "ED448": {
+        "_code_in_hex": "0x0808",
+        "code": 2056,
+        "hash_algorithm": "SHAKE_256",
+        "signature_algorithm": "EDDSA"
     },
     "RSA_PSS_PSS_SHA256": {
         "_code_in_hex": "0x0809",
