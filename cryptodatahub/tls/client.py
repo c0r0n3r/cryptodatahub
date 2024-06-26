@@ -127,6 +127,7 @@ class ClientExtensionParams(CryptoDataParamsBase):  # pylint: disable=too-many-i
             attr.validators.deep_iterable(attr.validators.instance_of(TlsNamedCurve))
         )
     )
+    post_handshake_auth = attr.ib(default=None)
     psk_key_exchange_modes = attr.ib(
         default=None,
         converter=convert_iterable(convert_enum(TlsPskKeyExchangeMode)),
