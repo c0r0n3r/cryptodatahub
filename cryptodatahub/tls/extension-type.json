@@ -264,6 +264,11 @@
         "_code_in_hex": "0x7550",
         "code": 30032
     },
+    "ENCRYPTED_CLIENT_HELLO": {
+        "_standard": "DRAFT-IETF-TLS-ESNI",
+        "_code_in_hex": "0xfe0d",
+        "code": 65037
+    },
     "RENEGOTIATION_INFO": {
         "_standard": "DRAFT-AGL-TLS-NEXTPROTONEG-03",
         "_code_in_hex": "0xff01",
