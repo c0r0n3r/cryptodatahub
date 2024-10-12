@@ -236,7 +236,6 @@ class TestRootCertificateParams(TestClasses.TestKeyBase):
                     'Ek966UKB55AyKxqVAQBRb3yeCw==',
                     '-----END CERTIFICATE-----'
                 ]),
-                ('trust_stores', [])
             ])
         )
 

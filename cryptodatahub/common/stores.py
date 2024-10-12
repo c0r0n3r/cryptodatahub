@@ -41,8 +41,16 @@ CertificateTransparencyLogStateType = enum.Enum(
 )
 
 
+class CertificateTransparencyLogDateTimeBase(CryptoDataParamsBase):
+    def _asdict_serializer(self, _, __, value):
+        if isinstance(value, datetime.datetime):
+            return value.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+        return super(CertificateTransparencyLogDateTimeBase, self)._asdict_serializer(_, __, value)
+
+
 @attr.s(frozen=True)
-class CertificateTransparencyLogState(CryptoDataParamsBase):
+class CertificateTransparencyLogState(CertificateTransparencyLogDateTimeBase):
     state_type = attr.ib(
         converter=convert_enum(CertificateTransparencyLogStateType),
         validator=attr.validators.optional(attr.validators.instance_of(CertificateTransparencyLogStateType))
@@ -54,7 +62,7 @@ class CertificateTransparencyLogState(CryptoDataParamsBase):
 
 
 @attr.s(frozen=True)
-class CertificateTransparencyLogTemporalInterval(CryptoDataParamsBase):
+class CertificateTransparencyLogTemporalInterval(CertificateTransparencyLogDateTimeBase):
     start_inclusive = attr.ib(
         converter=convert_datetime(),
         validator=attr.validators.instance_of(datetime.datetime),

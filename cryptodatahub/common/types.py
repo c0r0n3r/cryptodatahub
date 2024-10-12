@@ -362,16 +362,20 @@ class CryptoDataParamsBase(object):
             if attribute.init
         ]
 
-    def _asdict_filter(self, attribute, _):
-        return not attribute.name.startswith('_')
+    def _asdict_filter(self, attribute, value):
+        if attribute.name.startswith('_'):
+            return False
+
+        if attribute.default != attr.NOTHING and value == attribute.default:
+            return False
+
+        return True
 
     def _asdict_serializer(self, _, __, value):
         if hasattr(value, '_asdict'):
             return getattr(value, '_asdict')()
         if isinstance(value, enum.Enum):
             return value.name
-        if isinstance(value, datetime.datetime):
-            return str(value)
 
         return value
 
