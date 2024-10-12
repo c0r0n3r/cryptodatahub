@@ -191,6 +191,20 @@ class TestDictToObjectConverter(unittest.TestCase):
         )
         self.assertEqual(id(converted_value), id(convert_dict_to_object(str)(converted_value)))
 
+    def test_asdict(self):
+        self.assertEqual(
+            TestJsonObject(
+                attr_simple=1,
+                attr_iterable=[1, 2, 3, 4],
+                attr_complex=TestJsonObjectComplex('value'),
+            )._asdict(),
+            collections.OrderedDict([
+                ('attr_simple', 1),
+                ('attr_iterable', [1, 2, 3, 4]),
+                ('attr_complex', {'attr': 'value'}),
+            ])
+        )
+
     def test_repr(self):
         self.assertEqual(repr(convert_dict_to_object(str)), '<dict to object converter>')
 
