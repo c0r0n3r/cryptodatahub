@@ -7,7 +7,7 @@
         "mmd": 86400,
         "description": "Akamai CT Log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2015-11-27T15:37:00Z"
         }
     },
@@ -19,7 +19,7 @@
         "mmd": 86400,
         "description": "Alpha CT Log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2015-01-27T14:38:00Z"
         }
     },
@@ -31,7 +31,7 @@
         "mmd": 86400,
         "description": "Certly.IO log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-04-29T17:12:19Z"
         }
     },
@@ -47,7 +47,7 @@
             "end_exclusive": "2018-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2017-11-13T19:42:25Z"
         }
     },
@@ -63,7 +63,7 @@
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2019-05-07T00:00:00Z"
         }
     },
@@ -79,7 +79,7 @@
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-02-07T00:00:00Z"
         }
     },
@@ -95,7 +95,7 @@
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2021-04-21T00:00:00Z"
         }
     },
@@ -111,7 +111,7 @@
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-03-01T00:00:00Z"
         }
     },
@@ -127,7 +127,7 @@
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-02-01T00:00:00Z"
         }
     },
@@ -143,7 +143,7 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2019-10-31T19:22:00Z"
         }
     },
@@ -159,7 +159,7 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2022-11-30T17:00:00Z"
         }
     },
@@ -171,7 +171,7 @@
         "mmd": 86400,
         "description": "CNNIC CT log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-04-29T17:12:19Z"
         }
     },
@@ -183,7 +183,7 @@
         "mmd": 86400,
         "description": "DigiCert Log Server",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-03-02T18:00:00Z"
         }
     },
@@ -195,7 +195,7 @@
         "mmd": 86400,
         "description": "DigiCert Log Server 2",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-02-01T00:00:00Z"
         }
     },
@@ -211,7 +211,7 @@
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2019-05-07T00:00:00Z"
         }
     },
@@ -227,7 +227,7 @@
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-02-07T00:00:00Z"
         }
     },
@@ -243,7 +243,7 @@
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2021-04-21T00:00:00Z"
         }
     },
@@ -259,7 +259,7 @@
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-03-01T00:00:00Z"
         }
     },
@@ -275,7 +275,7 @@
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-02-01T00:00:00Z"
         }
     },
@@ -291,7 +291,7 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2019-10-31T19:22:00Z"
         }
     },
@@ -307,7 +307,7 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "retired",
+            "state_type": "RETIRED",
             "timestamp": "2023-05-30T00:00:00Z"
         }
     },
@@ -323,7 +323,7 @@
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2022-11-01T18:54:00Z"
         }
     },
@@ -339,7 +339,7 @@
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2019-05-07T00:00:00Z"
         }
     },
@@ -355,7 +355,7 @@
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-02-07T00:00:00Z"
         }
     },
@@ -371,7 +371,7 @@
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2021-04-21T00:00:00Z"
         }
     },
@@ -387,7 +387,7 @@
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-03-01T00:00:00Z"
         }
     },
@@ -403,7 +403,7 @@
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-02-01T00:00:00Z"
         }
     },
@@ -419,7 +419,7 @@
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-02-01T00:00:00Z"
         }
     },
@@ -435,7 +435,7 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "retired",
+            "state_type": "RETIRED",
             "timestamp": "2022-09-29T00:00:00Z"
         }
     },
@@ -451,7 +451,7 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2022-11-01T18:54:00Z"
         }
     },
@@ -467,7 +467,7 @@
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2022-11-01T18:54:00Z"
         }
     },
@@ -479,7 +479,7 @@
         "mmd": 86400,
         "description": "GDCA CT log #1",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2016-07-12T13:03:00Z"
         }
     },
@@ -491,7 +491,7 @@
         "mmd": 86400,
         "description": "GDCA CT log #2",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2017-01-11T10:46:00Z"
         }
     },
@@ -507,7 +507,7 @@
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2018-11-05T22:18:14Z"
         }
     },
@@ -523,7 +523,7 @@
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2018-11-08T05:47:34Z"
         }
     },
@@ -539,7 +539,7 @@
             "end_exclusive": "2018-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2018-02-27T00:00:00Z"
         }
     },
@@ -555,7 +555,7 @@
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2019-05-07T00:00:00Z"
         }
     },
@@ -571,7 +571,7 @@
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-02-07T00:00:00Z"
         }
     },
@@ -587,7 +587,7 @@
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2021-04-21T00:00:00Z"
         }
     },
@@ -603,7 +603,7 @@
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-03-01T00:00:00Z"
         }
     },
@@ -619,7 +619,7 @@
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-02-01T00:00:00Z"
         }
     },
@@ -635,7 +635,7 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2019-12-17T18:38:01Z"
         }
     },
@@ -651,7 +651,7 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2022-11-01T18:54:00Z"
         }
     },
@@ -663,7 +663,7 @@
         "mmd": 86400,
         "description": "Google 'Aviator' log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-04-29T17:12:19Z"
         }
     },
@@ -674,7 +674,7 @@
         "url": "https://ct.googleapis.com/logs/crucible/",
         "mmd": 86400,
         "description": "Google 'Crucible' log",
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "GOOGLE_DAEDALUS_LOG": {
         "log_id": "HQJLjrFJizRN/YfqPvwJlvdQbyNdHUlwYaR3PEOcJfs=",
@@ -692,7 +692,7 @@
         "mmd": 86400,
         "description": "Google 'Icarus' log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-06-02T10:00:00Z"
         }
     },
@@ -704,7 +704,7 @@
         "mmd": 86400,
         "description": "Google 'Pilot' log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-06-02T10:00:00Z"
         }
     },
@@ -716,7 +716,7 @@
         "mmd": 86400,
         "description": "Google 'Rocketeer' log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-06-02T10:00:00Z"
         }
     },
@@ -728,7 +728,7 @@
         "mmd": 86400,
         "description": "Google 'Skydiver' log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-06-02T10:00:00Z"
         }
     },
@@ -743,7 +743,7 @@
             "start_inclusive": "2018-01-01T00:00:00Z",
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "GOOGLE_SOLERA_2019_LOG": {
         "log_id": "C3YOmouaaC+ImFsV6UdQGlZEa7qIMHhcOEKZQ4ZFDAA=",
@@ -756,7 +756,7 @@
             "start_inclusive": "2019-01-01T00:00:00Z",
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "GOOGLE_SOLERA_2020_LOG": {
         "log_id": "H8cs5aG3mfQAw1m/+WyjkTVI6GRCIGEJUum6F3T3usc=",
@@ -769,7 +769,7 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "GOOGLE_SOLERA_2021_LOG": {
         "log_id": "o8mYRegKt84AFXs3Qt8CB90nKytgLs+Y7iwS25xa5+c=",
@@ -782,7 +782,7 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "GOOGLE_SOLERA_2022_LOG": {
         "log_id": "aXqvyhprU2+uISBQRt661+Dq6hPSQy5unY+zefK5qvM=",
@@ -795,7 +795,7 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "GOOGLE_SOLERA_2023_LOG": {
         "log_id": "+X6XuNM+96FZAqU6GeF5kOXcQGoDGCW6rZPpj5ucacs=",
@@ -808,7 +808,7 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "GOOGLE_SOLERA_2024_LOG": {
         "log_id": "MCTOfusWiGJyS+pwLv/5ks/kVkNBkapZWyX4AibIABc=",
@@ -821,7 +821,7 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "GOOGLE_SUBMARINER_LOG": {
         "log_id": "qJnYeAySkKr0YvMYgMz71SRR6XDQ+/WR73Ww2ZtkVoE=",
@@ -838,7 +838,7 @@
         "url": "https://ct.googleapis.com/testtube/",
         "mmd": 86400,
         "description": "Google 'Testtube' log",
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "GOOGLE_XENON_2018_LOG": {
         "log_id": "sQzVWabWeEaBH335pRUyc5rEjXA76gMj2l04dVvArU4=",
@@ -852,7 +852,7 @@
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2019-02-21T00:00:00Z"
         }
     },
@@ -868,7 +868,7 @@
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-02-07T00:00:00Z"
         }
     },
@@ -884,7 +884,7 @@
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2021-04-21T00:00:00Z"
         }
     },
@@ -900,7 +900,7 @@
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-03-01T00:00:00Z"
         }
     },
@@ -916,7 +916,7 @@
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-02-01T00:00:00Z"
         }
     },
@@ -932,7 +932,7 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2019-12-17T18:38:01Z"
         }
     },
@@ -948,7 +948,7 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2022-11-01T18:54:00Z"
         }
     },
@@ -960,7 +960,7 @@
         "mmd": 86400,
         "description": "Izenpe 'Argi' log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2016-08-25T11:36:00Z"
         }
     },
@@ -972,7 +972,7 @@
         "mmd": 86400,
         "description": "Izenpe log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-04-29T17:12:19Z"
         }
     },
@@ -996,7 +996,7 @@
             "end_exclusive": "2020-01-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-02-07T00:00:00Z"
         }
     },
@@ -1012,7 +1012,7 @@
             "end_exclusive": "2021-01-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2021-04-21T00:00:00Z"
         }
     },
@@ -1028,7 +1028,7 @@
             "end_exclusive": "2022-01-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-03-01T00:00:00Z"
         }
     },
@@ -1044,7 +1044,7 @@
             "end_exclusive": "2023-01-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-02-01T00:00:00Z"
         }
     },
@@ -1060,7 +1060,7 @@
             "end_exclusive": "2024-01-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2021-03-01T19:24:00Z"
         }
     },
@@ -1076,7 +1076,7 @@
             "end_exclusive": "2024-07-20T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2022-11-30T17:00:00Z"
         }
     },
@@ -1092,7 +1092,7 @@
             "end_exclusive": "2025-01-20T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2022-11-30T17:00:00Z"
         }
     },
@@ -1107,7 +1107,7 @@
             "start_inclusive": "2022-06-15T00:00:00Z",
             "end_exclusive": "2023-01-15T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "LETS_ENCRYPT_SAPLING_2023H1_LOG": {
         "log_id": "wYMkC/GkUMdvuwByadysO+IqSAXU2+BJZsPIq8RHsAw=",
@@ -1120,7 +1120,7 @@
             "start_inclusive": "2022-12-15T00:00:00Z",
             "end_exclusive": "2023-07-15T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "LETS_ENCRYPT_TESTFLUME_2019_LOG": {
         "log_id": "hJ9ff1jSv3tU7L10YRzqRcScmPHWSBvG9p6MF08k888=",
@@ -1133,7 +1133,7 @@
             "start_inclusive": "2019-01-01T00:00:00Z",
             "end_exclusive": "2020-01-07T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "LETS_ENCRYPT_TESTFLUME_2020_LOG": {
         "log_id": "xj8iGMN9VqaqBrWW2o5T1NcVbR6brI5E0iAt5k1p2dw=",
@@ -1146,7 +1146,7 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-07T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "LETS_ENCRYPT_TESTFLUME_2021_LOG": {
         "log_id": "A+3x2pd2tvOMNB457Z1wenVwNpz5hE8yf+nhQTg2G2A=",
@@ -1159,7 +1159,7 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-07T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "LETS_ENCRYPT_TESTFLUME_2022_LOG": {
         "log_id": "Iyfv2jUlENvAGe9JGuP/HMWkebzjeHg2DuMYz/tk+Mg=",
@@ -1172,7 +1172,7 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-07T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "LETS_ENCRYPT_TESTFLUME_2023_LOG": {
         "log_id": "VTS3q1pqw6fL66ZUh7Ki1xtI9lD6F8UZfJegyyB288Y=",
@@ -1185,7 +1185,7 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-07T00:00:00Z"
         },
-        "log_type": "test"
+        "log_type": "TEST"
     },
     "NORDU_FLIMSY_LOG": {
         "log_id": "U3tpo1ZDNanASQTjlZOywpjrjXpugwI2NcYnJIzWtEA=",
@@ -1211,7 +1211,7 @@
         "mmd": 86400,
         "description": "PuChuangSiDa CT log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2017-06-08T00:00:00Z"
         }
     },
@@ -1227,7 +1227,7 @@
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-04-30T00:00:00Z"
         }
     },
@@ -1243,7 +1243,7 @@
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-04-30T00:00:00Z"
         }
     },
@@ -1259,7 +1259,7 @@
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-04-30T00:00:00Z"
         }
     },
@@ -1275,7 +1275,7 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-04-30T00:00:00Z"
         }
     },
@@ -1291,7 +1291,7 @@
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-10-06T00:00:00Z"
         }
     },
@@ -1307,7 +1307,7 @@
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-10-06T00:00:00Z"
         }
     },
@@ -1323,7 +1323,7 @@
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-10-06T00:00:00Z"
         }
     },
@@ -1339,7 +1339,7 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-10-06T00:00:00Z"
         }
     },
@@ -1359,7 +1359,7 @@
         "mmd": 86400,
         "description": "Sectigo 'Mammoth' CT log",
         "log_state": {
-            "state_type": "retired",
+            "state_type": "RETIRED",
             "timestamp": "2023-01-15T00:00:00Z"
         }
     },
@@ -1371,7 +1371,7 @@
         "mmd": 86400,
         "description": "Sectigo 'Sabre' CT log",
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2017-10-10T00:38:10Z"
         }
     },
@@ -1383,7 +1383,7 @@
         "mmd": 86400,
         "description": "SHECA CT log 1",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2017-03-22T14:16:19Z"
         }
     },
@@ -1395,7 +1395,7 @@
         "mmd": 86400,
         "description": "SHECA CT log 2",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2017-12-01T20:22:23Z"
         }
     },
@@ -1407,7 +1407,7 @@
         "mmd": 86400,
         "description": "StartCom log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-04-29T17:12:19Z"
         }
     },
@@ -1427,7 +1427,7 @@
         "mmd": 86400,
         "description": "Symantec log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-04-29T17:12:19Z"
         }
     },
@@ -1439,7 +1439,7 @@
         "mmd": 86400,
         "description": "Symantec 'Sirius' log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-04-29T17:12:19Z"
         }
     },
@@ -1451,7 +1451,7 @@
         "mmd": 86400,
         "description": "Symantec 'Vega' log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-04-29T17:12:19Z"
         }
     },
@@ -1467,7 +1467,7 @@
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-03-01T00:00:00Z"
         }
     },
@@ -1483,7 +1483,7 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-04-28T00:00:00Z"
         }
     },
@@ -1499,7 +1499,7 @@
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2021-04-21T00:00:00Z"
         }
     },
@@ -1515,7 +1515,7 @@
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-03-01T00:00:00Z"
         }
     },
@@ -1531,7 +1531,7 @@
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2023-02-01T00:00:00Z"
         }
     },
@@ -1547,7 +1547,7 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2021-03-01T19:24:00Z"
         }
     },
@@ -1563,7 +1563,7 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-09-13T23:00:00Z"
         }
     },
@@ -1579,7 +1579,7 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "usable",
+            "state_type": "USABLE",
             "timestamp": "2023-02-03T08:00:00Z"
         }
     },
@@ -1599,7 +1599,7 @@
         "mmd": 86400,
         "description": "Venafi Gen2 CT log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2020-05-08T00:00:00Z"
         }
     },
@@ -1611,7 +1611,7 @@
         "mmd": 86400,
         "description": "Venafi log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-04-29T17:12:19Z"
         }
     },
@@ -1623,7 +1623,7 @@
         "mmd": 86400,
         "description": "WoSign CT log #1",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2016-04-02T01:27:00Z"
         }
     },
@@ -1635,7 +1635,7 @@
         "mmd": 86400,
         "description": "WoSign log",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2022-04-29T17:12:19Z"
         }
     },
@@ -1647,7 +1647,7 @@
         "mmd": 86400,
         "description": "WoSign log 2",
         "log_state": {
-            "state_type": "rejected",
+            "state_type": "REJECTED",
             "timestamp": "2017-09-04T13:30:58Z"
         }
     }
