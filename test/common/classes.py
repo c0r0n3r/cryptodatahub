@@ -53,6 +53,7 @@ class TestJsonObject(CryptoDataParamsBase):
     attr_iterable = attr.ib()
     attr_complex = attr.ib(converter=convert_dict_to_object(TestJsonObjectComplex))
     no_init_attr = attr.ib(init=False, default=None)
+    _attr_hidden = attr.ib(init=False, default=None)
 
 
 class EnumTest(enum.Enum):

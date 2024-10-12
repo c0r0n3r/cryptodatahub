@@ -73,6 +73,7 @@ class TestNameToEnumItemName(unittest.TestCase):
         self.assertEqual(name_to_enum_item_name('aplha 123'), 'APLHA_123')
         self.assertEqual(name_to_enum_item_name('m  u  l  t  i  s  p  a  c  e'), 'M_U_L_T_I_S_P_A_C_E')
         self.assertEqual(name_to_enum_item_name('trailing space  '), 'TRAILING_SPACE')
+        self.assertEqual(name_to_enum_item_name('apo\'s trophe'), 'APOS_TROPHE')
 
     def test_convert_i18n_name(self):
         self.assertEqual(name_to_enum_item_name(six.ensure_text('αβγ')), six.ensure_text('ΑΒΓ'))

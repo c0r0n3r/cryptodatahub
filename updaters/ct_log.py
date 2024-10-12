@@ -42,6 +42,8 @@ class FetcherCertificateTransparencyLogs(FetcherBase):
                     state_type = list(state)[0]
                     state_args = collections.OrderedDict([('state_type', state_type)])
                     state_args.update(state[state_type])
+                    state_args.pop('final_tree_head', None)
+
                     log.update(collections.OrderedDict([('log_state', state_args)]))
 
                 operator_name = operator['name']

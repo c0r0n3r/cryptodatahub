@@ -36,6 +36,8 @@ def name_to_enum_item_name(name):
     for char in name:
         if char.isalnum():
             converted_name += char
+        elif char == '\'':
+            pass
         elif converted_name and converted_name[-1] != '_':
             converted_name += '_'
 
