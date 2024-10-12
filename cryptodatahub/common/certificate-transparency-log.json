@@ -143,8 +143,8 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2019-10-31T19:22:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2024-02-02T00:00:00Z"
         }
     },
     "CLOUDFLARE_NIMBUS_2024_LOG": {
@@ -291,8 +291,8 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2019-10-31T19:22:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2024-02-02T00:00:00Z"
         }
     },
     "DIGICERT_NESSIE_2024_LOG": {
@@ -435,8 +435,8 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "RETIRED",
-            "timestamp": "2022-09-29T00:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2023-12-01T00:00:00Z"
         }
     },
     "DIGICERT_YETI_2024_LOG": {
@@ -635,8 +635,8 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2019-12-17T18:38:01Z"
+            "state_type": "REJECTED",
+            "timestamp": "2024-02-02T00:00:00Z"
         }
     },
     "GOOGLE_ARGON_2024_LOG": {
@@ -932,8 +932,8 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2019-12-17T18:38:01Z"
+            "state_type": "REJECTED",
+            "timestamp": "2024-02-02T00:00:00Z"
         }
     },
     "GOOGLE_XENON_2024_LOG": {
@@ -1060,8 +1060,8 @@
             "end_exclusive": "2024-01-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2021-03-01T19:24:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2024-02-02T00:00:00Z"
         }
     },
     "LETS_ENCRYPT_OAK_2024H1_LOG": {
@@ -1076,8 +1076,8 @@
             "end_exclusive": "2024-07-20T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2022-11-30T17:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2024-08-08T18:00:00Z"
         }
     },
     "LETS_ENCRYPT_OAK_2024H2_LOG": {
@@ -1371,8 +1371,8 @@
         "mmd": 86400,
         "description": "Sectigo 'Sabre' CT log",
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2017-10-10T00:38:10Z"
+            "state_type": "READONLY",
+            "timestamp": "2024-05-06T12:53:20Z"
         }
     },
     "SHECA_CT_LOG_1": {
@@ -1547,8 +1547,8 @@
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2021-03-01T19:24:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2024-02-02T00:00:00Z"
         }
     },
     "TRUST_ASIA_LOG_2024": {
