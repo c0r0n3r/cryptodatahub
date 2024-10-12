@@ -860,7 +860,7 @@
         "group_type": "HYBRID_PQS"
     },
     "SECP521R1_KYBER_1024_R3": {
-        "name": "secp384r1/Kyber-1024-r3",
+        "name": "secp521r1/Kyber-1024-r3",
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
