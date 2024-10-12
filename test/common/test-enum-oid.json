@@ -1,0 +1,12 @@
+{
+    "ONE": {
+        "name": "one",
+        "long_name": null,
+        "oid": "1.1.1.1.1.1"
+    },
+    "TWO": {
+        "name": "two",
+        "long_name": null,
+        "oid": "2.2.2.2.2.2"
+    }
+}
