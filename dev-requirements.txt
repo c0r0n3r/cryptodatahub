@@ -1,4 +1,0 @@
-tox
-coverage
-pyfakefs
-beautifulsoup4

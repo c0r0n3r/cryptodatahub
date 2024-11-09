@@ -41,7 +41,8 @@ CertificateTransparencyLogStateType = enum.Enum(
 
 
 class CertificateTransparencyLogDateTimeBase(CryptoDataParamsBase):
-    def _asdict_serializer(self, _, __, value):
+    @classmethod
+    def _asdict_serializer(cls, _, __, value):
         if isinstance(value, datetime.datetime):
             return value.strftime("%Y-%m-%dT%H:%M:%SZ")
 

@@ -356,7 +356,8 @@ class CryptoDataParamsBase():
             if attribute.init
         ]
 
-    def _asdict_filter(self, attribute, value):
+    @staticmethod
+    def _asdict_filter(attribute, value):
         if attribute.name.startswith('_'):
             return False
 
@@ -365,7 +366,8 @@ class CryptoDataParamsBase():
 
         return True
 
-    def _asdict_serializer(self, _, __, value):
+    @classmethod
+    def _asdict_serializer(cls, _, __, value):
         if hasattr(value, '_asdict'):
             return getattr(value, '_asdict')()
         if isinstance(value, enum.Enum):

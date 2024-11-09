@@ -1,13 +1,18 @@
-[BASIC]
+[MAIN]
 
-good-names = e,i
+jobs=0
 
 [MASTER]
 
+load-plugins = pylint.extensions.no_self_use
+
 [FORMAT]
 
-max-line-length = 120
+max-line-length=120
 
 [MESSAGES CONTROL]
 
-disable = missing-docstring,too-few-public-methods,too-many-function-args
+disable=
+    missing-docstring,
+    too-few-public-methods,
+    too-many-function-args,

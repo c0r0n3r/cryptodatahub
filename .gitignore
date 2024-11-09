@@ -5,9 +5,10 @@
 
 *.pyc
 
+*.egg-info
+
 /.coverage
 
-/*.egg-info
 /.eggs
 /.tox
 /Pipfile

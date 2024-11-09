@@ -6,7 +6,7 @@ stages:
 - deploy
 
 before_script:
-- pip install -r dev-requirements.txt
+- pip install tox .[tests]
 
 pylint:
   image: python:3.12-slim
@@ -63,7 +63,8 @@ coveralls:
   stage: deploy
   script:
     - pip install coveralls
-    - pip install -r requirements.txt
+    - pip install .
+    - pip install .[tests]
     - coverage run -m unittest -v -f
     - coveralls
   only:
@@ -71,7 +72,9 @@ coveralls:
       - master
 
 obs:
-  image: coroner/python_obs
+  image:
+    name: coroner/python_obs
+    pull_policy: always
   stage: deploy
   variables:
     GIT_SUBMODULE_STRATEGY: recursive

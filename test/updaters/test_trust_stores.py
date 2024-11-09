@@ -39,7 +39,8 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
         self.public_key_x509_lets_encrypt = self._get_public_key_x509('letsencrypt_isrg_root_x1')
         self.public_key_x509_snakeoil_ca = self._get_public_key_x509('snakeoil_ca_cert')
 
-    def _get_mock_data_mozilla(self, public_keys=(), options=None):
+    @staticmethod
+    def _get_mock_data_mozilla(public_keys=(), options=None):
         mock_data = io.StringIO()
         dict_writer = csv.DictWriter(
             mock_data, FetcherRootCertificateStoreMozilla.CSV_FIELDS,
@@ -55,7 +56,8 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
 
         return mock_data.getvalue().encode('ascii')
 
-    def _get_mock_data_microsoft(self, public_keys=(), options=None):
+    @staticmethod
+    def _get_mock_data_microsoft(public_keys=(), options=None):
         mock_data = io.StringIO()
         dict_writer = csv.DictWriter(
             mock_data, FetcherRootCertificateStoreMicrosoft.CSV_FIELDS,
@@ -72,7 +74,8 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
 
         return mock_data.getvalue().encode('ascii')
 
-    def _get_mock_data_apple(self, public_keys=()):
+    @staticmethod
+    def _get_mock_data_apple(public_keys=()):
         mock_data = os.linesep.join([
             '<h2 id="trusted">Trusted Certificates</h2>',
             '<tbody>',
@@ -97,7 +100,8 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
 
         return mock_data.encode('ascii')
 
-    def _get_mock_data_google(self, public_keys=()):
+    @staticmethod
+    def _get_mock_data_google(public_keys=()):
         mock_data = io.BytesIO()
 
         with tarfile.open(fileobj=mock_data, mode='w:gz') as tar:
