@@ -21,7 +21,7 @@ from cryptodatahub.common.types import (
 @functools.total_ordering
 @attr.s(frozen=True, order=False, eq=False, hash=True)
 class GradeTypeParams(CryptoDataParamsNamed):
-    _numeric = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    _numeric = attr.ib(validator=attr.validators.instance_of(int))
 
     def __eq__(self, other):
         return self._numeric == other._numeric

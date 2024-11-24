@@ -43,7 +43,7 @@ class PublicKeySize(GradeableComplex):
     _ELLIPTIC_CURVE_TYPES = [Authentication.ECDSA, Authentication.EDDSA, KeyExchange.ECDH, KeyExchange.ECDHE]
 
     key_type = attr.ib(validator=attr.validators.instance_of((Authentication, KeyExchange)))
-    value = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    value = attr.ib(validator=attr.validators.instance_of(int))
 
     @value.validator
     def _value_validator(self, attribute, value):  # pylint: disable=unused-argument
@@ -117,17 +117,17 @@ class PublicKeyParamBase():
 
 @attr.s(frozen=True)
 class PublicKeyParamsDsa(PublicKeyParamBase):
-    prime = attr.ib(validator=attr.validators.instance_of(six.integer_types))
-    generator = attr.ib(validator=attr.validators.instance_of(six.integer_types))
-    order = attr.ib(validator=attr.validators.instance_of(six.integer_types))
-    public_key_value = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    prime = attr.ib(validator=attr.validators.instance_of(int))
+    generator = attr.ib(validator=attr.validators.instance_of(int))
+    order = attr.ib(validator=attr.validators.instance_of(int))
+    public_key_value = attr.ib(validator=attr.validators.instance_of(int))
 
 
 @attr.s(frozen=True)
 class PublicKeyParamsEcdsa(PublicKeyParamBase):
     named_group = attr.ib(validator=attr.validators.instance_of(NamedGroup))
-    point_x = attr.ib(validator=attr.validators.instance_of(six.integer_types))
-    point_y = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    point_x = attr.ib(validator=attr.validators.instance_of(int))
+    point_y = attr.ib(validator=attr.validators.instance_of(int))
 
     @classmethod
     def from_octet_bit_string(cls, named_group, octet_bit_string):
@@ -151,8 +151,8 @@ class PublicKeyParamsEddsa(PublicKeyParamBase):
 
 @attr.s(frozen=True)
 class PublicKeyParamsRsa(PublicKeyParamBase):
-    modulus = attr.ib(validator=attr.validators.instance_of(six.integer_types))
-    public_exponent = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    modulus = attr.ib(validator=attr.validators.instance_of(int))
+    public_exponent = attr.ib(validator=attr.validators.instance_of(int))
 
 
 @attr.s(eq=False, frozen=True)

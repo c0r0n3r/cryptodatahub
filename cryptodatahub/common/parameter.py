@@ -33,18 +33,18 @@ Standard = CryptoDataEnumBase('Standard', CryptoDataEnumBase.get_json_records(St
 class DHParameterNumbers():
     p = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
-        validator=attr.validators.instance_of(six.integer_types),
+        validator=attr.validators.instance_of(int),
         metadata={'human_readable_name': 'p'},
     )
     g = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
-        validator=attr.validators.instance_of(six.integer_types),
+        validator=attr.validators.instance_of(int),
         metadata={'human_readable_name': 'g'},
     )
     q = attr.ib(  # pylint: disable=invalid-name
         default=None,
         converter=convert_big_enum(),
-        validator=attr.validators.optional(attr.validators.instance_of(six.integer_types)),
+        validator=attr.validators.optional(attr.validators.instance_of(int)),
         metadata={'human_readable_name': 'q'},
     )
 
@@ -67,7 +67,7 @@ class DHParamWellKnownParams(CryptoDataParamsBase, GradeableVulnerabilities):
         converter=convert_iterable(convert_enum(Standard)),
         validator=attr.validators.deep_iterable(attr.validators.instance_of(Standard))
     )
-    key_size = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    key_size = attr.ib(validator=attr.validators.instance_of(int))
     safe_prime = attr.ib(default=True, validator=attr.validators.instance_of(bool))
 
     @classmethod
@@ -96,22 +96,22 @@ DHParamWellKnown = DHParamWellKnownBase(
 class ECParameterNumbers():
     a = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
-        validator=attr.validators.instance_of(six.integer_types),
+        validator=attr.validators.instance_of(int),
         metadata={'human_readable_name': 'a'},
     )
     b = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
-        validator=attr.validators.instance_of(six.integer_types),
+        validator=attr.validators.instance_of(int),
         metadata={'human_readable_name': 'b'},
     )
     x = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
-        validator=attr.validators.instance_of(six.integer_types),
+        validator=attr.validators.instance_of(int),
         metadata={'human_readable_name': 'x'},
     )
     y = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
-        validator=attr.validators.instance_of(six.integer_types),
+        validator=attr.validators.instance_of(int),
         metadata={'human_readable_name': 'y'},
     )
 
@@ -122,7 +122,7 @@ class ECParamWellKnownParams(CryptoDataParamsNamed):
         converter=convert_iterable(convert_enum(Standard)),
         validator=attr.validators.deep_iterable(attr.validators.instance_of(Standard))
     )
-    aliases = attr.ib(validator=attr.validators.deep_iterable(attr.validators.instance_of(six.string_types)))
+    aliases = attr.ib(validator=attr.validators.deep_iterable(attr.validators.instance_of(str)))
     parameter_numbers = attr.ib(
         converter=convert_dict_to_object(ECParameterNumbers),
         validator=attr.validators.instance_of(ECParameterNumbers)
