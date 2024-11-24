@@ -10,4 +10,4 @@ max-line-length = 120
 
 [MESSAGES CONTROL]
 
-disable = missing-docstring,too-few-public-methods,too-many-function-args,useless-object-inheritance,super-with-arguments,consider-using-f-string
+disable = missing-docstring,too-few-public-methods,too-many-function-args,super-with-arguments,consider-using-f-string

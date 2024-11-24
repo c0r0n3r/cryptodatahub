@@ -64,7 +64,7 @@ def hash_bytes(hash_algorithm, hashable_value):
 
 
 @attr.s
-class HttpFetcher(object):
+class HttpFetcher():
     connect_timeout = attr.ib(default=2, validator=attr.validators.instance_of((int, float)))
     read_timeout = attr.ib(default=1, validator=attr.validators.instance_of((int, float)))
     retry = attr.ib(default=1, validator=attr.validators.instance_of(int))

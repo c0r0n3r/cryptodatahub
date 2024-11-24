@@ -77,7 +77,7 @@ AttackNamed = CryptoDataEnumOIDBase('AttackNamed', CryptoDataEnumBase.get_json_r
 
 
 @attr.s(frozen=True, eq=False)
-class Gradeable(object):
+class Gradeable():
     @staticmethod
     def _get_vulnerbilities(obj):
         if obj is None:
@@ -135,7 +135,7 @@ class Gradeable(object):
 
 
 @attr.s(frozen=True)
-class Vulnerability(object):
+class Vulnerability():
     attack_type = attr.ib(
         converter=convert_enum(AttackType),
         validator=attr.validators.optional(attr.validators.instance_of(AttackType))
