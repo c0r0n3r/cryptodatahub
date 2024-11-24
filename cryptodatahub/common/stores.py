@@ -28,10 +28,10 @@ from cryptodatahub.common.utils import bytes_to_hex_string, name_to_enum_item_na
 
 @attr.s(frozen=True)
 class CertificateTransparencyOperator(CryptoDataParamsBase):
-    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    name = attr.ib(validator=attr.validators.instance_of(str))
     email = attr.ib(
         default=(),
-        validator=attr.validators.deep_iterable(attr.validators.instance_of(six.string_types))
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(str))
     )
 
 
@@ -102,7 +102,7 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
         metadata={'human_friendly': False},
     )
     url = attr.ib(
-        validator=attr.validators.instance_of(six.string_types),
+        validator=attr.validators.instance_of(str),
         metadata={'human_readable_name': 'URL', 'human_friendly': False},
     )
     mmd = attr.ib(
@@ -111,11 +111,11 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
     )
     description = attr.ib(
         default=None,
-        validator=attr.validators.optional(attr.validators.instance_of(six.string_types)),
+        validator=attr.validators.optional(attr.validators.instance_of(str)),
     )
     dns = attr.ib(
         default=None,
-        validator=attr.validators.optional(attr.validators.instance_of(six.string_types)),
+        validator=attr.validators.optional(attr.validators.instance_of(str)),
         metadata={'human_friendly': False},
     )
     temporal_interval = attr.ib(
@@ -186,7 +186,7 @@ class CertificateTrustConstraint():
     )
     domains = attr.ib(
         default=(),
-        validator=attr.validators.deep_iterable(attr.validators.instance_of(six.string_types))
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(str))
     )
     date = attr.ib(
         default=None,
@@ -256,7 +256,7 @@ class RootCertificateParams(CryptoDataParamsFetchedBase):
         else:
             name = subject['organization_name']
 
-        if not isinstance(name, six.string_types):
+        if not isinstance(name, str):
             name = ' '.join(name)
 
         return '{}_{}'.format(name_to_enum_item_name(name), serial_number)

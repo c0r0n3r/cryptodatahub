@@ -93,7 +93,7 @@ class _EnumConverter(_ConverterBase):
         if value is None:
             return None
 
-        if not isinstance(value, six.string_types):
+        if not isinstance(value, str):
             return value
 
         try:
@@ -160,7 +160,7 @@ class _Base64DataConverter(_ConverterBase):
         if isinstance(value, bytearray) or (six.PY3 and isinstance(value, bytes)):
             return Base64Data(value)
 
-        if not isinstance(value, six.string_types):
+        if not isinstance(value, str):
             return value
 
         try:
@@ -187,7 +187,7 @@ class _BigNumberConverter(_ConverterBase):
         if not isinstance(value, collections_abc.Iterable):
             return value
 
-        if not all(map(lambda big_number_part: isinstance(big_number_part, six.string_types), value)):
+        if not all(map(lambda big_number_part: isinstance(big_number_part, str), value)):
             return value
 
         try:
@@ -286,7 +286,7 @@ class _ClientVersionConverter(_ConverterBase):
         if version is None:
             return None
 
-        if not isinstance(version, six.string_types):
+        if not isinstance(version, str):
             return version
 
         try:
@@ -310,7 +310,7 @@ class _UrlConverter(_ConverterBase):
         if value is None:
             return None
 
-        if not isinstance(value, six.string_types):
+        if not isinstance(value, str):
             return value
 
         try:
@@ -398,8 +398,8 @@ class CryptoDataParamsFetchedBase(CryptoDataParamsBase):
 
 @attr.s(frozen=True)
 class CryptoDataParamsNamed(CryptoDataParamsBase):
-    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
-    long_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
+    name = attr.ib(validator=attr.validators.instance_of(str))
+    long_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
 
     def __str__(self):
         return self.name
@@ -425,7 +425,7 @@ class CryptoDataParamsEnumNumeric(CryptoDataParamsBase):
 
 @attr.s(frozen=True)
 class CryptoDataParamsEnumString(CryptoDataParamsBase):
-    code = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    code = attr.ib(validator=attr.validators.instance_of(str))
 
     def __str__(self):
         return self.code
@@ -439,7 +439,7 @@ class CryptoDataParamsEnumString(CryptoDataParamsBase):
 
 @attr.s(frozen=True)
 class CryptoDataParamsOIDOptional(CryptoDataParamsNamed):
-    oid = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
+    oid = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
 
 
 class CryptoDataEnumBase(enum.Enum):

@@ -189,9 +189,9 @@ TlsCertificateCompressionAlgorithm = CryptoDataEnumCodedBase(
 
 @attr.s(frozen=True)
 class CipherParamsBase(CryptoDataParamsEnumNumeric, GradeableComplex):  # pylint: disable=too-many-instance-attributes
-    iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
-    iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
-    openssl_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
+    iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
+    iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
+    openssl_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
     key_exchange = attr.ib(
         converter=convert_enum(KeyExchange),
         validator=attr.validators.optional(attr.validators.instance_of(KeyExchange)),
