@@ -37,7 +37,7 @@ class SshAlgorithmParams(CryptoDataParamsEnumString, GradeableComplex):
     def __attrs_post_init__(self):
         gradeables = []
         for algorithm in self._gradeable_algorithms:
-            if isinstance(algorithm, six.string_types):
+            if isinstance(algorithm, str):
                 gradeable = getattr(self, algorithm)
                 if gradeable is not None:
                     gradeable = gradeable.value
@@ -101,7 +101,7 @@ class KexAlgorithmParams(SshAlgorithmParams):
     key_parameter = attr.ib(
         converter=convert_variadic((convert_enum(NamedGroup), convert_enum(DHParamWellKnown))),
         validator=attr.validators.optional(
-            attr.validators.instance_of((NamedGroup, DHParamWellKnown, six.string_types))
+            attr.validators.instance_of((NamedGroup, DHParamWellKnown, str))
         )
     )
     exchange_hash = attr.ib(

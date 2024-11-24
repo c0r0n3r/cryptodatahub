@@ -38,7 +38,7 @@ class ClientTokenBindingParams(CryptoDataParamsBase):
         converter=convert_iterable(convert_enum(TlsTokenBindingParamater)),
         validator=attr.validators.deep_iterable(attr.validators.instance_of(TlsTokenBindingParamater))
     )
-    protocol_version = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    protocol_version = attr.ib(validator=attr.validators.instance_of(str))
 
 
 @attr.s(frozen=True)

@@ -58,7 +58,7 @@ class DHParamWellKnownParams(CryptoDataParamsBase, GradeableVulnerabilities):
         converter=convert_dict_to_object(DHParameterNumbers),
         validator=attr.validators.instance_of(DHParameterNumbers)
     )
-    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    name = attr.ib(validator=attr.validators.instance_of(str))
     source = attr.ib(
         converter=convert_variadic((convert_enum(Entity), convert_enum(Server))),
         validator=attr.validators.instance_of((Entity, Server))
