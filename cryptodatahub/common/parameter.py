@@ -30,7 +30,7 @@ Standard = CryptoDataEnumBase('Standard', CryptoDataEnumBase.get_json_records(St
 
 
 @attr.s(eq=False, frozen=True)
-class DHParameterNumbers(object):
+class DHParameterNumbers():
     p = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
         validator=attr.validators.instance_of(six.integer_types),
@@ -93,7 +93,7 @@ DHParamWellKnown = DHParamWellKnownBase(
 
 
 @attr.s
-class ECParameterNumbers(object):
+class ECParameterNumbers():
     a = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
         validator=attr.validators.instance_of(six.integer_types),

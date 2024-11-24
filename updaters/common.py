@@ -14,7 +14,7 @@ from cryptodatahub.common.stores import RootCertificate
 
 
 @attr.s(frozen=True)
-class CertificatePemFetcher(object):
+class CertificatePemFetcher():
     http_fetcher = attr.ib(
         init=False,
         default=HttpFetcher(connect_timeout=5, read_timeout=30, retry=10),
@@ -34,7 +34,7 @@ class CertificatePemFetcher(object):
 
 
 @attr.s
-class FetcherBase(object):
+class FetcherBase():
     parsed_data = attr.ib(validator=attr.validators.instance_of(collections_abc.Iterable))
 
     @classmethod
@@ -93,7 +93,7 @@ class FetcherCsvBase(FetcherBase):
 
 
 @attr.s
-class UpdaterBase(object):
+class UpdaterBase():
     fetcher_class = attr.ib(validator=attr.validators.instance_of(type))
     enum_class = attr.ib(validator=attr.validators.instance_of(type))
     enum_param_class = attr.ib(validator=attr.validators.instance_of(type))

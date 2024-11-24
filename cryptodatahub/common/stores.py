@@ -179,7 +179,7 @@ RootCertificateTrustConstraintAction = enum.Enum('RootCertificateTrustConstraint
 
 
 @attr.s(frozen=True)
-class CertificateTrustConstraint(object):
+class CertificateTrustConstraint():
     action = attr.ib(
         converter=convert_enum(RootCertificateTrustConstraintAction),
         validator=attr.validators.instance_of(RootCertificateTrustConstraintAction),
@@ -196,7 +196,7 @@ class CertificateTrustConstraint(object):
 
 
 @attr.s(repr=False, slots=True, hash=True)
-class _RootCertificateParamCertificateConverter(object):
+class _RootCertificateParamCertificateConverter():
     def __call__(self, value):
         if value is None:
             return None

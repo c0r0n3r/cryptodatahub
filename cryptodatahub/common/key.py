@@ -111,7 +111,7 @@ def convert_public_key_size(key_exchange):
 
 
 @attr.s(frozen=True)
-class PublicKeyParamBase(object):
+class PublicKeyParamBase():
     pass
 
 
@@ -156,7 +156,7 @@ class PublicKeyParamsRsa(PublicKeyParamBase):
 
 
 @attr.s(eq=False, frozen=True)
-class PublicKey(object):
+class PublicKey():
     _public_key = attr.ib(validator=attr.validators.instance_of(asn1crypto.keys.PublicKeyInfo))
 
     @classmethod

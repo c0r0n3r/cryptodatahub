@@ -27,7 +27,7 @@ import urllib3
 from cryptodatahub.common.exception import InvalidValue
 
 
-class _ConverterBase(object):
+class _ConverterBase():
     @abc.abstractmethod
     def __call__(self, value):
         raise NotImplementedError()
@@ -112,7 +112,7 @@ def convert_enum(enum_type):
 
 
 @attr.s(frozen=True)
-class Base64Data(object):
+class Base64Data():
     value = attr.ib(validator=attr.validators.instance_of((bytes, bytearray)))
 
     def _asdict(self):
@@ -264,7 +264,7 @@ def convert_mapping(key_converter=None, value_converter=None):
 
 
 @attr.s(frozen=True)
-class ClientVersion(object):
+class ClientVersion():
     parts = attr.ib(validator=attr.validators.deep_iterable(attr.validators.instance_of(int)))
 
     @classmethod
@@ -353,7 +353,7 @@ def convert_variadic(converters):
     return _VariadicConverter(converters)
 
 
-class CryptoDataParamsBase(object):
+class CryptoDataParamsBase():
     @classmethod
     def get_init_attribute_names(cls):
         return [
