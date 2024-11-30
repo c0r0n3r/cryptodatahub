@@ -174,7 +174,7 @@ class PublicKey():
     @classmethod
     def from_params(cls, params):
         if isinstance(params, PublicKeyParamsDsa):
-            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(six.u('dsa'))
+            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId('dsa')
             parameters = asn1crypto.keys.DSAParams({
                 'p': params.prime, 'g': params.generator, 'q': params.order,
             })
@@ -187,9 +187,9 @@ class PublicKey():
             })
         elif isinstance(params, PublicKeyParamsEddsa):
             if params.curve_type == NamedGroup.CURVE25519:
-                algorithm_name = six.u('ed25519')
+                algorithm_name = 'ed25519'
             elif params.curve_type == NamedGroup.CURVE448:
-                algorithm_name = six.u('ed448')
+                algorithm_name = 'ed448'
             else:
                 raise NotImplementedError()
 
@@ -201,7 +201,7 @@ class PublicKey():
                 'public_key': asn1crypto.core.OctetBitString(bytes(params.key_data)),
             })
         elif isinstance(params, PublicKeyParamsRsa):
-            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(six.u('rsa'))
+            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId('rsa')
             public_key = asn1crypto.keys.PublicKeyInfo({
                 'algorithm': asn1crypto.keys.PublicKeyAlgorithm({'algorithm': algorithm_id}),
                 'public_key': asn1crypto.keys.RSAPublicKey(
@@ -209,7 +209,7 @@ class PublicKey():
                 )
             })
         elif isinstance(params, PublicKeyParamsEcdsa):
-            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(six.u('ec'))
+            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId('ec')
             parameters = asn1crypto.keys.ECDomainParameters({
                 'named': params.named_group.value.oid
             })
@@ -281,7 +281,7 @@ class PublicKey():
 
     @property
     def pem(self):
-        return asn1crypto.pem.armor(six.u(self._get_type_name().upper()), self.der).decode('utf-8')
+        return asn1crypto.pem.armor(self._get_type_name().upper(), self.der).decode('utf-8')
 
     @property
     def key_type(self):
@@ -502,7 +502,7 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
         return self._certificate.valid_domains
 
     def is_subject_matches(self, host_name):
-        return self._certificate.is_valid_domain_ip(six.u(host_name))
+        return self._certificate.is_valid_domain_ip(host_name)
 
     @property
     def subject_alternative_names(self):

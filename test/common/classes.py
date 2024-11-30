@@ -170,7 +170,7 @@ class TestClasses:
             items_with_surplus_attributes = []
             for name, item in self.json_data.items():
                 item_keys = item.keys()
-                json_attr_names = [key for key in item_keys if not key.startswith(six.u('_'))]
+                json_attr_names = [key for key in item_keys if not key.startswith('_')]
 
                 item_keys = set(item_keys)
                 param_calss_attr_names = [
