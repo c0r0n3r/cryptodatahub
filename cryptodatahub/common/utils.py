@@ -26,7 +26,7 @@ def bytes_from_hex_string(hex_string, separator=''):
     try:
         binary_data = binascii.a2b_hex(hex_string)
     except (TypeError, ValueError) as e:
-        six.raise_from(ValueError(*e.args), e)
+        raise ValueError(*e.args) from e
 
     return binary_data
 
@@ -58,7 +58,7 @@ def hash_bytes(hash_algorithm, hashable_value):
     try:
         hashlib_funcs = _HASHLIB_FUNCS[hash_algorithm]
     except KeyError as e:
-        six.raise_from(NotImplementedError(hash_algorithm), e)
+        raise NotImplementedError(hash_algorithm) from e
 
     return hashlib_funcs(hashable_value).digest()
 
