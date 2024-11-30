@@ -7,6 +7,7 @@ except ImportError:
 
 import csv
 import datetime
+import io
 import os
 import tarfile
 
@@ -40,7 +41,7 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
         self.public_key_x509_snakeoil_ca = self._get_public_key_x509('snakeoil_ca_cert')
 
     def _get_mock_data_mozilla(self, public_keys=(), options=None):
-        mock_data = six.StringIO()
+        mock_data = io.StringIO()
         dict_writer = csv.DictWriter(
             mock_data, FetcherRootCertificateStoreMozilla.CSV_FIELDS,
             quotechar='"', quoting=csv.QUOTE_ALL
@@ -56,7 +57,7 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
         return mock_data.getvalue().encode('ascii')
 
     def _get_mock_data_microsoft(self, public_keys=(), options=None):
-        mock_data = six.StringIO()
+        mock_data = io.StringIO()
         dict_writer = csv.DictWriter(
             mock_data, FetcherRootCertificateStoreMicrosoft.CSV_FIELDS,
             quotechar='"', quoting=csv.QUOTE_ALL
@@ -98,14 +99,14 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
         return mock_data.encode('ascii')
 
     def _get_mock_data_google(self, public_keys=()):
-        mock_data = six.BytesIO()
+        mock_data = io.BytesIO()
 
         with tarfile.open(fileobj=mock_data, mode='w:gz') as tar:
             for public_key in public_keys:
                 content = public_key.pem.encode('ascii')
                 tarinfo = tarfile.TarInfo(public_key.fingerprints[Hash.SHA2_256])
                 tarinfo.size = len(content)
-                tar.addfile(tarinfo, six.BytesIO(content))
+                tar.addfile(tarinfo, io.BytesIO(content))
 
         return mock_data.getvalue()
 

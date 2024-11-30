@@ -3,6 +3,7 @@
 
 import collections
 import datetime
+import io
 import tarfile
 
 import attr
@@ -39,7 +40,7 @@ class FetcherRootCertificateStoreGoogle(FetcherBase):
         data = HttpFetcher()(
             'https://android.googlesource.com/platform/system/ca-certificates/+archive/refs/heads/master/files.tar.gz'
         )
-        with tarfile.open(fileobj=six.BytesIO(data), mode='r') as tar:
+        with tarfile.open(fileobj=io.BytesIO(data), mode='r') as tar:
             for member in tar.getmembers():
                 yield tar.extractfile(member).read().decode('ascii')
 
