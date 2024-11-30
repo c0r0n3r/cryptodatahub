@@ -139,7 +139,7 @@ class ECParamWellKnownBase(CryptoDataEnumBase):
         try:
             ec_param = cls[named_group.name]
         except KeyError as e:
-            six.raise_from(InvalidValue(named_group, cls), e)
+            raise InvalidValue(named_group, cls) from e
 
         return ec_param
 
