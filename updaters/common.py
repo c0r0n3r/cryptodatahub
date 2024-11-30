@@ -3,6 +3,7 @@
 import abc
 import collections
 import csv
+import io
 import six
 
 from six.moves import collections_abc
@@ -76,7 +77,7 @@ class FetcherCsvBase(FetcherBase):
         data = cls._get_fetcher()(cls._get_csv_url())
 
         csv_reader = csv.DictReader(
-            six.StringIO(six.ensure_str(data)),
+            io.StringIO(six.ensure_str(data)),
             fieldnames=cls._get_csv_fields(),
         )
 
