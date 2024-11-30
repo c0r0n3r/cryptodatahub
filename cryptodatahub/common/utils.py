@@ -16,7 +16,7 @@ def bytes_to_hex_string(byte_array, separator='', lowercase=False):
     else:
         format_str = '{:02X}'
 
-    return separator.join([format_str.format(x) for x in six.iterbytes(bytes(byte_array))])
+    return separator.join([format_str.format(x) for x in bytes(byte_array)])
 
 
 def bytes_from_hex_string(hex_string, separator=''):
