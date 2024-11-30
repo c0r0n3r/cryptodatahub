@@ -31,7 +31,7 @@ class CertificatePemFetcher():
             data = self.http_fetcher(
                 'https://crt.sh/?d={}'.format(sha2_256_fingerprint),
             )
-            return six.ensure_str(data).strip()
+            return data.decode('utf-8').strip()
 
 
 @attr.s
@@ -77,11 +77,11 @@ class FetcherCsvBase(FetcherBase):
         data = cls._get_fetcher()(cls._get_csv_url())
 
         csv_reader = csv.DictReader(
-            io.StringIO(six.ensure_str(data)),
+            io.StringIO(data.decode('utf-8')),
             fieldnames=cls._get_csv_fields(),
         )
 
-        sample = six.ensure_str(data[:4096])
+        sample = data[:4096].decode('utf-8')
         if csv.Sniffer().has_header(sample):
             next(csv_reader, None)
 
