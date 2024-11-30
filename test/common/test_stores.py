@@ -197,10 +197,10 @@ class TestRootCertificateParams(TestClasses.TestKeyBase):
             collections.OrderedDict([
                 ('_meta', collections.OrderedDict([
                     ('_subject', collections.OrderedDict([
-                        ('country_name', six.u('XX')),
-                        ('locality_name', six.u('Default City')),
-                        ('organization_name', six.u('Default Company Ltd')),
-                        ('common_name', six.u('Default Company CA'))
+                        ('country_name', 'XX'),
+                        ('locality_name', 'Default City'),
+                        ('organization_name', 'Default Company Ltd'),
+                        ('common_name', 'Default Company CA')
                     ])),
                     ('_fingerprints', collections.OrderedDict([
                         ('MD5',
