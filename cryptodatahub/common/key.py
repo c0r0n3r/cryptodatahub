@@ -281,7 +281,7 @@ class PublicKey():
 
     @property
     def pem(self):
-        return six.ensure_str(asn1crypto.pem.armor(six.u(self._get_type_name().upper()), self.der))
+        return asn1crypto.pem.armor(six.u(self._get_type_name().upper()), self.der).decode('utf-8')
 
     @property
     def key_type(self):
@@ -491,10 +491,7 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
 
     @property
     def subject(self):
-        return OrderedDict([
-            (six.ensure_str(name), value)
-            for name, value in self._certificate.subject.native.items()
-        ])
+        return self._certificate.subject.native
 
     @property
     def issuer(self):

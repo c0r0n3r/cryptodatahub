@@ -76,7 +76,7 @@ class TestNameToEnumItemName(unittest.TestCase):
         self.assertEqual(name_to_enum_item_name('apo\'s trophe'), 'APOS_TROPHE')
 
     def test_convert_i18n_name(self):
-        self.assertEqual(name_to_enum_item_name(six.ensure_text('αβγ')), six.ensure_text('ΑΒΓ'))
+        self.assertEqual(name_to_enum_item_name('αβγ'), 'ΑΒΓ')
 
 
 class TestHttpFetcher(unittest.TestCase):

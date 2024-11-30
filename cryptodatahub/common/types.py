@@ -357,7 +357,7 @@ class CryptoDataParamsBase():
     @classmethod
     def get_init_attribute_names(cls):
         return [
-            six.ensure_text(name)
+            name
             for name, attribute in attr.fields_dict(cls).items()
             if attribute.init
         ]
@@ -446,7 +446,7 @@ class CryptoDataEnumBase(enum.Enum):
     @classmethod
     def get_json_records(cls, param_class):
         return collections.OrderedDict([
-            (six.ensure_str(unicodedata.normalize('NFD', name).encode('ascii', 'ignore')), param_class(**{
+            (unicodedata.normalize('NFD', name).encode('ascii', 'ignore').decode('utf-8'), param_class(**{
                 init_param_name.replace('-', '_'): value
                 for init_param_name, value in params.items()
                 if not init_param_name.startswith('_')
