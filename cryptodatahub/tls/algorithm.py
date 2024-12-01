@@ -257,7 +257,7 @@ class CipherParamsBase(CryptoDataParamsEnumNumeric, GradeableComplex):  # pylint
 
     def __str__(self):
         if self.iana_name is None:
-            result = six.next(
+            result = next(
                 cipher_suite
                 for cipher_suite in TlsCipherSuite
                 if cipher_suite.value.code == self.code
