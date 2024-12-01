@@ -157,7 +157,7 @@ class _Base64DataConverter(_ConverterBase):
         if value is None:
             return None
 
-        if isinstance(value, bytearray) or (six.PY3 and isinstance(value, bytes)):
+        if isinstance(value, (bytearray, bytes)):
             return Base64Data(value)
 
         if not isinstance(value, str):
