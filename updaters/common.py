@@ -36,7 +36,7 @@ class CertificatePemFetcher():
 
 @attr.s
 class FetcherBase():
-    parsed_data = attr.ib(validator=attr.validators.instance_of(collections_abc.Iterable))
+    parsed_data = attr.ib(validator=attr.validators.instance_of(collections.abc.Iterable))
 
     @classmethod
     @abc.abstractmethod

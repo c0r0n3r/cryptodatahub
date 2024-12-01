@@ -184,7 +184,7 @@ class _BigNumberConverter(_ConverterBase):
         if value is None:
             return None
 
-        if not isinstance(value, collections_abc.Iterable):
+        if not isinstance(value, collections.abc.Iterable):
             return value
 
         if not all(map(lambda big_number_part: isinstance(big_number_part, str), value)):
@@ -207,7 +207,7 @@ def convert_big_enum():
 
 @attr.s(repr=False, slots=True, hash=True)
 class _IterableConverter(_ConverterBase):
-    member_converter = attr.ib(validator=attr.validators.instance_of(collections_abc.Callable))
+    member_converter = attr.ib(validator=attr.validators.instance_of(collections.abc.Callable))
 
     def __call__(self, iterable):
         if iterable is None:
@@ -231,14 +231,14 @@ def convert_iterable(member_converter):
 
 @attr.s(repr=False, slots=True, hash=True)
 class _MappingConverter(_ConverterBase):
-    key_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections_abc.Callable)))
-    value_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections_abc.Callable)))
+    key_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections.abc.Callable)))
+    value_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections.abc.Callable)))
 
     def __call__(self, mapping):
         if mapping is None:
             return None
 
-        if not isinstance(mapping, collections_abc.Mapping):
+        if not isinstance(mapping, collections.abc.Mapping):
             return mapping
 
         try:
