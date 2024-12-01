@@ -9,7 +9,6 @@ except ImportError:
 
 from test.common.classes import TEST_URL_PREFIX
 
-import six
 import urllib3
 
 from cryptodatahub.common.algorithm import Hash

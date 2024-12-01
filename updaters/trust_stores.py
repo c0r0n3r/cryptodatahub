@@ -8,7 +8,6 @@ import tarfile
 
 import attr
 import bs4
-import six
 
 from cryptodatahub.common.entity import Entity
 from cryptodatahub.common.stores import (

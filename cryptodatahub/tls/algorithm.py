@@ -2,7 +2,6 @@
 
 import abc
 import collections
-import six
 
 import attr
 

@@ -13,8 +13,6 @@ import re
 import unicodedata
 
 import dateutil.parser
-import six
-from six.moves import collections_abc
 
 try:
     import pathlib

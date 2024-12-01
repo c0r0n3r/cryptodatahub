@@ -4,7 +4,6 @@ import binascii
 import hashlib
 
 import attr
-import six
 import urllib3
 
 from cryptodatahub.common.algorithm import Hash

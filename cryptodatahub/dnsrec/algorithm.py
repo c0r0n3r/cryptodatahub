@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import attr
-import six
 
 from cryptodatahub.common.algorithm import Hash, KeyExchange, Signature
 from cryptodatahub.common.grade import GradeableComplex

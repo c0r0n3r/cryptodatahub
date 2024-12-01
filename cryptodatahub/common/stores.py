@@ -4,7 +4,6 @@ import collections
 import datetime
 import enum
 import re
-import six
 
 import attr
 

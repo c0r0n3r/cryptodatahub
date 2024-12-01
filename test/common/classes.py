@@ -18,7 +18,6 @@ except ImportError:  # pragma: no cover
 
 import attr
 import pyfakefs.fake_filesystem_unittest
-import six
 
 from cryptodatahub.common.grade import Grade, Gradeable, GradeableSimple, GradeableVulnerabilities
 from cryptodatahub.common.key import PublicKey, PublicKeyX509Base

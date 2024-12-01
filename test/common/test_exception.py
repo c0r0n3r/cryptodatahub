@@ -4,7 +4,6 @@ import unittest
 
 from test.common.classes import EnumIntTest
 
-import six
 
 from cryptodatahub.common.exception import InvalidValue
 
