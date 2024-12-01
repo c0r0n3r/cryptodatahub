@@ -13,7 +13,6 @@ import tarfile
 
 from test.common.classes import TestClasses
 
-import six
 
 from updaters.common import HttpFetcher, UpdaterBase
 from updaters.trust_stores import (

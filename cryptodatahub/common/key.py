@@ -8,7 +8,6 @@ import os
 
 from collections import OrderedDict
 
-import six
 import asn1crypto.keys
 import asn1crypto.pem
 import asn1crypto.x509

@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import six
 import attr
 
 from cryptodatahub.common.entity import Entity, Server

@@ -4,9 +4,7 @@ import abc
 import collections
 import csv
 import io
-import six
 
-from six.moves import collections_abc
 
 import attr
 

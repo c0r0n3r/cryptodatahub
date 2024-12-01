@@ -9,7 +9,6 @@ import collections
 
 from test.common.classes import TestClasses
 
-import six
 
 from cryptodatahub.common.algorithm import Hash
 from cryptodatahub.common.entity import Entity

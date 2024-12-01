@@ -4,7 +4,6 @@ import abc
 import enum
 import attr
 
-import six
 
 from cryptodatahub.common.algorithm import (
     BlockCipher,

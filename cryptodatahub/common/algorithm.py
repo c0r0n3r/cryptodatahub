@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import enum
-import six
 
 import attr
 

@@ -7,8 +7,6 @@ except ImportError:
 
 from test.common.classes import TestClasses
 
-import six
-
 from cryptodatahub.common.algorithm import NamedGroup
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.parameter import DHParameterNumbers, DHParamWellKnown, ECParamWellKnown

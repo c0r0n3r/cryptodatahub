@@ -4,7 +4,6 @@ import abc
 import enum
 import functools
 
-import six
 
 import attr
 
