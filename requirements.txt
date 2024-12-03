@@ -1,5 +1,4 @@
 asn1crypto
 attrs
 python-dateutil
-six>=1.13
 urllib3
