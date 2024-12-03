@@ -1,18 +1,10 @@
 # -*- coding: utf-8 -*-
 
-try:
-    import unittest
-except ImportError:
-    import unittest2 as unittest
-
-try:
-    from unittest import mock
-except ImportError:
-    import mock
-
 import collections
 import datetime
 import os
+import unittest
+from unittest import mock
 
 from test.common.classes import TestClasses
 

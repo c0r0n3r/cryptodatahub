@@ -1,17 +1,13 @@
 # -*- coding: utf-8 -*-
 
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
+import collections
+import datetime
+import unittest
 
 try:
     import pathlib2 as pathlib
 except ImportError:
     import pathlib
-
-import collections
-import datetime
 
 from test.common.classes import (
     TestEnumNamedParams,

@@ -1,15 +1,11 @@
 # -*- coding: utf-8 -*-
 
-try:
-    import unittest
-except ImportError:
-    import unittest2 as unittest
-
 import abc
 import codecs
 import collections
 import enum
 import json
+import unittest
 
 try:
     import pathlib
