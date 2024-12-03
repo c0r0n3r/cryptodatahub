@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
 
-try:
-    import unittest
-    from unittest import mock
-except ImportError:
-    import unittest2 as unittest
-    import mock
+import unittest
+from unittest import mock
 
 from test.common.classes import TEST_URL_PREFIX
 
