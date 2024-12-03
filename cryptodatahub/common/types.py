@@ -9,15 +9,11 @@ import enum
 import json
 import inspect
 import os
+import pathlib
 import re
 import unicodedata
 
 import dateutil.parser
-
-try:
-    import pathlib
-except ImportError:  # pragma: no cover
-    import pathlib2 as pathlib  # pragma: no cover
 
 import attr
 import urllib3

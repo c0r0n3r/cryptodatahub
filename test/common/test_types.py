@@ -2,12 +2,8 @@
 
 import collections
 import datetime
+import pathlib
 import unittest
-
-try:
-    import pathlib2 as pathlib
-except ImportError:
-    import pathlib
 
 from test.common.classes import (
     TestEnumNamedParams,
