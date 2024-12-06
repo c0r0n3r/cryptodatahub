@@ -1,0 +1,1868 @@
+{
+    "BRAINPOOLP160R1": {
+        "name": "brainpoolP160r1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "340E7BE2 A280EB74 E2BE61BA DA745D97 E8F7C300"
+            ],
+            "b": [
+                "1E589A85 95423412 134FAA2D BDEC95C8 D8675E58"
+            ],
+            "x": [
+                "BED5AF16 EA3F6A4F 62938C46 31EB5AF7 BDBCDBC3"
+            ],
+            "y": [
+                "1667CB47 7A1A8EC3 38F94741 669C9763 16DA6321"
+            ]
+        }
+    },
+    "BRAINPOOLP160T1": {
+        "name": "brainpoolP160t1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "E95E4A5F 737059DC 60DFC7AD 95B3D813 9515620C"
+            ],
+            "b": [
+                "7A556B6D AE535B7B 51ED2C4D 7DAA7A0B 5C55F380"
+            ],
+            "x": [
+                "B199B13B 9B34EFC1 397E64BA EB05ACC2 65FF2378"
+            ],
+            "y": [
+                "ADD6718B 7C7C1961 F0991B84 24437721 52C9E0AD"
+            ]
+        }
+    },
+    "BRAINPOOLP192R1": {
+        "name": "brainpoolP192r1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "6A911740 76B1E0E1 9C39C031 FE8685C1 CAE040E5 C69A28EF"
+            ],
+            "b": [
+                "469A28EF 7C28CCA3 DC721D04 4F4496BC CA7EF414 6FBF25C9"
+            ],
+            "x": [
+                "C0A0647E AAB6A487 53B033C5 6CB0F090 0A2F5C48 53375FD6"
+            ],
+            "y": [
+                "14B69086 6ABD5BB8 8B5F4828 C1490002 E6773FA2 FA299B8F"
+            ]
+        }
+    },
+    "BRAINPOOLP192T1": {
+        "name": "brainpoolP192t1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "C302F41D 932A36CD A7A34630 93D18DB7 8FCE476D E1A86294"
+            ],
+            "b": [
+                "13D56FFA EC78681E 68F9DEB4 3B35BEC2 FB68542E 27897B79"
+            ],
+            "x": [
+                "3AE9E58C 82F63C30 282E1FE7 BBF43FA7 2C446AF6 F4618129"
+            ],
+            "y": [
+                "97E2C566 7C2223A9 02AB5CA4 49D0084B 7E5B3DE7 CCC01C9"
+            ]
+        }
+    },
+    "BRAINPOOLP224R1": {
+        "name": "brainpoolP224r1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "68A5E62C A9CE6C1C 299803A6 C1530B51 4E182AD8 B0042A59",
+                "CAD29F43"
+            ],
+            "b": [
+                "2580F63C CFE44138 870713B1 A92369E3 3E2135D2 66DBB372",
+                "386C400B"
+            ],
+            "x": [
+                "D9029AD2 C7E5CF43 40823B2A 87DC68C9 E4CE3174 C1E6EFDE",
+                "E12C07D"
+            ],
+            "y": [
+                "58AA56F7 72C0726F 24C6B89E 4ECDAC24 354B9E99 CAA3F6D3",
+                "761402CD"
+            ]
+        }
+    },
+    "BRAINPOOLP224T1": {
+        "name": "brainpoolP224t1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "D7C134AA 26436686 2A183025 75D1D787 B09F0757 97DA89F5",
+                "7EC8C0FC"
+            ],
+            "b": [
+                "4B337D93 4104CD7B EF271BF6 0CED1ED2 0DA14C08 B3BB64F1",
+                "8A60888D"
+            ],
+            "x": [
+                "6AB1E344 CE25FF38 96424E7F FE14762E CB49F892 8AC0C760",
+                "29B4D580"
+            ],
+            "y": [
+                "374E9F51 43E568CD 23F3F4D7 C0D4B1E4 1C8CC0D1 C6ABD5F1",
+                "A46DB4C"
+            ]
+        }
+    },
+    "BRAINPOOLP256R1": {
+        "name": "brainpoolP256r1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "7D5A0975 FC2C3057 EEF67530 417AFFE7 FB8055C1 26DC5C6C",
+                "E94A4B44 F330B5D9"
+            ],
+            "b": [
+                "26DC5C6C E94A4B44 F330B5D9 BBD77CBF 95841629 5CF7E1CE",
+                "6BCCDC18 FF8C07B6"
+            ],
+            "x": [
+                "8BD2AEB9 CB7E57CB 2C4B482F FC81B7AF B9DE27E1 E3BD23C2",
+                "3A4453BD 9ACE3262"
+            ],
+            "y": [
+                "547EF835 C3DAC4FD 97F8461A 14611DC9 C2774513 2DED8E54",
+                "5C1D54C7 2F046997"
+            ]
+        }
+    },
+    "BRAINPOOLP256T1": {
+        "name": "brainpoolP256t1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "A9FB57DB A1EEA9BC 3E660A90 9D838D72 6E3BF623 D5262028",
+                "2013481D 1F6E5374"
+            ],
+            "b": [
+                "662C61C4 30D84EA4 FE66A773 3D0B76B7 BF93EBC4 AF2F4925",
+                "6AE58101 FEE92B04"
+            ],
+            "x": [
+                "A3E8EB3C C1CFE7B7 732213B2 3A656149 AFA142C4 7AAFBC2B",
+                "79A19156 2E1305F4"
+            ],
+            "y": [
+                "2D996C82 3439C56D 7F7B22E1 4644417E 69BCB6DE 39D02700",
+                "1DABE8F3 5B25C9BE"
+            ]
+        }
+    },
+    "BRAINPOOLP320R1": {
+        "name": "brainpoolP320r1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "3EE30B56 8FBAB0F8 83CCEBD4 6D3F3BB8 A2A73513 F5EB79DA",
+                "66190EB0 85FFA9F4 92F375A9 7D860EB4"
+            ],
+            "b": [
+                "52088394 9DFDBC42 D3AD1986 40688A6F E13F4134 9554B49A",
+                "CC31DCCD 88453981 6F5EB4AC 8FB1F1A6"
+            ],
+            "x": [
+                "43BD7E9A FB53D8B8 5289BCC4 8EE5BFE6 F20137D1 0A087EB6",
+                "E7871E2A 10A599C7 10AF8D0D 39E20611"
+            ],
+            "y": [
+                "14FDD055 45EC1CC8 AB409324 7F77275E 0743FFED 117182EA",
+                "A9C77877 AAAC6AC7 D35245D1 692E8EE1"
+            ]
+        }
+    },
+    "BRAINPOOLP320T1": {
+        "name": "brainpoolP320t1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "D35E4720 36BC4FB7 E13C785E D201E065 F98FCFA6 F6F40DEF",
+                "4F92B9EC 7893EC28 FCD412B1 F1B32E24"
+            ],
+            "b": [
+                "A7F561E0 38EB1ED5 60B3D147 DB782013 064C19F2 7ED27C67",
+                "80AAF77F B8A547CE B5B4FEF4 22340353"
+            ],
+            "x": [
+                "925BE9FB 01AFC6FB 4D3E7D49 90010F81 3408AB10 6C4F09CB",
+                "7EE07868 CC136FFF 3357F624 A21BED52"
+            ],
+            "y": [
+                "63BA3A7A 27483EBF 6671DBEF 7ABB30EB EE084E58 A0B077AD",
+                "42A5A098 9D1EE71B 1B9BC045 5FB0D2C3"
+            ]
+        }
+    },
+    "BRAINPOOLP384R1": {
+        "name": "brainpoolP384r1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "7BC382C6 3D8C150C 3C72080A CE05AFA0 C2BEA28E 4FB22787",
+                "139165EF BA91F90F 8AA5814A 503AD4EB 04A8C7DD 22CE2826"
+            ],
+            "b": [
+                "4A8C7DD2 2CE28268 B39B5541 6F0447C2 FB77DE10 7DCD2A62",
+                "E880EA53 EEB62D57 CB439029 5DBC9943 AB78696F A504C11"
+            ],
+            "x": [
+                "1D1C64F0 68CF45FF A2A63A81 B7C13F6B 8847A3E7 7EF14FE3",
+                "DB7FCAFE 0CBD10E8 E826E034 36D646AA EF87B2E2 47D4AF1E"
+            ],
+            "y": [
+                "8ABE1D75 20F9C2A4 5CB1EB8E 95CFD552 62B70B29 FEEC5864",
+                "E19C054F F9912928 0E464621 77918111 42820341 263C5315"
+            ]
+        }
+    },
+    "BRAINPOOLP384T1": {
+        "name": "brainpoolP384t1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "8CB91E82 A3386D28 0F5D6F7E 50E641DF 152F7109 ED5456B4",
+                "12B1DA19 7FB71123 ACD3A729 901D1A71 87470013 3107EC50"
+            ],
+            "b": [
+                "7F519EAD A7BDA81B D826DBA6 47910F8C 4B9346ED 8CCDC64E",
+                "4B1ABD11 756DCE1D 2074AA26 3B88805C ED70355A 33B471EE"
+            ],
+            "x": [
+                "18DE98B0 2DB9A306 F2AFCD72 35F72A81 9B80AB12 EBD65317",
+                "2476FECD 462AABFF C4FF191B 946A5F54 D8D0AA2F 418808CC"
+            ],
+            "y": [
+                "25AB0569 62D30651 A114AFD2 755AD336 747F9347 5B7A1FCA",
+                "3B88F2B6 A208CCFE 46940858 4DC2B291 2675BF5B 9E582928"
+            ]
+        }
+    },
+    "BRAINPOOLP512R1": {
+        "name": "brainpoolP512r1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "7830A331 8B603B89 E2327145 AC234CC5 94CBDD8D 3DF91610",
+                "A83441CA EA9863BC 2DED5D5A A8253AA1 0A2EF1C9 8B9AC8B5",
+                "7F1117A7 2BF2C7B9 E7C1AC4D 77FC94CA"
+            ],
+            "b": [
+                "3DF91610 A83441CA EA9863BC 2DED5D5A A8253AA1 0A2EF1C9",
+                "8B9AC8B5 7F1117A7 2BF2C7B9 E7C1AC4D 77FC94CA DC083E67",
+                "984050B7 5EBAE5DD 2809BD63 8016F723"
+            ],
+            "x": [
+                "81AEE4BD D82ED964 5A21322E 9C4C6A93 85ED9F70 B5D916C1",
+                "B43B62EE F4D0098E FF3B1F78 E2D0D48D 50D1687B 93B97D5F",
+                "7C6D5047 406A5E68 8B352209 BCB9F822"
+            ],
+            "y": [
+                "7DDE385D 566332EC C0EABFA9 CF7822FD F209F700 24A57B1A",
+                "A000C55B 881F8111 B2DCDE49 4A5F485E 5BCA4BD8 8A2763AE",
+                "D1CA2B2F A8F05406 78CD1E0F 3AD80892"
+            ]
+        }
+    },
+    "BRAINPOOLP512T1": {
+        "name": "brainpoolP512t1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "AADD9DB8 DBE9C48B 3FD4E6AE 33C9FC07 CB308DB3 B3C9D20E",
+                "D6639CCA 70330871 7D4D9B00 9BC66842 AECDA12A E6A380E6",
+                "2881FF2F 2D82C685 28AA6056 583A48F0"
+            ],
+            "b": [
+                "7CBBBCF9 441CFAB7 6E1890E4 6884EAE3 21F70C0B CB498152",
+                "7897504B EC3E36A6 2BCDFA23 04976540 F6450085 F2DAE145",
+                "C22553B4 65763689 180EA257 1867423E"
+            ],
+            "x": [
+                "640ECE5C 12788717 B9C1BA06 CBC2A6FE BA858424 58C56DDE",
+                "9DB1758D 39C0313D 82BA5173 5CDB3EA4 99AA77A7 D6943A64",
+                "F7A3F25F E26F06B5 1BAA2696 FA9035DA"
+            ],
+            "y": [
+                "5B534BD5 95F5AF0F A2C89237 6C84ACE1 BB4E3019 B71634C0",
+                "1131159C AE03CEE9 D9932184 BEEF216B D71DF2DA DF86A627",
+                "306ECFF9 6DBB8BAC E198B61E 00F8B332"
+            ]
+        }
+    },
+    "C2PNB163V1": {
+        "name": "c2pnb163v1",
+        "long_name": null,
+        "standards": [
+            "WTLS"
+        ],
+        "aliases": [
+            "WAP-WSG-IDM-ECID-WTLS5"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "072546B5 435234A4 22E07896 75F432C8 9435DE52 42"
+            ],
+            "b": [
+                "00C9517D 06D5240D 3CFF38C7 4B20B6CD 4D6F9DD4 D9"
+            ],
+            "x": [
+                "07AF6998 9546103D 79329FCC 3D74880F 33BBE803 CB"
+            ],
+            "y": [
+                "01EC2321 1B5966AD EA1D3F87 F7EA5848 AEF0B7CA 9F"
+            ]
+        }
+    },
+    "C2PNB163V2": {
+        "name": "c2pnb163v2",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "0108B39E 77C4B108 BED981ED 0E890E11 7C511CF0 72"
+            ],
+            "b": [
+                "0667ACEB 38AF4E48 8C407433 FFAE4F1C 811638DF 20"
+            ],
+            "x": [
+                "0024266E 4EB5106D 0A964D92 C4860E26 71DB9B6C C5"
+            ],
+            "y": [
+                "079F684D DF6684C5 CD258B38 90021B23 86DFD19F C5"
+            ]
+        }
+    },
+    "C2PNB163V3": {
+        "name": "c2pnb163v3",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "07A526C6 3D3E25A2 56A00769 9F5447E3 2AE456B5 0E"
+            ],
+            "b": [
+                "03F70617 98EB99E2 38FD6F1B F95B48FE EB485425 2B"
+            ],
+            "x": [
+                "2F9F87B7 C574D0BD ECF8A22E 6524775F 98CDEBDC B"
+            ],
+            "y": [
+                "5B935590 C155E17E A48EB3FF 3718B893 DF59A05D 0"
+            ]
+        }
+    },
+    "C2PNB176W1": {
+        "name": "c2pnb176w1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "E4E6DB29 95065C40 7D9D39B8 D0967B96 704BA8E9 C90B"
+            ],
+            "b": [
+                "5DDA470A BE6414DE 8EC133AE 28E9BBD7 FCEC0AE0 FFF2"
+            ],
+            "x": [
+                "8D16C286 6798B600 F9F08BB4 A8E860F3 298CE04A 5798"
+            ],
+            "y": [
+                "6FA4539C 2DADDDD6 BAB5167D 61B436E1 D92BB16A 562C"
+            ]
+        }
+    },
+    "C2PNB208W1": {
+        "name": "c2pnb208w1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "0"
+            ],
+            "b": [
+                "C8619ED4 5A62E621 2E116034 9E2BFA84 4439FAFC 2A3FD163",
+                "8F9E"
+            ],
+            "x": [
+                "89FDFBE4 ABE193DF 9559ECF0 7AC0CE78 554E2784 EB8C1ED1",
+                "A57A"
+            ],
+            "y": [
+                "0F55B51A 06E78E9A C38A035F F520D8B0 1781BEB1 A6BB0861",
+                "7DE3"
+            ]
+        }
+    },
+    "C2PNB272W1": {
+        "name": "c2pnb272w1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "91A091F0 3B5FBA4A B2CCF49C 4EDD220F B028712D 42BE752B",
+                "2C40094D BACDB586 FB20"
+            ],
+            "b": [
+                "7167EFC9 2BB2E3CE 7C8AAAFF 34E12A9C 557003D7 C73A6FAF",
+                "003F99F6 CC8482E5 40F7"
+            ],
+            "x": [
+                "6108BABB 2CEEBCF7 87058A05 6CBE0CFE 622D7723 A289E08A",
+                "07AE13EF 0D10D171 DD8D"
+            ],
+            "y": [
+                "10C76957 16851EEF 6BA7F687 2E6142FB D241B830 FF5EFCAC",
+                "ECCAB05E 02005DDE 9D23"
+            ]
+        }
+    },
+    "C2PNB304W1": {
+        "name": "c2pnb304w1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "FD0D6931 49A118F6 51E6DCE6 80208537 7E5F882D 1B510B44",
+                "160074C1 28807836 5A0396C8 E681"
+            ],
+            "b": [
+                "BDDB97E5 55A50A90 8E43B01C 798EA5DA A6788F1E A2794EFC",
+                "F57166B8 C1403960 1E558273 40BE"
+            ],
+            "x": [
+                "197B0784 5E9BE2D9 6ADB0F5F 3C7F2CFF BD7A3EB8 B6FEC35C",
+                "7FD67F26 DDF6285A 644F740A 2614"
+            ],
+            "y": [
+                "E19FBEB7 6E0DA171 517ECF40 1B50289B F0141032 88527A9B",
+                "416A105E 80260B54 9FDC1B92 C03B"
+            ]
+        }
+    },
+    "C2PNB368W1": {
+        "name": "c2pnb368w1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "E0D2EE25 095206F5 E2A4F9ED 229F1F25 6E79A0E2 B455970D",
+                "8D0D865B D94778C5 76D62F0A B7519CCD 2A1A906A E30D"
+            ],
+            "b": [
+                "FC1217D4 320A9045 2C760A58 EDCD30C8 DD069B3C 34453837",
+                "A34ED50C B54917E1 C2112D84 D164F444 F8F74786 046A"
+            ],
+            "x": [
+                "1085E275 5381DCCC E3C1557A FA10C2F0 C0C28256 46C5B34A",
+                "394CBCFA 8BC16B22 E7E789E9 27BE216F 02E1FB13 6A5F"
+            ],
+            "y": [
+                "7B3EB1BD DCBA62D5 D8B2059B 525797FC 73822C59 059C623A",
+                "45FF3843 CEE8F87C D1855ADA A81E2A07 50B80FDA 2310"
+            ]
+        }
+    },
+    "C2TNB191V1": {
+        "name": "c2tnb191v1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "2866537B 67675263 6A68F565 54E12640 276B649E F7526267"
+            ],
+            "b": [
+                "2E45EF57 1F00786F 67B0081B 9495A3D9 5462F5DE 0AA185EC"
+            ],
+            "x": [
+                "36B3DAF8 A23206F9 C4F299D7 B21A9C36 9137F2C8 4AE1AA0D"
+            ],
+            "y": [
+                "765BE734 33B3F95E 332932E7 0EA245CA 2418EA0E F98018FB"
+            ]
+        }
+    },
+    "C2TNB191V2": {
+        "name": "c2tnb191v2",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "40102877 4D7777C7 B7666D13 66EA4320 71274F89 FF01E718"
+            ],
+            "b": [
+                "0620048D 28BCBD03 B6249C99 182B7C8C D19700C3 62C46A01"
+            ],
+            "x": [
+                "3809B2B7 CC1B28CC 5A87926A AD83FD28 789E81E2 C9E3BF10"
+            ],
+            "y": [
+                "17434386 626D14F3 DBF01760 D9213A3E 1CF37AEC 437D668A"
+            ]
+        }
+    },
+    "C2TNB191V3": {
+        "name": "c2tnb191v3",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "6C010747 56099122 22105691 1C77D77E 77A777E7 E7E77FCB"
+            ],
+            "b": [
+                "71FE1AF9 26CF8479 89EFEF8D B459F663 94D90F32 AD3F15E8"
+            ],
+            "x": [
+                "375D4CE2 4FDE4344 89DE8746 E7178601 5009E66E 38A926DD"
+            ],
+            "y": [
+                "545A3917 6196575D 98599936 6E6AD34C E0A77CD7 127B06BE"
+            ]
+        }
+    },
+    "C2TNB239V1": {
+        "name": "c2tnb239v1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "32010857 077C5431 123A46B8 08906756 F543423E 8D278775",
+                "78125778 AC76"
+            ],
+            "b": [
+                "790408F2 EEDAF392 B012EDEF B3392F30 F4327C0C A3F31FC3",
+                "83C422AA 8C16"
+            ],
+            "x": [
+                "57927098 FA932E7C 0A96D3FD 5B706EF7 E5F5C156 E16B7E7C",
+                "86038552 E91D"
+            ],
+            "y": [
+                "61D8EE50 77C33FEC F6F1A16B 268DE469 C3C7744E A9A97164",
+                "9FC7A961 6305"
+            ]
+        }
+    },
+    "C2TNB239V2": {
+        "name": "c2tnb239v2",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "42300177 57A767FA E4239856 9B746325 D45313AF 07662664",
+                "79B75654 E65F"
+            ],
+            "b": [
+                "5037EA65 4196CFF0 CD82B2C1 4A2FCF2E 3FF87752 85B54572",
+                "2F03EACD B74B"
+            ],
+            "x": [
+                "28F9D04E 900069C8 DC47A085 34FE76D2 B900B7D7 EF31F570",
+                "9F200C4C A205"
+            ],
+            "y": [
+                "5667334C 45AFF3B5 A03BAD9D D75E2C71 A9936256 7D5453F7",
+                "FA6E227E C833"
+            ]
+        }
+    },
+    "C2TNB239V3": {
+        "name": "c2tnb239v3",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "01238774 666A6776 6D6676F7 78E676B6 69991766 66E68766",
+                "6D8766C6 6A9F"
+            ],
+            "b": [
+                "6A941977 BA9F6A43 5199ACFC 51067ED5 87F519C5 ECB541B8",
+                "E44111DE 1D40"
+            ],
+            "x": [
+                "70F6E9D0 4D289C4E 89913CE3 530BFDE9 03977D42 B146D539",
+                "BF1BDE4E 9C92"
+            ],
+            "y": [
+                "2E5A0EAF 6E5E1305 B9004DCE 5C0ED7FE 59A35608 F33837C8",
+                "16D80B79 F461"
+            ]
+        }
+    },
+    "C2TNB359V1": {
+        "name": "c2tnb359v1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "5667676A 654B2075 4F356EA9 2017D946 567C4667 5556F195",
+                "56A04616 B567D223 A5E05656 FB549016 A96656A5 57"
+            ],
+            "b": [
+                "2472E2D0 197C4936 3F1FE7F5 B6DB075D 52B6947D 135D8CA4",
+                "45805D39 BC345626 08968774 2B6329E7 06802319 88"
+            ],
+            "x": [
+                "3C258EF3 047767E7 EDE0F1FD AA79DAEE 3841366A 132E163A",
+                "CED4ED24 01DF9C6B DCDE98E8 E707C07A 2239B1B0 97"
+            ],
+            "y": [
+                "53D7E085 29547048 121E9C95 F3791DD8 04963948 F34FAE7B",
+                "F44EA823 65DC7868 FE57E4AE 2DE21130 5A407104 BD"
+            ]
+        }
+    },
+    "C2TNB431R1": {
+        "name": "c2tnb431r1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "1A827EF0 0DD6FC0E 234CAF04 6C6A5D8A 85395B23 6CC4AD2C",
+                "F32A0CAD BDC9DDF6 20B0EB99 06D0957F 6C6FEACD 615468DF",
+                "104DE296 CD8F"
+            ],
+            "b": [
+                "10D9B4A3 D9047D8B 154359AB FB1B7F54 85B04CEB 868237DD",
+                "C9DEDA98 2A679A5A 919B626D 4E50A8DD 731B107A 9962381F",
+                "B5D807BF 2618"
+            ],
+            "x": [
+                "120FC05D 3C67A99D E161D2F4 092622FE CA701BE4 F50F4758",
+                "714E8A87 BBF2A658 EF8C21E7 C5EFE965 361F6C29 99C0C247",
+                "B0DBD70C E6B7"
+            ],
+            "y": [
+                "20D0AF89 03A96F8D 5FA2C255 745D3C45 1B302C93 46D9B7E4",
+                "85E7BCE4 1F6B591F 3E8F6ADD CBB0BC4C 2F947A7D E1A89B62",
+                "5D6A598B 3760"
+            ]
+        }
+    },
+    "GOST256": {
+        "name": "gost256",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "7"
+            ],
+            "b": [
+                "5FBFF498 AA938CE7 39B8E022 FBAFEF40 563F6E6A 3472FC2A",
+                "514C0CE9 DAE23B7E"
+            ],
+            "x": [
+                "2"
+            ],
+            "y": [
+                "8E2A8A0E 65147D4B D6316030 E16D19C8 5C97F0A9 CA267122",
+                "B96ABBCE A7E8FC8"
+            ]
+        }
+    },
+    "GOST512": {
+        "name": "gost512",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "7"
+            ],
+            "b": [
+                "1CFF0806 A31116DA 29D8CFA5 4E57EB74 8BC5F377 E49400FD",
+                "D788B649 ECA1AC43 61834013 B2AD7322 480A89CA 58E0CF74",
+                "BC9E540C 2ADD6897 FAD0A308 4F302ADC"
+            ],
+            "x": [
+                "24D19CC6 4572EE30 F396BF6E BBFD7A6C 5213B3B3 D7057CC8",
+                "25F91093 A68CD762 FD606112 62CD838D C6B60AA7 EEE804E2",
+                "8BC84997 7FAC33B4 B530F1B1 20248A9A"
+            ],
+            "y": [
+                "2BB312A4 3BD2CE6E 0D020613 C857ACDD CFBF061E 91E5F2C3",
+                "F32447C2 59F39B2C 83AB156D 77F1496B F7EB3351 E1EE4E43",
+                "DC1A18B9 1B24640B 6DBB92CB 1ADD371E"
+            ]
+        }
+    },
+    "ID-GOSTR3410-2001-CRYPTOPRO-A-PARAMSET": {
+        "name": "id-GostR3410-2001-CryptoPro-A-ParamSet",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFD94"
+            ],
+            "b": [
+                "A6"
+            ],
+            "x": [
+                "01"
+            ],
+            "y": [
+                "8D91E471 E0989CDA 27DF505A 453F2B76 35294F2D DF23E3B1",
+                "22ACC99C 9E9F1E14"
+            ]
+        }
+    },
+    "ID-GOSTR3410-2001-CRYPTOPRO-B-PARAMSET": {
+        "name": "id-GostR3410-2001-CryptoPro-B-ParamSet",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "80000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000C96"
+            ],
+            "b": [
+                "3E1AF419 A269A5F8 66A7D3C2 5C3DF80A E9792593 73FF2B18",
+                "2F49D4CE 7E1BBC8B"
+            ],
+            "x": [
+                "01"
+            ],
+            "y": [
+                "3FA81243 59F96680 B83D1C3E B2C070E5 C545C985 8D03ECFB",
+                "744BF8D7 17717EFC"
+            ]
+        }
+    },
+    "ID-GOSTR3410-2001-CRYPTOPRO-C-PARAMSET": {
+        "name": "id-GostR3410-2001-CryptoPro-C-ParamSet",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "9B9F605F 5A858107 AB1EC85E 6B41C8AA CF846E86 789051D3",
+                "7998F7B9 022D7598"
+            ],
+            "b": [
+                "805A"
+            ],
+            "x": [
+                "00"
+            ],
+            "y": [
+                "41ECE557 43711A8C 3CBF3783 CD08C0EE 4D4DC440 D4641A8F",
+                "366E550D FDB3BB67"
+            ]
+        }
+    },
+    "ID-TC26-GOST-3410-12-512-PARAMSETA": {
+        "name": "id-tc26-gost-3410-12-512-paramSetA",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "00FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFD C4"
+            ],
+            "b": [
+                "00E8C250 5DEDFC86 DDC1BD0B 2B6667F1 DA34B825 74761CB0",
+                "E879BD08 1CFD0B62 65EE3CB0 90F30D27 614CB457 4010DA90",
+                "DD862EF9 D4EBEE47 61503190 785A71C7 60"
+            ],
+            "x": [
+                "03"
+            ],
+            "y": [
+                "7503CFE8 7A836AE3 A61B8816 E25450E6 CE5E1C93 ACF1ABC1",
+                "778064FD CBEFA921 DF1626BE 4FD036E9 3D75E6A5 0E3A41E9",
+                "8028FE5F C235F5B8 89A589CB 5215F2A4"
+            ]
+        }
+    },
+    "ID-TC26-GOST-3410-12-512-PARAMSETB": {
+        "name": "id-tc26-gost-3410-12-512-paramSetB",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "00800000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 6C"
+            ],
+            "b": [
+                "687D1B45 9DC84145 7E3E06CF 6F5E2517 B97C7D61 4AF138BC",
+                "BF85DC80 6C4B289F 3E965D2D B1416D21 7F8B276F AD1AB69C",
+                "50F78BEE 1FA3106E FB8CCBC7 C5140116"
+            ],
+            "x": [
+                "02"
+            ],
+            "y": [
+                "1A8F7EDA 389B094C 2C071E36 47A8940F 3C123B69 7578C213",
+                "BE6DD9E6 C8EC7335 DCB228FD 1EDF4A39 152CBCAA F8C03988",
+                "28041055 F94CEEEC 7E213407 80FE41BD"
+            ]
+        }
+    },
+    "PRIME192V1": {
+        "name": "prime192v1",
+        "long_name": null,
+        "standards": [
+            "SEC_2",
+            "SP_800_186"
+        ],
+        "aliases": [
+            "SECP192R1",
+            "P-192"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFFFF FFFFFFFC"
+            ],
+            "b": [
+                "64210519 E59C80E7 0FA7E9AB 72243049 FEB8DEEC C146B9B1"
+            ],
+            "x": [
+                "188DA80E B03090F6 7CBF20EB 43A18800 F4FF0AFD 82FF1012"
+            ],
+            "y": [
+                "07192B95 FFC8DA78 631011ED 6B24CDD5 73F977A1 1E794811"
+            ]
+        }
+    },
+    "PRIME192V2": {
+        "name": "prime192v2",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFFFF FFFFFFFC"
+            ],
+            "b": [
+                "CC22D6DF B95C6B25 E49C0D63 64A4E598 0C393AA2 1668D953"
+            ],
+            "x": [
+                "EEA2BAE7 E1497842 F2DE7769 CFE9C989 C072AD69 6F48034A"
+            ],
+            "y": [
+                "6574D11D 69B6EC7A 672BB82A 083DF2F2 B0847DE9 70B2DE15"
+            ]
+        }
+    },
+    "PRIME192V3": {
+        "name": "prime192v3",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFFFF FFFFFFFC"
+            ],
+            "b": [
+                "22123DC2 395A05CA A7423DAE CCC94760 A7D46225 6BD56916"
+            ],
+            "x": [
+                "7D297781 00C65A1D A1783716 588DCE2B 8B4AEE8E 228F1896"
+            ],
+            "y": [
+                "38A90F22 63733733 4B49DCB6 6A6DC8F9 978ACA76 48A943B0"
+            ]
+        }
+    },
+    "PRIME239V1": {
+        "name": "prime239v1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFF FFFF8000 00000000",
+                "7FFFFFFF FFFC"
+            ],
+            "b": [
+                "6B016C3B DCF18941 D0D65492 1475CA71 A9DB2FB2 7D1D3779",
+                "6185C294 2C0A"
+            ],
+            "x": [
+                "0FFA963C DCA8816C CC33B864 2BEDF905 C3D35857 3D3F27FB",
+                "BD3B3CB9 AAAF"
+            ],
+            "y": [
+                "7DEBE8E4 E90A5DAE 6E4054CA 530BA046 54B36818 CE226B39",
+                "FCCB7B02 F1AE"
+            ]
+        }
+    },
+    "PRIME239V2": {
+        "name": "prime239v2",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFF FFFF8000 00000000",
+                "7FFFFFFF FFFC"
+            ],
+            "b": [
+                "617FAB68 32576CBB FED50D99 F0249C3F EE58B94B A0038C7A",
+                "E84C8C83 2F2C"
+            ],
+            "x": [
+                "38AF09D9 87277051 20C921BB 5E9E2629 6A3CDCF2 F35757A0",
+                "EAFD87B8 30E7"
+            ],
+            "y": [
+                "5B0125E4 DBEA0EC7 206DA0FC 01D9B081 329FB555 DE6EF460",
+                "237DFF8B E4BA"
+            ]
+        }
+    },
+    "PRIME239V3": {
+        "name": "prime239v3",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFF FFFF8000 00000000",
+                "7FFFFFFF FFFC"
+            ],
+            "b": [
+                "255705FA 2A306654 B1F4CB03 D6A750A3 0C250102 D4988717",
+                "D9BA15AB 6D3E"
+            ],
+            "x": [
+                "6768AE8E 18BB92CF CF005C94 9AA2C6D9 4853D0E6 60BBF854",
+                "B1C9505F E95A"
+            ],
+            "y": [
+                "1607E689 8F390C06 BC1D552B AD226F3B 6FCFE48B 6E818499",
+                "AF18E3ED 6CF3"
+            ]
+        }
+    },
+    "PRIME256V1": {
+        "name": "prime256v1",
+        "long_name": null,
+        "standards": [
+            "SEC_2",
+            "SP_800_186"
+        ],
+        "aliases": [
+            "SECP256R1",
+            "P-256"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "FFFFFFFF 00000001 00000000 00000000 00000000 FFFFFFFF",
+                "FFFFFFFF FFFFFFFC"
+            ],
+            "b": [
+                "5AC635D8 AA3A93E7 B3EBBD55 769886BC 651D06B0 CC53B0F6",
+                "3BCE3C3E 27D2604B"
+            ],
+            "x": [
+                "6B17D1F2 E12C4247 F8BCE6E5 63A440F2 77037D81 2DEB33A0",
+                "F4A13945 D898C296"
+            ],
+            "y": [
+                "4FE342E2 FE1A7F9B 8EE7EB4A 7C0F9E16 2BCE3357 6B315ECE",
+                "CBB64068 37BF51F5"
+            ]
+        }
+    },
+    "SECP112R1": {
+        "name": "secp112r1",
+        "long_name": null,
+        "standards": [
+            "WTLS"
+        ],
+        "aliases": [
+            "WAP-WSG-IDM-ECID-WTLS6"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "DB7C2ABF 62E35E66 8076BEAD 2088"
+            ],
+            "b": [
+                "659EF8BA 043916EE DE891170 2B22"
+            ],
+            "x": [
+                "09487239 995A5EE7 6B55F9C2 F098"
+            ],
+            "y": [
+                "A89CE5AF 8724C0A2 3E0E0FF7 7500"
+            ]
+        }
+    },
+    "SECP112R2": {
+        "name": "secp112r2",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "6127C24C 05F38A0A AAF65C0E F02C"
+            ],
+            "b": [
+                "51DEF181 5DB5ED74 FCC34C85 D709"
+            ],
+            "x": [
+                "4BA30AB5 E892B4E1 649DD092 8643"
+            ],
+            "y": [
+                "ADCD46F5 882E3747 DEF36E95 6E97"
+            ]
+        }
+    },
+    "SECP128R1": {
+        "name": "secp128r1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "FFFFFFFD FFFFFFFF FFFFFFFF FFFFFFFC"
+            ],
+            "b": [
+                "E87579C1 1079F43D D824993C 2CEE5ED3"
+            ],
+            "x": [
+                "161FF752 8B899B2D 0C28607C A52C5B86"
+            ],
+            "y": [
+                "CF5AC839 5BAFEB13 C02DA292 DDED7A83"
+            ]
+        }
+    },
+    "SECP128R2": {
+        "name": "secp128r2",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "D6031998 D1B3BBFE BF59CC9B BFF9AEE1"
+            ],
+            "b": [
+                "5EEEFCA3 80D02919 DC2C6558 BB6D8A5D"
+            ],
+            "x": [
+                "7B6AA5D8 5E572983 E6FB32A7 CDEBC140"
+            ],
+            "y": [
+                "27B6916A 894D3AEE 7106FE80 5FC34B44"
+            ]
+        }
+    },
+    "SECP160K1": {
+        "name": "secp160k1",
+        "long_name": null,
+        "standards": [
+            "X9_63"
+        ],
+        "aliases": [
+            "ANSIP160K1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000007"
+            ],
+            "x": [
+                "3B4C382C E37AA192 A4019E76 3036F4F5 DD4D7EBB"
+            ],
+            "y": [
+                "938CF935 318FDCED 6BC28286 531733C3 F03C4FEE"
+            ]
+        }
+    },
+    "SECP160R1": {
+        "name": "secp160r1",
+        "long_name": null,
+        "standards": [
+            "WTLS",
+            "X9_63"
+        ],
+        "aliases": [
+            "WAP-WSG-IDM-ECID-WTLS7",
+            "ANSIP160R1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFC"
+            ],
+            "b": [
+                "1C97BEFC 54BD7A8B 65ACF89F 81D4D4AD C565FA45"
+            ],
+            "x": [
+                "4A96B568 8EF57328 46646989 68C38BB9 13CBFC82"
+            ],
+            "y": [
+                "23A62855 3168947D 59DCC912 04235137 7AC5FB32"
+            ]
+        }
+    },
+    "SECP160R2": {
+        "name": "secp160r2",
+        "long_name": null,
+        "standards": [
+            "X9_63"
+        ],
+        "aliases": [
+            "ANSIP160R2"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFAC70"
+            ],
+            "b": [
+                "B4E134D3 FB59EB8B AB572749 04664D5A F50388BA"
+            ],
+            "x": [
+                "52DCB034 293A117E 1F4FF11B 30F7199D 3144CE6D"
+            ],
+            "y": [
+                "FEAFFEF2 E331F296 E071FA0D F9982CFE A7D43F2E"
+            ]
+        }
+    },
+    "SECP192K1": {
+        "name": "secp192k1",
+        "long_name": null,
+        "standards": [
+            "X9_63"
+        ],
+        "aliases": [
+            "ANSIP192K1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000003"
+            ],
+            "x": [
+                "DB4FF10E C057E9AE 26B07D02 80B7F434 1DA5D1B1 EAE06C7D"
+            ],
+            "y": [
+                "9B2F2F6D 9C5628A7 844163D0 15BE8634 4082AA88 D95E2F9D"
+            ]
+        }
+    },
+    "SECP224K1": {
+        "name": "secp224k1",
+        "long_name": null,
+        "standards": [
+            "X9_63"
+        ],
+        "aliases": [
+            "ANSIP224K1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000005"
+            ],
+            "x": [
+                "A1455B33 4DF099DF 30FC28A1 69A467E9 E47075A9 0F7E650E",
+                "B6B7A45C"
+            ],
+            "y": [
+                "7E089FED 7FBA3442 82CAFBD6 F7E319F7 C0B0BD59 E2CA4BDB",
+                "556D61A5"
+            ]
+        }
+    },
+    "SECP224R1": {
+        "name": "secp224r1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "WTLS",
+            "X9_63"
+        ],
+        "aliases": [
+            "P-224",
+            "WAP-WSG-IDM-ECID-WTLS12",
+            "ANSIP224R1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFFFF FFFFFFFF",
+                "FFFFFFFE"
+            ],
+            "b": [
+                "B4050A85 0C04B3AB F5413256 5044B0B7 D7BFD8BA 270B3943",
+                "2355FFB4"
+            ],
+            "x": [
+                "B70E0CBD 6BB4BF7F 321390B9 4A03C1D3 56C21122 343280D6",
+                "115C1D21"
+            ],
+            "y": [
+                "BD376388 B5F723FB 4C22DFE6 CD4375A0 5A074764 44D58199",
+                "85007E34"
+            ]
+        }
+    },
+    "SECP256K1": {
+        "name": "secp256k1",
+        "long_name": null,
+        "standards": [
+            "X9_63"
+        ],
+        "aliases": [
+            "ANSIP256K1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000007"
+            ],
+            "x": [
+                "79BE667E F9DCBBAC 55A06295 CE870B07 029BFCDB 2DCE28D9",
+                "59F2815B 16F81798"
+            ],
+            "y": [
+                "483ADA77 26A3C465 5DA4FBFC 0E1108A8 FD17B448 A6855419",
+                "9C47D08F FB10D4B8"
+            ]
+        }
+    },
+    "SECP384R1": {
+        "name": "secp384r1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "X9_63"
+        ],
+        "aliases": [
+            "P-384",
+            "ANSIP384R1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFE FFFFFFFF 00000000 00000000 FFFFFFFC"
+            ],
+            "b": [
+                "B3312FA7 E23EE7E4 988E056B E3F82D19 181D9C6E FE814112",
+                "0314088F 5013875A C656398D 8A2ED19D 2A85C8ED D3EC2AEF"
+            ],
+            "x": [
+                "AA87CA22 BE8B0537 8EB1C71E F320AD74 6E1D3B62 8BA79B98",
+                "59F741E0 82542A38 5502F25D BF55296C 3A545E38 72760AB7"
+            ],
+            "y": [
+                "3617DE4A 96262C6F 5D9E98BF 9292DC29 F8F41DBD 289A147C",
+                "E9DA3113 B5F0B8C0 0A60B1CE 1D7E819D 7A431D7C 90EA0E5F"
+            ]
+        }
+    },
+    "SECP521R1": {
+        "name": "secp521r1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "X9_63"
+        ],
+        "aliases": [
+            "P-521",
+            "ANSIP521R1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "01FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFC"
+            ],
+            "b": [
+                "0051953E B9618E1C 9A1F929A 21A0B685 40EEA2DA 725B99B3",
+                "15F3B8B4 89918EF1 09E15619 3951EC7E 937B1652 C0BD3BB1",
+                "BF073573 DF883D2C 34F1EF45 1FD46B50 3F00"
+            ],
+            "x": [
+                "00C6858E 06B70404 E9CD9E3E CB662395 B4429C64 8139053F",
+                "B521F828 AF606B4D 3DBAA14B 5E77EFE7 5928FE1D C127A2FF",
+                "A8DE3348 B3C1856A 429BF97E 7E31C2E5 BD66"
+            ],
+            "y": [
+                "01183929 6A789A3B C0045C8A 5FB42C7D 1BD998F5 4449579B",
+                "446817AF BD17273E 662C97EE 72995EF4 2640C550 B9013FAD",
+                "0761353C 7086A272 C24088BE 94769FD1 6650"
+            ]
+        }
+    },
+    "SECT113R1": {
+        "name": "sect113r1",
+        "long_name": null,
+        "standards": [
+            "WTLS"
+        ],
+        "aliases": [
+            "WAP-WSG-IDM-ECID-WTLS4"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00308825 0CA6E7C7 FE649CE8 5820F7"
+            ],
+            "b": [
+                "00E8BEE4 D3E22607 44188BE0 E9C723"
+            ],
+            "x": [
+                "009D7361 6F35F4AB 1407D735 62C10F"
+            ],
+            "y": [
+                "00A52830 277958EE 84D1315E D31886"
+            ]
+        }
+    },
+    "SECT113R2": {
+        "name": "sect113r2",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "00689918 DBEC7E5A 0DD6DFC0 AA55C7"
+            ],
+            "b": [
+                "0095E9A9 EC9B297B D4BF36E0 59184F"
+            ],
+            "x": [
+                "01A57A6A 7B26CA5E F52FCDB8 164797"
+            ],
+            "y": [
+                "00B3ADC9 4ED1FE67 4C06E695 BABA1D"
+            ]
+        }
+    },
+    "SECT131R1": {
+        "name": "sect131r1",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "07A11B09 A76B5621 44418FF3 FF8C2570 B8"
+            ],
+            "b": [
+                "0217C056 10884B63 B9C6C729 1678F9D3 41"
+            ],
+            "x": [
+                "0081BAF9 1FDF9833 C40F9C18 13436383 99"
+            ],
+            "y": [
+                "078C6E7E A38C001F 73C8134B 1B4EF9E1 50"
+            ]
+        }
+    },
+    "SECT131R2": {
+        "name": "sect131r2",
+        "long_name": null,
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "03E5A889 19D7CAFC BF415F07 C2176573 B2"
+            ],
+            "b": [
+                "04B8266A 46C55657 AC734CE3 8F018F21 92"
+            ],
+            "x": [
+                "0356DCD8 F2F95031 AD652D23 951BB366 A8"
+            ],
+            "y": [
+                "0648F06D 867940A5 366D9E26 5DE9EB24 0F"
+            ]
+        }
+    },
+    "SECT163K1": {
+        "name": "sect163k1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "X9_63",
+            "WTLS"
+        ],
+        "aliases": [
+            "K-163",
+            "ANSIT163K1",
+            "WAP-WSG-IDM-ECID-WTLS3"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 01"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 01"
+            ],
+            "x": [
+                "02FE13C0 537BBC11 ACAA07D7 93DE4E6D 5E5C94EE E8"
+            ],
+            "y": [
+                "0289070F B05D38FF 58321F2E 800536D5 38CCDAA3 D9"
+            ]
+        }
+    },
+    "SECT163R1": {
+        "name": "sect163r1",
+        "long_name": null,
+        "standards": [
+            "X9_63"
+        ],
+        "aliases": [
+            "ANSIT163R1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "07B6882C AAEFA84F 9554FF84 28BD88E2 46D2782A E2"
+            ],
+            "b": [
+                "0713612D CDDCB40A AB946BDA 29CA91F7 3AF958AF D9"
+            ],
+            "x": [
+                "03699796 97AB4389 77895667 89567F78 7A7876A6 54"
+            ],
+            "y": [
+                "00435EDB 42EFAFB2 989D51FE FCE3C809 88F41FF8 83"
+            ]
+        }
+    },
+    "SECT163R2": {
+        "name": "sect163r2",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "X9_63"
+        ],
+        "aliases": [
+            "B-163",
+            "ANSIT163R2"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 01"
+            ],
+            "b": [
+                "020A6019 07B8C953 CA1481EB 10512F78 744A3205 FD"
+            ],
+            "x": [
+                "03F0EBA1 6286A2D5 7EA09911 68D49946 37E8343E 36"
+            ],
+            "y": [
+                "00D51FBC 6C71A009 4FA2CDD5 45B11C5C 0C797324 F1"
+            ]
+        }
+    },
+    "SECT193R1": {
+        "name": "sect193r1",
+        "long_name": null,
+        "standards": [
+            "X9_63"
+        ],
+        "aliases": [
+            "ANSIT193R1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "0017858F EB7A9897 5169E171 F77B4087 DE098AC8 A911DF7B",
+                "01"
+            ],
+            "b": [
+                "00FDFB49 BFE6C3A8 9FACADAA 7A1E5BBC 7CC1C2E5 D8314788",
+                "14"
+            ],
+            "x": [
+                "01F481BC 5F0FF84A 74AD6CDF 6FDEF4BF 61796253 72D8C0C5",
+                "E1"
+            ],
+            "y": [
+                "0025E399 F2903712 CCF3EA9E 3A1AD17F B0B3201B 6AF7CE1B",
+                "05"
+            ]
+        }
+    },
+    "SECT193R2": {
+        "name": "sect193r2",
+        "long_name": null,
+        "standards": [
+            "X9_63"
+        ],
+        "aliases": [
+            "ANSIT193R2"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "0163F35A 5137C2CE 3EA6ED86 67190B0B C43ECD69 97770270",
+                "9B"
+            ],
+            "b": [
+                "00C9BB9E 8927D4D6 4C377E2A B2856A5B 16E3EFB7 F61D4316",
+                "AE"
+            ],
+            "x": [
+                "00D9B67D 192E0367 C803F39E 1A7E82CA 14A65135 0AAE617E",
+                "8F"
+            ],
+            "y": [
+                "01CE9433 5607C304 AC29E7DE FBD9CA01 F596F927 224CDECF",
+                "6C"
+            ]
+        }
+    },
+    "SECT233K1": {
+        "name": "sect233k1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "WTLS",
+            "X9_63"
+        ],
+        "aliases": [
+            "K-233",
+            "WAP-WSG-IDM-ECID-WTLS10",
+            "ANSIT233K1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 0000"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 0001"
+            ],
+            "x": [
+                "017232BA 853A7E73 1AF129F2 2FF41495 63A419C2 6BF50A4C",
+                "9D6EEFAD 6126"
+            ],
+            "y": [
+                "01DB537D ECE819B7 F70F555A 67C427A8 CD9BF18A EB9B56E0",
+                "C11056FA E6A3"
+            ]
+        }
+    },
+    "SECT233R1": {
+        "name": "sect233r1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "WTLS",
+            "X9_63"
+        ],
+        "aliases": [
+            "B-233",
+            "WAP-WSG-IDM-ECID-WTLS11",
+            "ANSIT233R1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 0001"
+            ],
+            "b": [
+                "0066647E DE6C332C 7F8C0923 BB58213B 333B20E9 CE4281FE",
+                "115F7D8F 90AD"
+            ],
+            "x": [
+                "00FAC9DF CBAC8313 BB2139F1 BB755FEF 65BC391F 8B36F8F8",
+                "EB7371FD 558B"
+            ],
+            "y": [
+                "01006A08 A4190335 0678E585 28BEBF8A 0BEFF867 A7CA3671",
+                "6F7E01F8 1052"
+            ]
+        }
+    },
+    "SECT239K1": {
+        "name": "sect239k1",
+        "long_name": null,
+        "standards": [
+            "X9_63"
+        ],
+        "aliases": [
+            "ANSIT239K1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 0000"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 0001"
+            ],
+            "x": [
+                "29A0B6A8 87A983E9 730988A6 8727A8B2 D126C44C C2CC7B2A",
+                "65551930 35DC"
+            ],
+            "y": [
+                "76310804 F12E549B DB011C10 3089E735 10ACB275 FC312A5D",
+                "C6B76553 F0CA"
+            ]
+        }
+    },
+    "SECT283K1": {
+        "name": "sect283k1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "X9_63"
+        ],
+        "aliases": [
+            "K-283",
+            "ANSIT283K1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000001"
+            ],
+            "x": [
+                "0503213F 78CA4488 3F1A3B81 62F188E5 53CD265F 23C1567A",
+                "16876913 B0C2AC24 58492836"
+            ],
+            "y": [
+                "01CCDA38 0F1C9E31 8D90F95D 07E5426F E87E45C0 E8184698",
+                "E4596236 4E341161 77DD2259"
+            ]
+        }
+    },
+    "SECT283R1": {
+        "name": "sect283r1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "X9_63"
+        ],
+        "aliases": [
+            "B-283",
+            "ANSIT283R1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000001"
+            ],
+            "b": [
+                "027B680A C8B8596D A5A4AF8A 19A0303F CA97FD76 45309FA2",
+                "A581485A F6263E31 3B79A2F5"
+            ],
+            "x": [
+                "05F93925 8DB7DD90 E1934F8C 70B0DFEC 2EED25B8 557EAC9C",
+                "80E2E198 F8CDBECD 86B12053"
+            ],
+            "y": [
+                "03676854 FE24141C B98FE6D4 B20D02B4 516FF702 350EDDB0",
+                "826779C8 13F0DF45 BE8112F4"
+            ]
+        }
+    },
+    "SECT409K1": {
+        "name": "sect409k1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "X9_63"
+        ],
+        "aliases": [
+            "K-409",
+            "ANSIT409K1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000001"
+            ],
+            "x": [
+                "0060F05F 658F49C1 AD3AB189 0F718421 0EFD0987 E307C84C",
+                "27ACCFB8 F9F67CC2 C460189E B5AAAA62 EE222EB1 B35540CF",
+                "E9023746"
+            ],
+            "y": [
+                "01E36905 0B7C4E42 ACBA1DAC BF04299C 3460782F 918EA427",
+                "E6325165 E9EA10E3 DA5F6C42 E9C55215 AA9CA27A 5863EC48",
+                "D8E0286B"
+            ]
+        }
+    },
+    "SECT409R1": {
+        "name": "sect409r1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "X9_63"
+        ],
+        "aliases": [
+            "B-409",
+            "ANSIT409R1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000001"
+            ],
+            "b": [
+                "0021A5C2 C8EE9FEB 5C4B9A75 3B7B476B 7FD6422E F1F3DD67",
+                "4761FA99 D6AC27C8 A9A197B2 72822F6C D57A55AA 4F50AE31",
+                "7B13545F"
+            ],
+            "x": [
+                "015D4860 D088DDB3 496B0C60 64756260 441CDE4A F1771D4D",
+                "B01FFE5B 34E59703 DC255A86 8A118051 5603AEAB 60794E54",
+                "BB7996A7"
+            ],
+            "y": [
+                "0061B1CF AB6BE5F3 2BBFA783 24ED106A 7636B9C5 A7BD198D",
+                "0158AA4F 5488D08F 38514F1F DF4B4F40 D2181B36 81C364BA",
+                "0273C706"
+            ]
+        }
+    },
+    "SECT571K1": {
+        "name": "sect571k1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "X9_63"
+        ],
+        "aliases": [
+            "K-571",
+            "ANSIT571K1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000001"
+            ],
+            "x": [
+                "026EB7A8 59923FBC 82189631 F8103FE4 AC9CA297 0012D5D4",
+                "60248048 01841CA4 43709584 93B205E6 47DA304D B4CEB08C",
+                "BBD1BA39 494776FB 988B4717 4DCA88C7 E2945283 A01C8972"
+            ],
+            "y": [
+                "0349DC80 7F4FBF37 4F4AEADE 3BCA9531 4DD58CEC 9F307A54",
+                "FFC61EFC 006D8A2C 9D4979C0 AC44AEA7 4FBEBBB9 F772AEDC",
+                "B620B01A 7BA7AF1B 320430C8 591984F6 01CD4C14 3EF1C7A3"
+            ]
+        }
+    },
+    "SECT571R1": {
+        "name": "sect571r1",
+        "long_name": null,
+        "standards": [
+            "SP_800_186",
+            "X9_63"
+        ],
+        "aliases": [
+            "B-571",
+            "ANSIT571R1"
+        ],
+        "parameter_numbers": {
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000001"
+            ],
+            "b": [
+                "02F40E7E 2221F295 DE297117 B7F3D62F 5C6A97FF CB8CEFF1",
+                "CD6BA8CE 4A9A18AD 84FFABBD 8EFA5933 2BE7AD67 56A66E29",
+                "4AFD185A 78FF12AA 520E4DE7 39BACA0C 7FFEFF7F 2955727A"
+            ],
+            "x": [
+                "0303001D 34B85629 6C16C0D4 0D3CD775 0A93D1D2 955FA80A",
+                "A5F40FC8 DB7B2ABD BDE53950 F4C0D293 CDD711A3 5B67FB14",
+                "99AE6003 8614F139 4ABFA3B4 C850D927 E1E7769C 8EEC2D19"
+            ],
+            "y": [
+                "037BF273 42DA639B 6DCCFFFE B73D69D7 8C6C27A6 009CBBCA",
+                "1980F853 3921E8A6 84423E43 BAB08A57 6291AF8F 461BB2A8",
+                "B3531D2F 0485C19B 16E2F151 6E23DD3C 1A4827AF 1B8AC15B"
+            ]
+        }
+    }
+}
