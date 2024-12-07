@@ -851,6 +851,14 @@
         "size": 768,
         "group_type": "HYBRID_PQS"
     },
+    "SECP256R1_ML_KEM_768": {
+        "name": "SecP256r1MLKEM768",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1249,
+        "group_type": "HYBRID_PQS"
+    },
     "SECP384R1_KYBER_768_R3": {
         "name": "secp384r1/Kyber-768-r3",
         "long_name": null,
@@ -881,6 +889,14 @@
         "oid": null,
         "vulnerabilities": [],
         "size": 768,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_ML_KEM_768": {
+        "name": "X25519MLKEM768",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1120,
         "group_type": "HYBRID_PQS"
     }
 }
