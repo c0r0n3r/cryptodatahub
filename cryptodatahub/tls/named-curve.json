@@ -239,6 +239,16 @@
         "code": 573,
         "named_group": "KYBER_1024_R3"
     },
+    "SECP256R1_ML_KEM_768": {
+        "_code_in_hex": "0x11eb",
+        "code": 4587,
+        "named_group": "SECP256R1_ML_KEM_768"
+    },
+    "X25519_ML_KEM_768": {
+        "_code_in_hex": "0x11ec",
+        "code": 4588,
+        "named_group": "X25519_ML_KEM_768"
+    },
     "X25519_KYBER_512_R3_CLOUDFLARE": {
         "_code_in_hex": "0xfe30",
         "code": 65072,
