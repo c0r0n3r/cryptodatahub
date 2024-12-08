@@ -3,6 +3,36 @@ Changelog
 =========
 
 -------------------
+0.12.6 - 2024-12-08
+-------------------
+
+Features
+========
+
+-  Generic
+
+   -  add certificate transparency (CT) logs (#24)
+
+Improvements
+============
+
+-  Generic
+
+   -  add elliptic-curve parameters (#24)
+
+   -  add missing PQC named curves (#29)
+
+      | ``SecP256r1MLKEM768``, ``X25519MLKEM768``
+
+-  TLS
+
+   -  add missing PQC named curves (#29)
+
+      | ``SECP256R1_ML_KEM_768``, ``X25519_ML_KEM_768``
+
+   -  add capabilities for Firefox version 108-133 (#30)
+
+-------------------
 0.12.5 - 2024-05-25
 -------------------
 
