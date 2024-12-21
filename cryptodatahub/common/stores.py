@@ -105,7 +105,7 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
         metadata={'human_readable_name': 'URL', 'human_friendly': False},
     )
     mmd = attr.ib(
-        validator=attr.validators.instance_of(int),
+        validator=attr.validators.and_(attr.validators.instance_of(int), attr.validators.ge(1)),
         metadata={'human_readable_name': 'Maximum Merge Delay', 'human_friendly': False},
     )
     description = attr.ib(
@@ -134,10 +134,6 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
         converter=convert_dict_to_object(CertificateTransparencyLogState),
         validator=attr.validators.optional(attr.validators.instance_of(CertificateTransparencyLogState))
     )
-
-    def __attrs_post_init__(self):
-        if self.mmd < 1:
-            raise ValueError(self.mmd)
 
     def __str__(self):
         return '{} ({})'.format(
