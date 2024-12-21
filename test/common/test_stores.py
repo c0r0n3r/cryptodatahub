@@ -34,7 +34,7 @@ class TestCertificateTransparencyLog(TestClasses.TestJsonBase):
                 url='',
                 mmd=0
             )
-        self.assertEqual(context_manager.exception.args, (0, ))
+        self.assertEqual(context_manager.exception.args, ('\'mmd\' must be >= 1: 0',))
 
     def test_from_log_id(self):
         self.assertEqual(
