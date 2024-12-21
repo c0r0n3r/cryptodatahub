@@ -1,3 +1,13 @@
+.. image:: https://gitlab.com/coroner/cryptodatahub/badges/master/pipeline.svg
+    :alt:  Pipeline
+    :target: https://gitlab.com/coroner/cryptodatahub/-/pipelines/master/latest
+.. image:: https://coveralls.io/repos/gitlab/coroner/cryptodatahub/badge.svg?branch=master
+    :alt:  Test Coverage
+    :target: https://coveralls.io/gitlab/coroner/cryptodatahub/
+.. image:: https://readthedocs.org/projects/cryptodatahub/badge/?version=latest
+    :alt:  Documentation
+    :target: https://cryptodatahub.readthedocs.io
+
 **CryptoDataHub** is a repository of cryptography-related data available under a free license. The main goal of the
 repository is to support cryptographic library tester and client/server cryptographic settings analyzer applications
 such as `CryptoLyzer <https://cryptolyzer.readthedocs.io/>`__ with reliable and freely available data.
