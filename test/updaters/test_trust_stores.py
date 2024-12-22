@@ -34,7 +34,7 @@ from cryptodatahub.common.stores import (
 
 class TestRootCertificateBase(TestClasses.TestKeyBase):
     def setUp(self):
-        super(TestRootCertificateBase, self).setUp()
+        super().setUp()
 
         self.public_key_x509_lets_encrypt = self._get_public_key_x509('letsencrypt_isrg_root_x1')
         self.public_key_x509_snakeoil_ca = self._get_public_key_x509('snakeoil_ca_cert')
@@ -270,7 +270,7 @@ class UpdaterRootCertificateTrustStoreTest(UpdaterBase):
             'RootCertificate', RootCertificateBase.get_json_records(RootCertificateParams)
         )
 
-        super(UpdaterRootCertificateTrustStoreTest, self).__init__(
+        super().__init__(
             fetcher_class=FetcherRootCertificateStore,
             enum_class=root_certificate_test_class,
             enum_param_class=RootCertificateParams,

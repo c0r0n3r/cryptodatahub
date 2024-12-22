@@ -45,7 +45,7 @@ class CertificateTransparencyLogDateTimeBase(CryptoDataParamsBase):
         if isinstance(value, datetime.datetime):
             return value.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-        return super(CertificateTransparencyLogDateTimeBase, self)._asdict_serializer(_, __, value)
+        return super()._asdict_serializer(_, __, value)
 
 
 @attr.s(frozen=True)
@@ -261,7 +261,7 @@ class RootCertificateParams(CryptoDataParamsFetchedBase):
         return self.subject_to_enum_item_name(self.certificate.subject, self.certificate.serial_number)
 
     def _asdict(self):
-        dict_value = super(RootCertificateParams, self)._asdict()
+        dict_value = super()._asdict()
         dict_value['certificate'] = self.certificate.pem.splitlines()
         meta = collections.OrderedDict([
             ('_subject', self.certificate.subject),

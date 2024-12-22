@@ -421,7 +421,7 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
     _certificate = attr.ib(validator=attr.validators.instance_of(asn1crypto.x509.Certificate))
 
     def __init__(self, certificate):
-        super(PublicKeySigned, self).__init__(certificate.public_key)
+        super().__init__(certificate.public_key)
 
         object.__setattr__(self, '_certificate', certificate)
 
