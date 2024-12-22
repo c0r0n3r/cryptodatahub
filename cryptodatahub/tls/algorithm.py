@@ -93,7 +93,7 @@ class HashAndSignatureAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComp
         else:
             signature_algorithm = self.signature_algorithm.value
 
-        return '{} with {} encryption'.format(hash_algorithm, signature_algorithm)
+        return f'{hash_algorithm} with {signature_algorithm} encryption'
 
     @classmethod
     def get_code_size(cls):

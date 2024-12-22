@@ -75,9 +75,10 @@ class DHParamWellKnownParams(CryptoDataParamsBase, GradeableVulnerabilities):
 
     def __str__(self):
         if self.standards:
-            return '{} ({})'.format(self.name, ', '.join(map(lambda standard: standard.value.name, self.standards)))
+            standards_str = ', '.join(map(lambda standard: standard.value.name, self.standards))
+            return f'{self.name} ({standards_str})'
 
-        return '{}-bit {} {} DH parameter'.format(self.key_size, self.source.value.name, self.name)
+        return f'{self.key_size}-bit {self.source.value.name} {self.name} DH parameter'
 
 
 class DHParamWellKnownBase(CryptoDataEnumBase):
