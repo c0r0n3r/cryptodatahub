@@ -136,9 +136,7 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
     )
 
     def __str__(self):
-        return '{} ({})'.format(
-            self.description, self.log_id
-        )
+        return f'{self.description} ({self.log_id})'
 
     @classmethod
     def description_to_enum_item_name(cls, description):
@@ -254,7 +252,7 @@ class RootCertificateParams(CryptoDataParamsFetchedBase):
         if not isinstance(name, str):
             name = ' '.join(name)
 
-        return '{}_{}'.format(name_to_enum_item_name(name), serial_number)
+        return f'{name_to_enum_item_name(name)}_{serial_number}'
 
     @property
     def identifier(self):

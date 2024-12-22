@@ -62,9 +62,7 @@ class ClientVersionedParamsBase(CryptoDataParamsBase):
     last_version = attr.ib(converter=convert_client_version(), validator=attr.validators.instance_of(ClientVersion))
 
     def __str__(self):
-        return '{} ({} - {})'.format(
-            self.client.value, self.first_version, self.last_version
-        )
+        return f'{self.client.value} ({self.first_version} - {self.last_version})'
 
 
 @attr.s(frozen=True)

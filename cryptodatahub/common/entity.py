@@ -76,7 +76,7 @@ class ClientParams(CryptoDataParamsNamed):
     )
 
     def __str__(self):
-        return '{} {}'.format(self.developer.value.name, self.name)
+        return f'{self.developer.value.name} {self.name}'
 
 
 Client = CryptoDataEnumBase('Client', CryptoDataEnumBase.get_json_records(ClientParams))
@@ -103,7 +103,8 @@ class ServerParams(CryptoDataParamsNamed):
     def __str__(self):
         server_str = self.name
         if self.developers:
-            server_str += ' ({})'.format(','.join(map(lambda developer: developer.value.name, self.developers)))
+            developers_str = ','.join(map(lambda developer: developer.value.name, self.developers))
+            server_str += f' ({developers_str})'
         return server_str
 
 

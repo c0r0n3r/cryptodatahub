@@ -26,9 +26,7 @@ class CertificatePemFetcher():
                 sha2_256_fingerprint
             ).value.certificate.pem
         except KeyError:
-            data = self.http_fetcher(
-                'https://crt.sh/?d={}'.format(sha2_256_fingerprint),
-            )
+            data = self.http_fetcher(f'https://crt.sh/?d={sha2_256_fingerprint}')
             return data.decode('utf-8').strip()
 
 

@@ -78,7 +78,7 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
             '<tbody>',
             '<tr>',
         ] + [
-            '<th>{}</th>'.format(field_name)
+            f'<th>{field_name}</th>'
             for field_name in FetcherRootCertificateStoreApple.FIELDS
         ] + [
             '</tr>',
@@ -92,7 +92,7 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
                 else:
                     data = field_name
 
-                mock_data += '<td>{}</td>'.format(data) + os.linesep
+                mock_data += f'<td>{data}</td>{os.linesep}'
             mock_data += '</tr>' + os.linesep
 
         return mock_data.encode('ascii')
