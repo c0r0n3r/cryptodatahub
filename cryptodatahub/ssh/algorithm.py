@@ -110,7 +110,7 @@ class KexAlgorithmParams(SshAlgorithmParams):
     key_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
 
     def __attrs_post_init__(self):
-        super(KexAlgorithmParams, self).__attrs_post_init__()
+        super().__attrs_post_init__()
 
         if self.key_size is not None:
             gradeables = PublicKeySize(self.kex, self.key_size).gradeables

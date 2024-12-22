@@ -22,6 +22,6 @@ class InvalidValue(Exception):
         if class_member is not None:
             message = f'{message} {class_member} value'
 
-        super(InvalidValue, self).__init__(message)
+        super().__init__(message)
 
         self.value = value

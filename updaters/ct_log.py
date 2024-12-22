@@ -57,7 +57,7 @@ class FetcherCertificateTransparencyLogs(FetcherBase):
 
 class UpdaterCertificateTransparencyLogs(UpdaterBase):
     def __init__(self):
-        super(UpdaterCertificateTransparencyLogs, self).__init__(
+        super().__init__(
             FetcherCertificateTransparencyLogs,
             CertificateTransparencyLog,
             CertificateTransparencyLogParams,

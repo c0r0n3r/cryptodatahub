@@ -219,7 +219,7 @@ class FetcherRootCertificateStore(FetcherBase):
 
 class UpdaterRootCertificateTrustStore(UpdaterBase):
     def __init__(self):
-        super(UpdaterRootCertificateTrustStore, self).__init__(  # pragma: no cover
+        super().__init__(  # pragma: no cover
             fetcher_class=FetcherRootCertificateStore,
             enum_class=RootCertificate,
             enum_param_class=RootCertificateParams,
