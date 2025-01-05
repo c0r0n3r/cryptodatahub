@@ -2,7 +2,6 @@
 
 import abc
 import collections
-import six
 
 import attr
 
@@ -94,7 +93,7 @@ class HashAndSignatureAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComp
         else:
             signature_algorithm = self.signature_algorithm.value
 
-        return '{} with {} encryption'.format(hash_algorithm, signature_algorithm)
+        return f'{hash_algorithm} with {signature_algorithm} encryption'
 
     @classmethod
     def get_code_size(cls):
@@ -189,9 +188,9 @@ TlsCertificateCompressionAlgorithm = CryptoDataEnumCodedBase(
 
 @attr.s(frozen=True)
 class CipherParamsBase(CryptoDataParamsEnumNumeric, GradeableComplex):  # pylint: disable=too-many-instance-attributes
-    iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
-    iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
-    openssl_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
+    iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
+    iana_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
+    openssl_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
     key_exchange = attr.ib(
         converter=convert_enum(KeyExchange),
         validator=attr.validators.optional(attr.validators.instance_of(KeyExchange)),
@@ -257,7 +256,7 @@ class CipherParamsBase(CryptoDataParamsEnumNumeric, GradeableComplex):  # pylint
 
     def __str__(self):
         if self.iana_name is None:
-            result = six.next(
+            result = next(
                 cipher_suite
                 for cipher_suite in TlsCipherSuite
                 if cipher_suite.value.code == self.code

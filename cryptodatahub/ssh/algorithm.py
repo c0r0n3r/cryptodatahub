@@ -4,7 +4,6 @@ import abc
 import enum
 import attr
 
-import six
 
 from cryptodatahub.common.algorithm import (
     BlockCipher,
@@ -37,7 +36,7 @@ class SshAlgorithmParams(CryptoDataParamsEnumString, GradeableComplex):
     def __attrs_post_init__(self):
         gradeables = []
         for algorithm in self._gradeable_algorithms:
-            if isinstance(algorithm, six.string_types):
+            if isinstance(algorithm, str):
                 gradeable = getattr(self, algorithm)
                 if gradeable is not None:
                     gradeable = gradeable.value
@@ -101,7 +100,7 @@ class KexAlgorithmParams(SshAlgorithmParams):
     key_parameter = attr.ib(
         converter=convert_variadic((convert_enum(NamedGroup), convert_enum(DHParamWellKnown))),
         validator=attr.validators.optional(
-            attr.validators.instance_of((NamedGroup, DHParamWellKnown, six.string_types))
+            attr.validators.instance_of((NamedGroup, DHParamWellKnown, str))
         )
     )
     exchange_hash = attr.ib(
@@ -111,7 +110,7 @@ class KexAlgorithmParams(SshAlgorithmParams):
     key_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
 
     def __attrs_post_init__(self):
-        super(KexAlgorithmParams, self).__attrs_post_init__()
+        super().__attrs_post_init__()
 
         if self.key_size is not None:
             gradeables = PublicKeySize(self.kex, self.key_size).gradeables

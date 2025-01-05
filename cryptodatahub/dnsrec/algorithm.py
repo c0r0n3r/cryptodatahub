@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import attr
-import six
 
 from cryptodatahub.common.algorithm import Hash, KeyExchange, Signature
 from cryptodatahub.common.grade import GradeableComplex
@@ -16,7 +15,7 @@ from cryptodatahub.common.types import (
 
 @attr.s(frozen=True)
 class AlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComplex):
-    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    name = attr.ib(validator=attr.validators.instance_of(str))
     zone_transfer = attr.ib(validator=attr.validators.instance_of(bool))
     transaction_security = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(bool)))
     algorithm = attr.ib(
@@ -45,7 +44,7 @@ DnsSecAlgorithm = CryptoDataEnumCodedBase('DnsSecAlgorithm', CryptoDataEnumCoded
 
 @attr.s(frozen=True)
 class DigestTypeParams(CryptoDataParamsEnumNumeric, GradeableComplex):
-    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    name = attr.ib(validator=attr.validators.instance_of(str))
     hash = attr.ib(
         converter=convert_enum(Hash),
         validator=attr.validators.instance_of(Hash),
@@ -71,8 +70,8 @@ DnsSecDigestType = CryptoDataEnumCodedBase(
 
 @attr.s(frozen=True)
 class RrTypeParams(CryptoDataParamsEnumNumeric):
-    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
-    description = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
+    name = attr.ib(validator=attr.validators.instance_of(str))
+    description = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
 
     @classmethod
     def get_code_size(cls):

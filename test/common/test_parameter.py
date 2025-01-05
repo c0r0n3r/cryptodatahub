@@ -7,8 +7,6 @@ except ImportError:
 
 from test.common.classes import TestClasses
 
-import six
-
 from cryptodatahub.common.algorithm import NamedGroup
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.parameter import DHParameterNumbers, DHParamWellKnown, ECParamWellKnown
@@ -57,8 +55,8 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
            ECParamWellKnown.PRIME256V1
         )
 
-        with six.assertRaisesRegex(
-                self, InvalidValue, "NamedGroup.C2ONB239V4.* is not a valid ECParamWellKnown"
+        with self.assertRaisesRegex(
+                InvalidValue, "NamedGroup.C2ONB239V4.* is not a valid ECParamWellKnown"
         ) as context_manager:
             ECParamWellKnown.from_named_group(NamedGroup.C2ONB239V4)
         self.assertEqual(context_manager.exception.value, NamedGroup.C2ONB239V4)

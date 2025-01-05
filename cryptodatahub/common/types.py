@@ -9,17 +9,11 @@ import enum
 import json
 import inspect
 import os
+import pathlib
 import re
 import unicodedata
 
 import dateutil.parser
-import six
-from six.moves import collections_abc
-
-try:
-    import pathlib
-except ImportError:  # pragma: no cover
-    import pathlib2 as pathlib  # pragma: no cover
 
 import attr
 import urllib3
@@ -27,7 +21,7 @@ import urllib3
 from cryptodatahub.common.exception import InvalidValue
 
 
-class _ConverterBase(object):
+class _ConverterBase():
     @abc.abstractmethod
     def __call__(self, value):
         raise NotImplementedError()
@@ -93,7 +87,7 @@ class _EnumConverter(_ConverterBase):
         if value is None:
             return None
 
-        if not isinstance(value, six.string_types):
+        if not isinstance(value, str):
             return value
 
         try:
@@ -112,7 +106,7 @@ def convert_enum(enum_type):
 
 
 @attr.s(frozen=True)
-class Base64Data(object):
+class Base64Data():
     value = attr.ib(validator=attr.validators.instance_of((bytes, bytearray)))
 
     def _asdict(self):
@@ -157,10 +151,10 @@ class _Base64DataConverter(_ConverterBase):
         if value is None:
             return None
 
-        if isinstance(value, bytearray) or (six.PY3 and isinstance(value, bytes)):
+        if isinstance(value, (bytearray, bytes)):
             return Base64Data(value)
 
-        if not isinstance(value, six.string_types):
+        if not isinstance(value, str):
             return value
 
         try:
@@ -184,10 +178,10 @@ class _BigNumberConverter(_ConverterBase):
         if value is None:
             return None
 
-        if not isinstance(value, collections_abc.Iterable):
+        if not isinstance(value, collections.abc.Iterable):
             return value
 
-        if not all(map(lambda big_number_part: isinstance(big_number_part, six.string_types), value)):
+        if not all(map(lambda big_number_part: isinstance(big_number_part, str), value)):
             return value
 
         try:
@@ -207,7 +201,7 @@ def convert_big_enum():
 
 @attr.s(repr=False, slots=True, hash=True)
 class _IterableConverter(_ConverterBase):
-    member_converter = attr.ib(validator=attr.validators.instance_of(collections_abc.Callable))
+    member_converter = attr.ib(validator=attr.validators.instance_of(collections.abc.Callable))
 
     def __call__(self, iterable):
         if iterable is None:
@@ -231,14 +225,14 @@ def convert_iterable(member_converter):
 
 @attr.s(repr=False, slots=True, hash=True)
 class _MappingConverter(_ConverterBase):
-    key_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections_abc.Callable)))
-    value_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections_abc.Callable)))
+    key_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections.abc.Callable)))
+    value_converter = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(collections.abc.Callable)))
 
     def __call__(self, mapping):
         if mapping is None:
             return None
 
-        if not isinstance(mapping, collections_abc.Mapping):
+        if not isinstance(mapping, collections.abc.Mapping):
             return mapping
 
         try:
@@ -264,7 +258,7 @@ def convert_mapping(key_converter=None, value_converter=None):
 
 
 @attr.s(frozen=True)
-class ClientVersion(object):
+class ClientVersion():
     parts = attr.ib(validator=attr.validators.deep_iterable(attr.validators.instance_of(int)))
 
     @classmethod
@@ -286,7 +280,7 @@ class _ClientVersionConverter(_ConverterBase):
         if version is None:
             return None
 
-        if not isinstance(version, six.string_types):
+        if not isinstance(version, str):
             return version
 
         try:
@@ -310,7 +304,7 @@ class _UrlConverter(_ConverterBase):
         if value is None:
             return None
 
-        if not isinstance(value, six.string_types):
+        if not isinstance(value, str):
             return value
 
         try:
@@ -353,11 +347,11 @@ def convert_variadic(converters):
     return _VariadicConverter(converters)
 
 
-class CryptoDataParamsBase(object):
+class CryptoDataParamsBase():
     @classmethod
     def get_init_attribute_names(cls):
         return [
-            six.ensure_text(name)
+            name
             for name, attribute in attr.fields_dict(cls).items()
             if attribute.init
         ]
@@ -398,8 +392,8 @@ class CryptoDataParamsFetchedBase(CryptoDataParamsBase):
 
 @attr.s(frozen=True)
 class CryptoDataParamsNamed(CryptoDataParamsBase):
-    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
-    long_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
+    name = attr.ib(validator=attr.validators.instance_of(str))
+    long_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
 
     def __str__(self):
         return self.name
@@ -425,7 +419,7 @@ class CryptoDataParamsEnumNumeric(CryptoDataParamsBase):
 
 @attr.s(frozen=True)
 class CryptoDataParamsEnumString(CryptoDataParamsBase):
-    code = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    code = attr.ib(validator=attr.validators.instance_of(str))
 
     def __str__(self):
         return self.code
@@ -439,14 +433,14 @@ class CryptoDataParamsEnumString(CryptoDataParamsBase):
 
 @attr.s(frozen=True)
 class CryptoDataParamsOIDOptional(CryptoDataParamsNamed):
-    oid = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(six.string_types)))
+    oid = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
 
 
 class CryptoDataEnumBase(enum.Enum):
     @classmethod
     def get_json_records(cls, param_class):
         return collections.OrderedDict([
-            (six.ensure_str(unicodedata.normalize('NFD', name).encode('ascii', 'ignore')), param_class(**{
+            (unicodedata.normalize('NFD', name).encode('ascii', 'ignore').decode('utf-8'), param_class(**{
                 init_param_name.replace('-', '_'): value
                 for init_param_name, value in params.items()
                 if not init_param_name.startswith('_')

@@ -8,7 +8,6 @@ import os
 
 from collections import OrderedDict
 
-import six
 import asn1crypto.keys
 import asn1crypto.pem
 import asn1crypto.x509
@@ -43,7 +42,7 @@ class PublicKeySize(GradeableComplex):
     _ELLIPTIC_CURVE_TYPES = [Authentication.ECDSA, Authentication.EDDSA, KeyExchange.ECDH, KeyExchange.ECDHE]
 
     key_type = attr.ib(validator=attr.validators.instance_of((Authentication, KeyExchange)))
-    value = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    value = attr.ib(validator=attr.validators.instance_of(int))
 
     @value.validator
     def _value_validator(self, attribute, value):  # pylint: disable=unused-argument
@@ -111,23 +110,23 @@ def convert_public_key_size(key_exchange):
 
 
 @attr.s(frozen=True)
-class PublicKeyParamBase(object):
+class PublicKeyParamBase():
     pass
 
 
 @attr.s(frozen=True)
 class PublicKeyParamsDsa(PublicKeyParamBase):
-    prime = attr.ib(validator=attr.validators.instance_of(six.integer_types))
-    generator = attr.ib(validator=attr.validators.instance_of(six.integer_types))
-    order = attr.ib(validator=attr.validators.instance_of(six.integer_types))
-    public_key_value = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    prime = attr.ib(validator=attr.validators.instance_of(int))
+    generator = attr.ib(validator=attr.validators.instance_of(int))
+    order = attr.ib(validator=attr.validators.instance_of(int))
+    public_key_value = attr.ib(validator=attr.validators.instance_of(int))
 
 
 @attr.s(frozen=True)
 class PublicKeyParamsEcdsa(PublicKeyParamBase):
     named_group = attr.ib(validator=attr.validators.instance_of(NamedGroup))
-    point_x = attr.ib(validator=attr.validators.instance_of(six.integer_types))
-    point_y = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    point_x = attr.ib(validator=attr.validators.instance_of(int))
+    point_y = attr.ib(validator=attr.validators.instance_of(int))
 
     @classmethod
     def from_octet_bit_string(cls, named_group, octet_bit_string):
@@ -151,12 +150,12 @@ class PublicKeyParamsEddsa(PublicKeyParamBase):
 
 @attr.s(frozen=True)
 class PublicKeyParamsRsa(PublicKeyParamBase):
-    modulus = attr.ib(validator=attr.validators.instance_of(six.integer_types))
-    public_exponent = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    modulus = attr.ib(validator=attr.validators.instance_of(int))
+    public_exponent = attr.ib(validator=attr.validators.instance_of(int))
 
 
 @attr.s(eq=False, frozen=True)
-class PublicKey(object):
+class PublicKey():
     _public_key = attr.ib(validator=attr.validators.instance_of(asn1crypto.keys.PublicKeyInfo))
 
     @classmethod
@@ -174,7 +173,7 @@ class PublicKey(object):
     @classmethod
     def from_params(cls, params):
         if isinstance(params, PublicKeyParamsDsa):
-            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(six.u('dsa'))
+            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId('dsa')
             parameters = asn1crypto.keys.DSAParams({
                 'p': params.prime, 'g': params.generator, 'q': params.order,
             })
@@ -187,9 +186,9 @@ class PublicKey(object):
             })
         elif isinstance(params, PublicKeyParamsEddsa):
             if params.curve_type == NamedGroup.CURVE25519:
-                algorithm_name = six.u('ed25519')
+                algorithm_name = 'ed25519'
             elif params.curve_type == NamedGroup.CURVE448:
-                algorithm_name = six.u('ed448')
+                algorithm_name = 'ed448'
             else:
                 raise NotImplementedError()
 
@@ -201,7 +200,7 @@ class PublicKey(object):
                 'public_key': asn1crypto.core.OctetBitString(bytes(params.key_data)),
             })
         elif isinstance(params, PublicKeyParamsRsa):
-            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(six.u('rsa'))
+            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId('rsa')
             public_key = asn1crypto.keys.PublicKeyInfo({
                 'algorithm': asn1crypto.keys.PublicKeyAlgorithm({'algorithm': algorithm_id}),
                 'public_key': asn1crypto.keys.RSAPublicKey(
@@ -209,7 +208,7 @@ class PublicKey(object):
                 )
             })
         elif isinstance(params, PublicKeyParamsEcdsa):
-            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId(six.u('ec'))
+            algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId('ec')
             parameters = asn1crypto.keys.ECDomainParameters({
                 'named': params.named_group.value.oid
             })
@@ -281,7 +280,7 @@ class PublicKey(object):
 
     @property
     def pem(self):
-        return six.ensure_str(asn1crypto.pem.armor(six.u(self._get_type_name().upper()), self.der))
+        return asn1crypto.pem.armor(self._get_type_name().upper(), self.der).decode('utf-8')
 
     @property
     def key_type(self):
@@ -422,7 +421,7 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
     _certificate = attr.ib(validator=attr.validators.instance_of(asn1crypto.x509.Certificate))
 
     def __init__(self, certificate):
-        super(PublicKeySigned, self).__init__(certificate.public_key)
+        super().__init__(certificate.public_key)
 
         object.__setattr__(self, '_certificate', certificate)
 
@@ -491,10 +490,7 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
 
     @property
     def subject(self):
-        return OrderedDict([
-            (six.ensure_str(name), value)
-            for name, value in self._certificate.subject.native.items()
-        ])
+        return self._certificate.subject.native
 
     @property
     def issuer(self):
@@ -505,7 +501,7 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
         return self._certificate.valid_domains
 
     def is_subject_matches(self, host_name):
-        return self._certificate.is_valid_domain_ip(six.u(host_name))
+        return self._certificate.is_valid_domain_ip(host_name)
 
     @property
     def subject_alternative_names(self):

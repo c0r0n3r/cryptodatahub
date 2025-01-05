@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import enum
-import six
 
 import attr
 
@@ -19,10 +18,10 @@ class InvalidValue(Exception):
             message = value
         message = hex(value) if isinstance(value, int) else repr(value)
         type_name = type_class.__name__ if hasattr(type_class, '__name__') else str(type(type_class))
-        message = six.ensure_text('{} is not a valid {}').format(message, type_name)
+        message = f'{message} is not a valid {type_name}'
         if class_member is not None:
-            message = six.ensure_text('{} {} value').format(message, class_member)
+            message = f'{message} {class_member} value'
 
-        super(InvalidValue, self).__init__(message)
+        super().__init__(message)
 
         self.value = value

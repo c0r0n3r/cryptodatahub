@@ -1,15 +1,10 @@
 # -*- coding: utf-8 -*-
 
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
-
 import collections
+import unittest
 
 from test.common.classes import TestClasses
 
-import six
 
 from cryptodatahub.common.algorithm import Hash
 from cryptodatahub.common.entity import Entity
@@ -39,7 +34,7 @@ class TestCertificateTransparencyLog(TestClasses.TestJsonBase):
                 url='',
                 mmd=0
             )
-        self.assertEqual(context_manager.exception.args, (0, ))
+        self.assertEqual(context_manager.exception.args, ('\'mmd\' must be >= 1: 0',))
 
     def test_from_log_id(self):
         self.assertEqual(
@@ -197,10 +192,10 @@ class TestRootCertificateParams(TestClasses.TestKeyBase):
             collections.OrderedDict([
                 ('_meta', collections.OrderedDict([
                     ('_subject', collections.OrderedDict([
-                        ('country_name', six.u('XX')),
-                        ('locality_name', six.u('Default City')),
-                        ('organization_name', six.u('Default Company Ltd')),
-                        ('common_name', six.u('Default Company CA'))
+                        ('country_name', 'XX'),
+                        ('locality_name', 'Default City'),
+                        ('organization_name', 'Default Company Ltd'),
+                        ('common_name', 'Default Company CA')
                     ])),
                     ('_fingerprints', collections.OrderedDict([
                         ('MD5',

@@ -3,11 +3,11 @@
 
 import collections
 import datetime
+import io
 import tarfile
 
 import attr
 import bs4
-import six
 
 from cryptodatahub.common.entity import Entity
 from cryptodatahub.common.stores import (
@@ -39,7 +39,7 @@ class FetcherRootCertificateStoreGoogle(FetcherBase):
         data = HttpFetcher()(
             'https://android.googlesource.com/platform/system/ca-certificates/+archive/refs/heads/master/files.tar.gz'
         )
-        with tarfile.open(fileobj=six.BytesIO(data), mode='r') as tar:
+        with tarfile.open(fileobj=io.BytesIO(data), mode='r') as tar:
             for member in tar.getmembers():
                 yield tar.extractfile(member).read().decode('ascii')
 
@@ -219,7 +219,7 @@ class FetcherRootCertificateStore(FetcherBase):
 
 class UpdaterRootCertificateTrustStore(UpdaterBase):
     def __init__(self):
-        super(UpdaterRootCertificateTrustStore, self).__init__(  # pragma: no cover
+        super().__init__(  # pragma: no cover
             fetcher_class=FetcherRootCertificateStore,
             enum_class=RootCertificate,
             enum_param_class=RootCertificateParams,

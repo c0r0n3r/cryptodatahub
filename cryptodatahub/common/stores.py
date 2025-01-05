@@ -4,7 +4,6 @@ import collections
 import datetime
 import enum
 import re
-import six
 
 import attr
 
@@ -28,10 +27,10 @@ from cryptodatahub.common.utils import bytes_to_hex_string, name_to_enum_item_na
 
 @attr.s(frozen=True)
 class CertificateTransparencyOperator(CryptoDataParamsBase):
-    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    name = attr.ib(validator=attr.validators.instance_of(str))
     email = attr.ib(
         default=(),
-        validator=attr.validators.deep_iterable(attr.validators.instance_of(six.string_types))
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(str))
     )
 
 
@@ -46,7 +45,7 @@ class CertificateTransparencyLogDateTimeBase(CryptoDataParamsBase):
         if isinstance(value, datetime.datetime):
             return value.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-        return super(CertificateTransparencyLogDateTimeBase, self)._asdict_serializer(_, __, value)
+        return super()._asdict_serializer(_, __, value)
 
 
 @attr.s(frozen=True)
@@ -102,20 +101,20 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
         metadata={'human_friendly': False},
     )
     url = attr.ib(
-        validator=attr.validators.instance_of(six.string_types),
+        validator=attr.validators.instance_of(str),
         metadata={'human_readable_name': 'URL', 'human_friendly': False},
     )
     mmd = attr.ib(
-        validator=attr.validators.instance_of(int),
+        validator=attr.validators.and_(attr.validators.instance_of(int), attr.validators.ge(1)),
         metadata={'human_readable_name': 'Maximum Merge Delay', 'human_friendly': False},
     )
     description = attr.ib(
         default=None,
-        validator=attr.validators.optional(attr.validators.instance_of(six.string_types)),
+        validator=attr.validators.optional(attr.validators.instance_of(str)),
     )
     dns = attr.ib(
         default=None,
-        validator=attr.validators.optional(attr.validators.instance_of(six.string_types)),
+        validator=attr.validators.optional(attr.validators.instance_of(str)),
         metadata={'human_friendly': False},
     )
     temporal_interval = attr.ib(
@@ -136,14 +135,8 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
         validator=attr.validators.optional(attr.validators.instance_of(CertificateTransparencyLogState))
     )
 
-    def __attrs_post_init__(self):
-        if self.mmd < 1:
-            raise ValueError(self.mmd)
-
     def __str__(self):
-        return '{} ({})'.format(
-            self.description, self.log_id
-        )
+        return f'{self.description} ({self.log_id})'
 
     @classmethod
     def description_to_enum_item_name(cls, description):
@@ -179,14 +172,14 @@ RootCertificateTrustConstraintAction = enum.Enum('RootCertificateTrustConstraint
 
 
 @attr.s(frozen=True)
-class CertificateTrustConstraint(object):
+class CertificateTrustConstraint():
     action = attr.ib(
         converter=convert_enum(RootCertificateTrustConstraintAction),
         validator=attr.validators.instance_of(RootCertificateTrustConstraintAction),
     )
     domains = attr.ib(
         default=(),
-        validator=attr.validators.deep_iterable(attr.validators.instance_of(six.string_types))
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(str))
     )
     date = attr.ib(
         default=None,
@@ -196,7 +189,7 @@ class CertificateTrustConstraint(object):
 
 
 @attr.s(repr=False, slots=True, hash=True)
-class _RootCertificateParamCertificateConverter(object):
+class _RootCertificateParamCertificateConverter():
     def __call__(self, value):
         if value is None:
             return None
@@ -256,17 +249,17 @@ class RootCertificateParams(CryptoDataParamsFetchedBase):
         else:
             name = subject['organization_name']
 
-        if not isinstance(name, six.string_types):
+        if not isinstance(name, str):
             name = ' '.join(name)
 
-        return '{}_{}'.format(name_to_enum_item_name(name), serial_number)
+        return f'{name_to_enum_item_name(name)}_{serial_number}'
 
     @property
     def identifier(self):
         return self.subject_to_enum_item_name(self.certificate.subject, self.certificate.serial_number)
 
     def _asdict(self):
-        dict_value = super(RootCertificateParams, self)._asdict()
+        dict_value = super()._asdict()
         dict_value['certificate'] = self.certificate.pem.splitlines()
         meta = collections.OrderedDict([
             ('_subject', self.certificate.subject),

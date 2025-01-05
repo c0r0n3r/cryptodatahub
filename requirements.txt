@@ -1,8 +1,4 @@
 asn1crypto
-attrs>=20.3.0,<22.0.1
+attrs
 python-dateutil
-enum34==1.1.6;python_version<"3.4"
-pathlib2==2.3.7.post1;python_version<"3.4"
-pathlib2;python_version>="3.4"
-six>=1.13
 urllib3

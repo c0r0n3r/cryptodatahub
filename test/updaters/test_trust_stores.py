@@ -7,12 +7,12 @@ except ImportError:
 
 import csv
 import datetime
+import io
 import os
 import tarfile
 
 from test.common.classes import TestClasses
 
-import six
 
 from updaters.common import HttpFetcher, UpdaterBase
 from updaters.trust_stores import (
@@ -34,13 +34,13 @@ from cryptodatahub.common.stores import (
 
 class TestRootCertificateBase(TestClasses.TestKeyBase):
     def setUp(self):
-        super(TestRootCertificateBase, self).setUp()
+        super().setUp()
 
         self.public_key_x509_lets_encrypt = self._get_public_key_x509('letsencrypt_isrg_root_x1')
         self.public_key_x509_snakeoil_ca = self._get_public_key_x509('snakeoil_ca_cert')
 
     def _get_mock_data_mozilla(self, public_keys=(), options=None):
-        mock_data = six.StringIO()
+        mock_data = io.StringIO()
         dict_writer = csv.DictWriter(
             mock_data, FetcherRootCertificateStoreMozilla.CSV_FIELDS,
             quotechar='"', quoting=csv.QUOTE_ALL
@@ -56,7 +56,7 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
         return mock_data.getvalue().encode('ascii')
 
     def _get_mock_data_microsoft(self, public_keys=(), options=None):
-        mock_data = six.StringIO()
+        mock_data = io.StringIO()
         dict_writer = csv.DictWriter(
             mock_data, FetcherRootCertificateStoreMicrosoft.CSV_FIELDS,
             quotechar='"', quoting=csv.QUOTE_ALL
@@ -78,7 +78,7 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
             '<tbody>',
             '<tr>',
         ] + [
-            '<th>{}</th>'.format(field_name)
+            f'<th>{field_name}</th>'
             for field_name in FetcherRootCertificateStoreApple.FIELDS
         ] + [
             '</tr>',
@@ -92,20 +92,20 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
                 else:
                     data = field_name
 
-                mock_data += '<td>{}</td>'.format(data) + os.linesep
+                mock_data += f'<td>{data}</td>{os.linesep}'
             mock_data += '</tr>' + os.linesep
 
         return mock_data.encode('ascii')
 
     def _get_mock_data_google(self, public_keys=()):
-        mock_data = six.BytesIO()
+        mock_data = io.BytesIO()
 
         with tarfile.open(fileobj=mock_data, mode='w:gz') as tar:
             for public_key in public_keys:
                 content = public_key.pem.encode('ascii')
                 tarinfo = tarfile.TarInfo(public_key.fingerprints[Hash.SHA2_256])
                 tarinfo.size = len(content)
-                tar.addfile(tarinfo, six.BytesIO(content))
+                tar.addfile(tarinfo, io.BytesIO(content))
 
         return mock_data.getvalue()
 
@@ -270,7 +270,7 @@ class UpdaterRootCertificateTrustStoreTest(UpdaterBase):
             'RootCertificate', RootCertificateBase.get_json_records(RootCertificateParams)
         )
 
-        super(UpdaterRootCertificateTrustStoreTest, self).__init__(
+        super().__init__(
             fetcher_class=FetcherRootCertificateStore,
             enum_class=root_certificate_test_class,
             enum_param_class=RootCertificateParams,

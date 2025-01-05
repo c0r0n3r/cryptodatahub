@@ -2,7 +2,6 @@
 
 import collections
 import enum
-import six
 
 import attr
 
@@ -38,7 +37,7 @@ class ClientTokenBindingParams(CryptoDataParamsBase):
         converter=convert_iterable(convert_enum(TlsTokenBindingParamater)),
         validator=attr.validators.deep_iterable(attr.validators.instance_of(TlsTokenBindingParamater))
     )
-    protocol_version = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    protocol_version = attr.ib(validator=attr.validators.instance_of(str))
 
 
 @attr.s(frozen=True)
@@ -63,9 +62,7 @@ class ClientVersionedParamsBase(CryptoDataParamsBase):
     last_version = attr.ib(converter=convert_client_version(), validator=attr.validators.instance_of(ClientVersion))
 
     def __str__(self):
-        return '{} ({} - {})'.format(
-            self.client.value, self.first_version, self.last_version
-        )
+        return f'{self.client.value} ({self.first_version} - {self.last_version})'
 
 
 @attr.s(frozen=True)

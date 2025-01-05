@@ -3,9 +3,8 @@
 import abc
 import collections
 import csv
-import six
+import io
 
-from six.moves import collections_abc
 
 import attr
 
@@ -14,7 +13,7 @@ from cryptodatahub.common.stores import RootCertificate
 
 
 @attr.s(frozen=True)
-class CertificatePemFetcher(object):
+class CertificatePemFetcher():
     http_fetcher = attr.ib(
         init=False,
         default=HttpFetcher(connect_timeout=5, read_timeout=30, retry=10),
@@ -27,15 +26,13 @@ class CertificatePemFetcher(object):
                 sha2_256_fingerprint
             ).value.certificate.pem
         except KeyError:
-            data = self.http_fetcher(
-                'https://crt.sh/?d={}'.format(sha2_256_fingerprint),
-            )
-            return six.ensure_str(data).strip()
+            data = self.http_fetcher(f'https://crt.sh/?d={sha2_256_fingerprint}')
+            return data.decode('utf-8').strip()
 
 
 @attr.s
-class FetcherBase(object):
-    parsed_data = attr.ib(validator=attr.validators.instance_of(collections_abc.Iterable))
+class FetcherBase():
+    parsed_data = attr.ib(validator=attr.validators.instance_of(collections.abc.Iterable))
 
     @classmethod
     @abc.abstractmethod
@@ -76,11 +73,11 @@ class FetcherCsvBase(FetcherBase):
         data = cls._get_fetcher()(cls._get_csv_url())
 
         csv_reader = csv.DictReader(
-            six.StringIO(six.ensure_str(data)),
+            io.StringIO(data.decode('utf-8')),
             fieldnames=cls._get_csv_fields(),
         )
 
-        sample = six.ensure_str(data[:4096])
+        sample = data[:4096].decode('utf-8')
         if csv.Sniffer().has_header(sample):
             next(csv_reader, None)
 
@@ -93,7 +90,7 @@ class FetcherCsvBase(FetcherBase):
 
 
 @attr.s
-class UpdaterBase(object):
+class UpdaterBase():
     fetcher_class = attr.ib(validator=attr.validators.instance_of(type))
     enum_class = attr.ib(validator=attr.validators.instance_of(type))
     enum_param_class = attr.ib(validator=attr.validators.instance_of(type))

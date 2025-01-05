@@ -1,24 +1,15 @@
 # -*- coding: utf-8 -*-
 
-try:
-    import unittest
-except ImportError:
-    import unittest2 as unittest
-
 import abc
 import codecs
 import collections
 import enum
 import json
-
-try:
-    import pathlib
-except ImportError:  # pragma: no cover
-    import pathlib2 as pathlib  # pragma: no cover
+import pathlib
+import unittest
 
 import attr
 import pyfakefs.fake_filesystem_unittest
-import six
 
 from cryptodatahub.common.grade import Grade, Gradeable, GradeableSimple, GradeableVulnerabilities
 from cryptodatahub.common.key import PublicKey, PublicKeyX509Base
@@ -170,7 +161,7 @@ class TestClasses:
             items_with_surplus_attributes = []
             for name, item in self.json_data.items():
                 item_keys = item.keys()
-                json_attr_names = [key for key in item_keys if not key.startswith(six.u('_'))]
+                json_attr_names = [key for key in item_keys if not key.startswith('_')]
 
                 item_keys = set(item_keys)
                 param_calss_attr_names = [

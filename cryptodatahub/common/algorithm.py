@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import enum
-import six
 
 import attr
 
@@ -93,7 +92,7 @@ NamedGroup = CryptoDataEnumOIDBase('NamedGroup', CryptoDataEnumOIDBase.get_json_
 @attr.s(frozen=True)
 class MACParams(CryptoDataParamsOIDOptional, GradeableVulnerabilities):
     digest_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
-    hash_algorithm = attr.ib(validator=attr.validators.optional(attr.validators.instance_of((Hash, six.string_types))))
+    hash_algorithm = attr.ib(validator=attr.validators.optional(attr.validators.instance_of((Hash, str))))
 
     @classmethod
     def get_gradeable_name(cls):
@@ -103,7 +102,7 @@ class MACParams(CryptoDataParamsOIDOptional, GradeableVulnerabilities):
         if (self.digest_size is None) == (self.hash_algorithm is None):
             raise ValueError()
 
-        if isinstance(self.hash_algorithm, six.string_types):
+        if isinstance(self.hash_algorithm, str):
             object.__setattr__(self, 'hash_algorithm', Hash[self.hash_algorithm])
 
         if self.digest_size is None:
@@ -117,7 +116,7 @@ MAC = CryptoDataEnumOIDBase('MAC', CryptoDataEnumOIDBase.get_json_records(MACPar
 
 @attr.s(frozen=True)
 class MACModeParams(CryptoDataParamsEnumString, GradeableVulnerabilities):
-    name = attr.ib(validator=attr.validators.instance_of(six.string_types))
+    name = attr.ib(validator=attr.validators.instance_of(str))
 
     @classmethod
     def get_gradeable_name(cls):

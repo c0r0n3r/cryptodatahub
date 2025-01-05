@@ -4,7 +4,6 @@ import abc
 import enum
 import functools
 
-import six
 
 import attr
 
@@ -21,7 +20,7 @@ from cryptodatahub.common.types import (
 @functools.total_ordering
 @attr.s(frozen=True, order=False, eq=False, hash=True)
 class GradeTypeParams(CryptoDataParamsNamed):
-    _numeric = attr.ib(validator=attr.validators.instance_of(six.integer_types))
+    _numeric = attr.ib(validator=attr.validators.instance_of(int))
 
     def __eq__(self, other):
         return self._numeric == other._numeric
@@ -77,7 +76,7 @@ AttackNamed = CryptoDataEnumOIDBase('AttackNamed', CryptoDataEnumBase.get_json_r
 
 
 @attr.s(frozen=True, eq=False)
-class Gradeable(object):
+class Gradeable():
     @staticmethod
     def _get_vulnerbilities(obj):
         if obj is None:
@@ -135,7 +134,7 @@ class Gradeable(object):
 
 
 @attr.s(frozen=True)
-class Vulnerability(object):
+class Vulnerability():
     attack_type = attr.ib(
         converter=convert_enum(AttackType),
         validator=attr.validators.optional(attr.validators.instance_of(AttackType))

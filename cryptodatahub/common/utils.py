@@ -4,7 +4,6 @@ import binascii
 import hashlib
 
 import attr
-import six
 import urllib3
 
 from cryptodatahub.common.algorithm import Hash
@@ -16,7 +15,7 @@ def bytes_to_hex_string(byte_array, separator='', lowercase=False):
     else:
         format_str = '{:02X}'
 
-    return separator.join([format_str.format(x) for x in six.iterbytes(bytes(byte_array))])
+    return separator.join([format_str.format(x) for x in bytes(byte_array)])
 
 
 def bytes_from_hex_string(hex_string, separator=''):
@@ -26,7 +25,7 @@ def bytes_from_hex_string(hex_string, separator=''):
     try:
         binary_data = binascii.a2b_hex(hex_string)
     except (TypeError, ValueError) as e:
-        six.raise_from(ValueError(*e.args), e)
+        raise ValueError(*e.args) from e
 
     return binary_data
 
@@ -58,13 +57,13 @@ def hash_bytes(hash_algorithm, hashable_value):
     try:
         hashlib_funcs = _HASHLIB_FUNCS[hash_algorithm]
     except KeyError as e:
-        six.raise_from(NotImplementedError(hash_algorithm), e)
+        raise NotImplementedError(hash_algorithm) from e
 
     return hashlib_funcs(hashable_value).digest()
 
 
 @attr.s
-class HttpFetcher(object):
+class HttpFetcher():
     connect_timeout = attr.ib(default=2, validator=attr.validators.instance_of((int, float)))
     read_timeout = attr.ib(default=1, validator=attr.validators.instance_of((int, float)))
     retry = attr.ib(default=1, validator=attr.validators.instance_of(int))
