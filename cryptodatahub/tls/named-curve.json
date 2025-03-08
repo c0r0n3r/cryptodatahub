@@ -342,20 +342,6 @@
         "initial_version": "TLS1_3",
         "last_version": "TLS1_3"
     },
-    "SECP256R1_ML_KEM_768": {
-        "_code_in_hex": "0x11eb",
-        "code": 4587,
-        "named_group": "SECP256R1_ML_KEM_768",
-        "initial_version": "TLS1_3",
-        "last_version": "TLS1_3"
-    },
-    "X25519_ML_KEM_768": {
-        "_code_in_hex": "0x11ec",
-        "code": 4588,
-        "named_group": "X25519_ML_KEM_768",
-        "initial_version": "TLS1_3",
-        "last_version": "TLS1_3"
-    },
     "X25519_KYBER_512_R3_CLOUDFLARE": {
         "_code_in_hex": "0xfe30",
         "code": 65072,
@@ -370,24 +356,262 @@
         "initial_version": "TLS1_3",
         "last_version": "TLS1_3"
     },
-    "SECP256R1_KYBER_512_R3": {
-        "_code_in_hex": "0x2f3a",
-        "code": 12090,
-        "named_group": "SECP256R1_KYBER_512_R3",
+    "X25519_BIKE_L1_R4": {
+        "_code_in_hex": "0x2fae",
+        "code": 12206,
+        "named_group": "X25519_BIKE_L1_R4",
         "initial_version": "TLS1_3",
         "last_version": "TLS1_3"
     },
-    "SECP256R1_KYBER_768_R3": {
-        "_code_in_hex": "0x639a",
-        "code": 25498,
-        "named_group": "SECP256R1_KYBER_768_R3",
+    "X448_BIKE_L3_R4": {
+        "_code_in_hex": "0x2faf",
+        "code": 12207,
+        "named_group": "X448_BIKE_L3_R4",
         "initial_version": "TLS1_3",
         "last_version": "TLS1_3"
     },
-    "SECP384R1_KYBER_768_R3": {
-        "_code_in_hex": "0x2f3c",
-        "code": 12092,
-        "named_group": "SECP384R1_KYBER_768_R3",
+    "BIKEL1_R4": {
+        "_code_in_hex": "0x0241",
+        "code": 577,
+        "named_group": "BIKEL1_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_BIKEL1_R4": {
+        "_code_in_hex": "0x2f41",
+        "code": 12097,
+        "named_group": "SECP256R1_BIKEL1_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "BIKEL3_R4": {
+        "_code_in_hex": "0x0242",
+        "code": 578,
+        "named_group": "BIKEL3_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_BIKEL3_R4": {
+        "_code_in_hex": "0x2f42",
+        "code": 12098,
+        "named_group": "SECP384R1_BIKEL3_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "BIKEL5_R4": {
+        "_code_in_hex": "0x0243",
+        "code": 579,
+        "named_group": "BIKEL5_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP521R1_BIKEL5_R4": {
+        "_code_in_hex": "0x2f43",
+        "code": 12099,
+        "named_group": "SECP521R1_BIKEL5_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "BIKE1_L1_CPA_R2": {
+        "_code_in_hex": "0x0206",
+        "code": 518,
+        "named_group": "BIKE1_L1_CPA_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_BIKE1_L1_CPA_R2": {
+        "_code_in_hex": "0x2f06",
+        "code": 12038,
+        "named_group": "SECP256R1_BIKE1_L1_CPA_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "BIKE1_L1_FO_R2": {
+        "_code_in_hex": "0x0223",
+        "code": 547,
+        "named_group": "BIKE1_L1_FO_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_BIKE1_L1_FO_R2": {
+        "_code_in_hex": "0x2f23",
+        "code": 12067,
+        "named_group": "SECP256R1_BIKE1_L1_FO_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X25519_BIKE1_L1_FO_R2": {
+        "_code_in_hex": "0x2f28",
+        "code": 12072,
+        "named_group": "X25519_BIKE1_L1_FO_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "BIKE1_L3_CPA_R2": {
+        "_code_in_hex": "0x0207",
+        "code": 519,
+        "named_group": "BIKE1_L3_CPA_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_BIKE1_L3_CPA_R2": {
+        "_code_in_hex": "0x2f07",
+        "code": 12039,
+        "named_group": "SECP384R1_BIKE1_L3_CPA_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "BIKE1_L3_FO_R2": {
+        "_code_in_hex": "0x0224",
+        "code": 548,
+        "named_group": "BIKE1_L3_FO_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_BIKE1_L3_FO_R2": {
+        "_code_in_hex": "0x2f24",
+        "code": 12068,
+        "named_group": "SECP384R1_BIKE1_L3_FO_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "BIKE_L1_R3": {
+        "_code_in_hex": "0x0238",
+        "code": 568,
+        "named_group": "BIKE_L1_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X25519_BIKE_L1_R3": {
+        "_code_in_hex": "0x2f37",
+        "code": 12087,
+        "named_group": "X25519_BIKE_L1_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_BIKE_L1_R3": {
+        "_code_in_hex": "0x2f38",
+        "code": 12088,
+        "named_group": "SECP256R1_BIKE_L1_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "BIKE_L3_R3": {
+        "_code_in_hex": "0x023b",
+        "code": 571,
+        "named_group": "BIKE_L3_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_BIKE_L3_R3": {
+        "_code_in_hex": "0x2f3b",
+        "code": 12091,
+        "named_group": "SECP384R1_BIKE_L3_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "KYBER_1024_90S_R2": {
+        "_code_in_hex": "0x022b",
+        "code": 555,
+        "named_group": "KYBER_1024_90S_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP521R1_KYBER_1024_90S_R2": {
+        "_code_in_hex": "0x2f2b",
+        "code": 12075,
+        "named_group": "SECP521R1_KYBER_1024_90S_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "KYBER_1024_R2": {
+        "_code_in_hex": "0x0211",
+        "code": 529,
+        "named_group": "KYBER_1024_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP521R1_KYBER_1024_R2": {
+        "_code_in_hex": "0x2f11",
+        "code": 12049,
+        "named_group": "SECP521R1_KYBER_1024_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "KYBER_512_90S_R2": {
+        "_code_in_hex": "0x0229",
+        "code": 553,
+        "named_group": "KYBER_512_90S_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_KYBER_512_90S_R2": {
+        "_code_in_hex": "0x2f29",
+        "code": 12073,
+        "named_group": "SECP256R1_KYBER_512_90S_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "KYBER_512_R2": {
+        "_code_in_hex": "0x020f",
+        "code": 527,
+        "named_group": "KYBER_512_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_KYBER_512_R2": {
+        "_code_in_hex": "0x2f0f",
+        "code": 12047,
+        "named_group": "SECP256R1_KYBER_512_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X25519_KYBER_512_R2": {
+        "_code_in_hex": "0x2f26",
+        "code": 12070,
+        "named_group": "X25519_KYBER_512_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "KYBER_768_90S_R2": {
+        "_code_in_hex": "0x022a",
+        "code": 554,
+        "named_group": "KYBER_768_90S_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_KYBER_768_90S_R2": {
+        "_code_in_hex": "0x2f2a",
+        "code": 12074,
+        "named_group": "SECP384R1_KYBER_768_90S_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "KYBER_768_R2": {
+        "_code_in_hex": "0x0210",
+        "code": 528,
+        "named_group": "KYBER_768_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_KYBER_768_R2": {
+        "_code_in_hex": "0x2f10",
+        "code": 12048,
+        "named_group": "SECP384R1_KYBER_768_R2",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "KYBER_1024_90S_R3": {
+        "_code_in_hex": "0x0240",
+        "code": 576,
+        "named_group": "KYBER_1024_90S_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP521R1_KYBER_1024_90S_R3": {
+        "_code_in_hex": "0x2f40",
+        "code": 12096,
+        "named_group": "SECP521R1_KYBER_1024_90S_R3",
         "initial_version": "TLS1_3",
         "last_version": "TLS1_3"
     },
@@ -398,6 +622,27 @@
         "initial_version": "TLS1_3",
         "last_version": "TLS1_3"
     },
+    "KYBER_512_90S_R3": {
+        "_code_in_hex": "0x023e",
+        "code": 574,
+        "named_group": "KYBER_512_90S_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_KYBER_512_90S_R3": {
+        "_code_in_hex": "0x2f3e",
+        "code": 12094,
+        "named_group": "SECP256R1_KYBER_512_90S_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X25519_KYBER_512_90S_R3": {
+        "_code_in_hex": "0x2fa9",
+        "code": 12201,
+        "named_group": "X25519_KYBER_512_90S_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
     "X25519_KYBER_512_R3": {
         "_code_in_hex": "0x2f39",
         "code": 12089,
@@ -405,10 +650,360 @@
         "initial_version": "TLS1_3",
         "last_version": "TLS1_3"
     },
+    "SECP256R1_KYBER_512_R3": {
+        "_code_in_hex": "0x2f3a",
+        "code": 12090,
+        "named_group": "SECP256R1_KYBER_512_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "KYBER_768_90S_R3": {
+        "_code_in_hex": "0x023f",
+        "code": 575,
+        "named_group": "KYBER_768_90S_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_KYBER_768_90S_R3": {
+        "_code_in_hex": "0x2f3f",
+        "code": 12095,
+        "named_group": "SECP384R1_KYBER_768_90S_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X448_KYBER_768_90S_R3": {
+        "_code_in_hex": "0x2faa",
+        "code": 12202,
+        "named_group": "X448_KYBER_768_90S_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_KYBER_768_R3": {
+        "_code_in_hex": "0x2f3c",
+        "code": 12092,
+        "named_group": "SECP384R1_KYBER_768_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X448_KYBER_768_R3": {
+        "_code_in_hex": "0x2f90",
+        "code": 12176,
+        "named_group": "X448_KYBER_768_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
     "X25519_KYBER_768_R3": {
         "_code_in_hex": "0x6399",
         "code": 25497,
         "named_group": "X25519_KYBER_768_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_KYBER_768_R3": {
+        "_code_in_hex": "0x639a",
+        "code": 25498,
+        "named_group": "SECP256R1_KYBER_768_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "FRODO1344AES_R3": {
+        "_code_in_hex": "0x0204",
+        "code": 516,
+        "named_group": "FRODO1344AES_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP521R1_FRODO1344AES_R3": {
+        "_code_in_hex": "0x2f04",
+        "code": 12036,
+        "named_group": "SECP521R1_FRODO1344AES_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "FRODO1344SHAKE_R3": {
+        "_code_in_hex": "0x0205",
+        "code": 517,
+        "named_group": "FRODO1344SHAKE_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP521R1_FRODO1344SHAKE_R3": {
+        "_code_in_hex": "0x2f05",
+        "code": 12037,
+        "named_group": "SECP521R1_FRODO1344SHAKE_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_FRODO640AES_R3": {
+        "_code_in_hex": "0x2f00",
+        "code": 12032,
+        "named_group": "SECP256R1_FRODO640AES_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "FRODO640AES_R3": {
+        "_code_in_hex": "0xfe00",
+        "code": 65024,
+        "named_group": "FRODO640AES_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_FRODO640SHAKE_R3": {
+        "_code_in_hex": "0x2f01",
+        "code": 12033,
+        "named_group": "SECP256R1_FRODO640SHAKE_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "FRODO640SHAKE_R3": {
+        "_code_in_hex": "0xfe01",
+        "code": 65025,
+        "named_group": "FRODO640SHAKE_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_FRODO976AES_R3": {
+        "_code_in_hex": "0x2f02",
+        "code": 12034,
+        "named_group": "SECP384R1_FRODO976AES_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "FRODO976AES_R3": {
+        "_code_in_hex": "0xfe02",
+        "code": 65026,
+        "named_group": "FRODO976AES_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "FRODO976SHAKE_R3": {
+        "_code_in_hex": "0x0203",
+        "code": 515,
+        "named_group": "FRODO976SHAKE_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_FRODO976SHAKE_R3": {
+        "_code_in_hex": "0x2f03",
+        "code": 12035,
+        "named_group": "SECP384R1_FRODO976SHAKE_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X25519_FRODOKEM_640_AES_R3": {
+        "_code_in_hex": "0x2f80",
+        "code": 12160,
+        "named_group": "X25519_FRODOKEM_640_AES_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X25519_FRODOKEM_640_SHAKE_R3": {
+        "_code_in_hex": "0x2f81",
+        "code": 12161,
+        "named_group": "X25519_FRODOKEM_640_SHAKE_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X448_FRODOKEM_976_AES_R3": {
+        "_code_in_hex": "0x2f82",
+        "code": 12162,
+        "named_group": "X448_FRODOKEM_976_AES_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X448_FRODOKEM_976_SHAKE_R3": {
+        "_code_in_hex": "0x2f83",
+        "code": 12163,
+        "named_group": "X448_FRODOKEM_976_SHAKE_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "HQC_128_R3": {
+        "_code_in_hex": "0x022c",
+        "code": 556,
+        "named_group": "HQC_128_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_HQC_128_R3": {
+        "_code_in_hex": "0x2f2c",
+        "code": 12076,
+        "named_group": "SECP256R1_HQC_128_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X25519_HQC_128_R3": {
+        "_code_in_hex": "0x2fac",
+        "code": 12204,
+        "named_group": "X25519_HQC_128_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "HQC_192_R3": {
+        "_code_in_hex": "0x022d",
+        "code": 557,
+        "named_group": "HQC_192_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_HQC_192_R3": {
+        "_code_in_hex": "0x2f2d",
+        "code": 12077,
+        "named_group": "SECP384R1_HQC_192_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X448_HQC_192_R3": {
+        "_code_in_hex": "0x2fad",
+        "code": 12205,
+        "named_group": "X448_HQC_192_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "HQC_256_R3": {
+        "_code_in_hex": "0x022e",
+        "code": 558,
+        "named_group": "HQC_256_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP521R1_HQC_256_R3": {
+        "_code_in_hex": "0x2f2e",
+        "code": 12078,
+        "named_group": "SECP521R1_HQC_256_R3",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "HQC128_R4": {
+        "_code_in_hex": "0x0244",
+        "code": 580,
+        "named_group": "HQC128_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_HQC128_R4": {
+        "_code_in_hex": "0x2f44",
+        "code": 12100,
+        "named_group": "SECP256R1_HQC128_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "HQC192_R4": {
+        "_code_in_hex": "0x0245",
+        "code": 581,
+        "named_group": "HQC192_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_HQC192_R4": {
+        "_code_in_hex": "0x2f45",
+        "code": 12101,
+        "named_group": "SECP384R1_HQC192_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "HQC256_R4": {
+        "_code_in_hex": "0x0246",
+        "code": 582,
+        "named_group": "HQC256_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP521R1_HQC256_R4": {
+        "_code_in_hex": "0x2f46",
+        "code": 12102,
+        "named_group": "SECP521R1_HQC256_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X25519_HQC_128_R4": {
+        "_code_in_hex": "0x2fb0",
+        "code": 12208,
+        "named_group": "X25519_HQC_128_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X448_HQC_192_R4": {
+        "_code_in_hex": "0x2fb1",
+        "code": 12209,
+        "named_group": "X448_HQC_192_R4",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_ML_KEM_1024": {
+        "_code_in_hex": "0x11ed",
+        "code": 4589,
+        "named_group": "SECP384R1_ML_KEM_1024",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X25519_ML_KEM_512": {
+        "_code_in_hex": "0x2fb6",
+        "code": 12214,
+        "named_group": "X25519_ML_KEM_512",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_ML_KEM_768": {
+        "_code_in_hex": "0x11eb",
+        "code": 4587,
+        "named_group": "SECP256R1_ML_KEM_768",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X25519_ML_KEM_768": {
+        "_code_in_hex": "0x11ec",
+        "code": 4588,
+        "named_group": "X25519_ML_KEM_768",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "X448_ML_KEM_768": {
+        "_code_in_hex": "0x2fb7",
+        "code": 12215,
+        "named_group": "X448_ML_KEM_768",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP521R1_MLKEM1024": {
+        "_code_in_hex": "0x2f4d",
+        "code": 12109,
+        "named_group": "SECP521R1_MLKEM1024",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "MLKEM1024": {
+        "_code_in_hex": "0x0202",
+        "code": 514,
+        "named_group": "MLKEM1024",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP256R1_MLKEM512": {
+        "_code_in_hex": "0x2f4b",
+        "code": 12107,
+        "named_group": "SECP256R1_MLKEM512",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "MLKEM512": {
+        "_code_in_hex": "0x0200",
+        "code": 512,
+        "named_group": "MLKEM512",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "SECP384R1_MLKEM768": {
+        "_code_in_hex": "0x2f4c",
+        "code": 12108,
+        "named_group": "SECP384R1_MLKEM768",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
+    "MLKEM768": {
+        "_code_in_hex": "0x0201",
+        "code": 513,
+        "named_group": "MLKEM768",
         "initial_version": "TLS1_3",
         "last_version": "TLS1_3"
     }

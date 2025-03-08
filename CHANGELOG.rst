@@ -3,6 +3,21 @@ Changelog
 =========
 
 ------------------
+1.6.0 - Unreleased
+------------------
+
+Features
+========
+
+-  Generic
+
+   -  add post-quantum named groups (#32)
+
+-  TLS (``tls``)
+
+   -  add post-quantum named curves (#32)
+
+------------------
 1.5.0 - 2026-07-31
 ------------------
 

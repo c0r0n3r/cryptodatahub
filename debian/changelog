@@ -1,3 +1,10 @@
+python-cryptodatahub (1.6.0) unstable; urgency=low
+
+  * add post-quantum named groups (#32)
+  * add post-quantum named curves (#32)
+
+ -- Szilárd Pfeiffer <coroner@pfeifferszilard.hu>  Tue, 04 Aug 2026 00:00:00 +0200
+
 python-cryptodatahub (1.5.0) unstable; urgency=low
 
   * add long names to block cipher and MAC algorithm entries

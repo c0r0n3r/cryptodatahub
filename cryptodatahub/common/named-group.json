@@ -827,100 +827,772 @@
         "size": 511,
         "group_type": "ELLIPTIC_CURVE"
     },
-    "KYBER_512_R3": {
-        "name": "Kyber-512-r3",
+    "X25519_BIKE_L1_R4": {
+        "name": "x25519/bike_l1_r4",
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 512,
+        "size": 1234,
         "group_type": "HYBRID_PQS"
     },
-    "KYBER_768_R3": {
-        "name": "Kyber-768-r3",
+    "X448_BIKE_L3_R4": {
+        "name": "x448/bike_l3_r4",
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 768,
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "BIKEL1_R4": {
+        "name": "bikel1_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_BIKEL1_R4": {
+        "name": "secp256r1/bikel1_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "BIKEL3_R4": {
+        "name": "bikel3_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_BIKEL3_R4": {
+        "name": "secp384r1/bikel3_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "BIKEL5_R4": {
+        "name": "bikel5_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP521R1_BIKEL5_R4": {
+        "name": "secp521r1/bikel5_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "BIKE1_L1_CPA_R2": {
+        "name": "bike1_l1_cpa_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_BIKE1_L1_CPA_R2": {
+        "name": "secp256r1/bike1_l1_cpa_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "BIKE1_L1_FO_R2": {
+        "name": "bike1_l1_fo_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_BIKE1_L1_FO_R2": {
+        "name": "secp256r1/bike1_l1_fo_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_BIKE1_L1_FO_R2": {
+        "name": "x25519/bike1_l1_fo_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "BIKE1_L3_CPA_R2": {
+        "name": "bike1_l3_cpa_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_BIKE1_L3_CPA_R2": {
+        "name": "secp384r1/bike1_l3_cpa_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "BIKE1_L3_FO_R2": {
+        "name": "bike1_l3_fo_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_BIKE1_L3_FO_R2": {
+        "name": "secp384r1/bike1_l3_fo_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "BIKE_L1_R3": {
+        "name": "bike_l1_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_BIKE_L1_R3": {
+        "name": "x25519/bike_l1_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_BIKE_L1_R3": {
+        "name": "secp256r1/bike_l1_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "BIKE_L3_R3": {
+        "name": "bike_l3_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_BIKE_L3_R3": {
+        "name": "secp384r1/bike_l3_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_1024_90S_R2": {
+        "name": "kyber_1024_90s_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP521R1_KYBER_1024_90S_R2": {
+        "name": "secp521r1/kyber_1024_90s_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_1024_R2": {
+        "name": "kyber_1024_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP521R1_KYBER_1024_R2": {
+        "name": "secp521r1/kyber_1024_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_512_90S_R2": {
+        "name": "kyber_512_90s_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_KYBER_512_90S_R2": {
+        "name": "secp256r1/kyber_512_90s_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_512_R2": {
+        "name": "kyber_512_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_KYBER_512_R2": {
+        "name": "secp256r1/kyber_512_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_KYBER_512_R2": {
+        "name": "x25519/kyber_512_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_768_90S_R2": {
+        "name": "kyber_768_90s_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_KYBER_768_90S_R2": {
+        "name": "secp384r1/kyber_768_90s_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_768_R2": {
+        "name": "kyber_768_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_KYBER_768_R2": {
+        "name": "secp384r1/kyber_768_r2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_1024_90S_R3": {
+        "name": "kyber_1024_90s_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP521R1_KYBER_1024_90S_R3": {
+        "name": "secp521r1/kyber_1024_90s_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
         "group_type": "HYBRID_PQS"
     },
     "KYBER_1024_R3": {
-        "name": "Kyber-1024-r3",
+        "name": "kyber_1024_r3",
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
         "size": 1024,
-        "group_type": "HYBRID_PQS"
-    },
-    "SECP256R1_KYBER_512_R3": {
-        "name": "secp256r1/Kyber-512-r3",
-        "long_name": null,
-        "oid": null,
-        "vulnerabilities": [],
-        "size": 512,
-        "group_type": "HYBRID_PQS"
-    },
-    "SECP256R1_KYBER_768_R3": {
-        "name": "secp256r1/Kyber-768-r3",
-        "long_name": null,
-        "oid": null,
-        "vulnerabilities": [],
-        "size": 768,
-        "group_type": "HYBRID_PQS"
-    },
-    "SECP256R1_ML_KEM_768": {
-        "name": "SecP256r1MLKEM768",
-        "long_name": null,
-        "oid": null,
-        "vulnerabilities": [],
-        "size": 1184,
-        "group_type": "HYBRID_PQS"
-    },
-    "SECP384R1_ML_KEM_1024": {
-        "name": "SecP384r1MLKEM1024",
-        "long_name": null,
-        "oid": null,
-        "vulnerabilities": [],
-        "size": 1568,
-        "group_type": "HYBRID_PQS"
-    },
-    "SECP384R1_KYBER_768_R3": {
-        "name": "secp384r1/Kyber-768-r3",
-        "long_name": null,
-        "oid": null,
-        "vulnerabilities": [],
-        "size": 768,
         "group_type": "HYBRID_PQS"
     },
     "SECP521R1_KYBER_1024_R3": {
-        "name": "secp521r1/Kyber-1024-r3",
+        "name": "secp521r1/kyber_1024_r3",
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1024,
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_512_90S_R3": {
+        "name": "kyber_512_90s_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_KYBER_512_90S_R3": {
+        "name": "secp256r1/kyber_512_90s_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_KYBER_512_90S_R3": {
+        "name": "x25519/kyber_512_90s_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_512_R3": {
+        "name": "kyber_512_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
         "group_type": "HYBRID_PQS"
     },
     "X25519_KYBER_512_R3": {
-        "name": "x25519/Kyber-512-r3",
+        "name": "x25519/kyber_512_r3",
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 512,
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_KYBER_512_R3": {
+        "name": "secp256r1/kyber_512_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_768_90S_R3": {
+        "name": "kyber_768_90s_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_KYBER_768_90S_R3": {
+        "name": "secp384r1/kyber_768_90s_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X448_KYBER_768_90S_R3": {
+        "name": "x448/kyber_768_90s_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "KYBER_768_R3": {
+        "name": "kyber_768_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_KYBER_768_R3": {
+        "name": "secp384r1/kyber_768_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X448_KYBER_768_R3": {
+        "name": "x448/kyber_768_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
         "group_type": "HYBRID_PQS"
     },
     "X25519_KYBER_768_R3": {
-        "name": "x25519/Kyber-768-r3",
+        "name": "x25519/kyber_768_r3",
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 768,
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_KYBER_768_R3": {
+        "name": "secp256r1/kyber_768_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "FRODO1344AES_R3": {
+        "name": "frodo1344aes_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP521R1_FRODO1344AES_R3": {
+        "name": "secp521r1/frodo1344aes_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "FRODO1344SHAKE_R3": {
+        "name": "frodo1344shake_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP521R1_FRODO1344SHAKE_R3": {
+        "name": "secp521r1/frodo1344shake_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_FRODO640AES_R3": {
+        "name": "secp256r1/frodo640aes_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "FRODO640AES_R3": {
+        "name": "frodo640aes_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_FRODO640SHAKE_R3": {
+        "name": "secp256r1/frodo640shake_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "FRODO640SHAKE_R3": {
+        "name": "frodo640shake_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_FRODO976AES_R3": {
+        "name": "secp384r1/frodo976aes_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "FRODO976AES_R3": {
+        "name": "frodo976aes_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "FRODO976SHAKE_R3": {
+        "name": "frodo976shake_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_FRODO976SHAKE_R3": {
+        "name": "secp384r1/frodo976shake_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_FRODOKEM_640_AES_R3": {
+        "name": "x25519/frodokem_640_aes_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_FRODOKEM_640_SHAKE_R3": {
+        "name": "x25519/frodokem_640_shake_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X448_FRODOKEM_976_AES_R3": {
+        "name": "x448/frodokem_976_aes_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X448_FRODOKEM_976_SHAKE_R3": {
+        "name": "x448/frodokem_976_shake_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "HQC_128_R3": {
+        "name": "hqc_128_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_HQC_128_R3": {
+        "name": "secp256r1/hqc_128_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_HQC_128_R3": {
+        "name": "x25519/hqc_128_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "HQC_192_R3": {
+        "name": "hqc_192_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_HQC_192_R3": {
+        "name": "secp384r1/hqc_192_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X448_HQC_192_R3": {
+        "name": "x448/hqc_192_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "HQC_256_R3": {
+        "name": "hqc_256_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP521R1_HQC_256_R3": {
+        "name": "secp521r1/hqc_256_r3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "HQC128_R4": {
+        "name": "hqc128_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_HQC128_R4": {
+        "name": "secp256r1/hqc128_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "HQC192_R4": {
+        "name": "hqc192_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_HQC192_R4": {
+        "name": "secp384r1/hqc192_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "HQC256_R4": {
+        "name": "hqc256_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP521R1_HQC256_R4": {
+        "name": "secp521r1/hqc256_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_HQC_128_R4": {
+        "name": "x25519/hqc_128_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X448_HQC_192_R4": {
+        "name": "x448/hqc_192_r4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_ML_KEM_1024": {
+        "name": "secp384r1/ml_kem_1024",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X25519_ML_KEM_512": {
+        "name": "x25519/ml_kem_512",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_ML_KEM_768": {
+        "name": "secp256r1/ml_kem_768",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
         "group_type": "HYBRID_PQS"
     },
     "X25519_ML_KEM_768": {
-        "name": "X25519MLKEM768",
+        "name": "x25519/ml_kem_768",
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1120,
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "X448_ML_KEM_768": {
+        "name": "x448/ml_kem_768",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP521R1_MLKEM1024": {
+        "name": "secp521r1/mlkem1024",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "MLKEM1024": {
+        "name": "mlkem1024",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP256R1_MLKEM512": {
+        "name": "secp256r1/mlkem512",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "MLKEM512": {
+        "name": "mlkem512",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_MLKEM768": {
+        "name": "secp384r1/mlkem768",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
+        "group_type": "HYBRID_PQS"
+    },
+    "MLKEM768": {
+        "name": "mlkem768",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1234,
         "group_type": "HYBRID_PQS"
     },
     "ML_KEM_512": {
