@@ -356,6 +356,13 @@
         "initial_version": "TLS1_3",
         "last_version": "TLS1_3"
     },
+    "SECP384R1_ML_KEM_1024_TRESORIT": {
+        "_code_in_hex": "0x2f4e",
+        "code": 12110,
+        "named_group": "SECP384R1_ML_KEM_1024",
+        "initial_version": "TLS1_3",
+        "last_version": "TLS1_3"
+    },
     "X25519_BIKE_L1_R4": {
         "_code_in_hex": "0x2fae",
         "code": 12206,
