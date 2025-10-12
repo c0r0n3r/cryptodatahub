@@ -126,12 +126,26 @@
         "vulnerabilities": [],
         "digest_size": 256
     },
+    "SHA2_256_128": {
+        "name": "SHA-256/128",
+        "long_name": "Secure Hash Algorithm 2 (256/128)",
+        "oid": null,
+        "vulnerabilities": [],
+        "digest_size": 128
+    },
     "SHA2_384": {
         "name": "SHA-384",
         "long_name": "Secure Hash Algorithm 2 (384)",
         "oid": "2.16.840.1.101.3.4.2.2",
         "vulnerabilities": [],
         "digest_size": 384
+    },
+    "SHA2_384_192": {
+        "name": "SHA-384/192",
+        "long_name": "Secure Hash Algorithm 2 (384/192)",
+        "oid": null,
+        "vulnerabilities": [],
+        "digest_size": 192
     },
     "SHA2_512": {
         "name": "SHA-512",

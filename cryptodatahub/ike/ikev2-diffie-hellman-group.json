@@ -1,0 +1,68 @@
+{
+    "MODP_GROUP_768_BIT": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC7296",
+        "code": 1,
+        "key_parameter": "RFC2539_768_BIT_MODP_GROUP"
+    },
+    "MODP_GROUP_1024_BIT": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC7296",
+        "code": 2,
+        "key_parameter": "RFC2539_1024_BIT_MODP_GROUP"
+    },
+    "MODP_GROUP_1536_BIT": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC3526",
+        "code": 5,
+        "key_parameter": "RFC3526_1536_BIT_MODP_GROUP"
+    },
+    "MODP_GROUP_2048_BIT": {
+        "_code_in_hex": "0x0e",
+        "_standard": "RFC3526",
+        "code": 14,
+        "key_parameter": "RFC3526_2048_BIT_MODP_GROUP"
+    },
+    "MODP_GROUP_3072_BIT": {
+        "_code_in_hex": "0x0f",
+        "_standard": "RFC3526",
+        "code": 15,
+        "key_parameter": "RFC3526_3072_BIT_MODP_GROUP"
+    },
+    "MODP_GROUP_4096_BIT": {
+        "_code_in_hex": "0x10",
+        "_standard": "RFC3526",
+        "code": 16,
+        "key_parameter": "RFC3526_4096_BIT_MODP_GROUP"
+    },
+    "MODP_GROUP_6144_BIT": {
+        "_code_in_hex": "0x11",
+        "_standard": "RFC3526",
+        "code": 17,
+        "key_parameter": "RFC3526_6144_BIT_MODP_GROUP"
+    },
+    "MODP_GROUP_8192_BIT": {
+        "_code_in_hex": "0x12",
+        "_standard": "RFC3526",
+        "code": 18,
+        "key_parameter": "RFC3526_8192_BIT_MODP_GROUP"
+    },
+    "ECP_GROUP_256_BIT": {
+        "_code_in_hex": "0x13",
+        "_standard": "RFC5903",
+        "code": 19,
+        "key_parameter": "PRIME256V1"
+    },
+    "ECP_GROUP_384_BIT": {
+        "_code_in_hex": "0x14",
+        "_standard": "RFC5903",
+        "code": 20,
+        "key_parameter": "SECP384R1"
+    },
+    "ECP_GROUP_521_BIT": {
+        "_code_in_hex": "0x15",
+        "_standard": "RFC5903",
+        "code": 21,
+        "key_parameter": "SECP521R1"
+    }
+}

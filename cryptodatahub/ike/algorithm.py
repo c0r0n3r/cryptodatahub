@@ -9,6 +9,162 @@ from cryptodatahub.common.types import (
     CryptoDataEnumCodedBase,
     CryptoDataParamsEnumNumeric,
     convert_enum,
+    convert_variadic,
+)
+from cryptodatahub.common.algorithm import BlockCipher, Hash, MAC, NamedGroup, BlockCipherMode
+from cryptodatahub.common.parameter import DHParamWellKnown
+
+
+@attr.s(frozen=True)
+class Ikev2PseudorandomFunctionParams(CryptoDataParamsEnumNumeric):
+    """Pseudorandom function parameters."""
+
+    mac = attr.ib(
+        converter=convert_enum(MAC),
+        validator=attr.validators.instance_of(MAC)
+    )
+
+    def __str__(self):
+        return self.mac.value.name
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev2PseudorandomFunction = CryptoDataEnumCodedBase(
+    'PseudorandomFunction',
+    CryptoDataEnumBase.get_json_records(Ikev2PseudorandomFunctionParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev2AuthenticationMethodParams(CryptoDataParamsEnumNumeric):
+    """Authentication method parameters."""
+
+    description = attr.ib(
+        validator=attr.validators.instance_of(str)
+    )
+
+    def __str__(self):
+        return self.description
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev2AuthenticationMethod = CryptoDataEnumCodedBase(
+    'AuthenticationMethod',
+    CryptoDataEnumBase.get_json_records(Ikev2AuthenticationMethodParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev2IntegrityAlgorithmParams(CryptoDataParamsEnumNumeric):
+    """Integrity algorithm parameters."""
+
+    hmac = attr.ib(
+        converter=convert_enum(MAC),
+        validator=attr.validators.optional(attr.validators.instance_of(MAC))
+    )
+
+    def __str__(self):
+        if self.hmac is None:
+            return "null"
+
+        return self.hmac.value.name
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev2IntegrityAlgorithm = CryptoDataEnumCodedBase(
+    'IntegrityAlgorithm',
+    CryptoDataEnumBase.get_json_records(Ikev2IntegrityAlgorithmParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev2DiffieHellmanGroupParams(CryptoDataParamsEnumNumeric):
+    """Diffie-Hellman group parameters."""
+
+    key_parameter = attr.ib(
+        converter=convert_variadic((convert_enum(NamedGroup), convert_enum(DHParamWellKnown))),
+        validator=attr.validators.optional(
+            attr.validators.instance_of((NamedGroup, DHParamWellKnown, str))
+        )
+    )
+
+    def __str__(self):
+        return self.key_parameter.value.name
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev2DiffieHellmanGroup = CryptoDataEnumCodedBase(
+    'DiffieHellmanGroup',
+    CryptoDataEnumBase.get_json_records(Ikev2DiffieHellmanGroupParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric):
+    """Encryption algorithm parameters."""
+
+    bulk_ciphers: typing.List[BlockCipher] = attr.ib(
+        converter=convert_iterable(convert_enum(BlockCipher)),
+        validator=attr.validators.deep_iterable(member_validator=attr.validators.instance_of(BlockCipher)),
+    )
+    block_cipher_mode: typing.Optional[BlockCipherMode] = attr.ib(
+        converter=convert_enum(BlockCipherMode),
+        validator=attr.validators.optional(attr.validators.instance_of(BlockCipherMode)),
+    )
+
+    def __str__(self):
+        if not self.bulk_ciphers:
+            return 'null'
+
+        cipher_name = self.bulk_ciphers[0].value.name
+        if self.block_cipher_mode is None:
+            return cipher_name
+
+        return f'{cipher_name} ({self.block_cipher_mode.value.name})'
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev2EncryptionAlgorithm = CryptoDataEnumCodedBase(
+    'EncryptionAlgorithm',
+    CryptoDataEnumBase.get_json_records(Ikev2EncryptionAlgorithmParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev2HashAlgorithmParams(CryptoDataParamsEnumNumeric):
+    """Hash algorithm parameters."""
+
+    hash_algorithm = attr.ib(
+        converter=convert_enum(Hash),
+        validator=attr.validators.instance_of(Hash)
+    )
+
+    def __str__(self):
+        return self.hash_algorithm.value.name
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev2HashAlgorithm = CryptoDataEnumBase(
+    'HashAlgorithm',
+    CryptoDataEnumBase.get_json_records(Ikev2HashAlgorithmParams)
 )
 
 

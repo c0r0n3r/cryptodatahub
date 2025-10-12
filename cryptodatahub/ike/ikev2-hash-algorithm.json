@@ -1,0 +1,38 @@
+{
+    "HASH_MD5": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2403",
+        "code": 1,
+        "hash_algorithm": "MD5"
+    },
+    "HASH_SHA1": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2404",
+        "code": 2,
+        "hash_algorithm": "SHA1"
+    },
+    "HASH_TIGER": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC7296",
+        "code": 3,
+        "hash_algorithm": "TIGER_128"
+    },
+    "HASH_SHA2_256": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC4868",
+        "code": 4,
+        "hash_algorithm": "SHA2_256"
+    },
+    "HASH_SHA2_384": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC4868",
+        "code": 5,
+        "hash_algorithm": "SHA2_384"
+    },
+    "HASH_SHA2_512": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC4868",
+        "code": 6,
+        "hash_algorithm": "SHA2_512"
+    }
+}
