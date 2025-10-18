@@ -160,5 +160,311 @@
         "_standard": "RFC7296",
         "code": 16393,
         "level": "ERROR"
+    },
+    "ESP_TFC_PADDING_NOT_SUPPORTED": {
+        "_code_in_hex": "0x400a",
+        "_standard": "RFC7296",
+        "code": 16394,
+        "level": "STATUS"
+    },
+    "NON_FIRST_FRAGMENTS_ALSO": {
+        "_code_in_hex": "0x400b",
+        "_standard": "RFC7296",
+        "code": 16395,
+        "level": "STATUS"
+    },
+    "MOBIKE_SUPPORTED": {
+        "_code_in_hex": "0x400c",
+        "_standard": "RFC4555",
+        "code": 16396,
+        "level": "STATUS"
+    },
+    "ADDITIONAL_IP4_ADDRESS": {
+        "_code_in_hex": "0x400d",
+        "_standard": "RFC4555",
+        "code": 16397,
+        "level": "STATUS"
+    },
+    "ADDITIONAL_IP6_ADDRESS": {
+        "_code_in_hex": "0x400e",
+        "_standard": "RFC4555",
+        "code": 16398,
+        "level": "STATUS"
+    },
+    "NO_ADDITIONAL_ADDRESSES": {
+        "_code_in_hex": "0x400f",
+        "_standard": "RFC4555",
+        "code": 16399,
+        "level": "STATUS"
+    },
+    "UPDATE_SA_ADDRESSES": {
+        "_code_in_hex": "0x4010",
+        "_standard": "RFC4555",
+        "code": 16400,
+        "level": "STATUS"
+    },
+    "COOKIE2": {
+        "_code_in_hex": "0x4011",
+        "_standard": "RFC4555",
+        "code": 16401,
+        "level": "STATUS"
+    },
+    "NO_NATS_ALLOWED": {
+        "_code_in_hex": "0x4012",
+        "_standard": "RFC4555",
+        "code": 16402,
+        "level": "STATUS"
+    },
+    "AUTH_LIFETIME": {
+        "_code_in_hex": "0x4013",
+        "_standard": "RFC4478",
+        "code": 16403,
+        "level": "STATUS"
+    },
+    "MULTIPLE_AUTH_SUPPORTED": {
+        "_code_in_hex": "0x4014",
+        "_standard": "RFC4739",
+        "code": 16404,
+        "level": "STATUS"
+    },
+    "ANOTHER_AUTH_FOLLOWS": {
+        "_code_in_hex": "0x4015",
+        "_standard": "RFC4739",
+        "code": 16405,
+        "level": "STATUS"
+    },
+    "REDIRECT_SUPPORTED": {
+        "_code_in_hex": "0x4016",
+        "_standard": "RFC5685",
+        "code": 16406,
+        "level": "STATUS"
+    },
+    "REDIRECT": {
+        "_code_in_hex": "0x4017",
+        "_standard": "RFC5685",
+        "code": 16407,
+        "level": "STATUS"
+    },
+    "REDIRECTED_FROM": {
+        "_code_in_hex": "0x4018",
+        "_standard": "RFC5685",
+        "code": 16408,
+        "level": "STATUS"
+    },
+    "TICKET_LT_OPAQUE": {
+        "_code_in_hex": "0x4019",
+        "_standard": "RFC5723",
+        "code": 16409,
+        "level": "STATUS"
+    },
+    "TICKET_REQUEST": {
+        "_code_in_hex": "0x401a",
+        "_standard": "RFC5723",
+        "code": 16410,
+        "level": "STATUS"
+    },
+    "TICKET_ACK": {
+        "_code_in_hex": "0x401b",
+        "_standard": "RFC5723",
+        "code": 16411,
+        "level": "STATUS"
+    },
+    "TICKET_NACK": {
+        "_code_in_hex": "0x401c",
+        "_standard": "RFC5723",
+        "code": 16412,
+        "level": "STATUS"
+    },
+    "TICKET_OPAQUE": {
+        "_code_in_hex": "0x401d",
+        "_standard": "RFC5723",
+        "code": 16413,
+        "level": "STATUS"
+    },
+    "LINK_ID": {
+        "_code_in_hex": "0x401e",
+        "_standard": "RFC5739",
+        "code": 16414,
+        "level": "STATUS"
+    },
+    "USE_WESP_MODE": {
+        "_code_in_hex": "0x401f",
+        "_standard": "RFC5840",
+        "code": 16415,
+        "level": "STATUS"
+    },
+    "ROHC_SUPPORTED": {
+        "_code_in_hex": "0x4020",
+        "_standard": "RFC5857",
+        "code": 16416,
+        "level": "STATUS"
+    },
+    "EAP_ONLY_AUTHENTICATION": {
+        "_code_in_hex": "0x4021",
+        "_standard": "RFC5998",
+        "code": 16417,
+        "level": "STATUS"
+    },
+    "CHILDLESS_IKEV2_SUPPORTED": {
+        "_code_in_hex": "0x4022",
+        "_standard": "RFC6023",
+        "code": 16418,
+        "level": "STATUS"
+    },
+    "QUICK_CRASH_DETECTION": {
+        "_code_in_hex": "0x4023",
+        "_standard": "RFC6290",
+        "code": 16419,
+        "level": "STATUS"
+    },
+    "IKEV2_MESSAGE_ID_SYNC_SUPPORTED": {
+        "_code_in_hex": "0x4024",
+        "_standard": "RFC6311",
+        "code": 16420,
+        "level": "STATUS"
+    },
+    "IPSEC_REPLAY_COUNTER_SYNC_SUPPORTED": {
+        "_code_in_hex": "0x4025",
+        "_standard": "RFC6311",
+        "code": 16421,
+        "level": "STATUS"
+    },
+    "IKEV2_MESSAGE_ID_SYNC": {
+        "_code_in_hex": "0x4026",
+        "_standard": "RFC6311",
+        "code": 16422,
+        "level": "STATUS"
+    },
+    "IPSEC_REPLAY_COUNTER_SYNC": {
+        "_code_in_hex": "0x4027",
+        "_standard": "RFC6311",
+        "code": 16423,
+        "level": "STATUS"
+    },
+    "SECURE_PASSWORD_METHODS": {
+        "_code_in_hex": "0x4028",
+        "_standard": "RFC6467",
+        "code": 16424,
+        "level": "STATUS"
+    },
+    "PSK_PERSIST": {
+        "_code_in_hex": "0x4029",
+        "_standard": "RFC6631",
+        "code": 16425,
+        "level": "STATUS"
+    },
+    "PSK_CONFIRM": {
+        "_code_in_hex": "0x402a",
+        "_standard": "RFC6631",
+        "code": 16426,
+        "level": "STATUS"
+    },
+    "ERX_SUPPORTED": {
+        "_code_in_hex": "0x402b",
+        "_standard": "RFC6867",
+        "code": 16427,
+        "level": "STATUS"
+    },
+    "IFOM_CAPABILITY": {
+        "_code_in_hex": "0x402c",
+        "_standard": "3GPP TS 24.303 v10.6.0 annex B.2",
+        "code": 16428,
+        "level": "STATUS"
+    },
+    "GROUP_SENDER": {
+        "_code_in_hex": "0x402d",
+        "_standard": "RFC-ietf-ipsecme-g-ikev2-21",
+        "code": 16429,
+        "level": "STATUS"
+    },
+    "IKEV2_FRAGMENTATION_SUPPORTED": {
+        "_code_in_hex": "0x402e",
+        "_standard": "RFC7383",
+        "code": 16430,
+        "level": "STATUS"
+    },
+    "SIGNATURE_HASH_ALGORITHMS": {
+        "_code_in_hex": "0x402f",
+        "_standard": "RFC7427",
+        "code": 16431,
+        "level": "STATUS"
+    },
+    "CLONE_IKE_SA_SUPPORTED": {
+        "_code_in_hex": "0x4030",
+        "_standard": "RFC7791",
+        "code": 16432,
+        "level": "STATUS"
+    },
+    "CLONE_IKE_SA": {
+        "_code_in_hex": "0x4031",
+        "_standard": "RFC7791",
+        "code": 16433,
+        "level": "STATUS"
+    },
+    "PUZZLE": {
+        "_code_in_hex": "0x4032",
+        "_standard": "RFC8019",
+        "code": 16434,
+        "level": "STATUS"
+    },
+    "USE_PPK": {
+        "_code_in_hex": "0x4033",
+        "_standard": "RFC8784",
+        "code": 16435,
+        "level": "STATUS"
+    },
+    "PPK_IDENTITY": {
+        "_code_in_hex": "0x4034",
+        "_standard": "RFC8784",
+        "code": 16436,
+        "level": "STATUS"
+    },
+    "NO_PPK_AUTH": {
+        "_code_in_hex": "0x4035",
+        "_standard": "RFC8784",
+        "code": 16437,
+        "level": "STATUS"
+    },
+    "INTERMEDIATE_EXCHANGE_SUPPORTED": {
+        "_code_in_hex": "0x4036",
+        "_standard": "RFC9242",
+        "code": 16438,
+        "level": "STATUS"
+    },
+    "IP4_ALLOWED": {
+        "_code_in_hex": "0x4037",
+        "_standard": "RFC8983",
+        "code": 16439,
+        "level": "STATUS"
+    },
+    "IP6_ALLOWED": {
+        "_code_in_hex": "0x4038",
+        "_standard": "RFC8983",
+        "code": 16440,
+        "level": "STATUS"
+    },
+    "ADDITIONAL_KEY_EXCHANGE": {
+        "_code_in_hex": "0x4039",
+        "_standard": "RFC9370",
+        "code": 16441,
+        "level": "STATUS"
+    },
+    "USE_AGGFRAG": {
+        "_code_in_hex": "0x403a",
+        "_standard": "RFC9347",
+        "code": 16442,
+        "level": "STATUS"
+    },
+    "SUPPORTED_AUTH_METHODS": {
+        "_code_in_hex": "0x403b",
+        "_standard": "RFC9593",
+        "code": 16443,
+        "level": "STATUS"
+    },
+    "SA_RESOURCE_INFO": {
+        "_code_in_hex": "0x403c",
+        "_standard": "RFC9611",
+        "code": 16444,
+        "level": "STATUS"
     }
 }
