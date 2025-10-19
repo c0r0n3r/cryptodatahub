@@ -1,0 +1,26 @@
+{
+    "IKE_SA_INIT": {
+        "_code_in_hex": "0x22",
+        "_standard": "RFC7296",
+        "code": 34,
+        "description": "IKE Security Association Initialization"
+    },
+    "IKE_AUTH": {
+        "_code_in_hex": "0x23",
+        "_standard": "RFC7296",
+        "code": 35,
+        "description": "IKE Authentication"
+    },
+    "CREATE_CHILD_SA": {
+        "_code_in_hex": "0x24",
+        "_standard": "RFC7296",
+        "code": 36,
+        "description": "Create Child Security Association"
+    },
+    "IKE_INFORMATIONAL": {
+        "_code_in_hex": "0x25",
+        "_standard": "RFC7296",
+        "code": 37,
+        "description": "IKE Informational Exchange"
+    }
+} 

@@ -1,0 +1,164 @@
+{
+    "UNSUPPORTED_CRITICAL_PAYLOAD": {
+        "_code_in_hex": "0x0001",
+        "_standard": "RFC7296",
+        "code": 1,
+        "level": "ERROR"
+    },
+    "INVALID_IKE_SPI": {
+        "_code_in_hex": "0x0004",
+        "_standard": "RFC7296",
+        "code": 4,
+        "level": "ERROR"
+    },
+    "INVALID_MAJOR_VERSION": {
+        "_code_in_hex": "0x0005",
+        "_standard": "RFC7296",
+        "code": 5,
+        "level": "ERROR"
+    },
+    "INVALID_SYNTAX": {
+        "_code_in_hex": "0x0007",
+        "_standard": "RFC7296",
+        "code": 7,
+        "level": "ERROR"
+    },
+    "INVALID_MESSAGE_ID": {
+        "_code_in_hex": "0x0009",
+        "_standard": "RFC7296",
+        "code": 9,
+        "level": "ERROR"
+    },
+    "INVALID_SPI": {
+        "_code_in_hex": "0x000b",
+        "_standard": "RFC7296",
+        "code": 11,
+        "level": "ERROR"
+    },
+    "NO_PROPOSAL_CHOSEN": {
+        "_code_in_hex": "0x000e",
+        "_standard": "RFC7296",
+        "code": 14,
+        "level": "ERROR"
+    },
+    "INVALID_KE_PAYLOAD": {
+        "_code_in_hex": "0x0011",
+        "_standard": "RFC7296",
+        "code": 17,
+        "level": "ERROR"
+    },
+    "AUTHENTICATION_FAILED": {
+        "_code_in_hex": "0x0018",
+        "_standard": "RFC7296",
+        "code": 24,
+        "level": "ERROR"
+    },
+    "SINGLE_PAIR_REQUIRED": {
+        "_code_in_hex": "0x0022",
+        "_standard": "RFC7296",
+        "code": 34,
+        "level": "ERROR"
+    },
+    "NO_ADDITIONAL_SAS": {
+        "_code_in_hex": "0x0023",
+        "_standard": "RFC7296",
+        "code": 35,
+        "level": "ERROR"
+    },
+    "INTERNAL_ADDRESS_FAILURE": {
+        "_code_in_hex": "0x0024",
+        "_standard": "RFC7296",
+        "code": 36,
+        "level": "ERROR"
+    },
+    "FAILED_CP_REQUIRED": {
+        "_code_in_hex": "0x0025",
+        "_standard": "RFC7296",
+        "code": 37,
+        "level": "ERROR"
+    },
+    "TS_UNACCEPTABLE": {
+        "_code_in_hex": "0x0026",
+        "_standard": "RFC7296",
+        "code": 38,
+        "level": "ERROR"
+    },
+    "INVALID_SELECTORS": {
+        "_code_in_hex": "0x0027",
+        "_standard": "RFC7296",
+        "code": 39,
+        "level": "ERROR"
+    },
+    "TEMPORARY_FAILURE": {
+        "_code_in_hex": "0x002b",
+        "_standard": "RFC7296",
+        "code": 43,
+        "level": "ERROR"
+    },
+    "CHILD_SA_NOT_FOUND": {
+        "_code_in_hex": "0x002c",
+        "_standard": "RFC7296",
+        "code": 44,
+        "level": "ERROR"
+    },
+    "INITIAL_CONTACT": {
+        "_code_in_hex": "0x4000",
+        "_standard": "RFC7296",
+        "code": 16384,
+        "level": "ERROR"
+    },
+    "SET_WINDOW_SIZE": {
+        "_code_in_hex": "0x4001",
+        "_standard": "RFC7296",
+        "code": 16385,
+        "level": "ERROR"
+    },
+    "ADDITIONAL_TS_POSSIBLE": {
+        "_code_in_hex": "0x4002",
+        "_standard": "RFC7296",
+        "code": 16386,
+        "level": "ERROR"
+    },
+    "IPCOMP_SUPPORTED": {
+        "_code_in_hex": "0x4003",
+        "_standard": "RFC7296",
+        "code": 16387,
+        "level": "ERROR"
+    },
+    "NAT_DETECTION_SOURCE_IP": {
+        "_code_in_hex": "0x4004",
+        "_standard": "RFC7296",
+        "code": 16388,
+        "level": "ERROR"
+    },
+    "NAT_DETECTION_DESTINATION_IP": {
+        "_code_in_hex": "0x4005",
+        "_standard": "RFC7296",
+        "code": 16389,
+        "level": "ERROR"
+    },
+    "COOKIE": {
+        "_code_in_hex": "0x4006",
+        "_standard": "RFC7296",
+        "code": 16390,
+        "level": "ERROR"
+    },
+    "USE_TRANSPORT_MODE": {
+        "_code_in_hex": "0x4007",
+        "_standard": "RFC7296",
+        "code": 16391,
+        "level": "ERROR"
+    },
+    "HTTP_CERT_LOOKUP_SUPPORTED": {
+        "_code_in_hex": "0x4008",
+        "_standard": "RFC7296",
+        "code": 16392,
+        "level": "ERROR"
+    },
+    "REKEY_SA": {
+        "_code_in_hex": "0x4009",
+        "_standard": "RFC7296",
+        "code": 16393,
+        "level": "ERROR"
+    }
+}

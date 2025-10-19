@@ -1,0 +1,14 @@
+{
+    "ESN_NONE": {
+        "_code_in_hex": "0x00",
+        "_standard": "RFC7296",
+        "code": 0,
+        "description": "No Extended Sequence Numbers"
+    },
+    "ESN_EXTENDED": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC7296",
+        "code": 1,
+        "description": "Extended Sequence Numbers"
+    }
+}
