@@ -1,0 +1,12 @@
+{
+    "SECONDS": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2409",
+        "code": 1
+    },
+    "KILOBYTES": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2409",
+        "code": 2
+    }
+}

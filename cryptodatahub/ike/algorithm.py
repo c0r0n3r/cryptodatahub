@@ -363,7 +363,7 @@ class Ikev1NotifyLevel(enum.Enum):
 class Ikev1NotifyTypeParams(CryptoDataParamsEnumNumeric):
     """IKEv1 notify type parameters."""
 
-    level = attr.ib(
+    level: Ikev1NotifyLevel = attr.ib(
         converter=convert_enum(Ikev1NotifyLevel),
         validator=attr.validators.instance_of(Ikev1NotifyLevel)
     )
@@ -454,11 +454,11 @@ Ikev1TransformType = CryptoDataEnumCodedBase(
 )
 
 
-@attr.s
+@attr.s(frozen=True)
 class Ikev1PayloadTypeParams(CryptoDataParamsEnumNumeric):
     """IKEv1 payload type parameters."""
 
-    description = attr.ib(validator=attr.validators.instance_of(str))
+    description: str = attr.ib(validator=attr.validators.instance_of(str))
 
     @classmethod
     def get_code_size(cls):
@@ -468,4 +468,133 @@ class Ikev1PayloadTypeParams(CryptoDataParamsEnumNumeric):
 Ikev1PayloadType = CryptoDataEnumCodedBase(
     'PayloadType',
     CryptoDataEnumBase.get_json_records(Ikev1PayloadTypeParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 encryption algorithm parameters."""
+
+    bulk_ciphers: typing.List[BlockCipher] = attr.ib(
+        converter=convert_iterable(convert_enum(BlockCipher)),
+        validator=attr.validators.deep_iterable(member_validator=attr.validators.instance_of(BlockCipher)),
+    )
+    block_cipher_mode: typing.Optional[BlockCipherMode] = attr.ib(
+        converter=convert_enum(BlockCipherMode),
+        validator=attr.validators.optional(attr.validators.instance_of(BlockCipherMode)),
+    )
+
+    def __str__(self):
+        if not self.bulk_ciphers:
+            return 'null'
+
+        cipher_name = self.bulk_ciphers[0].value.name
+        if self.block_cipher_mode is None:
+            return cipher_name
+
+        return f'{cipher_name} ({self.block_cipher_mode.value.name})'
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev1EncryptionAlgorithm = CryptoDataEnumCodedBase(
+    'EncryptionAlgorithm',
+    CryptoDataEnumBase.get_json_records(Ikev1EncryptionAlgorithmParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1HashAlgorithmParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 hash algorithm parameters."""
+
+    hash: Hash = attr.ib(
+        converter=convert_enum(Hash),
+        validator=attr.validators.instance_of(Hash)
+    )
+
+    def __str__(self):
+        return self.hash.value.name
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev1HashAlgorithm = CryptoDataEnumCodedBase(
+    'Ikev1HashAlgorithm',
+    CryptoDataEnumBase.get_json_records(Ikev1HashAlgorithmParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1AuthenticationMethodParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 authentication method parameters."""
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev1AuthenticationMethod = CryptoDataEnumCodedBase(
+    'Ikev1AuthenticationMethod',
+    CryptoDataEnumBase.get_json_records(Ikev1AuthenticationMethodParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1GroupTypeParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 group type parameters."""
+
+    description: str = attr.ib(
+        validator=attr.validators.instance_of(str)
+    )
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev1GroupType = CryptoDataEnumCodedBase(
+    'GroupType',
+    CryptoDataEnumBase.get_json_records(Ikev1GroupTypeParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1LifeTypeParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 life type parameters."""
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev1LifeType = CryptoDataEnumCodedBase(
+    'LifeType',
+    CryptoDataEnumBase.get_json_records(Ikev1LifeTypeParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1DiffieHellmanGroupParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 Diffie-Hellman group parameters."""
+
+    key_parameter: typing.Union[NamedGroup, DHParamWellKnown, str] = attr.ib(
+        converter=convert_variadic((convert_enum(NamedGroup), convert_enum(DHParamWellKnown))),
+        validator=attr.validators.instance_of((NamedGroup, DHParamWellKnown, str))
+    )
+
+    def __str__(self):
+        return self.key_parameter.value.name
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev1DiffieHellmanGroup = CryptoDataEnumCodedBase(
+    'DiffieHellmanGroup',
+    CryptoDataEnumBase.get_json_records(Ikev1DiffieHellmanGroupParams)
 )
