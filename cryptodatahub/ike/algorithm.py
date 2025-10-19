@@ -189,6 +189,25 @@ Ikev2ExchangeType = CryptoDataEnumCodedBase(
 )
 
 
+@attr.s(frozen=True)
+class Ikev1ExchangeTypeParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 exchange type parameters."""
+
+    description: str = attr.ib(
+        validator=attr.validators.instance_of(str)
+    )
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev1ExchangeType = CryptoDataEnumCodedBase(
+    'ExchangeType',
+    CryptoDataEnumBase.get_json_records(Ikev1ExchangeTypeParams)
+)
+
+
 class Ikev2NotifyLevel(enum.Enum):
     """Notify level."""
     ERROR = enum.auto()
@@ -316,4 +335,137 @@ class Ikev2PayloadTypeParams(CryptoDataParamsEnumNumeric):
 Ikev2PayloadType = CryptoDataEnumCodedBase(
     'PayloadType',
     CryptoDataEnumBase.get_json_records(Ikev2PayloadTypeParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1DoiParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 DOI type parameters."""
+
+    @classmethod
+    def get_code_size(cls):
+        return 4
+
+
+Ikev1Doi = CryptoDataEnumCodedBase(
+    'Doi',
+    CryptoDataEnumBase.get_json_records(Ikev1DoiParams)
+)
+
+
+class Ikev1NotifyLevel(enum.Enum):
+    """IKEv1 notify level."""
+    ERROR = enum.auto()
+    STATUS = enum.auto()
+
+
+@attr.s(frozen=True)
+class Ikev1NotifyTypeParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 notify type parameters."""
+
+    level = attr.ib(
+        converter=convert_enum(Ikev1NotifyLevel),
+        validator=attr.validators.instance_of(Ikev1NotifyLevel)
+    )
+
+    @classmethod
+    def get_code_size(cls):
+        return 2
+
+
+Ikev1NotifyType = CryptoDataEnumCodedBase(
+    'NotifyType',
+    CryptoDataEnumBase.get_json_records(Ikev1NotifyTypeParams)
+)
+
+
+class Ikev1AttributeFormat(enum.Enum):
+    """IKEv1 attribute format."""
+    BASIC = enum.auto()  # B
+    VARIABLE = enum.auto()  # V
+
+
+@attr.s(frozen=True)
+class Ikev1AttributeTypeParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 attribute type parameters."""
+
+    format: Ikev1AttributeFormat = attr.ib(
+        converter=convert_enum(Ikev1AttributeFormat),
+        validator=attr.validators.instance_of(Ikev1AttributeFormat)
+    )
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev1AttributeType = CryptoDataEnumCodedBase(
+    'AttributeType',
+    CryptoDataEnumBase.get_json_records(Ikev1AttributeTypeParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1TransformIdParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 transform ID parameters."""
+
+    description: str = attr.ib(
+        validator=attr.validators.instance_of(str)
+    )
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev1TransformId = CryptoDataEnumCodedBase(
+    'TransformId',
+    CryptoDataEnumBase.get_json_records(Ikev1TransformIdParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1ProtocolIdParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 protocol ID parameters."""
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev1ProtocolId = CryptoDataEnumCodedBase(
+    'ProtocolId',
+    CryptoDataEnumBase.get_json_records(Ikev1ProtocolIdParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1TransformTypeParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 transform type parameters."""
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev1TransformType = CryptoDataEnumCodedBase(
+    'TransformType',
+    CryptoDataEnumBase.get_json_records(Ikev1TransformTypeParams)
+)
+
+
+@attr.s
+class Ikev1PayloadTypeParams(CryptoDataParamsEnumNumeric):
+    """IKEv1 payload type parameters."""
+
+    description = attr.ib(validator=attr.validators.instance_of(str))
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev1PayloadType = CryptoDataEnumCodedBase(
+    'PayloadType',
+    CryptoDataEnumBase.get_json_records(Ikev1PayloadTypeParams)
 )

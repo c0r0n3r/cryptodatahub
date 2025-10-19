@@ -14,6 +14,12 @@ from cryptodatahub.ike.algorithm import (
     Ikev2HashAlgorithm,
     Ikev2IntegrityAlgorithm,
     Ikev2PseudorandomFunction,
+    Ikev1AttributeType,
+    Ikev1Doi,
+    Ikev1NotifyType,
+    Ikev1PayloadType,
+    Ikev1ProtocolId,
+    Ikev1TransformType,
 )
 
 
@@ -124,3 +130,39 @@ class TestIkev2TransformType(TestClasses.TestJsonCodeNumericBase):
     @classmethod
     def _get_class(cls):
         return Ikev2TransformType
+
+
+class TestIkev1AttributeType(TestClasses.TestJsonCodeNumericBase):
+    @classmethod
+    def _get_class(cls):
+        return Ikev1AttributeType
+
+
+class TestIkev1Doi(TestClasses.TestJsonCodeNumericBase):
+    @classmethod
+    def _get_class(cls):
+        return Ikev1Doi
+
+
+class TestIkev1NotifyType(TestClasses.TestJsonCodeNumericBase):
+    @classmethod
+    def _get_class(cls):
+        return Ikev1NotifyType
+
+
+class TestIkev1PayloadType(TestClasses.TestJsonCodeNumericBase):
+    @classmethod
+    def _get_class(cls):
+        return Ikev1PayloadType
+
+
+class TestIkev1ProtocolId(TestClasses.TestJsonCodeNumericBase):
+    @classmethod
+    def _get_class(cls):
+        return Ikev1ProtocolId
+
+
+class TestIkev1TransformType(TestClasses.TestJsonCodeNumericBase):
+    @classmethod
+    def _get_class(cls):
+        return Ikev1TransformType

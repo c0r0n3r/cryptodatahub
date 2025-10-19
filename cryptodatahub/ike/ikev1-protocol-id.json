@@ -1,0 +1,27 @@
+{
+    "ISAKMP": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2407",
+        "code": 1
+    },
+    "IPSEC_AH": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2407",
+        "code": 2
+    },
+    "IPSEC_ESP": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC2407",
+        "code": 3
+    },
+    "IPCOMP": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC2407",
+        "code": 4
+    },
+    "GIGABEAM_RADIO": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC4705",
+        "code": 5
+    }
+}
