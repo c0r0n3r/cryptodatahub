@@ -2,6 +2,15 @@
 Changelog
 =========
 
+Improvements
+============
+
+-  Generic
+
+   -  add missing PQC named curves
+
+      | ``SecP384r1MLKEM1024``
+
 -------------------
 1.0.0 - 2025-01-05
 -------------------

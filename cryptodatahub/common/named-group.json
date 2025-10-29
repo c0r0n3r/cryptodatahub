@@ -856,7 +856,15 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1249,
+        "size": 1184,
+        "group_type": "HYBRID_PQS"
+    },
+    "SECP384R1_ML_KEM_1024": {
+        "name": "SecP384r1MLKEM1024",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1568,
         "group_type": "HYBRID_PQS"
     },
     "SECP384R1_KYBER_768_R3": {
