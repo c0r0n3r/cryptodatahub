@@ -692,6 +692,13 @@
         "exchange_hash": "SHA2_256",
         "key_size": 256
     },
+    "SNTRUP761X25519_SHA512": {
+        "code": "sntrup761x25519-sha512",
+        "kex": "HYBRID_PQS",
+        "key_parameter": "CURVE25519",
+        "exchange_hash": "SHA2_512",
+        "key_size": 9264
+    },
     "SNTRUP4591761X25519_SHA512_TINYSSH_ORG": {
         "code": "sntrup4591761x25519-sha512@tinyssh.org",
         "kex": "HYBRID_PQS",

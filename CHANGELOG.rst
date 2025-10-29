@@ -11,6 +11,12 @@ Improvements
 
       | ``SecP384r1MLKEM1024``
 
+-  SSH
+
+   -  add missing hybrid streamlined NTRU prime KEX algorithms (#33)
+
+      | ``sntrup761x25519-sha512``
+
 -------------------
 1.0.0 - 2025-01-05
 -------------------
