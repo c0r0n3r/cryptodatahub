@@ -671,6 +671,27 @@
         "exchange_hash": "SHA2_512",
         "key_size": 511
     },
+    "MLKEM768_NISTP256_SHA256": {
+        "code": "mlkem768nistp256-sha256",
+        "kex": "HYBRID_PQS",
+        "key_parameter": "PRIME256V1",
+        "exchange_hash": "SHA2_256",
+        "key_size": 1184
+    },
+    "MLKEM1024_NISTP384_SHA384": {
+        "code": "mlkem1024nistp384-sha384",
+        "kex": "HYBRID_PQS",
+        "key_parameter": "SECP384R1",
+        "exchange_hash": "SHA2_384",
+        "key_size": 1568
+    },
+    "MLKEM768_X25519_SHA256": {
+        "code": "mlkem768x25519-sha256",
+        "kex": "HYBRID_PQS",
+        "key_parameter": "CURVE25519",
+        "exchange_hash": "SHA2_256",
+        "key_size": 1120
+    },
     "RSA1024_SHA1": {
         "code": "rsa1024-sha1",
         "kex": "RSA",

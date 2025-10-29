@@ -17,6 +17,10 @@ Improvements
 
       | ``sntrup761x25519-sha512``
 
+   -  add PQ/T hybrid key exchange algorithms with ML-KEM
+
+      | ``mlkem768nistp256-sha256``, ``mlkem1024nistp384-sha384``, ``mlkem768x25519-sha256``
+
 -------------------
 1.0.0 - 2025-01-05
 -------------------
