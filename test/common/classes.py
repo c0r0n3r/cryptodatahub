@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import abc
-import codecs
 import collections
 import enum
 import json
@@ -103,7 +102,7 @@ class TestClasses:
             return type(list(cls._get_class())[0].value)
 
         def setUp(self):
-            self.json_file = codecs.open(  # pylint: disable=consider-using-with
+            self.json_file = open(  # pylint: disable=consider-using-with
                 str(self._get_class().get_json_path(self._get_params_class())), 'r', encoding='ascii'
             )
             self.json_data = json.load(self.json_file, object_pairs_hook=collections.OrderedDict)
@@ -242,7 +241,7 @@ class TestClasses:
 
         def _get_public_key_pem(self, public_key_file_name):
             public_key_path = self.__certs_dir / (public_key_file_name + '.pem')
-            with codecs.open(str(public_key_path), 'r', encoding='ascii') as pem_file:
+            with open(str(public_key_path), 'r', encoding='ascii') as pem_file:
                 return pem_file.read()
 
         def _get_public_key(self, public_key_file_name):

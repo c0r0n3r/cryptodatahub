@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import codecs
 import datetime
 import dateutil
 import urllib3
@@ -88,7 +87,7 @@ class TestUpdaterCertificateTransparencyLogs(pyfakefs.fake_filesystem_unittest.T
         self.fs.create_file(json_file_path, contents='{}')
 
         UpdaterCertificateTransparencyLogs()()
-        with codecs.open(json_file_path, 'r', encoding='ascii') as json_file:
+        with open(json_file_path, 'r', encoding='ascii') as json_file:
             self.assertEqual(
                 json_file.read(),
                 CryptoDataEnumBase.dump_json({'DESCRIPTION': self.CT_LOG_ITEM_OBJECT._asdict()}),

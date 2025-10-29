@@ -2,7 +2,6 @@
 
 import abc
 import base64
-import codecs
 import collections
 import datetime
 import enum
@@ -482,7 +481,7 @@ class CryptoDataEnumBase(enum.Enum):
     @classmethod
     def get_json_object(cls, param_class):
         json_path = cls.get_json_path(param_class)
-        with codecs.open(str(json_path), 'r', encoding=cls.get_json_encoding()) as json_file:
+        with open(str(json_path), 'r', encoding=cls.get_json_encoding()) as json_file:
             return json.load(json_file, object_pairs_hook=collections.OrderedDict)
 
     @classmethod
@@ -492,7 +491,7 @@ class CryptoDataEnumBase(enum.Enum):
     @classmethod
     def set_json(cls, param_class, json_object):
         json_path = cls.get_json_path(param_class)
-        with codecs.open(str(json_path), 'w+', encoding=cls.get_json_encoding()) as json_file:
+        with open(str(json_path), 'w+', encoding=cls.get_json_encoding()) as json_file:
             json_file.write(cls.dump_json(json_object))
 
     @classmethod

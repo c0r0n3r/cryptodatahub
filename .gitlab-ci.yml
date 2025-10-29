@@ -18,7 +18,7 @@ pep8:
   stage: earlytest
   script: tox -e pep8
 
-python3:
+python314:
   image: python:3.14-slim
   stage: earlytest
   script: tox -e py314
@@ -37,6 +37,11 @@ python311:
   image: python:3.11-slim
   stage: fulltest
   script: tox -e py311
+
+python312:
+  image: python:3.12-slim
+  stage: fulltest
+  script: tox -e py312
 
 python313:
   image: python:3.13-slim
