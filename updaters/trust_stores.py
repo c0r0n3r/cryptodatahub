@@ -76,8 +76,8 @@ class FetcherRootCertificateStoreApple(FetcherBase):
         page = bs4.BeautifulSoup(response.decode('utf-8'), 'html.parser')
         trusted_cas = page.find("h2", {"id": "trusted"})
         return [
-            dict(zip(cls.FIELDS, map(lambda value: value.text.strip(), row.findAll('td'))))
-            for row in trusted_cas.findNext('tbody').findAll('tr')[1:]
+            dict(zip(cls.FIELDS, map(lambda value: value.text.strip(), row.find_all('td'))))
+            for row in trusted_cas.find_next('tbody').find_all('tr')[1:]
         ]
 
     @classmethod
