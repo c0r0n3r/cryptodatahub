@@ -9,19 +9,19 @@ before_script:
 - pip install tox .[tests]
 
 pylint:
-  image: python:3.12-slim
+  image: python:3.14-slim
   stage: earlytest
   script: tox -e pylint
 
 pep8:
-  image: python:3.12-slim
+  image: python:3.14-slim
   stage: earlytest
   script: tox -e pep8
 
 python3:
-  image: python:3.12-slim
+  image: python:3.14-slim
   stage: earlytest
-  script: tox -e py312
+  script: tox -e py314
 
 python39:
   image: python:3.9-slim
@@ -44,9 +44,9 @@ python313:
   script: tox -e py313
 
 pythonrc:
-  image: python:3.14-rc-slim
+  image: python:3.15-rc-slim
   stage: fulltest
-  script: tox -e py314
+  script: tox -e py315
 
 pypy3:
   image: pypy:3-slim
