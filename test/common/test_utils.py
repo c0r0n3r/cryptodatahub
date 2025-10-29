@@ -82,7 +82,7 @@ class TestHttpFetcher(unittest.TestCase):
 
     def test_error_fetch_timeout(self):
         http_fetcher = HttpFetcher(
-            connect_timeout=0.001, read_timeout=0.001, retry=0
+            connect_timeout=0.000001, read_timeout=0.000001, retry=0
         )
         with self.assertRaises(AttributeError):
             http_fetcher(TEST_URL_PREFIX + 'test.csv')

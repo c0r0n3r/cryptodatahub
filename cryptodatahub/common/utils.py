@@ -72,7 +72,7 @@ class HttpFetcher():
 
     def __attrs_post_init__(self):
         request_params = {
-            'preload_content': False,
+            'preload_content': True,
             'timeout': urllib3.Timeout(connect=self.connect_timeout, read=self.read_timeout),
             'retries': urllib3.Retry(
                 self.retry, status_forcelist=urllib3.Retry.RETRY_AFTER_STATUS_CODES | frozenset([502])
