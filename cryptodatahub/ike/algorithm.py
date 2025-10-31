@@ -303,8 +303,8 @@ Ikev2ProtocolId = CryptoDataEnumCodedBase(
 
 
 @attr.s
-class IkePayloadTypeParams(CryptoDataParamsEnumNumeric):
-    """ISAKMP payload type parameters."""
+class Ikev2PayloadTypeParams(CryptoDataParamsEnumNumeric):
+    """IKEv2 payload type parameters."""
 
     description: str = attr.ib(validator=attr.validators.instance_of(str))
 
@@ -313,7 +313,7 @@ class IkePayloadTypeParams(CryptoDataParamsEnumNumeric):
         return 1
 
 
-IkePayloadType = CryptoDataEnumCodedBase(
+Ikev2PayloadType = CryptoDataEnumCodedBase(
     'PayloadType',
-    CryptoDataEnumBase.get_json_records(IkePayloadTypeParams)
+    CryptoDataEnumBase.get_json_records(Ikev2PayloadTypeParams)
 )

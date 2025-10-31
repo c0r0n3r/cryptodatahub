@@ -3,7 +3,7 @@
 from test.common.classes import TestClasses
 
 from cryptodatahub.ike.algorithm import (
-    IkePayloadType,
+    Ikev2PayloadType,
     Ikev2NotifyType,
     Ikev2ExtendedSequenceNumber,
     Ikev2TransformType,
@@ -102,10 +102,10 @@ class TestIkev2IntegrityAlgorithm(TestClasses.TestJsonCodeNumericBase):
         )
 
 
-class TestIkePayloadType(TestClasses.TestJsonCodeNumericBase):
+class TestIkev2PayloadType(TestClasses.TestJsonCodeNumericBase):
     @classmethod
     def _get_class(cls):
-        return IkePayloadType
+        return Ikev2PayloadType
 
 
 class TestIkev2NotifyType(TestClasses.TestJsonCodeNumericBase):
