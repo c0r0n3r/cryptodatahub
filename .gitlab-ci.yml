@@ -83,6 +83,7 @@ obs:
   stage: deploy
   variables:
     GIT_SUBMODULE_STRATEGY: recursive
+  before_script: []
   script:
     - obs.sh
   only:
