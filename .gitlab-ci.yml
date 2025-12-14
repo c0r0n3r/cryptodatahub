@@ -78,7 +78,7 @@ coveralls:
 
 obs:
   image:
-    name: coroner/python_obs
+    name: coroner/python_obs:1.0.0
     pull_policy: always
   stage: deploy
   variables:
