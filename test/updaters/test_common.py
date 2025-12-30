@@ -6,9 +6,8 @@ from test.common.classes import TEST_URL_PREFIX
 
 import attr
 
-from cryptodatahub.common.utils import name_to_enum_item_name
-
-from updaters.common import FetcherBase, FetcherCsvBase
+from cryptodatahub.common.fetcher import FetcherBase, FetcherCsvBase
+from cryptodatahub.common.utils import HttpFetcher, name_to_enum_item_name
 
 
 @attr.s
@@ -36,6 +35,10 @@ class FetcherCsvBaseTest(FetcherCsvBase):
     @classmethod
     def _get_csv_fields(cls):
         return ['Col 1', 'Col 2']
+
+    @classmethod
+    def _get_fetcher(cls):
+        return HttpFetcher()
 
     @classmethod
     def _transform_data(cls, current_data):

@@ -13,23 +13,25 @@ import tarfile
 
 from test.common.classes import TestClasses
 
-
-from updaters.common import HttpFetcher, UpdaterBase
-from updaters.trust_stores import (
+from cryptodatahub.common.algorithm import Hash
+from cryptodatahub.common.fetcher import (
     FetcherRootCertificateStore,
     FetcherRootCertificateStoreApple,
     FetcherRootCertificateStoreGoogle,
     FetcherRootCertificateStoreMicrosoft,
     FetcherRootCertificateStoreMozilla,
 )
-
-from cryptodatahub.common.algorithm import Hash
 from cryptodatahub.common.stores import (
     CertificateTrustConstraint,
     RootCertificateBase,
     RootCertificateParams,
     RootCertificateTrustConstraintAction,
 )
+from cryptodatahub.common.types import Base64Data
+from cryptodatahub.common.utils import HttpFetcher
+
+from updaters.common import UpdaterBase
+from updaters.trust_stores import RootCertificateStore
 
 
 class TestRootCertificateBase(TestClasses.TestKeyBase):
@@ -340,3 +342,25 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             for trust_store in trust_stores:
                 constraints = trust_store.constraints
                 self.assertEqual(len(constraints), 0)
+
+
+class TestRootCertificateStore(TestRootCertificateBase):
+    def test_default(self):
+        root_certificate_store = RootCertificateStore()
+        self.assertEqual(root_certificate_store.certificates, {})
+
+    def test_with_certificates(self):
+        base64_data = Base64Data(b'test data')
+        constraint_action = RootCertificateTrustConstraintAction.DISTRUST
+        root_certificate_store = RootCertificateStore(
+            certificates={base64_data: constraint_action}
+        )
+        self.assertEqual(root_certificate_store.certificates, {base64_data: constraint_action})
+
+    def test_error_invalid_key_type(self):
+        with self.assertRaises(TypeError):
+            RootCertificateStore(certificates={'invalid': RootCertificateTrustConstraintAction.DISTRUST})
+
+    def test_error_invalid_value_type(self):
+        with self.assertRaises(TypeError):
+            RootCertificateStore(certificates={Base64Data(b'test'): 'invalid'})
