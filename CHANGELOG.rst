@@ -3,6 +3,19 @@ Changelog
 =========
 
 -------------------
+1.0.2 - 2025-12-30
+-------------------
+
+Improvements
+============
+
+-  Generic
+
+   -  Install updater scripts as command-line tools (#35)
+
+      | ``update-ct-log``, ``update-trust-stores``
+
+-------------------
 1.0.1 - 2025-12-07
 -------------------
 
