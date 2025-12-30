@@ -19,7 +19,9 @@ from cryptodatahub.common.stores import (
     CertificateTransparencyLogTemporalInterval,
 )
 
-from updaters.ct_log import FetcherCertificateTransparencyLogs, UpdaterCertificateTransparencyLogs
+from cryptodatahub.common.fetcher import FetcherCertificateTransparencyLogs
+
+from updaters.ct_log import UpdaterCertificateTransparencyLogs
 
 
 class TestUpdaterCertificateTransparencyLogs(pyfakefs.fake_filesystem_unittest.TestCase):

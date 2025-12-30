@@ -59,6 +59,10 @@ docs = [
     'sphinx-sitemap',
 ]
 
+[project.scripts]
+update-ct-log = 'updaters.ct_log:main'
+update-trust-stores = 'updaters.trust_stores:main'
+
 [project.urls]
 Homepage = 'https://gitlab.com/coroner/cryptodatahub'
 Changelog = 'https://cryptodatahub.readthedocs.io/en/latest/changelog'
@@ -70,7 +74,7 @@ Source = 'https://gitlab.com/coroner/cryptodatahub'
 technical_name = 'cryptodatahub'
 
 [tool.setuptools.packages.find]
-exclude = ['updaters']
+include = ['cryptodatahub*', 'updaters*']
 
 [tool.setuptools.package-data]
 cryptodatahub = [
