@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import enum
+import typing
 
 import attr
 
@@ -9,6 +10,7 @@ from cryptodatahub.common.types import (
     CryptoDataEnumCodedBase,
     CryptoDataParamsEnumNumeric,
     convert_enum,
+    convert_iterable,
     convert_variadic,
 )
 from cryptodatahub.common.algorithm import BlockCipher, Hash, MAC, NamedGroup, BlockCipherMode
@@ -19,7 +21,7 @@ from cryptodatahub.common.parameter import DHParamWellKnown
 class Ikev2PseudorandomFunctionParams(CryptoDataParamsEnumNumeric):
     """Pseudorandom function parameters."""
 
-    mac = attr.ib(
+    mac: MAC = attr.ib(
         converter=convert_enum(MAC),
         validator=attr.validators.instance_of(MAC)
     )
@@ -42,7 +44,7 @@ Ikev2PseudorandomFunction = CryptoDataEnumCodedBase(
 class Ikev2AuthenticationMethodParams(CryptoDataParamsEnumNumeric):
     """Authentication method parameters."""
 
-    description = attr.ib(
+    description: str = attr.ib(
         validator=attr.validators.instance_of(str)
     )
 
@@ -64,7 +66,7 @@ Ikev2AuthenticationMethod = CryptoDataEnumCodedBase(
 class Ikev2IntegrityAlgorithmParams(CryptoDataParamsEnumNumeric):
     """Integrity algorithm parameters."""
 
-    hmac = attr.ib(
+    hmac: typing.Optional[MAC] = attr.ib(
         converter=convert_enum(MAC),
         validator=attr.validators.optional(attr.validators.instance_of(MAC))
     )
@@ -90,7 +92,7 @@ Ikev2IntegrityAlgorithm = CryptoDataEnumCodedBase(
 class Ikev2DiffieHellmanGroupParams(CryptoDataParamsEnumNumeric):
     """Diffie-Hellman group parameters."""
 
-    key_parameter = attr.ib(
+    key_parameter: typing.Union[NamedGroup, DHParamWellKnown, str] = attr.ib(
         converter=convert_variadic((convert_enum(NamedGroup), convert_enum(DHParamWellKnown))),
         validator=attr.validators.optional(
             attr.validators.instance_of((NamedGroup, DHParamWellKnown, str))
@@ -149,7 +151,7 @@ Ikev2EncryptionAlgorithm = CryptoDataEnumCodedBase(
 class Ikev2HashAlgorithmParams(CryptoDataParamsEnumNumeric):
     """Hash algorithm parameters."""
 
-    hash_algorithm = attr.ib(
+    hash_algorithm: Hash = attr.ib(
         converter=convert_enum(Hash),
         validator=attr.validators.instance_of(Hash)
     )
@@ -172,7 +174,7 @@ Ikev2HashAlgorithm = CryptoDataEnumBase(
 class Ikev2ExchangeTypeParams(CryptoDataParamsEnumNumeric):
     """IKEv2 exchange type parameters."""
 
-    description = attr.ib(
+    description: str = attr.ib(
         validator=attr.validators.instance_of(str)
     )
 
@@ -197,7 +199,7 @@ class Ikev2NotifyLevel(enum.Enum):
 class Ikev2NotifyTypeParams(CryptoDataParamsEnumNumeric):
     """Notify type parameters."""
 
-    level = attr.ib(
+    level: Ikev2NotifyLevel = attr.ib(
         converter=convert_enum(Ikev2NotifyLevel),
         validator=attr.validators.instance_of(Ikev2NotifyLevel)
     )
@@ -240,7 +242,7 @@ Ikev2TransformAttributeType = CryptoDataEnumCodedBase(
 class Ikev2ExtendedSequenceNumberParams(CryptoDataParamsEnumNumeric):
     """Extended sequence number parameters."""
 
-    description = attr.ib(
+    description: str = attr.ib(
         validator=attr.validators.instance_of(str)
     )
 
@@ -304,7 +306,7 @@ Ikev2ProtocolId = CryptoDataEnumCodedBase(
 class IkePayloadTypeParams(CryptoDataParamsEnumNumeric):
     """ISAKMP payload type parameters."""
 
-    description = attr.ib(validator=attr.validators.instance_of(str))
+    description: str = attr.ib(validator=attr.validators.instance_of(str))
 
     @classmethod
     def get_code_size(cls):
