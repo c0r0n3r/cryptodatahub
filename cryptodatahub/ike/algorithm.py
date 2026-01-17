@@ -1,11 +1,14 @@
 # SPDX-License-Identifier: MPL-2.0
 # -*- coding: utf-8 -*-
 
+import abc
 import enum
 import typing
 
 import attr
 
+from cryptodatahub.common.algorithm import GradeableAlgorithmParams
+from cryptodatahub.common.grade import GradeableComplex
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataEnumCodedBase,
@@ -19,7 +22,15 @@ from cryptodatahub.common.parameter import DHParamWellKnown
 
 
 @attr.s(frozen=True)
-class Ikev2PseudorandomFunctionParams(CryptoDataParamsEnumNumeric):
+class IkeAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableAlgorithmParams):
+    @property
+    @abc.abstractmethod
+    def _gradeable_algorithms(self):
+        raise NotImplementedError()
+
+
+@attr.s(frozen=True)
+class Ikev2PseudorandomFunctionParams(IkeAlgorithmParams):
     """Pseudorandom function parameters."""
 
     mac: MAC = attr.ib(
@@ -33,6 +44,10 @@ class Ikev2PseudorandomFunctionParams(CryptoDataParamsEnumNumeric):
     @classmethod
     def get_code_size(cls):
         return 2
+
+    @property
+    def _gradeable_algorithms(self):
+        return (self.mac,)
 
 
 Ikev2PseudorandomFunction = CryptoDataEnumCodedBase(
@@ -64,7 +79,7 @@ Ikev2AuthenticationMethod = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
-class Ikev2IntegrityAlgorithmParams(CryptoDataParamsEnumNumeric):
+class Ikev2IntegrityAlgorithmParams(IkeAlgorithmParams):
     """Integrity algorithm parameters."""
 
     hmac: typing.Optional[MAC] = attr.ib(
@@ -82,6 +97,10 @@ class Ikev2IntegrityAlgorithmParams(CryptoDataParamsEnumNumeric):
     def get_code_size(cls):
         return 2
 
+    @property
+    def _gradeable_algorithms(self):
+        return (self.hmac,) if self.hmac is not None else ()
+
 
 Ikev2IntegrityAlgorithm = CryptoDataEnumCodedBase(
     'IntegrityAlgorithm',
@@ -90,7 +109,7 @@ Ikev2IntegrityAlgorithm = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
-class Ikev2DiffieHellmanGroupParams(CryptoDataParamsEnumNumeric):
+class Ikev2DiffieHellmanGroupParams(IkeAlgorithmParams):
     """Diffie-Hellman group parameters."""
 
     key_parameter: typing.Union[NamedGroup, DHParamWellKnown, str] = attr.ib(
@@ -107,6 +126,10 @@ class Ikev2DiffieHellmanGroupParams(CryptoDataParamsEnumNumeric):
     def get_code_size(cls):
         return 2
 
+    @property
+    def _gradeable_algorithms(self):
+        return (self.key_parameter,)
+
 
 Ikev2DiffieHellmanGroup = CryptoDataEnumCodedBase(
     'DiffieHellmanGroup',
@@ -115,7 +138,7 @@ Ikev2DiffieHellmanGroup = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
-class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric):
+class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComplex):
     """Encryption algorithm parameters."""
 
     bulk_ciphers: typing.List[BlockCipher] = attr.ib(
@@ -141,6 +164,15 @@ class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric):
     def get_code_size(cls):
         return 2
 
+    def __attrs_post_init__(self):
+        gradeables = [bulk_cipher.value for bulk_cipher in self.bulk_ciphers]
+        if self.block_cipher_mode is not None:
+            gradeables.append(self.block_cipher_mode.value)
+
+        object.__setattr__(self, 'gradeables', gradeables)
+
+        attr.validate(self)
+
 
 Ikev2EncryptionAlgorithm = CryptoDataEnumCodedBase(
     'EncryptionAlgorithm',
@@ -149,7 +181,7 @@ Ikev2EncryptionAlgorithm = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
-class Ikev2HashAlgorithmParams(CryptoDataParamsEnumNumeric):
+class Ikev2HashAlgorithmParams(IkeAlgorithmParams):
     """Hash algorithm parameters."""
 
     hash_algorithm: Hash = attr.ib(
@@ -163,6 +195,10 @@ class Ikev2HashAlgorithmParams(CryptoDataParamsEnumNumeric):
     @classmethod
     def get_code_size(cls):
         return 1
+
+    @property
+    def _gradeable_algorithms(self):
+        return (self.hash_algorithm,)
 
 
 Ikev2HashAlgorithm = CryptoDataEnumBase(
@@ -473,7 +509,7 @@ Ikev1PayloadType = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
-class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric):
+class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComplex):
     """IKEv1 encryption algorithm parameters."""
 
     bulk_ciphers: typing.List[BlockCipher] = attr.ib(
@@ -499,6 +535,15 @@ class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric):
     def get_code_size(cls):
         return 2
 
+    def __attrs_post_init__(self):
+        gradeables = [bulk_cipher.value for bulk_cipher in self.bulk_ciphers]
+        if self.block_cipher_mode is not None:
+            gradeables.append(self.block_cipher_mode.value)
+
+        object.__setattr__(self, 'gradeables', gradeables)
+
+        attr.validate(self)
+
 
 Ikev1EncryptionAlgorithm = CryptoDataEnumCodedBase(
     'EncryptionAlgorithm',
@@ -507,7 +552,7 @@ Ikev1EncryptionAlgorithm = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
-class Ikev1HashAlgorithmParams(CryptoDataParamsEnumNumeric):
+class Ikev1HashAlgorithmParams(IkeAlgorithmParams):
     """IKEv1 hash algorithm parameters."""
 
     hash: Hash = attr.ib(
@@ -521,6 +566,10 @@ class Ikev1HashAlgorithmParams(CryptoDataParamsEnumNumeric):
     @classmethod
     def get_code_size(cls):
         return 2
+
+    @property
+    def _gradeable_algorithms(self):
+        return ['hash']
 
 
 Ikev1HashAlgorithm = CryptoDataEnumCodedBase(
@@ -579,7 +628,7 @@ Ikev1LifeType = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
-class Ikev1DiffieHellmanGroupParams(CryptoDataParamsEnumNumeric):
+class Ikev1DiffieHellmanGroupParams(IkeAlgorithmParams):
     """IKEv1 Diffie-Hellman group parameters."""
 
     key_parameter: typing.Union[NamedGroup, DHParamWellKnown, str] = attr.ib(
@@ -593,6 +642,10 @@ class Ikev1DiffieHellmanGroupParams(CryptoDataParamsEnumNumeric):
     @classmethod
     def get_code_size(cls):
         return 2
+
+    @property
+    def _gradeable_algorithms(self):
+        return (self.key_parameter,)
 
 
 Ikev1DiffieHellmanGroup = CryptoDataEnumCodedBase(

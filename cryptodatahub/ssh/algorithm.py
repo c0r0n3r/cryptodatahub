@@ -15,8 +15,9 @@ from cryptodatahub.common.algorithm import (
     MACMode,
     NamedGroup,
     Signature,
+    GradeableAlgorithmParams,
 )
-from cryptodatahub.common.grade import GradeableComplex, GradeableVulnerabilities
+from cryptodatahub.common.grade import GradeableVulnerabilities
 from cryptodatahub.common.key import PublicKeySize
 from cryptodatahub.common.parameter import DHParamWellKnown
 from cryptodatahub.common.types import (
@@ -28,28 +29,11 @@ from cryptodatahub.common.types import (
 
 
 @attr.s(frozen=True)
-class SshAlgorithmParams(CryptoDataParamsEnumString, GradeableComplex):
+class SshAlgorithmParams(CryptoDataParamsEnumString, GradeableAlgorithmParams):
     @property
     @abc.abstractmethod
     def _gradeable_algorithms(self):
         raise NotImplementedError()
-
-    def __attrs_post_init__(self):
-        gradeables = []
-        for algorithm in self._gradeable_algorithms:
-            if isinstance(algorithm, str):
-                gradeable = getattr(self, algorithm)
-                if gradeable is not None:
-                    gradeable = gradeable.value
-            else:
-                gradeable = algorithm
-
-            if gradeable is not None:
-                gradeables.append(gradeable)
-
-        object.__setattr__(self, 'gradeables', gradeables)
-
-        attr.validate(self)
 
 
 @attr.s(frozen=True)

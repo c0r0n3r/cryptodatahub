@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: MPL-2.0
 # -*- coding: utf-8 -*-
 
+import abc
 import enum
 
 import attr
@@ -162,3 +163,30 @@ class SignatureParams(CryptoDataParamsOIDOptional, GradeableComplex):
 
 
 Signature = CryptoDataEnumOIDBase('Signature', CryptoDataEnumOIDBase.get_json_records(SignatureParams))
+
+
+@attr.s(frozen=True)
+class GradeableAlgorithmParams(GradeableComplex):
+    @property
+    @abc.abstractmethod
+    def _gradeable_algorithms(self):
+        raise NotImplementedError()
+
+    def __attrs_post_init__(self):
+        gradeables = []
+        for algorithm in self._gradeable_algorithms:
+            if isinstance(algorithm, str):
+                gradeable = getattr(self, algorithm)
+                if gradeable is not None:
+                    gradeable = gradeable.value
+            elif isinstance(algorithm, enum.Enum):
+                gradeable = algorithm.value
+            else:
+                gradeable = algorithm
+
+            if gradeable is not None:
+                gradeables.append(gradeable)
+
+        object.__setattr__(self, 'gradeables', gradeables)
+
+        attr.validate(self)
