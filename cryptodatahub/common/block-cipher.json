@@ -158,8 +158,6 @@
     "DES": {
         "name": "DES",
         "long_name": null,
-        "vulnerabilities": null,
-        "key_size": 56,
         "vulnerabilities": [
             {
                 "attack_type": "BRUTE_FORCE",
@@ -172,6 +170,7 @@
                 "named": "SWEET32"
             }
         ],
+        "key_size": 56,
         "block_size": 64
     },
     "DES40": {
