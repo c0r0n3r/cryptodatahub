@@ -30,7 +30,7 @@
             "AES_192",
             "AES_256"
         ],
-        "block_cipher_mode": "CCM"
+        "block_cipher_mode": "CCM_12"
     },
     "AES_CCM_16": {
         "_code_in_hex": "0x10",
@@ -41,7 +41,7 @@
             "AES_192",
             "AES_256"
         ],
-        "block_cipher_mode": "CCM"
+        "block_cipher_mode": "CCM_16"
     },
     "AES_GCM_8": {
         "_code_in_hex": "0x12",
@@ -63,7 +63,7 @@
             "AES_192",
             "AES_256"
         ],
-        "block_cipher_mode": "GCM"
+        "block_cipher_mode": "GCM_12"
     },
     "AES_GCM_16": {
         "_code_in_hex": "0x14",
@@ -74,7 +74,7 @@
             "AES_192",
             "AES_256"
         ],
-        "block_cipher_mode": "GCM"
+        "block_cipher_mode": "GCM_16"
     },
     "DES_CBC": {
         "_code_in_hex": "0x01",
@@ -186,7 +186,7 @@
             "AES_192",
             "AES_256"
         ],
-        "block_cipher_mode": "CCM"
+        "block_cipher_mode": "CCM_12"
     },
     "AES_CCM_16": {
         "_code_in_hex": "0x10",
@@ -197,7 +197,7 @@
             "AES_192",
             "AES_256"
         ],
-        "block_cipher_mode": "CCM"
+        "block_cipher_mode": "CCM_16"
     },
     "AES_GCM_8": {
         "_code_in_hex": "0x12",
@@ -219,7 +219,7 @@
             "AES_192",
             "AES_256"
         ],
-        "block_cipher_mode": "GCM"
+        "block_cipher_mode": "GCM_12"
     },
     "AES_GCM_16": {
         "_code_in_hex": "0x14",
@@ -230,7 +230,7 @@
             "AES_192",
             "AES_256"
         ],
-        "block_cipher_mode": "GCM"
+        "block_cipher_mode": "GCM_16"
     },
     "CAMELLIA_CTR": {
         "_code_in_hex": "0x18",
@@ -263,7 +263,7 @@
             "CAMELLIA_192",
             "CAMELLIA_256"
         ],
-        "block_cipher_mode": "CCM"
+        "block_cipher_mode": "CCM_12"
     },
     "CAMELLIA_CCM_16": {
         "_code_in_hex": "0x1B",
@@ -274,6 +274,6 @@
             "CAMELLIA_192",
             "CAMELLIA_256"
         ],
-        "block_cipher_mode": "CCM"
+        "block_cipher_mode": "CCM_16"
     }
 }

@@ -46,5 +46,11 @@
         "_standard": "RFC4615",
         "code": 8,
         "mac": "CBCMAC_AES"
+    },
+    "PRF_HMAC_STREEBOG_512": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC9385",
+        "code": 9,
+        "mac": "GOST_R3411_12_512"
     }
 }

@@ -17,6 +17,54 @@
         "code": 5,
         "key_parameter": "RFC3526_1536_BIT_MODP_GROUP"
     },
+    "EC2N_GROUP_163_BIT_RANDOM": {
+        "_code_in_hex": "0x06",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 6,
+        "key_parameter": "SECT163R1"
+    },
+    "EC2N_GROUP_163_BIT_KOBLITZ": {
+        "_code_in_hex": "0x07",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 7,
+        "key_parameter": "SECT163K1"
+    },
+    "EC2N_GROUP_283_BIT_RANDOM": {
+        "_code_in_hex": "0x08",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 8,
+        "key_parameter": "SECT283R1"
+    },
+    "EC2N_GROUP_283_BIT_KOBLITZ": {
+        "_code_in_hex": "0x09",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 9,
+        "key_parameter": "SECT283K1"
+    },
+    "EC2N_GROUP_409_BIT_RANDOM": {
+        "_code_in_hex": "0x0A",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 10,
+        "key_parameter": "SECT409R1"
+    },
+    "EC2N_GROUP_409_BIT_KOBLITZ": {
+        "_code_in_hex": "0x0B",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 11,
+        "key_parameter": "SECT409K1"
+    },
+    "EC2N_GROUP_571_BIT_RANDOM": {
+        "_code_in_hex": "0x0C",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 12,
+        "key_parameter": "SECT571R1"
+    },
+    "EC2N_GROUP_571_BIT_KOBLITZ": {
+        "_code_in_hex": "0x0D",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 13,
+        "key_parameter": "SECT571K1"
+    },
     "MODP_GROUP_2048_BIT": {
         "_code_in_hex": "0x0e",
         "_standard": "RFC3526",
@@ -64,5 +112,83 @@
         "_standard": "RFC5903",
         "code": 21,
         "key_parameter": "SECP521R1"
+    },
+    "MODP_GROUP_1024_BIT_160_BIT_SUBGROUP": {
+        "_code_in_hex": "0x16",
+        "_standard": "RFC8247,RFC6989,RFC5114",
+        "code": 22,
+        "key_parameter": "RFC5114_1024_BIT_MODP_GROUP_WITH_160_BIT_PRIME_ORDER_SUBGROUP"
+    },
+    "MODP_GROUP_2048_BIT_224_BIT_SUBGROUP": {
+        "_code_in_hex": "0x17",
+        "_standard": "RFC6989,RFC5114",
+        "code": 23,
+        "key_parameter": "RFC5114_2048_BIT_MODP_GROUP_WITH_224_BIT_PRIME_ORDER_SUBGROUP"
+    },
+    "MODP_GROUP_2048_BIT_256_BIT_SUBGROUP": {
+        "_code_in_hex": "0x18",
+        "_standard": "RFC6989,RFC5114",
+        "code": 24,
+        "key_parameter": "RFC5114_2048_BIT_MODP_GROUP_WITH_256_BIT_PRIME_ORDER_SUBGROUP"
+    },
+    "ECP_GROUP_192_BIT": {
+        "_code_in_hex": "0x19",
+        "_standard": "RFC6989,RFC5114",
+        "code": 25,
+        "key_parameter": "PRIME192V1"
+    },
+    "ECP_GROUP_224_BIT": {
+        "_code_in_hex": "0x1A",
+        "_standard": "RFC6989,RFC5114",
+        "code": 26,
+        "key_parameter": "SECP224R1"
+    },
+    "BRAINPOOL_ECP_GROUP_224_BIT": {
+        "_code_in_hex": "0x1B",
+        "_standard": "RFC6989,RFC6954",
+        "code": 27,
+        "key_parameter": "BRAINPOOLP224R1"
+    },
+    "BRAINPOOL_ECP_GROUP_256_BIT": {
+        "_code_in_hex": "0x1C",
+        "_standard": "RFC6989,RFC6954",
+        "code": 28,
+        "key_parameter": "BRAINPOOLP256R1"
+    },
+    "BRAINPOOL_ECP_GROUP_384_BIT": {
+        "_code_in_hex": "0x1D",
+        "_standard": "RFC6989,RFC6954",
+        "code": 29,
+        "key_parameter": "BRAINPOOLP384R1"
+    },
+    "BRAINPOOL_ECP_GROUP_512_BIT": {
+        "_code_in_hex": "0x1E",
+        "_standard": "RFC6989,RFC6954",
+        "code": 30,
+        "key_parameter": "BRAINPOOLP512R1"
+    },
+    "CURVE25519": {
+        "_code_in_hex": "0x1F",
+        "_standard": "RFC8031",
+        "code": 31,
+        "key_parameter": "CURVE25519"
+    },
+    "CURVE448": {
+        "_code_in_hex": "0x20",
+        "_standard": "RFC8031",
+        "code": 32,
+        "key_parameter": "CURVE448"
+    },
+    "GOST3410_2012_256": {
+        "_code_in_hex": "0x21",
+        "_standard": "RFC9385",
+        "code": 33,
+        "key_parameter": "GC256A"
+    },
+    "GOST3410_2012_512": {
+        "_code_in_hex": "0x22",
+        "_standard": "RFC9385",
+        "code": 34,
+        "key_parameter": "GC512A"
     }
 }

@@ -114,6 +114,61 @@
         ],
         "block_cipher_mode": "CTR"
     },
+    "ENCR_AES_CCM_8": {
+        "_code_in_hex": "0x0E",
+        "_standard": "RFC4309",
+        "code": 14,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM_8"
+    },
+    "ENCR_AES_CCM_12": {
+        "_code_in_hex": "0x0F",
+        "_standard": "RFC4309",
+        "code": 15,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM_12"
+    },
+    "ENCR_AES_CCM_16": {
+        "_code_in_hex": "0x10",
+        "_standard": "RFC4309",
+        "code": 16,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM_16"
+    },
+    "ENCR_AES_GCM_8": {
+        "_code_in_hex": "0x12",
+        "_standard": "RFC4106",
+        "code": 18,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM_8"
+    },
+    "ENCR_AES_GCM_12": {
+        "_code_in_hex": "0x13",
+        "_standard": "RFC4106",
+        "code": 19,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM_12"
+    },
     "ENCR_AES_GCM_16": {
         "_code_in_hex": "0x14",
         "_standard": "RFC5282",
@@ -124,5 +179,16 @@
             "AES_256"
         ],
         "block_cipher_mode": "GCM"
+    },
+    "ENCR_NULL_AUTH_AES_GMAC": {
+        "_code_in_hex": "0x15",
+        "_standard": "RFC4543",
+        "code": 21,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "GMAC"
     }
 }
