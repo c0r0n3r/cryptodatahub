@@ -107,6 +107,18 @@ class TestCertificateTransparencyLog(TestClasses.TestJsonBase):
             'ORGANIZATION_CT_LOG_2023'
         )
 
+    def test_identifier_bogus_description(self):
+        log = CertificateTransparencyLogParams(
+            operator=Entity.GOOGLE,
+            log_id=b'\x00',
+            key=b'\x01',
+            url='http://example.invalid',
+            mmd=1,
+            description='BOGUS_TEST',
+        )
+
+        self.assertEqual(log.identifier, 'BOGUS_TEST')
+
     def test_str(self):
         self.assertEqual(
             str(CertificateTransparencyLog.from_log_id(bytearray(b'unknown log'))),

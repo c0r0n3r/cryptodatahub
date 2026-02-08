@@ -159,8 +159,8 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2022-11-30T17:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-02-01T08:53:20Z"
         }
     },
     "CLOUDFLARE_NIMBUS_2025": {
@@ -175,8 +175,8 @@
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-12-19T07:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-08T00:00:00Z"
         }
     },
     "CLOUDFLARE_NIMBUS_2026": {
@@ -191,8 +191,24 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "QUALIFIED",
-            "timestamp": "2024-08-28T03:00:00Z"
+            "state_type": "USABLE",
+            "timestamp": "2024-11-08T18:00:00Z"
+        }
+    },
+    "CLOUDFLARE_NIMBUS_2027": {
+        "log_id": "TGPcmOWcHauI9h6KPd6uj6tEozd7X5uUw/uhnPzBviY=",
+        "operator": "CLOUDFLARE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEYjd/jE0EoAhNBbfcNhrTb7F0x10KZK8r2SDjx1GdjJ75hJrHx2OCQ+BXRjXi+czoREN1u0j9cWl8d6OoPMPogQ==",
+        "url": "https://ct.cloudflare.com/logs/nimbus2027/",
+        "mmd": 86400,
+        "description": "Cloudflare 'Nimbus2027'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-11-15T00:00:00Z"
         }
     },
     "CNNIC_CT_LOG": {
@@ -339,8 +355,8 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "RETIRED",
-            "timestamp": "2023-05-30T00:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-02-01T08:53:20Z"
         }
     },
     "DIGICERT_NESSIE_2025_LOG": {
@@ -355,8 +371,8 @@
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2022-11-01T18:54:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-08T00:00:00Z"
         }
     },
     "DIGICERT_SPHINX_2024H1_LOG": {
@@ -387,8 +403,8 @@
             "end_exclusive": "2025-01-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-08-29T03:09:43Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-02-01T08:53:20Z"
         }
     },
     "DIGICERT_SPHINX_2025H1_LOG": {
@@ -403,8 +419,8 @@
             "end_exclusive": "2025-07-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-08-29T03:09:43Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-07-28T18:30:00Z"
         }
     },
     "DIGICERT_SPHINX_2025H2_LOG": {
@@ -419,8 +435,8 @@
             "end_exclusive": "2026-01-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-08-29T03:09:43Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-14T00:00:00Z"
         }
     },
     "DIGICERT_SPHINX_2026H1": {
@@ -435,8 +451,8 @@
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "QUALIFIED",
-            "timestamp": "2024-08-26T00:00:00Z"
+            "state_type": "USABLE",
+            "timestamp": "2024-11-08T00:00:00Z"
         }
     },
     "DIGICERT_SPHINX_2026H2": {
@@ -451,8 +467,40 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "QUALIFIED",
-            "timestamp": "2024-08-26T00:00:00Z"
+            "state_type": "USABLE",
+            "timestamp": "2024-11-08T00:00:00Z"
+        }
+    },
+    "DIGICERT_SPHINX_2027H1": {
+        "log_id": "RqI5Z8YNtkaHxm89+ZmUdpOmphEghFfVVefj0KHZtkY=",
+        "operator": "DIGICERT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEvirIq1XPwgwG7BnbMh2zoUbEt+T8z8XAtg9lo8jma+aaTQl8iVCypUFXtLpt4/SHaoUzbvcjDX/6B1IbL3OoIQ==",
+        "url": "https://sphinx.ct.digicert.com/2027h1/",
+        "mmd": 86400,
+        "description": "DigiCert 'sphinx2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-12-20T18:00:00Z"
+        }
+    },
+    "DIGICERT_SPHINX_2027H2": {
+        "log_id": "H7D4qS2K3aEhd2wF4qouFbrLxitlOTaVV2qqtS4R0R0=",
+        "operator": "DIGICERT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUCe23M889mAsUVeTTBcNsAmP374ZWQboLdR8RdGwM3VZ6P/sDwhrL7wK4zrXPh3HwLDDLxDjvRBeivUSbpZSwA==",
+        "url": "https://sphinx.ct.digicert.com/2027h2/",
+        "mmd": 86400,
+        "description": "DigiCert 'sphinx2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-12-20T18:00:00Z"
         }
     },
     "DIGICERT_WYVERN_2024H1_LOG": {
@@ -483,8 +531,8 @@
             "end_exclusive": "2025-01-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-08-29T03:09:43Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-02-01T08:53:20Z"
         }
     },
     "DIGICERT_WYVERN_2025H1_LOG": {
@@ -499,8 +547,8 @@
             "end_exclusive": "2025-07-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-08-29T03:09:43Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-07-28T18:30:00Z"
         }
     },
     "DIGICERT_WYVERN_2025H2_LOG": {
@@ -515,8 +563,8 @@
             "end_exclusive": "2026-01-07T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-08-29T03:09:43Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-14T00:00:00Z"
         }
     },
     "DIGICERT_WYVERN_2026H1": {
@@ -531,8 +579,8 @@
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "QUALIFIED",
-            "timestamp": "2024-08-26T00:00:00Z"
+            "state_type": "USABLE",
+            "timestamp": "2024-11-08T00:00:00Z"
         }
     },
     "DIGICERT_WYVERN_2026H2": {
@@ -547,8 +595,40 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "QUALIFIED",
-            "timestamp": "2024-08-26T00:00:00Z"
+            "state_type": "USABLE",
+            "timestamp": "2024-11-08T00:00:00Z"
+        }
+    },
+    "DIGICERT_WYVERN_2027H1": {
+        "log_id": "ABpdGhwtk3W2SFV4+C9xoa5u7zl9KXyK4xV7yt7hoB4=",
+        "operator": "DIGICERT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEastxYj1mntGuyv74k4f+yaIx+ZEzlSJ+iVTYWlw8SpSKJ4TfxYWuBhnETlhpyG/5seJn0mOSnVgXsZ1JRflI7g==",
+        "url": "https://wyvern.ct.digicert.com/2027h1/",
+        "mmd": 86400,
+        "description": "DigiCert 'Wyvern2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-12-20T18:00:00Z"
+        }
+    },
+    "DIGICERT_WYVERN_2027H2": {
+        "log_id": "N6oHzCFvLm2RnHCdJNj3MbAPKxR8YhzAkaX6GoTYFt0=",
+        "operator": "DIGICERT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEuOg8hcgaYT/MShxpag2Hige0zsLzz8vOLZXp6faCdzM+Mn/njyU9ROAuwDxuu88/Grxn46kmehdOKVDFexbdSg==",
+        "url": "https://wyvern.ct.digicert.com/2027h2/",
+        "mmd": 86400,
+        "description": "DigiCert 'Wyvern2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-12-20T18:00:00Z"
         }
     },
     "DIGICERT_YETI_2018_LOG": {
@@ -675,8 +755,8 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2022-11-01T18:54:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-02-01T08:53:20Z"
         }
     },
     "DIGICERT_YETI_2025_LOG": {
@@ -691,8 +771,8 @@
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2022-11-01T18:54:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-08T00:00:00Z"
         }
     },
     "GDCA_CT_LOG_1": {
@@ -749,6 +829,22 @@
         "log_state": {
             "state_type": "REJECTED",
             "timestamp": "2018-11-08T05:47:34Z"
+        }
+    },
+    "GEOMYS": {
+        "log_id": "LtakTeuPDIZGZ3acTt0EH4QjZ1X6OqymNNCTXfzVmnA=",
+        "operator": "GEOMYS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEj4lCAxWCY6SzIthkqZhwiUVzcK62i6Fc+/YS0WHaN6jjO1ITUFuu8beOiU9PdeNmdalZcC3iWovAfApvXS33Nw==",
+        "url": "https://ct.example.com/bogus/",
+        "mmd": 86400,
+        "description": "Bogus placeholder log to unbreak misbehaving CT libraries",
+        "temporal_interval": {
+            "start_inclusive": "2020-01-01T08:00:00Z",
+            "end_exclusive": "2020-01-02T08:00:00Z"
+        },
+        "log_state": {
+            "state_type": "RETIRED",
+            "timestamp": "2025-06-21T07:00:00Z"
         }
     },
     "GOOGLE_ARGON_2017_LOG": {
@@ -875,8 +971,8 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2022-11-01T18:54:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-02-01T08:53:20Z"
         }
     },
     "GOOGLE_ARGON_2025H1_LOG": {
@@ -891,8 +987,8 @@
             "end_exclusive": "2025-07-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-07-28T18:30:00Z"
         }
     },
     "GOOGLE_ARGON_2025H2_LOG": {
@@ -907,8 +1003,8 @@
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-08T00:00:00Z"
         }
     },
     "GOOGLE_ARGON_2026H1_LOG": {
@@ -941,6 +1037,22 @@
         "log_state": {
             "state_type": "USABLE",
             "timestamp": "2024-09-30T22:19:27Z"
+        }
+    },
+    "GOOGLE_ARGON_2027H1": {
+        "log_id": "1tWNqdAXU/NqSqDHV0kCr+vH3CzTjNn3ZMgMiRkenwI=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKHRm0H/zUaFA6Idz5cGvGO3tCPQyfGMgJmVBOPyKAP6mGM1IiNXi4CLomOUyYj0YN74p+eGVApFMsM4h/jzCsA==",
+        "url": "https://ct.googleapis.com/logs/us1/argon2027h1/",
+        "mmd": 86400,
+        "description": "Google 'Argon2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-12-28T00:30:00Z"
         }
     },
     "GOOGLE_AVIATOR_LOG": {
@@ -1163,6 +1275,19 @@
         },
         "log_type": "TEST"
     },
+    "GOOGLE_SOLERA_2027H1_LOG": {
+        "log_id": "PeSSqJiTrXBeeEbtIdSNyvutE56mTtHjSfkAsKLNpeI=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKLDCw61qHAIp9mt8+QBx92gqIAhp3QhqS6h+bogJAe/FwaCSxMyb2H5xAO2SArXJnzm5vdBGifOcS5SXRZMP9Q==",
+        "url": "https://ct.googleapis.com/logs/eu1/solera2027h1/",
+        "mmd": 86400,
+        "description": "Google 'Solera2027h1' log",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "log_type": "TEST"
+    },
     "GOOGLE_SUBMARINER_LOG": {
         "log_id": "qJnYeAySkKr0YvMYgMz71SRR6XDQ+/WR73Ww2ZtkVoE=",
         "operator": "GOOGLE",
@@ -1288,8 +1413,8 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2022-11-01T18:54:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-02-01T08:53:20Z"
         }
     },
     "GOOGLE_XENON_2025H1_LOG": {
@@ -1304,8 +1429,8 @@
             "end_exclusive": "2025-07-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-07-28T18:30:00Z"
         }
     },
     "GOOGLE_XENON_2025H2_LOG": {
@@ -1320,8 +1445,8 @@
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-08T00:00:00Z"
         }
     },
     "GOOGLE_XENON_2026H1_LOG": {
@@ -1354,6 +1479,38 @@
         "log_state": {
             "state_type": "USABLE",
             "timestamp": "2024-09-30T22:19:27Z"
+        }
+    },
+    "GOOGLE_XENON_2027H1": {
+        "log_id": "RMK9DOkUDmSlyUoBkwpaobs1lw4A7hEWiWgqHETXtWY=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/6WcA4VRSljIfTdY48+pFRLLtLrmTb88cGDdl8Gv3E2LduG4jgJ3AK5iNMFGhpbRRLi5B3rPlBaXVywuR5IFDg==",
+        "url": "https://ct.googleapis.com/logs/eu1/xenon2027h1/",
+        "mmd": 86400,
+        "description": "Google 'Xenon2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-12-28T00:30:00Z"
+        }
+    },
+    "IPNG_NETWORKS": {
+        "log_id": "0vxlL6X5tzi4N1X6XrFfC0UlP06Po7m2T9TeVmLRhwg=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELzNWh+BsAk0HnEEE7Zk1bAhdH1SM5udo1+CTF6LGcL6AVVIXSuOF95/Wg0qLZV491QbrNRg06mM6KwEzDXXtqg==",
+        "url": "https://ct.example.com/bogus/ipng/",
+        "mmd": 86400,
+        "description": "Bogus RFC6962 log to avoid breaking misbehaving CT libraries",
+        "temporal_interval": {
+            "start_inclusive": "2020-01-01T08:00:00Z",
+            "end_exclusive": "2020-01-02T08:00:00Z"
+        },
+        "log_state": {
+            "state_type": "RETIRED",
+            "timestamp": "2025-06-21T07:00:00Z"
         }
     },
     "IZENPE_ARGI_LOG": {
@@ -1496,8 +1653,8 @@
             "end_exclusive": "2025-01-20T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2022-11-30T17:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-02-01T08:53:20Z"
         }
     },
     "LETS_ENCRYPT_OAK_2025H1": {
@@ -1512,8 +1669,8 @@
             "end_exclusive": "2025-07-20T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-07-28T18:30:00Z"
         }
     },
     "LETS_ENCRYPT_OAK_2025H2": {
@@ -1528,8 +1685,8 @@
             "end_exclusive": "2026-01-20T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-27T00:00:00Z"
         }
     },
     "LETS_ENCRYPT_OAK_2026H1": {
@@ -1544,8 +1701,8 @@
             "end_exclusive": "2026-07-20T00:00:00Z"
         },
         "log_state": {
-            "state_type": "QUALIFIED",
-            "timestamp": "2024-08-21T00:00:00Z"
+            "state_type": "READONLY",
+            "timestamp": "2025-12-12T22:30:00Z"
         }
     },
     "LETS_ENCRYPT_OAK_2026H2": {
@@ -1560,8 +1717,8 @@
             "end_exclusive": "2027-01-20T00:00:00Z"
         },
         "log_state": {
-            "state_type": "QUALIFIED",
-            "timestamp": "2024-08-21T00:00:00Z"
+            "state_type": "READONLY",
+            "timestamp": "2025-12-12T22:30:00Z"
         }
     },
     "LETS_ENCRYPT_SAPLING_2022H2_LOG": {
@@ -1652,6 +1809,19 @@
         "temporal_interval": {
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-07T00:00:00Z"
+        },
+        "log_type": "TEST"
+    },
+    "MERKLEMAP_COMPACTLOG_LOG": {
+        "log_id": "ObmHiCgZXzstDRtIFKOujA0B/khiId1pOX1294V0EcM=",
+        "operator": "MERKLEMAP",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHIhkwEqsz5TA26BF+iVnHfxGvseZm5IszXNVU/YBJhqHpLSxaiAlcble4tcq5BwPF0PFocWo/C7DLTXC3GNO4Q==",
+        "url": "https://compact-log.ct.merklemap.com/",
+        "mmd": 86400,
+        "description": "Merklemap 'CompactLog' log",
+        "temporal_interval": {
+            "start_inclusive": "2025-01-01T00:00:00Z",
+            "end_exclusive": "2025-12-31T23:59:59Z"
         },
         "log_type": "TEST"
     },
@@ -1819,6 +1989,86 @@
         "mmd": 86400,
         "description": "Sectigo 'Dodo' CT log"
     },
+    "SECTIGO_ELEPHANT_2025H2": {
+        "log_id": "DR28iUTp9QBVQtctPhRMzEMIKrbqHpTf1wZlfS6G8wE=",
+        "operator": "SECTIGO",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE0OlLeGW2qUZGUoQERydw3GlayEO3ZK3418zThY1tDYr85ASme6ZOL/2DXyOXw8RCwVsKhRbOqMEOxW4Q2p4KQg==",
+        "url": "https://elephant2025h2.ct.sectigo.com/",
+        "mmd": 86400,
+        "description": "Sectigo 'Elephant2025h2'",
+        "temporal_interval": {
+            "start_inclusive": "2025-07-01T00:00:00Z",
+            "end_exclusive": "2026-01-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-08T00:00:00Z"
+        }
+    },
+    "SECTIGO_ELEPHANT_2026H1": {
+        "log_id": "0W6ppWgHfmY1oD83pd28A6U8QRIU1IgY9ekxsyPLlQQ=",
+        "operator": "SECTIGO",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEU0lqnPHoXuU9Fc9dJv1HQZCvssJfvxLsirwVQ/fkFyUqeu4inwPKikeT4DGyyWWH4NR/DCJa2bAumHrXJdAcaQ==",
+        "url": "https://elephant2026h1.ct.sectigo.com/",
+        "mmd": 86400,
+        "description": "Sectigo 'Elephant2026h1'",
+        "temporal_interval": {
+            "start_inclusive": "2026-01-01T00:00:00Z",
+            "end_exclusive": "2026-07-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-07-22T01:33:20Z"
+        }
+    },
+    "SECTIGO_ELEPHANT_2026H2": {
+        "log_id": "r2eIO1ewTt2Pptl+9i6o64EKx3Fg8CReVdYML+eFhzo=",
+        "operator": "SECTIGO",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEO/t4Uwkoou78zkCchh9tfAKbIUJmbOoUAb8szD8StnnHFKAVY5kq1Ljs8YD7CfzdD7xcVjmQYpbtNUhxRMRtmA==",
+        "url": "https://elephant2026h2.ct.sectigo.com/",
+        "mmd": 86400,
+        "description": "Sectigo 'Elephant2026h2'",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-07-22T01:33:20Z"
+        }
+    },
+    "SECTIGO_ELEPHANT_2027H1": {
+        "log_id": "YEyar3p/d18B1Ab8kg3ImesLHH34yVIb+voXdzuXi8k=",
+        "operator": "SECTIGO",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE4fu36JygUwaaVO+ddWJ97FJZlA5SjPLmT+RHwg0pavkIrbT1b5LNQrsaEw0CoGraf7BkzKZf7PC8gYAScw2woA==",
+        "url": "https://elephant2027h1.ct.sectigo.com/",
+        "mmd": 86400,
+        "description": "Sectigo 'Elephant2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-07-22T01:33:20Z"
+        }
+    },
+    "SECTIGO_ELEPHANT_2027H2": {
+        "log_id": "okkM3NuOM6QAMhdg1tTVGiA2GR6nfZaL4mqKAPb///c=",
+        "operator": "SECTIGO",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAECTPhpJnRFroRRpP/1DdAns+PrnmUywtqIV+EeL4Jg8zKouoW7kuAkYo+kZeoHtyK7CBhflIlMk7T2Qrn4w/t8g==",
+        "url": "https://elephant2027h2.ct.sectigo.com/",
+        "mmd": 86400,
+        "description": "Sectigo 'Elephant2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-07-22T01:33:20Z"
+        }
+    },
     "SECTIGO_MAMMOTH2024H1B": {
         "log_id": "UIUBWNy2BZXADpKoEQLszf4/a3hYQp9XmDU4ydpSUGM=",
         "operator": "SECTIGO",
@@ -1863,8 +2113,8 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-02-01T08:53:20Z"
         }
     },
     "SECTIGO_MAMMOTH_2025H1": {
@@ -1879,8 +2129,8 @@
             "end_exclusive": "2025-07-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-07-28T18:30:00Z"
         }
     },
     "SECTIGO_MAMMOTH_2025H2": {
@@ -1895,8 +2145,8 @@
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-08T00:00:00Z"
         }
     },
     "SECTIGO_MAMMOTH_2026H1": {
@@ -1911,8 +2161,8 @@
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "QUALIFIED",
-            "timestamp": "2024-07-30T04:00:00Z"
+            "state_type": "READONLY",
+            "timestamp": "2025-09-18T17:20:00Z"
         }
     },
     "SECTIGO_MAMMOTH_2026H2": {
@@ -1927,8 +2177,8 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "QUALIFIED",
-            "timestamp": "2024-07-30T04:00:00Z"
+            "state_type": "READONLY",
+            "timestamp": "2025-09-18T17:20:00Z"
         }
     },
     "SECTIGO_MAMMOTH_CT_LOG": {
@@ -1971,8 +2221,8 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-02-01T08:53:20Z"
         }
     },
     "SECTIGO_SABRE_2025H1": {
@@ -1987,8 +2237,8 @@
             "end_exclusive": "2025-07-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-07-28T18:30:00Z"
         }
     },
     "SECTIGO_SABRE_2025H2": {
@@ -2003,8 +2253,8 @@
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-08T00:00:00Z"
         }
     },
     "SECTIGO_SABRE_2026H1": {
@@ -2019,8 +2269,8 @@
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "QUALIFIED",
-            "timestamp": "2024-07-30T04:00:00Z"
+            "state_type": "READONLY",
+            "timestamp": "2025-09-18T17:20:00Z"
         }
     },
     "SECTIGO_SABRE_2026H2": {
@@ -2035,8 +2285,8 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "QUALIFIED",
-            "timestamp": "2024-07-30T04:00:00Z"
+            "state_type": "READONLY",
+            "timestamp": "2025-09-18T17:20:00Z"
         }
     },
     "SECTIGO_SABRE_CT_LOG": {
@@ -2047,8 +2297,88 @@
         "mmd": 86400,
         "description": "Sectigo 'Sabre' CT log",
         "log_state": {
-            "state_type": "READONLY",
-            "timestamp": "2024-05-06T12:53:20Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-06-09T14:40:00Z"
+        }
+    },
+    "SECTIGO_TIGER_2025H2": {
+        "log_id": "XKV30pt/i69Bntjsq/tty67DhTcC1XRvF02tPJNKqWo=",
+        "operator": "SECTIGO",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEFUl5keBbWVckXMv6WSWToTeGwi9DSNCI2WZlIENBkA/zADmmS58w33/f0JhC2KEkWS+4T7/bYOXv4dDNzzrExg==",
+        "url": "https://tiger2025h2.ct.sectigo.com/",
+        "mmd": 86400,
+        "description": "Sectigo 'Tiger2025h2'",
+        "temporal_interval": {
+            "start_inclusive": "2025-07-01T00:00:00Z",
+            "end_exclusive": "2026-01-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-08T00:00:00Z"
+        }
+    },
+    "SECTIGO_TIGER_2026H1": {
+        "log_id": "FoMtq/CpJQ8P8DqlRf/Iv8gj0IdL9gQpJ/jnHzMT9fo=",
+        "operator": "SECTIGO",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE73eDJyszDbzsWcgI0nbtU0+y11gQWjNjS/RSO5P4hOSFE+pPrDCtfNPHe6dq7/XQYwOFt9Feb8TwQW+mqXN5xg==",
+        "url": "https://tiger2026h1.ct.sectigo.com/",
+        "mmd": 86400,
+        "description": "Sectigo 'Tiger2026h1'",
+        "temporal_interval": {
+            "start_inclusive": "2026-01-01T00:00:00Z",
+            "end_exclusive": "2026-07-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-09-18T23:00:00Z"
+        }
+    },
+    "SECTIGO_TIGER_2026H2": {
+        "log_id": "yKPEf8ezrbk1awE/anoSbeM6TkOlxkb5l605dZkdz5o=",
+        "operator": "SECTIGO",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfJFUD/FRkonvZIA9ZT1J3yvA4EpSp3innbIVpMTDR1oCe5vguapheQ7wYiWaCES1EL1B+2BEC+P5bUfwF44lnA==",
+        "url": "https://tiger2026h2.ct.sectigo.com/",
+        "mmd": 86400,
+        "description": "Sectigo 'Tiger2026h2'",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-09-18T23:00:00Z"
+        }
+    },
+    "SECTIGO_TIGER_2027H1": {
+        "log_id": "HJ9oLOn68EVpUPgbloqH3dsyENhM5siy44JSSsTPWZ8=",
+        "operator": "SECTIGO",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEmMQofpsDjCVYzF4jXdFWM/ioYBJIPcsQQrNAHE6v4lOsADoI+/jN1lph8x4K3NgnXDXwmyJcFwRYgVOBMhaYhA==",
+        "url": "https://tiger2027h1.ct.sectigo.com/",
+        "mmd": 86400,
+        "description": "Sectigo 'Tiger2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-09-18T23:00:00Z"
+        }
+    },
+    "SECTIGO_TIGER_2027H2": {
+        "log_id": "A4AqwmL24F4D+Lxve5hRMk/Xaj31t1lRdeIi+46b1fY=",
+        "operator": "SECTIGO",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEb0AgkemhsPmYe1goCSy5ncf2lG9vtK6f+SzODKJMYEgPOT+z93cUEKM1EaTuo09rozfdqhjeihIl25y9A3JhyQ==",
+        "url": "https://tiger2027h2.ct.sectigo.com/",
+        "mmd": 86400,
+        "description": "Sectigo 'Tiger2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-09-18T23:00:00Z"
         }
     },
     "SHECA_CT_LOG_1": {
@@ -2131,6 +2461,22 @@
             "timestamp": "2022-04-29T17:12:19Z"
         }
     },
+    "TRUSTASIA_HETU_2027": {
+        "log_id": "7drrgVxjITRJtHvlB3kFq9DZMUfCesUUazvFjkPptsc=",
+        "operator": "TRUSTASIA",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE14jG8D9suqIVWPtTNOL33uXKZ4mUnnOMrIwOWeZU7GtoDRCWIXfy/9/SC8lTAbtP2NOP4wjIufAk6f64sY4DWg==",
+        "url": "https://hetu2027.trustasia.com/hetu2027/",
+        "mmd": 86400,
+        "description": "TrustAsia 'HETU2027'",
+        "temporal_interval": {
+            "start_inclusive": "2026-12-25T00:00:00Z",
+            "end_exclusive": "2028-01-08T00:00:00Z"
+        },
+        "log_state": {
+            "state_type": "USABLE",
+            "timestamp": "2025-12-28T00:30:00Z"
+        }
+    },
     "TRUSTASIA_LOG2025A": {
         "log_id": "KOKBOP2DIUXpqdaqdTdtg3eohRKzwH9yQUgh3L3pjGY=",
         "operator": "TRUSTASIA",
@@ -2143,8 +2489,8 @@
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-08T00:00:00Z"
         }
     },
     "TRUSTASIA_LOG2025B": {
@@ -2159,8 +2505,8 @@
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-11-26T12:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2026-01-08T00:00:00Z"
         }
     },
     "TRUSTASIA_LOG2026A": {
@@ -2319,8 +2665,8 @@
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
         "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2023-02-03T08:00:00Z"
+            "state_type": "REJECTED",
+            "timestamp": "2025-02-01T08:53:20Z"
         }
     },
     "UP_IN_THE_AIR_BEHIND_THE_SOFA_LOG": {

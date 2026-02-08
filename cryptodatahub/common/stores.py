@@ -149,6 +149,10 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
 
     @property
     def identifier(self):
+        identifier = self.description_to_enum_item_name(self.description)
+        if identifier.startswith('BOGUS_'):
+            identifier = self.description_to_enum_item_name(self.operator.name)
+
         return self.description_to_enum_item_name(self.description)
 
 
