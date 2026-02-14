@@ -223,6 +223,22 @@
         "size": 512,
         "group_type": "ELLIPTIC_CURVE"
     },
+    "OAKLEY_GROUP_3": {
+        "name": "oakley_group_3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 768,
+        "group_type": "ELLIPTIC_CURVE"
+    },
+    "OAKLEY_GROUP_4": {
+        "name": "oakley_group_4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 1024,
+        "group_type": "ELLIPTIC_CURVE"
+    },
     "PRIME239V1": {
         "name": "prime239v1",
         "long_name": null,

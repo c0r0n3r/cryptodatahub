@@ -1,0 +1,50 @@
+{
+    "PRF_HMAC_MD5": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2104",
+        "code": 1,
+        "mac": "MD5"
+    },
+    "PRF_HMAC_SHA1": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2104",
+        "code": 2,
+        "mac": "SHA1"
+    },
+    "PRF_HMAC_TIGER": {
+        "_code_in_hex": "0x03",
+        "_standard": null,
+        "code": 3,
+        "mac": "TIGER_192"
+    },
+    "PRF_AES128_XCBC": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC4434",
+        "code": 4,
+        "mac": "CBCMAC_AES"
+    },
+    "PRF_HMAC_SHA2_256": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC4868",
+        "code": 5,
+        "mac": "SHA2_256"
+    },
+    "PRF_HMAC_SHA2_384": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC4868",
+        "code": 6,
+        "mac": "SHA2_384"
+    },
+    "PRF_HMAC_SHA2_512": {
+        "_code_in_hex": "0x07",
+        "_standard": "RFC4868",
+        "code": 7,
+        "mac": "SHA2_512"
+    },
+    "PRF_AES128_CMAC": {
+        "_code_in_hex": "0x08",
+        "_standard": "RFC4615",
+        "code": 8,
+        "mac": "CBCMAC_AES"
+    }
+}

@@ -1,0 +1,140 @@
+{
+    "NONE": {
+        "_code_in_hex": "0x00",
+        "_standard": "RFC2408",
+        "code": 0,
+        "description": "No Next Payload"
+    },
+    "SECURITY_ASSOCIATION": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2408",
+        "code": 1,
+        "description": "Security Association"
+    },
+    "PROPOSAL": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2408",
+        "code": 2,
+        "description": "Proposal"
+    },
+    "TRANSFORM": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC2408",
+        "code": 3,
+        "description": "Transform"
+    },
+    "KEY_EXCHANGE": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC2408",
+        "code": 4,
+        "description": "Key Exchange"
+    },
+    "IDENTIFICATION": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC2408",
+        "code": 5,
+        "description": "Identification"
+    },
+    "CERTIFICATE": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC2408",
+        "code": 6,
+        "description": "Certificate"
+    },
+    "CERTIFICATE_REQUEST": {
+        "_code_in_hex": "0x07",
+        "_standard": "RFC2408",
+        "code": 7,
+        "description": "Certificate Request"
+    },
+    "HASH": {
+        "_code_in_hex": "0x08",
+        "_standard": "RFC2408",
+        "code": 8,
+        "description": "Hash"
+    },
+    "SIGNATURE": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC2408",
+        "code": 9,
+        "description": "Signature"
+    },
+    "NONCE": {
+        "_code_in_hex": "0x0a",
+        "_standard": "RFC2408",
+        "code": 10,
+        "description": "Nonce"
+    },
+    "NOTIFICATION": {
+        "_code_in_hex": "0x0b",
+        "_standard": "RFC2408",
+        "code": 11,
+        "description": "Notification"
+    },
+    "DELETE": {
+        "_code_in_hex": "0x0c",
+        "_standard": "RFC2408",
+        "code": 12,
+        "description": "Delete"
+    },
+    "VENDOR_ID": {
+        "_code_in_hex": "0x0d",
+        "_standard": "RFC2408",
+        "code": 13,
+        "description": "Vendor ID"
+    },
+    "RESERVED_14": {
+        "_code_in_hex": "0x0e",
+        "_standard": "Dukes",
+        "code": 14,
+        "description": "Reserved"
+    },
+    "SA_KEK_PAYLOAD": {
+        "_code_in_hex": "0x0f",
+        "_standard": "RFC3547,RFC6407",
+        "code": 15,
+        "description": "SA KEK Payload"
+    },
+    "SA_TEK_PAYLOAD": {
+        "_code_in_hex": "0x10",
+        "_standard": "RFC3547,RFC6407",
+        "code": 16,
+        "description": "SA TEK Payload"
+    },
+    "KEY_DOWNLOAD": {
+        "_code_in_hex": "0x11",
+        "_standard": "RFC3547",
+        "code": 17,
+        "description": "Key Download"
+    },
+    "SEQUENCE_NUMBER": {
+        "_code_in_hex": "0x12",
+        "_standard": "RFC3547",
+        "code": 18,
+        "description": "Sequence Number"
+    },
+    "PROOF_OF_POSSESSION": {
+        "_code_in_hex": "0x13",
+        "_standard": "RFC3547",
+        "code": 19,
+        "description": "Proof of Possession"
+    },
+    "NAT_DISCOVERY": {
+        "_code_in_hex": "0x14",
+        "_standard": "RFC3947",
+        "code": 20,
+        "description": "NAT Discovery"
+    },
+    "NAT_ORIGINAL_ADDRESS": {
+        "_code_in_hex": "0x15",
+        "_standard": "RFC3947",
+        "code": 21,
+        "description": "NAT Original Address"
+    },
+    "GROUP_ASSOCIATED_POLICY": {
+        "_code_in_hex": "0x16",
+        "_standard": "RFC6407",
+        "code": 22,
+        "description": "Group Associated Policy"
+    }
+}

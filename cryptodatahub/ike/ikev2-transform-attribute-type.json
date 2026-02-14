@@ -1,0 +1,14 @@
+{
+    "KEY_LENGTH": {
+        "_code_in_hex": "0x0e",
+        "_standard": "RFC7296",
+        "code": 14,
+        "format": "TV"
+    },
+    "SIGNATURE_ALGORITHM": {
+        "_code_in_hex": "0x12",
+        "_standard": "rfc-ietf-ipsecme-g-ikev2-21", 
+        "code": 18,
+        "format": "TLV"
+    }
+}

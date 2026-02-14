@@ -1,0 +1,22 @@
+{
+    "NONE": {
+        "_code_in_hex": "0x00",
+        "_standard": "RFC7296",
+        "code": 0
+    },
+    "IKE": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC7296",
+        "code": 1
+    },
+    "AH": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC7296",
+        "code": 2
+    },
+    "ESP": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC7296",
+        "code": 3
+    }
+} 

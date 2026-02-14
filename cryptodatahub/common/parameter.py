@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import typing
+
 import attr
 
 from cryptodatahub.common.entity import Entity, Server
@@ -53,21 +55,21 @@ class DHParameterNumbers():
 
 @attr.s(eq=False, frozen=True)
 class DHParamWellKnownParams(CryptoDataParamsBase, GradeableVulnerabilities):
-    parameter_numbers = attr.ib(
+    parameter_numbers: DHParameterNumbers = attr.ib(
         converter=convert_dict_to_object(DHParameterNumbers),
         validator=attr.validators.instance_of(DHParameterNumbers)
     )
-    name = attr.ib(validator=attr.validators.instance_of(str))
-    source = attr.ib(
+    name: str = attr.ib(validator=attr.validators.instance_of(str))
+    source: typing.Union[Entity, Server] = attr.ib(
         converter=convert_variadic((convert_enum(Entity), convert_enum(Server))),
         validator=attr.validators.instance_of((Entity, Server))
     )
-    standards = attr.ib(
+    standards: typing.Iterable[Standard] = attr.ib(
         converter=convert_iterable(convert_enum(Standard)),
         validator=attr.validators.deep_iterable(attr.validators.instance_of(Standard))
     )
-    key_size = attr.ib(validator=attr.validators.instance_of(int))
-    safe_prime = attr.ib(default=True, validator=attr.validators.instance_of(bool))
+    key_size: int = attr.ib(validator=attr.validators.instance_of(int))
+    safe_prime: bool = attr.ib(default=True, validator=attr.validators.instance_of(bool))
 
     @classmethod
     def get_gradeable_name(cls):

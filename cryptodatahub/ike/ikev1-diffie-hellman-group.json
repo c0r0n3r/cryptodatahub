@@ -1,0 +1,182 @@
+{
+    "MODP_768_BIT": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2409",
+        "code": 1,
+        "key_parameter": "RFC2539_768_BIT_MODP_GROUP"
+    },
+    "MODP_1024_BIT": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2409",
+        "code": 2,
+        "key_parameter": "RFC2539_1024_BIT_MODP_GROUP"
+    },
+    "EC2N_155_BIT": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC2409",
+        "code": 3,
+        "key_parameter": "OAKLEY_GROUP_3"
+    },
+    "EC2N_185_BIT": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC2409",
+        "code": 4,
+        "key_parameter": "OAKLEY_GROUP_4"
+    },
+    "MODP_1536_BIT": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC3526",
+        "code": 5,
+        "key_parameter": "RFC3526_1536_BIT_MODP_GROUP"
+    },
+    "EC2N_163_BIT_1": {
+        "_code_in_hex": "0x06",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 6,
+        "key_parameter": "SECT163R1"
+    },
+    "EC2N_163_BIT_2": {
+        "_code_in_hex": "0x07",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 7,
+        "key_parameter": "SECT163K1"
+    },
+    "EC2N_283_BIT_1": {
+        "_code_in_hex": "0x08",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 8,
+        "key_parameter": "SECT283R1"
+    },
+    "EC2N_283_BIT_2": {
+        "_code_in_hex": "0x09",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 9,
+        "key_parameter": "SECT283K1"
+    },
+    "EC2N_409_BIT_1": {
+        "_code_in_hex": "0x0a",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 10,
+        "key_parameter": "SECT409R1"
+    },
+    "EC2N_409_BIT_2": {
+        "_code_in_hex": "0x0b",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 11,
+        "key_parameter": "SECT409K1"
+    },
+    "EC2N_571_BIT_1": {
+        "_code_in_hex": "0x0c",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 12,
+        "key_parameter": "SECT571R1"
+    },
+    "EC2N_571_BIT_2": {
+        "_code_in_hex": "0x0d",
+        "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "code": 13,
+        "key_parameter": "SECT571K1"
+    },
+    "MODP_2048_BIT": {
+        "_code_in_hex": "0x0e",
+        "_standard": "RFC3526",
+        "code": 14,
+        "key_parameter": "RFC3526_2048_BIT_MODP_GROUP"
+    },
+    "MODP_3072_BIT": {
+        "_code_in_hex": "0x0f",
+        "_standard": "RFC3526",
+        "code": 15,
+        "key_parameter": "RFC3526_3072_BIT_MODP_GROUP"
+    },
+    "MODP_4096_BIT": {
+        "_code_in_hex": "0x10",
+        "_standard": "RFC3526",
+        "code": 16,
+        "key_parameter": "RFC3526_4096_BIT_MODP_GROUP"
+    },
+    "MODP_6144_BIT": {
+        "_code_in_hex": "0x11",
+        "_standard": "RFC3526",
+        "code": 17,
+        "key_parameter": "RFC3526_6144_BIT_MODP_GROUP"
+    },
+    "MODP_8192_BIT": {
+        "_code_in_hex": "0x12",
+        "_standard": "RFC3526",
+        "code": 18,
+        "key_parameter": "RFC3526_8192_BIT_MODP_GROUP"
+    },
+    "ECP_256_BIT": {
+        "_code_in_hex": "0x13",
+        "_standard": "RFC5903",
+        "code": 19,
+        "key_parameter": "PRIME256V1"
+    },
+    "ECP_384_BIT": {
+        "_code_in_hex": "0x14",
+        "_standard": "RFC5903",
+        "code": 20,
+        "key_parameter": "SECP384R1"
+    },
+    "ECP_521_BIT": {
+        "_code_in_hex": "0x15",
+        "_standard": "RFC5903",
+        "code": 21,
+        "key_parameter": "SECP521R1"
+    },
+    "MODP_1024_BIT_160_BIT_SUBGROUP": {
+        "_code_in_hex": "0x16",
+        "_standard": "RFC5114",
+        "code": 22,
+        "key_parameter": "RFC2539_1024_BIT_MODP_GROUP"
+    },
+    "MODP_2048_BIT_224_BIT_SUBGROUP": {
+        "_code_in_hex": "0x17",
+        "_standard": "RFC5114",
+        "code": 23,
+        "key_parameter": "RFC3526_2048_BIT_MODP_GROUP"
+    },
+    "MODP_2048_BIT_256_BIT_SUBGROUP": {
+        "_code_in_hex": "0x18",
+        "_standard": "RFC5114",
+        "code": 24,
+        "key_parameter": "RFC3526_2048_BIT_MODP_GROUP"
+    },
+    "ECP_192_BIT": {
+        "_code_in_hex": "0x19",
+        "_standard": "RFC5114",
+        "code": 25,
+        "key_parameter": "PRIME192V1"
+    },
+    "ECP_224_BIT": {
+        "_code_in_hex": "0x1a",
+        "_standard": "RFC5114",
+        "code": 26,
+        "key_parameter": "SECP224R1"
+    },
+    "BRAINPOOL_ECP_224_BIT": {
+        "_code_in_hex": "0x1b",
+        "_standard": "RFC6932",
+        "code": 27,
+        "key_parameter": "BRAINPOOLP224R1"
+    },
+    "BRAINPOOL_ECP_256_BIT": {
+        "_code_in_hex": "0x1c",
+        "_standard": "RFC6932",
+        "code": 28,
+        "key_parameter": "BRAINPOOLP256R1"
+    },
+    "BRAINPOOL_ECP_384_BIT": {
+        "_code_in_hex": "0x1d",
+        "_standard": "RFC6932",
+        "code": 29,
+        "key_parameter": "BRAINPOOLP384R1"
+    },
+    "BRAINPOOL_ECP_512_BIT": {
+        "_code_in_hex": "0x1e",
+        "_standard": "RFC6932",
+        "code": 30,
+        "key_parameter": "BRAINPOOLP512R1"
+    }
+}

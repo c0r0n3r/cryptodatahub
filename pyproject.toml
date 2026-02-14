@@ -38,7 +38,7 @@ classifiers=[
     'Topic :: Software Development :: Libraries :: Python Modules',
 ]
 
-keywords=['ssl', 'tls', 'ssh', 'dns', 'dnssec']
+keywords=['ssl', 'tls', 'ssh', 'dns', 'dnssec', 'ike']
 readme = {file = 'README.rst', content-type = 'text/x-rst'}
 license = {text = 'MPL-2.0'}
 

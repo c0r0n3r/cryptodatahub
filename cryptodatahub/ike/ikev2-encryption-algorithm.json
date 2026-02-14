@@ -1,0 +1,128 @@
+{
+    "ENCR_DES_IV64": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC7296",
+        "code": 1,
+        "bulk_ciphers": [
+            "DES"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_DES": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2405",
+        "code": 2,
+        "bulk_ciphers": [
+            "DES"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_3DES": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC2451",
+        "code": 3,
+        "bulk_ciphers": [
+            "TRIPLE_DES"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_RC5": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC2451",
+        "code": 4,
+        "bulk_ciphers": [
+            "RC5_32",
+            "RC5_64",
+            "RC5_128"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_IDEA": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC2451",
+        "code": 5,
+        "bulk_ciphers": [
+            "IDEA",
+            "IDEA_128"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_CAST": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC2451",
+        "code": 6,
+        "bulk_ciphers": [
+            "CAST_128",
+            "CAST_256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_BLOWFISH": {
+        "_code_in_hex": "0x07",
+        "_standard": "RFC2451",
+        "code": 7,
+        "bulk_ciphers": [
+            "BLOWFISH"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_3IDEA": {
+        "_code_in_hex": "0x08",
+        "_standard": "RFC7296",
+        "code": 8,
+        "bulk_ciphers": [
+            "IDEA",
+            "IDEA_128"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_DES_IV32": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC7296",
+        "code": 9,
+        "bulk_ciphers": [
+            "DES"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_NULL": {
+        "_code_in_hex": "0x0B",
+        "_standard": "RFC2410",
+        "code": 11,
+        "bulk_ciphers": [],
+        "block_cipher_mode": null
+    },
+    "ENCR_AES_CBC": {
+        "_code_in_hex": "0x0C",
+        "_standard": "RFC3602",
+        "code": 12,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_AES_CTR": {
+        "_code_in_hex": "0x0D",
+        "_standard": "RFC3686",
+        "code": 13,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CTR"
+    },
+    "ENCR_AES_GCM_16": {
+        "_code_in_hex": "0x14",
+        "_standard": "RFC5282",
+        "code": 20,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM"
+    }
+}

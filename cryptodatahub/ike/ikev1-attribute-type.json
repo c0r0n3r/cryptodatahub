@@ -1,0 +1,98 @@
+{
+    "ENCRYPTION_ALGORITHM": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2409",
+        "code": 1,
+        "format": "BASIC"
+    },
+    "HASH_ALGORITHM": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2409",
+        "code": 2,
+        "format": "BASIC"
+    },
+    "AUTHENTICATION_METHOD": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC2409",
+        "code": 3,
+        "format": "BASIC"
+    },
+    "GROUP_DESCRIPTION": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC2409",
+        "code": 4,
+        "format": "BASIC"
+    },
+    "GROUP_TYPE": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC2409",
+        "code": 5,
+        "format": "BASIC"
+    },
+    "GROUP_PRIME_IRREDUCIBLE_POLYNOMIAL": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC2409",
+        "code": 6,
+        "format": "VARIABLE"
+    },
+    "GROUP_GENERATOR_ONE": {
+        "_code_in_hex": "0x07",
+        "_standard": "RFC2409",
+        "code": 7,
+        "format": "VARIABLE"
+    },
+    "GROUP_GENERATOR_TWO": {
+        "_code_in_hex": "0x08",
+        "_standard": "RFC2409",
+        "code": 8,
+        "format": "VARIABLE"
+    },
+    "GROUP_CURVE_A": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC2409",
+        "code": 9,
+        "format": "VARIABLE"
+    },
+    "GROUP_CURVE_B": {
+        "_code_in_hex": "0x0a",
+        "_standard": "RFC2409",
+        "code": 10,
+        "format": "VARIABLE"
+    },
+    "LIFE_TYPE": {
+        "_code_in_hex": "0x0b",
+        "_standard": "RFC2409",
+        "code": 11,
+        "format": "BASIC"
+    },
+    "LIFE_DURATION": {
+        "_code_in_hex": "0x0c",
+        "_standard": "RFC2409",
+        "code": 12,
+        "format": "VARIABLE"
+    },
+    "PRF": {
+        "_code_in_hex": "0x0d",
+        "_standard": "RFC2409",
+        "code": 13,
+        "format": "BASIC"
+    },
+    "KEY_LENGTH": {
+        "_code_in_hex": "0x0e",
+        "_standard": "RFC2409",
+        "code": 14,
+        "format": "BASIC"
+    },
+    "FIELD_SIZE": {
+        "_code_in_hex": "0x0f",
+        "_standard": "RFC2409",
+        "code": 15,
+        "format": "BASIC"
+    },
+    "GROUP_ORDER": {
+        "_code_in_hex": "0x10",
+        "_standard": "RFC2409",
+        "code": 16,
+        "format": "VARIABLE"
+    }
+}

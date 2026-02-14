@@ -1,0 +1,20 @@
+{
+    "MODP": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2409",
+        "code": 1,
+        "description": "modular exponentiation group"
+    },
+    "ECP": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2409",
+        "code": 2,
+        "description": "elliptic curve group over GF[P]"
+    },
+    "EC2N": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC2409",
+        "code": 3,
+        "description": "elliptic curve group over GF[2^N]"
+    }
+}

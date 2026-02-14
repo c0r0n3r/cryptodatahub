@@ -1,0 +1,92 @@
+{
+    "NONE": {
+        "_code_in_hex": "0x00",
+        "_standard": "RFC7296",
+        "code": 0,
+        "hmac": null
+    },
+    "AUTH_HMAC_MD5_96": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2403",
+        "code": 1,
+        "hmac": "MD5"
+    },
+    "AUTH_HMAC_SHA1_96": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2404",
+        "code": 2,
+        "hmac": "SHA1"
+    },
+    "AUTH_DES_MAC": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC7296",
+        "code": 3,
+        "hmac": "CBCMAC_DES"
+    },
+    "AUTH_KPDK_MD5": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC7296",
+        "code": 4,
+        "hmac": "MD5"
+    },
+    "AUTH_AES_XCBC_96": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC3566",
+        "code": 5,
+        "hmac": "CBCMAC_AES_96"
+    },
+    "AUTH_HMAC_MD5_128": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC4595",
+        "code": 6,
+        "hmac": "MD5"
+    },
+    "AUTH_HMAC_SHA1_160": {
+        "_code_in_hex": "0x07",
+        "_standard": "RFC4595",
+        "code": 7,
+        "hmac": "SHA1"
+    },
+    "AUTH_AES_CMAC_96": {
+        "_code_in_hex": "0x08",
+        "_standard": "RFC4494",
+        "code": 8,
+        "hmac": "CBCMAC_AES_96"
+    },
+    "AUTH_AES_128_GMAC": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC4543",
+        "code": 9,
+        "hmac": "AEAD_AES_128_GCM"
+    },
+    "AUTH_AES_192_GMAC": {
+        "_code_in_hex": "0x0a",
+        "_standard": "RFC4543",
+        "code": 10,
+        "hmac": "AEAD_AES_192_GCM"
+    },
+    "AUTH_AES_256_GMAC": {
+        "_code_in_hex": "0x0b",
+        "_standard": "RFC4543",
+        "code": 11,
+        "hmac": "AEAD_AES_256_GCM"
+    },
+    "AUTH_HMAC_SHA2_256_128": {
+        "_code_in_hex": "0x0c",
+        "_standard": "RFC4868",
+        "code": 12,
+        "hmac": "SHA2_256_128"
+    },
+    "AUTH_HMAC_SHA2_384_192": {
+        "_code_in_hex": "0x0d",
+        "_standard": "RFC4868",
+        "code": 13,
+        "hmac": "SHA2_384_192"
+    },
+    "AUTH_HMAC_SHA2_512_256": {
+        "_code_in_hex": "0x0e",
+        "_standard": "RFC4868",
+        "code": 14,
+        "hmac": "SHA2_512_256"
+    }
+}

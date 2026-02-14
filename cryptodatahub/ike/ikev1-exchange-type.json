@@ -1,0 +1,32 @@
+{
+    "BASE": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2408",
+        "code": 1,
+        "description": "Base Exchange"
+    },
+    "IDENTITY_PROTECTION": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2408",
+        "code": 2,
+        "description": "Identity Protection Exchange"
+    },
+    "AUTHENTICATION_ONLY": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC2408",
+        "code": 3,
+        "description": "Authentication Only Exchange"
+    },
+    "AGGRESSIVE": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC2408",
+        "code": 4,
+        "description": "Aggressive Exchange"
+    },
+    "INFORMATIONAL": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC2408",
+        "code": 5,
+        "description": "Informational Exchange"
+    }
+}

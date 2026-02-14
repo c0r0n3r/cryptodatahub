@@ -1,0 +1,38 @@
+{
+    "MD5": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC1321",
+        "code": 1,
+        "hash": "MD5"
+    },
+    "SHA": {
+        "_code_in_hex": "0x02",
+        "_standard": "FIPS PUB 180-1",
+        "code": 2,
+        "hash": "SHA1"
+    },
+    "TIGER": {
+        "_code_in_hex": "0x03",
+        "_standard": "Fast Software Encryption",
+        "code": 3,
+        "hash": "TIGER_128"
+    },
+    "SHA2_256": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC4868",
+        "code": 4,
+        "hash": "SHA2_256"
+    },
+    "SHA2_384": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC4868",
+        "code": 5,
+        "hash": "SHA2_384"
+    },
+    "SHA2_512": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC4868",
+        "code": 6,
+        "hash": "SHA2_512"
+    }
+}

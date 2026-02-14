@@ -857,16 +857,62 @@
             ]
         }
     },
+    "OAKLEY_GROUP_3": {
+        "name": "Oakley Group 3",
+        "long_name": null,
+        "standards": [
+            "RFC_2409"
+        ],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "0"
+            ],
+            "b": [
+                "07338F"
+            ],
+            "x": [
+                "7B"
+            ],
+            "y": [
+                "00"
+            ]
+        }
+    },
+    "OAKLEY_GROUP_4": {
+        "name": "Oakley Group 4",
+        "long_name": null,
+        "standards": [
+            "RFC_2409"
+        ],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "0"
+            ],
+            "b": [
+                "1EE9"
+            ],
+            "x": [
+                "18"
+            ],
+            "y": [
+                "00"
+            ]
+        }
+    },
     "PRIME192V1": {
         "name": "prime192v1",
         "long_name": null,
         "standards": [
             "SEC_2",
-            "SP_800_186"
+            "SP_800_186",
+            "RFC_4753"
         ],
         "aliases": [
             "SECP192R1",
-            "P-192"
+            "P-192",
+            "ECPRGF192Random"
         ],
         "parameter_numbers": {
             "a": [
@@ -1000,11 +1046,13 @@
         "long_name": null,
         "standards": [
             "SEC_2",
-            "SP_800_186"
+            "SP_800_186",
+            "RFC_4753"
         ],
         "aliases": [
             "SECP256R1",
-            "P-256"
+            "P-256",
+            "ECPRGF256Random"
         ],
         "parameter_numbers": {
             "a": [
@@ -1241,12 +1289,14 @@
         "standards": [
             "SP_800_186",
             "WTLS",
-            "X9_63"
+            "X9_63",
+            "RFC_4753"
         ],
         "aliases": [
             "P-224",
             "WAP-WSG-IDM-ECID-WTLS12",
-            "ANSIP224R1"
+            "ANSIP224R1",
+            "ECPRGF224Random"
         ],
         "parameter_numbers": {
             "a": [
@@ -1300,11 +1350,13 @@
         "long_name": null,
         "standards": [
             "SP_800_186",
-            "X9_63"
+            "X9_63",
+            "RFC_4753"
         ],
         "aliases": [
             "P-384",
-            "ANSIP384R1"
+            "ANSIP384R1",
+            "ECPRGF384Random"
         ],
         "parameter_numbers": {
             "a": [
@@ -1330,11 +1382,13 @@
         "long_name": null,
         "standards": [
             "SP_800_186",
-            "X9_63"
+            "X9_63",
+            "RFC_4753"
         ],
         "aliases": [
             "P-521",
-            "ANSIP521R1"
+            "ANSIP521R1",
+            "ECPRGF521Random"
         ],
         "parameter_numbers": {
             "a": [
@@ -1449,12 +1503,15 @@
         "standards": [
             "SP_800_186",
             "X9_63",
-            "WTLS"
+            "WTLS",
+            "RFC_4753",
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
         ],
         "aliases": [
             "K-163",
             "ANSIT163K1",
-            "WAP-WSG-IDM-ECID-WTLS3"
+            "WAP-WSG-IDM-ECID-WTLS3",
+            "EC2NGF163Koblitz"
         ],
         "parameter_numbers": {
             "a": [
@@ -1475,10 +1532,13 @@
         "name": "sect163r1",
         "long_name": null,
         "standards": [
-            "X9_63"
+            "X9_63",
+            "RFC_4753",
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
         ],
         "aliases": [
-            "ANSIT163R1"
+            "ANSIT163R1",
+            "EC2NGF163Random2"
         ],
         "parameter_numbers": {
             "a": [
@@ -1500,11 +1560,14 @@
         "long_name": null,
         "standards": [
             "SP_800_186",
-            "X9_63"
+            "X9_63",
+            "RFC_4753",
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
         ],
         "aliases": [
             "B-163",
-            "ANSIT163R2"
+            "ANSIT163R2",
+            "EC2NGF163Random"
         ],
         "parameter_numbers": {
             "a": [
@@ -1583,12 +1646,15 @@
         "standards": [
             "SP_800_186",
             "WTLS",
-            "X9_63"
+            "X9_63",
+            "RFC_4753",
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
         ],
         "aliases": [
             "K-233",
             "WAP-WSG-IDM-ECID-WTLS10",
-            "ANSIT233K1"
+            "ANSIT233K1",
+            "EC2NGF233Koblitz"
         ],
         "parameter_numbers": {
             "a": [
@@ -1615,12 +1681,15 @@
         "standards": [
             "SP_800_186",
             "WTLS",
-            "X9_63"
+            "X9_63",
+            "RFC_4753",
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
         ],
         "aliases": [
             "B-233",
             "WAP-WSG-IDM-ECID-WTLS11",
-            "ANSIT233R1"
+            "ANSIT233R1",
+            "EC2NGF233Random"
         ],
         "parameter_numbers": {
             "a": [
@@ -1674,11 +1743,14 @@
         "long_name": null,
         "standards": [
             "SP_800_186",
-            "X9_63"
+            "X9_63",
+            "RFC_4753",
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
         ],
         "aliases": [
             "K-283",
-            "ANSIT283K1"
+            "ANSIT283K1",
+            "EC2NGF283Koblitz"
         ],
         "parameter_numbers": {
             "a": [
@@ -1704,11 +1776,14 @@
         "long_name": null,
         "standards": [
             "SP_800_186",
-            "X9_63"
+            "X9_63",
+            "RFC_4753",
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
         ],
         "aliases": [
             "B-283",
-            "ANSIT283R1"
+            "ANSIT283R1",
+            "EC2NGF283Random"
         ],
         "parameter_numbers": {
             "a": [
@@ -1734,11 +1809,14 @@
         "long_name": null,
         "standards": [
             "SP_800_186",
-            "X9_63"
+            "X9_63",
+            "RFC_4753",
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
         ],
         "aliases": [
             "K-409",
-            "ANSIT409K1"
+            "ANSIT409K1",
+            "EC2NGF409Koblitz"
         ],
         "parameter_numbers": {
             "a": [
@@ -1768,11 +1846,14 @@
         "long_name": null,
         "standards": [
             "SP_800_186",
-            "X9_63"
+            "X9_63",
+            "RFC_4753",
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
         ],
         "aliases": [
             "B-409",
-            "ANSIT409R1"
+            "ANSIT409R1",
+            "EC2NGF409Random"
         ],
         "parameter_numbers": {
             "a": [
@@ -1802,11 +1883,14 @@
         "long_name": null,
         "standards": [
             "SP_800_186",
-            "X9_63"
+            "X9_63",
+            "RFC_4753",
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
         ],
         "aliases": [
             "K-571",
-            "ANSIT571K1"
+            "ANSIT571K1",
+            "EC2NGF571Koblitz"
         ],
         "parameter_numbers": {
             "a": [
@@ -1836,11 +1920,14 @@
         "long_name": null,
         "standards": [
             "SP_800_186",
-            "X9_63"
+            "X9_63",
+            "RFC_4753",
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
         ],
         "aliases": [
             "B-571",
-            "ANSIT571R1"
+            "ANSIT571R1",
+            "EC2NGF571Random"
         ],
         "parameter_numbers": {
             "a": [

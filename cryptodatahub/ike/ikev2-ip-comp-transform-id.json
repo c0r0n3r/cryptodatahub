@@ -1,0 +1,22 @@
+{
+    "IPCOMP_OUI": {
+        "_code_in_hex": "0x01",
+        "_standard": null,
+        "code": 1
+    },
+    "IPCOMP_DEFLATE": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2394",
+        "code": 2
+    },
+    "IPCOMP_LZS": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC2395",
+        "code": 3
+    },
+    "IPCOMP_LZJH": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC3051",
+        "code": 4
+    }
+} 

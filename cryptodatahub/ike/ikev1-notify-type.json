@@ -1,0 +1,182 @@
+{
+    "INVALID_PAYLOAD_TYPE": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2408",
+        "code": 1,
+        "level": "ERROR"
+    },
+    "DOI_NOT_SUPPORTED": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2408",
+        "code": 2,
+        "level": "ERROR"
+    },
+    "SITUATION_NOT_SUPPORTED": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC2408",
+        "code": 3,
+        "level": "ERROR"
+    },
+    "INVALID_COOKIE": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC2408",
+        "code": 4,
+        "level": "ERROR"
+    },
+    "INVALID_MAJOR_VERSION": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC2408",
+        "code": 5,
+        "level": "ERROR"
+    },
+    "INVALID_MINOR_VERSION": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC2408",
+        "code": 6,
+        "level": "ERROR"
+    },
+    "INVALID_EXCHANGE_TYPE": {
+        "_code_in_hex": "0x07",
+        "_standard": "RFC2408",
+        "code": 7,
+        "level": "ERROR"
+    },
+    "INVALID_FLAGS": {
+        "_code_in_hex": "0x08",
+        "_standard": "RFC2408",
+        "code": 8,
+        "level": "ERROR"
+    },
+    "INVALID_MESSAGE_ID": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC2408",
+        "code": 9,
+        "level": "ERROR"
+    },
+    "INVALID_PROTOCOL_ID": {
+        "_code_in_hex": "0x0a",
+        "_standard": "RFC2408",
+        "code": 10,
+        "level": "ERROR"
+    },
+    "INVALID_SPI": {
+        "_code_in_hex": "0x0b",
+        "_standard": "RFC2408",
+        "code": 11,
+        "level": "ERROR"
+    },
+    "INVALID_TRANSFORM_ID": {
+        "_code_in_hex": "0x0c",
+        "_standard": "RFC2408",
+        "code": 12,
+        "level": "ERROR"
+    },
+    "ATTRIBUTES_NOT_SUPPORTED": {
+        "_code_in_hex": "0x0d",
+        "_standard": "RFC2408",
+        "code": 13,
+        "level": "ERROR"
+    },
+    "NO_PROPOSAL_CHOSEN": {
+        "_code_in_hex": "0x0e",
+        "_standard": "RFC2408",
+        "code": 14,
+        "level": "ERROR"
+    },
+    "BAD_PROPOSAL_SYNTAX": {
+        "_code_in_hex": "0x0f",
+        "_standard": "RFC2408",
+        "code": 15,
+        "level": "ERROR"
+    },
+    "PAYLOAD_MALFORMED": {
+        "_code_in_hex": "0x10",
+        "_standard": "RFC2408",
+        "code": 16,
+        "level": "ERROR"
+    },
+    "INVALID_KEY_INFORMATION": {
+        "_code_in_hex": "0x11",
+        "_standard": "RFC2408",
+        "code": 17,
+        "level": "ERROR"
+    },
+    "INVALID_ID_INFORMATION": {
+        "_code_in_hex": "0x12",
+        "_standard": "RFC2408",
+        "code": 18,
+        "level": "ERROR"
+    },
+    "INVALID_CERT_ENCODING": {
+        "_code_in_hex": "0x13",
+        "_standard": "RFC2408",
+        "code": 19,
+        "level": "ERROR"
+    },
+    "INVALID_CERTIFICATE": {
+        "_code_in_hex": "0x14",
+        "_standard": "RFC2408",
+        "code": 20,
+        "level": "ERROR"
+    },
+    "CERT_TYPE_UNSUPPORTED": {
+        "_code_in_hex": "0x15",
+        "_standard": "RFC2408",
+        "code": 21,
+        "level": "ERROR"
+    },
+    "INVALID_CERT_AUTHORITY": {
+        "_code_in_hex": "0x16",
+        "_standard": "RFC2408",
+        "code": 22,
+        "level": "ERROR"
+    },
+    "INVALID_HASH_INFORMATION": {
+        "_code_in_hex": "0x17",
+        "_standard": "RFC2408",
+        "code": 23,
+        "level": "ERROR"
+    },
+    "AUTHENTICATION_FAILED": {
+        "_code_in_hex": "0x18",
+        "_standard": "RFC2408",
+        "code": 24,
+        "level": "ERROR"
+    },
+    "INVALID_SIGNATURE": {
+        "_code_in_hex": "0x19",
+        "_standard": "RFC2408",
+        "code": 25,
+        "level": "ERROR"
+    },
+    "ADDRESS_NOTIFICATION": {
+        "_code_in_hex": "0x1a",
+        "_standard": "RFC2408",
+        "code": 26,
+        "level": "ERROR"
+    },
+    "NOTIFY_SA_LIFETIME": {
+        "_code_in_hex": "0x1b",
+        "_standard": "RFC2408",
+        "code": 27,
+        "level": "ERROR"
+    },
+    "CERTIFICATE_UNAVAILABLE": {
+        "_code_in_hex": "0x1c",
+        "_standard": "RFC2408",
+        "code": 28,
+        "level": "ERROR"
+    },
+    "UNSUPPORTED_EXCHANGE_TYPE": {
+        "_code_in_hex": "0x1d",
+        "_standard": "RFC2408",
+        "code": 29,
+        "level": "ERROR"
+    },
+    "UNEQUAL_PAYLOAD_LENGTHS": {
+        "_code_in_hex": "0x1e",
+        "_standard": "RFC2408",
+        "code": 30,
+        "level": "ERROR"
+    }
+}

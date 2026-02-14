@@ -1,0 +1,17 @@
+{
+    "ISAKMP": {
+        "_code_in_hex": "0x00",
+        "_standard": "RFC2408",
+        "code": 0
+    },
+    "IPSEC": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2407",
+        "code": 1
+    },
+    "GDOI": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC3547",
+        "code": 2
+    }
+}

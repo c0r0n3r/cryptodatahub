@@ -1,0 +1,146 @@
+{
+    "NONE": {
+        "_code_in_hex": "0x00",
+        "_standard": "RFC7296",
+        "code": 0,
+        "description": "No Next Payload"
+    },
+    "SA": {
+        "_code_in_hex": "0x21",
+        "_standard": "RFC7296",
+        "code": 33,
+        "description": "Security Association"
+    },
+    "SAG": {
+        "_code_in_hex": "0x21",
+        "_standard": "RFC-ietf-ipsecme-g-ikev2-21",
+        "code": 33,
+        "description": "Security Association - GM Supported Transforms"
+    },
+    "KE": {
+        "_code_in_hex": "0x22",
+        "_standard": "RFC7296",
+        "code": 34,
+        "description": "Key Exchange"
+    },
+    "IDI": {
+        "_code_in_hex": "0x23",
+        "_standard": "RFC7296",
+        "code": 35,
+        "description": "Identification - Initiator"
+    },
+    "IDR": {
+        "_code_in_hex": "0x24",
+        "_standard": "RFC7296",
+        "code": 36,
+        "description": "Identification - Responder"
+    },
+    "CERT": {
+        "_code_in_hex": "0x25",
+        "_standard": "RFC7296",
+        "code": 37,
+        "description": "Certificate"
+    },
+    "CERTREQ": {
+        "_code_in_hex": "0x26",
+        "_standard": "RFC7296",
+        "code": 38,
+        "description": "Certificate Request"
+    },
+    "AUTH": {
+        "_code_in_hex": "0x27",
+        "_standard": "RFC7296",
+        "code": 39,
+        "description": "Authentication"
+    },
+    "NONCE": {
+        "_code_in_hex": "0x28",
+        "_standard": "RFC7296",
+        "code": 40,
+        "description": "Nonce (Ni, Nr)"
+    },
+    "NOTIFY": {
+        "_code_in_hex": "0x29",
+        "_standard": "RFC7296",
+        "code": 41,
+        "description": "Notify"
+    },
+    "DELETE": {
+        "_code_in_hex": "0x2a",
+        "_standard": "RFC7296",
+        "code": 42,
+        "description": "Delete"
+    },
+    "VENDOR_ID": {
+        "_code_in_hex": "0x2b",
+        "_standard": "RFC7296",
+        "code": 43,
+        "description": "Vendor ID"
+    },
+    "TSI": {
+        "_code_in_hex": "0x2c",
+        "_standard": "RFC7296",
+        "code": 44,
+        "description": "Traffic Selector - Initiator"
+    },
+    "TSR": {
+        "_code_in_hex": "0x2d",
+        "_standard": "RFC7296",
+        "code": 45,
+        "description": "Traffic Selector - Responder"
+    },
+    "SK": {
+        "_code_in_hex": "0x2e",
+        "_standard": "RFC7296",
+        "code": 46,
+        "description": "Encrypted and Authenticated"
+    },
+    "CP": {
+        "_code_in_hex": "0x2f",
+        "_standard": "RFC7296",
+        "code": 47,
+        "description": "Configuration"
+    },
+    "EAP": {
+        "_code_in_hex": "0x30",
+        "_standard": "RFC7296",
+        "code": 48,
+        "description": "Extensible Authentication"
+    },
+    "GSPM": {
+        "_code_in_hex": "0x31",
+        "_standard": "RFC6467",
+        "code": 49,
+        "description": "Generic Secure Password Method"
+    },
+    "IDG": {
+        "_code_in_hex": "0x32",
+        "_standard": "RFC-ietf-ipsecme-g-ikev2-21",
+        "code": 50,
+        "description": "Group Identification"
+    },
+    "GSA": {
+        "_code_in_hex": "0x33",
+        "_standard": "RFC-ietf-ipsecme-g-ikev2-21",
+        "code": 51,
+        "description": "Group Security Association"
+    },
+    "KD": {
+        "_code_in_hex": "0x34",
+        "_standard": "RFC-ietf-ipsecme-g-ikev2-21",
+        "code": 52,
+        "description": "Key Download"
+    },
+    "SKF": {
+        "_code_in_hex": "0x35",
+        "_standard": "RFC7383",
+        "code": 53,
+        "description": "Encrypted and Authenticated Fragment"
+    },
+    "PS": {
+        "_code_in_hex": "0x36",
+        "_standard": "RFC8019",
+        "code": 54,
+        "description": "Puzzle Solution"
+    }
+}

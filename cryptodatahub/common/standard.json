@@ -14,6 +14,16 @@
         "long_name": "More Modular Exponential (MODP) Diffie-Hellman groups for Internet Key Exchange (IKE)",
         "publisher": "IETF"
     },
+    "RFC_4753": {
+        "name": "RFC 4753",
+        "long_name": "ECP Groups For IKE and IKEv2",
+        "publisher": "IETF"
+    },
+    "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10": {
+        "name": "draft-ietf-ipsec-ike-ecc-groups-10",
+        "long_name": "Additional ECC Groups For IKE and IKEv2",
+        "publisher": "IETF"
+    },
     "RFC_5114": {
         "name": "RFC 5114",
         "long_name": "Additional Diffie-Hellman Groups for Use with IETF Standards",

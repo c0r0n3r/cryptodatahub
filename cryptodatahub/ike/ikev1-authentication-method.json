@@ -1,0 +1,57 @@
+{
+    "PRE_SHARED_KEY": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2409",
+        "code": 1
+    },
+    "DSS_SIGNATURES": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2409",
+        "code": 2
+    },
+    "RSA_SIGNATURES": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC2409",
+        "code": 3
+    },
+    "ENCRYPTION_WITH_RSA": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC2409",
+        "code": 4
+    },
+    "REVISED_ENCRYPTION_WITH_RSA": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC2409",
+        "code": 5
+    },
+    "ELGAMAL": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC2409",
+        "code": 6
+    },
+    "REVISED_ELGAMAL": {
+        "_code_in_hex": "0x07",
+        "_standard": "RFC2409",
+        "code": 7
+    },
+    "ECDSA": {
+        "_code_in_hex": "0x08",
+        "_standard": "RFC2409",
+        "code": 8
+    },
+    "ECDSA_SHA_256_P_256": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC4754",
+        "code": 9
+    },
+    "ECDSA_SHA_384_P_384": {
+        "_code_in_hex": "0x0a",
+        "_standard": "RFC4754",
+        "code": 10
+    },
+    "ECDSA_SHA_512_P_521": {
+        "_code_in_hex": "0x0b",
+        "_standard": "RFC4754",
+        "code": 11
+    }
+}
