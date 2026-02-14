@@ -3,6 +3,23 @@ Changelog
 =========
 
 -------------------
+1.1.0 - 2026-02-13
+-------------------
+
+Features
+========
+
+-  IKE (``ike``)
+
+   -  add algorithms for IKEv1 implementation (#36)
+   -  add algorithms for IKEv2 implementation (#36)
+
+-  Generic
+
+   -  add missing CT log operators
+   -  add new logs and update states
+
+-------------------
 1.0.2 - 2025-12-30
 -------------------
 

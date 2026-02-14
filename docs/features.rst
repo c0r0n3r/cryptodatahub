@@ -64,6 +64,25 @@ Protocol-dependent
 Attributes
 ----------
 
+-  Internet Key Exchange (IKE)
+
+   -  `IKEv1 <https://tools.ietf.org/html/rfc2409#appendix-A>`__
+
+      -  Encryption Algorithm
+      -  Hash Algorithm
+      -  Authentication Method
+      -  Group Description
+      -  Life Type
+      -  Pseudorandom Function
+
+   -  `IKEv2 <https://tools.ietf.org/html/rfc7296#section-3.3.2>`__
+
+      -  Encryption Algorithm
+      -  Pseudorandom Function
+      -  Integrity Algorithm
+      -  Diffie-Hellman Group
+      -  Extended Sequence Numbers
+
 -  Secure Socket Layer (SSL)
 
    -  `cipher kind <https://datatracker.ietf.org/doc/html/draft-hickman-netscape-ssl-00>`__
