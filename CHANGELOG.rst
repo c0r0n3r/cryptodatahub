@@ -47,7 +47,7 @@ Refactor
 
 -  Generic
 
-   -  Support only Python version greater or euqal than 3.9
+   -  Support only Python version greater than or equal to 3.9
    -  Use pyproject.toml instead of setup.py
 
 -------------------

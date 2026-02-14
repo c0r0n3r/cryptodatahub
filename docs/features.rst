@@ -47,7 +47,7 @@ Stores
    -  `Microsoft <https://en.wikipedia.org/wiki/Microsoft>`__
    -  `Mozilla <https://en.wikipedia.org/wiki/Mozilla>`__
 
--  `Certificate Transaprency <https://certificate.transparency.dev>`__ (CT)
+-  `Certificate Transparency <https://certificate.transparency.dev>`__ (CT)
    `Logs <https://certificate.transparency.dev/logs>`__
 
    -  Cloudflare
@@ -82,7 +82,7 @@ Attributes
    -  `next protocol name <https://datatracker.ietf.org/doc/html/draft-agl-tls-nextprotoneg-04>`__
    -  `psk key exchange mode <https://www.rfc-editor.org/rfc/rfc8446.html#section-4.2.9>`__
    -  `renegotiation indication <https://www.rfc-editor.org/rfc/rfc5746>`__
-   -  `token binding paramater <https://www.rfc-editor.org/rfc/rfc8471.html>`__
+   -  `token binding parameter <https://www.rfc-editor.org/rfc/rfc8471.html>`__
 
 
 -  Secure Shell (SSH)
