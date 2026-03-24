@@ -218,6 +218,7 @@ class CipherParamsBase(CryptoDataParamsEnumNumeric, GradeableComplex):  # pylint
     )
     last_version = attr.ib(init=False, validator=attr.validators.instance_of(TlsVersion))
     export_grade = attr.ib(init=False, validator=attr.validators.instance_of(bool))
+    freak = attr.ib(init=False, validator=attr.validators.instance_of(bool))
 
     @classmethod
     @abc.abstractmethod
@@ -234,6 +235,7 @@ class CipherParamsBase(CryptoDataParamsEnumNumeric, GradeableComplex):  # pylint
                 object.__setattr__(self, 'last_version', TlsVersion.TLS1_2)
 
         object.__setattr__(self, 'export_grade', self.iana_name is not None and '_EXPORT' in self.iana_name)
+        object.__setattr__(self, 'freak', self.export_grade and self.key_exchange == KeyExchange.RSA)
 
         vulnerability_parts = collections.OrderedDict([
             (KeyExchange, self.key_exchange),

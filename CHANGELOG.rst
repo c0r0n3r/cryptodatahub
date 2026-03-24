@@ -2,6 +2,17 @@
 Changelog
 =========
 
+------------------
+1.1.1 - Unreleased
+------------------
+
+Features
+========
+
+-  TLS (``tls``)
+
+   -  add FREAK vulnerability property TLS cipher suites (#42)
+
 -------------------
 1.1.0 - 2026-02-13
 -------------------
