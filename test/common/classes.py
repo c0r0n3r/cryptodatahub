@@ -18,7 +18,9 @@ from cryptodatahub.common.types import (
     CryptoDataParamsOIDOptional,
     CryptoDataParamsBase,
     CryptoDataParamsNamed,
+    HexData,
     convert_dict_to_object,
+    convert_hex_data,
 )
 
 
@@ -75,6 +77,14 @@ class TestEnumStringParams(CryptoDataParamsEnumString):
 
 class TestEnumOidParams(CryptoDataParamsOIDOptional):
     pass
+
+
+@attr.s(frozen=True)
+class TestEnumBinaryParams(CryptoDataParamsBase):
+    binary = attr.ib(
+        converter=convert_hex_data(),
+        validator=attr.validators.instance_of(HexData)
+    )
 
 
 class TestGradeableSimple(GradeableSimple):

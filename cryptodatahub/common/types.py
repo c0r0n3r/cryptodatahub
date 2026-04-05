@@ -171,6 +171,44 @@ def convert_base64_data():
     return _Base64DataConverter()
 
 
+@attr.s(frozen=True)
+class HexData:
+    value = attr.ib(validator=attr.validators.instance_of(bytes))
+
+    def _asdict(self):
+        return str(self)
+
+    def __str__(self):
+        return self.value.hex()
+
+
+@attr.s(repr=False, slots=True, hash=True)
+class _HexDataConverter(_ConverterBase):
+    def __call__(self, value):
+        if value is None:
+            return None
+
+        if isinstance(value, (bytearray, bytes)):
+            return HexData(bytes(value))
+
+        if not isinstance(value, str):
+            return value
+
+        try:
+            value = HexData(bytes.fromhex(value))
+        except (ValueError, TypeError):
+            pass
+
+        return value
+
+    def __repr__(self):
+        return '<hex data converter>'
+
+
+def convert_hex_data():
+    return _HexDataConverter()
+
+
 @attr.s(repr=False, slots=True, hash=True)
 class _BigNumberConverter(_ConverterBase):
     def __call__(self, value):
@@ -526,3 +564,9 @@ class CryptoDataEnumOIDBase(CryptoDataEnumCodedBase):
     @classmethod
     def from_oid(cls, oid):
         return cls._from_attr('oid', oid)
+
+
+class CryptoDataEnumBinaryBase(CryptoDataEnumBase):
+    @classmethod
+    def from_binary(cls, value):
+        return cls._from_attr('binary', HexData(bytes(value)))

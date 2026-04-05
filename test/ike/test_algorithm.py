@@ -2,9 +2,11 @@
 
 from test.common.classes import TestClasses
 
+from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.ike.version import IkeVersion
 from cryptodatahub.ike.algorithm import (
     IkeEncryptionBulkCipherEntry,
+    IkeVendorId,
     Ikev2PayloadType,
     Ikev2NotifyType,
     Ikev2ExtendedSequenceNumber,
@@ -277,6 +279,36 @@ class TestIkev1HashAlgorithm(TestClasses.TestJsonCodeNumericBase):
         self.assertEqual(
             str(Ikev1HashAlgorithm.MD5.value),
             'MD5'
+        )
+
+
+class TestIkeVendorId(TestClasses.TestJsonBase):
+    @classmethod
+    def _get_class(cls):
+        return IkeVendorId
+
+    def test_from_binary(self):
+        self.assertEqual(
+            IkeVendorId.from_binary(bytes.fromhex('fbf47614984031fa8e3bb6198089b223')),
+            IkeVendorId.SSH_IPSEC_EXPRESS_1_1_0,
+        )
+        self.assertEqual(
+            IkeVendorId.from_binary(bytearray.fromhex('fbf47614984031fa8e3bb6198089b223')),
+            IkeVendorId.SSH_IPSEC_EXPRESS_1_1_0,
+        )
+
+    def test_from_binary_unknown(self):
+        with self.assertRaises(InvalidValue):
+            IkeVendorId.from_binary(b'\x00\x01\x02\x03')
+
+    def test_str(self):
+        self.assertEqual(
+            str(IkeVendorId.SSH_IPSEC_EXPRESS_1_1_0.value),
+            'SSH Communications Security IPSEC Express version 1.1.0',
+        )
+        self.assertEqual(
+            str(IkeVendorId.DRAFT_IETF_IPSEC_NAT_T_IKE_02N.value),
+            'draft-ietf-ipsec-nat-t-ike-02\\n',
         )
 
 
