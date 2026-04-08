@@ -132,64 +132,20 @@ class FetcherCertificateTransparencyLogs(FetcherBase):
 
 @attr.s
 class FetcherCsvBase(FetcherBase):
-    """Base class for CSV-based data fetchers.
-
-    Subclasses must implement:
-    - _get_csv_url(): Return the URL of the CSV file
-    - _get_csv_fields(): Return the field names for the CSV
-    - _get_fetcher(): Return an HTTP fetcher instance
-    - _transform_data(): Transform CSV rows into parsed format
-    """
-
     @classmethod
     @abc.abstractmethod
     def _get_csv_url(cls):
-        """Get the URL of the CSV file to fetch.
-
-        Returns:
-            str: URL of the CSV file
-        """
-        raise NotImplementedError()
-
-    @classmethod
-    @abc.abstractmethod
-    def _get_csv_fields(cls):
-        """Get the field names for the CSV file.
-
-        Returns:
-            tuple: Field names
-        """
         raise NotImplementedError()
 
     @classmethod
     @abc.abstractmethod
     def _get_fetcher(cls):
-        """Get an HTTP fetcher instance.
-
-        Returns:
-            An HTTP fetcher object with a __call__ method that takes a URL
-        """
         raise NotImplementedError()
 
     @classmethod
     def _get_current_data(cls):
-        """Fetch and parse CSV data.
-
-        Returns:
-            csv.DictReader: CSV reader with parsed rows
-        """
         data = cls._get_fetcher()(cls._get_csv_url())
-
-        csv_reader = csv.DictReader(
-            io.StringIO(data.decode('utf-8')),
-            fieldnames=cls._get_csv_fields(),
-        )
-
-        sample = data[:4096].decode('utf-8')
-        if csv.Sniffer().has_header(sample):
-            next(csv_reader, None)
-
-        return csv_reader
+        return csv.DictReader(io.StringIO(data.decode('utf-8')))
 
     @classmethod
     @abc.abstractmethod
@@ -283,10 +239,6 @@ class FetcherRootCertificateStoreMicrosoft(FetcherCsvBase):
         return 'https://ccadb-public.secure.force.com/microsoft/IncludedCACertificateReportForMSFTCSV'
 
     @classmethod
-    def _get_csv_fields(cls):
-        return cls.CSV_FIELDS
-
-    @classmethod
     def _get_fetcher(cls):
         return HttpFetcher()
 
@@ -324,10 +276,6 @@ class FetcherRootCertificateStoreMozilla(FetcherCsvBase):
     def _get_csv_url(cls):
         return \
             'https://ccadb.my.salesforce-sites.com/mozilla/IncludedRootsDistrustTLSSSLPEMCSV?TrustBitsInclude=Websites'
-
-    @classmethod
-    def _get_csv_fields(cls):
-        return cls.CSV_FIELDS
 
     @classmethod
     def _get_fetcher(cls):
