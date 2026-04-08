@@ -25,11 +25,18 @@ from cryptodatahub.common.stores import RootCertificate
 from cryptodatahub.common.utils import HttpFetcher, name_to_enum_item_name
 
 
+@attr.s
+class HttpFetcherCrtShPem(HttpFetcher):
+    @classmethod
+    def get_retry_status_codes(cls):
+        return super().get_retry_status_codes() | frozenset([404])
+
+
 @attr.s(frozen=True)
 class CertificatePemFetcher():
     http_fetcher = attr.ib(
         init=False,
-        default=HttpFetcher(connect_timeout=5, read_timeout=30, retry=10),
+        default=HttpFetcherCrtShPem(connect_timeout=5, read_timeout=30, retry=10),
         validator=attr.validators.instance_of(HttpFetcher),
     )
 

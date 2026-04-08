@@ -71,13 +71,17 @@ class HttpFetcher():
     _request_params = attr.ib(default=None, init=False)
     _response = attr.ib(default=None, init=False)
 
+    @classmethod
+    def get_retry_status_codes(cls):
+        return urllib3.Retry.RETRY_AFTER_STATUS_CODES | frozenset([502])
+
     def __attrs_post_init__(self):
         request_params = {
             'preload_content': True,
             'timeout': urllib3.Timeout(connect=self.connect_timeout, read=self.read_timeout),
             'retries': urllib3.Retry(
                 self.retry,
-                status_forcelist=urllib3.Retry.RETRY_AFTER_STATUS_CODES | frozenset([502]),
+                status_forcelist=self.get_retry_status_codes(),
                 backoff_factor=self.backoff_factor,
                 raise_on_status=False,
             ),
