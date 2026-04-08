@@ -16,6 +16,7 @@ from test.common.classes import (
     EnumTest,
 )
 
+import attr
 import dateutil
 import pyfakefs.fake_filesystem_unittest
 import urllib3
@@ -27,6 +28,7 @@ from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataEnumCodedBase,
     CryptoDataEnumOIDBase,
+    CryptoDataParamsBase,
     convert_big_enum,
     convert_base64_data,
     convert_client_version,
@@ -39,6 +41,11 @@ from cryptodatahub.common.types import (
     convert_variadic,
     convert_value_to_object,
 )
+
+
+@attr.s
+class TestDateTimeAsDictObject(CryptoDataParamsBase):
+    timestamp = attr.ib(default=None)
 
 
 class TestEnumConverter(unittest.TestCase):
@@ -96,6 +103,16 @@ class TestDateTimeConverter(unittest.TestCase):
 
     def test_repr(self):
         self.assertEqual(repr(convert_datetime(None)), '<datetime converter>')
+
+
+class TestCryptoDataParamsBase(unittest.TestCase):
+    def test_asdict_datetime(self):
+        test_object = TestDateTimeAsDictObject(timestamp=datetime.datetime(2026, 4, 10, 1, 2, 3))
+
+        self.assertEqual(
+            test_object._asdict(),
+            collections.OrderedDict([('timestamp', '2026-04-10T01:02:03')])
+        )
 
 
 class TestBase64Data(unittest.TestCase):

@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
 
-try:
-    from unittest import mock
-except ImportError:
-    import mock
+from unittest import mock
 
 import argparse
+import base64
 import collections
 import csv
 import datetime
 import io
+import json
 import os
-import tarfile
 
 from test.common.classes import TestClasses
 
@@ -115,28 +113,31 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
 
     @staticmethod
     def _get_mock_data_google(public_keys=()):
-        mock_data = io.BytesIO()
+        commit_log = b")]}\'\n" + json.dumps({'log': [{'commit': 'deadbeef'}]}).encode('ascii')
+        entries = [
+            {'name': public_key.fingerprints[Hash.SHA2_256], 'type': 'blob'}
+            for public_key in public_keys
+        ]
+        listing = b")]}'\n" + json.dumps({'entries': entries}).encode('ascii')
 
-        with tarfile.open(fileobj=mock_data, mode='w:gz') as tar:
-            for public_key in public_keys:
-                content = public_key.pem.encode('ascii')
-                tarinfo = tarfile.TarInfo(public_key.fingerprints[Hash.SHA2_256])
-                tarinfo.size = len(content)
-                tar.addfile(tarinfo, io.BytesIO(content))
+        file_contents = [
+            base64.b64encode(public_key.pem.encode('ascii'))
+            for public_key in public_keys
+        ]
 
-        return mock_data.getvalue()
+        return [commit_log, listing] + file_contents
 
 
 class TestUpdaterRootCertificateStoreGoogle(TestRootCertificateBase):
     def test_parse_empty(self):
-        with mock.patch.object(HttpFetcher, '__call__', return_value=self._get_mock_data_google()):
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=self._get_mock_data_google()):
             root_certificate_store = FetcherRootCertificateStoreGoogle.from_current_data()
         self.assertEqual(len(root_certificate_store.parsed_data), 0)
 
     def test_parse_pem(self):
         public_key_x509 = self._get_public_key_x509('snakeoil_ca_cert')
         mock_data = self._get_mock_data_google([public_key_x509])
-        with mock.patch.object(HttpFetcher, '__call__', return_value=mock_data):
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=mock_data):
             root_certificate_store = FetcherRootCertificateStoreGoogle.from_current_data()
         self.assertEqual(len(root_certificate_store.parsed_data), 1)
         self.assertEqual(root_certificate_store.parsed_data, {
@@ -296,9 +297,11 @@ class UpdaterRootCertificateTrustStoreTest(UpdaterBase):
 
 class TestFetcherRootCertificateStore(TestRootCertificateBase):
     def test_parse_empty(self):
+        mock_data_google = self._get_mock_data_google()
         http_fetcher_results = [
             self._get_mock_data_mozilla(),
-            self._get_mock_data_google(),
+            mock_data_google[0],
+            mock_data_google[1],
             self._get_mock_data_microsoft(),
             self._get_mock_data_apple(),
         ]
@@ -309,10 +312,12 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
 
     def test_parse_single_item_in_store(self):
         mock_data_mozilla = self._get_mock_data_mozilla([self.public_key_x509_lets_encrypt])
+        mock_data_google = self._get_mock_data_google()
         mock_data_microsoft = self._get_mock_data_microsoft([self.public_key_x509_snakeoil_ca])
         http_fetcher_results = [
             mock_data_mozilla,
-            self._get_mock_data_google(),
+            mock_data_google[0],
+            mock_data_google[1],
             mock_data_microsoft,
             self.public_key_x509_snakeoil_ca.pem.encode('ascii'),
             self._get_mock_data_apple(),
@@ -330,13 +335,15 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             self.public_key_x509_lets_encrypt,
             self.public_key_x509_snakeoil_ca,
         ])
+        mock_data_google = self._get_mock_data_google()
         mock_data_microsoft = self._get_mock_data_microsoft([
             self.public_key_x509_lets_encrypt,
             self.public_key_x509_snakeoil_ca
         ])
         http_fetcher_results = [
             mock_data_mozilla,
-            self._get_mock_data_google(),
+            mock_data_google[0],
+            mock_data_google[1],
             mock_data_microsoft,
             self.public_key_x509_snakeoil_ca.pem.encode('ascii'),
             self._get_mock_data_apple(),

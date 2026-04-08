@@ -539,7 +539,7 @@ class PublicKeyX509Base(PublicKeySigned):  # pylint: disable=too-many-public-met
             ('version', self._certificate['tbs_certificate']['version'].native),
             ('serial_number', str(self.serial_number)),
             ('subject', self.subject),
-            ('subject_alternative_names', sorted(self.subject_alternative_names)),
+            ('subject_alternative_names', sorted(self.subject_alternative_names, key=str)),
             ('issuer', self.issuer),
             ('signature_hash_algorithm', self.signature_hash_algorithm),
             ('validity', collections.OrderedDict([

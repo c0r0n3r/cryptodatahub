@@ -371,6 +371,8 @@ class CryptoDataParamsBase():
             return getattr(value, '_asdict')()
         if isinstance(value, enum.Enum):
             return value.name
+        if isinstance(value, datetime.datetime):
+            return value.strftime('%Y-%m-%dT%H:%M:%S')
 
         return value
 

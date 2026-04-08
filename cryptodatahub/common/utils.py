@@ -67,6 +67,7 @@ class HttpFetcher():
     connect_timeout = attr.ib(default=2, validator=attr.validators.instance_of((int, float)))
     read_timeout = attr.ib(default=1, validator=attr.validators.instance_of((int, float)))
     retry = attr.ib(default=1, validator=attr.validators.instance_of(int))
+    backoff_factor = attr.ib(default=0, validator=attr.validators.instance_of((int, float)))
     _request_params = attr.ib(default=None, init=False)
     _response = attr.ib(default=None, init=False)
 
@@ -75,7 +76,10 @@ class HttpFetcher():
             'preload_content': True,
             'timeout': urllib3.Timeout(connect=self.connect_timeout, read=self.read_timeout),
             'retries': urllib3.Retry(
-                self.retry, status_forcelist=urllib3.Retry.RETRY_AFTER_STATUS_CODES | frozenset([502])
+                self.retry,
+                status_forcelist=urllib3.Retry.RETRY_AFTER_STATUS_CODES | frozenset([502]),
+                backoff_factor=self.backoff_factor,
+                raise_on_status=False,
             ),
         }
 
