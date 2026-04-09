@@ -318,10 +318,10 @@ class TestRootCertificateParamCertificateConverter(unittest.TestCase):
 class TestRootCertificate(unittest.TestCase):
     def test_get_items_by_trust_owner(self):
         root_certificate_count_by_owner = collections.OrderedDict([
-            (Entity.MOZILLA, 141),
-            (Entity.MICROSOFT, 299),
+            (Entity.MOZILLA, 120),
+            (Entity.MICROSOFT, 211),
             (Entity.APPLE, 172),
-            (Entity.GOOGLE, 134),
+            (Entity.GOOGLE, 149),
         ])
 
         for owner, certificate_count in root_certificate_count_by_owner.items():
