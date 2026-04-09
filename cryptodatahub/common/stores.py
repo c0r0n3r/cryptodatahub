@@ -184,7 +184,8 @@ class CertificateTrustConstraint():
     )
     domains = attr.ib(
         default=(),
-        validator=attr.validators.deep_iterable(attr.validators.instance_of(str))
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(str)),
+        metadata={'serialize_default': True}
     )
     date = attr.ib(
         default=None,
@@ -229,7 +230,8 @@ class RootCertificateTrustStoreConstraint(CryptoDataParamsBase):
     constraints = attr.ib(
         default=(),
         converter=convert_iterable(convert_dict_to_object(CertificateTrustConstraint)),
-        validator=attr.validators.deep_iterable(attr.validators.instance_of(CertificateTrustConstraint))
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(CertificateTrustConstraint)),
+        metadata={'serialize_default': True}
     )
 
 

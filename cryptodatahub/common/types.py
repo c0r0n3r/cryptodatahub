@@ -360,7 +360,11 @@ class CryptoDataParamsBase():
         if attribute.name.startswith('_'):
             return False
 
-        if attribute.default != attr.NOTHING and value == attribute.default:
+        if (
+                attribute.default != attr.NOTHING and
+                value == attribute.default and
+                not attribute.metadata.get('serialize_default', False)
+        ):
             return False
 
         return True
