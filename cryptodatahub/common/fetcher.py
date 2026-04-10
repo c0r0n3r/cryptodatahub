@@ -371,6 +371,10 @@ class FetcherRootCertificateStore(FetcherBase):
     ])
 
     @classmethod
+    def get_root_certificate_store_updaters(cls):
+        return cls._ROOT_CERTIFICATE_STORE_UPDATERS
+
+    @classmethod
     def _get_current_data(cls):
         return collections.OrderedDict([
             (store_owner, store_fetcher_class.from_current_data())
