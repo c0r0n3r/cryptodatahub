@@ -249,22 +249,14 @@ class FetcherRootCertificateStoreApple(FetcherBase):
 
 
 class FetcherRootCertificateStoreMicrosoft(FetcherCsvBase):
-    CSV_FIELDS = (
-        'Microsoft Status',
-        'CA Owner',
-        'CA Common Name or Certificate Name',
-        'SHA-1 Fingerprint',
-        'SHA-256 Fingerprint',
-        'Microsoft EKUs',
-        'Valid From [GMT]',
-        'Valid To [GMT]',
-        'Public Key Algorithm',
-        'Signature Hash Algorithm',
-    )
+    CSV_FIELDS = ('PEM',)
 
     @classmethod
     def _get_csv_url(cls):
-        return 'https://ccadb-public.secure.force.com/microsoft/IncludedCACertificateReportForMSFTCSV'
+        return (
+            'https://ccadb.my.salesforce-sites.com/microsoft/IncludedRootsPEMCSVForMSFT'
+            '?MicrosoftEKUs=Server%20Authentication'
+        )
 
     @classmethod
     def _get_fetcher(cls):
@@ -272,27 +264,11 @@ class FetcherRootCertificateStoreMicrosoft(FetcherCsvBase):
 
     @classmethod
     def _transform_data(cls, current_data):
-        certificate_pem_fetcher = CertificatePemFetcher()
         certificates = {}
 
         for row in current_data:
-            status = row['Microsoft Status']
-
-            if status == 'Disabled':
-                continue
-
-            constraints = []
-            if status == 'NotBefore':
-                constraint = CertificateTrustConstraint(
-                    action=RootCertificateTrustConstraintAction.DISTRUST,
-                    date=datetime.datetime.strptime(row['Valid From [GMT]'], '%Y %b %d'),
-                )
-                constraints.append(constraint)
-
-            sha2_256_fingerprint = row['SHA-256 Fingerprint']
-            root_certificate_pem = certificate_pem_fetcher(sha2_256_fingerprint)
-
-            certificates[tuple(root_certificate_pem.splitlines())] = tuple(constraints)
+            root_certificate_pem = row.get('PEM', '').strip('\'').strip()
+            certificates[tuple(root_certificate_pem.splitlines())] = tuple()
 
         return certificates
 
