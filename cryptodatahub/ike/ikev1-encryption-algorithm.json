@@ -297,5 +297,27 @@
             "RC6_256"
         ],
         "block_cipher_mode": "CBC"
+    },
+    "TWOFISH_CBC": {
+        "_code_in_hex": "0xFDED",
+        "_standard": "PRIVATE",
+        "code": 65005,
+        "bulk_ciphers": [
+            "TWOFISH128",
+            "TWOFISH192",
+            "TWOFISH256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "TWOFISH_CBC_SSH": {
+        "_code_in_hex": "0xFF29",
+        "_standard": "PRIVATE",
+        "code": 65321,
+        "bulk_ciphers": [
+            "TWOFISH128",
+            "TWOFISH192",
+            "TWOFISH256"
+        ],
+        "block_cipher_mode": "CBC"
     }
 }
