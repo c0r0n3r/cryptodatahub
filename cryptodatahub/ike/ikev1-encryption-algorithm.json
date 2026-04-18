@@ -1,4 +1,81 @@
 {
+    "AES_CTR": {
+        "_code_in_hex": "0x0D",
+        "_standard": "LIBRESWAN",
+        "code": 13,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CTR"
+    },
+    "AES_CCM_8": {
+        "_code_in_hex": "0x0E",
+        "_standard": "LIBRESWAN",
+        "code": 14,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM_8"
+    },
+    "AES_CCM_12": {
+        "_code_in_hex": "0x0F",
+        "_standard": "LIBRESWAN",
+        "code": 15,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM"
+    },
+    "AES_CCM_16": {
+        "_code_in_hex": "0x10",
+        "_standard": "LIBRESWAN",
+        "code": 16,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM"
+    },
+    "AES_GCM_8": {
+        "_code_in_hex": "0x12",
+        "_standard": "LIBRESWAN",
+        "code": 18,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM_8"
+    },
+    "AES_GCM_12": {
+        "_code_in_hex": "0x13",
+        "_standard": "LIBRESWAN",
+        "code": 19,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM"
+    },
+    "AES_GCM_16": {
+        "_code_in_hex": "0x14",
+        "_standard": "LIBRESWAN",
+        "code": 20,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM"
+    },
     "DES_CBC": {
         "_code_in_hex": "0x01",
         "_standard": "RFC2405",
@@ -77,5 +154,82 @@
             "CAMELLIA_256"
         ],
         "block_cipher_mode": "CBC"
+    },
+    "AES_CTR": {
+        "_code_in_hex": "0x0D",
+        "_standard": "LIBRESWAN",
+        "code": 13,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CTR"
+    },
+    "AES_CCM_8": {
+        "_code_in_hex": "0x0E",
+        "_standard": "LIBRESWAN",
+        "code": 14,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM_8"
+    },
+    "AES_CCM_12": {
+        "_code_in_hex": "0x0F",
+        "_standard": "LIBRESWAN",
+        "code": 15,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM"
+    },
+    "AES_CCM_16": {
+        "_code_in_hex": "0x10",
+        "_standard": "LIBRESWAN",
+        "code": 16,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM"
+    },
+    "AES_GCM_8": {
+        "_code_in_hex": "0x12",
+        "_standard": "LIBRESWAN",
+        "code": 18,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM_8"
+    },
+    "AES_GCM_12": {
+        "_code_in_hex": "0x13",
+        "_standard": "LIBRESWAN",
+        "code": 19,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM"
+    },
+    "AES_GCM_16": {
+        "_code_in_hex": "0x14",
+        "_standard": "LIBRESWAN",
+        "code": 20,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM"
     }
 }
