@@ -42,7 +42,7 @@
         "_standard": "RFC2409",
         "code": 5,
         "bulk_ciphers": [
-            "TRIPLE_DES"
+            "TRIPLE_DES_168"
         ],
         "block_cipher_mode": "CBC"
     },

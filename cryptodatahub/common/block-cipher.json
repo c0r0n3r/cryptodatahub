@@ -561,9 +561,9 @@
         "key_size": 128,
         "block_size": 128
     },
-    "TRIPLE_DES": {
-        "name": "3DES",
-        "long_name": "Triple DES",
+    "TRIPLE_DES_112": {
+        "name": "3DES-112",
+        "long_name": "Triple DES 112-bit",
         "vulnerabilities": [
             {
                 "attack_type": "BIRTHDAY",
@@ -571,7 +571,20 @@
                 "named": "SWEET32"
             }
         ],
-        "key_size": 128,
+        "key_size": 112,
+        "block_size": 64
+    },
+    "TRIPLE_DES_168": {
+        "name": "3DES-168",
+        "long_name": "Triple DES 168-bit",
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "DEPRECATED",
+                "named": "SWEET32"
+            }
+        ],
+        "key_size": 168,
         "block_size": 64
     },
     "TRIPLE_DES_EDE": {

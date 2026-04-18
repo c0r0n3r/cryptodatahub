@@ -22,7 +22,7 @@
         "_standard": "RFC2451",
         "code": 3,
         "bulk_ciphers": [
-            "TRIPLE_DES"
+            "TRIPLE_DES_168"
         ],
         "block_cipher_mode": "CBC"
     },
