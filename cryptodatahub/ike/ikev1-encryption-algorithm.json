@@ -231,5 +231,49 @@
             "AES_256"
         ],
         "block_cipher_mode": "GCM"
+    },
+    "CAMELLIA_CTR": {
+        "_code_in_hex": "0x18",
+        "_standard": "LIBRESWAN",
+        "code": 24,
+        "bulk_ciphers": [
+            "CAMELLIA_128",
+            "CAMELLIA_192",
+            "CAMELLIA_256"
+        ],
+        "block_cipher_mode": "CTR"
+    },
+    "CAMELLIA_CCM_8": {
+        "_code_in_hex": "0x19",
+        "_standard": "LIBRESWAN",
+        "code": 25,
+        "bulk_ciphers": [
+            "CAMELLIA_128",
+            "CAMELLIA_192",
+            "CAMELLIA_256"
+        ],
+        "block_cipher_mode": "CCM_8"
+    },
+    "CAMELLIA_CCM_12": {
+        "_code_in_hex": "0x1A",
+        "_standard": "LIBRESWAN",
+        "code": 26,
+        "bulk_ciphers": [
+            "CAMELLIA_128",
+            "CAMELLIA_192",
+            "CAMELLIA_256"
+        ],
+        "block_cipher_mode": "CCM"
+    },
+    "CAMELLIA_CCM_16": {
+        "_code_in_hex": "0x1B",
+        "_standard": "LIBRESWAN",
+        "code": 27,
+        "bulk_ciphers": [
+            "CAMELLIA_128",
+            "CAMELLIA_192",
+            "CAMELLIA_256"
+        ],
+        "block_cipher_mode": "CCM"
     }
 }
