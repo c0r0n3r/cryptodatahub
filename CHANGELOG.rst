@@ -12,6 +12,7 @@ Features
 -  TLS (``tls``)
 
    -  add FREAK vulnerability property TLS cipher suites (#42)
+   -  add Logjam vulnerability property TLS cipher suites (#43)
 
 -------------------
 1.1.0 - 2026-02-13
