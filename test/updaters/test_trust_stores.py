@@ -389,9 +389,32 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             fetched_data = FetcherRootCertificateStore.from_current_data()
 
         self.assertEqual(len(fetched_data.parsed_data), 2)
-        for root_certificate_param in fetched_data.parsed_data:
-            trust_stores = root_certificate_param.trust_stores
-            self.assertEqual(len(trust_stores), 1)
+        fetched_by_identifier = {
+            root_certificate_param.identifier: root_certificate_param
+            for root_certificate_param in fetched_data.parsed_data
+        }
+
+        lets_encrypt_identifier = RootCertificateParams(certificate=tuple(
+            self.public_key_x509_lets_encrypt.pem.splitlines())
+        ).identifier
+        snakeoil_identifier = RootCertificateParams(certificate=tuple(
+            self.public_key_x509_snakeoil_ca.pem.splitlines())
+        ).identifier
+
+        self.assertEqual(
+            tuple(
+                trust_store.owner
+                for trust_store in fetched_by_identifier[lets_encrypt_identifier].trust_stores
+            ),
+            (Entity.MOZILLA,),
+        )
+        self.assertEqual(
+            tuple(
+                trust_store.owner
+                for trust_store in fetched_by_identifier[snakeoil_identifier].trust_stores
+            ),
+            (Entity.MICROSOFT,),
+        )
 
     def test_parse_multiple_item_in_store(self):
         mock_data_mozilla = self._get_mock_data_mozilla([
@@ -415,9 +438,17 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             fetched_data = FetcherRootCertificateStore.from_current_data()
 
         self.assertEqual(len(fetched_data.parsed_data), 2)
+        self.assertEqual(
+            [root_certificate.identifier for root_certificate in fetched_data.parsed_data],
+            sorted([root_certificate.identifier for root_certificate in fetched_data.parsed_data]),
+        )
+
         for root_certificate_param in fetched_data.parsed_data:
             trust_stores = root_certificate_param.trust_stores
-            self.assertEqual(len(trust_stores), 2)
+            self.assertEqual(
+                tuple(trust_store.owner for trust_store in trust_stores),
+                (Entity.MICROSOFT, Entity.MOZILLA),
+            )
         for root_certificate_param in fetched_data.parsed_data:
             trust_stores = root_certificate_param.trust_stores
             for trust_store in trust_stores:
@@ -508,6 +539,10 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         merged_root_certificate = merged_data.parsed_data[0]
         self.assertEqual(tuple(merged_root_certificate.certificate.pem.splitlines()), root_certificate_pem_lines)
         self.assertEqual(len(merged_root_certificate.trust_stores), 2)
+        self.assertEqual(
+            tuple(trust_store.owner for trust_store in merged_root_certificate.trust_stores),
+            (Entity.GOOGLE, Entity.MOZILLA),
+        )
         self.assertEqual(merged_root_certificate.get_constraints_by_owner(Entity.GOOGLE), current_google_constraints)
 
     def test_selected_store_adds_missing_owner_and_new_certificate(self):
@@ -562,6 +597,10 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
 
         existing_root_certificate = merged_by_certificate[existing_root_certificate_pem_lines]
         self.assertEqual(
+            tuple(trust_store.owner for trust_store in existing_root_certificate.trust_stores),
+            (Entity.GOOGLE, Entity.MOZILLA),
+        )
+        self.assertEqual(
             existing_root_certificate.get_constraints_by_owner(Entity.GOOGLE),
             current_google_constraints,
         )
@@ -571,6 +610,10 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         )
 
         new_root_certificate = merged_by_certificate[new_root_certificate_pem_lines]
+        self.assertEqual(
+            tuple(trust_store.owner for trust_store in new_root_certificate.trust_stores),
+            (Entity.GOOGLE,),
+        )
         self.assertEqual(new_root_certificate.get_constraints_by_owner(Entity.GOOGLE), ())
 
     def test_selected_store_preserves_existing_owners(self):
@@ -621,9 +664,9 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         self.assertEqual(
             merged_root_certificate.trust_stores,
             (
-                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
-                RootCertificateTrustStoreConstraint(Entity.MICROSOFT, ()),
                 RootCertificateTrustStoreConstraint(Entity.GOOGLE, current_google_constraints),
+                RootCertificateTrustStoreConstraint(Entity.MICROSOFT, ()),
+                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
             ),
         )
         self.assertEqual(
@@ -676,8 +719,8 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         self.assertEqual(
             merged_root_certificate.trust_stores,
             (
-                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
                 RootCertificateTrustStoreConstraint(Entity.MICROSOFT, ()),
+                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
             ),
         )
 
@@ -713,7 +756,7 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
 
         self.assertEqual(merged_data.parsed_data, [])
 
-    def test_selected_store_duplicate_owner_entries_keep_last_value(self):
+    def test_selected_store_duplicate_owner_entries_raise_error(self):
         root_certificate_pem_lines = tuple(self.public_key_x509_snakeoil_ca.pem.splitlines())
         first_microsoft_constraints = (
             CertificateTrustConstraint(
@@ -762,18 +805,8 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
                     Entity.GOOGLE
                 )
             )
-            merged_data = selected_fetcher.from_current_data()
-
-        self.assertEqual(len(merged_data.parsed_data), 1)
-        merged_root_certificate = merged_data.parsed_data[0]
-        self.assertEqual(
-            merged_root_certificate.get_constraints_by_owner(Entity.MICROSOFT),
-            second_microsoft_constraints,
-        )
-        self.assertEqual(
-            merged_root_certificate.get_constraints_by_owner(Entity.GOOGLE),
-            current_google_constraints,
-        )
+            with self.assertRaisesRegex(ValueError, r'duplicate trust-store owner MICROSOFT'):
+                selected_fetcher.from_current_data()
 
     def test_selected_store_sorts_new_certificates_by_identifier(self):
         first_pem_lines = tuple(self.public_key_x509_lets_encrypt.pem.splitlines())

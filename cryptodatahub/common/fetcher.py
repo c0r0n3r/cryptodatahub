@@ -347,7 +347,18 @@ class FetcherRootCertificateStore(FetcherBase):
 
                 merged_constraints.append(RootCertificateTrustStoreConstraint(store_owner, constraints))
 
-        return [
-            RootCertificateParams(*item)
-            for item in root_certificates.items()
+        merged_root_certificates = [
+            RootCertificateParams(
+                certificate=root_certificate.certificate,
+                trust_stores=tuple(sorted(
+                    root_certificate.trust_stores,
+                    key=lambda trust_store: trust_store.owner.name,
+                )),
+            )
+            for root_certificate in (
+                RootCertificateParams(*item)
+                for item in root_certificates.items()
+            )
         ]
+
+        return sorted(merged_root_certificates, key=lambda root_certificate: root_certificate.identifier)
