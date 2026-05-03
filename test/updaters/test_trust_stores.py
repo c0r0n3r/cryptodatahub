@@ -12,10 +12,12 @@ import json
 import os
 
 from test.common.classes import TestClasses
+from test.updaters.classes import MockSelectedStoreFetcher
 
 from cryptodatahub.common.algorithm import Hash
 from cryptodatahub.common.entity import Entity
 from cryptodatahub.common.fetcher import (
+    CertificatePemFetcher,
     FetcherRootCertificateStore,
     FetcherRootCertificateStoreApple,
     FetcherRootCertificateStoreGoogle,
@@ -46,6 +48,16 @@ import updaters.trust_stores as trust_stores_module
 class TestRootCertificateBase(TestClasses.TestKeyBase):
     def setUp(self):
         super().setUp()
+
+        # Mock CertificatePemFetcher to prevent external HTTP calls
+        self.mock_certificate_pem_fetcher = mock.Mock(spec=CertificatePemFetcher)
+        self.mock_certificate_pem_fetcher.return_value = ''  # Return empty string for certificate PEMs
+        self.certificate_pem_fetcher_patcher = mock.patch(
+            'cryptodatahub.common.fetcher.CertificatePemFetcher',
+            return_value=self.mock_certificate_pem_fetcher
+        )
+        self.certificate_pem_fetcher_patcher.start()
+        self.addCleanup(self.certificate_pem_fetcher_patcher.stop)
 
         self.public_key_x509_lets_encrypt = self._get_public_key_x509('letsencrypt_isrg_root_x1')
         self.public_key_x509_snakeoil_ca = self._get_public_key_x509('snakeoil_ca_cert')
@@ -80,8 +92,7 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
             options = len(public_keys) * [{}]
 
         for i, public_key in enumerate(public_keys):
-            sha2_256_fingerprint = public_key.fingerprints[Hash.SHA2_256].replace(':', '')
-            dict_writer.writerow(dict(options[i], **{'SHA-256 Fingerprint': sha2_256_fingerprint}))
+            dict_writer.writerow(dict(options[i], **{'PEM': public_key.pem}))
 
         return mock_data.getvalue().encode('ascii')
 
@@ -128,6 +139,39 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
         return [commit_log, listing] + file_contents
 
 
+class TestCertificatePemFetcher(TestClasses.TestKeyBase):
+    def test_returns_pem_from_root_certificate_store(self):
+        certificate_pem_fetcher = CertificatePemFetcher()
+        expected_pem = self._get_public_key_x509('snakeoil_ca_cert').pem
+
+        with mock.patch.object(
+            RootCertificate,
+            'get_item_by_sha2_256_fingerprint',
+            return_value=mock.Mock(value=mock.Mock(certificate=mock.Mock(pem=expected_pem))),
+        ):
+            actual_pem = certificate_pem_fetcher('dummy-fingerprint')
+
+        self.assertEqual(actual_pem, expected_pem)
+
+    def test_fetches_pem_from_crt_sh_when_missing_in_store(self):
+        certificate_pem_fetcher = CertificatePemFetcher()
+        expected_pem = '-----BEGIN CERTIFICATE-----\nmock\n-----END CERTIFICATE-----'
+
+        with mock.patch.object(
+            RootCertificate,
+            'get_item_by_sha2_256_fingerprint',
+            side_effect=KeyError,
+        ), mock.patch.object(
+            type(certificate_pem_fetcher.http_fetcher),
+            '__call__',
+            return_value=(expected_pem + '\n').encode('utf-8'),
+        ) as mocked_http_fetch:
+            actual_pem = certificate_pem_fetcher('abc123')
+
+        self.assertEqual(actual_pem, expected_pem)
+        mocked_http_fetch.assert_called_once_with('https://crt.sh/?d=abc123')
+
+
 class TestUpdaterRootCertificateStoreGoogle(TestRootCertificateBase):
     def test_parse_empty(self):
         with mock.patch.object(HttpFetcher, '__call__', side_effect=self._get_mock_data_google()):
@@ -154,8 +198,10 @@ class TestUpdaterRootCertificateStoreApple(TestRootCertificateBase):
     def test_parse_pem(self):
         public_key_x509 = self._get_public_key_x509('snakeoil_ca_cert')
         mock_data_apple = self._get_mock_data_apple([public_key_x509])
-        mock_data_crt_sh = public_key_x509.pem.encode('ascii')
-        with mock.patch.object(HttpFetcher, '__call__', side_effect=[mock_data_apple, mock_data_crt_sh]):
+        with mock.patch.object(HttpFetcher, '__call__', return_value=mock_data_apple), mock.patch(
+            'cryptodatahub.common.fetcher.CertificatePemFetcher'
+        ) as mock_certificate_pem_fetcher:
+            mock_certificate_pem_fetcher.return_value.return_value = public_key_x509.pem
             root_certificate_store = FetcherRootCertificateStoreApple.from_current_data()
         self.assertEqual(len(root_certificate_store.parsed_data), 1)
         self.assertEqual(root_certificate_store.parsed_data, {
@@ -174,9 +220,13 @@ class TestUpdaterRootCertificateStoreMicrosoft(TestRootCertificateBase):
         public_key_x509 = self._get_public_key_x509('snakeoil_ca_cert')
 
         mock_data_microsoft = self._get_mock_data_microsoft([public_key_x509])
-        mock_data_crt_sh = public_key_x509.pem.encode('ascii')
 
-        with mock.patch.object(HttpFetcher, '__call__', side_effect=[mock_data_microsoft, mock_data_crt_sh]):
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=[
+            mock_data_microsoft,
+            mock_data_microsoft,
+            mock_data_microsoft,
+            mock_data_microsoft,
+        ]), mock.patch.object(CertificatePemFetcher, '__call__', return_value=public_key_x509.pem):
             root_certificate_store = FetcherRootCertificateStoreMicrosoft.from_current_data()
         self.assertEqual(len(root_certificate_store.parsed_data), 1)
         self.assertEqual(root_certificate_store.parsed_data, {
@@ -186,42 +236,55 @@ class TestUpdaterRootCertificateStoreMicrosoft(TestRootCertificateBase):
     def test_parse_status_disabled(self):
         mock_data = self._get_mock_data_microsoft(
             [self.public_key_x509_snakeoil_ca, self.public_key_x509_lets_encrypt],
-            [{}, {'Microsoft Status': 'Disabled'}],
         )
         mock_data = [
             mock_data,
-            self.public_key_x509_snakeoil_ca.pem.encode('ascii'),
-            self.public_key_x509_snakeoil_ca.pem.encode('ascii'),
+            mock_data,
+            mock_data,
+            mock_data,
         ]
 
-        with mock.patch.object(HttpFetcher, '__call__', side_effect=mock_data):
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=mock_data), mock.patch.object(
+            CertificatePemFetcher,
+            '__call__',
+            return_value=self.public_key_x509_snakeoil_ca.pem,
+        ):
             root_certificate_store = FetcherRootCertificateStoreMicrosoft.from_current_data()
-        self.assertEqual(len(root_certificate_store.parsed_data), 1)
+        self.assertEqual(len(root_certificate_store.parsed_data), 2)
         self.assertEqual(root_certificate_store.parsed_data, {
             tuple(self.public_key_x509_snakeoil_ca.pem.splitlines()): (),
+            tuple(self.public_key_x509_lets_encrypt.pem.splitlines()): (),
         })
 
     def test_parse_status_not_before(self):
         mock_data = self._get_mock_data_microsoft(
             [self.public_key_x509_snakeoil_ca, self.public_key_x509_lets_encrypt],
-            [{}, {'Microsoft Status': 'NotBefore', 'Valid From [GMT]': '1970 Jan 01'}]
         )
-        mock_data = [
-            mock_data,
-            self.public_key_x509_snakeoil_ca.pem.encode('ascii'),
-        ]
+        mock_data = [mock_data, mock_data, mock_data, mock_data]
 
-        with mock.patch.object(HttpFetcher, '__call__', side_effect=mock_data):
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=mock_data), mock.patch.object(
+            CertificatePemFetcher,
+            '__call__',
+            return_value=self.public_key_x509_snakeoil_ca.pem,
+        ):
             root_certificate_store = FetcherRootCertificateStoreMicrosoft.from_current_data()
         self.assertEqual(len(root_certificate_store.parsed_data), 2)
         self.assertEqual(root_certificate_store.parsed_data, {
             tuple(self.public_key_x509_snakeoil_ca.pem.splitlines()): (),
-            tuple(self.public_key_x509_lets_encrypt.pem.splitlines()): (
-                CertificateTrustConstraint(
-                    action=RootCertificateTrustConstraintAction.DISTRUST,
-                    date=datetime.datetime(1970, 1, 1, 0, 0),
-                ),
-            ),
+            tuple(self.public_key_x509_lets_encrypt.pem.splitlines()): (),
+        })
+
+    def test_parse_pem_only_row(self):
+        current_data = [
+            {'PEM': self.public_key_x509_snakeoil_ca.pem},
+        ]
+
+        parsed_data = FetcherRootCertificateStoreMicrosoft._transform_data(  # pylint: disable=protected-access
+            current_data
+        )
+
+        self.assertEqual(parsed_data, {
+            tuple(self.public_key_x509_snakeoil_ca.pem.splitlines()): (),
         })
 
 
@@ -319,10 +382,10 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             mock_data_google[0],
             mock_data_google[1],
             mock_data_microsoft,
-            self.public_key_x509_snakeoil_ca.pem.encode('ascii'),
             self._get_mock_data_apple(),
         ]
-        with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results):
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results), \
+             mock.patch.object(CertificatePemFetcher, '__call__', return_value=self.public_key_x509_snakeoil_ca.pem):
             fetched_data = FetcherRootCertificateStore.from_current_data()
 
         self.assertEqual(len(fetched_data.parsed_data), 2)
@@ -345,10 +408,10 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             mock_data_google[0],
             mock_data_google[1],
             mock_data_microsoft,
-            self.public_key_x509_snakeoil_ca.pem.encode('ascii'),
             self._get_mock_data_apple(),
         ]
-        with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results):
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results), \
+             mock.patch.object(CertificatePemFetcher, '__call__', return_value=self.public_key_x509_snakeoil_ca.pem):
             fetched_data = FetcherRootCertificateStore.from_current_data()
 
         self.assertEqual(len(fetched_data.parsed_data), 2)
@@ -509,6 +572,241 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
 
         new_root_certificate = merged_by_certificate[new_root_certificate_pem_lines]
         self.assertEqual(new_root_certificate.get_constraints_by_owner(Entity.GOOGLE), ())
+
+    def test_selected_store_preserves_existing_owners(self):
+        root_certificate_pem_lines = tuple(self.public_key_x509_snakeoil_ca.pem.splitlines())
+        existing_root_certificate = RootCertificateParams(
+            certificate=root_certificate_pem_lines,
+            trust_stores=(
+                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
+                RootCertificateTrustStoreConstraint(Entity.MICROSOFT, ()),
+            ),
+        )
+        existing_root_certificates = collections.OrderedDict([
+            (
+                'JSON_RECORD_KEY_DOES_NOT_MATCH_IDENTIFIER',
+                existing_root_certificate,
+            ),
+        ])
+
+        current_google_constraints = (
+            CertificateTrustConstraint(
+                action=RootCertificateTrustConstraintAction.DISTRUST,
+                domains=['example.com'],
+            ),
+        )
+
+        MockSelectedStoreFetcher.parsed_data = {
+            root_certificate_pem_lines: current_google_constraints,
+        }
+
+        with mock.patch.object(
+            FetcherRootCertificateStore,
+            'get_root_certificate_store_updaters',
+            return_value={Entity.GOOGLE: MockSelectedStoreFetcher},
+        ), mock.patch.object(
+            RootCertificate,
+            'get_json_records',
+            return_value=existing_root_certificates,
+        ):
+            selected_fetcher = (
+                trust_stores_module._get_selected_trust_store_fetcher_class(  # pylint: disable=protected-access
+                    Entity.GOOGLE
+                )
+            )
+            merged_data = selected_fetcher.from_current_data()
+
+        self.assertEqual(len(merged_data.parsed_data), 1)
+        merged_root_certificate = merged_data.parsed_data[0]
+        self.assertEqual(
+            merged_root_certificate.trust_stores,
+            (
+                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
+                RootCertificateTrustStoreConstraint(Entity.MICROSOFT, ()),
+                RootCertificateTrustStoreConstraint(Entity.GOOGLE, current_google_constraints),
+            ),
+        )
+        self.assertEqual(
+            merged_root_certificate.get_constraints_by_owner(Entity.MOZILLA),
+            (),
+        )
+        self.assertEqual(
+            merged_root_certificate.get_constraints_by_owner(Entity.MICROSOFT),
+            (),
+        )
+        self.assertEqual(
+            merged_root_certificate.get_constraints_by_owner(Entity.GOOGLE),
+            current_google_constraints,
+        )
+
+    def test_selected_store_removes_selected_owner_when_missing_from_current_data(self):
+        root_certificate_pem_lines = tuple(self.public_key_x509_snakeoil_ca.pem.splitlines())
+        existing_root_certificate = RootCertificateParams(
+            certificate=root_certificate_pem_lines,
+            trust_stores=(
+                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
+                RootCertificateTrustStoreConstraint(Entity.GOOGLE, ()),
+                RootCertificateTrustStoreConstraint(Entity.MICROSOFT, ()),
+            ),
+        )
+        existing_root_certificates = collections.OrderedDict([
+            ('ANY_KEY', existing_root_certificate),
+        ])
+
+        MockSelectedStoreFetcher.parsed_data = {}
+
+        with mock.patch.object(
+            FetcherRootCertificateStore,
+            'get_root_certificate_store_updaters',
+            return_value={Entity.GOOGLE: MockSelectedStoreFetcher},
+        ), mock.patch.object(
+            RootCertificate,
+            'get_json_records',
+            return_value=existing_root_certificates,
+        ):
+            selected_fetcher = (
+                trust_stores_module._get_selected_trust_store_fetcher_class(  # pylint: disable=protected-access
+                    Entity.GOOGLE
+                )
+            )
+            merged_data = selected_fetcher.from_current_data()
+
+        self.assertEqual(len(merged_data.parsed_data), 1)
+        merged_root_certificate = merged_data.parsed_data[0]
+        self.assertEqual(
+            merged_root_certificate.trust_stores,
+            (
+                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
+                RootCertificateTrustStoreConstraint(Entity.MICROSOFT, ()),
+            ),
+        )
+
+    def test_selected_store_drops_certificate_when_selected_owner_was_last_owner(self):
+        root_certificate_pem_lines = tuple(self.public_key_x509_snakeoil_ca.pem.splitlines())
+        existing_root_certificate = RootCertificateParams(
+            certificate=root_certificate_pem_lines,
+            trust_stores=(
+                RootCertificateTrustStoreConstraint(Entity.GOOGLE, ()),
+            ),
+        )
+        existing_root_certificates = collections.OrderedDict([
+            ('ANY_KEY', existing_root_certificate),
+        ])
+
+        MockSelectedStoreFetcher.parsed_data = {}
+
+        with mock.patch.object(
+            FetcherRootCertificateStore,
+            'get_root_certificate_store_updaters',
+            return_value={Entity.GOOGLE: MockSelectedStoreFetcher},
+        ), mock.patch.object(
+            RootCertificate,
+            'get_json_records',
+            return_value=existing_root_certificates,
+        ):
+            selected_fetcher = (
+                trust_stores_module._get_selected_trust_store_fetcher_class(  # pylint: disable=protected-access
+                    Entity.GOOGLE
+                )
+            )
+            merged_data = selected_fetcher.from_current_data()
+
+        self.assertEqual(merged_data.parsed_data, [])
+
+    def test_selected_store_duplicate_owner_entries_keep_last_value(self):
+        root_certificate_pem_lines = tuple(self.public_key_x509_snakeoil_ca.pem.splitlines())
+        first_microsoft_constraints = (
+            CertificateTrustConstraint(
+                action=RootCertificateTrustConstraintAction.DISTRUST,
+                domains=['first.example'],
+            ),
+        )
+        second_microsoft_constraints = (
+            CertificateTrustConstraint(
+                action=RootCertificateTrustConstraintAction.DISTRUST,
+                domains=['second.example'],
+            ),
+        )
+        current_google_constraints = (
+            CertificateTrustConstraint(
+                action=RootCertificateTrustConstraintAction.DISTRUST,
+                domains=['google.example'],
+            ),
+        )
+        existing_root_certificate = RootCertificateParams(
+            certificate=root_certificate_pem_lines,
+            trust_stores=(
+                RootCertificateTrustStoreConstraint(Entity.MICROSOFT, first_microsoft_constraints),
+                RootCertificateTrustStoreConstraint(Entity.MICROSOFT, second_microsoft_constraints),
+            ),
+        )
+        existing_root_certificates = collections.OrderedDict([
+            ('ANY_KEY', existing_root_certificate),
+        ])
+
+        MockSelectedStoreFetcher.parsed_data = {
+            root_certificate_pem_lines: current_google_constraints,
+        }
+
+        with mock.patch.object(
+            FetcherRootCertificateStore,
+            'get_root_certificate_store_updaters',
+            return_value={Entity.GOOGLE: MockSelectedStoreFetcher},
+        ), mock.patch.object(
+            RootCertificate,
+            'get_json_records',
+            return_value=existing_root_certificates,
+        ):
+            selected_fetcher = (
+                trust_stores_module._get_selected_trust_store_fetcher_class(  # pylint: disable=protected-access
+                    Entity.GOOGLE
+                )
+            )
+            merged_data = selected_fetcher.from_current_data()
+
+        self.assertEqual(len(merged_data.parsed_data), 1)
+        merged_root_certificate = merged_data.parsed_data[0]
+        self.assertEqual(
+            merged_root_certificate.get_constraints_by_owner(Entity.MICROSOFT),
+            second_microsoft_constraints,
+        )
+        self.assertEqual(
+            merged_root_certificate.get_constraints_by_owner(Entity.GOOGLE),
+            current_google_constraints,
+        )
+
+    def test_selected_store_sorts_new_certificates_by_identifier(self):
+        first_pem_lines = tuple(self.public_key_x509_lets_encrypt.pem.splitlines())
+        second_pem_lines = tuple(self.public_key_x509_snakeoil_ca.pem.splitlines())
+
+        first_identifier = RootCertificateParams(certificate=first_pem_lines).identifier
+        second_identifier = RootCertificateParams(certificate=second_pem_lines).identifier
+
+        MockSelectedStoreFetcher.parsed_data = {
+            second_pem_lines: (),
+            first_pem_lines: (),
+        }
+
+        with mock.patch.object(
+            FetcherRootCertificateStore,
+            'get_root_certificate_store_updaters',
+            return_value={Entity.GOOGLE: MockSelectedStoreFetcher},
+        ), mock.patch.object(
+            RootCertificate,
+            'get_json_records',
+            return_value=collections.OrderedDict(),
+        ):
+            selected_fetcher = (
+                trust_stores_module._get_selected_trust_store_fetcher_class(  # pylint: disable=protected-access
+                    Entity.GOOGLE
+                )
+            )
+            merged_data = selected_fetcher.from_current_data()
+
+        self.assertEqual(
+            [root_certificate.identifier for root_certificate in merged_data.parsed_data],
+            sorted([first_identifier, second_identifier]),
+        )
 
 
 class TestUpdaterRootCertificateTrustStoreMain(TestRootCertificateBase):

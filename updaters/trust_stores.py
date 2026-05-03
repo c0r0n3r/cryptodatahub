@@ -59,7 +59,10 @@ def _get_selected_trust_store_fetcher_class(trust_store_owner):
         @classmethod
         def _get_current_data(cls):
             current_root_store = store_fetcher_class.from_current_data()
-            existing_root_certificates = RootCertificate.get_json_records(RootCertificateParams)
+            existing_root_certificates = collections.OrderedDict([
+                (root_certificate.identifier, root_certificate)
+                for root_certificate in RootCertificate.get_json_records(RootCertificateParams).values()
+            ])
 
             current_root_certificates = collections.OrderedDict()
             for certificate_data, constraints in current_root_store.parsed_data.items():
@@ -76,24 +79,20 @@ def _get_selected_trust_store_fetcher_class(trust_store_owner):
                 if current_root_certificate is not None:
                     selected_trust_store_constraints = current_root_certificate.trust_stores[0].constraints
 
-                merged_trust_stores = []
-                selected_trust_store_present = False
-                for trust_store in existing_root_certificate.trust_stores:
-                    if trust_store.owner == trust_store_owner:
-                        selected_trust_store_present = True
-                        if selected_trust_store_constraints is not None:
-                            merged_trust_stores.append(RootCertificateTrustStoreConstraint(
-                                trust_store_owner,
-                                selected_trust_store_constraints,
-                            ))
-                    else:
-                        merged_trust_stores.append(trust_store)
+                owner_constraints = collections.OrderedDict([
+                    (trust_store.owner, trust_store.constraints)
+                    for trust_store in existing_root_certificate.trust_stores
+                ])
 
-                if not selected_trust_store_present and selected_trust_store_constraints is not None:
-                    merged_trust_stores.append(RootCertificateTrustStoreConstraint(
-                        trust_store_owner,
-                        selected_trust_store_constraints,
-                    ))
+                if selected_trust_store_constraints is None:
+                    owner_constraints.pop(trust_store_owner, None)
+                else:
+                    owner_constraints[trust_store_owner] = selected_trust_store_constraints
+
+                merged_trust_stores = [
+                    RootCertificateTrustStoreConstraint(owner, constraints)
+                    for owner, constraints in owner_constraints.items()
+                ]
 
                 if merged_trust_stores:
                     merged_root_certificates[identifier] = RootCertificateParams(

@@ -23,6 +23,22 @@ class UpdaterBase():
             current_data_items_by_name.items()
         ))
 
+    def _get_ordered_identifiers(self, current_data_items_by_name):
+        existing_data = self.enum_class.get_json(self.enum_param_class)
+
+        ordered_identifiers = [
+            identifier
+            for identifier in existing_data.keys()
+            if identifier in current_data_items_by_name
+        ]
+        ordered_identifiers.extend(sorted(
+            identifier
+            for identifier in current_data_items_by_name.keys()
+            if identifier not in existing_data
+        ))
+
+        return ordered_identifiers
+
     def __call__(self):
         current_data = self.fetcher_class.from_current_data()
         current_data_items_by_name = {
@@ -32,5 +48,5 @@ class UpdaterBase():
         if self._has_data_changed(current_data_items_by_name):
             self.enum_class.set_json(self.enum_param_class, collections.OrderedDict([
                 (identifier, current_data_items_by_name[identifier]._asdict())
-                for identifier in sorted(current_data_items_by_name.keys())
+                for identifier in self._get_ordered_identifiers(current_data_items_by_name)
             ]))
