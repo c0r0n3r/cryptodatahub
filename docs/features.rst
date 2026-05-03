@@ -17,6 +17,15 @@ Algorithms
 -  `elliptic-curve <https://en.wikipedia.org/wiki/Elliptic-curve_cryptography>`__
 -  `message authentication code <https://en.wikipedia.org/wiki/Message_authentication_code>`__
 
+Vulnerabilities
+---------------
+
+-  `D(HE)at <https://dheatattack.com/>`__
+-  `Logjam <https://en.wikipedia.org/wiki/Logjam_(computer_security)>`__
+-  `Sweet32 <https://sweet32.info/>`__
+-  `Shatter <https://en.wikipedia.org/wiki/Shatter_attack>`__
+-  `Weak DH <https://weakdh.org/>`__
+
 Parameters
 ----------
 
@@ -46,6 +55,7 @@ Stores
    -  `Google <https://en.wikipedia.org/wiki/Google>`__
    -  `Microsoft <https://en.wikipedia.org/wiki/Microsoft>`__
    -  `Mozilla <https://en.wikipedia.org/wiki/Mozilla>`__
+   -  `Oracle <https://en.wikipedia.org/wiki/Oracle_Corporation>`__
 
 -  `Certificate Transparency <https://certificate.transparency.dev>`__ (CT)
    `Logs <https://certificate.transparency.dev/logs>`__
@@ -129,3 +139,16 @@ Client Capabilities
       -  `Chromium <https://en.wikipedia.org/wiki/Chromium_(web_browser)>`__
       -  `Firefox <https://en.wikipedia.org/wiki/Firefox>`__
       -  `Opera <https://en.wikipedia.org/wiki/Opera_(web_browser)>`__
+
+Vulnerabilities
+---------------
+
+-  Transport Layer Security (TLS)
+
+   -  `CRIME <https://en.wikipedia.org/wiki/CRIME>`__
+   -  `DROWN <https://drownattack.com/>`__
+   -  `Export-grade <https://en.wikipedia.org/wiki/Arms_Export_Control_Act>`__
+   -  `FREAK <https://en.wikipedia.org/wiki/FREAK>`__
+   -  `Lucky13 <https://en.wikipedia.org/wiki/Lucky_Thirteen_attack>`__
+   -  `POODLE <https://en.wikipedia.org/wiki/POODLE>`__
+   -  `RC4 NOMORE <https://www.rc4nomore.com/>`__

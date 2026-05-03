@@ -4,7 +4,7 @@ build-backend = 'setuptools.build_meta'
 
 [project]
 name = 'CryptoDataHub'
-version = '1.1.0'
+version = '1.1.1'
 description = 'Repository of cryptography-related data'
 authors = [
     {name = 'Szilárd Pfeiffer', email = 'coroner@pfeifferszilard.hu'}

@@ -3,11 +3,29 @@ Changelog
 =========
 
 ------------------
-1.1.1 - Unreleased
+1.1.1 - 2026-05-03
 ------------------
+
+Notable fixes
+=============
+
+-  Generic
+
+   -  fix notable trusted root CA certificates stores fetcher
+
+      -  `Mozilla <https://en.wikipedia.org/wiki/Mozilla>`__ (#44)
+      -  `Google <https://en.wikipedia.org/wiki/Google>`__ (#45)
+      -  `Microsoft <https://en.wikipedia.org/wiki/Microsoft>`__ (#46)
+      -  `Apple <https://en.wikipedia.org/wiki/Apple_Inc.>`__ (#47)
 
 Features
 ========
+
+-  Generic
+
+   -  add trusted root CA certificates from notable stores
+
+      -  `Oracle <https://en.wikipedia.org/wiki/Oracle_Corporation>`__ (#41)
 
 -  TLS (``tls``)
 
