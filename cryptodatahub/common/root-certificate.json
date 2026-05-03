@@ -53,6 +53,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -255,6 +259,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -628,6 +636,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -693,6 +705,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -738,6 +754,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -785,6 +805,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -1931,6 +1955,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -1995,6 +2023,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -2208,6 +2240,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -2265,6 +2301,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -2316,6 +2356,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -2383,6 +2427,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -2743,6 +2791,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -2845,6 +2897,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -3166,6 +3222,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -3428,6 +3488,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -3497,6 +3561,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -3700,6 +3768,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -3757,6 +3829,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -3806,6 +3882,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -3896,6 +3976,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -3953,6 +4037,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -4002,6 +4090,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -4056,6 +4148,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -4154,6 +4250,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -4214,6 +4314,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -4281,6 +4385,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -4630,6 +4738,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -4688,6 +4800,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -4896,6 +5012,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -5005,6 +5125,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -5062,6 +5186,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -5134,6 +5262,10 @@
                         "date": "2024-11-30T00:00:00"
                     }
                 ]
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -5185,6 +5317,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -5244,6 +5380,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -5311,6 +5451,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -5373,6 +5517,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -5737,6 +5885,10 @@
             {
                 "owner": "APPLE",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -5780,6 +5932,10 @@
             {
                 "owner": "APPLE",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -5819,6 +5975,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -5866,6 +6026,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -5919,6 +6083,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -5986,6 +6154,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -6024,6 +6196,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -6114,6 +6290,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -6214,6 +6394,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -6266,6 +6450,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -6312,6 +6500,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -6377,6 +6569,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -6952,6 +7148,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -7010,6 +7210,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -7129,6 +7333,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -7243,6 +7451,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -7325,6 +7537,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -7406,6 +7622,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -7607,6 +7827,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -7719,6 +7943,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -8011,6 +8239,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -8075,6 +8307,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -8141,6 +8377,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -8184,6 +8424,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -8584,6 +8828,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -8650,6 +8898,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -9507,6 +9759,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -9569,6 +9825,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -9634,6 +9894,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -9703,6 +9967,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -9768,6 +10036,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -9824,6 +10096,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -9919,6 +10195,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -9980,6 +10260,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -10189,6 +10473,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -10425,6 +10713,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -10693,6 +10985,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -10744,6 +11040,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -10814,6 +11114,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -11040,6 +11344,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -11098,6 +11406,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -11158,6 +11470,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -11634,6 +11950,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -11688,6 +12008,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -11751,6 +12075,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -12071,6 +12399,10 @@
             {
                 "owner": "MICROSOFT",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -12132,6 +12464,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -12244,6 +12580,10 @@
             {
                 "owner": "APPLE",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -12294,6 +12634,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -12908,6 +13252,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -13022,6 +13370,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -13079,6 +13431,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -13254,6 +13610,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -13323,6 +13683,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -13474,6 +13838,10 @@
             {
                 "owner": "APPLE",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -13520,6 +13888,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -13574,6 +13946,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -13632,6 +14008,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -14131,6 +14511,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -15494,6 +15878,10 @@
             {
                 "owner": "MOZILLA",
                 "constraints": []
+            },
+            {
+                "owner": "ORACLE",
+                "constraints": []
             }
         ]
     },
@@ -15555,6 +15943,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]
@@ -16064,6 +16456,524 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            }
+        ]
+    },
+    "ADDTRUST_EXTERNAL_CA_ROOT_1": {
+        "_meta": {
+            "_subject": {
+                "country_name": "SE",
+                "organization_name": "AddTrust AB",
+                "organizational_unit_name": "AddTrust External TTP Network",
+                "common_name": "AddTrust External CA Root"
+            },
+            "_fingerprints": {
+                "MD5": "1D:35:54:04:85:78:B0:3F:42:42:4D:BF:20:73:0A:3F",
+                "SHA1": "02:FA:F3:E2:91:43:54:68:60:78:57:69:4D:F5:E4:5B:68:85:18:68",
+                "SHA2_256": "68:7F:A4:51:38:22:78:FF:F0:C8:B1:1F:8D:43:D5:76:67:1C:6E:B2:BC:EA:B4:13:FB:83:D9:65:D0:6D:2F:F2"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIENjCCAx6gAwIBAgIBATANBgkqhkiG9w0BAQUFADBvMQswCQYDVQQGEwJTRTEU",
+            "MBIGA1UEChMLQWRkVHJ1c3QgQUIxJjAkBgNVBAsTHUFkZFRydXN0IEV4dGVybmFs",
+            "IFRUUCBOZXR3b3JrMSIwIAYDVQQDExlBZGRUcnVzdCBFeHRlcm5hbCBDQSBSb290",
+            "MB4XDTAwMDUzMDEwNDgzOFoXDTIwMDUzMDEwNDgzOFowbzELMAkGA1UEBhMCU0Ux",
+            "FDASBgNVBAoTC0FkZFRydXN0IEFCMSYwJAYDVQQLEx1BZGRUcnVzdCBFeHRlcm5h",
+            "bCBUVFAgTmV0d29yazEiMCAGA1UEAxMZQWRkVHJ1c3QgRXh0ZXJuYWwgQ0EgUm9v",
+            "dDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALf3GjPm8gAELTngTlvt",
+            "H7xsD821+iO2zt6bETOXpClMfZOfvUq8k+0DGuOPz+VtUFrWlymUWoCwSXrbLpX9",
+            "uMq/NzgtHj6RQa1wVsfwTz/oMp50ysiQVOnGXw94nZpAPA6sYapeFI+eh6FqUNzX",
+            "mk6vBbOmcZSccbNQYArHE504B4YCqOmoaSYYkKtMsE8jqzpPhNjfzp/haW+710LX",
+            "a0Tkx63ubUFfclpxCDezeWWkWaCUN/cALw3CknLa0Dhy2xSoRcRdKn23tNbE7qzN",
+            "E0S3ySvdQwAl+mG5aWpYIxG3pzOPVnVZ9c0p10a3CitlttNCbxWyuHv77+ldU9U0",
+            "WicCAwEAAaOB3DCB2TAdBgNVHQ4EFgQUrb2YejS0Jvf6xCZU7wO94CTLVBowCwYD",
+            "VR0PBAQDAgEGMA8GA1UdEwEB/wQFMAMBAf8wgZkGA1UdIwSBkTCBjoAUrb2YejS0",
+            "Jvf6xCZU7wO94CTLVBqhc6RxMG8xCzAJBgNVBAYTAlNFMRQwEgYDVQQKEwtBZGRU",
+            "cnVzdCBBQjEmMCQGA1UECxMdQWRkVHJ1c3QgRXh0ZXJuYWwgVFRQIE5ldHdvcmsx",
+            "IjAgBgNVBAMTGUFkZFRydXN0IEV4dGVybmFsIENBIFJvb3SCAQEwDQYJKoZIhvcN",
+            "AQEFBQADggEBALCb4IUlwtYj4g+WBpKdQZic2YR5gdkeWxQHIzZlj7DYd7usQWxH",
+            "YINRsPkyPef89iYTx4AWpb9a/IfPeHmJIZriTAcKhjW88t5RxNKWt9x+Tu5w/Rw5",
+            "6wwCURQtjr0W4MHfRnXnJK3s9EK0hZNwEGe6nQY1ShjTK3rMUUKhemPR5ruhxSvC",
+            "Nr4TDea9Y355e6cJDUCrat2PisP29owaQgVR1EX1n6diIWgVIEM8med8vSTYqZEX",
+            "c4g/VhsxOBi0cQ+azcgOno4uG+GMmIPLHzHxREzGBHNJdmAPx/i9F4BrLunMTA5a",
+            "mnkPIAou1Z5jJh5VkpTYghdae9C8x49OhgQ=",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "ORACLE",
+                "constraints": []
+            }
+        ]
+    },
+    "ADDTRUST_QUALIFIED_CA_ROOT_1": {
+        "_meta": {
+            "_subject": {
+                "country_name": "SE",
+                "organization_name": "AddTrust AB",
+                "organizational_unit_name": "AddTrust TTP Network",
+                "common_name": "AddTrust Qualified CA Root"
+            },
+            "_fingerprints": {
+                "MD5": "27:EC:39:47:CD:DA:5A:AF:E2:9A:01:65:21:A9:4C:BB",
+                "SHA1": "4D:23:78:EC:91:95:39:B5:00:7F:75:8F:03:3B:21:1E:C5:4D:8B:CF",
+                "SHA2_256": "80:95:21:08:05:DB:4B:BC:35:5E:44:28:D8:FD:6E:C2:CD:E3:AB:5F:B9:7A:99:42:98:8E:B8:F4:DC:D0:60:16"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIEHjCCAwagAwIBAgIBATANBgkqhkiG9w0BAQUFADBnMQswCQYDVQQGEwJTRTEU",
+            "MBIGA1UEChMLQWRkVHJ1c3QgQUIxHTAbBgNVBAsTFEFkZFRydXN0IFRUUCBOZXR3",
+            "b3JrMSMwIQYDVQQDExpBZGRUcnVzdCBRdWFsaWZpZWQgQ0EgUm9vdDAeFw0wMDA1",
+            "MzAxMDQ0NTBaFw0yMDA1MzAxMDQ0NTBaMGcxCzAJBgNVBAYTAlNFMRQwEgYDVQQK",
+            "EwtBZGRUcnVzdCBBQjEdMBsGA1UECxMUQWRkVHJ1c3QgVFRQIE5ldHdvcmsxIzAh",
+            "BgNVBAMTGkFkZFRydXN0IFF1YWxpZmllZCBDQSBSb290MIIBIjANBgkqhkiG9w0B",
+            "AQEFAAOCAQ8AMIIBCgKCAQEA5B6a/twJWoekn0e+EV+vhDTbYjx5eLfpMLXsDBwq",
+            "xBb/4Oxx64r1EW7tTw2R0hIYLUkVAcKkIhPHEWT/IhKauY5cLwjPcWqzZwFZ8V1G",
+            "87B4pfYOQnrjfxvM0PC3KP0q6p6zsLkEqv32x7SxuCqg+1jxGaBvcCV+PmlKfw8i",
+            "2O+tCBGaKZnhqkRFmhJePp1tUvznoD1oL/BLcHwTOK28FSXx1s6rosAx1i+f4P8U",
+            "WfyEk9mHfExUE+uf0S0R+Bg6Ot4l2ffTQO2kBhLEO+GRwVY18BTcZTYJbqukB8c1",
+            "0cIDMzZbdSZtQvESa0NvS3GU+jQd7RNuyoB/mC9suWXY6QIDAQABo4HUMIHRMB0G",
+            "A1UdDgQWBBQ5lYtii1zJ1IC6WA+XPxUIQ8yYpzALBgNVHQ8EBAMCAQYwDwYDVR0T",
+            "AQH/BAUwAwEB/zCBkQYDVR0jBIGJMIGGgBQ5lYtii1zJ1IC6WA+XPxUIQ8yYp6Fr",
+            "pGkwZzELMAkGA1UEBhMCU0UxFDASBgNVBAoTC0FkZFRydXN0IEFCMR0wGwYDVQQL",
+            "ExRBZGRUcnVzdCBUVFAgTmV0d29yazEjMCEGA1UEAxMaQWRkVHJ1c3QgUXVhbGlm",
+            "aWVkIENBIFJvb3SCAQEwDQYJKoZIhvcNAQEFBQADggEBABmrder4i2VhlRO6aQTv",
+            "hsoToMeqT2QbPxj2qC0sVY8FtzDqQmodwCVRLae/DLPt7wh/bDxGGuoYQ992zPlm",
+            "hpwsaPXpF/gxsxjE1kh9I0xowX67ARRvxdlu3rsEQmr49lx95dr6h+sNNVJn0J6X",
+            "dgWTP5XHAeZpVTh/EGGZyeNfpso+gmNIquIISD6q8rKFYqa0p9m9N5xotS1WfbC3",
+            "P6CxB9bpT9zeRXEwMn8bLgn5v1Kh7sKAPgZcLlVAwRv1cEWw3F369nJad9Jjzc9Y",
+            "iQBCYz95OdBEsIJuQRno3eDBiFrRHnGTHyQwdOUeqN48Jzd/g66ed8/wMLH/S5no",
+            "xqE=",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "ORACLE",
+                "constraints": []
+            }
+        ]
+    },
+    "DIGICERT_CS_ECC_P384_ROOT_G5_4535793849608121436625430897171378193": {
+        "_meta": {
+            "_subject": {
+                "country_name": "US",
+                "organization_name": "DigiCert, Inc.",
+                "common_name": "DigiCert CS ECC P384 Root G5"
+            },
+            "_fingerprints": {
+                "MD5": "DD:B4:30:09:E8:67:1F:45:A0:80:EC:9D:D9:B1:A1:54",
+                "SHA1": "84:35:73:11:2A:3B:31:93:44:E5:E4:EC:AB:C9:F2:6C:7C:D5:4D:07",
+                "SHA2_256": "26:C5:6A:D2:20:8D:1E:9B:15:2F:66:85:3B:F4:79:7C:BE:B7:55:2C:1F:3F:47:72:51:E8:CB:1A:E7:E7:97:BF"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIICFjCCAZ2gAwIBAgIQA2mP5xLVGfPO0P23sWQwETAKBggqhkjOPQQDAzBNMQsw",
+            "CQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQsIEluYy4xJTAjBgNVBAMTHERp",
+            "Z2lDZXJ0IENTIEVDQyBQMzg0IFJvb3QgRzUwHhcNMjEwMTE1MDAwMDAwWhcNNDYw",
+            "MTE0MjM1OTU5WjBNMQswCQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQsIElu",
+            "Yy4xJTAjBgNVBAMTHERpZ2lDZXJ0IENTIEVDQyBQMzg0IFJvb3QgRzUwdjAQBgcq",
+            "hkjOPQIBBgUrgQQAIgNiAAR/FK2Ftpf9AiE1TWDoOJOTmz0FEG2v0/7v+rv7c5nz",
+            "7DISjcdouIveiaKIVHeNuyF+M5VWlgno1YyhBLibbhkAYuhCKKZYN4QZVSZ7Mzdn",
+            "8ppyraGurgBCPBx+uHqeIZyjQjBAMB0GA1UdDgQWBBTwjJhxOThlwjobphdmHcjt",
+            "Zd6SNjAOBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAKBggqhkjOPQQD",
+            "AwNnADBkAjAjb+EAGSZQ5EYgZYs3p8/rBuHMMskqoewyDXOiHgIcNWEqTmmrOXft",
+            "l4jAfWvqid0CMEPx0VijdT6Gm7ZVEYsX9z3+CmnFf07GdRtalMvqERHGCCKI3tB6",
+            "oqV56OMhp80Tsw==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "ORACLE",
+                "constraints": []
+            }
+        ]
+    },
+    "DIGICERT_CS_RSA4096_ROOT_G5_9049548610842784425165610562858837536": {
+        "_meta": {
+            "_subject": {
+                "country_name": "US",
+                "organization_name": "DigiCert, Inc.",
+                "common_name": "DigiCert CS RSA4096 Root G5"
+            },
+            "_fingerprints": {
+                "MD5": "A7:33:ED:BF:1B:5D:E1:19:C4:91:C9:4A:EA:F7:6D:C7",
+                "SHA1": "5E:EE:D8:6F:A3:7C:67:52:30:64:2F:55:C8:4D:DB:F6:7C:D3:3C:80",
+                "SHA2_256": "73:53:B6:D6:C2:D6:DA:42:47:77:3F:3F:07:D0:75:DE:CB:51:34:21:2B:EA:D0:92:8E:F1:F4:61:15:26:09:41"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFZDCCA0ygAwIBAgIQBs7hMb5tVcgH98DH+0TmIDANBgkqhkiG9w0BAQwFADBM",
+            "MQswCQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQsIEluYy4xJDAiBgNVBAMT",
+            "G0RpZ2lDZXJ0IENTIFJTQTQwOTYgUm9vdCBHNTAeFw0yMTAxMTUwMDAwMDBaFw00",
+            "NjAxMTQyMzU5NTlaMEwxCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5EaWdpQ2VydCwg",
+            "SW5jLjEkMCIGA1UEAxMbRGlnaUNlcnQgQ1MgUlNBNDA5NiBSb290IEc1MIICIjAN",
+            "BgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtjNzgNhiA3AULBEcOV58rnyDhh3+",
+            "Ji9MJK2L6oNfqbw9W/wLmEwCRzDs4v7s6DRbZl6/O9cspiX/jFmz3+rafCnZRlBy",
+            "CB1u0RsK3R/NmYn6Dw9zxOGcHXUyzW+X2ipqlbJsyQnQ6gt7fRcGSZnv1t7gyFPU",
+            "rsZ38Ya7Ixy4wN9Z94590e+C5iaLWji1/3XVstlPCfM3iFDaEaSKFBTRUwQAffNq",
+            "RBj+UHAyBxyomg46HcUKH24LJmm3PKJXcCyG+kxulalYQ7msEtb/P+3XQxdrTM6e",
+            "xJCr//oQUJqjkFfW54wQrp8WGs81HX/Xdu2KnDWnKLinXSH8MDfd3ggZTxXG56ba",
+            "kEeO95RTTI5TAr79meXqhtCvAwLTm6qT8asojiAB/0z7zLcpQPWHpBITBR9DbtdR",
+            "UJ84tCDtFwkSj8y5Ga+fzb5pEdOvVRBtF4Z5llLGsgCd5a84sDX0iGuPDgQ9fO6v",
+            "zdNqEErGzYbKIj2hSlz7Dv+I31xip8C5HtmsbH44N/53kyXChYpPtTcGWgaBFPHO",
+            "lJ2ZkeoyWs5nPW4EZq0MTy2jLvee9Xid9wr9fo/jQopVlrzxnzct/J5flf6MGBv8",
+            "jv1LkK/XA2gSY6zik6eiywTlT2TOA/rGFJ/Zi+jM1GKMa+QALBmfGgbGMYFU+1Mk",
+            "mq9Vmbqdda64wt0CAwEAAaNCMEAwHQYDVR0OBBYEFGgBk7HSSkBCaZRGLBxaiKkl",
+            "tEdPMA4GA1UdDwEB/wQEAwIBhjAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEB",
+            "DAUAA4ICAQCS/O64AnkXAlF9IcVJZ6ek8agkOOsMaOpaQmuc9HPBaUotszcFUEKY",
+            "kp4GeSwuBpn2798roM2zkgGDtaDLJ7U8IxqYSaLsLZmlWUOs0rGT1lfXHLyT1sZA",
+            "4bNvGVW3E9flQzOktavL2sExZA101iztw41u67uvGUdhYS3A9AW5b3jcOvdCQGVT",
+            "kb2ZDZOSVKapN1krm8uZxrw99wSE8JQzHQ+CWjnLLkXDKBmjspuYyPwxa2CP9umG",
+            "KLzgPH10XRaJW2kkxxCLxEu7Nk/UWT/DsKSRmfgu0UoBnfWIEu+/WhFqWU9Za1pn",
+            "84+0Ew/A2C89KHKqGX8RfWpbn5XnX7eUT/E+oVr/Lcyd3yd3jzJzHGcKdvP6XLG/",
+            "vB29DCibsscXZwszD8O9Ntz7ukILq+2Ew2LWhBapsQdrqW7uxs/msEQpwvCzYYAq",
+            "i2/SFFwlh1Rk86RMwaH4p2vq/uo6/HnbDo/cxvPJ1Gze6YOhjh0i7Mk6sgB73Dun",
+            "Qhp/3IupET2Op8Agb10JXUNE5o9mzKlbB/Hvm3oOs1ThlP0OLMaT11X9cZg1uAlK",
+            "/8YpKCz2Ui3bFBiSJ+IWfozK1GG+goeR65g3P79fXXc/NKwbOEOraHKZMh46Ghml",
+            "ozhMI9ej58zVKpIXkAtaS70WvfuGauKJmezkoFUYyaMIHxPgMghy0A==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "ORACLE",
+                "constraints": []
+            }
+        ]
+    },
+    "EMSIGN_ROOT_CA_G2_634231275470790470766296": {
+        "_meta": {
+            "_subject": {
+                "country_name": "IN",
+                "organizational_unit_name": "emSign PKI",
+                "organization_name": "eMudhra Technologies Limited",
+                "common_name": "emSign Root CA - G2"
+            },
+            "_fingerprints": {
+                "MD5": "63:AC:61:E5:F7:DA:AA:05:80:53:BD:E4:AB:FD:BB:30",
+                "SHA1": "1E:65:77:B9:CF:70:D0:17:CA:E1:BD:A1:35:1D:47:25:A9:73:C0:6D",
+                "SHA2_256": "1A:A0:C2:70:9E:83:1B:D6:E3:B5:12:9A:00:BA:41:F7:EE:EF:02:08:72:F1:E6:50:4B:F0:F6:C3:F2:4F:3A:F3"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFlTCCA32gAwIBAgILAIZNvw/jXtd9jtgwDQYJKoZIhvcNAQEMBQAwZzELMAkG",
+            "A1UEBhMCSU4xEzARBgNVBAsTCmVtU2lnbiBQS0kxJTAjBgNVBAoTHGVNdWRocmEg",
+            "VGVjaG5vbG9naWVzIExpbWl0ZWQxHDAaBgNVBAMTE2VtU2lnbiBSb290IENBIC0g",
+            "RzIwHhcNMTgwMjE4MTgzMDAwWhcNNDMwMjE4MTgzMDAwWjBnMQswCQYDVQQGEwJJ",
+            "TjETMBEGA1UECxMKZW1TaWduIFBLSTElMCMGA1UEChMcZU11ZGhyYSBUZWNobm9s",
+            "b2dpZXMgTGltaXRlZDEcMBoGA1UEAxMTZW1TaWduIFJvb3QgQ0EgLSBHMjCCAiIw",
+            "DQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAMNwGIWW2kHfHK+sXTNwxF07K+IV",
+            "ySTuyFM2r1v002wUfcdT+zs5OM5QbMYFFnedXQI6gCFLsjKrcaej48Zt37OyEb3i",
+            "aPs7CsP4kAyTwzKH9aZe6gXYHrJq40/ZVMNcQVI2PcIp40B/SAN2gUZ+ZaUtIOvV",
+            "jEx26/ebNaXRIsthlkOG/caB+QRwDw1tl7338Zlv0M2oTBUy4B3e7dGP5pgXH71M",
+            "jqHPCoNo+xv9f0NTBT+hUDa8h8wUtcGQq9CDeJTpjWcD2bP2AMdVG6oVpMAUeUzo",
+            "cCyglvtFdUMjggxBbw4qhau1HXPG8Ot9hwL7ZMi8tkTzrvUIxxb8G9LF/7kKeCE7",
+            "tGZaVzDTnXuifl3msR4ErHsQ4P7lVu2AIjIAhrAXoedDidb7pMcf7TABdrYUT1Jo",
+            "G/AiK+J9jO6GTjeADD4LMDSBZhHMuBK/PJ/g0kGBt+/C1L+/HURzQhJkMlRnM6Rv",
+            "XoCtfKopSlns5trZmTi971Wjbn88QXP61lGpBCUPwCjs7rpOYvSUJtI+lcbF+37q",
+            "kIqOXYkVT3cupDSpw+H89kFtj5GKY+Xny4LxY+3IvDIRiyd6ky1DPj713DI0yqve",
+            "EpsIr3A0PdwuyUI7CS1jg0NnGFT6Xxyr0xB+VDt83FJYW8v16k2pbaQ4kVxA3aXd",
+            "X9dZYyVR1S59KM75AgMBAAGjQjBAMB0GA1UdDgQWBBTt7E1FYRgo57MjKBEcTaUn",
+            "DV7s9DAOBgNVHQ8BAf8EBAMCAQYwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0B",
+            "AQwFAAOCAgEACFC/ilQg8KTCVBxFJW/sazomkS0kNYbEIZg4B3obqwsJ7SX98z8Z",
+            "gfzBpz0nYClwwJjWbFN1R2zY8pCEot6/dgmA8Vbq0GxhwPM5YN/SZquNyRIxO3cU",
+            "dlAcwf+vSezdVCf9wOzvSAF3q0a5ljvbdbNJNpfScQVp7UUd5sBsZk8jXO1KQ/go",
+            "/Vf/GDPnrIFmxpAIGE3sgnO8lAv9FzUaAeuv7HWe47xN9J7+bQzF93yHuIXACPTL",
+            "pQHhg2zMv5C7BAbuDHfbj1Cu294Z832yhSfBcziWGskOvl3es2EcHytbS9c9P+0z",
+            "Mpka7zGC1FHrvLb/FoduH86TeZt0QjZ6pcplNzoaxDnDvzTJ6CC2Eny+qH/APFCu",
+            "VUv5/wjwF+HPm8Pup2ARj9cEp92+0qcerfHacNq5hMeGZdbA/dzdUR/5z5zXdxAk",
+            "nl8mcfGb0eMNSTXQmmB/i4AecNnr72uYjzlaXUGYN7Nrb6XouG0pnh0/BBtWWp0U",
+            "ShIPpWEAqs7RJBj6+1ZUYXZ4ObrCw962DxhN2p19Hxw9LtuUUcLqqTPrFXYvwO4t",
+            "ouj7KJnAkaTUfXGdEaFVtFig1EA30WzJY2X1vAQ7hVnniCjgaXAGqjsU6sklNM9n",
+            "xDx5rFCCCEtj9Kh8UHjGK2QqgP5kwgttjOApQMaCoezMfK4KD7WpOXU=",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "ORACLE",
+                "constraints": []
+            }
+        ]
+    },
+    "LUXTRUST_GLOBAL_ROOT_2_59914338225734147123941058376788110305822489521": {
+        "_meta": {
+            "_subject": {
+                "country_name": "LU",
+                "organization_name": "LuxTrust S.A.",
+                "common_name": "LuxTrust Global Root 2"
+            },
+            "_fingerprints": {
+                "MD5": "B2:E1:09:00:61:AF:F7:F1:91:6F:C4:AD:8D:5E:3B:7C",
+                "SHA1": "1E:0E:56:19:0A:D1:8B:25:98:B2:04:44:FF:66:8A:04:17:99:5F:3F",
+                "SHA2_256": "54:45:5F:71:29:C2:0B:14:47:C4:18:F9:97:16:8F:24:C5:8F:C5:02:3B:F5:DA:5B:E2:EB:6E:1D:D8:90:2E:D5"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFwzCCA6ugAwIBAgIUCn6m30tEntpqJIWe5rgV0xZ/u7EwDQYJKoZIhvcNAQEL",
+            "BQAwRjELMAkGA1UEBhMCTFUxFjAUBgNVBAoMDUx1eFRydXN0IFMuQS4xHzAdBgNV",
+            "BAMMFkx1eFRydXN0IEdsb2JhbCBSb290IDIwHhcNMTUwMzA1MTMyMTU3WhcNMzUw",
+            "MzA1MTMyMTU3WjBGMQswCQYDVQQGEwJMVTEWMBQGA1UECgwNTHV4VHJ1c3QgUy5B",
+            "LjEfMB0GA1UEAwwWTHV4VHJ1c3QgR2xvYmFsIFJvb3QgMjCCAiIwDQYJKoZIhvcN",
+            "AQEBBQADggIPADCCAgoCggIBANeFl78RmOnwYoNMPIf5U2o3C/IPPIfOb9wmKb3F",
+            "ibrJgz337spbxm1Jc7TJRqMbNBM/wYlFV/TZsfs2ZUv7COJIcRHIbjuend+JZTem",
+            "hfY7RBi2xjcwYkSSl2l9QjAk5A0MiWtj3sXh306pFGxT4GHO9hcvHTy95iJMHZP1",
+            "EMShduxq3sVs35a0VkBCwGKSMKEtFZSg0iAGCW5qbeXrt77U8PEVfIvmTroTzEsn",
+            "Xpk8F12PgX8zPU/TPxvsXD/wPEx1bvKm1Z3aLQdjAsZy6ZS8TEmVT4hSyNvoaYL4",
+            "zDRbIvCGp4m9SAptZoFtyMhk+wHh9OHe2Z7d21vUKpkmFRseTJIpgp7VkoGSQXAZ",
+            "96Tlk0u8d2cx3Rz9MXANF5kM+Qw5GSoXtTBxVdUPrljhPS80m8+f9niFwpN6cj5m",
+            "j5wWEWCPnolvZ77gR1o7DJpni89Gxq44o/KnvObWhWszJHAiS8sIm7vI+AIpHb4g",
+            "DEa/a4ebsypmQjVGbKq6rfmYe+lQVRQxv7HaLe2ArWgk+2mr2HETMOZns4dA/Yl+",
+            "8kPREd8vZS9kzl8UubG/Mb2HeFpZZYiq/FkySIbWTLkpS5XTdvN3JW1CHDiDTf2j",
+            "X5t/Lax5Gw5CMZdjpPuKadUiDTSQMC6otOBttpSsvItO13D8xTiOZCXhTTmQzsmH",
+            "hFhxAgMBAAGjgagwgaUwDwYDVR0TAQH/BAUwAwEB/zBCBgNVHSAEOzA5MDcGByuB",
+            "KwEBAQowLDAqBggrBgEFBQcCARYeaHR0cHM6Ly9yZXBvc2l0b3J5Lmx1eHRydXN0",
+            "Lmx1MA4GA1UdDwEB/wQEAwIBBjAfBgNVHSMEGDAWgBT/GCh2+UgFLKGu8SsbK7JT",
+            "+Et8szAdBgNVHQ4EFgQU/xgodvlIBSyhrvErGyuyU/hLfLMwDQYJKoZIhvcNAQEL",
+            "BQADggIBAGoZFO1uecEsh9QNcH7X9njJCwROxLHOk3D+sFTAMs2ZMGQXvw/l4jP9",
+            "BzZAcg4atmpZ1gDlaCDdLnINH2pkMSCEfUmmWjfrRcmF9dTHF5kH5ptV5AzoqbTO",
+            "jFu1EVzPig4N1qx3gf4ynCSecs5U89BvolbW7MM3LGVYvlcAGvI1+ut7MV3CwRI9",
+            "loGIlonBWVx65n9wNOeD4rHh4bhY79SV5GCc8JaXcozrhAIuZY+kt9J/Z93I055c",
+            "qqmkoCUUBpvsT34tC38ddfEz2O3OuHVtPlu5mB0xDVbYQw8wkbIEa91WvpWAVWe+",
+            "2M2D2RjuLg+GLZKecBPs3lHJQ3gCpU3I+V/EkVhGFndadKpAvAefMLmx9xIX3eP/",
+            "JEAdemrRTxgKqpAd60Ae36EeRJIQmvKN4dFLRp7oRUKX6kWZ8+xm1QL68qZKJKre",
+            "zrnK+T+Tb/mjuuqlPpmt/f97mfVl7vBZKGfXkJWkE4SphMHozs51k2MavDzq1WQf",
+            "LSoSOcbDWjLtR5EWDrw4wVDej8oqkDQc7kGUnF4ZLvhFSZl0kbAEb+MEWrGrKqv+",
+            "x9CWttrhSmQGbmBNvUJO/3jaJMobtNeWOWyu8Q6qp31IiyBMz2TWuJdGsE7RKlY6",
+            "oJO9r4Ak4Ap+58rVyuiFVdw2KuGUaJPHZnJED4AhMmwlxyOAgwrr",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "ORACLE",
+                "constraints": []
+            }
+        ]
+    },
+    "LUXTRUST_GLOBAL_ROOT_3000": {
+        "_meta": {
+            "_subject": {
+                "country_name": "LU",
+                "organization_name": "LuxTrust s.a.",
+                "common_name": "LuxTrust Global Root"
+            },
+            "_fingerprints": {
+                "MD5": "42:A5:21:7A:4C:AF:C7:BF:FD:A7:F5:B2:10:4C:3E:BE",
+                "SHA1": "C9:3C:34:EA:90:D9:13:0C:0F:03:00:4B:98:BD:8B:35:70:91:56:11",
+                "SHA2_256": "A1:B2:DB:EB:64:E7:06:C6:16:9E:3C:41:18:B2:3B:AA:09:01:8A:84:27:66:6D:8B:F0:E2:88:91:EC:05:19:50"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIDZDCCAkygAwIBAgICC7gwDQYJKoZIhvcNAQELBQAwRDELMAkGA1UEBhMCTFUx",
+            "FjAUBgNVBAoTDUx1eFRydXN0IHMuYS4xHTAbBgNVBAMTFEx1eFRydXN0IEdsb2Jh",
+            "bCBSb290MB4XDTExMDMxNzA5NTEzN1oXDTIxMDMxNzA5NTEzN1owRDELMAkGA1UE",
+            "BhMCTFUxFjAUBgNVBAoTDUx1eFRydXN0IHMuYS4xHTAbBgNVBAMTFEx1eFRydXN0",
+            "IEdsb2JhbCBSb290MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsn+n",
+            "QPAiygz267Hxyw6VV0B1r6A/Ps7sqjJX5hmxZ0OYWmt8s7j6eJyqpoSyYBuAQc5j",
+            "zR8XCJmk9e8+EsdMsFeaXHhAePxFjdqRZ9w6Ubltc+a3OY52OrQfBfVpVfmTz3iI",
+            "Sr6qm9d7R1tGBEyCFqY19vx039a0r9jitScRdFmiwmYsaArhmIiIPIoFdRTjuK7z",
+            "CISbasE/MRivJ6VLm6T9eTHemD0OYcqHmMH4ijCc+j4z1aXEAwfh95Z0GAAnOCfR",
+            "K6qq4UFFi2/xJcLcopeVx0IUM115hCNq52XAV6DYXaljAeew5Ivo+MVjuOVsdJA9",
+            "x3f8K7p56aTGEnin/wIDAQABo2AwXjAMBgNVHRMEBTADAQH/MA4GA1UdDwEB/wQE",
+            "AwIBBjAfBgNVHSMEGDAWgBQXFYWJCS8kh28/HRvk8pZ5g0gTzjAdBgNVHQ4EFgQU",
+            "FxWFiQkvJIdvPx0b5PKWeYNIE84wDQYJKoZIhvcNAQELBQADggEBAFrwHNDUUM9B",
+            "fua4nX3DcNBeNv9ujnov3kgR1TQuPLdFwlQlp+HBHjeDtpSutkVIA+qVvuucarQ3",
+            "XB8u02uCgUNbCj8RVWOs+nwIAjegPDkEM/6XMshS5dklTbDG7mgfcKpzzlcD3H0K",
+            "DTPy0lrfCmw7zBFRlxqkIaKFNQLXgCLShLL4wKpov9XrqsMLq6F8K/f1O4fhVFfs",
+            "BSTveUJO84ton+Ruy4KZycwq3FPCH3CDqyEPVrRI/98HIrOM+R2mBN8tAza53W/+",
+            "MYhm/2xtRDSvCHc+JtJy9LtHVpM8mGPhM7uZI5K1g3noHZ9nrWLWidb2/CfeMifL",
+            "hNp3hSGhEiE=",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "ORACLE",
+                "constraints": []
+            }
+        ]
+    },
+    "SECTIGO_PUBLIC_CODE_SIGNING_ROOT_E46_106528319032290789204315727129280369859": {
+        "_meta": {
+            "_subject": {
+                "country_name": "GB",
+                "organization_name": "Sectigo Limited",
+                "common_name": "Sectigo Public Code Signing Root E46"
+            },
+            "_fingerprints": {
+                "MD5": "02:84:D3:BD:4B:40:1A:97:67:B6:E3:B4:81:0D:08:26",
+                "SHA1": "BB:EF:5C:4C:11:48:97:70:F5:86:FB:30:7D:14:32:91:30:7F:11:9A",
+                "SHA2_256": "8F:63:71:D8:CC:5A:A7:CA:14:96:67:A9:8B:54:96:39:89:51:E4:31:9F:7A:FB:CC:6A:66:0D:67:3E:43:8D:0B"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIICKDCCAa+gAwIBAgIQUCSbou+Opr9sLB8aY4XUwzAKBggqhkjOPQQDAzBWMQsw",
+            "CQYDVQQGEwJHQjEYMBYGA1UEChMPU2VjdGlnbyBMaW1pdGVkMS0wKwYDVQQDEyRT",
+            "ZWN0aWdvIFB1YmxpYyBDb2RlIFNpZ25pbmcgUm9vdCBFNDYwHhcNMjEwMzIyMDAw",
+            "MDAwWhcNNDYwMzIxMjM1OTU5WjBWMQswCQYDVQQGEwJHQjEYMBYGA1UEChMPU2Vj",
+            "dGlnbyBMaW1pdGVkMS0wKwYDVQQDEyRTZWN0aWdvIFB1YmxpYyBDb2RlIFNpZ25p",
+            "bmcgUm9vdCBFNDYwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAAQIMoEDH487om+BR4zl",
+            "e7m6wWmyW0nAKLkUWG8kM85Qm3PZO8FoOZx6Yc5c0iJHRKuAhanllayqrmZYhlan",
+            "uIODzLTRDqlR+EtnOX+MubY5aDSPGUq6jiHrQrisVp0J3AejQjBAMB0GA1UdDgQW",
+            "BBTPfSygkHqYHd22XoXC4NoVcdLlXjAOBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/",
+            "BAUwAwEB/zAKBggqhkjOPQQDAwNnADBkAjACd++zAerlV83j8HflRwwwlLmgchbs",
+            "aGX/4g44dv/oG8KfzCVTRg6sZHMobtK0IqYCMGk5W6+oBFyZMtOebrSwXs8lGjll",
+            "/zHz43Zy8DMXO+iiqzSEwWGneZ6KupkGGqfVKw==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "ORACLE",
+                "constraints": []
+            }
+        ]
+    },
+    "SECTIGO_PUBLIC_CODE_SIGNING_ROOT_R46_99921757487517344302759157717011370071": {
+        "_meta": {
+            "_subject": {
+                "country_name": "GB",
+                "organization_name": "Sectigo Limited",
+                "common_name": "Sectigo Public Code Signing Root R46"
+            },
+            "_fingerprints": {
+                "MD5": "D7:99:17:C9:AA:F8:81:34:60:40:F8:AF:D3:96:0A:F6",
+                "SHA1": "CC:BB:F9:E1:48:5A:F6:3C:E4:7A:BF:8E:9E:64:8C:25:04:FC:31:9D",
+                "SHA2_256": "7E:76:26:0A:E6:9A:55:D3:F0:60:B0:FD:18:B2:A8:C0:14:43:C8:7B:60:79:10:30:C9:FA:0B:05:85:10:1A:38"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIFeDCCA2CgAwIBAgIQSyw7AQGLrSq8jHtbPu2QVzANBgkqhkiG9w0BAQwFADBW",
+            "MQswCQYDVQQGEwJHQjEYMBYGA1UEChMPU2VjdGlnbyBMaW1pdGVkMS0wKwYDVQQD",
+            "EyRTZWN0aWdvIFB1YmxpYyBDb2RlIFNpZ25pbmcgUm9vdCBSNDYwHhcNMjEwMzIy",
+            "MDAwMDAwWhcNNDYwMzIxMjM1OTU5WjBWMQswCQYDVQQGEwJHQjEYMBYGA1UEChMP",
+            "U2VjdGlnbyBMaW1pdGVkMS0wKwYDVQQDEyRTZWN0aWdvIFB1YmxpYyBDb2RlIFNp",
+            "Z25pbmcgUm9vdCBSNDYwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCN",
+            "55QSIgQkdC7/FiMCkoq2rjaFrEfUI5ErPtx94jGgUW+shJHjUoq14pbe0IdjJImK",
+            "/+8Skzt9u7aKvb0Ffyeba2XTpQxpsbxJOZrxbW6q5KCDJ9qaDStQ6Utbs7hkNqR+",
+            "Sj2pcaths3OzPAsM79szV+W+NDfjlxtd/R8SPYIDdub7P2bSlDFp+m2zNKzBenjc",
+            "klDyZMeqLQSrw2rq4C+np9xu1+j/2iGrQL+57g2extmeme/G3h+pDHazJyCh1rr9",
+            "gOcB0u/rgimVcI3/uxXP/tEPNqIuTzKQdEZrRzUTdwUzT2MuuC3hv2WnBGsY2HH6",
+            "zAjybYmZELGt2z4s5KoYsMYHAXVn3m3pY2MeNn9pib6qRT5uWl+PoVvLnTCGMOgD",
+            "s0DGDQ84zWeoU4j6uDBl+m/H5x2xg3RpPqzEaDux5mczmrYI4IAFSEDu9oJkRqj1",
+            "c7AGlfJsZZ+/VVscnFcax3hGfHCqlBuCF6yH6bbJDoEcQNYWFyn8XJwYK+pF9e+9",
+            "1WdPKF4F7pBMeufG9ND8+s0+MkYTIDaKBOq3qgdGnA2TOglmmVhcKaO5DKYwODzQ",
+            "RjY1fJy67sPV+Qp2+n4FG0DKkjXp1XrRtX8ArqmQqsV/AZwQsRb8zG4Y3G9i/qZQ",
+            "p7h7uJ0VP/4gDHXIIloTlRmQAOka1cKG8eOO7F/05QIDAQABo0IwQDAdBgNVHQ4E",
+            "FgQUMuuSmv81lkgvKEBCcCA2kVwXheYwDgYDVR0PAQH/BAQDAgGGMA8GA1UdEwEB",
+            "/wQFMAMBAf8wDQYJKoZIhvcNAQEMBQADggIBAHZlwuPXIkrXHYle/2lexhQCTXOm",
+            "zc0oyrA36r+nySGqql/av/aDbNCA0QpcAKTL88w5D55BcYjVPOiKe4wXI/fKNHSR",
+            "bAauUD8AWbImPDwXg1cDPi3RGj3UzwdUskMLUnKoiPXEF/Jv0Vil0WjkPZgIGO42",
+            "9EhImvpUcPCI1HAWMEJJ0Nk/dUtFcdiuorthDoiFUFe5uhErNikfjyBynlyeidGC",
+            "2kWNapnahHFrM6UQu3nwl/Z0gaA/V8eGjDCMDjiVrgHGHqvcqB9vL9f/dh6uF3Nt",
+            "5bl1s2EGqJUzwk5vsjfylb6FVBK5yL1iQnb3Kvz1NzEDJlf+0ebb8BYCcoOMCLOE",
+            "rKnkB/ihiMQTWlBHVEKm7dBBNCyYsT6iNKEMXb2s9395p79tDFYyhRtLl7jhrOSk",
+            "PHHxo+FOY9b0Rrr1CwjhYzztolkvCtQsayOinqFN7tESzRgzUO1Bbst/PUFgC2ML",
+            "ePV170MVtzYLEK/cXBipmNk22R3YhLMGioLjexskp0LO7g8+VlwyfexL3lYrOzu6",
+            "+XpY0FG2bNb2WKJSJHpEhqEcYD9J0/z6+YQcBcI0v+Lm8RkqmS9WVzWctfUHw0Yv",
+            "3jg9GQ37o/HfE57nqXJYMa+96trX1m13MzOO9Kz9wb9Jh9JwBWd0Bqb2eEAtFgSR",
+            "Dx/TFsS4ehcNJMmy",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "ORACLE",
+                "constraints": []
+            }
+        ]
+    },
+    "THAWTE_PRIMARY_ROOT_CA_G2_71758320672825410020661621085256472406": {
+        "_meta": {
+            "_subject": {
+                "country_name": "US",
+                "organization_name": "thawte, Inc.",
+                "organizational_unit_name": "(c) 2007 thawte, Inc. - For authorized use only",
+                "common_name": "thawte Primary Root CA - G2"
+            },
+            "_fingerprints": {
+                "MD5": "74:9D:EA:60:24:C4:FD:22:53:3E:CC:3A:72:D9:29:4F",
+                "SHA1": "AA:DB:BC:22:23:8F:C4:01:A1:27:BB:38:DD:F4:1D:DB:08:9E:F0:12",
+                "SHA2_256": "A4:31:0D:50:AF:18:A6:44:71:90:37:2A:86:AF:AF:8B:95:1F:FB:43:1D:83:7F:1E:56:88:B4:59:71:ED:15:57"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIICiDCCAg2gAwIBAgIQNfwmXNmET8k9Jj1Xm67XVjAKBggqhkjOPQQDAzCBhDEL",
+            "MAkGA1UEBhMCVVMxFTATBgNVBAoTDHRoYXd0ZSwgSW5jLjE4MDYGA1UECxMvKGMp",
+            "IDIwMDcgdGhhd3RlLCBJbmMuIC0gRm9yIGF1dGhvcml6ZWQgdXNlIG9ubHkxJDAi",
+            "BgNVBAMTG3RoYXd0ZSBQcmltYXJ5IFJvb3QgQ0EgLSBHMjAeFw0wNzExMDUwMDAw",
+            "MDBaFw0zODAxMTgyMzU5NTlaMIGEMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMdGhh",
+            "d3RlLCBJbmMuMTgwNgYDVQQLEy8oYykgMjAwNyB0aGF3dGUsIEluYy4gLSBGb3Ig",
+            "YXV0aG9yaXplZCB1c2Ugb25seTEkMCIGA1UEAxMbdGhhd3RlIFByaW1hcnkgUm9v",
+            "dCBDQSAtIEcyMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEotWcgnuVnfFSeIf+iha/",
+            "BebfowJPDQfGAFG6DAJSLSKkQjnE/o/qycG+1E3/n3qe4rF8mq2nhglzh9HnmuN6",
+            "papu+7qzcMBniKI11KOasf2twu8x+qi58/sIxpHR+ymVo0IwQDAPBgNVHRMBAf8E",
+            "BTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNVHQ4EFgQUmtgAMADna3+FGO6Lts6K",
+            "DPgR4bswCgYIKoZIzj0EAwMDaQAwZgIxAN344FdHW6fmCsO99YCKlzUNG4k8VIZ3",
+            "KMqh9HneteY4sPBlcIx/AlTCv//YoT7ZzwIxAMSNlPzcU9LcnXgWHxUzI1NS41ox",
+            "XZ3Krr0TKUQNJ1uo52icEvdYPy5yAlejj6EULg==",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "ORACLE",
+                "constraints": []
+            }
+        ]
+    },
+    "UTN_USERFIRST_OBJECT_91374294542884704022267039233571249947": {
+        "_meta": {
+            "_subject": {
+                "country_name": "US",
+                "state_or_province_name": "UT",
+                "locality_name": "Salt Lake City",
+                "organization_name": "The USERTRUST Network",
+                "organizational_unit_name": "http://www.usertrust.com",
+                "common_name": "UTN-USERFirst-Object"
+            },
+            "_fingerprints": {
+                "MD5": "A7:F2:E4:16:06:41:11:50:30:6B:9C:E3:B4:9C:B0:C9",
+                "SHA1": "E1:2D:FB:4B:41:D7:D9:C3:2B:30:51:4B:AC:1D:81:D8:38:5E:2D:46",
+                "SHA2_256": "6F:FF:78:E4:00:A7:0C:11:01:1C:D8:59:77:C4:59:FB:5A:F9:6A:3D:F0:54:08:20:D0:F4:B8:60:78:75:E5:8F"
+            }
+        },
+        "certificate": [
+            "-----BEGIN CERTIFICATE-----",
+            "MIIEZjCCA06gAwIBAgIQRL4Mi1AAJLQR0zYt4LNfGzANBgkqhkiG9w0BAQUFADCB",
+            "lTELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAlVUMRcwFQYDVQQHEw5TYWx0IExha2Ug",
+            "Q2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBOZXR3b3JrMSEwHwYDVQQLExho",
+            "dHRwOi8vd3d3LnVzZXJ0cnVzdC5jb20xHTAbBgNVBAMTFFVUTi1VU0VSRmlyc3Qt",
+            "T2JqZWN0MB4XDTk5MDcwOTE4MzEyMFoXDTE5MDcwOTE4NDAzNlowgZUxCzAJBgNV",
+            "BAYTAlVTMQswCQYDVQQIEwJVVDEXMBUGA1UEBxMOU2FsdCBMYWtlIENpdHkxHjAc",
+            "BgNVBAoTFVRoZSBVU0VSVFJVU1QgTmV0d29yazEhMB8GA1UECxMYaHR0cDovL3d3",
+            "dy51c2VydHJ1c3QuY29tMR0wGwYDVQQDExRVVE4tVVNFUkZpcnN0LU9iamVjdDCC",
+            "ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM6qgT+jo2F4qjEAVZURnicP",
+            "HxzfOpuCaDDASmEd8S8O+r5596Uj71VRloTN2+O5bj4x2AogZ8f02b+U60cEPgLO",
+            "KqJdhwQJ9jCdGIqXsqoc/EHSoTbL+z2RuufZcDX65OeQw5ujm9M89RKZd7G3CeBo",
+            "5hy485RjiGpq/gt2yb70IuRnuasaXnfBhQfdDWy/7gbHd2pBnqcP1/vulBe3/IW+",
+            "pKvEHDHd17bR5PDv3xaPslKT16HUiaEHLr/hARJCHhrh2JU022R5KP+6LhHC5ehb",
+            "kkj7RwvCbNqtMoNB86XlQXD9ZZBt+vpRxPm9lisZBCzTbafc8H9vg2XiaquHhnUC",
+            "AwEAAaOBrzCBrDALBgNVHQ8EBAMCAcYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4E",
+            "FgQU2u1kdBScFDyr3ZmpvVsoTYs8ydgwQgYDVR0fBDswOTA3oDWgM4YxaHR0cDov",
+            "L2NybC51c2VydHJ1c3QuY29tL1VUTi1VU0VSRmlyc3QtT2JqZWN0LmNybDApBgNV",
+            "HSUEIjAgBggrBgEFBQcDAwYIKwYBBQUHAwgGCisGAQQBgjcKAwQwDQYJKoZIhvcN",
+            "AQEFBQADggEBAAgfUrE3RHjb/c652pWWmKpVZIC1WkDdIaXFwfNfLEzIR1pp6ujw",
+            "NTX00CXzyKakh0q9G7FzCL3Uw8q2NbtZhncxzaeAFK4T7/yxSPlrJSUtUbYsbUXB",
+            "mMiKVl0+7kNOPmsnjtA6S4ULX9Ptaqd1y9Fahy85dRNacrACgZ++8A+EVCBibGnU",
+            "4U3GDZlDAQ0Slox4nb9QorFEqmrPF3rPbw/U+CRVX/A0FklmPlBGyWNxODFiuGK5",
+            "81OtbLUrohKqGU8J2l7nk8aOFAj+8DCAGKCGhU3IfdeLA/5u1fedFqySLKAj5ZyR",
+            "Uh+U3xeUc8OzwcFxBSAAeL0TUh2oPs0AH8g=",
+            "-----END CERTIFICATE-----"
+        ],
+        "trust_stores": [
+            {
+                "owner": "ORACLE",
                 "constraints": []
             }
         ]

@@ -202,6 +202,14 @@
             "CLIENT_DEVELOPER"
         ]
     },
+    "ORACLE": {
+        "name": "Oracle",
+        "long_name": "Oracle Corporation",
+        "type": "FOR_PROFIT_ORG",
+        "activities": [
+            "CA_TRUST_STORE_OWNER"
+        ]
+    },
     "QIHOO_360": {
         "name": "Qihoo 360",
         "long_name": "360 Security Technology Inc.",

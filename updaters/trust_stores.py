@@ -55,6 +55,18 @@ def _parse_trust_store_owner(value):
 def _get_selected_trust_store_fetcher_class(trust_store_owner):
     store_fetcher_class = FetcherRootCertificateStore.get_root_certificate_store_updaters()[trust_store_owner]
 
+    def _get_owner_constraints(existing_root_certificate, identifier):
+        owner_constraints = collections.OrderedDict()
+        for trust_store in existing_root_certificate.trust_stores:
+            if trust_store.owner in owner_constraints:
+                raise ValueError(
+                    f"duplicate trust-store owner {trust_store.owner.name} for certificate {identifier}"
+                )
+
+            owner_constraints[trust_store.owner] = trust_store.constraints
+
+        return owner_constraints
+
     class FetcherRootCertificateStoreSelected(FetcherBase):
         @classmethod
         def _get_current_data(cls):
@@ -79,10 +91,7 @@ def _get_selected_trust_store_fetcher_class(trust_store_owner):
                 if current_root_certificate is not None:
                     selected_trust_store_constraints = current_root_certificate.trust_stores[0].constraints
 
-                owner_constraints = collections.OrderedDict([
-                    (trust_store.owner, trust_store.constraints)
-                    for trust_store in existing_root_certificate.trust_stores
-                ])
+                owner_constraints = _get_owner_constraints(existing_root_certificate, identifier)
 
                 if selected_trust_store_constraints is None:
                     owner_constraints.pop(trust_store_owner, None)
@@ -91,7 +100,10 @@ def _get_selected_trust_store_fetcher_class(trust_store_owner):
 
                 merged_trust_stores = [
                     RootCertificateTrustStoreConstraint(owner, constraints)
-                    for owner, constraints in owner_constraints.items()
+                    for owner, constraints in sorted(
+                        owner_constraints.items(),
+                        key=lambda item: item[0].name,
+                    )
                 ]
 
                 if merged_trust_stores:

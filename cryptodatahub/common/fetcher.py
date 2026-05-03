@@ -8,10 +8,15 @@ import csv
 import datetime
 import io
 import json
+import tarfile
 
 import attr
 import bs4
 import urllib3
+import asn1crypto.core
+import asn1crypto.pem
+import asn1crypto.pkcs12
+import asn1crypto.x509
 
 from cryptodatahub.common.entity import Entity
 from cryptodatahub.common.stores import (
@@ -314,12 +319,70 @@ class FetcherRootCertificateStoreMozilla(FetcherCsvBase):
         return certificates
 
 
+class FetcherRootCertificateStoreOracleJDK(FetcherBase):
+    ORACLE_JDK_VERSION = 21
+    ORACLE_JDK_DOWNLOAD_URL = (
+        'https://download.oracle.com/java/{version}/latest/'
+        'jdk-{version}_linux-x64_bin.tar.gz'
+    )
+    _CACERTS_PATH_SUFFIX = '/lib/security/cacerts'
+
+    @classmethod
+    def get_tarball_url(cls):
+        return cls.ORACLE_JDK_DOWNLOAD_URL.format(version=cls.ORACLE_JDK_VERSION)
+
+    @classmethod
+    def _get_current_data(cls):
+        data = HttpFetcher(connect_timeout=5, read_timeout=5)(cls.get_tarball_url())
+        with tarfile.open(fileobj=io.BytesIO(data), mode='r:gz') as tar:
+            for member in tar.getmembers():
+                if member.name.endswith(cls._CACERTS_PATH_SUFFIX):
+                    return tar.extractfile(member).read()
+
+        raise NotImplementedError()
+
+    @classmethod
+    def _transform_data(cls, current_data):
+        pfx = asn1crypto.pkcs12.Pfx.load(current_data)
+        certificates = {}
+        for content_info in pfx.authenticated_safe:
+            if content_info['content_type'].native != 'data':
+                raise NotImplementedError()
+
+            safe_contents = asn1crypto.pkcs12.SafeContents.load(
+                content_info['content'].native
+            )
+            for bag in safe_contents:
+                if bag['bag_id'].native != 'cert_bag':
+                    raise NotImplementedError()
+
+                cert = bag['bag_value']['cert_value']
+
+                # Unwrap the explicit [0] tag if it is encapsulated in an Any wrapper
+                inner = cert.parsed if isinstance(cert, asn1crypto.core.Any) else cert
+
+                # The standard dictates it should be an OctetString, but we handle the Certificate sequence directly too
+                if isinstance(inner, asn1crypto.core.OctetString):
+                    cert_der = inner.native
+                elif isinstance(inner, asn1crypto.x509.Certificate):
+                    cert_der = inner.dump()
+                else:
+                    # ParsableOctetString (used by Oracle JDK): .contents gives the raw certificate DER
+                    cert_der = inner.contents
+
+                cert_pem = asn1crypto.pem.armor('CERTIFICATE', cert_der).decode('ascii').strip()
+                certificates[tuple(cert_pem.splitlines())] = ()
+
+        return certificates
+
+
 class FetcherRootCertificateStore(FetcherBase):
     _ROOT_CERTIFICATE_STORE_UPDATERS = collections.OrderedDict([
         (Entity.MOZILLA, FetcherRootCertificateStoreMozilla),
         (Entity.GOOGLE, FetcherRootCertificateStoreGoogle),
         (Entity.MICROSOFT, FetcherRootCertificateStoreMicrosoft),
         (Entity.APPLE, FetcherRootCertificateStoreApple),
+        (Entity.ORACLE, FetcherRootCertificateStoreOracleJDK),
     ])
 
     @classmethod
@@ -347,7 +410,18 @@ class FetcherRootCertificateStore(FetcherBase):
 
                 merged_constraints.append(RootCertificateTrustStoreConstraint(store_owner, constraints))
 
-        return [
-            RootCertificateParams(*item)
-            for item in root_certificates.items()
+        merged_root_certificates = [
+            RootCertificateParams(
+                certificate=root_certificate.certificate,
+                trust_stores=tuple(sorted(
+                    root_certificate.trust_stores,
+                    key=lambda trust_store: trust_store.owner.name,
+                )),
+            )
+            for root_certificate in (
+                RootCertificateParams(*item)
+                for item in root_certificates.items()
+            )
         ]
+
+        return sorted(merged_root_certificates, key=lambda root_certificate: root_certificate.identifier)

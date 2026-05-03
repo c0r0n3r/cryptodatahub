@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# pylint: disable=too-many-lines
 
 from unittest import mock
 
@@ -10,9 +11,15 @@ import datetime
 import io
 import json
 import os
+import tarfile
 
 from test.common.classes import TestClasses
 from test.updaters.classes import MockSelectedStoreFetcher
+
+import asn1crypto.cms
+import asn1crypto.core
+import asn1crypto.pkcs12
+import asn1crypto.x509
 
 from cryptodatahub.common.algorithm import Hash
 from cryptodatahub.common.entity import Entity
@@ -23,6 +30,7 @@ from cryptodatahub.common.fetcher import (
     FetcherRootCertificateStoreGoogle,
     FetcherRootCertificateStoreMicrosoft,
     FetcherRootCertificateStoreMozilla,
+    FetcherRootCertificateStoreOracleJDK,
 )
 from cryptodatahub.common.stores import (
     CertificateTrustConstraint,
@@ -137,6 +145,67 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
         ]
 
         return [commit_log, listing] + file_contents
+
+    @staticmethod
+    def _build_jdk_pfx(public_keys, extra_content_infos, extra_safe_bags):
+        """Build a PKCS#12 Pfx structure with certificates."""
+        safe_bags = list(extra_safe_bags)
+        for pk in public_keys:
+            cert_bag = asn1crypto.pkcs12.CertBag({
+                'cert_id': '1.2.840.113549.1.9.22.1',  # x509
+                'cert_value': asn1crypto.core.ParsableOctetString(pk.der),
+            })
+            safe_bag = asn1crypto.pkcs12.SafeBag({
+                'bag_id': '1.2.840.113549.1.12.10.1.3',  # cert_bag
+                'bag_value': cert_bag,
+            })
+            safe_bags.append(safe_bag)
+
+        safe_contents = asn1crypto.pkcs12.SafeContents(safe_bags)
+        inner_content_info = asn1crypto.cms.ContentInfo({
+            'content_type': '1.2.840.113549.1.7.1',  # data
+            'content': asn1crypto.core.OctetString(safe_contents.dump()),
+        })
+        auth_safe = asn1crypto.pkcs12.AuthenticatedSafe(
+            list(extra_content_infos) + [inner_content_info]
+        )
+
+        return asn1crypto.pkcs12.Pfx({
+            'version': 3,
+            'auth_safe': asn1crypto.cms.ContentInfo({
+                'content_type': '1.2.840.113549.1.7.1',  # data
+                'content': asn1crypto.core.OctetString(auth_safe.dump()),
+            }),
+        })
+
+    @staticmethod
+    def _get_mock_data_jdk_cacerts(public_keys=(), extra_content_infos=(), extra_safe_bags=()):
+        """Build a minimal JDK-like tar.gz archive containing a PKCS#12 cacerts keystore.
+
+        The archive has a single member at 'jdk-21/lib/security/cacerts' which holds
+        a minimal PKCS#12 structure with unencrypted certBag entries — matching the
+        format that Oracle JDK 21 uses for its root CA store.
+        """
+        pfx = TestRootCertificateBase._build_jdk_pfx(public_keys, extra_content_infos, extra_safe_bags)
+        p12_bytes = pfx.dump()
+
+        mock_tar = io.BytesIO()
+        with tarfile.open(fileobj=mock_tar, mode='w:gz') as tar:
+            tarinfo = tarfile.TarInfo('jdk-21/lib/security/cacerts')
+            tarinfo.size = len(p12_bytes)
+            tar.addfile(tarinfo, io.BytesIO(p12_bytes))
+        return mock_tar.getvalue()
+
+    @staticmethod
+    def _get_mock_data_jdk_no_cacerts():
+        """Build a tar.gz archive that contains no cacerts keystore entry."""
+        mock_tar = io.BytesIO()
+        with tarfile.open(fileobj=mock_tar, mode='w:gz') as tar:
+            dummy = b'not-a-keystore'
+            tarinfo = tarfile.TarInfo('jdk-21/lib/security/other')
+            tarinfo.size = len(dummy)
+            tar.addfile(tarinfo, io.BytesIO(dummy))
+        return mock_tar.getvalue()
 
 
 class TestCertificatePemFetcher(TestClasses.TestKeyBase):
@@ -345,6 +414,104 @@ class TestUpdaterRootCertificateStoreMozilla(TestRootCertificateBase):
         })
 
 
+class TestUpdaterRootCertificateStoreOracleJDK(TestRootCertificateBase):
+    def test_parse_empty(self):
+        mock_data = self._get_mock_data_jdk_cacerts()
+        with mock.patch.object(HttpFetcher, '__call__', return_value=mock_data):
+            root_certificate_store = FetcherRootCertificateStoreOracleJDK.from_current_data()
+        self.assertEqual(len(root_certificate_store.parsed_data), 0)
+
+    def test_parse_pem(self):
+        public_key_x509 = self._get_public_key_x509('snakeoil_ca_cert')
+        mock_data = self._get_mock_data_jdk_cacerts([public_key_x509])
+        with mock.patch.object(HttpFetcher, '__call__', return_value=mock_data):
+            root_certificate_store = FetcherRootCertificateStoreOracleJDK.from_current_data()
+        self.assertEqual(len(root_certificate_store.parsed_data), 1)
+        self.assertEqual(root_certificate_store.parsed_data, {
+            tuple(public_key_x509.pem.splitlines()): (),
+        })
+
+    def test_download_url(self):
+        expected_url = (
+            f'https://download.oracle.com/java/{FetcherRootCertificateStoreOracleJDK.ORACLE_JDK_VERSION}/latest/'
+            f'jdk-{FetcherRootCertificateStoreOracleJDK.ORACLE_JDK_VERSION}_linux-x64_bin.tar.gz'
+        )
+        self.assertEqual(FetcherRootCertificateStoreOracleJDK.get_tarball_url(), expected_url)
+
+    def test_transform_data_accepts_octet_string(self):
+        octet_string_certificate = asn1crypto.core.OctetString(self.public_key_x509_snakeoil_ca.der)
+        fake_bag = {
+            'bag_id': mock.Mock(native='cert_bag'),
+            'bag_value': {
+                'cert_value': octet_string_certificate,
+            },
+        }
+        fake_content_info = {
+            'content_type': mock.Mock(native='data'),
+            'content': mock.Mock(native=b'ignored'),
+        }
+        fake_pfx = mock.Mock(authenticated_safe=[fake_content_info])
+
+        with mock.patch.object(asn1crypto.pkcs12.Pfx, 'load', return_value=fake_pfx), mock.patch.object(
+            asn1crypto.pkcs12.SafeContents, 'load', return_value=[fake_bag]
+        ):
+            parsed_data = FetcherRootCertificateStoreOracleJDK._transform_data(  # pylint: disable=protected-access
+                b'ignored'
+            )
+
+        self.assertEqual(len(parsed_data), 1)
+
+    def test_transform_data_accepts_certificate_sequence(self):
+        certificate = asn1crypto.x509.Certificate.load(self.public_key_x509_snakeoil_ca.der)
+        fake_bag = {
+            'bag_id': mock.Mock(native='cert_bag'),
+            'bag_value': {
+                'cert_value': certificate,
+            },
+        }
+        fake_content_info = {
+            'content_type': mock.Mock(native='data'),
+            'content': mock.Mock(native=b'ignored'),
+        }
+        fake_pfx = mock.Mock(authenticated_safe=[fake_content_info])
+
+        with mock.patch.object(asn1crypto.pkcs12.Pfx, 'load', return_value=fake_pfx), mock.patch.object(
+            asn1crypto.pkcs12.SafeContents, 'load', return_value=[fake_bag]
+        ):
+            parsed_data = FetcherRootCertificateStoreOracleJDK._transform_data(  # pylint: disable=protected-access
+                b'ignored'
+            )
+
+        self.assertEqual(len(parsed_data), 1)
+
+    def test_transform_data_uses_fallback_contents(self):
+        class FallbackCertificate:
+            def __init__(self, contents):
+                self.contents = contents
+
+        fallback_certificate = FallbackCertificate(self.public_key_x509_snakeoil_ca.der)
+        fake_bag = {
+            'bag_id': mock.Mock(native='cert_bag'),
+            'bag_value': {
+                'cert_value': fallback_certificate,
+            },
+        }
+        fake_content_info = {
+            'content_type': mock.Mock(native='data'),
+            'content': mock.Mock(native=b'ignored'),
+        }
+        fake_pfx = mock.Mock(authenticated_safe=[fake_content_info])
+
+        with mock.patch.object(asn1crypto.pkcs12.Pfx, 'load', return_value=fake_pfx), mock.patch.object(
+            asn1crypto.pkcs12.SafeContents, 'load', return_value=[fake_bag]
+        ):
+            parsed_data = FetcherRootCertificateStoreOracleJDK._transform_data(  # pylint: disable=protected-access
+                b'ignored'
+            )
+
+        self.assertEqual(len(parsed_data), 1)
+
+
 class UpdaterRootCertificateTrustStoreTest(UpdaterBase):
     def __init__(self):
         root_certificate_test_class = RootCertificateBase(
@@ -367,6 +534,7 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             mock_data_google[1],
             self._get_mock_data_microsoft(),
             self._get_mock_data_apple(),
+            self._get_mock_data_jdk_cacerts(),
         ]
         with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results):
             fetched_data = FetcherRootCertificateStore.from_current_data()
@@ -383,15 +551,39 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             mock_data_google[1],
             mock_data_microsoft,
             self._get_mock_data_apple(),
+            self._get_mock_data_jdk_cacerts(),
         ]
         with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results), \
              mock.patch.object(CertificatePemFetcher, '__call__', return_value=self.public_key_x509_snakeoil_ca.pem):
             fetched_data = FetcherRootCertificateStore.from_current_data()
 
         self.assertEqual(len(fetched_data.parsed_data), 2)
-        for root_certificate_param in fetched_data.parsed_data:
-            trust_stores = root_certificate_param.trust_stores
-            self.assertEqual(len(trust_stores), 1)
+        fetched_by_identifier = {
+            root_certificate_param.identifier: root_certificate_param
+            for root_certificate_param in fetched_data.parsed_data
+        }
+
+        lets_encrypt_identifier = RootCertificateParams(certificate=tuple(
+            self.public_key_x509_lets_encrypt.pem.splitlines())
+        ).identifier
+        snakeoil_identifier = RootCertificateParams(certificate=tuple(
+            self.public_key_x509_snakeoil_ca.pem.splitlines())
+        ).identifier
+
+        self.assertEqual(
+            tuple(
+                trust_store.owner
+                for trust_store in fetched_by_identifier[lets_encrypt_identifier].trust_stores
+            ),
+            (Entity.MOZILLA,),
+        )
+        self.assertEqual(
+            tuple(
+                trust_store.owner
+                for trust_store in fetched_by_identifier[snakeoil_identifier].trust_stores
+            ),
+            (Entity.MICROSOFT,),
+        )
 
     def test_parse_multiple_item_in_store(self):
         mock_data_mozilla = self._get_mock_data_mozilla([
@@ -409,15 +601,24 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             mock_data_google[1],
             mock_data_microsoft,
             self._get_mock_data_apple(),
+            self._get_mock_data_jdk_cacerts(),
         ]
         with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results), \
              mock.patch.object(CertificatePemFetcher, '__call__', return_value=self.public_key_x509_snakeoil_ca.pem):
             fetched_data = FetcherRootCertificateStore.from_current_data()
 
         self.assertEqual(len(fetched_data.parsed_data), 2)
+        self.assertEqual(
+            [root_certificate.identifier for root_certificate in fetched_data.parsed_data],
+            sorted([root_certificate.identifier for root_certificate in fetched_data.parsed_data]),
+        )
+
         for root_certificate_param in fetched_data.parsed_data:
             trust_stores = root_certificate_param.trust_stores
-            self.assertEqual(len(trust_stores), 2)
+            self.assertEqual(
+                tuple(trust_store.owner for trust_store in trust_stores),
+                (Entity.MICROSOFT, Entity.MOZILLA),
+            )
         for root_certificate_param in fetched_data.parsed_data:
             trust_stores = root_certificate_param.trust_stores
             for trust_store in trust_stores:
@@ -508,6 +709,10 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         merged_root_certificate = merged_data.parsed_data[0]
         self.assertEqual(tuple(merged_root_certificate.certificate.pem.splitlines()), root_certificate_pem_lines)
         self.assertEqual(len(merged_root_certificate.trust_stores), 2)
+        self.assertEqual(
+            tuple(trust_store.owner for trust_store in merged_root_certificate.trust_stores),
+            (Entity.GOOGLE, Entity.MOZILLA),
+        )
         self.assertEqual(merged_root_certificate.get_constraints_by_owner(Entity.GOOGLE), current_google_constraints)
 
     def test_selected_store_adds_missing_owner_and_new_certificate(self):
@@ -562,6 +767,10 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
 
         existing_root_certificate = merged_by_certificate[existing_root_certificate_pem_lines]
         self.assertEqual(
+            tuple(trust_store.owner for trust_store in existing_root_certificate.trust_stores),
+            (Entity.GOOGLE, Entity.MOZILLA),
+        )
+        self.assertEqual(
             existing_root_certificate.get_constraints_by_owner(Entity.GOOGLE),
             current_google_constraints,
         )
@@ -571,6 +780,10 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         )
 
         new_root_certificate = merged_by_certificate[new_root_certificate_pem_lines]
+        self.assertEqual(
+            tuple(trust_store.owner for trust_store in new_root_certificate.trust_stores),
+            (Entity.GOOGLE,),
+        )
         self.assertEqual(new_root_certificate.get_constraints_by_owner(Entity.GOOGLE), ())
 
     def test_selected_store_preserves_existing_owners(self):
@@ -621,9 +834,9 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         self.assertEqual(
             merged_root_certificate.trust_stores,
             (
-                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
-                RootCertificateTrustStoreConstraint(Entity.MICROSOFT, ()),
                 RootCertificateTrustStoreConstraint(Entity.GOOGLE, current_google_constraints),
+                RootCertificateTrustStoreConstraint(Entity.MICROSOFT, ()),
+                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
             ),
         )
         self.assertEqual(
@@ -676,8 +889,8 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         self.assertEqual(
             merged_root_certificate.trust_stores,
             (
-                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
                 RootCertificateTrustStoreConstraint(Entity.MICROSOFT, ()),
+                RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
             ),
         )
 
@@ -713,7 +926,7 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
 
         self.assertEqual(merged_data.parsed_data, [])
 
-    def test_selected_store_duplicate_owner_entries_keep_last_value(self):
+    def test_selected_store_duplicate_owner_entries_raise_error(self):
         root_certificate_pem_lines = tuple(self.public_key_x509_snakeoil_ca.pem.splitlines())
         first_microsoft_constraints = (
             CertificateTrustConstraint(
@@ -762,18 +975,8 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
                     Entity.GOOGLE
                 )
             )
-            merged_data = selected_fetcher.from_current_data()
-
-        self.assertEqual(len(merged_data.parsed_data), 1)
-        merged_root_certificate = merged_data.parsed_data[0]
-        self.assertEqual(
-            merged_root_certificate.get_constraints_by_owner(Entity.MICROSOFT),
-            second_microsoft_constraints,
-        )
-        self.assertEqual(
-            merged_root_certificate.get_constraints_by_owner(Entity.GOOGLE),
-            current_google_constraints,
-        )
+            with self.assertRaisesRegex(ValueError, r'duplicate trust-store owner MICROSOFT'):
+                selected_fetcher.from_current_data()
 
     def test_selected_store_sorts_new_certificates_by_identifier(self):
         first_pem_lines = tuple(self.public_key_x509_lets_encrypt.pem.splitlines())
