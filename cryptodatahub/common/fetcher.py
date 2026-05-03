@@ -228,7 +228,7 @@ class FetcherRootCertificateStoreApple(FetcherBase):
 
     @classmethod
     def _get_current_data(cls):
-        response = HttpFetcher()('https://support.apple.com/en-us/HT213080')
+        response = HttpFetcher()('https://support.apple.com/en-us/103254')
         page = bs4.BeautifulSoup(response.decode('utf-8'), 'html.parser')
         trusted_cas = page.find("h2", {"id": "trusted"})
         return [
