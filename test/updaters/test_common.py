@@ -33,10 +33,6 @@ class FetcherCsvBaseTest(FetcherCsvBase):
         return TEST_URL_PREFIX + 'test.csv'
 
     @classmethod
-    def _get_csv_fields(cls):
-        return ['Col 1', 'Col 2']
-
-    @classmethod
     def _get_fetcher(cls):
         return HttpFetcher()
 
