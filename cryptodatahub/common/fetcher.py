@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 
 import abc
+import base64
 import collections
 import csv
 import datetime
 import io
 import json
-import tarfile
 
 import attr
 import bs4
@@ -162,14 +162,35 @@ class FetcherCsvBase(FetcherBase):
 
 
 class FetcherRootCertificateStoreGoogle(FetcherBase):
+    _GITILES_REPO_BASE = 'https://android.googlesource.com/platform/system/ca-certificates'
+
+    @classmethod
+    def _get_current_commit_id(cls, fetcher):
+        log_data = json.loads(
+            fetcher(f'{cls._GITILES_REPO_BASE}/+log/refs/heads/main?n=1&format=JSON').lstrip(b")]}'\n")
+        )
+        return log_data['log'][0]['commit']
+
     @classmethod
     def _get_current_data(cls):
-        data = HttpFetcher()(
-            'https://android.googlesource.com/platform/system/ca-certificates/+archive/refs/heads/master/files.tar.gz'
+        # Configure fetcher with exponential backoff for 429 rate-limit responses
+        fetcher = HttpFetcher(
+            connect_timeout=5,
+            read_timeout=30,
+            retry=6,  # Allow 6 retries for rate limiting
+            backoff_factor=1.0,  # Exponential backoff: 1s, 2s, 4s, 8s, 16s, 32s
         )
-        with tarfile.open(fileobj=io.BytesIO(data), mode='r') as tar:
-            for member in tar.getmembers():
-                yield tar.extractfile(member).read().decode('ascii')
+        commit_id = cls._get_current_commit_id(fetcher)
+        commit_files_base = f'{cls._GITILES_REPO_BASE}/+/{commit_id}/files'
+
+        listing = json.loads(
+            fetcher(f'{commit_files_base}/?format=JSON').lstrip(b")]}'\n")
+        )
+
+        for entry in sorted(listing.get('entries', []), key=lambda entry: entry.get('name', '')):
+            name = entry['name']
+            raw = fetcher(f'{commit_files_base}/{name}?format=TEXT').strip()
+            yield base64.b64decode(raw, validate=True).decode('ascii')
 
     @classmethod
     def _transform_data(cls, current_data):
