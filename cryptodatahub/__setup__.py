@@ -12,4 +12,4 @@ __description__ = metadata['Summary']
 __author__ = metadata['Author']
 __author_email__ = metadata['Author-email']
 __url__ = 'https://gitlab.com/coroner/' + __technical_name__
-__license__ = metadata['License']
+__license__ = metadata.get('License-Expression') or metadata['License']
