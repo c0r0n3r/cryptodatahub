@@ -248,7 +248,7 @@ class FetcherCsvBase(FetcherBase):
         raise NotImplementedError()
 
 
-class FetcherRootCertificateStoreGoogle(FetcherBase):
+class FetcherRootCertificateStoreAndroid(FetcherBase):
     _GITILES_REPO_BASE = 'https://android.googlesource.com/platform/system/ca-certificates'
 
     @classmethod
@@ -454,7 +454,7 @@ class FetcherRootCertificateStoreOracleJDK(FetcherBase):
 class FetcherRootCertificateStore(FetcherBase):
     _ROOT_CERTIFICATE_STORE_UPDATERS = collections.OrderedDict([
         (Entity.MOZILLA, FetcherRootCertificateStoreMozilla),
-        (Entity.GOOGLE, FetcherRootCertificateStoreGoogle),
+        (Entity.ANDROID, FetcherRootCertificateStoreAndroid),
         (Entity.MICROSOFT, FetcherRootCertificateStoreMicrosoft),
         (Entity.APPLE, FetcherRootCertificateStoreApple),
         (Entity.ORACLE, FetcherRootCertificateStoreOracleJDK),

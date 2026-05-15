@@ -28,7 +28,7 @@ from cryptodatahub.common.fetcher import (
     CertificatePemFetcher,
     FetcherRootCertificateStore,
     FetcherRootCertificateStoreApple,
-    FetcherRootCertificateStoreGoogle,
+    FetcherRootCertificateStoreAndroid,
     FetcherRootCertificateStoreMicrosoft,
     FetcherRootCertificateStoreMozilla,
     FetcherRootCertificateStoreOracleJDK,
@@ -132,7 +132,7 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
         return mock_data.encode('ascii')
 
     @staticmethod
-    def _get_mock_data_google(public_keys=()):
+    def _get_mock_data_android(public_keys=()):
         commit_log = b")]}\'\n" + json.dumps({'log': [{'commit': 'deadbeef'}]}).encode('ascii')
         entries = [
             {'name': public_key.fingerprints[Hash.SHA2_256], 'type': 'blob'}
@@ -242,17 +242,17 @@ class TestCertificatePemFetcher(TestClasses.TestKeyBase):
         mocked_http_fetch.assert_called_once_with('https://crt.sh/?d=abc123')
 
 
-class TestUpdaterRootCertificateStoreGoogle(TestRootCertificateBase):
+class TestUpdaterRootCertificateStoreAndroid(TestRootCertificateBase):
     def test_parse_empty(self):
-        with mock.patch.object(HttpFetcher, '__call__', side_effect=self._get_mock_data_google()):
-            root_certificate_store = FetcherRootCertificateStoreGoogle.from_current_data()
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=self._get_mock_data_android()):
+            root_certificate_store = FetcherRootCertificateStoreAndroid.from_current_data()
         self.assertEqual(len(root_certificate_store.parsed_data), 0)
 
     def test_parse_pem(self):
         public_key_x509 = self._get_public_key_x509('snakeoil_ca_cert')
-        mock_data = self._get_mock_data_google([public_key_x509])
+        mock_data = self._get_mock_data_android([public_key_x509])
         with mock.patch.object(HttpFetcher, '__call__', side_effect=mock_data):
-            root_certificate_store = FetcherRootCertificateStoreGoogle.from_current_data()
+            root_certificate_store = FetcherRootCertificateStoreAndroid.from_current_data()
         self.assertEqual(len(root_certificate_store.parsed_data), 1)
         self.assertEqual(root_certificate_store.parsed_data, {
             tuple(public_key_x509.pem.splitlines()): (),
@@ -528,11 +528,11 @@ class UpdaterRootCertificateTrustStoreTest(UpdaterBase):
 
 class TestFetcherRootCertificateStore(TestRootCertificateBase):
     def test_parse_empty(self):
-        mock_data_google = self._get_mock_data_google()
+        mock_data_android = self._get_mock_data_android()
         http_fetcher_results = [
             self._get_mock_data_mozilla(),
-            mock_data_google[0],
-            mock_data_google[1],
+            mock_data_android[0],
+            mock_data_android[1],
             self._get_mock_data_microsoft(),
             self._get_mock_data_apple(),
             self._get_mock_data_jdk_cacerts(),
@@ -544,12 +544,12 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
 
     def test_parse_single_item_in_store(self):
         mock_data_mozilla = self._get_mock_data_mozilla([self.public_key_x509_lets_encrypt])
-        mock_data_google = self._get_mock_data_google()
+        mock_data_android = self._get_mock_data_android()
         mock_data_microsoft = self._get_mock_data_microsoft([self.public_key_x509_snakeoil_ca])
         http_fetcher_results = [
             mock_data_mozilla,
-            mock_data_google[0],
-            mock_data_google[1],
+            mock_data_android[0],
+            mock_data_android[1],
             mock_data_microsoft,
             self._get_mock_data_apple(),
             self._get_mock_data_jdk_cacerts(),
@@ -591,15 +591,15 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             self.public_key_x509_lets_encrypt,
             self.public_key_x509_snakeoil_ca,
         ])
-        mock_data_google = self._get_mock_data_google()
+        mock_data_android = self._get_mock_data_android()
         mock_data_microsoft = self._get_mock_data_microsoft([
             self.public_key_x509_lets_encrypt,
             self.public_key_x509_snakeoil_ca
         ])
         http_fetcher_results = [
             mock_data_mozilla,
-            mock_data_google[0],
-            mock_data_google[1],
+            mock_data_android[0],
+            mock_data_android[1],
             mock_data_microsoft,
             self._get_mock_data_apple(),
             self._get_mock_data_jdk_cacerts(),
@@ -676,34 +676,34 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
                     certificate=root_certificate_pem_lines,
                     trust_stores=(
                         RootCertificateTrustStoreConstraint(Entity.MOZILLA, ()),
-                        RootCertificateTrustStoreConstraint(Entity.GOOGLE, ()),
+                        RootCertificateTrustStoreConstraint(Entity.ANDROID, ()),
                     ),
                 ),
             ),
         ])
 
-        current_google_constraints = (
+        current_android_constraints = (
             CertificateTrustConstraint(
                 action=RootCertificateTrustConstraintAction.DISTRUST,
                 domains=['example.com'],
             ),
         )
 
-        class CurrentGoogleStore:
+        class CurrentAndroidStore:
             parsed_data = {
-                root_certificate_pem_lines: current_google_constraints,
+                root_certificate_pem_lines: current_android_constraints,
             }
 
         with mock.patch.object(
-            FetcherRootCertificateStoreGoogle,
+            FetcherRootCertificateStoreAndroid,
             'from_current_data',
-            return_value=CurrentGoogleStore(),
+            return_value=CurrentAndroidStore(),
         ), mock.patch.object(
             RootCertificate,
             'get_json_records',
             return_value=existing_root_certificates,
         ):
-            updater = UpdaterRootCertificateTrustStore(Entity.GOOGLE)
+            updater = UpdaterRootCertificateTrustStore(Entity.ANDROID)
             merged_data = updater.fetcher_class.from_current_data()
 
         self.assertEqual(len(merged_data.parsed_data), 1)
@@ -712,9 +712,9 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         self.assertEqual(len(merged_root_certificate.trust_stores), 2)
         self.assertEqual(
             tuple(trust_store.owner for trust_store in merged_root_certificate.trust_stores),
-            (Entity.GOOGLE, Entity.MOZILLA),
+            (Entity.ANDROID, Entity.MOZILLA),
         )
-        self.assertEqual(merged_root_certificate.get_constraints_by_owner(Entity.GOOGLE), current_google_constraints)
+        self.assertEqual(merged_root_certificate.get_constraints_by_owner(Entity.ANDROID), current_android_constraints)
 
     def test_selected_store_adds_missing_owner_and_new_certificate(self):
         existing_root_certificate_pem_lines = tuple(self.public_key_x509_snakeoil_ca.pem.splitlines())
@@ -734,29 +734,29 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         ])
 
         new_root_certificate_pem_lines = tuple(self.public_key_x509_lets_encrypt.pem.splitlines())
-        current_google_constraints = (
+        current_android_constraints = (
             CertificateTrustConstraint(
                 action=RootCertificateTrustConstraintAction.DISTRUST,
                 domains=['example.com'],
             ),
         )
 
-        class CurrentGoogleStore:
+        class CurrentAndroidStore:
             parsed_data = {
-                existing_root_certificate_pem_lines: current_google_constraints,
+                existing_root_certificate_pem_lines: current_android_constraints,
                 new_root_certificate_pem_lines: (),
             }
 
         with mock.patch.object(
-            FetcherRootCertificateStoreGoogle,
+            FetcherRootCertificateStoreAndroid,
             'from_current_data',
-            return_value=CurrentGoogleStore(),
+            return_value=CurrentAndroidStore(),
         ), mock.patch.object(
             RootCertificate,
             'get_json_records',
             return_value=existing_root_certificates,
         ):
-            updater = UpdaterRootCertificateTrustStore(Entity.GOOGLE)
+            updater = UpdaterRootCertificateTrustStore(Entity.ANDROID)
             merged_data = updater.fetcher_class.from_current_data()
 
         self.assertEqual(len(merged_data.parsed_data), 2)
@@ -769,11 +769,11 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         existing_root_certificate = merged_by_certificate[existing_root_certificate_pem_lines]
         self.assertEqual(
             tuple(trust_store.owner for trust_store in existing_root_certificate.trust_stores),
-            (Entity.GOOGLE, Entity.MOZILLA),
+            (Entity.ANDROID, Entity.MOZILLA),
         )
         self.assertEqual(
-            existing_root_certificate.get_constraints_by_owner(Entity.GOOGLE),
-            current_google_constraints,
+            existing_root_certificate.get_constraints_by_owner(Entity.ANDROID),
+            current_android_constraints,
         )
         self.assertEqual(
             existing_root_certificate.get_constraints_by_owner(Entity.MOZILLA),
@@ -783,9 +783,9 @@ class TestUpdaterRootCertificateTrustStoreSelection(TestRootCertificateBase):
         new_root_certificate = merged_by_certificate[new_root_certificate_pem_lines]
         self.assertEqual(
             tuple(trust_store.owner for trust_store in new_root_certificate.trust_stores),
-            (Entity.GOOGLE,),
+            (Entity.ANDROID,),
         )
-        self.assertEqual(new_root_certificate.get_constraints_by_owner(Entity.GOOGLE), ())
+        self.assertEqual(new_root_certificate.get_constraints_by_owner(Entity.ANDROID), ())
 
     def test_selected_store_preserves_existing_owners(self):
         root_certificate_pem_lines = tuple(self.public_key_x509_snakeoil_ca.pem.splitlines())

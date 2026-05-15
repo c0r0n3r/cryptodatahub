@@ -15,6 +15,14 @@
             "CT_LOG_OPERATOR"
         ]
     },
+    "ANDROID": {
+        "name": "Android",
+        "long_name": "Android Open Source Project",
+        "type": "NOT_FOR_PROFIT_ORG",
+        "activities": [
+            "CA_TRUST_STORE_OWNER"
+        ]
+    },
     "APPLE": {
         "name": "Apple",
         "long_name": "Apple Inc.",
