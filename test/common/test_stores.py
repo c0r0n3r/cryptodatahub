@@ -322,7 +322,8 @@ class TestRootCertificate(unittest.TestCase):
             (Entity.MOZILLA, 120),
             (Entity.MICROSOFT, 211),
             (Entity.APPLE, 172),
-            (Entity.GOOGLE, 149),
+            (Entity.GOOGLE, 104),
+            (Entity.ANDROID, 149),
             (Entity.ORACLE, 109),
         ])
 

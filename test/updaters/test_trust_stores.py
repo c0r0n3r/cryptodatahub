@@ -29,6 +29,7 @@ from cryptodatahub.common.fetcher import (
     FetcherRootCertificateStore,
     FetcherRootCertificateStoreApple,
     FetcherRootCertificateStoreAndroid,
+    FetcherRootCertificateStoreChrome,
     FetcherRootCertificateStoreMicrosoft,
     FetcherRootCertificateStoreMozilla,
     FetcherRootCertificateStoreOracleJDK,
@@ -148,6 +149,14 @@ class TestRootCertificateBase(TestClasses.TestKeyBase):
         return [commit_log, listing] + file_contents
 
     @staticmethod
+    def _get_mock_data_chrome(public_keys=()):
+        commit_log = b")]}\'\n" + json.dumps({'log': [{'commit': 'deadbeef'}]}).encode('ascii')
+        certs_blob = base64.b64encode(
+            ''.join(public_key.pem for public_key in public_keys).encode('ascii')
+        )
+        return [commit_log, certs_blob]
+
+    @staticmethod
     def _build_jdk_pfx(public_keys, extra_content_infos, extra_safe_bags):
         """Build a PKCS#12 Pfx structure with certificates."""
         safe_bags = list(extra_safe_bags)
@@ -253,6 +262,23 @@ class TestUpdaterRootCertificateStoreAndroid(TestRootCertificateBase):
         mock_data = self._get_mock_data_android([public_key_x509])
         with mock.patch.object(HttpFetcher, '__call__', side_effect=mock_data):
             root_certificate_store = FetcherRootCertificateStoreAndroid.from_current_data()
+        self.assertEqual(len(root_certificate_store.parsed_data), 1)
+        self.assertEqual(root_certificate_store.parsed_data, {
+            tuple(public_key_x509.pem.splitlines()): (),
+        })
+
+
+class TestUpdaterRootCertificateStoreChrome(TestRootCertificateBase):
+    def test_parse_empty(self):
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=self._get_mock_data_chrome()):
+            root_certificate_store = FetcherRootCertificateStoreChrome.from_current_data()
+        self.assertEqual(len(root_certificate_store.parsed_data), 0)
+
+    def test_parse_pem(self):
+        public_key_x509 = self._get_public_key_x509('snakeoil_ca_cert')
+        mock_data = self._get_mock_data_chrome([public_key_x509])
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=mock_data):
+            root_certificate_store = FetcherRootCertificateStoreChrome.from_current_data()
         self.assertEqual(len(root_certificate_store.parsed_data), 1)
         self.assertEqual(root_certificate_store.parsed_data, {
             tuple(public_key_x509.pem.splitlines()): (),
@@ -528,9 +554,12 @@ class UpdaterRootCertificateTrustStoreTest(UpdaterBase):
 
 class TestFetcherRootCertificateStore(TestRootCertificateBase):
     def test_parse_empty(self):
+        mock_data_chrome = self._get_mock_data_chrome()
         mock_data_android = self._get_mock_data_android()
         http_fetcher_results = [
             self._get_mock_data_mozilla(),
+            mock_data_chrome[0],
+            mock_data_chrome[1],
             mock_data_android[0],
             mock_data_android[1],
             self._get_mock_data_microsoft(),
@@ -544,10 +573,13 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
 
     def test_parse_single_item_in_store(self):
         mock_data_mozilla = self._get_mock_data_mozilla([self.public_key_x509_lets_encrypt])
+        mock_data_chrome = self._get_mock_data_chrome()
         mock_data_android = self._get_mock_data_android()
         mock_data_microsoft = self._get_mock_data_microsoft([self.public_key_x509_snakeoil_ca])
         http_fetcher_results = [
             mock_data_mozilla,
+            mock_data_chrome[0],
+            mock_data_chrome[1],
             mock_data_android[0],
             mock_data_android[1],
             mock_data_microsoft,
@@ -591,6 +623,7 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             self.public_key_x509_lets_encrypt,
             self.public_key_x509_snakeoil_ca,
         ])
+        mock_data_chrome = self._get_mock_data_chrome()
         mock_data_android = self._get_mock_data_android()
         mock_data_microsoft = self._get_mock_data_microsoft([
             self.public_key_x509_lets_encrypt,
@@ -598,6 +631,8 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
         ])
         http_fetcher_results = [
             mock_data_mozilla,
+            mock_data_chrome[0],
+            mock_data_chrome[1],
             mock_data_android[0],
             mock_data_android[1],
             mock_data_microsoft,
