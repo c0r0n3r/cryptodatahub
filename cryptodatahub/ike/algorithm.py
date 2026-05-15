@@ -724,6 +724,21 @@ Ikev2CertificateType = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
+class Ikev1IdTypeParams(IkeLongNameParams):
+    """IKEv1 identification type parameters."""
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev1IdType = CryptoDataEnumCodedBase(
+    'IdType',
+    CryptoDataEnumBase.get_json_records(Ikev1IdTypeParams)
+)
+
+
+@attr.s(frozen=True)
 class Ikev1DiffieHellmanGroupParams(IkeAlgorithmParams):
     """IKEv1 Diffie-Hellman group parameters."""
 

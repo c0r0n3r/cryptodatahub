@@ -89,6 +89,7 @@ Attributes
       -  Life Type
       -  Pseudorandom Function
       -  Certificate Type
+      -  Identification Type
 
    -  `IKEv2 <https://tools.ietf.org/html/rfc7296#section-3.3.2>`__
 

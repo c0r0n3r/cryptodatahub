@@ -1,0 +1,68 @@
+{
+    "IPV4_ADDR": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC2407",
+        "code": 1,
+        "long_name": "IPv4 address"
+    },
+    "FQDN": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC2407",
+        "code": 2,
+        "long_name": "Fully-qualified domain name"
+    },
+    "USER_FQDN": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC2407",
+        "code": 3,
+        "long_name": "User fully-qualified domain name"
+    },
+    "IPV4_ADDR_SUBNET": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC2407",
+        "code": 4,
+        "long_name": "IPv4 address subnet"
+    },
+    "IPV6_ADDR": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC2407",
+        "code": 5,
+        "long_name": "IPv6 address"
+    },
+    "IPV6_ADDR_SUBNET": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC2407",
+        "code": 6,
+        "long_name": "IPv6 address subnet"
+    },
+    "IPV4_ADDR_RANGE": {
+        "_code_in_hex": "0x07",
+        "_standard": "RFC2407",
+        "code": 7,
+        "long_name": "IPv4 address range"
+    },
+    "IPV6_ADDR_RANGE": {
+        "_code_in_hex": "0x08",
+        "_standard": "RFC2407",
+        "code": 8,
+        "long_name": "IPv6 address range"
+    },
+    "DER_ASN1_DN": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC2407",
+        "code": 9,
+        "long_name": "DER-encoded ASN.1 X.500 Distinguished Name"
+    },
+    "DER_ASN1_GN": {
+        "_code_in_hex": "0x0a",
+        "_standard": "RFC2407",
+        "code": 10,
+        "long_name": "DER-encoded ASN.1 X.500 General Name"
+    },
+    "KEY_ID": {
+        "_code_in_hex": "0x0b",
+        "_standard": "RFC2407",
+        "code": 11,
+        "long_name": "Opaque vendor-specific key identifier"
+    }
+}
