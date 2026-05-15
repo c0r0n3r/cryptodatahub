@@ -58,6 +58,7 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 - add long names to block cipher and MAC algorithm entries
 - add long name attribute to IKE registry entry parameters (#57)
 - add IKEv1 certificate types (#57)
+- add IKEv2 certificate types (#57)
 
 * Fri Jul 17 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.4.0-1
 - add IKE vendor IDs (#58)

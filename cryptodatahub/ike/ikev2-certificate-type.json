@@ -1,0 +1,32 @@
+{
+    "X509_CERTIFICATE_SIGNATURE": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC7296",
+        "code": 4,
+        "long_name": "X.509 Certificate - Signature"
+    },
+    "CERTIFICATE_REVOCATION_LIST": {
+        "_code_in_hex": "0x07",
+        "_standard": "RFC7296",
+        "code": 7,
+        "long_name": "Certificate Revocation List (CRL)"
+    },
+    "HASH_AND_URL_OF_X509_CERTIFICATE": {
+        "_code_in_hex": "0x0c",
+        "_standard": "RFC7296",
+        "code": 12,
+        "long_name": "Hash and URL of X.509 certificate"
+    },
+    "HASH_AND_URL_OF_X509_BUNDLE": {
+        "_code_in_hex": "0x0d",
+        "_standard": "RFC7296",
+        "code": 13,
+        "long_name": "Hash and URL of X.509 bundle"
+    },
+    "RAW_PUBLIC_KEY": {
+        "_code_in_hex": "0x0f",
+        "_standard": "RFC7670",
+        "code": 15,
+        "long_name": "Raw Public Key (SubjectPublicKeyInfo)"
+    }
+}

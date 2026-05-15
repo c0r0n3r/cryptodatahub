@@ -97,6 +97,7 @@ Attributes
       -  Integrity Algorithm
       -  Diffie-Hellman Group
       -  Extended Sequence Numbers
+      -  Certificate Type
 
 -  Secure Socket Layer (SSL)
 
