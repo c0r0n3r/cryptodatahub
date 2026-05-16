@@ -104,3 +104,17 @@ class TestHttpFetcher(unittest.TestCase):
             b'  </body>',
             b'</html>',
         ]))
+
+    def test_user_agent_default_omits_header(self):
+        with mock.patch.object(urllib3.poolmanager.PoolManager, 'request') as mock_request:
+            HttpFetcher().fetch('http://example.com')
+        self.assertNotIn('headers', mock_request.call_args.kwargs)
+
+    def test_user_agent_custom_passed_as_header(self):
+        with mock.patch.object(urllib3.poolmanager.PoolManager, 'request') as mock_request:
+            HttpFetcher(user_agent='Mozilla/5.0').fetch('http://example.com')
+        self.assertEqual(mock_request.call_args.kwargs['headers'], {'User-Agent': 'Mozilla/5.0'})
+
+    def test_user_agent_invalid_type_rejected(self):
+        with self.assertRaises(TypeError):
+            HttpFetcher(user_agent=42)
