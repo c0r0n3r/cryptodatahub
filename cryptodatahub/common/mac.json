@@ -71,6 +71,38 @@
         "digest_size": 96,
         "hash_algorithm": null
     },
+    "AES_XCBC_MAC_96": {
+        "name": "AES-XCBC-MAC(96)",
+        "long_name": "AES-XCBC-MAC truncated to 96 bits",
+        "oid": null,
+        "vulnerabilities": null,
+        "digest_size": 96,
+        "hash_algorithm": null
+    },
+    "AES_XCBC_PRF_128": {
+        "name": "AES-XCBC-PRF",
+        "long_name": "AES-XCBC-PRF-128",
+        "oid": null,
+        "vulnerabilities": null,
+        "digest_size": 128,
+        "hash_algorithm": null
+    },
+    "AES_CMAC_96": {
+        "name": "AES-CMAC(96)",
+        "long_name": "AES-CMAC truncated to 96 bits",
+        "oid": null,
+        "vulnerabilities": null,
+        "digest_size": 96,
+        "hash_algorithm": null
+    },
+    "AES_CMAC_PRF_128": {
+        "name": "AES-CMAC-PRF",
+        "long_name": "AES-CMAC-PRF-128",
+        "oid": null,
+        "vulnerabilities": null,
+        "digest_size": 128,
+        "hash_algorithm": null
+    },
     "CBCMAC_BLOWFISH": {
         "name": "CBC-MAC Blowfish",
         "long_name": null,
