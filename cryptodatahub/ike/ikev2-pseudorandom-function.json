@@ -21,7 +21,7 @@
         "_code_in_hex": "0x04",
         "_standard": "RFC4434",
         "code": 4,
-        "mac": "CBCMAC_AES"
+        "mac": "AES_XCBC_PRF_128"
     },
     "PRF_HMAC_SHA2_256": {
         "_code_in_hex": "0x05",
@@ -45,7 +45,7 @@
         "_code_in_hex": "0x08",
         "_standard": "RFC4615",
         "code": 8,
-        "mac": "CBCMAC_AES"
+        "mac": "AES_CMAC_PRF_128"
     },
     "PRF_HMAC_STREEBOG_512": {
         "_code_in_hex": "0x09",

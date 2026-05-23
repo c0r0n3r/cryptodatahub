@@ -33,7 +33,7 @@
         "_code_in_hex": "0x05",
         "_standard": "RFC3566",
         "code": 5,
-        "hmac": "CBCMAC_AES_96"
+        "hmac": "AES_XCBC_MAC_96"
     },
     "AUTH_HMAC_MD5_128": {
         "_code_in_hex": "0x06",
@@ -51,7 +51,7 @@
         "_code_in_hex": "0x08",
         "_standard": "RFC4494",
         "code": 8,
-        "hmac": "CBCMAC_AES_96"
+        "hmac": "AES_CMAC_96"
     },
     "AUTH_AES_128_GMAC": {
         "_code_in_hex": "0x09",
@@ -93,7 +93,7 @@
         "_code_in_hex": "0xFA",
         "_standard": null,
         "code": 250,
-        "hmac": "CBCMAC_AES_96"
+        "hmac": "AES_CMAC_96"
     },
     "AUTH_ALGORITHM_HMAC_SHA2_256_TRUNCBUG": {
         "_code_in_hex": "0xFC",
