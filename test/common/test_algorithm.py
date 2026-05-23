@@ -30,11 +30,26 @@ class TestBlockCipher(TestClasses.TestJsonBase):
     def _get_class(cls):
         return BlockCipher
 
+    def test_aead(self):
+        self.assertFalse(BlockCipher.CHACHA20.value.aead)
+        self.assertFalse(BlockCipher.AES_128.value.aead)
+
 
 class TestBlockCipherMode(TestClasses.TestJsonBase):
     @classmethod
     def _get_class(cls):
         return BlockCipherMode
+
+    def test_aead(self):
+        for mode in (BlockCipherMode.GCM, BlockCipherMode.GCM_8,
+                     BlockCipherMode.CCM, BlockCipherMode.CCM_8,
+                     BlockCipherMode.MGM, BlockCipherMode.GMAC,
+                     BlockCipherMode.EAX):
+            self.assertTrue(mode.value.aead, msg=mode.name)
+        for mode in (BlockCipherMode.CBC, BlockCipherMode.CTR,
+                     BlockCipherMode.CFB, BlockCipherMode.OFB,
+                     BlockCipherMode.ECB, BlockCipherMode.CNT):
+            self.assertFalse(mode.value.aead, msg=mode.name)
 
 
 class TestHash(TestClasses.TestJsonBase):
