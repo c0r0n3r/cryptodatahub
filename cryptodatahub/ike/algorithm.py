@@ -149,6 +149,7 @@ class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
         converter=convert_enum(BlockCipherMode),
         validator=attr.validators.optional(attr.validators.instance_of(BlockCipherMode)),
     )
+    aead: bool = attr.ib(init=False, default=False, validator=attr.validators.instance_of(bool))
 
     def __str__(self):
         if not self.bulk_ciphers:
@@ -168,8 +169,14 @@ class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
         gradeables = [bulk_cipher.value for bulk_cipher in self.bulk_ciphers]
         if self.block_cipher_mode is not None:
             gradeables.append(self.block_cipher_mode.value)
+            aead = self.block_cipher_mode.value.aead
+        elif self.bulk_ciphers and self.bulk_ciphers[0].value.block_size is None:
+            aead = True  # stream cipher (ChaCha20-Poly1305): Poly1305 authentication is implicit
+        else:
+            aead = False
 
         object.__setattr__(self, 'gradeables', gradeables)
+        object.__setattr__(self, 'aead', aead)
 
         attr.validate(self)
 
@@ -520,6 +527,7 @@ class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
         converter=convert_enum(BlockCipherMode),
         validator=attr.validators.optional(attr.validators.instance_of(BlockCipherMode)),
     )
+    aead: bool = attr.ib(init=False, default=False, validator=attr.validators.instance_of(bool))
 
     def __str__(self):
         if not self.bulk_ciphers:
@@ -541,6 +549,7 @@ class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
             gradeables.append(self.block_cipher_mode.value)
 
         object.__setattr__(self, 'gradeables', gradeables)
+        object.__setattr__(self, 'aead', self.block_cipher_mode is not None and self.block_cipher_mode.value.aead)
 
         attr.validate(self)
 

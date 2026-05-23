@@ -207,6 +207,17 @@
         ],
         "block_cipher_mode": "CBC"
     },
+    "ENCR_CAMELLIA_CBC": {
+        "_code_in_hex": "0x17",
+        "_standard": "RFC5529,RFC7296",
+        "code": 23,
+        "bulk_ciphers": [
+            "CAMELLIA_128",
+            "CAMELLIA_192",
+            "CAMELLIA_256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
     "ENCR_TWOFISH_CBC": {
         "_code_in_hex": "0xFDED",
         "_standard": "PRIVATE",
@@ -316,7 +327,7 @@
         "bulk_ciphers": [
             "GOST_R3412_15_128"
         ],
-        "block_cipher_mode": null
+        "block_cipher_mode": "MGM"
     },
     "ENCR_MAGMA_MGM_MAC_KTREE": {
         "_code_in_hex": "0x23",
@@ -325,7 +336,7 @@
         "bulk_ciphers": [
             "GOST_R3412_15_64"
         ],
-        "block_cipher_mode": null
+        "block_cipher_mode": "MGM"
     },
     "ENCR_AES_GCM_128_16": {
         "_code_in_hex": "0x65",
