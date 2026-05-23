@@ -209,7 +209,7 @@
                 "named": "SWEET32"
             }
         ],
-        "key_size": 40,
+        "key_size": 128,
         "block_size": 64
     },
     "CAST5_64": {
