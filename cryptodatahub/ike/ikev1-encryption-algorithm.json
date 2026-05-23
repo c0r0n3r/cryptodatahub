@@ -51,8 +51,8 @@
         "_standard": "RFC2409",
         "code": 6,
         "bulk_ciphers": [
-            "CAST_128",
-            "CAST_256"
+            "CAST5_128",
+            "CAST6_256"
         ],
         "block_cipher_mode": "CBC"
     },
