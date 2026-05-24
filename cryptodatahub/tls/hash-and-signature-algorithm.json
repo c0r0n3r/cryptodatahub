@@ -3,264 +3,308 @@
         "_code_in_hex": "0x0000",
         "code": 0,
         "hash_algorithm": null,
-        "signature_algorithm": "anonymous"
+        "signature_algorithm": "anonymous",
+        "initial_version": "TLS1_2"
     },
     "ANONYMOUS_MD5": {
         "_code_in_hex": "0x0100",
         "code": 256,
         "hash_algorithm": "MD5",
-        "signature_algorithm": "anonymous"
+        "signature_algorithm": "anonymous",
+        "initial_version": "TLS1_2"
     },
     "ANONYMOUS_SHA1": {
         "_code_in_hex": "0x0200",
         "code": 512,
         "hash_algorithm": "SHA1",
-        "signature_algorithm": "anonymous"
+        "signature_algorithm": "anonymous",
+        "initial_version": "TLS1_2"
     },
     "ANONYMOUS_SHA224": {
         "_code_in_hex": "0x0300",
         "code": 768,
         "hash_algorithm": "SHA2_224",
-        "signature_algorithm": "anonymous"
+        "signature_algorithm": "anonymous",
+        "initial_version": "TLS1_2"
     },
     "ANONYMOUS_SHA256": {
         "_code_in_hex": "0x0400",
         "code": 1024,
         "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "anonymous"
+        "signature_algorithm": "anonymous",
+        "initial_version": "TLS1_2"
     },
     "ANONYMOUS_SHA384": {
         "_code_in_hex": "0x0500",
         "code": 1280,
         "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "anonymous"
+        "signature_algorithm": "anonymous",
+        "initial_version": "TLS1_2"
     },
     "ANONYMOUS_SHA512": {
         "_code_in_hex": "0x0006",
         "code": 6,
         "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "anonymous"
+        "signature_algorithm": "anonymous",
+        "initial_version": "TLS1_2"
     },
     "RSA_NONE": {
         "_code_in_hex": "0x0001",
         "code": 1,
         "hash_algorithm": null,
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
     },
     "RSA_MD5": {
         "_code_in_hex": "0x0101",
         "code": 257,
         "hash_algorithm": "MD5",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
     },
     "RSA_SHA1": {
         "_code_in_hex": "0x0201",
         "code": 513,
         "hash_algorithm": "SHA1",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
     },
     "RSA_SHA224": {
         "_code_in_hex": "0x0301",
         "code": 769,
         "hash_algorithm": "SHA2_224",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
     },
     "RSA_SHA256": {
         "_code_in_hex": "0x0401",
         "code": 1025,
         "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
     },
     "RSA_SHA384": {
         "_code_in_hex": "0x0501",
         "code": 1281,
         "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
     },
     "RSA_SHA512": {
         "_code_in_hex": "0x0601",
         "code": 1537,
         "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
     },
     "DSA_NONE": {
         "_code_in_hex": "0x0002",
         "code": 2,
         "hash_algorithm": null,
-        "signature_algorithm": "DSS"
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
     },
     "DSA_MD5": {
         "_code_in_hex": "0x0102",
         "code": 258,
         "hash_algorithm": "MD5",
-        "signature_algorithm": "DSS"
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
     },
     "DSA_SHA1": {
         "_code_in_hex": "0x0202",
         "code": 514,
         "hash_algorithm": "SHA1",
-        "signature_algorithm": "DSS"
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
     },
     "DSA_SHA224": {
         "_code_in_hex": "0x0302",
         "code": 770,
         "hash_algorithm": "SHA2_224",
-        "signature_algorithm": "DSS"
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
     },
     "DSA_SHA256": {
         "_code_in_hex": "0x0402",
         "code": 1026,
         "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "DSS"
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
     },
     "DSA_SHA384": {
         "_code_in_hex": "0x0502",
         "code": 1282,
         "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "DSS"
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
     },
     "DSA_SHA512": {
         "_code_in_hex": "0x0602",
         "code": 1538,
         "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "DSS"
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
     },
     "ECDSA_NONE": {
         "_code_in_hex": "0x0003",
         "code": 3,
         "hash_algorithm": null,
-        "signature_algorithm": "ECDSA"
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
     },
     "ECDSA_MD5": {
         "_code_in_hex": "0x0103",
         "code": 259,
         "hash_algorithm": "MD5",
-        "signature_algorithm": "ECDSA"
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
     },
     "ECDSA_SHA1": {
         "_code_in_hex": "0x0203",
         "code": 515,
         "hash_algorithm": "SHA1",
-        "signature_algorithm": "ECDSA"
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
     },
     "ECDSA_SHA224": {
         "_code_in_hex": "0x0303",
         "code": 771,
         "hash_algorithm": "SHA2_224",
-        "signature_algorithm": "ECDSA"
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
     },
     "ECDSA_SHA256": {
         "_code_in_hex": "0x0403",
         "code": 1027,
         "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "ECDSA"
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
     },
     "ECDSA_SHA384": {
         "_code_in_hex": "0x0503",
         "code": 1283,
         "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "ECDSA"
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
     },
     "ECDSA_SHA512": {
         "_code_in_hex": "0x0603",
         "code": 1539,
         "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "ECDSA"
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
     },
     "ECDSA_BRAINPOOLP256R1TLS13_SHA256": {
         "_code_in_hex": "0x081a",
         "code": 2074,
         "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "ECDSA"
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_3"
     },
     "ECDSA_BRAINPOOLP384R1TLS13_SHA384": {
         "_code_in_hex": "0x081b",
         "code": 2075,
         "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "ECDSA"
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_3"
     },
     "ECDSA_BRAINPOOLP512R1TLS13_SHA512": {
         "_code_in_hex": "0x081c",
         "code": 2076,
         "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "ECDSA"
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_3"
     },
     "GOST_R3410_01": {
         "_code_in_hex": "0x00ed",
         "code": 237,
         "hash_algorithm": "GOST_R3411_94",
-        "signature_algorithm": "GOST_R3410_01"
+        "signature_algorithm": "GOST_R3410_01",
+        "initial_version": "TLS1_2"
     },
     "OLD_GOST_R3410_12_256": {
         "_code_in_hex": "0x00ee",
         "code": 238,
         "hash_algorithm": "GOST_R3411_12_256",
-        "signature_algorithm": "GOST_R3410_12_256"
+        "signature_algorithm": "GOST_R3410_12_256",
+        "initial_version": "TLS1_2"
     },
     "OLD_GOST_R3410_12_512": {
         "_code_in_hex": "0x00ef",
         "code": 239,
         "hash_algorithm": "GOST_R3411_12_512",
-        "signature_algorithm": "GOST_R3410_12_512"
+        "signature_algorithm": "GOST_R3410_12_512",
+        "initial_version": "TLS1_2"
     },
     "GOST_R3410_12_256": {
         "_code_in_hex": "0x4008",
         "code": 16392,
         "hash_algorithm": "GOST_R3411_12_256",
-        "signature_algorithm": "GOST_R3410_12_256"
+        "signature_algorithm": "GOST_R3410_12_256",
+        "initial_version": "TLS1_2"
     },
     "GOST_R3410_12_512": {
         "_code_in_hex": "0x4108",
         "code": 16648,
         "hash_algorithm": "GOST_R3411_12_512",
-        "signature_algorithm": "GOST_R3410_12_512"
+        "signature_algorithm": "GOST_R3410_12_512",
+        "initial_version": "TLS1_2"
     },
     "RSA_PSS_RSAE_SHA256": {
         "_code_in_hex": "0x0804",
         "code": 2052,
         "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_3"
     },
     "RSA_PSS_RSAE_SHA384": {
         "_code_in_hex": "0x0805",
         "code": 2053,
         "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_3"
     },
     "RSA_PSS_RSAE_SHA512": {
         "_code_in_hex": "0x0806",
         "code": 2054,
         "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_3"
     },
     "ED25519": {
         "_code_in_hex": "0x0807",
         "code": 2055,
         "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "EDDSA"
+        "signature_algorithm": "EDDSA",
+        "initial_version": "TLS1_3"
     },
     "ED448": {
         "_code_in_hex": "0x0808",
         "code": 2056,
         "hash_algorithm": "SHAKE_256",
-        "signature_algorithm": "EDDSA"
+        "signature_algorithm": "EDDSA",
+        "initial_version": "TLS1_3"
     },
     "RSA_PSS_PSS_SHA256": {
         "_code_in_hex": "0x0809",
         "code": 2057,
         "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_3"
     },
     "RSA_PSS_PSS_SHA384": {
         "_code_in_hex": "0x080a",
         "code": 2058,
         "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_3"
     },
     "RSA_PSS_PSS_SHA512": {
         "_code_in_hex": "0x080b",
         "code": 2059,
         "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "RSA"
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_3"
     }
 }

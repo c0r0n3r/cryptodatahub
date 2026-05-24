@@ -73,8 +73,25 @@ class HashAndSignatureAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComp
         converter=convert_enum(Authentication),
         validator=attr.validators.optional(attr.validators.instance_of(Authentication)),
     )
+    initial_version = attr.ib(
+        converter=convert_enum(TlsVersion),
+        validator=attr.validators.instance_of(TlsVersion),
+    )
+    last_version = attr.ib(init=False, validator=attr.validators.instance_of(TlsVersion))
 
     def __attrs_post_init__(self):
+        # Algorithms with initial_version >= TLS1_3 are TLS 1.3 only.
+        # ECDSA_SHA256/384/512 (codes 0x0403, 0x0503, 0x0603) span both TLS 1.2 and TLS 1.3.
+        tls1_3_version = TlsVersion['TLS1_3']
+        tls1_2_version = TlsVersion['TLS1_2']
+
+        if self.initial_version.value.code >= tls1_3_version.value.code:
+            object.__setattr__(self, 'last_version', tls1_3_version)
+        elif self.code in (0x0403, 0x0503, 0x0603, 0x0708):
+            object.__setattr__(self, 'last_version', tls1_3_version)
+        else:
+            object.__setattr__(self, 'last_version', tls1_2_version)
+
         vulnerabilities = []
         if self.hash_algorithm is not None:
             vulnerabilities.append(self.hash_algorithm.value)
