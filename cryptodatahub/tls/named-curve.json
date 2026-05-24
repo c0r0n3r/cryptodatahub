@@ -184,6 +184,11 @@
         "code": 40,
         "named_group": "GC512C"
     },
+    "CURVESM2": {
+        "_code_in_hex": "0x0029",
+        "code": 41,
+        "named_group": "SM2P256V1"
+    },
     "FFDHE2048": {
         "_code_in_hex": "0x0100",
         "code": 256,

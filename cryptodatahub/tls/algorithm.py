@@ -248,7 +248,9 @@ class CipherParamsBase(CryptoDataParamsEnumNumeric, GradeableComplex):  # pylint
         if self.initial_version == TlsVersion.SSL2:
             object.__setattr__(self, 'last_version', TlsVersion.SSL2)
         else:
-            if self.code & 0xff00 in [0x1300, 0x7e00, 0x7f00]:
+            # Standard TLS 1.3 suite ranges (0x13xx, 0x7exx, 0x7fxx) plus
+            # RFC 8998 SM4 TLS 1.3 suites (0x00c6, 0x00c7) which use the 0x00 prefix.
+            if self.code & 0xff00 in [0x1300, 0x7e00, 0x7f00] or self.code in (0x00c6, 0x00c7):
                 object.__setattr__(self, 'last_version', TlsVersion.TLS1_3)
             else:
                 object.__setattr__(self, 'last_version', TlsVersion.TLS1_2)

@@ -306,5 +306,12 @@
         "hash_algorithm": "SHA2_512",
         "signature_algorithm": "RSA",
         "initial_version": "TLS1_3"
+    },
+    "SM2_SM3": {
+        "_code_in_hex": "0x0708",
+        "code": 1800,
+        "hash_algorithm": "SM3",
+        "signature_algorithm": "SM2",
+        "initial_version": "TLS1_2"
     }
 }
