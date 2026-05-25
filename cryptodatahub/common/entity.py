@@ -14,6 +14,7 @@ class EntityType(enum.Enum):
     NONPROFIT_ORG = 'nonprofit organization'
     NOT_FOR_PROFIT_ORG = 'not-for-profit organization'
     PRIV_PERSON = 'private person'
+    SOFTWARE_PROJECT = 'software project'
 
 
 class EntityRole(enum.Enum):

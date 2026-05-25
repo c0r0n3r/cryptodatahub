@@ -3,9 +3,9 @@
 
 from test.common.classes import TestClasses
 
-from cryptodatahub.common.algorithm import BlockCipher
 from cryptodatahub.ike.version import IkeVersion
 from cryptodatahub.ike.algorithm import (
+    IkeEncryptionBulkCipherEntry,
     Ikev2PayloadType,
     Ikev2NotifyType,
     Ikev2ExtendedSequenceNumber,
@@ -79,7 +79,10 @@ class TestIkev2EncryptionAlgorithm(TestClasses.TestJsonCodeNumericBase):
         self.assertEqual(
             str(Ikev2EncryptionAlgorithmParams(
                 code=0,
-                bulk_ciphers=[BlockCipher.CHACHA20],
+                bulk_ciphers=[{
+                    "cipher": "CHACHA20",
+                    "names": {"STRONGSWAN": None, "LIBRESWAN": None, "OPENSWAN": None},
+                }],
                 block_cipher_mode=None,
             )),
             'ChaCha20'
@@ -87,6 +90,18 @@ class TestIkev2EncryptionAlgorithm(TestClasses.TestJsonCodeNumericBase):
         self.assertEqual(
             str(Ikev2EncryptionAlgorithm.ENCR_NULL.value),
             'null'
+        )
+        existing_entry = IkeEncryptionBulkCipherEntry(
+            cipher='AES_128',
+            names={'STRONGSWAN': None, 'LIBRESWAN': None, 'OPENSWAN': None},
+        )
+        self.assertEqual(
+            str(Ikev2EncryptionAlgorithmParams(
+                code=0,
+                bulk_ciphers=[existing_entry],
+                block_cipher_mode=None,
+            )),
+            'AES-128'
         )
 
     def test_aead_via_block_cipher_mode(self):
@@ -244,7 +259,10 @@ class TestIkev1EncryptionAlgorithm(TestClasses.TestJsonCodeNumericBase):
         self.assertEqual(
             str(Ikev1EncryptionAlgorithmParams(
                 code=0,
-                bulk_ciphers=[BlockCipher.AES_128],
+                bulk_ciphers=[{
+                    "cipher": "AES_128",
+                    "names": {"STRONGSWAN": None, "LIBRESWAN": None, "OPENSWAN": None},
+                }],
                 block_cipher_mode=None,
             )),
             'AES-128'

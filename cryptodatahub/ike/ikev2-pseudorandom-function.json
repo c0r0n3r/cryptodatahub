@@ -3,78 +3,143 @@
         "_code_in_hex": "0x01",
         "_standard": "RFC2104",
         "code": 1,
+        "names": {
+            "STRONGSWAN": "md5",
+            "LIBRESWAN": "md5",
+            "OPENSWAN": "md5"
+        },
         "mac": "MD5"
     },
     "PRF_HMAC_SHA1": {
         "_code_in_hex": "0x02",
         "_standard": "RFC2104",
         "code": 2,
+        "names": {
+            "STRONGSWAN": "sha1",
+            "LIBRESWAN": "sha1",
+            "OPENSWAN": "sha1"
+        },
         "mac": "SHA1"
     },
     "PRF_HMAC_TIGER": {
         "_code_in_hex": "0x03",
         "_standard": null,
         "code": 3,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "mac": "TIGER_192"
     },
     "PRF_AES128_XCBC": {
         "_code_in_hex": "0x04",
         "_standard": "RFC4434",
         "code": 4,
+        "names": {
+            "STRONGSWAN": "aesxcbc",
+            "LIBRESWAN": "aes128_xcbc",
+            "OPENSWAN": null
+        },
         "mac": "AES_XCBC_PRF_128"
     },
     "PRF_HMAC_SHA2_256": {
         "_code_in_hex": "0x05",
         "_standard": "RFC4868",
         "code": 5,
+        "names": {
+            "STRONGSWAN": "sha256",
+            "LIBRESWAN": "sha2_256",
+            "OPENSWAN": "sha2_256"
+        },
         "mac": "SHA2_256"
     },
     "PRF_HMAC_SHA2_384": {
         "_code_in_hex": "0x06",
         "_standard": "RFC4868",
         "code": 6,
+        "names": {
+            "STRONGSWAN": "sha384",
+            "LIBRESWAN": "sha2_384",
+            "OPENSWAN": null
+        },
         "mac": "SHA2_384"
     },
     "PRF_HMAC_SHA2_512": {
         "_code_in_hex": "0x07",
         "_standard": "RFC4868",
         "code": 7,
+        "names": {
+            "STRONGSWAN": "sha512",
+            "LIBRESWAN": "sha2_512",
+            "OPENSWAN": "sha2_512"
+        },
         "mac": "SHA2_512"
     },
     "PRF_AES128_CMAC": {
         "_code_in_hex": "0x08",
         "_standard": "RFC4615",
         "code": 8,
+        "names": {
+            "STRONGSWAN": "aescmac",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "mac": "AES_CMAC_PRF_128"
     },
     "PRF_HMAC_STREEBOG_512": {
         "_code_in_hex": "0x09",
         "_standard": "RFC9385",
         "code": 9,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "mac": "GOST_R3411_12_512"
     },
     "PRF_FIPS_SHA1_160": {
         "_code_in_hex": "0x401",
         "_standard": null,
         "code": 1025,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "mac": "SHA1"
     },
     "PRF_FIPS_DES": {
         "_code_in_hex": "0x402",
         "_standard": null,
         "code": 1026,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "mac": "CBCMAC_DES"
     },
     "PRF_KEYED_SHA1": {
         "_code_in_hex": "0x403",
         "_standard": null,
         "code": 1027,
+        "names": {
+            "STRONGSWAN": "keyed_sha1",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "mac": "SHA1"
     },
     "PRF_CAMELLIA128_XCBC": {
         "_code_in_hex": "0x404",
         "_standard": null,
         "code": 1028,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "mac": "CBCMAC_CAMELLIA"
     }
 }

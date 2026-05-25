@@ -4,7 +4,14 @@
         "_standard": "RFC7296",
         "code": 1,
         "bulk_ciphers": [
-            "DES"
+            {
+                "cipher": "DES",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -13,7 +20,14 @@
         "_standard": "RFC2405",
         "code": 2,
         "bulk_ciphers": [
-            "DES"
+            {
+                "cipher": "DES",
+                "names": {
+                    "STRONGSWAN": "des",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -22,7 +36,14 @@
         "_standard": "RFC2451",
         "code": 3,
         "bulk_ciphers": [
-            "TRIPLE_DES_168"
+            {
+                "cipher": "TRIPLE_DES_168",
+                "names": {
+                    "STRONGSWAN": "3des",
+                    "LIBRESWAN": "3des",
+                    "OPENSWAN": "3des"
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -31,9 +52,30 @@
         "_standard": "RFC2451",
         "code": 4,
         "bulk_ciphers": [
-            "RC5_32",
-            "RC5_64",
-            "RC5_128"
+            {
+                "cipher": "RC5_32",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "RC5_64",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "RC5_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -42,8 +84,22 @@
         "_standard": "RFC2451",
         "code": 5,
         "bulk_ciphers": [
-            "IDEA",
-            "IDEA_128"
+            {
+                "cipher": "IDEA",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "IDEA_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -52,8 +108,38 @@
         "_standard": "RFC2451",
         "code": 6,
         "bulk_ciphers": [
-            "CAST5_128",
-            "CAST6_256"
+            {
+                "cipher": "CAST5_40",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAST5_64",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAST5_80",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAST5_128",
+                "names": {
+                    "STRONGSWAN": "cast128",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -62,12 +148,54 @@
         "_standard": "RFC2451",
         "code": 7,
         "bulk_ciphers": [
-            "BLOWFISH_32",
-            "BLOWFISH_64",
-            "BLOWFISH_128",
-            "BLOWFISH_192",
-            "BLOWFISH_256",
-            "BLOWFISH_448"
+            {
+                "cipher": "BLOWFISH_32",
+                "names": {
+                    "STRONGSWAN": "blowfish32",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "BLOWFISH_64",
+                "names": {
+                    "STRONGSWAN": "blowfish64",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "BLOWFISH_128",
+                "names": {
+                    "STRONGSWAN": "blowfish128",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "BLOWFISH_192",
+                "names": {
+                    "STRONGSWAN": "blowfish192",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "BLOWFISH_256",
+                "names": {
+                    "STRONGSWAN": "blowfish256",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "BLOWFISH_448",
+                "names": {
+                    "STRONGSWAN": "blowfish448",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -76,8 +204,22 @@
         "_standard": "RFC7296",
         "code": 8,
         "bulk_ciphers": [
-            "IDEA",
-            "IDEA_128"
+            {
+                "cipher": "IDEA",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "IDEA_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -86,7 +228,14 @@
         "_standard": "RFC7296",
         "code": 9,
         "bulk_ciphers": [
-            "DES"
+            {
+                "cipher": "DES",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -102,9 +251,30 @@
         "_standard": "RFC3602",
         "code": 12,
         "bulk_ciphers": [
-            "AES_128",
-            "AES_192",
-            "AES_256"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": "aes128",
+                    "LIBRESWAN": "aes128",
+                    "OPENSWAN": "aes128"
+                }
+            },
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": "aes192",
+                    "LIBRESWAN": "aes192",
+                    "OPENSWAN": "aes192"
+                }
+            },
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": "aes256",
+                    "LIBRESWAN": "aes256",
+                    "OPENSWAN": "aes256"
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -113,9 +283,30 @@
         "_standard": "RFC3686",
         "code": 13,
         "bulk_ciphers": [
-            "AES_128",
-            "AES_192",
-            "AES_256"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": "aes128ctr",
+                    "LIBRESWAN": "aes_ctr128",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": "aes192ctr",
+                    "LIBRESWAN": "aes_ctr192",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": "aes256ctr",
+                    "LIBRESWAN": "aes_ctr256",
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CTR"
     },
@@ -124,9 +315,30 @@
         "_standard": "RFC4309",
         "code": 14,
         "bulk_ciphers": [
-            "AES_128",
-            "AES_192",
-            "AES_256"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": "aes128ccm8",
+                    "LIBRESWAN": "aes_ccm_a128",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": "aes192ccm8",
+                    "LIBRESWAN": "aes_ccm_a192",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": "aes256ccm8",
+                    "LIBRESWAN": "aes_ccm_a256",
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_8"
     },
@@ -135,9 +347,30 @@
         "_standard": "RFC4309",
         "code": 15,
         "bulk_ciphers": [
-            "AES_128",
-            "AES_192",
-            "AES_256"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": "aes128ccm12",
+                    "LIBRESWAN": "aes_ccm_b128",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": "aes192ccm12",
+                    "LIBRESWAN": "aes_ccm_b192",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": "aes256ccm12",
+                    "LIBRESWAN": "aes_ccm_b256",
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_12"
     },
@@ -146,9 +379,30 @@
         "_standard": "RFC4309",
         "code": 16,
         "bulk_ciphers": [
-            "AES_128",
-            "AES_192",
-            "AES_256"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": "aes128ccm16",
+                    "LIBRESWAN": "aes_ccm_c128",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": "aes192ccm16",
+                    "LIBRESWAN": "aes_ccm_c192",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": "aes256ccm16",
+                    "LIBRESWAN": "aes_ccm_c256",
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_16"
     },
@@ -157,9 +411,30 @@
         "_standard": "RFC4106",
         "code": 18,
         "bulk_ciphers": [
-            "AES_128",
-            "AES_192",
-            "AES_256"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": "aes128gcm8",
+                    "LIBRESWAN": "aes_gcm_a128",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": "aes192gcm8",
+                    "LIBRESWAN": "aes_gcm_a192",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": "aes256gcm8",
+                    "LIBRESWAN": "aes_gcm_a256",
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_8"
     },
@@ -168,9 +443,30 @@
         "_standard": "RFC4106",
         "code": 19,
         "bulk_ciphers": [
-            "AES_128",
-            "AES_192",
-            "AES_256"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": "aes128gcm12",
+                    "LIBRESWAN": "aes_gcm_b128",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": "aes192gcm12",
+                    "LIBRESWAN": "aes_gcm_b192",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": "aes256gcm12",
+                    "LIBRESWAN": "aes_gcm_b256",
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_12"
     },
@@ -179,9 +475,30 @@
         "_standard": "RFC5282",
         "code": 20,
         "bulk_ciphers": [
-            "AES_128",
-            "AES_192",
-            "AES_256"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": "aes128gcm16",
+                    "LIBRESWAN": "aes_gcm_c128",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": "aes192gcm16",
+                    "LIBRESWAN": "aes_gcm_c192",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": "aes256gcm16",
+                    "LIBRESWAN": "aes_gcm_c256",
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_16"
     },
@@ -190,53 +507,126 @@
         "_standard": "RFC4543",
         "code": 21,
         "bulk_ciphers": [
-            "AES_128",
-            "AES_192",
-            "AES_256"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": "aes_gmac128",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": "aes_gmac192",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": "aes_gmac256",
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GMAC"
-    },
-    "ENCR_SERPENT_CBC": {
-        "_code_in_hex": "0xFDEC",
-        "_standard": "PRIVATE",
-        "code": 65004,
-        "bulk_ciphers": [
-            "SERPENT_128",
-            "SERPENT_192",
-            "SERPENT_256"
-        ],
-        "block_cipher_mode": "CBC"
     },
     "ENCR_CAMELLIA_CBC": {
         "_code_in_hex": "0x17",
         "_standard": "RFC5529,RFC7296",
         "code": 23,
         "bulk_ciphers": [
-            "CAMELLIA_128",
-            "CAMELLIA_192",
-            "CAMELLIA_256"
+            {
+                "cipher": "CAMELLIA_128",
+                "names": {
+                    "STRONGSWAN": "camellia128",
+                    "LIBRESWAN": "camellia128",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAMELLIA_192",
+                "names": {
+                    "STRONGSWAN": "camellia192",
+                    "LIBRESWAN": "camellia192",
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAMELLIA_256",
+                "names": {
+                    "STRONGSWAN": "camellia256",
+                    "LIBRESWAN": "camellia256",
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
-    "ENCR_TWOFISH_CBC": {
-        "_code_in_hex": "0xFDED",
-        "_standard": "PRIVATE",
-        "code": 65005,
+    "ENCR_CAMELLIA_CTR": {
+        "_code_in_hex": "0x18",
+        "_standard": "RFC5529",
+        "code": 24,
         "bulk_ciphers": [
-            "TWOFISH128",
-            "TWOFISH192",
-            "TWOFISH256"
+            {
+                "cipher": "CAMELLIA_128",
+                "names": {
+                    "STRONGSWAN": "camellia128ctr",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAMELLIA_192",
+                "names": {
+                    "STRONGSWAN": "camellia192ctr",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAMELLIA_256",
+                "names": {
+                    "STRONGSWAN": "camellia256ctr",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
-        "block_cipher_mode": "CBC"
+        "block_cipher_mode": "CTR"
     },
-    "ENCR_TWOFISH_CBC_SSH": {
-        "_code_in_hex": "0xFF29",
-        "_standard": "PRIVATE",
-        "code": 65321,
+    "ENCR_CAMELLIA_CCM_8": {
+        "_code_in_hex": "0x19",
+        "_standard": "RFC5529,RFC8247",
+        "code": 25,
         "bulk_ciphers": [
-            "TWOFISH128",
-            "TWOFISH192",
-            "TWOFISH256"
+            {
+                "cipher": "CAMELLIA_128",
+                "names": {
+                    "STRONGSWAN": "camellia128ccm8",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAMELLIA_192",
+                "names": {
+                    "STRONGSWAN": "camellia192ccm8",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAMELLIA_256",
+                "names": {
+                    "STRONGSWAN": "camellia256ccm8",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_8"
     },
@@ -245,9 +635,30 @@
         "_standard": "RFC5529,RFC8247",
         "code": 26,
         "bulk_ciphers": [
-            "CAMELLIA_128",
-            "CAMELLIA_192",
-            "CAMELLIA_256"
+            {
+                "cipher": "CAMELLIA_128",
+                "names": {
+                    "STRONGSWAN": "camellia128ccm12",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAMELLIA_192",
+                "names": {
+                    "STRONGSWAN": "camellia192ccm12",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAMELLIA_256",
+                "names": {
+                    "STRONGSWAN": "camellia256ccm12",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_12"
     },
@@ -256,9 +667,30 @@
         "_standard": "RFC5529,RFC8247",
         "code": 27,
         "bulk_ciphers": [
-            "CAMELLIA_128",
-            "CAMELLIA_192",
-            "CAMELLIA_256"
+            {
+                "cipher": "CAMELLIA_128",
+                "names": {
+                    "STRONGSWAN": "camellia128ccm16",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAMELLIA_192",
+                "names": {
+                    "STRONGSWAN": "camellia192ccm16",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "CAMELLIA_256",
+                "names": {
+                    "STRONGSWAN": "camellia256ccm16",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_16"
     },
@@ -267,7 +699,14 @@
         "_standard": "RFC7634",
         "code": 28,
         "bulk_ciphers": [
-            "CHACHA20"
+            {
+                "cipher": "CHACHA20",
+                "names": {
+                    "STRONGSWAN": "chacha20poly1305",
+                    "LIBRESWAN": "chacha20poly1305",
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": null
     },
@@ -276,9 +715,30 @@
         "_standard": "RFC8750",
         "code": 29,
         "bulk_ciphers": [
-            "AES_128",
-            "AES_192",
-            "AES_256"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_8"
     },
@@ -287,9 +747,30 @@
         "_standard": "RFC8750",
         "code": 30,
         "bulk_ciphers": [
-            "AES_128",
-            "AES_192",
-            "AES_256"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_16"
     },
@@ -298,7 +779,14 @@
         "_standard": "RFC8750",
         "code": 31,
         "bulk_ciphers": [
-            "CHACHA20"
+            {
+                "cipher": "CHACHA20",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": null
     },
@@ -307,7 +795,14 @@
         "_standard": "RFC9227",
         "code": 32,
         "bulk_ciphers": [
-            "GOST_R3412_15_128"
+            {
+                "cipher": "GOST_R3412_15_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "MGM"
     },
@@ -316,7 +811,14 @@
         "_standard": "RFC9227",
         "code": 33,
         "bulk_ciphers": [
-            "GOST_R3412_15_64"
+            {
+                "cipher": "GOST_R3412_15_64",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "MGM"
     },
@@ -325,7 +827,14 @@
         "_standard": "RFC9227",
         "code": 34,
         "bulk_ciphers": [
-            "GOST_R3412_15_128"
+            {
+                "cipher": "GOST_R3412_15_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "MGM"
     },
@@ -334,7 +843,14 @@
         "_standard": "RFC9227",
         "code": 35,
         "bulk_ciphers": [
-            "GOST_R3412_15_64"
+            {
+                "cipher": "GOST_R3412_15_64",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "MGM"
     },
@@ -343,7 +859,14 @@
         "_standard": "RFC4106",
         "code": 101,
         "bulk_ciphers": [
-            "AES_128"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_16"
     },
@@ -352,7 +875,14 @@
         "_standard": "RFC4106",
         "code": 102,
         "bulk_ciphers": [
-            "AES_192"
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_16"
     },
@@ -361,7 +891,14 @@
         "_standard": "RFC4106",
         "code": 103,
         "bulk_ciphers": [
-            "AES_256"
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_16"
     },
@@ -370,7 +907,14 @@
         "_standard": "RFC4106",
         "code": 104,
         "bulk_ciphers": [
-            "AES_128"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_8"
     },
@@ -379,7 +923,14 @@
         "_standard": "RFC4106",
         "code": 105,
         "bulk_ciphers": [
-            "AES_192"
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_8"
     },
@@ -388,7 +939,14 @@
         "_standard": "RFC4106",
         "code": 106,
         "bulk_ciphers": [
-            "AES_256"
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_8"
     },
@@ -397,7 +955,14 @@
         "_standard": "RFC4106",
         "code": 107,
         "bulk_ciphers": [
-            "AES_128"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_12"
     },
@@ -406,7 +971,14 @@
         "_standard": "RFC4106",
         "code": 108,
         "bulk_ciphers": [
-            "AES_192"
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_12"
     },
@@ -415,7 +987,14 @@
         "_standard": "RFC4106",
         "code": 109,
         "bulk_ciphers": [
-            "AES_256"
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "GCM_12"
     },
@@ -424,7 +1003,14 @@
         "_standard": "RFC4309",
         "code": 111,
         "bulk_ciphers": [
-            "AES_128"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_16"
     },
@@ -433,7 +1019,14 @@
         "_standard": "RFC4309",
         "code": 112,
         "bulk_ciphers": [
-            "AES_192"
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_16"
     },
@@ -442,7 +1035,14 @@
         "_standard": "RFC4309",
         "code": 113,
         "bulk_ciphers": [
-            "AES_256"
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_16"
     },
@@ -451,7 +1051,14 @@
         "_standard": "RFC4309",
         "code": 114,
         "bulk_ciphers": [
-            "AES_128"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_8"
     },
@@ -460,7 +1067,14 @@
         "_standard": "RFC4309",
         "code": 115,
         "bulk_ciphers": [
-            "AES_192"
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_8"
     },
@@ -469,7 +1083,14 @@
         "_standard": "RFC4309",
         "code": 116,
         "bulk_ciphers": [
-            "AES_256"
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_8"
     },
@@ -478,7 +1099,14 @@
         "_standard": "RFC4309",
         "code": 117,
         "bulk_ciphers": [
-            "AES_128"
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_12"
     },
@@ -487,7 +1115,14 @@
         "_standard": "RFC4309",
         "code": 118,
         "bulk_ciphers": [
-            "AES_192"
+            {
+                "cipher": "AES_192",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_12"
     },
@@ -496,7 +1131,14 @@
         "_standard": "RFC4309",
         "code": 119,
         "bulk_ciphers": [
-            "AES_256"
+            {
+                "cipher": "AES_256",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CCM_12"
     },
@@ -505,9 +1147,30 @@
         "_standard": "PRIVATE",
         "code": 65004,
         "bulk_ciphers": [
-            "SERPENT_128",
-            "SERPENT_192",
-            "SERPENT_256"
+            {
+                "cipher": "SERPENT_128",
+                "names": {
+                    "STRONGSWAN": "serpent128",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "SERPENT_192",
+                "names": {
+                    "STRONGSWAN": "serpent192",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "SERPENT_256",
+                "names": {
+                    "STRONGSWAN": "serpent256",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -516,9 +1179,30 @@
         "_standard": "PRIVATE",
         "code": 65005,
         "bulk_ciphers": [
-            "TWOFISH128",
-            "TWOFISH192",
-            "TWOFISH256"
+            {
+                "cipher": "TWOFISH128",
+                "names": {
+                    "STRONGSWAN": "twofish128",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "TWOFISH192",
+                "names": {
+                    "STRONGSWAN": "twofish192",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "TWOFISH256",
+                "names": {
+                    "STRONGSWAN": "twofish256",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
     },
@@ -527,10 +1211,95 @@
         "_standard": "PRIVATE",
         "code": 65321,
         "bulk_ciphers": [
-            "TWOFISH128",
-            "TWOFISH192",
-            "TWOFISH256"
+            {
+                "cipher": "TWOFISH128",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "TWOFISH192",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            },
+            {
+                "cipher": "TWOFISH256",
+                "names": {
+                    "STRONGSWAN": null,
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
         ],
         "block_cipher_mode": "CBC"
+    },
+    "ENCR_AES_ECB": {
+        "_code_in_hex": "0xFF2A",
+        "_standard": "PRIVATE",
+        "code": 65322,
+        "bulk_ciphers": [
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": "aes_ecb",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
+        ],
+        "block_cipher_mode": "ECB"
+    },
+    "ENCR_DES_ECB": {
+        "_code_in_hex": "0xFF2B",
+        "_standard": "PRIVATE",
+        "code": 65323,
+        "bulk_ciphers": [
+            {
+                "cipher": "DES",
+                "names": {
+                    "STRONGSWAN": "des_ecb",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
+        ],
+        "block_cipher_mode": "ECB"
+    },
+    "ENCR_RC2_CBC": {
+        "_code_in_hex": "0xFF2C",
+        "_standard": "PRIVATE",
+        "code": 65324,
+        "bulk_ciphers": [
+            {
+                "cipher": "RC2",
+                "names": {
+                    "STRONGSWAN": "rc2",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_AES_CFB": {
+        "_code_in_hex": "0xFF2D",
+        "_standard": "PRIVATE",
+        "code": 65325,
+        "bulk_ciphers": [
+            {
+                "cipher": "AES_128",
+                "names": {
+                    "STRONGSWAN": "aes_cfb",
+                    "LIBRESWAN": null,
+                    "OPENSWAN": null
+                }
+            }
+        ],
+        "block_cipher_mode": "CFB"
     }
 }
