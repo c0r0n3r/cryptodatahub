@@ -109,5 +109,19 @@
         "oid": null,
         "vulnerabilities": [],
         "anonymous": false
+    },
+    "SM2": {
+        "name": "SM2",
+        "long_name": "ShangMi 2",
+        "oid": "1.2.156.10197.1.301",
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "SM9": {
+        "name": "SM9",
+        "long_name": "ShangMi 9 (Identity-Based Cryptography)",
+        "oid": "1.2.156.10197.1.302",
+        "vulnerabilities": [],
+        "anonymous": false
     }
 }

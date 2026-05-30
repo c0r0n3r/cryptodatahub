@@ -1951,5 +1951,29 @@
                 "B3531D2F 0485C19B 16E2F151 6E23DD3C 1A4827AF 1B8AC15B"
             ]
         }
+    },
+    "SM2P256V1": {
+        "name": "sm2p256v1",
+        "long_name": "ShangMi 2 (256-bit prime field)",
+        "standards": [],
+        "aliases": [],
+        "parameter_numbers": {
+            "a": [
+                "FFFFFFFE FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF 00000000",
+                "FFFFFFFF FFFFFFFC"
+            ],
+            "b": [
+                "28E9FA9E 9D9F5E34 4D5A9E4B CF6509A7 F39789F5 15AB8F92",
+                "DDBCBD41 4D940E93"
+            ],
+            "x": [
+                "32C4AE2C 1F198119 5F990446 6A39C994 8FE30BBF F2660BE1",
+                "715A4589 334C74C7"
+            ],
+            "y": [
+                "BC3736A2 F4F6779C 59BDCEE3 6B692153 D0A9877C C62A4740",
+                "02DF32E5 2139F0A0"
+            ]
+        }
     }
 }

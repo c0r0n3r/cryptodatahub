@@ -922,5 +922,13 @@
         "vulnerabilities": [],
         "size": 1120,
         "group_type": "HYBRID_PQS"
+    },
+    "SM2P256V1": {
+        "name": "sm2p256v1",
+        "long_name": "ShangMi 2 (256-bit prime field)",
+        "oid": "1.2.156.10197.1.301",
+        "vulnerabilities": [],
+        "size": 256,
+        "group_type": "ELLIPTIC_CURVE"
     }
 }

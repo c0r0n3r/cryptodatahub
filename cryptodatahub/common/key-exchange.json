@@ -136,5 +136,17 @@
         "long_name": "Secure Remote Password",
         "vulnerabilities": null,
         "forward_secret": false
+    },
+    "SM9DHE": {
+        "name": "SM9DHE",
+        "long_name": "ShangMi 9 Identity-Based Signature Diffie-Hellman Ephemeral",
+        "vulnerabilities": [],
+        "forward_secret": true
+    },
+    "SM9IBC": {
+        "name": "SM9IBC",
+        "long_name": "ShangMi 9 Identity-Based Cryptography Key Encapsulation",
+        "vulnerabilities": [],
+        "forward_secret": false
     }
 }
