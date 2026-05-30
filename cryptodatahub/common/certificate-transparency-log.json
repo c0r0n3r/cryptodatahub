@@ -6,10 +6,15 @@
         "url": "https://ct.akamai.com/",
         "mmd": 86400,
         "description": "Akamai CT Log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2015-11-27T15:37:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2015-11-27T15:37:00Z"
+                }
+            }
+        ]
     },
     "ALPHA_CT_LOG": {
         "log_id": "OTdvVF97Rgf1l0LXaM1dJDe/NHO2U0pINLz3Lmgcg8k=",
@@ -18,10 +23,15 @@
         "url": "https://alpha.ctlogs.org/",
         "mmd": 86400,
         "description": "Alpha CT Log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2015-01-27T14:38:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2015-01-27T14:38:00Z"
+                }
+            }
+        ]
     },
     "CERTLY_IO_LOG": {
         "log_id": "zbUXm3/BwEb+6jETaj+PAC5hgvr4iW/syLL1tatgSQA=",
@@ -30,10 +40,15 @@
         "url": "https://log.certly.io/",
         "mmd": 86400,
         "description": "Certly.IO log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-04-29T17:12:19Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-04-29T17:12:19Z"
+                }
+            }
+        ]
     },
     "CLOUDFLARE_NIMBUS_2017_LOG": {
         "log_id": "H7w24ALt6X9AGZ6Gs1c7ikIX2AGHdGrQ2gOgYFTSDfQ=",
@@ -46,10 +61,15 @@
             "start_inclusive": "2017-01-01T00:00:00Z",
             "end_exclusive": "2018-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2017-11-13T19:42:25Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2017-11-13T19:42:25Z"
+                }
+            }
+        ]
     },
     "CLOUDFLARE_NIMBUS_2018_LOG": {
         "log_id": "23Sv7ssp7LH+yj5xbSzluaq7NveEcYPHXZ1PN7Yfv2Q=",
@@ -62,10 +82,15 @@
             "start_inclusive": "2018-01-01T00:00:00Z",
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2019-05-07T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2019-05-07T00:00:00Z"
+                }
+            }
+        ]
     },
     "CLOUDFLARE_NIMBUS_2019_LOG": {
         "log_id": "dH7agzGtMxCRIZzOJU9CcMK//V5CIAjGNzV55hB7zFY=",
@@ -78,10 +103,15 @@
             "start_inclusive": "2019-01-01T00:00:00Z",
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-02-07T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-02-07T00:00:00Z"
+                }
+            }
+        ]
     },
     "CLOUDFLARE_NIMBUS_2020_LOG": {
         "log_id": "Xqdz+d9WwOe1Nkh90EngMnqRmgyEoRIShBh1loFxRVg=",
@@ -94,10 +124,15 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2021-04-21T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2021-04-21T00:00:00Z"
+                }
+            }
+        ]
     },
     "CLOUDFLARE_NIMBUS_2021_LOG": {
         "log_id": "RJRlLrDuzq/EQAfYqP4owNrmgr7YyzG1P9MzlrW2gag=",
@@ -110,10 +145,15 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-03-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-03-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "CLOUDFLARE_NIMBUS_2022_LOG": {
         "log_id": "QcjKsd8iRkoQxqE6CUKHXk4xixsD6+tLx2jwkGKWBvY=",
@@ -126,10 +166,15 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-02-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-02-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "CLOUDFLARE_NIMBUS_2023_LOG": {
         "log_id": "ejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61I=",
@@ -142,10 +187,15 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-02-02T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-02-02T00:00:00Z"
+                }
+            }
+        ]
     },
     "CLOUDFLARE_NIMBUS_2024_LOG": {
         "log_id": "2ra/az+1tiKfm8K7XGvocJFxbLtRhIU0vaQ9MEjX+6s=",
@@ -158,10 +208,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-02-01T08:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-02-01T08:53:20Z"
+                }
+            }
+        ]
     },
     "CLOUDFLARE_NIMBUS_2025": {
         "log_id": "zPsPaoVxCWX+lZtTzumyfCLphVwNl422qX5UwP5MDbA=",
@@ -174,10 +229,15 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "CLOUDFLARE_NIMBUS_2026": {
         "log_id": "yzj3FYl8hKFEX1vB3fvJbvKaWc1HCmkFhbDLFMMUWOc=",
@@ -190,10 +250,15 @@
             "start_inclusive": "2026-01-01T00:00:00Z",
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-11-08T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-08T18:00:00Z"
+                }
+            }
+        ]
     },
     "CLOUDFLARE_NIMBUS_2027": {
         "log_id": "TGPcmOWcHauI9h6KPd6uj6tEozd7X5uUw/uhnPzBviY=",
@@ -206,10 +271,15 @@
             "start_inclusive": "2027-01-01T00:00:00Z",
             "end_exclusive": "2028-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-11-15T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-15T00:00:00Z"
+                }
+            }
+        ]
     },
     "CNNIC_CT_LOG": {
         "log_id": "pXesnO11SN2PAltnokEInfhuD0duwgPC7L7bGF8oJjg=",
@@ -218,10 +288,15 @@
         "url": "https://ctserver.cnnic.cn/",
         "mmd": 86400,
         "description": "CNNIC CT log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-04-29T17:12:19Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-04-29T17:12:19Z"
+                }
+            }
+        ]
     },
     "DIGICERT_LOG_SERVER": {
         "log_id": "VhQGmi/XwuzT9eG9RLI+x0Z2ubyZEVzA75SYVdaJ0N0=",
@@ -230,10 +305,15 @@
         "url": "https://ct1.digicert-ct.com/log/",
         "mmd": 86400,
         "description": "DigiCert Log Server",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-03-02T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-03-02T18:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_LOG_SERVER_2": {
         "log_id": "h3W/51l8+IxDmV+9827/Vo1HVjb/SrVgwbTq/16ggw8=",
@@ -242,10 +322,15 @@
         "url": "https://ct2.digicert-ct.com/log/",
         "mmd": 86400,
         "description": "DigiCert Log Server 2",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-02-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-02-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_NESSIE_2018_LOG": {
         "log_id": "b/FBtWR+QiL37wUs7658If1gjifSr1pun0uKN9ZjPuU=",
@@ -258,10 +343,15 @@
             "start_inclusive": "2017-12-12T00:00:00Z",
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2019-05-07T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2019-05-07T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_NESSIE_2019_LOG": {
         "log_id": "/kRhCLHQGreKYsz+q2qysrq/86va2ApNizDfLQAIgww=",
@@ -274,10 +364,15 @@
             "start_inclusive": "2019-01-01T00:00:00Z",
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-02-07T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-02-07T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_NESSIE_2020_LOG": {
         "log_id": "xlKg7EjOs/yrFwmSxDqHQTMJ6ABlomJSQBujNioXxWU=",
@@ -290,10 +385,15 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2021-04-21T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2021-04-21T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_NESSIE_2021_LOG": {
         "log_id": "7sCV7o1yZA+S48O5G8cSo2lqCXtLahoUOOZHssvtxfk=",
@@ -306,10 +406,15 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-03-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-03-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_NESSIE_2022_LOG": {
         "log_id": "UaOw9f0BeZxWbbg3eI8MpHrMGyfL956IQpoN/tSLBeU=",
@@ -322,10 +427,15 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-02-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-02-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_NESSIE_2023_LOG": {
         "log_id": "s3N3B+GEUPhjhtYFqdwRCUp5LbFnDAuH3PADDnk2pZo=",
@@ -338,10 +448,15 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-02-02T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-02-02T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_NESSIE_2024_LOG": {
         "log_id": "c9meiRtMlnigIH1HneayxhzQUV5xGSqMa4AQesF3crU=",
@@ -354,10 +469,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-02-01T08:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-02-01T08:53:20Z"
+                }
+            }
+        ]
     },
     "DIGICERT_NESSIE_2025_LOG": {
         "log_id": "5tIxY0B3jMEQQQbXcbnOwdJA9paEhvu6hzId/R43jlA=",
@@ -370,10 +490,15 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_SPHINX_2024H1_LOG": {
         "log_id": "2wds3mqLeOxY1gVklutqJqjFnnISk+isAyfd3onbWio=",
@@ -386,10 +511,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2024-07-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-08-08T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-08-08T18:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_SPHINX_2024H2_LOG": {
         "log_id": "3Mleb6KZubD9vWymo24dcsQhL90eD0dVOjbWzxrRHY0=",
@@ -402,10 +532,15 @@
             "start_inclusive": "2024-07-01T00:00:00Z",
             "end_exclusive": "2025-01-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-02-01T08:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-02-01T08:53:20Z"
+                }
+            }
+        ]
     },
     "DIGICERT_SPHINX_2025H1_LOG": {
         "log_id": "3oWB11AkfGvNy69WN8XngcZM5G7WF2OfjzSnJsnivTc=",
@@ -418,10 +553,15 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2025-07-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-07-28T18:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-07-28T18:30:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_SPHINX_2025H2_LOG": {
         "log_id": "pELFBklgYVSPD9TqnPt6LSZFTYepfy/fRVn2J086hFQ=",
@@ -434,10 +574,15 @@
             "start_inclusive": "2025-07-01T00:00:00Z",
             "end_exclusive": "2026-01-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-14T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-14T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_SPHINX_2026H1": {
         "log_id": "SZybad4dfOz8Nt7Nh2SmuFuvCoeAGdFVUvvp6ynd+MM=",
@@ -450,10 +595,15 @@
             "start_inclusive": "2026-01-01T00:00:00Z",
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-11-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_SPHINX_2026H2": {
         "log_id": "lE5Dh/rswe+B8xkkJqgYZQHH0184AgE/cmd9VTcuGdg=",
@@ -466,10 +616,15 @@
             "start_inclusive": "2026-07-01T00:00:00Z",
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-11-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_SPHINX_2027H1": {
         "log_id": "RqI5Z8YNtkaHxm89+ZmUdpOmphEghFfVVefj0KHZtkY=",
@@ -482,10 +637,15 @@
             "start_inclusive": "2027-01-01T00:00:00Z",
             "end_exclusive": "2027-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-12-20T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-12-20T18:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_SPHINX_2027H2": {
         "log_id": "H7D4qS2K3aEhd2wF4qouFbrLxitlOTaVV2qqtS4R0R0=",
@@ -498,10 +658,15 @@
             "start_inclusive": "2027-07-01T00:00:00Z",
             "end_exclusive": "2028-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-12-20T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-12-20T18:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_WYVERN_2024H1_LOG": {
         "log_id": "tp3cvDwave9vn9YMiLEGe3fwgmiLLXhl0Es5q+knpXU=",
@@ -514,10 +679,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2024-07-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-08-08T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-08-08T18:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_WYVERN_2024H2_LOG": {
         "log_id": "DCrvLEpbmIPU3aOC/lD7UYiz6XMzoexToJ3Jp50NCCA=",
@@ -530,10 +700,15 @@
             "start_inclusive": "2024-07-01T00:00:00Z",
             "end_exclusive": "2025-01-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-02-01T08:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-02-01T08:53:20Z"
+                }
+            }
+        ]
     },
     "DIGICERT_WYVERN_2025H1_LOG": {
         "log_id": "cyAiDwgWivnzxKaLCrJqmkoA7vV3hYoITQUA1KVCRFk=",
@@ -546,10 +721,15 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2025-07-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-07-28T18:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-07-28T18:30:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_WYVERN_2025H2_LOG": {
         "log_id": "7TxL1ugGwqSiAFfbyyTiOAHfUS/txIbFcA8g3bc+P+A=",
@@ -562,10 +742,15 @@
             "start_inclusive": "2025-07-01T00:00:00Z",
             "end_exclusive": "2026-01-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-14T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-14T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_WYVERN_2026H1": {
         "log_id": "ZBHEbKQS7KeJHKICLgC8q08oB9QeNSer6v7VA8l9zfA=",
@@ -578,10 +763,15 @@
             "start_inclusive": "2026-01-01T00:00:00Z",
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-11-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_WYVERN_2026H2": {
         "log_id": "wjF+V0UZo0XufzjespBB68fCIVoiv3/Vta12mtkOUs0=",
@@ -594,10 +784,15 @@
             "start_inclusive": "2026-07-01T00:00:00Z",
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-11-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_WYVERN_2027H1": {
         "log_id": "ABpdGhwtk3W2SFV4+C9xoa5u7zl9KXyK4xV7yt7hoB4=",
@@ -610,10 +805,15 @@
             "start_inclusive": "2027-01-01T00:00:00Z",
             "end_exclusive": "2027-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-12-20T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-12-20T18:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_WYVERN_2027H2": {
         "log_id": "N6oHzCFvLm2RnHCdJNj3MbAPKxR8YhzAkaX6GoTYFt0=",
@@ -626,10 +826,15 @@
             "start_inclusive": "2027-07-01T00:00:00Z",
             "end_exclusive": "2028-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-12-20T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-12-20T18:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_YETI_2018_LOG": {
         "log_id": "wRZK4Kdy0tQ5LcgKwQdw1PDEm96ZGkhAwfoHUWT2M2A=",
@@ -642,10 +847,15 @@
             "start_inclusive": "2017-12-12T00:00:00Z",
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2019-05-07T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2019-05-07T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_YETI_2019_LOG": {
         "log_id": "4mlLribo6UAJ6IYbtjuD1D7n/nSI+6SPKJMBnd3x2/4=",
@@ -658,10 +868,15 @@
             "start_inclusive": "2019-01-01T00:00:00Z",
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-02-07T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-02-07T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_YETI_2020_LOG": {
         "log_id": "8JWkWfIA0YJAEC0vk4iOrUv+HUfjmeHQNKawqKqOsnM=",
@@ -674,10 +889,15 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2021-04-21T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2021-04-21T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_YETI_2021_LOG": {
         "log_id": "XNxDkv7mq0VEsV6a1FbmEDf71fpH3KFzlLJe5vbHDso=",
@@ -690,10 +910,15 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-03-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-03-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_YETI_2022_2_LOG": {
         "log_id": "BZwB0yDgB4QTlYBJjRF8kDJmr69yULWvO0akPhGEDUo=",
@@ -706,10 +931,15 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-02-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-02-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_YETI_2022_LOG": {
         "log_id": "IkVFB1lVJFaWP6Ev8fdthuAjJmOtwEt/XcaDXG7iDwI=",
@@ -722,10 +952,15 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-02-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-02-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_YETI_2023_LOG": {
         "log_id": "Nc8ZG7+xbFe/D61MbULLu7YnICZR6j/hKu+oA8M71kw=",
@@ -738,10 +973,15 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-12-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-12-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "DIGICERT_YETI_2024_LOG": {
         "log_id": "SLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHM=",
@@ -754,10 +994,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-02-01T08:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-02-01T08:53:20Z"
+                }
+            }
+        ]
     },
     "DIGICERT_YETI_2025_LOG": {
         "log_id": "fVkeEuF4KnscYWd8Xv340IdcFKBOlZ65Ay/ZDowuebg=",
@@ -770,10 +1015,15 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "GDCA_CT_LOG_1": {
         "log_id": "yc+JCiEQnGZswXo+0GXJMNDgE1qf66ha8UIQuAckIao=",
@@ -782,10 +1032,15 @@
         "url": "https://ct.gdca.com.cn/",
         "mmd": 86400,
         "description": "GDCA CT log #1",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2016-07-12T13:03:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2016-07-12T13:03:00Z"
+                }
+            }
+        ]
     },
     "GDCA_CT_LOG_2": {
         "log_id": "kkow+Qkzb/Q11pk6EKx1osZBco5/wtZZrmGI/61AzgE=",
@@ -794,10 +1049,15 @@
         "url": "https://ctlog.gdca.com.cn/",
         "mmd": 86400,
         "description": "GDCA CT log #2",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2017-01-11T10:46:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2017-01-11T10:46:00Z"
+                }
+            }
+        ]
     },
     "GDCA_LOG_1": {
         "log_id": "cX6nQgl1voSicjVT8Xd8Jt1Rr04QIUQJTZAZtGL7Zmg=",
@@ -810,10 +1070,15 @@
             "start_inclusive": "2018-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2018-11-05T22:18:14Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2018-11-05T22:18:14Z"
+                }
+            }
+        ]
     },
     "GDCA_LOG_2": {
         "log_id": "FDCNkMzQMBNQBcAcpSbYHoTodiTjm2JI4I9ySuo7tCo=",
@@ -826,10 +1091,15 @@
             "start_inclusive": "2018-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2018-11-08T05:47:34Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2018-11-08T05:47:34Z"
+                }
+            }
+        ]
     },
     "GEOMYS": {
         "log_id": "LtakTeuPDIZGZ3acTt0EH4QjZ1X6OqymNNCTXfzVmnA=",
@@ -842,10 +1112,15 @@
             "start_inclusive": "2020-01-01T08:00:00Z",
             "end_exclusive": "2020-01-02T08:00:00Z"
         },
-        "log_state": {
-            "state_type": "RETIRED",
-            "timestamp": "2025-06-21T07:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "RETIRED",
+                    "timestamp": "2025-06-21T07:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2017_LOG": {
         "log_id": "+tTJfMSe4vishcXqXOoJ0CINu/TknGtQZi/4aPhrjCg=",
@@ -858,10 +1133,15 @@
             "start_inclusive": "2017-01-01T00:00:00Z",
             "end_exclusive": "2018-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2018-02-27T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2018-02-27T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2018_LOG": {
         "log_id": "pFASaQVaFVReYhGrN7wQP2KuVXakXksXFEU+GyIQaiU=",
@@ -874,10 +1154,15 @@
             "start_inclusive": "2018-01-01T00:00:00Z",
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2019-05-07T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2019-05-07T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2019_LOG": {
         "log_id": "Y/Lbzeg7zCzPC3KEJ1drM6SNYXePvXWmOLHHaFRL2I0=",
@@ -890,10 +1175,15 @@
             "start_inclusive": "2019-01-01T00:00:00Z",
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-02-07T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-02-07T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2020_LOG": {
         "log_id": "sh4FzIuizYogTodm+Su5iiUgZ2va+nDnsklTLe+LkF4=",
@@ -906,10 +1196,15 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2021-04-21T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2021-04-21T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2021_LOG": {
         "log_id": "9lyUL9F3MCIUVBgIMJRWjuNNExkzv98MLyALzE7xZOM=",
@@ -922,10 +1217,15 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-03-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-03-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2022_LOG": {
         "log_id": "KXm+8J45OSHwVnOfY6V35b5XfZxgCvj5TV0mXCVdx4Q=",
@@ -938,10 +1238,15 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-02-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-02-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2023_LOG": {
         "log_id": "6D7Q2j71BjUy51covIlryQPTy9ERa+zraeF3fW0GvW4=",
@@ -954,10 +1259,15 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-02-02T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-02-02T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2024_LOG": {
         "log_id": "7s3QZNXbGs7FXLedtM0TojKHRny87N7DUUhZRnEftZs=",
@@ -970,10 +1280,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-02-01T08:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-02-01T08:53:20Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2025H1_LOG": {
         "log_id": "TnWjJ1yaEMM4W2zU3z9S6x3w4I4bjWnAsfpksWKaOd8=",
@@ -986,10 +1301,15 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2025-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-07-28T18:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-07-28T18:30:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2025H2_LOG": {
         "log_id": "EvFONL1TckyEBhnDjz96E/jntWKHiJxtMAWE6+WGJjo=",
@@ -1002,10 +1322,15 @@
             "start_inclusive": "2025-07-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2026H1_LOG": {
         "log_id": "DleUvPOuqT4zGyyZB7P3kN+bwj1xMiXdIaklrGHFTiE=",
@@ -1018,10 +1343,15 @@
             "start_inclusive": "2026-01-01T00:00:00Z",
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-09-30T22:19:27Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-09-30T22:19:27Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2026H2_LOG": {
         "log_id": "1219ENGn9XfCx+lf1wC/+YLJM1pl4dCzAXMXwMjFaXc=",
@@ -1034,10 +1364,15 @@
             "start_inclusive": "2026-07-01T00:00:00Z",
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-09-30T22:19:27Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-09-30T22:19:27Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ARGON_2027H1": {
         "log_id": "1tWNqdAXU/NqSqDHV0kCr+vH3CzTjNn3ZMgMiRkenwI=",
@@ -1050,10 +1385,15 @@
             "start_inclusive": "2027-01-01T00:00:00Z",
             "end_exclusive": "2027-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-12-28T00:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-12-28T00:30:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_AVIATOR_LOG": {
         "log_id": "aPaY+B9kgr46jO65KB1M/HFRXWeT1ETRCmesu09P+8Q=",
@@ -1062,10 +1402,15 @@
         "url": "https://ct.googleapis.com/aviator/",
         "mmd": 86400,
         "description": "Google 'Aviator' log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-04-29T17:12:19Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-04-29T17:12:19Z"
+                }
+            }
+        ]
     },
     "GOOGLE_CRUCIBLE_LOG": {
         "log_id": "w78Dp+HKiEHGB7rj/0Jw/KXsRbGG675OLPP8d4Yw9fY=",
@@ -1074,7 +1419,13 @@
         "url": "https://ct.googleapis.com/logs/crucible/",
         "mmd": 86400,
         "description": "Google 'Crucible' log",
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_DAEDALUS_LOG": {
         "log_id": "HQJLjrFJizRN/YfqPvwJlvdQbyNdHUlwYaR3PEOcJfs=",
@@ -1082,7 +1433,13 @@
         "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbgwcuu4rakGFYB17fqsILPwMCqUIsz7VcCTRbR0ttrfzizbcI02VYxK75IaNzOnR7qFAot8LowYKMMqNrKQpVg==",
         "url": "https://ct.googleapis.com/daedalus/",
         "mmd": 604800,
-        "description": "Google 'Daedalus' log"
+        "description": "Google 'Daedalus' log",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_ICARUS_LOG": {
         "log_id": "KTxRllTIOWW6qlD8WAfUt2+/WHopctykwwz05UVH9Hg=",
@@ -1091,10 +1448,15 @@
         "url": "https://ct.googleapis.com/icarus/",
         "mmd": 86400,
         "description": "Google 'Icarus' log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-06-02T10:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-06-02T10:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_PILOT_LOG": {
         "log_id": "pLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BA=",
@@ -1103,10 +1465,15 @@
         "url": "https://ct.googleapis.com/pilot/",
         "mmd": 86400,
         "description": "Google 'Pilot' log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-06-02T10:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-06-02T10:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_ROCKETEER_LOG": {
         "log_id": "7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/cs=",
@@ -1115,10 +1482,15 @@
         "url": "https://ct.googleapis.com/rocketeer/",
         "mmd": 86400,
         "description": "Google 'Rocketeer' log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-06-02T10:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-06-02T10:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_SKYDIVER_LOG": {
         "log_id": "u9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YU=",
@@ -1127,10 +1499,15 @@
         "url": "https://ct.googleapis.com/skydiver/",
         "mmd": 86400,
         "description": "Google 'Skydiver' log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-06-02T10:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-06-02T10:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_SOLERA_2018_LOG": {
         "log_id": "UutLIl7IlpdIUGdfI+Q7wdAh4yFM5S7NX6h8IDzfygM=",
@@ -1143,7 +1520,13 @@
             "start_inclusive": "2018-01-01T00:00:00Z",
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SOLERA_2019_LOG": {
         "log_id": "C3YOmouaaC+ImFsV6UdQGlZEa7qIMHhcOEKZQ4ZFDAA=",
@@ -1156,7 +1539,13 @@
             "start_inclusive": "2019-01-01T00:00:00Z",
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SOLERA_2020_LOG": {
         "log_id": "H8cs5aG3mfQAw1m/+WyjkTVI6GRCIGEJUum6F3T3usc=",
@@ -1169,7 +1558,13 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SOLERA_2021_LOG": {
         "log_id": "o8mYRegKt84AFXs3Qt8CB90nKytgLs+Y7iwS25xa5+c=",
@@ -1182,7 +1577,13 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SOLERA_2022_LOG": {
         "log_id": "aXqvyhprU2+uISBQRt661+Dq6hPSQy5unY+zefK5qvM=",
@@ -1195,7 +1596,13 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SOLERA_2023_LOG": {
         "log_id": "+X6XuNM+96FZAqU6GeF5kOXcQGoDGCW6rZPpj5ucacs=",
@@ -1208,7 +1615,13 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SOLERA_2024_LOG": {
         "log_id": "MCTOfusWiGJyS+pwLv/5ks/kVkNBkapZWyX4AibIABc=",
@@ -1221,7 +1634,13 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SOLERA_2025H1_LOG": {
         "log_id": "P+HLRu1HNXmvAUH5ck2dxENHLXVuhedxnFWCSF3U4eQ=",
@@ -1234,7 +1653,13 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2025-07-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SOLERA_2025H2_LOG": {
         "log_id": "JgI5SIdM9/zQ+2RxpD6EfrsgCubi+iQjbfbRpgZjD7E=",
@@ -1247,7 +1672,13 @@
             "start_inclusive": "2025-07-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SOLERA_2026H1_LOG": {
         "log_id": "yEuQege+qimmFMJFhLej9mJDlGh7Jf5ig4tx7EIq0vk=",
@@ -1260,7 +1691,13 @@
             "start_inclusive": "2026-01-01T00:00:00Z",
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SOLERA_2026H2_LOG": {
         "log_id": "YukAYASjB5VadUS01YSpYmjKHW5Fha3wkW3+X9wfBNs=",
@@ -1273,7 +1710,13 @@
             "start_inclusive": "2026-07-01T00:00:00Z",
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SOLERA_2027H1_LOG": {
         "log_id": "PeSSqJiTrXBeeEbtIdSNyvutE56mTtHjSfkAsKLNpeI=",
@@ -1286,7 +1729,13 @@
             "start_inclusive": "2027-01-01T00:00:00Z",
             "end_exclusive": "2027-07-01T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_SUBMARINER_LOG": {
         "log_id": "qJnYeAySkKr0YvMYgMz71SRR6XDQ+/WR73Ww2ZtkVoE=",
@@ -1294,7 +1743,13 @@
         "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEOfifIGLUV1Voou9JLfA5LZreRLSUMOCeeic8q3Dw0fpRkGMWV0Gtq20fgHQweQJeLVmEByQj9p81uIW4QkWkTw==",
         "url": "https://ct.googleapis.com/submariner/",
         "mmd": 86400,
-        "description": "Google 'Submariner' log"
+        "description": "Google 'Submariner' log",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_TESTTUBE_LOG": {
         "log_id": "sMyD5aX5fWuvfAnMKEkEhyrH6IsTLGNQt8b9JuFsbHc=",
@@ -1303,7 +1758,13 @@
         "url": "https://ct.googleapis.com/testtube/",
         "mmd": 86400,
         "description": "Google 'Testtube' log",
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "GOOGLE_XENON_2018_LOG": {
         "log_id": "sQzVWabWeEaBH335pRUyc5rEjXA76gMj2l04dVvArU4=",
@@ -1316,10 +1777,15 @@
             "start_inclusive": "2018-01-01T00:00:00Z",
             "end_exclusive": "2019-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2019-02-21T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2019-02-21T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_XENON_2019_LOG": {
         "log_id": "CEEUmABxUywWGQRgvPxH/cJlOvopLHKzf/hjrinMyfA=",
@@ -1332,10 +1798,15 @@
             "start_inclusive": "2019-01-01T00:00:00Z",
             "end_exclusive": "2020-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-02-07T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-02-07T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_XENON_2020_LOG": {
         "log_id": "B7dcG+V9aP/xsMYdIxXHuuZXfFeUt2ruvGE6GmnTohw=",
@@ -1348,10 +1819,15 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2021-04-21T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2021-04-21T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_XENON_2021_LOG": {
         "log_id": "fT7y+I//iFVoJMLAyp5SiXkrxQ54CX8uapdomX4i8Nc=",
@@ -1364,10 +1840,15 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-03-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-03-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_XENON_2022_LOG": {
         "log_id": "RqVV63X6kSAwtaKJafTzfREsQXS+/Um4havy/HD+bUc=",
@@ -1380,10 +1861,15 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-02-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-02-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_XENON_2023_LOG": {
         "log_id": "rfe++nz/EMiLnT2cHj4YarRnKV3PsQwkyoWGNOvcgoo=",
@@ -1396,10 +1882,15 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-02-02T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-02-02T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_XENON_2024_LOG": {
         "log_id": "dv+IPwq2+5VRwmHM9Ye6NLSkzbsp3GhCCp/mZ0xaOnQ=",
@@ -1412,10 +1903,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-02-01T08:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-02-01T08:53:20Z"
+                }
+            }
+        ]
     },
     "GOOGLE_XENON_2025H1_LOG": {
         "log_id": "zxFW7tUufK/zh1vZaS6b6RpxZ0qwF+ysAdJbd87MOwg=",
@@ -1428,10 +1924,15 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2025-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-07-28T18:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-07-28T18:30:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_XENON_2025H2_LOG": {
         "log_id": "3dzKNJXX4RYF55Uy+sef+D0cUN/bADoUEnYKLKy7yCo=",
@@ -1444,10 +1945,15 @@
             "start_inclusive": "2025-07-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "GOOGLE_XENON_2026H1_LOG": {
         "log_id": "lpdkv1VYl633Q4doNwhCd+nwOtX2pPM2bkakPw/KqcY=",
@@ -1460,10 +1966,15 @@
             "start_inclusive": "2026-01-01T00:00:00Z",
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-09-30T22:19:27Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-09-30T22:19:27Z"
+                }
+            }
+        ]
     },
     "GOOGLE_XENON_2026H2_LOG": {
         "log_id": "2AlVO5RPev/IFhlvlE+Fq7D4/F6HVSYPFdEucrtFSxQ=",
@@ -1476,10 +1987,15 @@
             "start_inclusive": "2026-07-01T00:00:00Z",
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-09-30T22:19:27Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-09-30T22:19:27Z"
+                }
+            }
+        ]
     },
     "GOOGLE_XENON_2027H1": {
         "log_id": "RMK9DOkUDmSlyUoBkwpaobs1lw4A7hEWiWgqHETXtWY=",
@@ -1492,10 +2008,15 @@
             "start_inclusive": "2027-01-01T00:00:00Z",
             "end_exclusive": "2027-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-12-28T00:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-12-28T00:30:00Z"
+                }
+            }
+        ]
     },
     "IPNG_NETWORKS": {
         "log_id": "0vxlL6X5tzi4N1X6XrFfC0UlP06Po7m2T9TeVmLRhwg=",
@@ -1508,10 +2029,15 @@
             "start_inclusive": "2020-01-01T08:00:00Z",
             "end_exclusive": "2020-01-02T08:00:00Z"
         },
-        "log_state": {
-            "state_type": "RETIRED",
-            "timestamp": "2025-06-21T07:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "RETIRED",
+                    "timestamp": "2025-06-21T07:00:00Z"
+                }
+            }
+        ]
     },
     "IZENPE_ARGI_LOG": {
         "log_id": "iUFEnHB0Lga5/JznsRa6ACSqNtWa9E8CBEBPAPfqhWY=",
@@ -1520,10 +2046,15 @@
         "url": "https://ct.izenpe.eus/",
         "mmd": 86400,
         "description": "Izenpe 'Argi' log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2016-08-25T11:36:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2016-08-25T11:36:00Z"
+                }
+            }
+        ]
     },
     "IZENPE_LOG": {
         "log_id": "dGG0oJz7PUHXUVlXWy52SaRFqNJ3CbDMVkpkgrfrQaM=",
@@ -1532,10 +2063,15 @@
         "url": "https://ct.izenpe.com/",
         "mmd": 86400,
         "description": "Izenpe log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-04-29T17:12:19Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-04-29T17:12:19Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_CLICKY_LOG": {
         "log_id": "KWr6LVaLyg0uqESVaulyH8Nfo1Xs2plpOq/UWKca790=",
@@ -1543,7 +2079,13 @@
         "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHxoVg3cAdWK5n/YGBe2ViYNBgZfn4NQz/na6O8lJws3xz/4ScNe+qCJfsqRnAntxrh2sqOnRCNXO7zN6w18A3A==",
         "url": "https://clicky.ct.letsencrypt.org/",
         "mmd": 86400,
-        "description": "Let's Encrypt 'Clicky' log"
+        "description": "Let's Encrypt 'Clicky' log",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "LETS_ENCRYPT_OAK_2019_LOG": {
         "log_id": "ZZszUPQ7EsxepatOx2XT/ebIgkN3d3jnIAP56yuMMSk=",
@@ -1556,10 +2098,15 @@
             "start_inclusive": "2019-01-01T00:00:00Z",
             "end_exclusive": "2020-01-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-02-07T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-02-07T00:00:00Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_OAK_2020_LOG": {
         "log_id": "5xLysDd+GmL7jskMYYTx6ns3y1YdESZb8+DzS/JBVG4=",
@@ -1572,10 +2119,15 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2021-04-21T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2021-04-21T00:00:00Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_OAK_2021_LOG": {
         "log_id": "lCC8Ho7VjWyIcx+CiyIsDdHaTV5sT5Q9YdtOL1hNosI=",
@@ -1588,10 +2140,15 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-03-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-03-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_OAK_2022_LOG": {
         "log_id": "36Veq2iCTx9sre64X04+WurNohKkal6OOxLAIERcKnM=",
@@ -1604,10 +2161,15 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-02-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-02-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_OAK_2023_LOG": {
         "log_id": "tz77JN+cTbp18jnFulj0bF38Qs96nzXEnh0JgSXttJk=",
@@ -1620,10 +2182,15 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-07T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-02-02T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-02-02T00:00:00Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_OAK_2024H1_LOG": {
         "log_id": "O1N3dT4tuYBOizBbBv5AO2fYT8P0x70ADS1yb+H61Bc=",
@@ -1636,10 +2203,15 @@
             "start_inclusive": "2023-12-20T00:00:00Z",
             "end_exclusive": "2024-07-20T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-08-08T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-08-08T18:00:00Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_OAK_2024H2_LOG": {
         "log_id": "PxdLT9ciR1iUHWUchL4NEu2QN38fhWrrwb8ohez4ZG4=",
@@ -1652,10 +2224,15 @@
             "start_inclusive": "2024-06-20T00:00:00Z",
             "end_exclusive": "2025-01-20T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-02-01T08:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-02-01T08:53:20Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_OAK_2025H1": {
         "log_id": "ouMK5EXvva2bfjjtR2d3U9eCW4SU1yteGyzEuVCkR+c=",
@@ -1668,10 +2245,15 @@
             "start_inclusive": "2024-12-20T00:00:00Z",
             "end_exclusive": "2025-07-20T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-07-28T18:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-07-28T18:30:00Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_OAK_2025H2": {
         "log_id": "DeHyMCvTDcFAYhIJ6lUu/Ed0fLHX6TDvDkIetH5OqjQ=",
@@ -1684,10 +2266,15 @@
             "start_inclusive": "2025-06-20T00:00:00Z",
             "end_exclusive": "2026-01-20T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-27T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-27T00:00:00Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_OAK_2026H1": {
         "log_id": "GYbUxyiqb/66A294Kk0BkarOLXIxD67OXXBBLSVMx9Q=",
@@ -1700,10 +2287,15 @@
             "start_inclusive": "2025-12-20T00:00:00Z",
             "end_exclusive": "2026-07-20T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "READONLY",
-            "timestamp": "2025-12-12T22:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "READONLY",
+                    "timestamp": "2025-12-12T22:30:00Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_OAK_2026H2": {
         "log_id": "rKswcGzr7IQx9BPS9JFfER5CJEOx8qaMTzwrO6ceAsM=",
@@ -1716,10 +2308,15 @@
             "start_inclusive": "2026-06-20T00:00:00Z",
             "end_exclusive": "2027-01-20T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "READONLY",
-            "timestamp": "2025-12-12T22:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "READONLY",
+                    "timestamp": "2025-12-12T22:30:00Z"
+                }
+            }
+        ]
     },
     "LETS_ENCRYPT_SAPLING_2022H2_LOG": {
         "log_id": "Iy1BpM2sh87Z+UP0aMKCCVrgnTDWLi+mXdw7kZwuRo8=",
@@ -1732,7 +2329,13 @@
             "start_inclusive": "2022-06-15T00:00:00Z",
             "end_exclusive": "2023-01-15T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "LETS_ENCRYPT_SAPLING_2023H1_LOG": {
         "log_id": "wYMkC/GkUMdvuwByadysO+IqSAXU2+BJZsPIq8RHsAw=",
@@ -1745,7 +2348,13 @@
             "start_inclusive": "2022-12-15T00:00:00Z",
             "end_exclusive": "2023-07-15T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "LETS_ENCRYPT_TESTFLUME_2019_LOG": {
         "log_id": "hJ9ff1jSv3tU7L10YRzqRcScmPHWSBvG9p6MF08k888=",
@@ -1758,7 +2367,13 @@
             "start_inclusive": "2019-01-01T00:00:00Z",
             "end_exclusive": "2020-01-07T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "LETS_ENCRYPT_TESTFLUME_2020_LOG": {
         "log_id": "xj8iGMN9VqaqBrWW2o5T1NcVbR6brI5E0iAt5k1p2dw=",
@@ -1771,7 +2386,13 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-07T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "LETS_ENCRYPT_TESTFLUME_2021_LOG": {
         "log_id": "A+3x2pd2tvOMNB457Z1wenVwNpz5hE8yf+nhQTg2G2A=",
@@ -1784,7 +2405,13 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-07T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "LETS_ENCRYPT_TESTFLUME_2022_LOG": {
         "log_id": "Iyfv2jUlENvAGe9JGuP/HMWkebzjeHg2DuMYz/tk+Mg=",
@@ -1797,7 +2424,13 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-07T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "LETS_ENCRYPT_TESTFLUME_2023_LOG": {
         "log_id": "VTS3q1pqw6fL66ZUh7Ki1xtI9lD6F8UZfJegyyB288Y=",
@@ -1810,7 +2443,13 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-07T00:00:00Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "MERKLEMAP_COMPACTLOG_LOG": {
         "log_id": "ObmHiCgZXzstDRtIFKOujA0B/khiId1pOX1294V0EcM=",
@@ -1823,7 +2462,13 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2025-12-31T23:59:59Z"
         },
-        "log_type": "TEST"
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "NORDU_FLIMSY_LOG": {
         "log_id": "U3tpo1ZDNanASQTjlZOywpjrjXpugwI2NcYnJIzWtEA=",
@@ -1831,7 +2476,13 @@
         "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE4qWq6afhBUi0OdcWUYhyJLNXTkGqQ9PMS5lqoCgkV2h1ZvpNjBH2u8UbgcOQwqDo66z6BWQJGolozZYmNHE2kQ==",
         "url": "https://flimsy.ct.nordu.net:8080/",
         "mmd": 86400,
-        "description": "Nordu 'flimsy' log"
+        "description": "Nordu 'flimsy' log",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "NORDU_PLAUSIBLE_LOG": {
         "log_id": "qucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880=",
@@ -1839,7 +2490,13 @@
         "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE9UV9+jO2MCTzkabodO2F7LM03MUBc8MrdAtkcW6v6GA9taTTw9QJqofm0BbdAsbtJL/unyEf0zIkRgXjjzaYqQ==",
         "url": "https://plausible.ct.nordu.net/",
         "mmd": 86400,
-        "description": "Nordu 'plausible' log"
+        "description": "Nordu 'plausible' log",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "PUCHUANGSIDA_CT_LOG": {
         "log_id": "4BJ2KekEllZOPQFHmESYqkj4rbFmAOt5AqHvmQmQYnM=",
@@ -1848,10 +2505,15 @@
         "url": "https://www.certificatetransparency.cn/ct/",
         "mmd": 86400,
         "description": "PuChuangSiDa CT log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2017-06-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2017-06-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "QIHOO_360_2020": {
         "log_id": "R0RHfHXeQm1cRO/UqSyWd1l/ZXqP4MrbxtYW7aSXxCU=",
@@ -1864,10 +2526,15 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-04-30T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-04-30T00:00:00Z"
+                }
+            }
+        ]
     },
     "QIHOO_360_2021": {
         "log_id": "xtftntuOdPCnG01KmEvL66u9KMwf12Mp6IcmzUwlRmM=",
@@ -1880,10 +2547,15 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-04-30T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-04-30T00:00:00Z"
+                }
+            }
+        ]
     },
     "QIHOO_360_2022": {
         "log_id": "ZjywnB/Nm6pidjzLU07sgFgSKAUHrGmkX804z0zHTPE=",
@@ -1896,10 +2568,15 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-04-30T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-04-30T00:00:00Z"
+                }
+            }
+        ]
     },
     "QIHOO_360_2023": {
         "log_id": "4mR/bto0BQPGTU4QqGloH96cWizzsy1fIAuWNgWQiCM=",
@@ -1912,10 +2589,15 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-04-30T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-04-30T00:00:00Z"
+                }
+            }
+        ]
     },
     "QIHOO_360_V1_2020": {
         "log_id": "xc/lS2FRtJsULtJjvecykzY3mXmVUK5ENc0aaZfJw8M=",
@@ -1928,10 +2610,15 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-10-06T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-10-06T00:00:00Z"
+                }
+            }
+        ]
     },
     "QIHOO_360_V1_2021": {
         "log_id": "SBRYfPKLCP5oP9K82UWZTC63TIroyH/OQpt80x1RvcQ=",
@@ -1944,10 +2631,15 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-10-06T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-10-06T00:00:00Z"
+                }
+            }
+        ]
     },
     "QIHOO_360_V1_2022": {
         "log_id": "SRG41hTP09mfFtN2VF7huMz8UR9QnwgLoKCH2R367qk=",
@@ -1960,10 +2652,15 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-10-06T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-10-06T00:00:00Z"
+                }
+            }
+        ]
     },
     "QIHOO_360_V1_2023": {
         "log_id": "tnQLEgAuAz/Q5+lB9Lo+4b/BSbUktM9ijVPv6h9AOo0=",
@@ -1976,10 +2673,15 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-10-06T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-10-06T00:00:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_DODO_CT_LOG": {
         "log_id": "23b9raxl59CVCIhuIVm9i5A1L1/q0+PcXiLrNQrMe5g=",
@@ -1987,7 +2689,13 @@
         "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELPXCMfVjQ2oWSgrewu4fIW4Sfh3lco90CwKZ061pvAI1eflh6c8ACE90pKM0muBDHCN+j0HV7scco4KKQPqq4A==",
         "url": "https://dodo.ct.comodo.com/",
         "mmd": 86400,
-        "description": "Sectigo 'Dodo' CT log"
+        "description": "Sectigo 'Dodo' CT log",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "SECTIGO_ELEPHANT_2025H2": {
         "log_id": "DR28iUTp9QBVQtctPhRMzEMIKrbqHpTf1wZlfS6G8wE=",
@@ -2000,10 +2708,15 @@
             "start_inclusive": "2025-07-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_ELEPHANT_2026H1": {
         "log_id": "0W6ppWgHfmY1oD83pd28A6U8QRIU1IgY9ekxsyPLlQQ=",
@@ -2016,10 +2729,15 @@
             "start_inclusive": "2026-01-01T00:00:00Z",
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-07-22T01:33:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-07-22T01:33:20Z"
+                }
+            }
+        ]
     },
     "SECTIGO_ELEPHANT_2026H2": {
         "log_id": "r2eIO1ewTt2Pptl+9i6o64EKx3Fg8CReVdYML+eFhzo=",
@@ -2032,10 +2750,15 @@
             "start_inclusive": "2026-07-01T00:00:00Z",
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-07-22T01:33:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-07-22T01:33:20Z"
+                }
+            }
+        ]
     },
     "SECTIGO_ELEPHANT_2027H1": {
         "log_id": "YEyar3p/d18B1Ab8kg3ImesLHH34yVIb+voXdzuXi8k=",
@@ -2048,10 +2771,15 @@
             "start_inclusive": "2027-01-01T00:00:00Z",
             "end_exclusive": "2027-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-07-22T01:33:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-07-22T01:33:20Z"
+                }
+            }
+        ]
     },
     "SECTIGO_ELEPHANT_2027H2": {
         "log_id": "okkM3NuOM6QAMhdg1tTVGiA2GR6nfZaL4mqKAPb///c=",
@@ -2064,10 +2792,15 @@
             "start_inclusive": "2027-07-01T00:00:00Z",
             "end_exclusive": "2028-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-07-22T01:33:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-07-22T01:33:20Z"
+                }
+            }
+        ]
     },
     "SECTIGO_MAMMOTH2024H1B": {
         "log_id": "UIUBWNy2BZXADpKoEQLszf4/a3hYQp9XmDU4ydpSUGM=",
@@ -2080,10 +2813,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2024-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-08-08T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-08-08T18:00:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_MAMMOTH_2024H1": {
         "log_id": "KdA6G7Z0qnEc0wNbZVfBT4qni0/oOJRJ7KRT+US9JGg=",
@@ -2096,10 +2834,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2024-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-08-08T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-08-08T18:00:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_MAMMOTH_2024H2": {
         "log_id": "3+FW66oFr7WcD4ZxjajAMk6uVtlup/WlagHRwTu+Ulw=",
@@ -2112,10 +2855,15 @@
             "start_inclusive": "2024-07-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-02-01T08:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-02-01T08:53:20Z"
+                }
+            }
+        ]
     },
     "SECTIGO_MAMMOTH_2025H1": {
         "log_id": "E0rfGrWYQgl4DG/vTHqRpBa3I0nOWFdq367ap8Kr4CI=",
@@ -2128,10 +2876,15 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2025-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-07-28T18:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-07-28T18:30:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_MAMMOTH_2025H2": {
         "log_id": "rxgaKNaMo+CpikycZ6sJ+Lu8IrquvLE4o6Gd0/m2Aw0=",
@@ -2144,10 +2897,15 @@
             "start_inclusive": "2025-07-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_MAMMOTH_2026H1": {
         "log_id": "JS+Uwisp6W6fQRpyBytpXFtS/5epDSVAu/zcUexN7gs=",
@@ -2160,10 +2918,15 @@
             "start_inclusive": "2026-01-01T00:00:00Z",
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "READONLY",
-            "timestamp": "2025-09-18T17:20:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "READONLY",
+                    "timestamp": "2025-09-18T17:20:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_MAMMOTH_2026H2": {
         "log_id": "lLHBirDQV8R74KwEDh8svI3DdXJ7yVHyClJhJoY7pzw=",
@@ -2176,10 +2939,15 @@
             "start_inclusive": "2026-07-01T00:00:00Z",
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "READONLY",
-            "timestamp": "2025-09-18T17:20:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "READONLY",
+                    "timestamp": "2025-09-18T17:20:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_MAMMOTH_CT_LOG": {
         "log_id": "b1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RM=",
@@ -2188,10 +2956,15 @@
         "url": "https://mammoth.ct.comodo.com/",
         "mmd": 86400,
         "description": "Sectigo 'Mammoth' CT log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-03-05T00:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-03-05T00:53:20Z"
+                }
+            }
+        ]
     },
     "SECTIGO_SABRE_2024H1": {
         "log_id": "ouK/1h7eLy8HoNZObTen3GVDsMa1LqLat4r4mm31F9g=",
@@ -2204,10 +2977,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2024-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-08-08T18:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-08-08T18:00:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_SABRE_2024H2": {
         "log_id": "GZgQcQnw1lIuMIDSnj9ku4NuKMz5D1KO7t/OSj8WtMo=",
@@ -2220,10 +2998,15 @@
             "start_inclusive": "2024-07-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-02-01T08:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-02-01T08:53:20Z"
+                }
+            }
+        ]
     },
     "SECTIGO_SABRE_2025H1": {
         "log_id": "4JKz/AwdyOdoNh/eYbmWTQpSeBmKctZyxLBNpW1vVAQ=",
@@ -2236,10 +3019,15 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2025-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-07-28T18:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-07-28T18:30:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_SABRE_2025H2": {
         "log_id": "GgT/SdBUHUCv9qDDv/HYxGcvTuzuI0BomGsXQC7ciX0=",
@@ -2252,10 +3040,15 @@
             "start_inclusive": "2025-07-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_SABRE_2026H1": {
         "log_id": "VmzVo3a+g9/jQrZ1xJwjJJinabrDgsurSaOHfZqzLQE=",
@@ -2268,10 +3061,15 @@
             "start_inclusive": "2026-01-01T00:00:00Z",
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "READONLY",
-            "timestamp": "2025-09-18T17:20:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "READONLY",
+                    "timestamp": "2025-09-18T17:20:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_SABRE_2026H2": {
         "log_id": "H1bRq5RwSkHdP+r99GmTVTAsFDG/5hNGCJ//rnldzC8=",
@@ -2284,10 +3082,15 @@
             "start_inclusive": "2026-07-01T00:00:00Z",
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "READONLY",
-            "timestamp": "2025-09-18T17:20:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "READONLY",
+                    "timestamp": "2025-09-18T17:20:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_SABRE_CT_LOG": {
         "log_id": "VYHUwhaQNgFK6gubVzxT8MDkOHhwJQgXL6OqHQcT0ww=",
@@ -2296,10 +3099,15 @@
         "url": "https://sabre.ct.comodo.com/",
         "mmd": 86400,
         "description": "Sectigo 'Sabre' CT log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-06-09T14:40:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-06-09T14:40:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_TIGER_2025H2": {
         "log_id": "XKV30pt/i69Bntjsq/tty67DhTcC1XRvF02tPJNKqWo=",
@@ -2312,10 +3120,15 @@
             "start_inclusive": "2025-07-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_TIGER_2026H1": {
         "log_id": "FoMtq/CpJQ8P8DqlRf/Iv8gj0IdL9gQpJ/jnHzMT9fo=",
@@ -2328,10 +3141,15 @@
             "start_inclusive": "2026-01-01T00:00:00Z",
             "end_exclusive": "2026-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-09-18T23:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-09-18T23:00:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_TIGER_2026H2": {
         "log_id": "yKPEf8ezrbk1awE/anoSbeM6TkOlxkb5l605dZkdz5o=",
@@ -2344,10 +3162,15 @@
             "start_inclusive": "2026-07-01T00:00:00Z",
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-09-18T23:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-09-18T23:00:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_TIGER_2027H1": {
         "log_id": "HJ9oLOn68EVpUPgbloqH3dsyENhM5siy44JSSsTPWZ8=",
@@ -2360,10 +3183,15 @@
             "start_inclusive": "2027-01-01T00:00:00Z",
             "end_exclusive": "2027-07-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-09-18T23:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-09-18T23:00:00Z"
+                }
+            }
+        ]
     },
     "SECTIGO_TIGER_2027H2": {
         "log_id": "A4AqwmL24F4D+Lxve5hRMk/Xaj31t1lRdeIi+46b1fY=",
@@ -2376,10 +3204,15 @@
             "start_inclusive": "2027-07-01T00:00:00Z",
             "end_exclusive": "2028-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-09-18T23:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-09-18T23:00:00Z"
+                }
+            }
+        ]
     },
     "SHECA_CT_LOG_1": {
         "log_id": "z1XiiSNJfDQNUgbQU1Ouslg0tS8fjclSaAnyEu/dfKY=",
@@ -2388,10 +3221,15 @@
         "url": "http://ctlog.sheca.com/",
         "mmd": 86400,
         "description": "SHECA CT log 1",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2017-03-22T14:16:19Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2017-03-22T14:16:19Z"
+                }
+            }
+        ]
     },
     "SHECA_CT_LOG_2": {
         "log_id": "MtxZwtTEGWjVbhS8YayPDkXbOfrzwVWqQlL1AB+gxiM=",
@@ -2400,10 +3238,15 @@
         "url": "https://ct.sheca.com/",
         "mmd": 86400,
         "description": "SHECA CT log 2",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2017-12-01T20:22:23Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2017-12-01T20:22:23Z"
+                }
+            }
+        ]
     },
     "STARTCOM_LOG": {
         "log_id": "NLtq1sPfnAPuqKSZ/3iRSGydXlysktAfe/0bzhnbSO8=",
@@ -2412,10 +3255,15 @@
         "url": "https://ct.startssl.com/",
         "mmd": 86400,
         "description": "StartCom log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-04-29T17:12:19Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-04-29T17:12:19Z"
+                }
+            }
+        ]
     },
     "SYMANTEC_DENEB": {
         "log_id": "p85KTmIH4K3e5f2qSx+GdodntdACpV1HMQ5+ZwqV6rI=",
@@ -2423,7 +3271,13 @@
         "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEloIeo806gIQel7i3BxmudhoO+FV2nRIzTpGI5NBIUFzBn2py1gH1FNbQOG7hMrxnDTfouiIQ0XKGeSiW+RcemA==",
         "url": "https://deneb.ws.symantec.com/",
         "mmd": 86400,
-        "description": "Symantec Deneb"
+        "description": "Symantec Deneb",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "SYMANTEC_LOG": {
         "log_id": "3esdK3oNT6Ygi4GtgWhwfi6OnQHVXIiNPRHEzbbsvsw=",
@@ -2432,10 +3286,15 @@
         "url": "https://ct.ws.symantec.com/",
         "mmd": 86400,
         "description": "Symantec log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-04-29T17:12:19Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-04-29T17:12:19Z"
+                }
+            }
+        ]
     },
     "SYMANTEC_SIRIUS_LOG": {
         "log_id": "FZcEiNe5l6Bb61JRKt7o0ui0oxZSZBIan6v71fha2T8=",
@@ -2444,10 +3303,15 @@
         "url": "https://sirius.ws.symantec.com/",
         "mmd": 86400,
         "description": "Symantec 'Sirius' log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-04-29T17:12:19Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-04-29T17:12:19Z"
+                }
+            }
+        ]
     },
     "SYMANTEC_VEGA_LOG": {
         "log_id": "vHjh38X2PGhGSTNNoQ+hXwl5aSAJwIG08/aRfz7ZuKU=",
@@ -2456,10 +3320,15 @@
         "url": "https://vega.ws.symantec.com/",
         "mmd": 86400,
         "description": "Symantec 'Vega' log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-04-29T17:12:19Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-04-29T17:12:19Z"
+                }
+            }
+        ]
     },
     "TRUSTASIA_HETU_2027": {
         "log_id": "7drrgVxjITRJtHvlB3kFq9DZMUfCesUUazvFjkPptsc=",
@@ -2472,10 +3341,15 @@
             "start_inclusive": "2026-12-25T00:00:00Z",
             "end_exclusive": "2028-01-08T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2025-12-28T00:30:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-12-28T00:30:00Z"
+                }
+            }
+        ]
     },
     "TRUSTASIA_LOG2025A": {
         "log_id": "KOKBOP2DIUXpqdaqdTdtg3eohRKzwH9yQUgh3L3pjGY=",
@@ -2488,10 +3362,15 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "TRUSTASIA_LOG2025B": {
         "log_id": "KCyL3YEP+QkSCs4W1uDsIBvqgqOkrxnZ7/tZ6D/cQmg=",
@@ -2504,10 +3383,15 @@
             "start_inclusive": "2025-01-01T00:00:00Z",
             "end_exclusive": "2026-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2026-01-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "TRUSTASIA_LOG2026A": {
         "log_id": "dNudWPfUfp39eHoWKpkcGM9pjafHKZGMmhiwRQ26RLw=",
@@ -2520,10 +3404,15 @@
             "start_inclusive": "2025-12-24T00:00:00Z",
             "end_exclusive": "2027-01-08T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-09-20T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-09-20T00:00:00Z"
+                }
+            }
+        ]
     },
     "TRUSTASIA_LOG2026B": {
         "log_id": "Jbfv3qETAZPtkweXcKoyKiZiDeNayKp8dRl94LGp4GU=",
@@ -2536,10 +3425,15 @@
             "start_inclusive": "2025-12-24T00:00:00Z",
             "end_exclusive": "2027-01-08T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "USABLE",
-            "timestamp": "2024-09-20T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-09-20T00:00:00Z"
+                }
+            }
+        ]
     },
     "TRUST_ASIA_CT_2021": {
         "log_id": "qNxS9j1rJCXlMeN89ORKcU8UKiCAOw0E0uLuBmR5SiM=",
@@ -2552,10 +3446,15 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-03-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-03-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "TRUST_ASIA_LOG1": {
         "log_id": "RTWUmNk6ieAoAwjTfWJtxCN1R1jc4DcANvurDt+Ka88=",
@@ -2568,10 +3467,15 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-04-28T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-04-28T00:00:00Z"
+                }
+            }
+        ]
     },
     "TRUST_ASIA_LOG_2020": {
         "log_id": "pZWUO1NwvukG4AUNH7W7xqQOZfJlroUsdjY/rbIzNu0=",
@@ -2584,10 +3488,15 @@
             "start_inclusive": "2020-01-01T00:00:00Z",
             "end_exclusive": "2021-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2021-04-21T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2021-04-21T00:00:00Z"
+                }
+            }
+        ]
     },
     "TRUST_ASIA_LOG_2021": {
         "log_id": "Z422Wz50Q7bzo3DV4TqxtDvgoNNR98p0IlDHxvpRqIo=",
@@ -2600,10 +3509,15 @@
             "start_inclusive": "2021-01-01T00:00:00Z",
             "end_exclusive": "2022-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-03-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-03-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "TRUST_ASIA_LOG_2022": {
         "log_id": "w2X5s2VPMoPHnamOk9dBj1ure+MlLJjh0vBLuetCfSM=",
@@ -2616,10 +3530,15 @@
             "start_inclusive": "2022-01-01T00:00:00Z",
             "end_exclusive": "2023-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2023-02-01T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2023-02-01T00:00:00Z"
+                }
+            }
+        ]
     },
     "TRUST_ASIA_LOG_2023": {
         "log_id": "6H6nZgvCbPYALvVyXT/g4zG5OTu5L79Y6zuQSdr1Q1o=",
@@ -2632,10 +3551,15 @@
             "start_inclusive": "2023-01-01T00:00:00Z",
             "end_exclusive": "2024-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2024-02-02T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2024-02-02T00:00:00Z"
+                }
+            }
+        ]
     },
     "TRUST_ASIA_LOG_2024": {
         "log_id": "MG0pV2rSGp1K4SrK2KqKeDqmWjIRYKz/Ww7uTKMgHQU=",
@@ -2648,10 +3572,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-09-13T23:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-09-13T23:00:00Z"
+                }
+            }
+        ]
     },
     "TRUST_ASIA_LOG_2024_2": {
         "log_id": "h0+1DcAp2ZMd5XPp8omejkUzs5LTiwpGJXS/D+6y/B4=",
@@ -2664,10 +3593,15 @@
             "start_inclusive": "2024-01-01T00:00:00Z",
             "end_exclusive": "2025-01-01T00:00:00Z"
         },
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2025-02-01T08:53:20Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2025-02-01T08:53:20Z"
+                }
+            }
+        ]
     },
     "UP_IN_THE_AIR_BEHIND_THE_SOFA_LOG": {
         "log_id": "sLeEvIHA3cR1ROiD8FmFu5B30TTYq4iysuUzmAuOUIs=",
@@ -2675,7 +3609,13 @@
         "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEWTmyppTGMrn+Y2keMDujW9WwQ8lQHpWlLadMSkmOi4+3+MziW5dy1eo/sSFI6ERrf+rvIv/f9F87bXcEsa+Qjw==",
         "url": "https://ct.filippo.io/behindthesofa/",
         "mmd": 86400,
-        "description": "Up In The Air 'Behind the Sofa' log"
+        "description": "Up In The Air 'Behind the Sofa' log",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
     },
     "VENAFI_GEN2_CT_LOG": {
         "log_id": "AwGd8/2FppqOvR+sxtqbpz5Gl3T+d/V5/FoIuDKMHWs=",
@@ -2684,10 +3624,15 @@
         "url": "https://ctlog-gen2.api.venafi.com/",
         "mmd": 86400,
         "description": "Venafi Gen2 CT log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2020-05-08T00:00:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2020-05-08T00:00:00Z"
+                }
+            }
+        ]
     },
     "VENAFI_LOG": {
         "log_id": "rDua7X+pZ0dXFZ5tfVdWcvnZgQCUHpve/+yhMTt1eC0=",
@@ -2696,10 +3641,15 @@
         "url": "https://ctlog.api.venafi.com/",
         "mmd": 86400,
         "description": "Venafi log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-04-29T17:12:19Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-04-29T17:12:19Z"
+                }
+            }
+        ]
     },
     "WOSIGN_CT_LOG_1": {
         "log_id": "nk/3PcPOIgtpIXyJnkaAdqv414Y21cz8haMadWKLqIs=",
@@ -2708,10 +3658,15 @@
         "url": "https://ct.wosign.com/",
         "mmd": 86400,
         "description": "WoSign CT log #1",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2016-04-02T01:27:00Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2016-04-02T01:27:00Z"
+                }
+            }
+        ]
     },
     "WOSIGN_LOG": {
         "log_id": "QbLcLonmPOSvG6e7Kb9oxt7m+fHMBH4w3/rjs7olkmM=",
@@ -2720,10 +3675,15 @@
         "url": "https://ctlog.wosign.com/",
         "mmd": 86400,
         "description": "WoSign log",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2022-04-29T17:12:19Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2022-04-29T17:12:19Z"
+                }
+            }
+        ]
     },
     "WOSIGN_LOG_2": {
         "log_id": "Y9AAYCbd4QuwYB9FJEaWXuK26izU+8layGalUK+Qdbc=",
@@ -2732,9 +3692,14 @@
         "url": "https://ctlog2.wosign.com/",
         "mmd": 86400,
         "description": "WoSign log 2",
-        "log_state": {
-            "state_type": "REJECTED",
-            "timestamp": "2017-09-04T13:30:58Z"
-        }
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2017-09-04T13:30:58Z"
+                }
+            }
+        ]
     }
 }

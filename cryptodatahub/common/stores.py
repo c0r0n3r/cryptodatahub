@@ -35,7 +35,9 @@ class CertificateTransparencyOperator(CryptoDataParamsBase):
     )
 
 
-CertificateTransparencyLogType = enum.Enum('CertificateTransparencyLogType', 'TEST PROD')
+CertificateTransparencyLogType = enum.Enum(
+    'CertificateTransparencyLogType', 'TEST PROD MONITORING_ONLY'
+)
 CertificateTransparencyLogStateType = enum.Enum(
     'CertificateTransparencyLogStateType', 'PENDING QUALIFIED USABLE READONLY RETIRED REJECTED'
 )
@@ -89,6 +91,20 @@ class CertificateTransparencyLogUnknown(CertificateTransparencyLogParamsBase):
 
 
 @attr.s(frozen=True)
+class CertificateTransparencyLogTrustStore(CryptoDataParamsBase):
+    owner = attr.ib(
+        converter=convert_enum(Entity),
+        validator=attr.validators.instance_of(Entity)
+    )
+    log_state = attr.ib(
+        default=None,
+        converter=convert_dict_to_object(CertificateTransparencyLogState),
+        validator=attr.validators.optional(attr.validators.instance_of(CertificateTransparencyLogState)),
+        metadata={'serialize_default': True}
+    )
+
+
+@attr.s(frozen=True)
 class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-attributes
         CertificateTransparencyLogParamsBase
 ):
@@ -103,11 +119,15 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
         metadata={'human_friendly': False},
     )
     url = attr.ib(
-        validator=attr.validators.instance_of(str),
+        default=None,
+        validator=attr.validators.optional(attr.validators.instance_of(str)),
         metadata={'human_readable_name': 'URL', 'human_friendly': False},
     )
     mmd = attr.ib(
-        validator=attr.validators.and_(attr.validators.instance_of(int), attr.validators.ge(1)),
+        default=None,
+        validator=attr.validators.optional(
+            attr.validators.and_(attr.validators.instance_of(int), attr.validators.ge(1))
+        ),
         metadata={'human_readable_name': 'Maximum Merge Delay', 'human_friendly': False},
     )
     description = attr.ib(
@@ -131,10 +151,13 @@ class CertificateTransparencyLogParams(  # pylint: disable=too-many-instance-att
         validator=attr.validators.optional(attr.validators.instance_of(CertificateTransparencyLogType)),
         metadata={'human_friendly': False},
     )
-    log_state = attr.ib(
-        default=None,
-        converter=convert_dict_to_object(CertificateTransparencyLogState),
-        validator=attr.validators.optional(attr.validators.instance_of(CertificateTransparencyLogState))
+    trust_stores = attr.ib(
+        default=(),
+        converter=convert_iterable(convert_dict_to_object(CertificateTransparencyLogTrustStore)),
+        validator=attr.validators.deep_iterable(
+            attr.validators.instance_of(CertificateTransparencyLogTrustStore)
+        ),
+        metadata={'serialize_default': True}
     )
 
     def __str__(self):

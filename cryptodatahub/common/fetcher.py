@@ -21,6 +21,7 @@ import asn1crypto.x509
 from cryptodatahub.common.entity import Entity
 from cryptodatahub.common.stores import (
     CertificateTransparencyLogParams,
+    CertificateTransparencyLogTrustStore,
     CertificateTrustConstraint,
     RootCertificateParams,
     RootCertificateTrustConstraintAction,
@@ -102,42 +103,116 @@ class FetcherBase():
 
 
 @attr.s
-class FetcherCertificateTransparencyLogs(FetcherBase):
-    _CT_LOGS_ALL_JSON_URL = 'https://www.gstatic.com/ct/log_list/v3/all_logs_list.json'
-    _CT_LOG_OPERATOR_NAME_GOOGLE_NAME = {
+class _FetcherCertificateTransparencyLogStoreBase(FetcherBase):
+    _CT_LOG_LIST_URL = None
+    _INCLUDE_TILED_LOGS = False
+    _TILED_LOG_EXTRA_FIELDS = ()
+    _CT_LOG_OPERATOR_CANONICAL_NAME = {
         'Up In The Air Consulting': 'Filippo Valsorda',
         'Wang Shengnan': 'GDCA',
+        'IPng GmbH': 'IPng Networks',
     }
 
     @classmethod
     def _get_current_data(cls):
         http = urllib3.PoolManager()
-        response = http.request('GET', cls._CT_LOGS_ALL_JSON_URL, preload_content=False)
+        response = http.request('GET', cls._CT_LOG_LIST_URL, preload_content=False)
         response.release_conn()
 
         return json.loads(response.data, object_pairs_hook=collections.OrderedDict)
 
     @classmethod
     def _transform_data(cls, current_data):
-        transformed_logs = []
+        per_log = collections.OrderedDict()
 
         for operator in current_data['operators']:
-            logs = operator.pop('logs')
-            for log in logs:
+            operator_name = operator['name']
+            operator_name = cls._CT_LOG_OPERATOR_CANONICAL_NAME.get(operator_name, operator_name)
+            entries = list(operator.get('logs', []))
+            if cls._INCLUDE_TILED_LOGS:
+                for log in operator.get('tiled_logs', []):
+                    pruned = collections.OrderedDict(
+                        (k, v) for k, v in log.items()
+                        if k not in cls._TILED_LOG_EXTRA_FIELDS
+                    )
+                    entries.append(pruned)
+            for log in entries:
+                log_state = None
                 if 'state' in log:
-                    state = log.pop('state')
+                    state = log['state']
                     state_type = list(state)[0]
                     state_args = collections.OrderedDict([('state_type', state_type)])
                     state_args.update(state[state_type])
                     state_args.pop('final_tree_head', None)
+                    state_args.pop('version', None)
+                    log_state = state_args
 
-                    log.update(collections.OrderedDict([('log_state', state_args)]))
+                log_fields = collections.OrderedDict(log)
+                log_fields.pop('state', None)
+                log_fields['operator'] = Entity[name_to_enum_item_name(operator_name)].name
 
-                operator_name = operator['name']
-                operator_name = cls._CT_LOG_OPERATOR_NAME_GOOGLE_NAME.get(operator_name, operator_name)
-                log['operator'] = Entity[name_to_enum_item_name(operator_name)].name
+                per_log[log['log_id']] = (log_fields, log_state)
 
-                transformed_logs.append(CertificateTransparencyLogParams(**log))
+        return per_log
+
+
+_TILED_LOG_EXTRA_FIELDS_COMMON = ('monitoring_url', 'submission_url', 'tls_only')
+
+
+class FetcherCertificateTransparencyLogStoreGoogle(_FetcherCertificateTransparencyLogStoreBase):
+    _CT_LOG_LIST_URL = 'https://www.gstatic.com/ct/log_list/v3/all_logs_list.json'
+    _INCLUDE_TILED_LOGS = True
+    _TILED_LOG_EXTRA_FIELDS = _TILED_LOG_EXTRA_FIELDS_COMMON
+
+
+class FetcherCertificateTransparencyLogStoreApple(_FetcherCertificateTransparencyLogStoreBase):
+    _CT_LOG_LIST_URL = 'https://valid.apple.com/ct/log_list/current_log_list.json'
+    _INCLUDE_TILED_LOGS = True
+    _TILED_LOG_EXTRA_FIELDS = _TILED_LOG_EXTRA_FIELDS_COMMON
+
+
+@attr.s
+class FetcherCertificateTransparencyLogs(FetcherBase):
+    _CT_LOG_STORE_UPDATERS = collections.OrderedDict([
+        (Entity.GOOGLE, FetcherCertificateTransparencyLogStoreGoogle),
+        (Entity.APPLE, FetcherCertificateTransparencyLogStoreApple),
+    ])
+
+    @classmethod
+    def get_ct_log_store_updaters(cls):
+        return cls._CT_LOG_STORE_UPDATERS
+
+    @classmethod
+    def _get_current_data(cls):
+        return collections.OrderedDict([
+            (store_owner, store_fetcher_class.from_current_data())
+            for store_owner, store_fetcher_class in cls._CT_LOG_STORE_UPDATERS.items()
+        ])
+
+    @classmethod
+    def _transform_data(cls, current_data):
+        canonical_log_fields = collections.OrderedDict()
+        trust_stores_per_log = collections.OrderedDict()
+
+        for store_owner, store in current_data.items():
+            for log_id, (log_fields, log_state) in store.parsed_data.items():
+                if log_id not in canonical_log_fields:
+                    canonical_log_fields[log_id] = log_fields
+                trust_stores_per_log.setdefault(log_id, []).append(
+                    CertificateTransparencyLogTrustStore(
+                        owner=store_owner, log_state=log_state,
+                    )
+                )
+
+        transformed_logs = []
+        for log_id, log_fields in canonical_log_fields.items():
+            trust_stores = tuple(sorted(
+                trust_stores_per_log[log_id],
+                key=lambda trust_store: trust_store.owner.name,
+            ))
+            transformed_logs.append(CertificateTransparencyLogParams(
+                trust_stores=trust_stores, **log_fields,
+            ))
 
         return transformed_logs
 
