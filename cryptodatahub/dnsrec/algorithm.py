@@ -3,7 +3,7 @@
 
 import attr
 
-from cryptodatahub.common.algorithm import Hash, KeyExchange, Signature
+from cryptodatahub.common.algorithm import Authentication, Hash, KeyExchange, Signature
 from cryptodatahub.common.grade import GradeableComplex
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
@@ -84,4 +84,54 @@ class RrTypeParams(CryptoDataParamsEnumNumeric):
 
 DnsRrType = CryptoDataEnumCodedBase(
     'DnsRrType', CryptoDataEnumCodedBase.get_json_records(RrTypeParams)
+)
+
+
+@attr.s(frozen=True)
+class SshFpAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComplex):
+    algorithm = attr.ib(
+        converter=convert_enum(Authentication),
+        validator=attr.validators.instance_of(Authentication),
+    )
+
+    def __attrs_post_init__(self):
+        object.__setattr__(self, 'gradeables', [self.algorithm.value])
+
+        attr.validate(self)
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+    def __str__(self):
+        return self.algorithm.value.name
+
+
+SshFpAlgorithm = CryptoDataEnumCodedBase(
+    'SshFpAlgorithm', CryptoDataEnumCodedBase.get_json_records(SshFpAlgorithmParams)
+)
+
+
+@attr.s(frozen=True)
+class SshFpFingerprintTypeParams(CryptoDataParamsEnumNumeric, GradeableComplex):
+    hash = attr.ib(
+        converter=convert_enum(Hash),
+        validator=attr.validators.instance_of(Hash),
+    )
+
+    def __attrs_post_init__(self):
+        object.__setattr__(self, 'gradeables', [self.hash.value])
+
+        attr.validate(self)
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+    def __str__(self):
+        return self.hash.value.name
+
+
+SshFpFingerprintType = CryptoDataEnumCodedBase(
+    'SshFpFingerprintType', CryptoDataEnumCodedBase.get_json_records(SshFpFingerprintTypeParams)
 )

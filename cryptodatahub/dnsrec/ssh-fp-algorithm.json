@@ -1,0 +1,22 @@
+{
+    "RSA": {
+        "_code_in_hex": "0x01",
+        "code": 1,
+        "algorithm": "RSA"
+    },
+    "DSS": {
+        "_code_in_hex": "0x02",
+        "code": 2,
+        "algorithm": "DSS"
+    },
+    "ECDSA": {
+        "_code_in_hex": "0x03",
+        "code": 3,
+        "algorithm": "ECDSA"
+    },
+    "ED25519": {
+        "_code_in_hex": "0x04",
+        "code": 4,
+        "algorithm": "EDDSA"
+    }
+}

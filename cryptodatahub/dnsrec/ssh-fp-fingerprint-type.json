@@ -1,0 +1,12 @@
+{
+    "SHA1": {
+        "_code_in_hex": "0x01",
+        "code": 1,
+        "hash": "SHA1"
+    },
+    "SHA2_256": {
+        "_code_in_hex": "0x02",
+        "code": 2,
+        "hash": "SHA2_256"
+    }
+}
