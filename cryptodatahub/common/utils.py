@@ -69,6 +69,10 @@ class HttpFetcher():
     read_timeout = attr.ib(default=1, validator=attr.validators.instance_of((int, float)))
     retry = attr.ib(default=1, validator=attr.validators.instance_of(int))
     backoff_factor = attr.ib(default=0, validator=attr.validators.instance_of((int, float)))
+    user_agent = attr.ib(
+        default=None,
+        validator=attr.validators.optional(attr.validators.instance_of(str)),
+    )
     _request_params = attr.ib(default=None, init=False)
     _response = attr.ib(default=None, init=False)
 
@@ -87,6 +91,8 @@ class HttpFetcher():
                 raise_on_status=False,
             ),
         }
+        if self.user_agent is not None:
+            request_params['headers'] = {'User-Agent': self.user_agent}
 
         object.__setattr__(self, '_request_params', request_params)
 

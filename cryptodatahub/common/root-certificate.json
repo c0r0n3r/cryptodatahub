@@ -43,11 +43,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -178,6 +178,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -245,6 +249,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -316,6 +324,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -368,6 +380,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -418,11 +434,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -468,11 +484,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -529,11 +545,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -572,11 +588,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -621,6 +637,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -691,6 +711,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -740,6 +764,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -791,6 +819,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -1063,6 +1095,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -1310,6 +1346,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -1490,6 +1530,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -1739,11 +1783,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -1844,7 +1888,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -1884,7 +1928,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -1940,6 +1984,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -2009,6 +2057,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -2187,6 +2239,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -2233,6 +2289,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -2295,6 +2355,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -2347,11 +2411,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -2417,6 +2481,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -2675,11 +2743,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -2735,6 +2803,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -2831,6 +2903,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -2883,6 +2959,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -2957,11 +3037,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -3025,6 +3105,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -3086,6 +3170,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -3383,11 +3471,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             }
         ]
@@ -3434,6 +3522,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             }
@@ -3473,6 +3565,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -3547,6 +3643,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -3758,11 +3858,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -3814,6 +3914,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -3868,6 +3972,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -3966,11 +4074,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -4022,6 +4130,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -4076,6 +4188,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -4139,11 +4255,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -4240,6 +4356,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -4304,6 +4424,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -4371,6 +4495,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -4575,6 +4703,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -4622,6 +4754,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -4724,6 +4860,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -4786,6 +4926,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -4952,7 +5096,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -4997,6 +5141,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -5058,7 +5206,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -5110,6 +5258,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -5177,11 +5329,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -5242,11 +5394,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -5308,11 +5460,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -5371,11 +5523,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -5508,6 +5660,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -5612,6 +5768,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -5828,6 +5988,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -6140,6 +6304,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -6233,6 +6401,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -6276,6 +6448,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -6380,6 +6556,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -6440,11 +6620,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -6486,6 +6666,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -6555,6 +6739,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -6847,7 +7035,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -7138,11 +7326,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -7196,6 +7384,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -7323,6 +7515,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -7445,6 +7641,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -7526,6 +7726,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -7612,6 +7816,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -7706,6 +7914,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -7769,6 +7981,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -7817,11 +8033,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -7934,11 +8150,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -7998,6 +8214,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -8106,6 +8326,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -8225,6 +8449,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -8294,11 +8522,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -8363,6 +8591,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -8414,6 +8646,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -8538,6 +8774,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -8765,6 +9005,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -8813,6 +9057,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -8884,6 +9132,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -9012,6 +9264,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -9067,6 +9323,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -9422,6 +9682,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -9471,6 +9735,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -9745,11 +10013,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -9816,11 +10084,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -9880,6 +10148,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -9957,11 +10229,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -10021,6 +10293,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -10185,6 +10461,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -10251,6 +10531,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -10306,7 +10590,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -10368,7 +10652,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -10412,7 +10696,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -10464,11 +10748,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -10520,11 +10804,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -10563,6 +10847,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -10699,6 +10987,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -10901,6 +11193,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -10971,6 +11267,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -11026,6 +11326,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -11100,6 +11404,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -11334,11 +11642,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -11392,6 +11700,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -11457,11 +11769,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -11940,11 +12252,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -12066,11 +12378,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -12287,6 +12599,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -12389,11 +12705,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -12454,6 +12770,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -12960,7 +13280,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -13003,7 +13323,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -13048,7 +13368,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -13101,6 +13421,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -13176,6 +13500,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -13238,6 +13566,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "APPLE",
                 "constraints": []
             },
@@ -13298,11 +13630,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -13355,6 +13687,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -13417,6 +13753,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -13487,6 +13827,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -13548,6 +13892,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -13595,6 +13943,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -13669,6 +14021,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "APPLE",
                 "constraints": []
@@ -14393,6 +14749,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -14450,6 +14810,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -14502,11 +14866,11 @@
         ],
         "trust_stores": [
             {
-                "owner": "APPLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "constraints": []
             },
             {
@@ -14677,6 +15041,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -14737,6 +15105,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -14888,7 +15260,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             }
         ]
@@ -14924,7 +15296,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             }
         ]
@@ -14977,7 +15349,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             }
         ]
@@ -15030,7 +15402,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             }
         ]
@@ -15084,6 +15456,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
             {
                 "owner": "MICROSOFT",
                 "constraints": []
@@ -15143,6 +15519,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
             {
                 "owner": "MICROSOFT",
                 "constraints": []
@@ -15372,6 +15752,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -15415,7 +15799,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             }
         ]
@@ -15868,6 +16252,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "ANDROID",
+                "constraints": []
+            },
+            {
                 "owner": "GOOGLE",
                 "constraints": []
             },
@@ -15933,6 +16321,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -16000,6 +16392,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MICROSOFT",
                 "constraints": []
             },
@@ -16040,6 +16436,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -16103,6 +16503,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []
@@ -16257,7 +16661,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -16298,7 +16702,7 @@
         ],
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "ANDROID",
                 "constraints": []
             },
             {
@@ -16337,6 +16741,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
             {
                 "owner": "MOZILLA",
                 "constraints": []
@@ -16392,6 +16800,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "GOOGLE",
+                "constraints": []
+            },
+            {
                 "owner": "MOZILLA",
                 "constraints": []
             }
@@ -16446,6 +16858,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "ANDROID",
+                "constraints": []
+            },
             {
                 "owner": "GOOGLE",
                 "constraints": []

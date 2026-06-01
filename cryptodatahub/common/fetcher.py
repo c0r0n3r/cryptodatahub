@@ -248,7 +248,7 @@ class FetcherCsvBase(FetcherBase):
         raise NotImplementedError()
 
 
-class FetcherRootCertificateStoreGoogle(FetcherBase):
+class FetcherRootCertificateStoreAndroid(FetcherBase):
     _GITILES_REPO_BASE = 'https://android.googlesource.com/platform/system/ca-certificates'
 
     @classmethod
@@ -278,6 +278,55 @@ class FetcherRootCertificateStoreGoogle(FetcherBase):
             name = entry['name']
             raw = fetcher(f'{commit_files_base}/{name}?format=TEXT').strip()
             yield base64.b64decode(raw, validate=True).decode('ascii')
+
+    @classmethod
+    def _transform_data(cls, current_data):
+        certificates = {}
+        for root_certificate_pem in current_data:
+            root_certificate_pem_lines = root_certificate_pem.splitlines()
+            root_certificate_pem_lines = root_certificate_pem_lines[
+                :root_certificate_pem_lines.index('-----END CERTIFICATE-----') + 1
+            ]
+
+            certificates[tuple(root_certificate_pem_lines)] = tuple()
+
+        return certificates
+
+
+class FetcherRootCertificateStoreChrome(FetcherBase):
+    _GITILES_REPO_BASE = 'https://chromium.googlesource.com/chromium/src'
+    _CHROME_ROOT_STORE_PATH = 'net/data/ssl/chrome_root_store/root_store.certs'
+
+    @classmethod
+    def _get_current_commit_id(cls, fetcher):
+        log_data = json.loads(
+            fetcher(f'{cls._GITILES_REPO_BASE}/+log/refs/heads/main?n=1&format=JSON').lstrip(b")]}'\n")
+        )
+        return log_data['log'][0]['commit']
+
+    @classmethod
+    def _get_current_data(cls):
+        # Configure fetcher with exponential backoff for 429 rate-limit responses
+        fetcher = HttpFetcher(
+            connect_timeout=5,
+            read_timeout=30,
+            retry=6,
+            backoff_factor=1.0,
+        )
+        commit_id = cls._get_current_commit_id(fetcher)
+        url = (
+            f'{cls._GITILES_REPO_BASE}/+/{commit_id}/{cls._CHROME_ROOT_STORE_PATH}'
+            f'?format=TEXT'
+        )
+
+        raw = base64.b64decode(fetcher(url), validate=True)
+
+        if b'-----BEGIN' not in raw:
+            return
+
+        for type_name, _headers, der_bytes in asn1crypto.pem.unarmor(raw, multiple=True):
+            if type_name == 'CERTIFICATE':
+                yield asn1crypto.pem.armor('CERTIFICATE', der_bytes).decode('ascii')
 
     @classmethod
     def _transform_data(cls, current_data):
@@ -454,7 +503,8 @@ class FetcherRootCertificateStoreOracleJDK(FetcherBase):
 class FetcherRootCertificateStore(FetcherBase):
     _ROOT_CERTIFICATE_STORE_UPDATERS = collections.OrderedDict([
         (Entity.MOZILLA, FetcherRootCertificateStoreMozilla),
-        (Entity.GOOGLE, FetcherRootCertificateStoreGoogle),
+        (Entity.GOOGLE, FetcherRootCertificateStoreChrome),
+        (Entity.ANDROID, FetcherRootCertificateStoreAndroid),
         (Entity.MICROSOFT, FetcherRootCertificateStoreMicrosoft),
         (Entity.APPLE, FetcherRootCertificateStoreApple),
         (Entity.ORACLE, FetcherRootCertificateStoreOracleJDK),
