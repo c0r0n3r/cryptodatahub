@@ -51,8 +51,9 @@ Stores
 
 -  Trusted root CA certificate trust stores
 
+   -  `Android <https://en.wikipedia.org/wiki/Android_(operating_system)>`__
    -  `Apple <https://en.wikipedia.org/wiki/Apple_Inc.>`__
-   -  `Google <https://en.wikipedia.org/wiki/Google>`__
+   -  `Google Chrome <https://en.wikipedia.org/wiki/Google_Chrome>`__
    -  `Microsoft <https://en.wikipedia.org/wiki/Microsoft>`__
    -  `Mozilla <https://en.wikipedia.org/wiki/Mozilla>`__
    -  `Oracle <https://en.wikipedia.org/wiki/Oracle_Corporation>`__
@@ -128,6 +129,8 @@ Attributes
    -  `DNS resource record (RR) types <https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4>`__
    -  `DNSSEC algorithm types <https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml#dns-sec-alg-numbers-1>`__
    -  `DNSSEC digest types <https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml>`__
+   -  `SSHFP algorithm types <https://www.iana.org/assignments/dns-sshfp-rr-parameters/dns-sshfp-rr-parameters.xhtml#dns-sshfp-rr-parameters-1>`__
+   -  `SSHFP fingerprint types <https://www.iana.org/assignments/dns-sshfp-rr-parameters/dns-sshfp-rr-parameters.xhtml#dns-sshfp-rr-parameters-2>`__
 
 Client Capabilities
 -------------------

@@ -3,6 +3,31 @@ Changelog
 =========
 
 ------------------
+1.2.1 - 2026-06-02
+------------------
+
+Features
+========
+
+-  Generic
+
+   -  add trusted root CA certificates from notable stores
+
+      -  `Google Chrome <https://en.wikipedia.org/wiki/Google_Chrome>`__ (#52)
+
+   -  add Certificate Transparency log trust store
+
+      -  `Apple <https://en.wikipedia.org/wiki/Apple_Inc.>`__ (#51)
+
+-  TLS (``tls``)
+
+   -  add ShangMi (SM) algorithm and cipher suite support (#50)
+
+-  DNS (``dnsrec``)
+
+   -  add typed SSHFP algorithm and fingerprint type references (#49)
+
+------------------
 1.2.0 - 2026-05-05
 ------------------
 
