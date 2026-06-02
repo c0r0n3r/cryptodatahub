@@ -4,6 +4,7 @@
 from test.common.classes import TestClasses
 
 from cryptodatahub.common.algorithm import BlockCipher
+from cryptodatahub.ike.version import IkeVersion
 from cryptodatahub.ike.algorithm import (
     Ikev2PayloadType,
     Ikev2NotifyType,
@@ -260,3 +261,9 @@ class TestIkev1HashAlgorithm(TestClasses.TestJsonCodeNumericBase):
             str(Ikev1HashAlgorithm.MD5.value),
             'MD5'
         )
+
+
+class TestIkeVersion(TestClasses.TestJsonCodeNumericBase):
+    @classmethod
+    def _get_class(cls):
+        return IkeVersion
