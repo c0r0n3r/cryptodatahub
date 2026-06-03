@@ -61,6 +61,84 @@
         "key_size": 32,
         "block_size": 64
     },
+    "BLOWFISH_128": {
+        "name": "Blowfish-128",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "WEAK",
+                "named": "SWEET32"
+            }
+        ],
+        "key_size": 128,
+        "block_size": 64
+    },
+    "BLOWFISH_192": {
+        "name": "Blowfish-192",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "WEAK",
+                "named": "SWEET32"
+            }
+        ],
+        "key_size": 192,
+        "block_size": 64
+    },
+    "BLOWFISH_256": {
+        "name": "Blowfish-256",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "WEAK",
+                "named": "SWEET32"
+            }
+        ],
+        "key_size": 256,
+        "block_size": 64
+    },
+    "BLOWFISH_32": {
+        "name": "Blowfish-32",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "WEAK",
+                "named": "SWEET32"
+            }
+        ],
+        "key_size": 32,
+        "block_size": 64
+    },
+    "BLOWFISH_64": {
+        "name": "Blowfish-64",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "WEAK",
+                "named": "SWEET32"
+            }
+        ],
+        "key_size": 64,
+        "block_size": 64
+    },
+    "BLOWFISH_448": {
+        "name": "Blowfish-448",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "BIRTHDAY",
+                "grade": "WEAK",
+                "named": "SWEET32"
+            }
+        ],
+        "key_size": 448,
+        "block_size": 64
+    },
     "TWOFISH128": {
         "name": "Twofish-128",
         "long_name": null,
