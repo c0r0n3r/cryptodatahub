@@ -105,61 +105,61 @@
         "_code_in_hex": "0x4000",
         "_standard": "RFC7296",
         "code": 16384,
-        "level": "ERROR"
+        "level": "STATUS"
     },
     "SET_WINDOW_SIZE": {
         "_code_in_hex": "0x4001",
         "_standard": "RFC7296",
         "code": 16385,
-        "level": "ERROR"
+        "level": "STATUS"
     },
     "ADDITIONAL_TS_POSSIBLE": {
         "_code_in_hex": "0x4002",
         "_standard": "RFC7296",
         "code": 16386,
-        "level": "ERROR"
+        "level": "STATUS"
     },
     "IPCOMP_SUPPORTED": {
         "_code_in_hex": "0x4003",
         "_standard": "RFC7296",
         "code": 16387,
-        "level": "ERROR"
+        "level": "STATUS"
     },
     "NAT_DETECTION_SOURCE_IP": {
         "_code_in_hex": "0x4004",
         "_standard": "RFC7296",
         "code": 16388,
-        "level": "ERROR"
+        "level": "STATUS"
     },
     "NAT_DETECTION_DESTINATION_IP": {
         "_code_in_hex": "0x4005",
         "_standard": "RFC7296",
         "code": 16389,
-        "level": "ERROR"
+        "level": "STATUS"
     },
     "COOKIE": {
         "_code_in_hex": "0x4006",
         "_standard": "RFC7296",
         "code": 16390,
-        "level": "ERROR"
+        "level": "STATUS"
     },
     "USE_TRANSPORT_MODE": {
         "_code_in_hex": "0x4007",
         "_standard": "RFC7296",
         "code": 16391,
-        "level": "ERROR"
+        "level": "STATUS"
     },
     "HTTP_CERT_LOOKUP_SUPPORTED": {
         "_code_in_hex": "0x4008",
         "_standard": "RFC7296",
         "code": 16392,
-        "level": "ERROR"
+        "level": "STATUS"
     },
     "REKEY_SA": {
         "_code_in_hex": "0x4009",
         "_standard": "RFC7296",
         "code": 16393,
-        "level": "ERROR"
+        "level": "STATUS"
     },
     "ESP_TFC_PADDING_NOT_SUPPORTED": {
         "_code_in_hex": "0x400a",
