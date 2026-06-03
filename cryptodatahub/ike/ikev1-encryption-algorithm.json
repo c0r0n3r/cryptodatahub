@@ -276,6 +276,17 @@
         ],
         "block_cipher_mode": "CCM_16"
     },
+    "MARS_CBC": {
+        "_code_in_hex": "0xFDE9",
+        "_standard": "PRIVATE",
+        "code": 65001,
+        "bulk_ciphers": [
+            "MARS_128",
+            "MARS_192",
+            "MARS_256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
     "RC6_CBC": {
         "_code_in_hex": "0xFDEA",
         "_standard": "PRIVATE",
