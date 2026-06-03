@@ -275,5 +275,16 @@
             "CAMELLIA_256"
         ],
         "block_cipher_mode": "CCM_16"
+    },
+    "RC6_CBC": {
+        "_code_in_hex": "0xFDEA",
+        "_standard": "PRIVATE",
+        "code": 65002,
+        "bulk_ciphers": [
+            "RC6_128",
+            "RC6_192",
+            "RC6_256"
+        ],
+        "block_cipher_mode": "CBC"
     }
 }
