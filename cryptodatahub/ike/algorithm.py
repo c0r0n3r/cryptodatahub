@@ -175,7 +175,7 @@ class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
 
 
 Ikev2EncryptionAlgorithm = CryptoDataEnumCodedBase(
-    'EncryptionAlgorithm',
+    'Ikev2EncryptionAlgorithm',
     CryptoDataEnumBase.get_json_records(Ikev2EncryptionAlgorithmParams)
 )
 
@@ -546,7 +546,7 @@ class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
 
 
 Ikev1EncryptionAlgorithm = CryptoDataEnumCodedBase(
-    'EncryptionAlgorithm',
+    'Ikev1EncryptionAlgorithm',
     CryptoDataEnumBase.get_json_records(Ikev1EncryptionAlgorithmParams)
 )
 
