@@ -56,6 +56,11 @@
         "long_name": "Galois/counter mode",
         "vulnerabilities": []
     },
+    "GCM_8": {
+        "name": "GCM-8",
+        "long_name": "Galois/counter mode (8)",
+        "vulnerabilities": []
+    },
     "MGM": {
         "name": "MGM",
         "long_name": "GOST Magma",
