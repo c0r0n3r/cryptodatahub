@@ -3,6 +3,19 @@ Changelog
 =========
 
 ------------------
+1.3.0 - Unreleased
+------------------
+
+Features
+========
+
+-  Generic
+
+   -  add trusted root CA certificates from notable stores
+
+      -  `OpenJDK <https://openjdk.org/>`__ (#54)
+
+------------------
 1.2.1 - 2026-06-02
 ------------------
 

@@ -13,7 +13,7 @@ class TestEntity(TestClasses.TestJsonBase):
 
     def test_get_items_by_role(self):
         trust_store_owners = Entity.get_items_by_role(EntityRole.CA_TRUST_STORE_OWNER)
-        self.assertEqual(len(trust_store_owners), 6)
+        self.assertEqual(len(trust_store_owners), 7)
         self.assertEqual(id(trust_store_owners), id(Entity.get_items_by_role(EntityRole.CA_TRUST_STORE_OWNER)))
 
 

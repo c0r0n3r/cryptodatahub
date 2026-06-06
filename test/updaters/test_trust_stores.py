@@ -32,6 +32,7 @@ from cryptodatahub.common.fetcher import (
     FetcherRootCertificateStoreChrome,
     FetcherRootCertificateStoreMicrosoft,
     FetcherRootCertificateStoreMozilla,
+    FetcherRootCertificateStoreOpenJDK,
     FetcherRootCertificateStoreOracleJDK,
 )
 from cryptodatahub.common.stores import (
@@ -539,6 +540,38 @@ class TestUpdaterRootCertificateStoreOracleJDK(TestRootCertificateBase):
         self.assertEqual(len(parsed_data), 1)
 
 
+class TestUpdaterRootCertificateStoreOpenJDK(TestRootCertificateBase):
+    _MOCK_TARBALL_URL = (
+        f'https://download.java.net/java/GA/jdk{FetcherRootCertificateStoreOpenJDK.OPENJDK_VERSION}/'
+        f'abc123/1/GPL/openjdk-{FetcherRootCertificateStoreOpenJDK.OPENJDK_VERSION}_linux-x64_bin.tar.gz'
+    )
+    MOCK_DOWNLOAD_PAGE = (
+        f'<html><body><a href="{_MOCK_TARBALL_URL}">Linux/x64</a></body></html>'
+    ).encode('utf-8')
+
+    def test_parse_empty(self):
+        mock_data = self._get_mock_data_jdk_cacerts()
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=[self.MOCK_DOWNLOAD_PAGE, mock_data]):
+            root_certificate_store = FetcherRootCertificateStoreOpenJDK.from_current_data()
+        self.assertEqual(len(root_certificate_store.parsed_data), 0)
+
+    def test_parse_pem(self):
+        public_key_x509 = self._get_public_key_x509('snakeoil_ca_cert')
+        mock_data = self._get_mock_data_jdk_cacerts([public_key_x509])
+        with mock.patch.object(HttpFetcher, '__call__', side_effect=[self.MOCK_DOWNLOAD_PAGE, mock_data]):
+            root_certificate_store = FetcherRootCertificateStoreOpenJDK.from_current_data()
+        self.assertEqual(len(root_certificate_store.parsed_data), 1)
+        self.assertEqual(root_certificate_store.parsed_data, {
+            tuple(public_key_x509.pem.splitlines()): (),
+        })
+
+    def test_download_page_url(self):
+        expected_url = (
+            f'https://jdk.java.net/{FetcherRootCertificateStoreOpenJDK.OPENJDK_VERSION}/'
+        )
+        self.assertEqual(FetcherRootCertificateStoreOpenJDK.get_download_page_url(), expected_url)
+
+
 class UpdaterRootCertificateTrustStoreTest(UpdaterBase):
     def __init__(self):
         root_certificate_test_class = RootCertificateBase(
@@ -565,6 +598,8 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             self._get_mock_data_microsoft(),
             self._get_mock_data_apple(),
             self._get_mock_data_jdk_cacerts(),
+            TestUpdaterRootCertificateStoreOpenJDK.MOCK_DOWNLOAD_PAGE,
+            self._get_mock_data_jdk_cacerts(),
         ]
         with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results):
             fetched_data = FetcherRootCertificateStore.from_current_data()
@@ -584,6 +619,8 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             mock_data_android[1],
             mock_data_microsoft,
             self._get_mock_data_apple(),
+            self._get_mock_data_jdk_cacerts(),
+            TestUpdaterRootCertificateStoreOpenJDK.MOCK_DOWNLOAD_PAGE,
             self._get_mock_data_jdk_cacerts(),
         ]
         with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results), \
@@ -637,6 +674,8 @@ class TestFetcherRootCertificateStore(TestRootCertificateBase):
             mock_data_android[1],
             mock_data_microsoft,
             self._get_mock_data_apple(),
+            self._get_mock_data_jdk_cacerts(),
+            TestUpdaterRootCertificateStoreOpenJDK.MOCK_DOWNLOAD_PAGE,
             self._get_mock_data_jdk_cacerts(),
         ]
         with mock.patch.object(HttpFetcher, '__call__', side_effect=http_fetcher_results), \

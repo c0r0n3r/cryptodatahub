@@ -202,6 +202,14 @@
             "CT_LOG_OPERATOR"
         ]
     },
+    "OPENJDK": {
+        "name": "OpenJDK",
+        "long_name": null,
+        "type": "NOT_FOR_PROFIT_ORG",
+        "activities": [
+            "CA_TRUST_STORE_OWNER"
+        ]
+    },
     "OPERA": {
         "name": "Opera",
         "long_name": "Opera, Ltd.",
