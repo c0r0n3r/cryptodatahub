@@ -443,26 +443,12 @@ class FetcherRootCertificateStoreMozilla(FetcherCsvBase):
         return certificates
 
 
-class FetcherRootCertificateStoreOracleJDK(FetcherBase):
-    ORACLE_JDK_VERSION = 21
-    ORACLE_JDK_DOWNLOAD_URL = (
-        'https://download.oracle.com/java/{version}/latest/'
-        'jdk-{version}_linux-x64_bin.tar.gz'
-    )
+class _FetcherRootCertificateStoreJDKBase(FetcherBase):
     _CACERTS_PATH_SUFFIX = '/lib/security/cacerts'
 
     @classmethod
-    def get_tarball_url(cls):
-        return cls.ORACLE_JDK_DOWNLOAD_URL.format(version=cls.ORACLE_JDK_VERSION)
-
-    @classmethod
+    @abc.abstractmethod
     def _get_current_data(cls):
-        data = HttpFetcher(connect_timeout=5, read_timeout=5)(cls.get_tarball_url())
-        with tarfile.open(fileobj=io.BytesIO(data), mode='r:gz') as tar:
-            for member in tar.getmembers():
-                if member.name.endswith(cls._CACERTS_PATH_SUFFIX):
-                    return tar.extractfile(member).read()
-
         raise NotImplementedError()
 
     @classmethod
@@ -500,6 +486,57 @@ class FetcherRootCertificateStoreOracleJDK(FetcherBase):
         return certificates
 
 
+class FetcherRootCertificateStoreOracleJDK(_FetcherRootCertificateStoreJDKBase):
+    ORACLE_JDK_VERSION = 21
+    ORACLE_JDK_DOWNLOAD_URL = (
+        'https://download.oracle.com/java/{version}/latest/'
+        'jdk-{version}_linux-x64_bin.tar.gz'
+    )
+
+    @classmethod
+    def get_tarball_url(cls):
+        return cls.ORACLE_JDK_DOWNLOAD_URL.format(version=cls.ORACLE_JDK_VERSION)
+
+    @classmethod
+    def _get_current_data(cls):
+        data = HttpFetcher(connect_timeout=5, read_timeout=5)(cls.get_tarball_url())
+        with tarfile.open(fileobj=io.BytesIO(data), mode='r:gz') as tar:
+            for member in tar.getmembers():
+                if member.name.endswith(cls._CACERTS_PATH_SUFFIX):
+                    return tar.extractfile(member).read()
+
+        raise NotImplementedError()
+
+
+class FetcherRootCertificateStoreOpenJDK(_FetcherRootCertificateStoreJDKBase):
+    OPENJDK_VERSION = 26
+    _JDK_DOWNLOAD_PAGE_URL = 'https://jdk.java.net/{version}/'
+
+    @classmethod
+    def get_download_page_url(cls):
+        return cls._JDK_DOWNLOAD_PAGE_URL.format(version=cls.OPENJDK_VERSION)
+
+    @classmethod
+    def _get_current_data(cls):
+        fetcher = HttpFetcher(connect_timeout=5, read_timeout=5)
+        page_data = fetcher(cls.get_download_page_url())
+        soup = bs4.BeautifulSoup(page_data, 'html.parser')
+        tarball_url = None
+        for link in soup.find_all('a', href=True):
+            if 'linux-x64_bin.tar.gz' in link['href']:
+                tarball_url = link['href']
+                break
+        if tarball_url is None:
+            raise NotImplementedError()
+        data = fetcher(tarball_url)
+        with tarfile.open(fileobj=io.BytesIO(data), mode='r:gz') as tar:
+            for member in tar.getmembers():
+                if member.name.endswith(cls._CACERTS_PATH_SUFFIX):
+                    return tar.extractfile(member).read()
+
+        raise NotImplementedError()
+
+
 class FetcherRootCertificateStore(FetcherBase):
     _ROOT_CERTIFICATE_STORE_UPDATERS = collections.OrderedDict([
         (Entity.MOZILLA, FetcherRootCertificateStoreMozilla),
@@ -508,6 +545,7 @@ class FetcherRootCertificateStore(FetcherBase):
         (Entity.MICROSOFT, FetcherRootCertificateStoreMicrosoft),
         (Entity.APPLE, FetcherRootCertificateStoreApple),
         (Entity.ORACLE, FetcherRootCertificateStoreOracleJDK),
+        (Entity.OPENJDK, FetcherRootCertificateStoreOpenJDK),
     ])
 
     @classmethod

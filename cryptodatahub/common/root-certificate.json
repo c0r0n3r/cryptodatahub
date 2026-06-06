@@ -55,6 +55,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -267,6 +271,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -658,6 +666,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -731,6 +743,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -782,6 +798,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -837,6 +857,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -2005,6 +2029,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -2075,6 +2103,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -2302,6 +2334,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -2367,6 +2403,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -2420,6 +2460,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -2495,6 +2539,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -2865,6 +2913,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -2977,6 +3029,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -3312,6 +3368,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -3586,6 +3646,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -3661,6 +3725,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -3870,6 +3938,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -3935,6 +4007,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -3990,6 +4066,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -4086,6 +4166,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -4151,6 +4235,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -4209,6 +4297,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -4264,6 +4356,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -4372,6 +4468,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -4438,6 +4538,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -4513,6 +4617,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -4880,6 +4988,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -4944,6 +5056,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -5162,6 +5278,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -5279,6 +5399,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -5338,6 +5462,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -5416,6 +5544,10 @@
                 ]
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -5469,6 +5601,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -5532,6 +5668,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -5605,6 +5745,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -5673,6 +5817,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -6051,6 +6199,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -6098,6 +6250,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -6139,6 +6295,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -6190,6 +6350,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -6247,6 +6411,10 @@
         "trust_stores": [
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -6324,6 +6492,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -6364,6 +6536,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -6466,6 +6642,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -6576,6 +6756,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -6632,6 +6816,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -6684,6 +6872,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -6757,6 +6949,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -7338,6 +7534,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -7402,6 +7602,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -7531,6 +7735,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -7653,6 +7861,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -7743,6 +7955,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -7830,6 +8046,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -8045,6 +8265,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -8159,6 +8383,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -8469,6 +8697,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -8535,6 +8767,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -8611,6 +8847,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -8660,6 +8900,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -9078,6 +9322,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -9150,6 +9398,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -10029,6 +10281,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -10093,6 +10349,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -10169,6 +10429,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -10238,6 +10502,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -10314,6 +10582,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -10372,6 +10644,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -10477,6 +10753,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -10544,6 +10824,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -10757,6 +11041,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -11005,6 +11293,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -11287,6 +11579,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -11344,6 +11640,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -11422,6 +11722,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -11654,6 +11958,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -11721,6 +12029,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -11782,6 +12094,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -12264,6 +12580,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -12320,6 +12640,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -12387,6 +12711,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -12717,6 +13045,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -12784,6 +13116,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -12902,6 +13238,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -12954,6 +13294,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -13586,6 +13930,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -13708,6 +14056,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -13771,6 +14123,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -13964,6 +14320,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -14039,6 +14399,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -14196,6 +14560,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -14244,6 +14612,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -14302,6 +14674,10 @@
         "trust_stores": [
             {
                 "owner": "APPLE",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -14364,6 +14740,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -14875,6 +15255,10 @@
             },
             {
                 "owner": "MICROSOFT",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -16268,6 +16652,10 @@
                 "constraints": []
             },
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -16335,6 +16723,10 @@
             },
             {
                 "owner": "MOZILLA",
+                "constraints": []
+            },
+            {
+                "owner": "OPENJDK",
                 "constraints": []
             },
             {
@@ -16919,6 +17311,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -16967,6 +17363,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -17002,6 +17402,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
             {
                 "owner": "ORACLE",
                 "constraints": []
@@ -17055,6 +17459,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
             {
                 "owner": "ORACLE",
                 "constraints": []
@@ -17111,6 +17519,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -17166,6 +17578,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -17209,6 +17625,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -17244,6 +17664,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
             {
                 "owner": "ORACLE",
                 "constraints": []
@@ -17299,6 +17723,10 @@
         ],
         "trust_stores": [
             {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
+            {
                 "owner": "ORACLE",
                 "constraints": []
             }
@@ -17337,6 +17765,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
             {
                 "owner": "ORACLE",
                 "constraints": []
@@ -17388,6 +17820,10 @@
             "-----END CERTIFICATE-----"
         ],
         "trust_stores": [
+            {
+                "owner": "OPENJDK",
+                "constraints": []
+            },
             {
                 "owner": "ORACLE",
                 "constraints": []
