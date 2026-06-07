@@ -81,8 +81,7 @@
         "_standard": "RFC2405",
         "code": 1,
         "bulk_ciphers": [
-            "DES",
-            "DES40"
+            "DES"
         ],
         "block_cipher_mode": "CBC"
     },
@@ -101,7 +100,12 @@
         "_standard": "RFC2409",
         "code": 3,
         "bulk_ciphers": [
-            "BLOWFISH"
+            "BLOWFISH_32",
+            "BLOWFISH_64",
+            "BLOWFISH_128",
+            "BLOWFISH_192",
+            "BLOWFISH_256",
+            "BLOWFISH_448"
         ],
         "block_cipher_mode": "CBC"
     },
@@ -295,6 +299,17 @@
             "RC6_128",
             "RC6_192",
             "RC6_256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "SERPENT_CBC": {
+        "_code_in_hex": "0xFDEC",
+        "_standard": "PRIVATE",
+        "code": 65004,
+        "bulk_ciphers": [
+            "SERPENT_128",
+            "SERPENT_192",
+            "SERPENT_256"
         ],
         "block_cipher_mode": "CBC"
     },

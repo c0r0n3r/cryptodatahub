@@ -194,7 +194,7 @@ class Ikev2HashAlgorithmParams(IkeAlgorithmParams):
 
     @classmethod
     def get_code_size(cls):
-        return 1
+        return 2
 
     @property
     def _gradeable_algorithms(self):

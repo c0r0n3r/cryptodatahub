@@ -55,6 +55,14 @@
         "digest_size": 128,
         "hash_algorithm": null
     },
+    "CBCMAC_CAMELLIA": {
+        "name": "CBC-MAC Camellia",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": null,
+        "digest_size": 128,
+        "hash_algorithm": null
+    },
     "CBCMAC_AES_96": {
         "name": "CBC-MAC AES(96)",
         "long_name": null,
