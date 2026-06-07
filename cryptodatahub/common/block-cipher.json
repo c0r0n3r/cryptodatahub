@@ -290,7 +290,7 @@
         "name": "ChaCha20",
         "long_name": null,
         "vulnerabilities": [],
-        "key_size": 128,
+        "key_size": 256,
         "block_size": null
     },
     "CRYPTICORE": {
