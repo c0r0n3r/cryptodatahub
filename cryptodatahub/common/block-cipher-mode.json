@@ -61,6 +61,11 @@
         "long_name": "Galois/counter mode (8)",
         "vulnerabilities": []
     },
+    "GMAC": {
+        "name": "GMAC",
+        "long_name": "Galois message authentication code",
+        "vulnerabilities": []
+    },
     "MGM": {
         "name": "MGM",
         "long_name": "GOST Magma",
