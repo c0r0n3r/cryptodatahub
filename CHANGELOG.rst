@@ -44,6 +44,9 @@ Features
 1.2.0 - 2026-05-05
 ------------------
 
+Features
+========
+
 -  IKE (``ike``)
 
    -  add grade for IKEv1/IKEv2 algorithms (#37)
