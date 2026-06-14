@@ -129,19 +129,19 @@
         "_code_in_hex": "0x16",
         "_standard": "RFC5114",
         "code": 22,
-        "key_parameter": "RFC2539_1024_BIT_MODP_GROUP"
+        "key_parameter": "RFC5114_1024_BIT_MODP_GROUP_WITH_160_BIT_PRIME_ORDER_SUBGROUP"
     },
     "MODP_2048_BIT_224_BIT_SUBGROUP": {
         "_code_in_hex": "0x17",
         "_standard": "RFC5114",
         "code": 23,
-        "key_parameter": "RFC3526_2048_BIT_MODP_GROUP"
+        "key_parameter": "RFC5114_2048_BIT_MODP_GROUP_WITH_224_BIT_PRIME_ORDER_SUBGROUP"
     },
     "MODP_2048_BIT_256_BIT_SUBGROUP": {
         "_code_in_hex": "0x18",
         "_standard": "RFC5114",
         "code": 24,
-        "key_parameter": "RFC3526_2048_BIT_MODP_GROUP"
+        "key_parameter": "RFC5114_2048_BIT_MODP_GROUP_WITH_256_BIT_PRIME_ORDER_SUBGROUP"
     },
     "ECP_192_BIT": {
         "_code_in_hex": "0x19",

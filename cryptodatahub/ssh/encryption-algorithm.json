@@ -186,72 +186,72 @@
     },
     "CAST128_CBC": {
         "code": "cast128-cbc",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "CBC"
     },
     "CAST128_CFB": {
         "code": "cast128-cfb",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "CFB"
     },
     "CAST128_CTR": {
         "code": "cast128-ctr",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "CTR"
     },
     "CAST128_ECB": {
         "code": "cast128-ecb",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "ECB"
     },
     "CAST128_OFB": {
         "code": "cast128-ofb",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "OFB"
     },
     "CAST128_12_CBC": {
         "code": "cast128-12-cbc",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "CBC"
     },
     "CAST128_12_CBC_SSH_COM": {
         "code": "cast128-12-cbc@ssh.com",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "CBC"
     },
     "CAST128_12_CFB": {
         "code": "cast128-12-cfb",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "CFB"
     },
     "CAST128_12_CFB_SSH_COM": {
         "code": "cast128-12-cfb@ssh.com",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "CFB"
     },
     "CAST128_12_ECB": {
         "code": "cast128-12-ecb",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "ECB"
     },
     "CAST128_12_ECB_SSH_COM": {
         "code": "cast128-12-ecb@ssh.com",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "ECB"
     },
     "CAST128_12_OFB": {
         "code": "cast128-12-ofb",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "OFB"
     },
     "CAST128_12_OFB_SSH_COM": {
         "code": "cast128-12-ofb@ssh.com",
-        "cipher": "CAST_128",
+        "cipher": "CAST5_128",
         "mode": "OFB"
     },
     "CAST256_CBC": {
         "code": "cast256-cbc",
-        "cipher": "CAST_256",
+        "cipher": "CAST6_128",
         "mode": "CBC"
     },
     "CHACHA20_POLY1305": {
@@ -486,27 +486,27 @@
     },
     "TRIPLE_DES_CBC": {
         "code": "3des-cbc",
-        "cipher": "TRIPLE_DES",
+        "cipher": "TRIPLE_DES_168",
         "mode": "CBC"
     },
     "TRIPLE_DES_CFB": {
         "code": "3des-cfb",
-        "cipher": "TRIPLE_DES",
+        "cipher": "TRIPLE_DES_168",
         "mode": "CFB"
     },
     "TRIPLE_DES_CTR": {
         "code": "3des-ctr",
-        "cipher": "TRIPLE_DES",
+        "cipher": "TRIPLE_DES_168",
         "mode": "CTR"
     },
     "TRIPLE_DES_ECB": {
         "code": "3des-ecb",
-        "cipher": "TRIPLE_DES",
+        "cipher": "TRIPLE_DES_168",
         "mode": "ECB"
     },
     "TRIPLE_DES_OFB": {
         "code": "3des-ofb",
-        "cipher": "TRIPLE_DES",
+        "cipher": "TRIPLE_DES_168",
         "mode": "OFB"
     },
     "TWOFISH_CBC": {

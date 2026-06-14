@@ -407,9 +407,12 @@ class CryptoDataParamsNamed(CryptoDataParamsBase):
         return self.name
 
 
-@attr.s(frozen=True)
+@attr.s(frozen=True, eq=False)
 class CryptoDataParamsEnumNumeric(CryptoDataParamsBase):
     code = attr.ib()
+
+    def __eq__(self, b):
+        return self.code == b.code
 
     @code.validator
     def _validator_code(self, _, value):

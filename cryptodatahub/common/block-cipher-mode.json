@@ -17,7 +17,17 @@
     },
     "CCM_8": {
         "name": "CCM-8",
-        "long_name": "counter with CBC-MAC (8)",
+        "long_name": "counter with CBC-MAC (8-byte ICV)",
+        "vulnerabilities": []
+    },
+    "CCM_12": {
+        "name": "CCM-12",
+        "long_name": "counter with CBC-MAC (12-byte ICV)",
+        "vulnerabilities": []
+    },
+    "CCM_16": {
+        "name": "CCM-16",
+        "long_name": "counter with CBC-MAC (16-byte ICV)",
         "vulnerabilities": []
     },
     "CFB": {
@@ -54,6 +64,26 @@
     "GCM": {
         "name": "GCM",
         "long_name": "Galois/counter mode",
+        "vulnerabilities": []
+    },
+    "GCM_8": {
+        "name": "GCM-8",
+        "long_name": "Galois/counter mode (8-byte ICV)",
+        "vulnerabilities": []
+    },
+    "GCM_12": {
+        "name": "GCM-12",
+        "long_name": "Galois/counter mode (12-byte ICV)",
+        "vulnerabilities": []
+    },
+    "GCM_16": {
+        "name": "GCM-16",
+        "long_name": "Galois/counter mode (16-byte ICV)",
+        "vulnerabilities": []
+    },
+    "GMAC": {
+        "name": "GMAC",
+        "long_name": "Galois message authentication code",
         "vulnerabilities": []
     },
     "MGM": {
