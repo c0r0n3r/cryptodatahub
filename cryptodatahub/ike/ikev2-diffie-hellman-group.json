@@ -3,210 +3,385 @@
         "_code_in_hex": "0x01",
         "_standard": "RFC7296",
         "code": 1,
+        "names": {
+            "STRONGSWAN": "modp768",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "RFC2539_768_BIT_MODP_GROUP"
     },
     "MODP_GROUP_1024_BIT": {
         "_code_in_hex": "0x02",
         "_standard": "RFC7296",
         "code": 2,
+        "names": {
+            "STRONGSWAN": "modp1024",
+            "LIBRESWAN": null,
+            "OPENSWAN": "modp1024"
+        },
         "key_parameter": "RFC2539_1024_BIT_MODP_GROUP"
     },
     "MODP_GROUP_1536_BIT": {
         "_code_in_hex": "0x05",
         "_standard": "RFC3526",
         "code": 5,
+        "names": {
+            "STRONGSWAN": "modp1536",
+            "LIBRESWAN": "modp1536",
+            "OPENSWAN": "modp1536"
+        },
         "key_parameter": "RFC3526_1536_BIT_MODP_GROUP"
     },
     "EC2N_GROUP_163_BIT_RANDOM": {
         "_code_in_hex": "0x06",
         "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
         "code": 6,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "SECT163R1"
     },
     "EC2N_GROUP_163_BIT_KOBLITZ": {
         "_code_in_hex": "0x07",
         "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
         "code": 7,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "SECT163K1"
     },
     "EC2N_GROUP_283_BIT_RANDOM": {
         "_code_in_hex": "0x08",
         "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
         "code": 8,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "SECT283R1"
     },
     "EC2N_GROUP_283_BIT_KOBLITZ": {
         "_code_in_hex": "0x09",
         "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
         "code": 9,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "SECT283K1"
     },
     "EC2N_GROUP_409_BIT_RANDOM": {
         "_code_in_hex": "0x0A",
         "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
         "code": 10,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "SECT409R1"
     },
     "EC2N_GROUP_409_BIT_KOBLITZ": {
         "_code_in_hex": "0x0B",
         "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
         "code": 11,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "SECT409K1"
     },
     "EC2N_GROUP_571_BIT_RANDOM": {
         "_code_in_hex": "0x0C",
         "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
         "code": 12,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "SECT571R1"
     },
     "EC2N_GROUP_571_BIT_KOBLITZ": {
         "_code_in_hex": "0x0D",
         "_standard": "draft-ietf-ipsec-ike-ecc-groups-10",
         "code": 13,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "SECT571K1"
     },
     "MODP_GROUP_2048_BIT": {
         "_code_in_hex": "0x0e",
         "_standard": "RFC3526",
         "code": 14,
+        "names": {
+            "STRONGSWAN": "modp2048",
+            "LIBRESWAN": "modp2048",
+            "OPENSWAN": "modp2048"
+        },
         "key_parameter": "RFC3526_2048_BIT_MODP_GROUP"
     },
     "MODP_GROUP_3072_BIT": {
         "_code_in_hex": "0x0f",
         "_standard": "RFC3526",
         "code": 15,
+        "names": {
+            "STRONGSWAN": "modp3072",
+            "LIBRESWAN": "modp3072",
+            "OPENSWAN": "modp3072"
+        },
         "key_parameter": "RFC3526_3072_BIT_MODP_GROUP"
     },
     "MODP_GROUP_4096_BIT": {
         "_code_in_hex": "0x10",
         "_standard": "RFC3526",
         "code": 16,
+        "names": {
+            "STRONGSWAN": "modp4096",
+            "LIBRESWAN": "modp4096",
+            "OPENSWAN": "modp4096"
+        },
         "key_parameter": "RFC3526_4096_BIT_MODP_GROUP"
     },
     "MODP_GROUP_6144_BIT": {
         "_code_in_hex": "0x11",
         "_standard": "RFC3526",
         "code": 17,
+        "names": {
+            "STRONGSWAN": "modp6144",
+            "LIBRESWAN": "modp6144",
+            "OPENSWAN": "modp6144"
+        },
         "key_parameter": "RFC3526_6144_BIT_MODP_GROUP"
     },
     "MODP_GROUP_8192_BIT": {
         "_code_in_hex": "0x12",
         "_standard": "RFC3526",
         "code": 18,
+        "names": {
+            "STRONGSWAN": "modp8192",
+            "LIBRESWAN": "modp8192",
+            "OPENSWAN": "modp8192"
+        },
         "key_parameter": "RFC3526_8192_BIT_MODP_GROUP"
     },
     "ECP_GROUP_256_BIT": {
         "_code_in_hex": "0x13",
         "_standard": "RFC5903",
         "code": 19,
+        "names": {
+            "STRONGSWAN": "ecp256",
+            "LIBRESWAN": "dh19",
+            "OPENSWAN": null
+        },
         "key_parameter": "PRIME256V1"
     },
     "ECP_GROUP_384_BIT": {
         "_code_in_hex": "0x14",
         "_standard": "RFC5903",
         "code": 20,
+        "names": {
+            "STRONGSWAN": "ecp384",
+            "LIBRESWAN": "dh20",
+            "OPENSWAN": null
+        },
         "key_parameter": "SECP384R1"
     },
     "ECP_GROUP_521_BIT": {
         "_code_in_hex": "0x15",
         "_standard": "RFC5903",
         "code": 21,
+        "names": {
+            "STRONGSWAN": "ecp521",
+            "LIBRESWAN": "dh21",
+            "OPENSWAN": null
+        },
         "key_parameter": "SECP521R1"
     },
     "MODP_GROUP_1024_BIT_160_BIT_SUBGROUP": {
         "_code_in_hex": "0x16",
         "_standard": "RFC8247,RFC6989,RFC5114",
         "code": 22,
+        "names": {
+            "STRONGSWAN": "modp1024s160",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "RFC5114_1024_BIT_MODP_GROUP_WITH_160_BIT_PRIME_ORDER_SUBGROUP"
     },
     "MODP_GROUP_2048_BIT_224_BIT_SUBGROUP": {
         "_code_in_hex": "0x17",
         "_standard": "RFC6989,RFC5114",
         "code": 23,
+        "names": {
+            "STRONGSWAN": "modp2048s224",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "RFC5114_2048_BIT_MODP_GROUP_WITH_224_BIT_PRIME_ORDER_SUBGROUP"
     },
     "MODP_GROUP_2048_BIT_256_BIT_SUBGROUP": {
         "_code_in_hex": "0x18",
         "_standard": "RFC6989,RFC5114",
         "code": 24,
+        "names": {
+            "STRONGSWAN": "modp2048s256",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "RFC5114_2048_BIT_MODP_GROUP_WITH_256_BIT_PRIME_ORDER_SUBGROUP"
     },
     "ECP_GROUP_192_BIT": {
         "_code_in_hex": "0x19",
         "_standard": "RFC6989,RFC5114",
         "code": 25,
+        "names": {
+            "STRONGSWAN": "ecp192",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "PRIME192V1"
     },
     "ECP_GROUP_224_BIT": {
         "_code_in_hex": "0x1A",
         "_standard": "RFC6989,RFC5114",
         "code": 26,
+        "names": {
+            "STRONGSWAN": "ecp224",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "SECP224R1"
     },
     "BRAINPOOL_ECP_GROUP_224_BIT": {
         "_code_in_hex": "0x1B",
         "_standard": "RFC6989,RFC6954",
         "code": 27,
+        "names": {
+            "STRONGSWAN": "ecp224bp",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "BRAINPOOLP224R1"
     },
     "BRAINPOOL_ECP_GROUP_256_BIT": {
         "_code_in_hex": "0x1C",
         "_standard": "RFC6989,RFC6954",
         "code": 28,
+        "names": {
+            "STRONGSWAN": "ecp256bp",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "BRAINPOOLP256R1"
     },
     "BRAINPOOL_ECP_GROUP_384_BIT": {
         "_code_in_hex": "0x1D",
         "_standard": "RFC6989,RFC6954",
         "code": 29,
+        "names": {
+            "STRONGSWAN": "ecp384bp",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "BRAINPOOLP384R1"
     },
     "BRAINPOOL_ECP_GROUP_512_BIT": {
         "_code_in_hex": "0x1E",
         "_standard": "RFC6989,RFC6954",
         "code": 30,
+        "names": {
+            "STRONGSWAN": "ecp512bp",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "BRAINPOOLP512R1"
     },
     "CURVE25519": {
         "_code_in_hex": "0x1F",
         "_standard": "RFC8031",
         "code": 31,
+        "names": {
+            "STRONGSWAN": "curve25519",
+            "LIBRESWAN": "dh31",
+            "OPENSWAN": null
+        },
         "key_parameter": "CURVE25519"
     },
     "CURVE448": {
         "_code_in_hex": "0x20",
         "_standard": "RFC8031",
         "code": 32,
+        "names": {
+            "STRONGSWAN": "curve448",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "CURVE448"
     },
     "GOST3410_2012_256": {
         "_code_in_hex": "0x21",
         "_standard": "RFC9385",
         "code": 33,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "GC256A"
     },
     "GOST3410_2012_512": {
         "_code_in_hex": "0x22",
         "_standard": "RFC9385",
         "code": 34,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "GC512A"
     },
     "ML_KEM_512": {
         "_code_in_hex": "0xFDE9",
         "_standard": "PRIVATE",
         "code": 65001,
+        "names": {
+            "STRONGSWAN": "ml_kem_512",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "ML_KEM_512"
     },
     "ML_KEM_768": {
         "_code_in_hex": "0xFDEA",
         "_standard": "PRIVATE",
         "code": 65002,
+        "names": {
+            "STRONGSWAN": "ml_kem_768",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "ML_KEM_768"
     },
     "ML_KEM_1024": {
         "_code_in_hex": "0xFDEB",
         "_standard": "PRIVATE",
         "code": 65003,
+        "names": {
+            "STRONGSWAN": "ml_kem_1024",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "key_parameter": "ML_KEM_1024"
     }
 }

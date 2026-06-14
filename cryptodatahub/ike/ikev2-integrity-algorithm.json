@@ -3,138 +3,253 @@
         "_code_in_hex": "0x00",
         "_standard": "RFC7296",
         "code": 0,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": null
     },
     "AUTH_HMAC_MD5_96": {
         "_code_in_hex": "0x01",
         "_standard": "RFC2403",
         "code": 1,
+        "names": {
+            "STRONGSWAN": "md5",
+            "LIBRESWAN": "md5",
+            "OPENSWAN": null
+        },
         "hmac": "MD5"
     },
     "AUTH_HMAC_SHA1_96": {
         "_code_in_hex": "0x02",
         "_standard": "RFC2404",
         "code": 2,
+        "names": {
+            "STRONGSWAN": "sha1",
+            "LIBRESWAN": "sha1_96",
+            "OPENSWAN": "sha1"
+        },
         "hmac": "SHA1"
     },
     "AUTH_DES_MAC": {
         "_code_in_hex": "0x03",
         "_standard": "RFC7296",
         "code": 3,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": "CBCMAC_DES"
     },
     "AUTH_KPDK_MD5": {
         "_code_in_hex": "0x04",
         "_standard": "RFC7296",
         "code": 4,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": "MD5"
     },
     "AUTH_AES_XCBC_96": {
         "_code_in_hex": "0x05",
         "_standard": "RFC3566",
         "code": 5,
+        "names": {
+            "STRONGSWAN": "aesxcbc",
+            "LIBRESWAN": "aes_xcbc_96",
+            "OPENSWAN": null
+        },
         "hmac": "AES_XCBC_MAC_96"
     },
     "AUTH_HMAC_MD5_128": {
         "_code_in_hex": "0x06",
         "_standard": "RFC4595",
         "code": 6,
+        "names": {
+            "STRONGSWAN": "md5_128",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": "MD5"
     },
     "AUTH_HMAC_SHA1_160": {
         "_code_in_hex": "0x07",
         "_standard": "RFC4595",
         "code": 7,
+        "names": {
+            "STRONGSWAN": "sha1_160",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": "SHA1"
     },
     "AUTH_AES_CMAC_96": {
         "_code_in_hex": "0x08",
         "_standard": "RFC4494",
         "code": 8,
+        "names": {
+            "STRONGSWAN": "aescmac",
+            "LIBRESWAN": "aes_cmac_96",
+            "OPENSWAN": null
+        },
         "hmac": "AES_CMAC_96"
     },
     "AUTH_AES_128_GMAC": {
         "_code_in_hex": "0x09",
         "_standard": "RFC4543",
         "code": 9,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": "aes_128_gmac",
+            "OPENSWAN": null
+        },
         "hmac": "AEAD_AES_128_GCM"
     },
     "AUTH_AES_192_GMAC": {
         "_code_in_hex": "0x0a",
         "_standard": "RFC4543",
         "code": 10,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": "aes_192_gmac",
+            "OPENSWAN": null
+        },
         "hmac": "AEAD_AES_192_GCM"
     },
     "AUTH_AES_256_GMAC": {
         "_code_in_hex": "0x0b",
         "_standard": "RFC4543",
         "code": 11,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": "aes_256_gmac",
+            "OPENSWAN": null
+        },
         "hmac": "AEAD_AES_256_GCM"
     },
     "AUTH_HMAC_SHA2_256_128": {
         "_code_in_hex": "0x0c",
         "_standard": "RFC4868",
         "code": 12,
+        "names": {
+            "STRONGSWAN": "sha256",
+            "LIBRESWAN": "sha2_256_128",
+            "OPENSWAN": null
+        },
         "hmac": "SHA2_256_128"
     },
     "AUTH_HMAC_SHA2_384_192": {
         "_code_in_hex": "0x0d",
         "_standard": "RFC4868",
         "code": 13,
+        "names": {
+            "STRONGSWAN": "sha384",
+            "LIBRESWAN": "sha2_384_192",
+            "OPENSWAN": null
+        },
         "hmac": "SHA2_384_192"
     },
     "AUTH_HMAC_SHA2_512_256": {
         "_code_in_hex": "0x0e",
         "_standard": "RFC4868",
         "code": 14,
+        "names": {
+            "STRONGSWAN": "sha512",
+            "LIBRESWAN": "sha2_512_256",
+            "OPENSWAN": null
+        },
         "hmac": "SHA2_512_256"
     },
     "AUTH_ALGORITHM_AES_CMAC_96": {
         "_code_in_hex": "0xFA",
         "_standard": null,
         "code": 250,
+        "names": {
+            "STRONGSWAN": "aescmac",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": "AES_CMAC_96"
     },
     "AUTH_ALGORITHM_HMAC_SHA2_256_TRUNCBUG": {
         "_code_in_hex": "0xFC",
         "_standard": null,
         "code": 252,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": "sha2_256_truncbug",
+            "OPENSWAN": null
+        },
         "hmac": "SHA2_256_128"
     },
     "AUTH_HMAC_SHA1_128": {
         "_code_in_hex": "0x401",
         "_standard": null,
         "code": 1025,
+        "names": {
+            "STRONGSWAN": "sha1_128",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": null
     },
     "AUTH_HMAC_SHA2_256_96": {
         "_code_in_hex": "0x402",
         "_standard": null,
         "code": 1026,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": null
     },
     "AUTH_HMAC_SHA2_256_256": {
         "_code_in_hex": "0x403",
         "_standard": null,
         "code": 1027,
+        "names": {
+            "STRONGSWAN": "sha2_256_256",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": "SHA2_256"
     },
     "AUTH_HMAC_SHA2_384_384": {
         "_code_in_hex": "0x404",
         "_standard": null,
         "code": 1028,
+        "names": {
+            "STRONGSWAN": "sha2_384_384",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": "SHA2_384"
     },
     "AUTH_HMAC_SHA2_512_512": {
         "_code_in_hex": "0x405",
         "_standard": null,
         "code": 1029,
+        "names": {
+            "STRONGSWAN": "sha2_512_512",
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": "SHA2_512"
     },
     "AUTH_CAMELLIA_XCBC_96": {
         "_code_in_hex": "0x406",
         "_standard": null,
         "code": 1030,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hmac": null
     }
 }

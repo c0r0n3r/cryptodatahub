@@ -153,6 +153,14 @@
             "CT_LOG_OPERATOR"
         ]
     },
+    "LIBRESWAN": {
+        "name": "Libreswan",
+        "long_name": null,
+        "type": "SOFTWARE_PROJECT",
+        "activities": [
+            "SERVER_DEVELOPER"
+        ]
+    },
     "MATT_PALMER": {
         "name": "Matt Palmer",
         "long_name": null,
@@ -218,6 +226,14 @@
             "CLIENT_DEVELOPER"
         ]
     },
+    "OPENSWAN": {
+        "name": "Openswan",
+        "long_name": null,
+        "type": "SOFTWARE_PROJECT",
+        "activities": [
+            "SERVER_DEVELOPER"
+        ]
+    },
     "ORACLE": {
         "name": "Oracle",
         "long_name": "Oracle Corporation",
@@ -256,6 +272,14 @@
         "type": "FOR_PROFIT_ORG",
         "activities": [
             "CT_LOG_OPERATOR"
+        ]
+    },
+    "STRONGSWAN": {
+        "name": "strongSwan",
+        "long_name": null,
+        "type": "SOFTWARE_PROJECT",
+        "activities": [
+            "SERVER_DEVELOPER"
         ]
     },
     "TRUSTASIA": {

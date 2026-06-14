@@ -12,17 +12,53 @@ from cryptodatahub.common.grade import GradeableComplex
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataEnumCodedBase,
+    CryptoDataParamsBase,
     CryptoDataParamsEnumNumeric,
     convert_enum,
     convert_iterable,
+    convert_mapping,
     convert_variadic,
 )
 from cryptodatahub.common.algorithm import BlockCipher, Hash, MAC, NamedGroup, BlockCipherMode
+from cryptodatahub.common.entity import Entity
 from cryptodatahub.common.parameter import DHParamWellKnown
 
 
 @attr.s(frozen=True)
+class IkeEncryptionBulkCipherEntry(CryptoDataParamsBase):
+    """A bulk cipher variant of an IKE encryption algorithm, carrying the
+    per-implementation proposal keyword for that specific key size."""
+
+    cipher: BlockCipher = attr.ib(
+        converter=convert_enum(BlockCipher),
+        validator=attr.validators.instance_of(BlockCipher)
+    )
+    names: typing.Dict[Entity, typing.Optional[str]] = attr.ib(
+        converter=convert_mapping(convert_enum(Entity)),
+        validator=attr.validators.deep_mapping(
+            key_validator=attr.validators.instance_of(Entity),
+            value_validator=attr.validators.optional(attr.validators.instance_of(str))
+        )
+    )
+
+
+def _convert_bulk_cipher_entry(value):
+    if isinstance(value, IkeEncryptionBulkCipherEntry):
+        return value
+    return IkeEncryptionBulkCipherEntry(**value)
+
+
+@attr.s(frozen=True)
 class IkeAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableAlgorithmParams):
+    names: typing.Dict[Entity, typing.Optional[str]] = attr.ib(
+        kw_only=True,
+        converter=convert_mapping(convert_enum(Entity)),
+        validator=attr.validators.deep_mapping(
+            key_validator=attr.validators.instance_of(Entity),
+            value_validator=attr.validators.optional(attr.validators.instance_of(str))
+        )
+    )
+
     @property
     @abc.abstractmethod
     def _gradeable_algorithms(self):
@@ -141,9 +177,11 @@ Ikev2DiffieHellmanGroup = CryptoDataEnumCodedBase(
 class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComplex):
     """Encryption algorithm parameters."""
 
-    bulk_ciphers: typing.List[BlockCipher] = attr.ib(
-        converter=convert_iterable(convert_enum(BlockCipher)),
-        validator=attr.validators.deep_iterable(member_validator=attr.validators.instance_of(BlockCipher)),
+    bulk_ciphers: typing.List[IkeEncryptionBulkCipherEntry] = attr.ib(
+        converter=convert_iterable(_convert_bulk_cipher_entry),
+        validator=attr.validators.deep_iterable(
+            member_validator=attr.validators.instance_of(IkeEncryptionBulkCipherEntry)
+        ),
     )
     block_cipher_mode: typing.Optional[BlockCipherMode] = attr.ib(
         converter=convert_enum(BlockCipherMode),
@@ -155,7 +193,7 @@ class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
         if not self.bulk_ciphers:
             return 'null'
 
-        cipher_name = self.bulk_ciphers[0].value.name
+        cipher_name = self.bulk_ciphers[0].cipher.value.name
         if self.block_cipher_mode is None:
             return cipher_name
 
@@ -166,11 +204,11 @@ class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
         return 2
 
     def __attrs_post_init__(self):
-        gradeables = [bulk_cipher.value for bulk_cipher in self.bulk_ciphers]
+        gradeables = [entry.cipher.value for entry in self.bulk_ciphers]
         if self.block_cipher_mode is not None:
             gradeables.append(self.block_cipher_mode.value)
             aead = self.block_cipher_mode.value.aead
-        elif self.bulk_ciphers and self.bulk_ciphers[0].value.block_size is None:
+        elif self.bulk_ciphers and self.bulk_ciphers[0].cipher.value.block_size is None:
             aead = True  # stream cipher (ChaCha20-Poly1305): Poly1305 authentication is implicit
         else:
             aead = False
@@ -519,9 +557,11 @@ Ikev1PayloadType = CryptoDataEnumCodedBase(
 class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComplex):
     """IKEv1 encryption algorithm parameters."""
 
-    bulk_ciphers: typing.List[BlockCipher] = attr.ib(
-        converter=convert_iterable(convert_enum(BlockCipher)),
-        validator=attr.validators.deep_iterable(member_validator=attr.validators.instance_of(BlockCipher)),
+    bulk_ciphers: typing.List[IkeEncryptionBulkCipherEntry] = attr.ib(
+        converter=convert_iterable(_convert_bulk_cipher_entry),
+        validator=attr.validators.deep_iterable(
+            member_validator=attr.validators.instance_of(IkeEncryptionBulkCipherEntry)
+        ),
     )
     block_cipher_mode: typing.Optional[BlockCipherMode] = attr.ib(
         converter=convert_enum(BlockCipherMode),
@@ -533,7 +573,7 @@ class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
         if not self.bulk_ciphers:
             return 'null'
 
-        cipher_name = self.bulk_ciphers[0].value.name
+        cipher_name = self.bulk_ciphers[0].cipher.value.name
         if self.block_cipher_mode is None:
             return cipher_name
 
@@ -544,7 +584,7 @@ class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
         return 2
 
     def __attrs_post_init__(self):
-        gradeables = [bulk_cipher.value for bulk_cipher in self.bulk_ciphers]
+        gradeables = [entry.cipher.value for entry in self.bulk_ciphers]
         if self.block_cipher_mode is not None:
             gradeables.append(self.block_cipher_mode.value)
 

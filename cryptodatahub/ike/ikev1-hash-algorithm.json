@@ -3,36 +3,66 @@
         "_code_in_hex": "0x01",
         "_standard": "RFC1321",
         "code": 1,
+        "names": {
+            "STRONGSWAN": "md5",
+            "LIBRESWAN": "md5",
+            "OPENSWAN": "md5"
+        },
         "hash": "MD5"
     },
     "SHA": {
         "_code_in_hex": "0x02",
         "_standard": "FIPS PUB 180-1",
         "code": 2,
+        "names": {
+            "STRONGSWAN": "sha1",
+            "LIBRESWAN": "sha1",
+            "OPENSWAN": "sha1"
+        },
         "hash": "SHA1"
     },
     "TIGER": {
         "_code_in_hex": "0x03",
         "_standard": "Fast Software Encryption",
         "code": 3,
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        },
         "hash": "TIGER_128"
     },
     "SHA2_256": {
         "_code_in_hex": "0x04",
         "_standard": "RFC4868",
         "code": 4,
+        "names": {
+            "STRONGSWAN": "sha256",
+            "LIBRESWAN": "sha2_256",
+            "OPENSWAN": "sha2_256"
+        },
         "hash": "SHA2_256"
     },
     "SHA2_384": {
         "_code_in_hex": "0x05",
         "_standard": "RFC4868",
         "code": 5,
+        "names": {
+            "STRONGSWAN": "sha384",
+            "LIBRESWAN": "sha2_384",
+            "OPENSWAN": null
+        },
         "hash": "SHA2_384"
     },
     "SHA2_512": {
         "_code_in_hex": "0x06",
         "_standard": "RFC4868",
         "code": 6,
+        "names": {
+            "STRONGSWAN": "sha512",
+            "LIBRESWAN": "sha2_512",
+            "OPENSWAN": "sha2_512"
+        },
         "hash": "SHA2_512"
     }
 }
