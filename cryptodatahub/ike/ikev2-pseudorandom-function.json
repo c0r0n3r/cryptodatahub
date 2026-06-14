@@ -21,7 +21,7 @@
         "_code_in_hex": "0x04",
         "_standard": "RFC4434",
         "code": 4,
-        "mac": "CBCMAC_AES"
+        "mac": "AES_XCBC_PRF_128"
     },
     "PRF_HMAC_SHA2_256": {
         "_code_in_hex": "0x05",
@@ -45,12 +45,36 @@
         "_code_in_hex": "0x08",
         "_standard": "RFC4615",
         "code": 8,
-        "mac": "CBCMAC_AES"
+        "mac": "AES_CMAC_PRF_128"
     },
     "PRF_HMAC_STREEBOG_512": {
         "_code_in_hex": "0x09",
         "_standard": "RFC9385",
         "code": 9,
         "mac": "GOST_R3411_12_512"
+    },
+    "PRF_FIPS_SHA1_160": {
+        "_code_in_hex": "0x401",
+        "_standard": null,
+        "code": 1025,
+        "mac": "SHA1"
+    },
+    "PRF_FIPS_DES": {
+        "_code_in_hex": "0x402",
+        "_standard": null,
+        "code": 1026,
+        "mac": "CBCMAC_DES"
+    },
+    "PRF_KEYED_SHA1": {
+        "_code_in_hex": "0x403",
+        "_standard": null,
+        "code": 1027,
+        "mac": "SHA1"
+    },
+    "PRF_CAMELLIA128_XCBC": {
+        "_code_in_hex": "0x404",
+        "_standard": null,
+        "code": 1028,
+        "mac": "CBCMAC_CAMELLIA"
     }
 }

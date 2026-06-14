@@ -13,22 +13,26 @@
     "CCM": {
         "name": "CCM",
         "long_name": "counter with CBC-MAC",
-        "vulnerabilities": []
+        "vulnerabilities": [],
+        "aead": true
     },
     "CCM_8": {
         "name": "CCM-8",
         "long_name": "counter with CBC-MAC (8-byte ICV)",
-        "vulnerabilities": []
+        "vulnerabilities": [],
+        "aead": true
     },
     "CCM_12": {
         "name": "CCM-12",
         "long_name": "counter with CBC-MAC (12-byte ICV)",
-        "vulnerabilities": []
+        "vulnerabilities": [],
+        "aead": true
     },
     "CCM_16": {
         "name": "CCM-16",
         "long_name": "counter with CBC-MAC (16-byte ICV)",
-        "vulnerabilities": []
+        "vulnerabilities": [],
+        "aead": true
     },
     "CFB": {
         "name": "CFB",
@@ -59,37 +63,50 @@
     "EAX": {
         "name": "EAX",
         "long_name": "encrypt-then-authenticate-then-translate",
-        "vulnerabilities": null
+        "vulnerabilities": null,
+        "aead": true
     },
     "GCM": {
         "name": "GCM",
         "long_name": "Galois/counter mode",
-        "vulnerabilities": []
+        "vulnerabilities": [],
+        "aead": true
     },
     "GCM_8": {
         "name": "GCM-8",
         "long_name": "Galois/counter mode (8-byte ICV)",
-        "vulnerabilities": []
+        "vulnerabilities": [],
+        "aead": true
     },
     "GCM_12": {
         "name": "GCM-12",
         "long_name": "Galois/counter mode (12-byte ICV)",
-        "vulnerabilities": []
+        "vulnerabilities": [],
+        "aead": true
     },
     "GCM_16": {
         "name": "GCM-16",
         "long_name": "Galois/counter mode (16-byte ICV)",
-        "vulnerabilities": []
+        "vulnerabilities": [],
+        "aead": true
     },
     "GMAC": {
         "name": "GMAC",
         "long_name": "Galois message authentication code",
-        "vulnerabilities": []
+        "vulnerabilities": [],
+        "aead": true
+    },
+    "GMAC": {
+        "name": "GMAC",
+        "long_name": "Galois message authentication code",
+        "vulnerabilities": [],
+        "aead": true
     },
     "MGM": {
         "name": "MGM",
-        "long_name": "GOST Magma",
-        "vulnerabilities": null
+        "long_name": "Multilinear Galois mode",
+        "vulnerabilities": null,
+        "aead": true
     },
     "OFB": {
         "name": "OFB",

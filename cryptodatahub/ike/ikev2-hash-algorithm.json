@@ -34,5 +34,47 @@
         "_standard": "RFC4868",
         "code": 6,
         "hash_algorithm": "SHA2_512"
+    },
+    "HASH_MD4": {
+        "_code_in_hex": "0x401",
+        "_standard": null,
+        "code": 1025,
+        "hash_algorithm": "MD4"
+    },
+    "HASH_MD5_PRIVATE": {
+        "_code_in_hex": "0x402",
+        "_standard": null,
+        "code": 1026,
+        "hash_algorithm": "MD5"
+    },
+    "HASH_SHA224": {
+        "_code_in_hex": "0x403",
+        "_standard": null,
+        "code": 1027,
+        "hash_algorithm": "SHA2_224"
+    },
+    "HASH_SHA3_224": {
+        "_code_in_hex": "0x404",
+        "_standard": null,
+        "code": 1028,
+        "hash_algorithm": "SHA3_224"
+    },
+    "HASH_SHA3_256": {
+        "_code_in_hex": "0x405",
+        "_standard": null,
+        "code": 1029,
+        "hash_algorithm": "SHA3_256"
+    },
+    "HASH_SHA3_384": {
+        "_code_in_hex": "0x406",
+        "_standard": null,
+        "code": 1030,
+        "hash_algorithm": "SHA3_384"
+    },
+    "HASH_SHA3_512": {
+        "_code_in_hex": "0x407",
+        "_standard": null,
+        "code": 1031,
+        "hash_algorithm": "SHA3_512"
     }
 }

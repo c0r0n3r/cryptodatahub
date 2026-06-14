@@ -36,6 +36,7 @@ class AuthenticationParams(CryptoDataParamsOIDOptional, GradeableVulnerabilities
 class BlockCipherParams(CryptoDataParamsNamed, GradeableVulnerabilities):
     key_size = attr.ib(validator=attr.validators.instance_of(int))
     block_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
+    aead = attr.ib(init=False, default=False, validator=attr.validators.instance_of(bool))
 
     @classmethod
     def get_gradeable_name(cls):
@@ -44,6 +45,8 @@ class BlockCipherParams(CryptoDataParamsNamed, GradeableVulnerabilities):
 
 @attr.s(frozen=True)
 class BlockCipherModeParams(CryptoDataParamsNamed, GradeableVulnerabilities):
+    aead = attr.ib(default=False, validator=attr.validators.instance_of(bool))
+
     @classmethod
     def get_gradeable_name(cls):
         return 'block cipher mode'

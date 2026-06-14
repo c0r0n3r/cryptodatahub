@@ -33,7 +33,7 @@
         "_code_in_hex": "0x05",
         "_standard": "RFC3566",
         "code": 5,
-        "hmac": "CBCMAC_AES_96"
+        "hmac": "AES_XCBC_MAC_96"
     },
     "AUTH_HMAC_MD5_128": {
         "_code_in_hex": "0x06",
@@ -51,7 +51,7 @@
         "_code_in_hex": "0x08",
         "_standard": "RFC4494",
         "code": 8,
-        "hmac": "CBCMAC_AES_96"
+        "hmac": "AES_CMAC_96"
     },
     "AUTH_AES_128_GMAC": {
         "_code_in_hex": "0x09",
@@ -88,5 +88,53 @@
         "_standard": "RFC4868",
         "code": 14,
         "hmac": "SHA2_512_256"
+    },
+    "AUTH_ALGORITHM_AES_CMAC_96": {
+        "_code_in_hex": "0xFA",
+        "_standard": null,
+        "code": 250,
+        "hmac": "AES_CMAC_96"
+    },
+    "AUTH_ALGORITHM_HMAC_SHA2_256_TRUNCBUG": {
+        "_code_in_hex": "0xFC",
+        "_standard": null,
+        "code": 252,
+        "hmac": "SHA2_256_128"
+    },
+    "AUTH_HMAC_SHA1_128": {
+        "_code_in_hex": "0x401",
+        "_standard": null,
+        "code": 1025,
+        "hmac": null
+    },
+    "AUTH_HMAC_SHA2_256_96": {
+        "_code_in_hex": "0x402",
+        "_standard": null,
+        "code": 1026,
+        "hmac": null
+    },
+    "AUTH_HMAC_SHA2_256_256": {
+        "_code_in_hex": "0x403",
+        "_standard": null,
+        "code": 1027,
+        "hmac": "SHA2_256"
+    },
+    "AUTH_HMAC_SHA2_384_384": {
+        "_code_in_hex": "0x404",
+        "_standard": null,
+        "code": 1028,
+        "hmac": "SHA2_384"
+    },
+    "AUTH_HMAC_SHA2_512_512": {
+        "_code_in_hex": "0x405",
+        "_standard": null,
+        "code": 1029,
+        "hmac": "SHA2_512"
+    },
+    "AUTH_CAMELLIA_XCBC_96": {
+        "_code_in_hex": "0x406",
+        "_standard": null,
+        "code": 1030,
+        "hmac": null
     }
 }

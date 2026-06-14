@@ -190,5 +190,23 @@
         "_standard": "RFC9385",
         "code": 34,
         "key_parameter": "GC512A"
+    },
+    "ML_KEM_512": {
+        "_code_in_hex": "0xFDE9",
+        "_standard": "PRIVATE",
+        "code": 65001,
+        "key_parameter": "ML_KEM_512"
+    },
+    "ML_KEM_768": {
+        "_code_in_hex": "0xFDEA",
+        "_standard": "PRIVATE",
+        "code": 65002,
+        "key_parameter": "ML_KEM_768"
+    },
+    "ML_KEM_1024": {
+        "_code_in_hex": "0xFDEB",
+        "_standard": "PRIVATE",
+        "code": 65003,
+        "key_parameter": "ML_KEM_1024"
     }
 }

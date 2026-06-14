@@ -88,6 +88,21 @@ class TestIkev2EncryptionAlgorithm(TestClasses.TestJsonCodeNumericBase):
             'null'
         )
 
+    def test_aead_via_block_cipher_mode(self):
+        # AEAD algorithms: mode carries aead=True, propagated to encr.aead
+        self.assertTrue(Ikev2EncryptionAlgorithm.ENCR_AES_GCM_16.value.aead)
+        self.assertTrue(Ikev2EncryptionAlgorithm.ENCR_AES_CCM_8.value.aead)
+        self.assertTrue(Ikev2EncryptionAlgorithm.ENCR_NULL_AUTH_AES_GMAC.value.aead)
+        self.assertTrue(Ikev2EncryptionAlgorithm.ENCR_KUZNYECHIK_MGM_KTREE.value.aead)
+        self.assertTrue(Ikev2EncryptionAlgorithm.ENCR_KUZNYECHIK_MGM_MAC_KTREE.value.aead)
+        # Non-AEAD algorithms: mode carries aead=False
+        self.assertFalse(Ikev2EncryptionAlgorithm.ENCR_AES_CBC.value.aead)
+        self.assertFalse(Ikev2EncryptionAlgorithm.ENCR_AES_CTR.value.aead)
+        # ChaCha20-Poly1305: stream cipher, no block_cipher_mode; AEAD via bulk cipher
+        chacha = Ikev2EncryptionAlgorithm.ENCR_CHACHA20_POLY1305.value
+        self.assertIsNone(chacha.block_cipher_mode)
+        self.assertTrue(chacha.aead)
+
 
 class TestIkev2HashAlgorithm(TestClasses.TestJsonCodeNumericBase):
     @classmethod

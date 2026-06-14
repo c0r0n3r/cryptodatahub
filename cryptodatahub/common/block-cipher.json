@@ -391,6 +391,45 @@
         "key_size": 128,
         "block_size": 64
     },
+    "MARS_128": {
+        "name": "MARS-128",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
+        "key_size": 128,
+        "block_size": 128
+    },
+    "MARS_192": {
+        "name": "MARS-192",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
+        "key_size": 192,
+        "block_size": 128
+    },
+    "MARS_256": {
+        "name": "MARS-256",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
+        "key_size": 256,
+        "block_size": 128
+    },
     "RC2_40": {
         "name": "RC2-40",
         "long_name": null,
@@ -522,6 +561,45 @@
         ],
         "key_size": 128,
         "block_size": null
+    },
+    "RC6_128": {
+        "name": "RC6-128",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
+        "key_size": 128,
+        "block_size": 128
+    },
+    "RC6_192": {
+        "name": "RC6-192",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
+        "key_size": 192,
+        "block_size": 128
+    },
+    "RC6_256": {
+        "name": "RC6-256",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": null,
+                "grade": "DEPRECATED",
+                "named": null
+            }
+        ],
+        "key_size": 256,
+        "block_size": 128
     },
     "RIJNDAEL_128": {
         "name": "Rijndael 128",

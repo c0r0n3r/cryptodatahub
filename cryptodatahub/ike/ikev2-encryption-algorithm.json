@@ -62,7 +62,12 @@
         "_standard": "RFC2451",
         "code": 7,
         "bulk_ciphers": [
-            "BLOWFISH"
+            "BLOWFISH_32",
+            "BLOWFISH_64",
+            "BLOWFISH_128",
+            "BLOWFISH_192",
+            "BLOWFISH_256",
+            "BLOWFISH_448"
         ],
         "block_cipher_mode": "CBC"
     },
@@ -178,7 +183,7 @@
             "AES_192",
             "AES_256"
         ],
-        "block_cipher_mode": "GCM"
+        "block_cipher_mode": "GCM_16"
     },
     "ENCR_NULL_AUTH_AES_GMAC": {
         "_code_in_hex": "0x15",
@@ -190,5 +195,342 @@
             "AES_256"
         ],
         "block_cipher_mode": "GMAC"
+    },
+    "ENCR_SERPENT_CBC": {
+        "_code_in_hex": "0xFDEC",
+        "_standard": "PRIVATE",
+        "code": 65004,
+        "bulk_ciphers": [
+            "SERPENT_128",
+            "SERPENT_192",
+            "SERPENT_256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_CAMELLIA_CBC": {
+        "_code_in_hex": "0x17",
+        "_standard": "RFC5529,RFC7296",
+        "code": 23,
+        "bulk_ciphers": [
+            "CAMELLIA_128",
+            "CAMELLIA_192",
+            "CAMELLIA_256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_TWOFISH_CBC": {
+        "_code_in_hex": "0xFDED",
+        "_standard": "PRIVATE",
+        "code": 65005,
+        "bulk_ciphers": [
+            "TWOFISH128",
+            "TWOFISH192",
+            "TWOFISH256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_TWOFISH_CBC_SSH": {
+        "_code_in_hex": "0xFF29",
+        "_standard": "PRIVATE",
+        "code": 65321,
+        "bulk_ciphers": [
+            "TWOFISH128",
+            "TWOFISH192",
+            "TWOFISH256"
+        ],
+        "block_cipher_mode": "CCM_8"
+    },
+    "ENCR_CAMELLIA_CCM_12": {
+        "_code_in_hex": "0x1A",
+        "_standard": "RFC5529,RFC8247",
+        "code": 26,
+        "bulk_ciphers": [
+            "CAMELLIA_128",
+            "CAMELLIA_192",
+            "CAMELLIA_256"
+        ],
+        "block_cipher_mode": "CCM_12"
+    },
+    "ENCR_CAMELLIA_CCM_16": {
+        "_code_in_hex": "0x1B",
+        "_standard": "RFC5529,RFC8247",
+        "code": 27,
+        "bulk_ciphers": [
+            "CAMELLIA_128",
+            "CAMELLIA_192",
+            "CAMELLIA_256"
+        ],
+        "block_cipher_mode": "CCM_16"
+    },
+    "ENCR_CHACHA20_POLY1305": {
+        "_code_in_hex": "0x1C",
+        "_standard": "RFC7634",
+        "code": 28,
+        "bulk_ciphers": [
+            "CHACHA20"
+        ],
+        "block_cipher_mode": null
+    },
+    "ENCR_AES_CCM_8_IIV": {
+        "_code_in_hex": "0x1D",
+        "_standard": "RFC8750",
+        "code": 29,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM_8"
+    },
+    "ENCR_AES_GCM_16_IIV": {
+        "_code_in_hex": "0x1E",
+        "_standard": "RFC8750",
+        "code": 30,
+        "bulk_ciphers": [
+            "AES_128",
+            "AES_192",
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM_16"
+    },
+    "ENCR_CHACHA20_POLY1305_IIV": {
+        "_code_in_hex": "0x1F",
+        "_standard": "RFC8750",
+        "code": 31,
+        "bulk_ciphers": [
+            "CHACHA20"
+        ],
+        "block_cipher_mode": null
+    },
+    "ENCR_KUZNYECHIK_MGM_KTREE": {
+        "_code_in_hex": "0x20",
+        "_standard": "RFC9227",
+        "code": 32,
+        "bulk_ciphers": [
+            "GOST_R3412_15_128"
+        ],
+        "block_cipher_mode": "MGM"
+    },
+    "ENCR_MAGMA_MGM_KTREE": {
+        "_code_in_hex": "0x21",
+        "_standard": "RFC9227",
+        "code": 33,
+        "bulk_ciphers": [
+            "GOST_R3412_15_64"
+        ],
+        "block_cipher_mode": "MGM"
+    },
+    "ENCR_KUZNYECHIK_MGM_MAC_KTREE": {
+        "_code_in_hex": "0x22",
+        "_standard": "RFC9227",
+        "code": 34,
+        "bulk_ciphers": [
+            "GOST_R3412_15_128"
+        ],
+        "block_cipher_mode": "MGM"
+    },
+    "ENCR_MAGMA_MGM_MAC_KTREE": {
+        "_code_in_hex": "0x23",
+        "_standard": "RFC9227",
+        "code": 35,
+        "bulk_ciphers": [
+            "GOST_R3412_15_64"
+        ],
+        "block_cipher_mode": "MGM"
+    },
+    "ENCR_AES_GCM_128_16": {
+        "_code_in_hex": "0x65",
+        "_standard": "RFC4106",
+        "code": 101,
+        "bulk_ciphers": [
+            "AES_128"
+        ],
+        "block_cipher_mode": "GCM_16"
+    },
+    "ENCR_AES_GCM_192_16": {
+        "_code_in_hex": "0x66",
+        "_standard": "RFC4106",
+        "code": 102,
+        "bulk_ciphers": [
+            "AES_192"
+        ],
+        "block_cipher_mode": "GCM_16"
+    },
+    "ENCR_AES_GCM_256_16": {
+        "_code_in_hex": "0x67",
+        "_standard": "RFC4106",
+        "code": 103,
+        "bulk_ciphers": [
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM_16"
+    },
+    "ENCR_AES_GCM_128_8": {
+        "_code_in_hex": "0x68",
+        "_standard": "RFC4106",
+        "code": 104,
+        "bulk_ciphers": [
+            "AES_128"
+        ],
+        "block_cipher_mode": "GCM_8"
+    },
+    "ENCR_AES_GCM_192_8": {
+        "_code_in_hex": "0x69",
+        "_standard": "RFC4106",
+        "code": 105,
+        "bulk_ciphers": [
+            "AES_192"
+        ],
+        "block_cipher_mode": "GCM_8"
+    },
+    "ENCR_AES_GCM_256_8": {
+        "_code_in_hex": "0x6A",
+        "_standard": "RFC4106",
+        "code": 106,
+        "bulk_ciphers": [
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM_8"
+    },
+    "ENCR_AES_GCM_128_12": {
+        "_code_in_hex": "0x6B",
+        "_standard": "RFC4106",
+        "code": 107,
+        "bulk_ciphers": [
+            "AES_128"
+        ],
+        "block_cipher_mode": "GCM_12"
+    },
+    "ENCR_AES_GCM_192_12": {
+        "_code_in_hex": "0x6C",
+        "_standard": "RFC4106",
+        "code": 108,
+        "bulk_ciphers": [
+            "AES_192"
+        ],
+        "block_cipher_mode": "GCM_12"
+    },
+    "ENCR_AES_GCM_256_12": {
+        "_code_in_hex": "0x6D",
+        "_standard": "RFC4106",
+        "code": 109,
+        "bulk_ciphers": [
+            "AES_256"
+        ],
+        "block_cipher_mode": "GCM_12"
+    },
+    "ENCR_AES_CCM_128_16": {
+        "_code_in_hex": "0x6F",
+        "_standard": "RFC4309",
+        "code": 111,
+        "bulk_ciphers": [
+            "AES_128"
+        ],
+        "block_cipher_mode": "CCM_16"
+    },
+    "ENCR_AES_CCM_192_16": {
+        "_code_in_hex": "0x70",
+        "_standard": "RFC4309",
+        "code": 112,
+        "bulk_ciphers": [
+            "AES_192"
+        ],
+        "block_cipher_mode": "CCM_16"
+    },
+    "ENCR_AES_CCM_256_16": {
+        "_code_in_hex": "0x71",
+        "_standard": "RFC4309",
+        "code": 113,
+        "bulk_ciphers": [
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM_16"
+    },
+    "ENCR_AES_CCM_128_8": {
+        "_code_in_hex": "0x72",
+        "_standard": "RFC4309",
+        "code": 114,
+        "bulk_ciphers": [
+            "AES_128"
+        ],
+        "block_cipher_mode": "CCM_8"
+    },
+    "ENCR_AES_CCM_192_8": {
+        "_code_in_hex": "0x73",
+        "_standard": "RFC4309",
+        "code": 115,
+        "bulk_ciphers": [
+            "AES_192"
+        ],
+        "block_cipher_mode": "CCM_8"
+    },
+    "ENCR_AES_CCM_256_8": {
+        "_code_in_hex": "0x74",
+        "_standard": "RFC4309",
+        "code": 116,
+        "bulk_ciphers": [
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM_8"
+    },
+    "ENCR_AES_CCM_128_12": {
+        "_code_in_hex": "0x75",
+        "_standard": "RFC4309",
+        "code": 117,
+        "bulk_ciphers": [
+            "AES_128"
+        ],
+        "block_cipher_mode": "CCM_12"
+    },
+    "ENCR_AES_CCM_192_12": {
+        "_code_in_hex": "0x76",
+        "_standard": "RFC4309",
+        "code": 118,
+        "bulk_ciphers": [
+            "AES_192"
+        ],
+        "block_cipher_mode": "CCM_12"
+    },
+    "ENCR_AES_CCM_256_12": {
+        "_code_in_hex": "0x77",
+        "_standard": "RFC4309",
+        "code": 119,
+        "bulk_ciphers": [
+            "AES_256"
+        ],
+        "block_cipher_mode": "CCM_12"
+    },
+    "ENCR_SERPENT_CBC": {
+        "_code_in_hex": "0xFDEC",
+        "_standard": "PRIVATE",
+        "code": 65004,
+        "bulk_ciphers": [
+            "SERPENT_128",
+            "SERPENT_192",
+            "SERPENT_256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_TWOFISH_CBC": {
+        "_code_in_hex": "0xFDED",
+        "_standard": "PRIVATE",
+        "code": 65005,
+        "bulk_ciphers": [
+            "TWOFISH128",
+            "TWOFISH192",
+            "TWOFISH256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "ENCR_TWOFISH_CBC_SSH": {
+        "_code_in_hex": "0xFF29",
+        "_standard": "PRIVATE",
+        "code": 65321,
+        "bulk_ciphers": [
+            "TWOFISH128",
+            "TWOFISH192",
+            "TWOFISH256"
+        ],
+        "block_cipher_mode": "CBC"
     }
 }

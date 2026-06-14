@@ -81,8 +81,7 @@
         "_standard": "RFC2405",
         "code": 1,
         "bulk_ciphers": [
-            "DES",
-            "DES40"
+            "DES"
         ],
         "block_cipher_mode": "CBC"
     },
@@ -101,7 +100,12 @@
         "_standard": "RFC2409",
         "code": 3,
         "bulk_ciphers": [
-            "BLOWFISH"
+            "BLOWFISH_32",
+            "BLOWFISH_64",
+            "BLOWFISH_128",
+            "BLOWFISH_192",
+            "BLOWFISH_256",
+            "BLOWFISH_448"
         ],
         "block_cipher_mode": "CBC"
     },
@@ -275,5 +279,60 @@
             "CAMELLIA_256"
         ],
         "block_cipher_mode": "CCM_16"
+    },
+    "MARS_CBC": {
+        "_code_in_hex": "0xFDE9",
+        "_standard": "PRIVATE",
+        "code": 65001,
+        "bulk_ciphers": [
+            "MARS_128",
+            "MARS_192",
+            "MARS_256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "RC6_CBC": {
+        "_code_in_hex": "0xFDEA",
+        "_standard": "PRIVATE",
+        "code": 65002,
+        "bulk_ciphers": [
+            "RC6_128",
+            "RC6_192",
+            "RC6_256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "SERPENT_CBC": {
+        "_code_in_hex": "0xFDEC",
+        "_standard": "PRIVATE",
+        "code": 65004,
+        "bulk_ciphers": [
+            "SERPENT_128",
+            "SERPENT_192",
+            "SERPENT_256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "TWOFISH_CBC": {
+        "_code_in_hex": "0xFDED",
+        "_standard": "PRIVATE",
+        "code": 65005,
+        "bulk_ciphers": [
+            "TWOFISH128",
+            "TWOFISH192",
+            "TWOFISH256"
+        ],
+        "block_cipher_mode": "CBC"
+    },
+    "TWOFISH_CBC_SSH": {
+        "_code_in_hex": "0xFF29",
+        "_standard": "PRIVATE",
+        "code": 65321,
+        "bulk_ciphers": [
+            "TWOFISH128",
+            "TWOFISH192",
+            "TWOFISH256"
+        ],
+        "block_cipher_mode": "CBC"
     }
 }
