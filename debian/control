@@ -1,0 +1,36 @@
+Source: python-cryptodatahub
+Section: python
+Priority: optional
+Maintainer: Szilárd Pfeiffer <coroner@pfeifferszilard.hu>
+Build-Depends: debhelper-compat (= 12),
+               dh-python,
+               python3-all,
+               python3-setuptools,
+               python3-asn1crypto,
+               python3-attr,
+               python3-bs4 <!nocheck>,
+               python3-dateutil,
+               python3-pyfakefs <!nocheck>,
+               python3-urllib3
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+Homepage: https://gitlab.com/coroner/cryptodatahub
+Vcs-Browser: https://gitlab.com/coroner/cryptodatahub
+Vcs-Git: https://gitlab.com/coroner/cryptodatahub.git
+
+Package: python3-cryptodatahub
+Architecture: all
+Depends: ${python3:Depends},
+         ${misc:Depends},
+         python3-asn1crypto,
+         python3-attr,
+         python3-dateutil,
+         python3-urllib3
+Description: Repository of cryptography-related data
+ CryptoDataHub provides a repository of cryptography-related data for TLS,
+ SSH, DNS, DNSSEC, and IKE protocols. It contains cipher suite databases,
+ algorithm inventories, and certificate trust store data.
+ .
+ Included utilities:
+  * update-ct-log: update the embedded Certificate Transparency log list
+  * update-trust-stores: update the embedded CA trust store data
