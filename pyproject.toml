@@ -53,10 +53,12 @@ dependencies = [
 tests = [
     'pyfakefs',
     'beautifulsoup4',
+    'coverage',
 ]
 docs = [
     'sphinx',
     'sphinx-sitemap',
+    'docutils',
 ]
 
 [project.scripts]
