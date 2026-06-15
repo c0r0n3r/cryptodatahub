@@ -3,7 +3,7 @@ Changelog
 =========
 
 ------------------
-1.3.0 - Unreleased
+1.3.0 - 2026-06-15
 ------------------
 
 Features
@@ -11,9 +11,47 @@ Features
 
 -  Generic
 
+   -  add elliptic-curve parameters (#53)
    -  add trusted root CA certificates from notable stores
 
       -  `OpenJDK <https://openjdk.org/>`__ (#54)
+
+   -  add Debian and RPM packaging (#56)
+
+-  IKE (``ike``)
+
+   -  add IKE version definition (#55)
+   -  add per-implementation names to algorithm entries (#55)
+   -  add block ciphers
+
+      -  Blowfish (#39)
+      -  MARS (#40)
+      -  RC6 (#40)
+      -  Serpent (#40)
+      -  Twofish (#40)
+
+   -  add cipher modes
+
+      -  AES CTR, CCM, and GCM (#39)
+      -  Camellia CTR and CCM (#39)
+      -  GCM-8 for shortened ICV (#39)
+      -  GMAC (#39)
+
+   -  add AES-XCBC and AES-CMAC MAC entries (#40)
+   -  add AEAD attribute to encryption algorithms, block ciphers, and cipher modes (#40)
+
+Notable fixes
+=============
+
+-  Generic
+
+   -  fix Chacha20 key size (#39)
+   -  fix CAST block cipher variant naming (#39)
+   -  split Triple DES into 112-bit and 168-bit variants (#39)
+
+-  IKE (``ike``)
+
+   -  map IKEv1 RFC 5114 Diffie-Hellman subgroups to their own parameters (#39)
 
 ------------------
 1.2.1 - 2026-06-02

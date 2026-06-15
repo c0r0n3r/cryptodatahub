@@ -1,5 +1,5 @@
 Name:           python-cryptodatahub
-Version:        1.2.1
+Version:        1.3.0
 Release:        1%{?dist}
 Summary:        Repository of cryptography-related data
 
@@ -52,3 +52,26 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %{_bindir}/update-ct-log
 %{_bindir}/update-trust-stores
 %license LICENSE.txt
+
+%changelog
+* Mon Jun 15 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.3.0-1
+- add elliptic-curve parameters (#53)
+- add OpenJDK trusted root CA certificates (#54)
+- add Debian and RPM packaging (#56)
+- add IKE version definition (#55)
+- add per-implementation names to algorithm entries (#55)
+- add Blowfish block cipher (#39)
+- add MARS block cipher (#40)
+- add RC6 block cipher (#40)
+- add Serpent block cipher (#40)
+- add Twofish block cipher (#40)
+- add AES CTR, CCM, and GCM cipher modes (#39)
+- add Camellia CTR and CCM cipher modes (#39)
+- add GCM-8 cipher mode for shortened ICV (#39)
+- add GMAC cipher mode (#39)
+- add AES-XCBC and AES-CMAC MAC entries (#40)
+- add AEAD attribute to encryption algorithms, block ciphers, and cipher modes (#40)
+- fix Chacha20 key size (#39)
+- fix CAST block cipher variant naming (#39)
+- split Triple DES into 112-bit and 168-bit variants (#39)
+- map IKEv1 RFC 5114 Diffie-Hellman subgroups to their own parameters (#39)
