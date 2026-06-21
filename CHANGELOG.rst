@@ -16,6 +16,7 @@ Features
 -  IKE (``ike``)
 
    -  add long name attribute to IKE registry entry parameters (#57)
+   -  add IKEv1 certificate types (#57)
 
 ------------------
 1.4.0 - 2026-07-17

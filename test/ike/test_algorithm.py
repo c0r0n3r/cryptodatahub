@@ -23,6 +23,7 @@ from cryptodatahub.ike.algorithm import (
     Ikev2PseudorandomFunction,
     Ikev1AttributeType,
     Ikev1AuthenticationMethod,
+    Ikev1CertificateType,
     Ikev1DiffieHellmanGroup,
     Ikev1Doi,
     Ikev1EncryptionAlgorithm,
@@ -233,6 +234,18 @@ class TestIkeLongNameParams(unittest.TestCase):
 
         entry = _ConcreteLongName(code=1, long_name='human readable')
         self.assertEqual(str(entry), 'human readable')
+
+
+class TestIkev1CertificateType(TestClasses.TestJsonCodeNumericBase):
+    @classmethod
+    def _get_class(cls):
+        return Ikev1CertificateType
+
+    def test_str(self):
+        self.assertEqual(
+            str(Ikev1CertificateType.X509_CERTIFICATE_SIGNATURE.value),
+            'X.509 Certificate - Signature',
+        )
 
 
 class TestIkev1AuthenticationMethod(TestClasses.TestJsonCodeNumericBase):

@@ -694,6 +694,21 @@ Ikev1LifeType = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
+class Ikev1CertificateTypeParams(IkeLongNameParams):
+    """IKEv1 certificate type parameters."""
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev1CertificateType = CryptoDataEnumCodedBase(
+    'CertificateType',
+    CryptoDataEnumBase.get_json_records(Ikev1CertificateTypeParams)
+)
+
+
+@attr.s(frozen=True)
 class Ikev1DiffieHellmanGroupParams(IkeAlgorithmParams):
     """IKEv1 Diffie-Hellman group parameters."""
 
