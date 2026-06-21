@@ -31,6 +31,10 @@ Notable fixes
 Improvements
 ============
 
+-  Generic
+
+   -  add missing RSASSA-PSS signature algorithm (#57)
+
 -  IKE (``ike``)
 
    -  add missing IKEv2 authentication methods (#57)
