@@ -2,56 +2,67 @@
     "PRE_SHARED_KEY": {
         "_code_in_hex": "0x01",
         "_standard": "RFC2409",
-        "code": 1
+        "code": 1,
+        "long_name": "Pre-shared Key"
     },
     "DSS_SIGNATURES": {
         "_code_in_hex": "0x02",
         "_standard": "RFC2409",
-        "code": 2
+        "code": 2,
+        "long_name": "DSS Signatures"
     },
     "RSA_SIGNATURES": {
         "_code_in_hex": "0x03",
         "_standard": "RFC2409",
-        "code": 3
+        "code": 3,
+        "long_name": "RSA Signatures"
     },
     "ENCRYPTION_WITH_RSA": {
         "_code_in_hex": "0x04",
         "_standard": "RFC2409",
-        "code": 4
+        "code": 4,
+        "long_name": "Encryption with RSA"
     },
     "REVISED_ENCRYPTION_WITH_RSA": {
         "_code_in_hex": "0x05",
         "_standard": "RFC2409",
-        "code": 5
+        "code": 5,
+        "long_name": "Revised Encryption with RSA"
     },
     "ELGAMAL": {
         "_code_in_hex": "0x06",
         "_standard": "RFC2409",
-        "code": 6
+        "code": 6,
+        "long_name": "ElGamal"
     },
     "REVISED_ELGAMAL": {
         "_code_in_hex": "0x07",
         "_standard": "RFC2409",
-        "code": 7
+        "code": 7,
+        "long_name": "Revised ElGamal"
     },
     "ECDSA": {
         "_code_in_hex": "0x08",
         "_standard": "RFC2409",
-        "code": 8
+        "code": 8,
+        "long_name": "ECDSA"
     },
     "ECDSA_SHA_256_P_256": {
         "_code_in_hex": "0x09",
         "_standard": "RFC4754",
-        "code": 9
+        "code": 9,
+        "long_name": "ECDSA with SHA-256 on the P-256 curve"
     },
     "ECDSA_SHA_384_P_384": {
         "_code_in_hex": "0x0a",
         "_standard": "RFC4754",
-        "code": 10
+        "code": 10,
+        "long_name": "ECDSA with SHA-384 on the P-384 curve"
     },
     "ECDSA_SHA_512_P_521": {
         "_code_in_hex": "0x0b",
         "_standard": "RFC4754",
-        "code": 11
+        "code": 11,
+        "long_name": "ECDSA with SHA-512 on the P-521 curve"
     }
 }

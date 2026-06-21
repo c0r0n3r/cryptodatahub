@@ -253,6 +253,12 @@ class TestIkev1AuthenticationMethod(TestClasses.TestJsonCodeNumericBase):
     def _get_class(cls):
         return Ikev1AuthenticationMethod
 
+    def test_str(self):
+        self.assertEqual(
+            str(Ikev1AuthenticationMethod.RSA_SIGNATURES.value),
+            'RSA Signatures',
+        )
+
 
 class TestIkev1DiffieHellmanGroup(TestClasses.TestJsonCodeNumericBase):
     @classmethod

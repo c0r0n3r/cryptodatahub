@@ -20,6 +20,7 @@ Features
    -  add IKEv2 certificate types (#57)
    -  add IKEv1 identification types (#57)
    -  add IKEv2 identification types (#57)
+   -  add long names to the IKEv1 authentication method entries (#57)
 
 Notable fixes
 =============

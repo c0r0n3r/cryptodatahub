@@ -645,7 +645,7 @@ class IkeLongNameParams(CryptoDataParamsEnumNumeric):
 
 
 @attr.s(frozen=True)
-class Ikev1AuthenticationMethodParams(CryptoDataParamsEnumNumeric):
+class Ikev1AuthenticationMethodParams(IkeLongNameParams):
     """IKEv1 authentication method parameters."""
 
     @classmethod
