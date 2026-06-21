@@ -107,7 +107,7 @@ class Ikev2AuthenticationMethodParams(CryptoDataParamsEnumNumeric):
 
     @classmethod
     def get_code_size(cls):
-        return 2
+        return 1
 
 
 Ikev2AuthenticationMethod = CryptoDataEnumCodedBase(

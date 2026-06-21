@@ -20,6 +20,13 @@ Features
    -  add IKEv2 certificate types (#57)
    -  add IKEv1 identification types (#57)
 
+Notable fixes
+=============
+
+-  IKE (``ike``)
+
+   -  fix the code size of the IKEv2 authentication methods (#57)
+
 ------------------
 1.4.0 - 2026-07-17
 ------------------
