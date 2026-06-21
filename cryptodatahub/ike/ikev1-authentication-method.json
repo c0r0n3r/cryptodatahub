@@ -64,5 +64,11 @@
         "_standard": "RFC4754",
         "code": 11,
         "long_name": "ECDSA with SHA-512 on the P-521 curve"
+    },
+    "GSSAPI": {
+        "_code_in_hex": "0xfffe",
+        "_standard": "RFC2409",
+        "code": 65534,
+        "long_name": "GSS-API"
     }
 }

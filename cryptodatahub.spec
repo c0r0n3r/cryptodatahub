@@ -65,6 +65,7 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 - add IKEv2 identification types (#57)
 - add missing RSASSA-PSS signature algorithm (#57)
 - add long names to the IKEv1 authentication method entries (#57)
+- add GSS-API IKEv1 authentication method (#57)
 
 * Fri Jul 17 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.4.0-1
 - add IKE vendor IDs (#58)

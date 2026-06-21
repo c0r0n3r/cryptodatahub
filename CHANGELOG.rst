@@ -39,6 +39,7 @@ Improvements
 -  IKE (``ike``)
 
    -  add missing IKEv2 authentication methods (#57)
+   -  add GSS-API IKEv1 authentication method (#57)
 
 ------------------
 1.4.0 - 2026-07-17
