@@ -27,6 +27,13 @@ Notable fixes
 
    -  fix the code size of the IKEv2 authentication methods (#57)
 
+Improvements
+============
+
+-  IKE (``ike``)
+
+   -  add missing IKEv2 authentication methods (#57)
+
 ------------------
 1.4.0 - 2026-07-17
 ------------------

@@ -61,6 +61,7 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 - add IKEv2 certificate types (#57)
 - add IKEv1 identification types (#57)
 - fix the code size of the IKEv2 authentication methods (#57)
+- add missing IKEv2 authentication methods (#57)
 
 * Fri Jul 17 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.4.0-1
 - add IKE vendor IDs (#58)

@@ -16,5 +16,41 @@
         "_standard": "RFC7296",
         "code": 3,
         "description": "DSS Digital Signature"
+    },
+    "ECDSA_SHA_256_P_256": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC4754",
+        "code": 9,
+        "description": "ECDSA with SHA-256 on the P-256 curve"
+    },
+    "ECDSA_SHA_384_P_384": {
+        "_code_in_hex": "0x0a",
+        "_standard": "RFC4754",
+        "code": 10,
+        "description": "ECDSA with SHA-384 on the P-384 curve"
+    },
+    "ECDSA_SHA_512_P_521": {
+        "_code_in_hex": "0x0b",
+        "_standard": "RFC4754",
+        "code": 11,
+        "description": "ECDSA with SHA-512 on the P-521 curve"
+    },
+    "GENERIC_SECURE_PASSWORD_AUTHENTICATION_METHOD": {
+        "_code_in_hex": "0x0c",
+        "_standard": "RFC6467",
+        "code": 12,
+        "description": "Generic Secure Password Authentication Method"
+    },
+    "NULL_AUTHENTICATION": {
+        "_code_in_hex": "0x0d",
+        "_standard": "RFC7619",
+        "code": 13,
+        "description": "NULL Authentication"
+    },
+    "DIGITAL_SIGNATURE": {
+        "_code_in_hex": "0x0e",
+        "_standard": "RFC7427",
+        "code": 14,
+        "description": "Digital Signature with explicit AlgorithmIdentifier envelope"
     }
 }
