@@ -630,6 +630,21 @@ Ikev1HashAlgorithm = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
+class IkeLongNameParams(CryptoDataParamsEnumNumeric):
+    """IKE registry entry with a ``long_name`` field."""
+
+    long_name: str = attr.ib(validator=attr.validators.instance_of(str))
+
+    def __str__(self):
+        return self.long_name
+
+    @classmethod
+    @abc.abstractmethod
+    def get_code_size(cls):
+        raise NotImplementedError()
+
+
+@attr.s(frozen=True)
 class Ikev1AuthenticationMethodParams(CryptoDataParamsEnumNumeric):
     """IKEv1 authentication method parameters."""
 

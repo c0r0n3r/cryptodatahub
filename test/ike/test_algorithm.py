@@ -1,11 +1,14 @@
 # SPDX-License-Identifier: MPL-2.0
 
+import unittest
+
 from test.common.classes import TestClasses
 
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.ike.version import IkeVersion
 from cryptodatahub.ike.algorithm import (
     IkeEncryptionBulkCipherEntry,
+    IkeLongNameParams,
     IkeVendorId,
     Ikev2PayloadType,
     Ikev2NotifyType,
@@ -219,6 +222,17 @@ class TestIkev1GroupType(TestClasses.TestJsonCodeNumericBase):
     @classmethod
     def _get_class(cls):
         return Ikev1GroupType
+
+
+class TestIkeLongNameParams(unittest.TestCase):
+    def test_str_returns_long_name(self):
+        class _ConcreteLongName(IkeLongNameParams):
+            @classmethod
+            def get_code_size(cls):
+                return 1
+
+        entry = _ConcreteLongName(code=1, long_name='human readable')
+        self.assertEqual(str(entry), 'human readable')
 
 
 class TestIkev1AuthenticationMethod(TestClasses.TestJsonCodeNumericBase):

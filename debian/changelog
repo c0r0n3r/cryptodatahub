@@ -1,6 +1,7 @@
 python-cryptodatahub (1.5.0) unstable; urgency=low
 
   * add long names to block cipher and MAC algorithm entries
+  * add long name attribute to IKE registry entry parameters (#57)
 
  -- Szilárd Pfeiffer <coroner@pfeifferszilard.hu>  Thu, 30 Jul 2026 11:47:55 +0200
 
