@@ -19,6 +19,7 @@ Features
    -  add IKEv1 certificate types (#57)
    -  add IKEv2 certificate types (#57)
    -  add IKEv1 identification types (#57)
+   -  add IKEv2 identification types (#57)
 
 Notable fixes
 =============

@@ -99,6 +99,7 @@ Attributes
       -  Diffie-Hellman Group
       -  Extended Sequence Numbers
       -  Certificate Type
+      -  Identification Type
 
 -  Secure Socket Layer (SSL)
 
