@@ -307,6 +307,27 @@
         "signature_algorithm": "RSA",
         "initial_version": "TLS1_3"
     },
+    "MLDSA44": {
+        "_code_in_hex": "0x0904",
+        "code": 2308,
+        "hash_algorithm": null,
+        "signature_algorithm": "MLDSA",
+        "initial_version": "TLS1_3"
+    },
+    "MLDSA65": {
+        "_code_in_hex": "0x0905",
+        "code": 2309,
+        "hash_algorithm": null,
+        "signature_algorithm": "MLDSA",
+        "initial_version": "TLS1_3"
+    },
+    "MLDSA87": {
+        "_code_in_hex": "0x0906",
+        "code": 2310,
+        "hash_algorithm": null,
+        "signature_algorithm": "MLDSA",
+        "initial_version": "TLS1_3"
+    },
     "SM2_SM3": {
         "_code_in_hex": "0x0708",
         "code": 1800,
