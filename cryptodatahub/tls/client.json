@@ -1723,7 +1723,7 @@
                 "PSK_KEY_EXCHANGE_MODES",
                 "SUPPORTED_VERSIONS",
                 "COMPRESS_CERTIFICATE",
-                "APPLICATION_LAYER_PROTOCOL_SETTINGS",
+                "OLD_APPLICATION_LAYER_PROTOCOL_SETTINGS",
                 "PADDING"
             ],
             "extension_params": {
@@ -1731,7 +1731,7 @@
                     "H2",
                     "HTTP_1_1"
                 ],
-                "application_layer_protocol_settings": [
+                "old_application_layer_protocol_settings": [
                     "H2"
                 ],
                 "compress_certificate": [
@@ -1827,7 +1827,7 @@
                 "SIGNATURE_ALGORITHMS",
                 "COMPRESS_CERTIFICATE",
                 "EC_POINT_FORMATS",
-                "APPLICATION_LAYER_PROTOCOL_SETTINGS",
+                "OLD_APPLICATION_LAYER_PROTOCOL_SETTINGS",
                 "STATUS_REQUEST",
                 "PADDING"
             ],
@@ -1836,7 +1836,7 @@
                     "H2",
                     "HTTP_1_1"
                 ],
-                "application_layer_protocol_settings": [
+                "old_application_layer_protocol_settings": [
                     "H2"
                 ],
                 "compress_certificate": [
@@ -4948,7 +4948,7 @@
                 "PSK_KEY_EXCHANGE_MODES",
                 "SUPPORTED_VERSIONS",
                 "COMPRESS_CERTIFICATE",
-                "APPLICATION_LAYER_PROTOCOL_SETTINGS",
+                "OLD_APPLICATION_LAYER_PROTOCOL_SETTINGS",
                 "PADDING"
             ],
             "extension_params": {
@@ -4956,7 +4956,7 @@
                     "H2",
                     "HTTP_1_1"
                 ],
-                "application_layer_protocol_settings": [
+                "old_application_layer_protocol_settings": [
                     "H2"
                 ],
                 "compress_certificate": [
@@ -5055,7 +5055,7 @@
                 "PSK_KEY_EXCHANGE_MODES",
                 "SUPPORTED_VERSIONS",
                 "COMPRESS_CERTIFICATE",
-                "APPLICATION_LAYER_PROTOCOL_SETTINGS",
+                "OLD_APPLICATION_LAYER_PROTOCOL_SETTINGS",
                 "PADDING"
             ],
             "extension_params": {
@@ -5063,7 +5063,7 @@
                     "H2",
                     "HTTP_1_1"
                 ],
-                "application_layer_protocol_settings": [
+                "old_application_layer_protocol_settings": [
                     "H2"
                 ],
                 "compress_certificate": [

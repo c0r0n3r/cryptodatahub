@@ -249,20 +249,35 @@
         "_code_in_hex": "0x0038",
         "code": 56
     },
+    "SERVER_PADDING": {
+        "_standard": null,
+        "_code_in_hex": "0x12e0",
+        "code": 4832
+    },
     "NEXT_PROTOCOL_NEGOTIATION": {
         "_standard": "DRAFT-AGL-TLS-NEXTPROTONEG-04",
         "_code_in_hex": "0x3374",
         "code": 13172
     },
-    "APPLICATION_LAYER_PROTOCOL_SETTINGS": {
+    "OLD_APPLICATION_LAYER_PROTOCOL_SETTINGS": {
         "_standard": "DRAFT-VVV-TLS-ALPS",
         "_code_in_hex": "0x4469",
         "code": 17513
+    },
+    "APPLICATION_LAYER_PROTOCOL_SETTINGS": {
+        "_standard": "DRAFT-VVV-TLS-ALPS",
+        "_code_in_hex": "0x44cd",
+        "code": 17613
     },
     "CHANNEL_ID": {
         "_standard": "DRAFT-BALFANZ-TLS-OBC-01",
         "_code_in_hex": "0x7550",
         "code": 30032
+    },
+    "TRUST_ANCHORS": {
+        "_standard": "DRAFT-IETF-TLS-TRUST-ANCHOR-IDS",
+        "_code_in_hex": "0xca34",
+        "code": 51764
     },
     "ENCRYPTED_CLIENT_HELLO": {
         "_standard": "DRAFT-IETF-TLS-ESNI",

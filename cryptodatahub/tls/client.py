@@ -8,8 +8,10 @@ from cryptodatahub.common.client import ClientParamsBase, get_client_capabilitie
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataParamsBase,
+    HexData,
     convert_dict_to_object,
     convert_enum,
+    convert_hex_data,
     convert_iterable,
 )
 
@@ -99,6 +101,13 @@ class ClientExtensionParams(CryptoDataParamsBase):  # pylint: disable=too-many-i
             attr.validators.deep_iterable(attr.validators.instance_of(TlsNamedCurve))
         )
     )
+    old_application_layer_protocol_settings = attr.ib(
+        default=None,
+        converter=convert_iterable(convert_enum(TlsProtocolName)),
+        validator=attr.validators.optional(
+            attr.validators.deep_iterable(attr.validators.instance_of(TlsProtocolName))
+        )
+    )
     post_handshake_auth = attr.ib(default=None)
     psk_key_exchange_modes = attr.ib(
         default=None,
@@ -108,6 +117,7 @@ class ClientExtensionParams(CryptoDataParamsBase):  # pylint: disable=too-many-i
         )
     )
     record_size_limit = attr.ib(default=None, validator=attr.validators.optional(attr.validators.instance_of(int)))
+    server_padding = attr.ib(default=None, validator=attr.validators.optional(attr.validators.instance_of(int)))
     signature_algorithms = attr.ib(
         default=None,
         converter=convert_iterable(convert_enum(TlsSignatureAndHashAlgorithm)),
@@ -133,6 +143,13 @@ class ClientExtensionParams(CryptoDataParamsBase):  # pylint: disable=too-many-i
         default=None,
         converter=convert_dict_to_object(ClientTokenBindingParams),
         validator=attr.validators.optional(attr.validators.instance_of(ClientTokenBindingParams))
+    )
+    trust_anchors = attr.ib(
+        default=None,
+        converter=convert_iterable(convert_hex_data()),
+        validator=attr.validators.optional(
+            attr.validators.deep_iterable(attr.validators.instance_of(HexData))
+        )
     )
 
 
