@@ -11,6 +11,7 @@ python-cryptodatahub (1.5.0) unstable; urgency=low
   * add missing RSASSA-PSS signature algorithm (#57)
   * add long names to the IKEv1 authentication method entries (#57)
   * add GSS-API IKEv1 authentication method (#57)
+  * unify the IKEv2 authentication method entries under the long name attribute (#57)
 
  -- Szilárd Pfeiffer <coroner@pfeifferszilard.hu>  Thu, 30 Jul 2026 11:47:55 +0200
 

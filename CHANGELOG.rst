@@ -41,6 +41,13 @@ Improvements
    -  add missing IKEv2 authentication methods (#57)
    -  add GSS-API IKEv1 authentication method (#57)
 
+Refactor
+========
+
+-  IKE (``ike``)
+
+   -  unify the IKEv2 authentication method entries under the long name attribute (#57)
+
 ------------------
 1.4.0 - 2026-07-17
 ------------------

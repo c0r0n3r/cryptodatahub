@@ -95,15 +95,23 @@ Ikev2PseudorandomFunction = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
-class Ikev2AuthenticationMethodParams(CryptoDataParamsEnumNumeric):
-    """Authentication method parameters."""
+class IkeLongNameParams(CryptoDataParamsEnumNumeric):
+    """IKE registry entry with a ``long_name`` field."""
 
-    description: str = attr.ib(
-        validator=attr.validators.instance_of(str)
-    )
+    long_name: str = attr.ib(validator=attr.validators.instance_of(str))
 
     def __str__(self):
-        return self.description
+        return self.long_name
+
+    @classmethod
+    @abc.abstractmethod
+    def get_code_size(cls):
+        raise NotImplementedError()
+
+
+@attr.s(frozen=True)
+class Ikev2AuthenticationMethodParams(IkeLongNameParams):
+    """IKEv2 authentication method parameters."""
 
     @classmethod
     def get_code_size(cls):
@@ -627,21 +635,6 @@ Ikev1HashAlgorithm = CryptoDataEnumCodedBase(
     'Ikev1HashAlgorithm',
     CryptoDataEnumBase.get_json_records(Ikev1HashAlgorithmParams)
 )
-
-
-@attr.s(frozen=True)
-class IkeLongNameParams(CryptoDataParamsEnumNumeric):
-    """IKE registry entry with a ``long_name`` field."""
-
-    long_name: str = attr.ib(validator=attr.validators.instance_of(str))
-
-    def __str__(self):
-        return self.long_name
-
-    @classmethod
-    @abc.abstractmethod
-    def get_code_size(cls):
-        raise NotImplementedError()
 
 
 @attr.s(frozen=True)
