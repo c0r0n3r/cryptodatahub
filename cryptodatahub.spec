@@ -67,6 +67,7 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 - add long names to the IKEv1 authentication method entries (#57)
 - add GSS-API IKEv1 authentication method (#57)
 - unify the IKEv2 authentication method entries under the long name attribute (#57)
+- add missing IKEv2 certificate types (#57)
 
 * Fri Jul 17 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.4.0-1
 - add IKE vendor IDs (#58)

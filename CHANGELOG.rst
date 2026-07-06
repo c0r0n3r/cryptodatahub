@@ -40,6 +40,7 @@ Improvements
 
    -  add missing IKEv2 authentication methods (#57)
    -  add GSS-API IKEv1 authentication method (#57)
+   -  add missing IKEv2 certificate types (#57)
 
 Refactor
 ========
