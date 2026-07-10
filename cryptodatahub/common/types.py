@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MPL-2.0
-# -*- coding: utf-8 -*-
 
 import abc
 import base64
@@ -21,7 +20,7 @@ import urllib3
 from cryptodatahub.common.exception import InvalidValue
 
 
-class _ConverterBase():
+class _ConverterBase:
     @abc.abstractmethod
     def __call__(self, value):
         raise NotImplementedError()
@@ -106,7 +105,7 @@ def convert_enum(enum_type):
 
 
 @attr.s(frozen=True)
-class Base64Data():
+class Base64Data:
     value = attr.ib(validator=attr.validators.instance_of((bytes, bytearray)))
 
     def _asdict(self):
@@ -258,7 +257,7 @@ def convert_mapping(key_converter=None, value_converter=None):
 
 
 @attr.s(frozen=True)
-class ClientVersion():
+class ClientVersion:
     parts = attr.ib(validator=attr.validators.deep_iterable(attr.validators.instance_of(int)))
 
     @classmethod
@@ -347,7 +346,7 @@ def convert_variadic(converters):
     return _VariadicConverter(converters)
 
 
-class CryptoDataParamsBase():
+class CryptoDataParamsBase:
     @classmethod
     def get_init_attribute_names(cls):
         return [
@@ -373,7 +372,7 @@ class CryptoDataParamsBase():
     @classmethod
     def _asdict_serializer(cls, _, __, value):
         if hasattr(value, '_asdict'):
-            return getattr(value, '_asdict')()
+            return value._asdict()
         if isinstance(value, enum.Enum):
             return value.name
         if isinstance(value, datetime.datetime):
@@ -491,7 +490,7 @@ class CryptoDataEnumBase(enum.Enum):
     @classmethod
     def get_json_object(cls, param_class):
         json_path = cls.get_json_path(param_class)
-        with open(str(json_path), 'r', encoding=cls.get_json_encoding()) as json_file:
+        with open(str(json_path), encoding=cls.get_json_encoding()) as json_file:
             return json.load(json_file, object_pairs_hook=collections.OrderedDict)
 
     @classmethod

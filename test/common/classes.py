@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MPL-2.0
-# -*- coding: utf-8 -*-
 
 import abc
 import collections
@@ -104,7 +103,7 @@ class TestClasses:
 
         def setUp(self):
             self.json_file = open(  # pylint: disable=consider-using-with
-                str(self._get_class().get_json_path(self._get_params_class())), 'r', encoding='ascii'
+                str(self._get_class().get_json_path(self._get_params_class())), encoding='ascii'
             )
             self.json_data = json.load(self.json_file, object_pairs_hook=collections.OrderedDict)
 
@@ -173,7 +172,7 @@ class TestClasses:
             self.assertEqual(items_with_surplus_attributes, [])
 
             attribute_names_not_ordered = []
-            for name, item in self.json_data.items():
+            for _name, item in self.json_data.items():
                 protected_count = 0
                 for key in item.keys():
                     protected_count += 1
@@ -224,7 +223,7 @@ class TestClasses:
 
         @classmethod
         def _get_protected_names(cls):
-            return super(TestClasses.TestJsonCodeNumericBase, cls)._get_protected_names() | set(['_code_in_hex', ])
+            return super()._get_protected_names() | set(['_code_in_hex', ])
 
         def test_param_attribute_value_code_in_hex(self):
             self.assertEqual([
@@ -242,7 +241,7 @@ class TestClasses:
 
         def _get_public_key_pem(self, public_key_file_name):
             public_key_path = self.__certs_dir / (public_key_file_name + '.pem')
-            with open(str(public_key_path), 'r', encoding='ascii') as pem_file:
+            with open(str(public_key_path), encoding='ascii') as pem_file:
                 return pem_file.read()
 
         def _get_public_key(self, public_key_file_name):

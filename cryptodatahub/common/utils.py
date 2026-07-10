@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MPL-2.0
-# -*- coding: utf-8 -*-
 
 import binascii
 import hashlib
@@ -64,7 +63,7 @@ def hash_bytes(hash_algorithm, hashable_value):
 
 
 @attr.s
-class HttpFetcher():
+class HttpFetcher:
     connect_timeout = attr.ib(default=2, validator=attr.validators.instance_of((int, float)))
     read_timeout = attr.ib(default=1, validator=attr.validators.instance_of((int, float)))
     retry = attr.ib(default=1, validator=attr.validators.instance_of(int))

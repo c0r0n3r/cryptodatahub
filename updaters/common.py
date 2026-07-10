@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MPL-2.0
-# -*- coding: utf-8 -*-
 
 import collections
 
@@ -7,7 +6,7 @@ import attr
 
 
 @attr.s
-class UpdaterBase():
+class UpdaterBase:
     fetcher_class = attr.ib(validator=attr.validators.instance_of(type))
     enum_class = attr.ib(validator=attr.validators.instance_of(type))
     enum_param_class = attr.ib(validator=attr.validators.instance_of(type))

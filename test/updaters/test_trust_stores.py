@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MPL-2.0
-# -*- coding: utf-8 -*-
 # pylint: disable=too-many-lines
 
 from unittest import mock
@@ -547,7 +546,7 @@ class TestUpdaterRootCertificateStoreOpenJDK(TestRootCertificateBase):
     )
     MOCK_DOWNLOAD_PAGE = (
         f'<html><body><a href="{_MOCK_TARBALL_URL}">Linux/x64</a></body></html>'
-    ).encode('utf-8')
+    ).encode()
 
     def test_parse_empty(self):
         mock_data = self._get_mock_data_jdk_cacerts()

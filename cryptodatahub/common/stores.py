@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MPL-2.0
-# -*- coding: utf-8 -*-
 
 import collections
 import datetime
@@ -201,7 +200,7 @@ RootCertificateTrustConstraintAction = enum.Enum('RootCertificateTrustConstraint
 
 
 @attr.s(frozen=True)
-class CertificateTrustConstraint():
+class CertificateTrustConstraint:
     action = attr.ib(
         converter=convert_enum(RootCertificateTrustConstraintAction),
         validator=attr.validators.instance_of(RootCertificateTrustConstraintAction),
@@ -219,7 +218,7 @@ class CertificateTrustConstraint():
 
 
 @attr.s(repr=False, slots=True, hash=True)
-class _RootCertificateParamCertificateConverter():
+class _RootCertificateParamCertificateConverter:
     def __call__(self, value):
         if value is None:
             return None

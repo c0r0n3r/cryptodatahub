@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MPL-2.0
-# -*- coding: utf-8 -*-
 
 import abc
 import enum
@@ -33,7 +32,7 @@ class IkeEncryptionBulkCipherEntry(CryptoDataParamsBase):
         converter=convert_enum(BlockCipher),
         validator=attr.validators.instance_of(BlockCipher)
     )
-    names: typing.Dict[Entity, typing.Optional[str]] = attr.ib(
+    names: dict[Entity, typing.Optional[str]] = attr.ib(
         converter=convert_mapping(convert_enum(Entity)),
         validator=attr.validators.deep_mapping(
             key_validator=attr.validators.instance_of(Entity),
@@ -50,7 +49,7 @@ def _convert_bulk_cipher_entry(value):
 
 @attr.s(frozen=True)
 class IkeAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableAlgorithmParams):
-    names: typing.Dict[Entity, typing.Optional[str]] = attr.ib(
+    names: dict[Entity, typing.Optional[str]] = attr.ib(
         kw_only=True,
         converter=convert_mapping(convert_enum(Entity)),
         validator=attr.validators.deep_mapping(
@@ -177,7 +176,7 @@ Ikev2DiffieHellmanGroup = CryptoDataEnumCodedBase(
 class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComplex):
     """Encryption algorithm parameters."""
 
-    bulk_ciphers: typing.List[IkeEncryptionBulkCipherEntry] = attr.ib(
+    bulk_ciphers: list[IkeEncryptionBulkCipherEntry] = attr.ib(
         converter=convert_iterable(_convert_bulk_cipher_entry),
         validator=attr.validators.deep_iterable(
             member_validator=attr.validators.instance_of(IkeEncryptionBulkCipherEntry)
@@ -557,7 +556,7 @@ Ikev1PayloadType = CryptoDataEnumCodedBase(
 class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableComplex):
     """IKEv1 encryption algorithm parameters."""
 
-    bulk_ciphers: typing.List[IkeEncryptionBulkCipherEntry] = attr.ib(
+    bulk_ciphers: list[IkeEncryptionBulkCipherEntry] = attr.ib(
         converter=convert_iterable(_convert_bulk_cipher_entry),
         validator=attr.validators.deep_iterable(
             member_validator=attr.validators.instance_of(IkeEncryptionBulkCipherEntry)

@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MPL-2.0
-# -*- coding: utf-8 -*-
 
 import abc
 import enum
@@ -77,7 +76,7 @@ AttackNamed = CryptoDataEnumOIDBase('AttackNamed', CryptoDataEnumBase.get_json_r
 
 
 @attr.s(frozen=True, eq=False)
-class Gradeable():
+class Gradeable:
     @staticmethod
     def _get_vulnerbilities(obj):
         if obj is None:
@@ -114,7 +113,7 @@ class Gradeable():
 
     @staticmethod
     def get_min_grade(vulnerabilities):
-        vulnerabilities = Gradeable._flatten_vulnerabilities((Gradeable._get_vulnerbilities(vulnerabilities)))
+        vulnerabilities = Gradeable._flatten_vulnerabilities(Gradeable._get_vulnerbilities(vulnerabilities))
         if not vulnerabilities:
             return Grade.SECURE
 
@@ -135,7 +134,7 @@ class Gradeable():
 
 
 @attr.s(frozen=True)
-class Vulnerability():
+class Vulnerability:
     attack_type = attr.ib(
         converter=convert_enum(AttackType),
         validator=attr.validators.optional(attr.validators.instance_of(AttackType))

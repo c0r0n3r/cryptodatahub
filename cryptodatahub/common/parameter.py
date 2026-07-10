@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MPL-2.0
-# -*- coding: utf-8 -*-
 
 import typing
 
@@ -32,7 +31,7 @@ Standard = CryptoDataEnumBase('Standard', CryptoDataEnumBase.get_json_records(St
 
 
 @attr.s(eq=False, frozen=True)
-class DHParameterNumbers():
+class DHParameterNumbers:
     p = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
         validator=attr.validators.instance_of(int),
@@ -96,7 +95,7 @@ DHParamWellKnown = DHParamWellKnownBase(
 
 
 @attr.s
-class ECParameterNumbers():
+class ECParameterNumbers:
     a = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
         validator=attr.validators.instance_of(int),

@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MPL-2.0
-# -*- coding: utf-8 -*-
 
 import abc
 import base64
@@ -39,7 +38,7 @@ class HttpFetcherCrtShPem(HttpFetcher):
 
 
 @attr.s(frozen=True)
-class CertificatePemFetcher():
+class CertificatePemFetcher:
     http_fetcher = attr.ib(
         init=False,
         default=HttpFetcherCrtShPem(connect_timeout=5, read_timeout=30, retry=10),
@@ -57,7 +56,7 @@ class CertificatePemFetcher():
 
 
 @attr.s
-class FetcherBase():
+class FetcherBase:
     """Abstract base class for all data fetchers.
 
     Subclasses must implement:

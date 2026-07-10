@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MPL-2.0
-# -*- coding: utf-8 -*-
 
 import datetime
 import dateutil
@@ -8,7 +7,7 @@ import urllib3
 try:
     from unittest import mock
 except ImportError:
-    import mock
+    from unittest import mock
 
 import pyfakefs.fake_filesystem_unittest
 
@@ -144,7 +143,7 @@ class TestUpdaterCertificateTransparencyLogs(pyfakefs.fake_filesystem_unittest.T
         self.fs.create_file(json_file_path, contents='{}')
 
         UpdaterCertificateTransparencyLogs()()
-        with open(json_file_path, 'r', encoding='ascii') as json_file:
+        with open(json_file_path, encoding='ascii') as json_file:
             self.assertEqual(
                 json_file.read(),
                 CryptoDataEnumBase.dump_json({
