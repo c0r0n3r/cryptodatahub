@@ -83,9 +83,16 @@ cryptodatahub = [
     '*/*.json'
 ]
 
+[tool.ruff]
+line-length = 120
+target-version = 'py39'
+
+[tool.ruff.lint]
+select = ['E', 'F', 'W', 'UP', 'B']
+
 [tool.tox]
 envlist = [
-    'pep8',
+    'ruff',
     'pylint',
     'pypy3',
     'py39',
@@ -105,9 +112,9 @@ commands = [
     ['coverage', 'report']
 ]
 
-[tool.tox.env.pep8]
-deps = ['flake8']
-commands = [['flake8', 'cryptodatahub', 'docs', 'updaters', 'test']]
+[tool.tox.env.ruff]
+deps = ['ruff']
+commands = [['ruff', 'check', 'cryptodatahub', 'docs', 'updaters', 'test']]
 
 [tool.tox.env.pylint]
 deps = ['pylint', '.[tests]']
