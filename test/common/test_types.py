@@ -6,6 +6,7 @@ import pathlib
 import unittest
 
 from test.common.classes import (
+    TestEnumBinaryParams,
     TestEnumNamedParams,
     TestEnumNumericParams,
     TestEnumOidParams,
@@ -26,15 +27,18 @@ from cryptodatahub.common.types import (
     Base64Data,
     ClientVersion,
     CryptoDataEnumBase,
+    CryptoDataEnumBinaryBase,
     CryptoDataEnumCodedBase,
     CryptoDataEnumOIDBase,
     CryptoDataParamsBase,
+    HexData,
     convert_big_enum,
     convert_base64_data,
     convert_client_version,
     convert_datetime,
     convert_dict_to_object,
     convert_enum,
+    convert_hex_data,
     convert_iterable,
     convert_mapping,
     convert_url,
@@ -113,6 +117,46 @@ class TestCryptoDataParamsBase(unittest.TestCase):
             test_object._asdict(),
             collections.OrderedDict([('timestamp', '2026-04-10T01:02:03')])
         )
+
+
+class TestHexData(unittest.TestCase):
+    def test_str(self):
+        self.assertEqual(str(HexData(b'\xde\xad\xbe\xef')), 'deadbeef')
+
+    def test_asdict(self):
+        hex_data = HexData(b'\xde\xad\xbe\xef')
+        self.assertEqual(str(hex_data), hex_data._asdict())
+
+
+class TestHexDataConverter(unittest.TestCase):
+    def test_none(self):
+        converted_value = convert_hex_data()(None)
+        self.assertEqual(converted_value, None)
+
+    def test_binary_value(self):
+        original_value = bytearray(b'\xde\xad\xbe\xef')
+        converted_value = convert_hex_data()(original_value)
+        self.assertEqual(converted_value, HexData(b'\xde\xad\xbe\xef'))
+
+    def test_error_invalid_type(self):
+        original_value = 1234
+        converted_value = convert_hex_data()(original_value)
+        self.assertEqual(id(original_value), id(converted_value))
+
+    def test_error_invalid_value(self):
+        original_value = 'not a hex string'
+        converted_value = convert_hex_data()(original_value)
+        self.assertEqual(id(original_value), id(converted_value))
+
+    def test_convert(self):
+        original_value = 'deadbeef'
+        converted_value = convert_hex_data()(original_value)
+
+        self.assertEqual(converted_value, HexData(b'\xde\xad\xbe\xef'))
+        self.assertEqual(id(converted_value), id(convert_hex_data()(converted_value)))
+
+    def test_repr(self):
+        self.assertEqual(repr(convert_hex_data()), '<hex data converter>')
 
 
 class TestBase64Data(unittest.TestCase):
@@ -528,6 +572,33 @@ class TestCryptoDataEnumOidBase(TestCryptoDataBase):
         )
         self.assertEqual(test_enum_oid_class.from_oid('1.1.1.1.1.1'), test_enum_oid_class.ONE)
         self.assertEqual(test_enum_oid_class.from_oid('2.2.2.2.2.2'), test_enum_oid_class.TWO)
+
+
+class TestCryptoDataEnumBinaryBase(TestCryptoDataBase):
+    def test_from_binary(self):
+        json_object = {
+            'ONE': {
+                'binary': 'deadbeef'
+            },
+            'TWO': {
+                'binary': 'cafebabe'
+            }
+        }
+        self._set_json(TestEnumBinaryParams, json_object)
+        test_enum_binary_class = CryptoDataEnumBinaryBase(
+            'test_enum_binary_class', CryptoDataEnumBinaryBase.get_json_records(TestEnumBinaryParams)
+        )
+        self.assertEqual(
+            test_enum_binary_class.from_binary(bytes.fromhex('deadbeef')),
+            test_enum_binary_class.ONE,
+        )
+        self.assertEqual(
+            test_enum_binary_class.from_binary(bytes.fromhex('cafebabe')),
+            test_enum_binary_class.TWO,
+        )
+        with self.assertRaises(InvalidValue) as context_manager:
+            test_enum_binary_class.from_binary(b'\x00\x01\x02\x03')
+        self.assertEqual(context_manager.exception.value, HexData(b'\x00\x01\x02\x03'))
 
 
 class TestCryptoDataEnumNumeric(TestCryptoDataBase):

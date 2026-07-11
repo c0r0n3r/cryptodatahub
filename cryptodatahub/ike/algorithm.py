@@ -10,13 +10,16 @@ from cryptodatahub.common.algorithm import GradeableAlgorithmParams
 from cryptodatahub.common.grade import GradeableComplex
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
+    CryptoDataEnumBinaryBase,
     CryptoDataEnumCodedBase,
     CryptoDataParamsBase,
     CryptoDataParamsEnumNumeric,
+    HexData,
     convert_enum,
     convert_iterable,
     convert_mapping,
     convert_variadic,
+    convert_hex_data,
 )
 from cryptodatahub.common.algorithm import BlockCipher, Hash, MAC, NamedGroup, BlockCipherMode
 from cryptodatahub.common.entity import Entity
@@ -699,4 +702,26 @@ class Ikev1DiffieHellmanGroupParams(IkeAlgorithmParams):
 Ikev1DiffieHellmanGroup = CryptoDataEnumCodedBase(
     'DiffieHellmanGroup',
     CryptoDataEnumBase.get_json_records(Ikev1DiffieHellmanGroupParams)
+)
+
+
+@attr.s(frozen=True)
+class IkeVendorIdParams(CryptoDataParamsBase):
+    """IKE vendor ID parameters."""
+
+    binary: HexData = attr.ib(
+        converter=convert_hex_data(),
+        validator=attr.validators.instance_of(HexData)
+    )
+    description: str = attr.ib(
+        validator=attr.validators.instance_of(str)
+    )
+
+    def __str__(self):
+        return self.description
+
+
+IkeVendorId = CryptoDataEnumBinaryBase(
+    'IkeVendorId',
+    CryptoDataEnumBase.get_json_records(IkeVendorIdParams)
 )

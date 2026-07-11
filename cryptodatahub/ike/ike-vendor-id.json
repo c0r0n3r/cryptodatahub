@@ -1,0 +1,446 @@
+{
+    "SSH_IPSEC_EXPRESS_1_1_0": {
+        "binary": "fbf47614984031fa8e3bb6198089b223",
+        "description": "SSH Communications Security IPSEC Express version 1.1.0"
+    },
+    "SSH_IPSEC_EXPRESS_1_1_1": {
+        "binary": "1952dc91ac20f646fb01cf42a33aee30",
+        "description": "SSH Communications Security IPSEC Express version 1.1.1"
+    },
+    "SSH_IPSEC_EXPRESS_1_1_2": {
+        "binary": "e8bffa643e5c8f2cd10fda7370b6ebe5",
+        "description": "SSH Communications Security IPSEC Express version 1.1.2"
+    },
+    "SSH_IPSEC_EXPRESS_1_2_1": {
+        "binary": "c1111b2dee8cbc3d620573ec57aab9cb",
+        "description": "SSH Communications Security IPSEC Express version 1.2.1"
+    },
+    "SSH_IPSEC_EXPRESS_1_2_2": {
+        "binary": "09ec27bfbc09c75823cfecbffe565a2e",
+        "description": "SSH Communications Security IPSEC Express version 1.2.2"
+    },
+    "SSH_IPSEC_EXPRESS_2_0_0": {
+        "binary": "7f21a596e4e318f0b2f4944c2384cb84",
+        "description": "SSH Communications Security IPSEC Express version 2.0.0"
+    },
+    "SSH_IPSEC_EXPRESS_2_1_0": {
+        "binary": "2836d1fd2807bc9e5ae30786320451ec",
+        "description": "SSH Communications Security IPSEC Express version 2.1.0"
+    },
+    "SSH_IPSEC_EXPRESS_2_1_1": {
+        "binary": "a68de756a9c5229bae66498040951ad5",
+        "description": "SSH Communications Security IPSEC Express version 2.1.1"
+    },
+    "SSH_IPSEC_EXPRESS_2_1_2": {
+        "binary": "3f2372867e237c1cd8250a75559cae20",
+        "description": "SSH Communications Security IPSEC Express version 2.1.2"
+    },
+    "SSH_IPSEC_EXPRESS_3_0_0": {
+        "binary": "0e58d5774df602007d0b02443660f7eb",
+        "description": "SSH Communications Security IPSEC Express version 3.0.0"
+    },
+    "SSH_IPSEC_EXPRESS_3_0_1": {
+        "binary": "f5ce31ebc210f44350cf71265b57380f",
+        "description": "SSH Communications Security IPSEC Express version 3.0.1"
+    },
+    "SSH_IPSEC_EXPRESS_4_0_0": {
+        "binary": "f64260af2e2742daddd56987068a99a0",
+        "description": "SSH Communications Security IPSEC Express version 4.0.0"
+    },
+    "SSH_IPSEC_EXPRESS_4_0_1": {
+        "binary": "7a54d3bdb3b1e6d923892064be2d981c",
+        "description": "SSH Communications Security IPSEC Express version 4.0.1"
+    },
+    "SSH_IPSEC_EXPRESS_4_1_0": {
+        "binary": "9aa1f3b43472a45d5f506aeb260cf214",
+        "description": "SSH Communications Security IPSEC Express version 4.1.0"
+    },
+    "SSH_IPSEC_EXPRESS_4_1_1": {
+        "binary": "89f7b760d86b012acf263382394d962f",
+        "description": "SSH Communications Security IPSEC Express version 4.1.1"
+    },
+    "SSH_IPSEC_EXPRESS_4_2_0": {
+        "binary": "6880c7d026099114e486c55430e7abee",
+        "description": "SSH Communications Security IPSEC Express version 4.2.0"
+    },
+    "SSH_IPSEC_EXPRESS_5_0": {
+        "binary": "b037a21aceccb5570f602546f97bde8c",
+        "description": "SSH Communications Security IPSEC Express version 5.0"
+    },
+    "SSH_IPSEC_EXPRESS_5_0_0": {
+        "binary": "2b2dad97c4d140930053287f996850b0",
+        "description": "SSH Communications Security IPSEC Express version 5.0.0"
+    },
+    "SSH_IPSEC_EXPRESS_5_1_0": {
+        "binary": "45e17f3abe93944cb202910c59ef806b",
+        "description": "SSH Communications Security IPSEC Express version 5.1.0"
+    },
+    "SSH_IPSEC_EXPRESS_5_1_1": {
+        "binary": "5925859f7377ed7816d2fb81c01fa551",
+        "description": "SSH Communications Security IPSEC Express version 5.1.1"
+    },
+    "SSH_SENTINEL": {
+        "binary": "054182a07c7ae206f9d2cf9d2432c482",
+        "description": "SSH Sentinel"
+    },
+    "SSH_SENTINEL_1_1": {
+        "binary": "b91623e693ca18a54c6a2778552305e8",
+        "description": "SSH Sentinel 1.1"
+    },
+    "SSH_SENTINEL_1_2": {
+        "binary": "5430888de01a31a6fa8f60224e449958",
+        "description": "SSH Sentinel 1.2"
+    },
+    "SSH_SENTINEL_1_3": {
+        "binary": "7ee5cb85f71ce259c94a5c731ee4e752",
+        "description": "SSH Sentinel 1.3"
+    },
+    "SSH_SENTINEL_1_4": {
+        "binary": "63d9a1a7009491b5a0a6fdeb2a8284f0",
+        "description": "SSH Sentinel 1.4"
+    },
+    "SSH_SENTINEL_1_4_1": {
+        "binary": "eb4b0d96276b4e220ad16221a7b2a5e6",
+        "description": "SSH Sentinel 1.4.1"
+    },
+    "SSH_QUICKSEC_0_9_0": {
+        "binary": "37eba0c4136184e7daf8562a77060b4a",
+        "description": "SSH Communications Security QuickSec 0.9.0"
+    },
+    "SSH_QUICKSEC_1_1_0": {
+        "binary": "5d72925e55948a9661a7fc48fdec7ff9",
+        "description": "SSH Communications Security QuickSec 1.1.0"
+    },
+    "SSH_QUICKSEC_1_1_1": {
+        "binary": "777fbf4c5af6d1cdd4b895a05bf82594",
+        "description": "SSH Communications Security QuickSec 1.1.1"
+    },
+    "SSH_QUICKSEC_1_1_2": {
+        "binary": "2cdf08e712ede8a5978761267cd19b91",
+        "description": "SSH Communications Security QuickSec 1.1.2"
+    },
+    "SSH_QUICKSEC_1_1_3": {
+        "binary": "59e454a8c2cf02a34959121f1890bc87",
+        "description": "SSH Communications Security QuickSec 1.1.3"
+    },
+    "DRAFT_HUTTUNEN_IPSEC_ESP_IN_UDP_00": {
+        "binary": "6a7434c19d7e36348090a02334c9c805",
+        "description": "draft-huttunen-ipsec-esp-in-udp-00.txt"
+    },
+    "DRAFT_HUTTUNEN_IPSEC_ESP_IN_UDP_01": {
+        "binary": "50760f624c63e5c53eea386c685ca083",
+        "description": "draft-huttunen-ipsec-esp-in-udp-01.txt (ESPThruNAT)"
+    },
+    "DRAFT_STENBERG_IPSEC_NAT_TRAVERSAL_01": {
+        "binary": "27bab5dc01ea0760ea4e3190ac27c0d0",
+        "description": "draft-stenberg-ipsec-nat-traversal-01"
+    },
+    "DRAFT_STENBERG_IPSEC_NAT_TRAVERSAL_02": {
+        "binary": "6105c422e76847e43f9684801292aecd",
+        "description": "draft-stenberg-ipsec-nat-traversal-02"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE": {
+        "binary": "4df37928e9fc4fd1b3262170d515c662",
+        "description": "draft-ietf-ipsec-nat-t-ike"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE_00": {
+        "binary": "4485152d18b6bbcd0be8a8469579ddcc",
+        "description": "draft-ietf-ipsec-nat-t-ike-00"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE_01": {
+        "binary": "16f6ca16e4a4066d83821a0f0aeaa862",
+        "description": "draft-ietf-ipsec-nat-t-ike-01"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE_02": {
+        "binary": "cd60464335df21f87cfdb2fc68b6a448",
+        "description": "draft-ietf-ipsec-nat-t-ike-02"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE_02N": {
+        "binary": "90cb80913ebb696e086381b5ec427b1f",
+        "description": "draft-ietf-ipsec-nat-t-ike-02\\n"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE_03": {
+        "binary": "7d9419a65310ca6f2c179d9215529d56",
+        "description": "draft-ietf-ipsec-nat-t-ike-03"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE_04": {
+        "binary": "9909b64eed937c6573de52ace952fa6b",
+        "description": "draft-ietf-ipsec-nat-t-ike-04"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE_05": {
+        "binary": "80d0bb3def54565ee84645d4c85ce3ee",
+        "description": "draft-ietf-ipsec-nat-t-ike-05"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE_06": {
+        "binary": "4d1e0e136deafa34c4f3ea9f02ec7285",
+        "description": "draft-ietf-ipsec-nat-t-ike-06"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE_07": {
+        "binary": "439b59f8ba676c4c7737ae22eab8f582",
+        "description": "draft-ietf-ipsec-nat-t-ike-07"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE_08": {
+        "binary": "8f8d83826d246b6fc7a8a6a428c11de8",
+        "description": "draft-ietf-ipsec-nat-t-ike-08"
+    },
+    "DRAFT_IETF_IPSEC_NAT_T_IKE_09": {
+        "binary": "42ea5b6f898d9773a575df26e7dd19e1",
+        "description": "draft-ietf-ipsec-nat-t-ike-09"
+    },
+    "TESTING_NAT_T_RFC": {
+        "binary": "c40fee00d5d39ddb1fc762e09b7cfea7",
+        "description": "Testing NAT-T RFC"
+    },
+    "RFC3947_NAT_T": {
+        "binary": "4a131c81070358455c5728f20e95452f",
+        "description": "RFC 3947 Negotiation of NAT-Traversal in the IKE"
+    },
+    "DRAFT_BEAULIEU_IKE_XAUTH_02": {
+        "binary": "09002689dfd6b71280a224dec33b81e5",
+        "description": "draft-beaulieu-ike-xauth-02.txt"
+    },
+    "XAUTH": {
+        "binary": "09002689dfd6b712",
+        "description": "XAUTH"
+    },
+    "RFC3706_DPD": {
+        "binary": "afcad71368a1f1c96b8696fc77570100",
+        "description": "RFC 3706 DPD (Dead Peer Detection)"
+    },
+    "DRAFT_IETF_IPSEC_ANTIREPLAY_00": {
+        "binary": "325df29a2319f2dd",
+        "description": "draft-ietf-ipsec-antireplay-00.txt"
+    },
+    "DRAFT_IETF_IPSEC_HEARTBEATS_00": {
+        "binary": "8db7a41811221660",
+        "description": "draft-ietf-ipsec-heartbeats-00.txt"
+    },
+    "IKE_CHALLENGE_RESPONSE_2": {
+        "binary": "0d33611a5d521b5e3c9c03d2fc107e12",
+        "description": "IKE Challenge/Response for Authenticated Cryptographic Keys"
+    },
+    "IKE_CHALLENGE_RESPONSE_REV_2": {
+        "binary": "013f11823f966fa91900f024ba66a86b",
+        "description": "IKE Challenge/Response for Authenticated Cryptographic Keys (Revised)"
+    },
+    "CISCO_FRAG": {
+        "binary": "4048b7d56ebce88525e7de7f00d6c2d380000000",
+        "description": "Cisco Fragmentation"
+    },
+    "CISCO_FLEXVPN_SUPPORTED": {
+        "binary": "464c455856504e2d535550504f52544544",
+        "description": "Cisco FlexVPN Supported"
+    },
+    "CISCO_DELETE_REASON": {
+        "binary": "434953434f2d44454c4554452d524541534f4e",
+        "description": "Cisco Delete Reason Supported"
+    },
+    "CISCO_DYNAMIC_ROUTE": {
+        "binary": "434953434f2d44594e414d49432d524f555445",
+        "description": "Cisco Dynamic Route Supported"
+    },
+    "CISCO_VPN_REV_02": {
+        "binary": "434953434f56504e2d5245562d3032",
+        "description": "Cisco VPN Revision 2"
+    },
+    "CISCO_COPYRIGHT": {
+        "binary": "434953434f28434f505952494748542926436f7079726967687420286329203230303920436973636f2053797374656d732c20496e632e",
+        "description": "Cisco Copyright"
+    },
+    "CISCO_GRE_MODE": {
+        "binary": "434953434f2d4752452d4d4f4445",
+        "description": "Cisco GRE Mode Supported"
+    },
+    "MS_INITIAL_CONTACT": {
+        "binary": "26244d38eddb61b3172a36e3d0cfb819",
+        "description": "Microsoft Vid-Initial-Contact"
+    },
+    "GSS_API_2": {
+        "binary": "ad2c0dd0b9c32083ccba25b8861ec455",
+        "description": "A GSS-API Authentication Method for IKE"
+    },
+    "GSSAPI": {
+        "binary": "621b04bb09882ac1e15935fefa24aeee",
+        "description": "GSSAPI"
+    },
+    "MS_NT5_ISAKMPOAKLEY": {
+        "binary": "1e2b516905991c7d7c96fcbfb587e461",
+        "description": "MS NT5 ISAKMPOAKLEY"
+    },
+    "CISCO_UNITY": {
+        "binary": "12f5f28c457168a9702d9fe274cc",
+        "description": "CISCO-UNITY"
+    },
+    "CISCO_CONCENTRATOR": {
+        "binary": "1f07f70eaa6514d3b0fa96542a500100",
+        "description": "CISCO-CONCENTRATOR"
+    },
+    "CP_01_R65": {
+        "binary": "f4ed19e0c114eb516faaac0ee37daf2807b4381f",
+        "description": "CryptoPro/GOST 0.1 / Check Point R65"
+    },
+    "CP_10_R71": {
+        "binary": "031017e07f7a82e3aa6950c999990100",
+        "description": "CryptoPro/GOST 1.0 / Check Point R71"
+    },
+    "CP_11": {
+        "binary": "031017e07f7a82e3aa6950c999990101",
+        "description": "CryptoPro/GOST 1.1"
+    },
+    "CYBERGUARD": {
+        "binary": "9aa1f3b43472a45d5f506aeb26c0f214",
+        "description": "CyberGuard"
+    },
+    "SHREWSOFT": {
+        "binary": "f14b94b7bff1fef02773b8c49feded26",
+        "description": "Shrew Soft"
+    },
+    "STRONGSWAN": {
+        "binary": "882fe56d6fd20dbc2251613b2ebe5beb",
+        "description": "strongSwan"
+    },
+    "KAME_RACOON": {
+        "binary": "7003cbc1097dbe9c2600ba6983bc8b35",
+        "description": "KAME/racoon"
+    },
+    "IPSEC_TOOLS": {
+        "binary": "20a3622c1cea7ce37bee3ca484425276",
+        "description": "IPSec-Tools"
+    },
+    "NETSCREEN_1": {
+        "binary": "299ee8289f40a8973bc78687e2e7226b532c3b76",
+        "description": "Netscreen-1"
+    },
+    "NETSCREEN_2": {
+        "binary": "3a15e1f3cf2a63582e3ac82d1c64cbe3b6d779e7",
+        "description": "Netscreen-2"
+    },
+    "NETSCREEN_3": {
+        "binary": "47d2b126bfcd83489760e2cf8c5d4d5a03497c15",
+        "description": "Netscreen-3"
+    },
+    "NETSCREEN_4": {
+        "binary": "4a4340b543e02b84c88a8b96a8af9ebe77d9accc",
+        "description": "Netscreen-4"
+    },
+    "NETSCREEN_5": {
+        "binary": "64405f46f03b7660a23be116a1975058e69e8387",
+        "description": "Netscreen-5"
+    },
+    "NETSCREEN_6": {
+        "binary": "699369228741c6d4ca094c93e242c9de19e7b7c6",
+        "description": "Netscreen-6"
+    },
+    "NETSCREEN_7": {
+        "binary": "8c0dc6cf62a0ef1b5c6eabd1b67ba69866adf16a",
+        "description": "Netscreen-7"
+    },
+    "NETSCREEN_8": {
+        "binary": "92d27a9ecb31d99246986d3453d0c3d57a222a61",
+        "description": "Netscreen-8"
+    },
+    "NETSCREEN_9": {
+        "binary": "9b096d9ac3275a7d6fe8b91c583111b09efed1a0",
+        "description": "Netscreen-9"
+    },
+    "NETSCREEN_10": {
+        "binary": "bf03746108d746c904f1f3547de24f78479fed12",
+        "description": "Netscreen-10"
+    },
+    "NETSCREEN_11": {
+        "binary": "c2e80500f4cc5fbf5daaeed3bb59abaeee56c652",
+        "description": "Netscreen-11"
+    },
+    "NETSCREEN_12": {
+        "binary": "c8660a62b03b1b6130bf781608d32a6a8d0fb89f",
+        "description": "Netscreen-12"
+    },
+    "NETSCREEN_13": {
+        "binary": "f885da40b1e7a9abd17655ec5bbec0f21f0ed52e",
+        "description": "Netscreen-13"
+    },
+    "NETSCREEN_14": {
+        "binary": "2a2bcac19b8e91b426107807e02e7249569d6fd3",
+        "description": "Netscreen-14"
+    },
+    "NETSCREEN_15": {
+        "binary": "166f932d55eb64d8e4df4fd37e2313f0d0fd8451",
+        "description": "Netscreen-15"
+    },
+    "NETSCREEN_16": {
+        "binary": "a35bfd05ca1ac0b3d2f24e9e82bfcbff9c9e52b5",
+        "description": "Netscreen-16"
+    },
+    "ZYWALL": {
+        "binary": "625027749d5ab97f5616c1602765cf480a3b7d0b",
+        "description": "ZYWALL"
+    },
+    "SIDEWINDER": {
+        "binary": "8404adf9cda05760b2ca292e4bff537b",
+        "description": "SIDEWINDER"
+    },
+    "SONICWALL": {
+        "binary": "404bf439522ca3f6",
+        "description": "SonicWALL"
+    },
+    "HEARTBEAT_NOTIFY": {
+        "binary": "4865617274426561745f4e6f74696679",
+        "description": "Heartbeat Notify"
+    },
+    "DWR": {
+        "binary": "2d7922c6b301d9b0e1342739e9cfbbd5",
+        "description": "DWR: Delete with reason"
+    },
+    "ARUBA_RAP": {
+        "binary": "ca3e2b854ba8030017dc1023a4fde2041f9f7463",
+        "description": "Remote AP (Aruba Networks)"
+    },
+    "ARUBA_CONTROLLER": {
+        "binary": "3c8e70bdf9c7d74add53e4100915dc2e4bb51274",
+        "description": "Controller (Aruba Networks)"
+    },
+    "ARUBA_VIA_CLIENT": {
+        "binary": "88f0e3149b3fa48b05aa7f685f0b766be186ccb8",
+        "description": "VIA Client (Aruba Networks)"
+    },
+    "ARUBA_VIA_AUTH_PROFILE": {
+        "binary": "56494120417574682050726f66696c65203a20",
+        "description": "VIA Auth Profile (Aruba Networks)"
+    },
+    "MS_IKEE_20080212_CGA1": {
+        "binary": "e3a5966a76379fe707228231e5ce8652",
+        "description": "IKE CGA Version 1"
+    },
+    "MS_IKEE_20080212_MS_NDC": {
+        "binary": "fb1de3cdf341b7ea16b7e5be0855f120",
+        "description": "MS-Negotiation Discovery Capable"
+    },
+    "FORTINET_FORTIGATE": {
+        "binary": "8299031757a36082c6a621de",
+        "description": "Fortigate (Fortinet)"
+    },
+    "FORTINET_FORTICLIENT_CONNECT": {
+        "binary": "4c53427b6d465d1b337bb755a37a7fef",
+        "description": "Forticlient connect license (Fortinet)"
+    },
+    "FORTINET_ENDPOINT_CONTROL": {
+        "binary": "b4f01ca951e9da8d0bafbbd34ad3044e",
+        "description": "Endpoint Control (Fortinet)"
+    },
+    "FORTINET_AUTODISCOVERY_RECEIVER": {
+        "binary": "ca4a4cbb12eab6c58c57067c2e653786",
+        "description": "Auto-Discovery Receiver (Fortinet)"
+    },
+    "FORTINET_AUTODISCOVERY_SENDER": {
+        "binary": "9b15e65a871aff342666623ba5022e60",
+        "description": "Auto-Discovery Sender (Fortinet)"
+    },
+    "FORTINET_EXCHANGE_INTERFACE_IP": {
+        "binary": "a58fec5036f57b21e8b499e336c76ee6",
+        "description": "Exchange Interface IP (Fortinet)"
+    },
+    "FORTINET_FORTICLIENT_EAP_EXTENSION": {
+        "binary": "c1dc4350476b98a429b91781914ca43e",
+        "description": "Forticlient EAP Extension (Fortinet)"
+    }
+}
