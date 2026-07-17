@@ -3,6 +3,28 @@ Changelog
 =========
 
 ------------------
+1.4.0 - 2026-07-17
+------------------
+
+Features
+========
+
+-  IKE (``ike``)
+
+   -  add vendor IDs (#58)
+
+Notable fixes
+=============
+
+-  Generic
+
+   -  fix CAST-128 key size
+
+-  IKE (``ike``)
+
+   -  fix the notify level of IKEv2 status types
+
+------------------
 1.3.0 - 2026-06-15
 ------------------
 

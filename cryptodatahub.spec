@@ -1,5 +1,5 @@
 Name:           python-cryptodatahub
-Version:        1.3.0
+Version:        1.4.0
 Release:        1%{?dist}
 Summary:        Repository of cryptography-related data
 
@@ -54,6 +54,11 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %license LICENSE.txt
 
 %changelog
+* Fri Jul 17 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.4.0-1
+- add IKE vendor IDs (#58)
+- fix CAST-128 key size
+- fix notify level of IKEv2 status types
+
 * Mon Jun 15 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.3.0-1
 - add elliptic-curve parameters (#53)
 - add OpenJDK trusted root CA certificates (#54)
