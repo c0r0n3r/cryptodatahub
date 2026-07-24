@@ -3,72 +3,132 @@
         "_code_in_hex": "0x01",
         "_standard": "RFC2409",
         "code": 1,
-        "long_name": "Pre-shared Key"
+        "long_name": "Pre-shared Key",
+        "names": {
+            "STRONGSWAN": "psk",
+            "LIBRESWAN": "secret",
+            "OPENSWAN": "secret"
+        }
     },
     "DSS_SIGNATURES": {
         "_code_in_hex": "0x02",
         "_standard": "RFC2409",
         "code": 2,
-        "long_name": "DSS Signatures"
+        "long_name": "DSS Signatures",
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        }
     },
     "RSA_SIGNATURES": {
         "_code_in_hex": "0x03",
         "_standard": "RFC2409",
         "code": 3,
-        "long_name": "RSA Signatures"
+        "long_name": "RSA Signatures",
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": "rsasig",
+            "OPENSWAN": "rsasig"
+        }
     },
     "ENCRYPTION_WITH_RSA": {
         "_code_in_hex": "0x04",
         "_standard": "RFC2409",
         "code": 4,
-        "long_name": "Encryption with RSA"
+        "long_name": "Encryption with RSA",
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        }
     },
     "REVISED_ENCRYPTION_WITH_RSA": {
         "_code_in_hex": "0x05",
         "_standard": "RFC2409",
         "code": 5,
-        "long_name": "Revised Encryption with RSA"
+        "long_name": "Revised Encryption with RSA",
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        }
     },
     "ELGAMAL": {
         "_code_in_hex": "0x06",
         "_standard": "RFC2409",
         "code": 6,
-        "long_name": "ElGamal"
+        "long_name": "ElGamal",
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        }
     },
     "REVISED_ELGAMAL": {
         "_code_in_hex": "0x07",
         "_standard": "RFC2409",
         "code": 7,
-        "long_name": "Revised ElGamal"
+        "long_name": "Revised ElGamal",
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        }
     },
     "ECDSA": {
         "_code_in_hex": "0x08",
         "_standard": "RFC2409",
         "code": 8,
-        "long_name": "ECDSA"
+        "long_name": "ECDSA",
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        }
     },
     "ECDSA_SHA_256_P_256": {
         "_code_in_hex": "0x09",
         "_standard": "RFC4754",
         "code": 9,
-        "long_name": "ECDSA with SHA-256 on the P-256 curve"
+        "long_name": "ECDSA with SHA-256 on the P-256 curve",
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        }
     },
     "ECDSA_SHA_384_P_384": {
         "_code_in_hex": "0x0a",
         "_standard": "RFC4754",
         "code": 10,
-        "long_name": "ECDSA with SHA-384 on the P-384 curve"
+        "long_name": "ECDSA with SHA-384 on the P-384 curve",
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        }
     },
     "ECDSA_SHA_512_P_521": {
         "_code_in_hex": "0x0b",
         "_standard": "RFC4754",
         "code": 11,
-        "long_name": "ECDSA with SHA-512 on the P-521 curve"
+        "long_name": "ECDSA with SHA-512 on the P-521 curve",
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        }
     },
     "GSSAPI": {
         "_code_in_hex": "0xfffe",
         "_standard": "RFC2409",
         "code": 65534,
-        "long_name": "GSS-API"
+        "long_name": "GSS-API",
+        "names": {
+            "STRONGSWAN": null,
+            "LIBRESWAN": null,
+            "OPENSWAN": null
+        }
     }
 }

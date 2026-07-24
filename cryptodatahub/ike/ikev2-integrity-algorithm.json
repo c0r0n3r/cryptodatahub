@@ -169,7 +169,7 @@
         "_standard": null,
         "code": 250,
         "names": {
-            "STRONGSWAN": "aescmac",
+            "STRONGSWAN": null,
             "LIBRESWAN": null,
             "OPENSWAN": null
         },

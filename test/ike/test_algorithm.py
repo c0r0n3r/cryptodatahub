@@ -4,6 +4,7 @@ import unittest
 
 from test.common.classes import TestClasses
 
+from cryptodatahub.common.entity import Entity
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.ike.version import IkeVersion
 from cryptodatahub.ike.algorithm import (
@@ -46,6 +47,26 @@ class TestIkev2PseudorandomFunction(TestClasses.TestJsonCodeNumericBase):
     def test_str(self):
         self.assertEqual(str(Ikev2PseudorandomFunction.PRF_HMAC_MD5.value), 'MD5')
 
+    def test_from_name(self):
+        for pseudorandom_function in Ikev2PseudorandomFunction:
+            self.assertEqual(
+                Ikev2PseudorandomFunction.from_name(pseudorandom_function.name.lower()),
+                pseudorandom_function
+            )
+        with self.assertRaises(InvalidValue):
+            Ikev2PseudorandomFunction.from_name('no-such-name')
+
+    def test_from_implementation_name(self):
+        for pseudorandom_function in Ikev2PseudorandomFunction:
+            for entity, token in pseudorandom_function.value.names.items():
+                if token is not None:
+                    self.assertEqual(
+                        Ikev2PseudorandomFunction.from_implementation_name(entity, token),
+                        pseudorandom_function
+                    )
+        with self.assertRaises(InvalidValue):
+            Ikev2PseudorandomFunction.from_implementation_name(Entity.STRONGSWAN, 'no-such-token')
+
 
 class TestIkev2AuthenticationMethod(TestClasses.TestJsonCodeNumericBase):
     @classmethod
@@ -69,6 +90,26 @@ class TestIkev2DiffieHellmanGroup(TestClasses.TestJsonCodeNumericBase):
             str(Ikev2DiffieHellmanGroup.MODP_GROUP_768_BIT.value),
             '768-bit MODP Group/Oakley Group 1'
         )
+
+    def test_from_name(self):
+        for diffie_hellman_group in Ikev2DiffieHellmanGroup:
+            self.assertEqual(
+                Ikev2DiffieHellmanGroup.from_name(diffie_hellman_group.name.lower()),
+                diffie_hellman_group
+            )
+        with self.assertRaises(InvalidValue):
+            Ikev2DiffieHellmanGroup.from_name('no-such-name')
+
+    def test_from_implementation_name(self):
+        for diffie_hellman_group in Ikev2DiffieHellmanGroup:
+            for entity, token in diffie_hellman_group.value.names.items():
+                if token is not None:
+                    self.assertEqual(
+                        Ikev2DiffieHellmanGroup.from_implementation_name(entity, token),
+                        diffie_hellman_group
+                    )
+        with self.assertRaises(InvalidValue):
+            Ikev2DiffieHellmanGroup.from_implementation_name(Entity.STRONGSWAN, 'no-such-token')
 
 
 class TestIkev2EncryptionAlgorithm(TestClasses.TestJsonCodeNumericBase):
@@ -124,6 +165,27 @@ class TestIkev2EncryptionAlgorithm(TestClasses.TestJsonCodeNumericBase):
         self.assertIsNone(chacha.block_cipher_mode)
         self.assertTrue(chacha.aead)
 
+    def test_from_name(self):
+        for encryption_algorithm in Ikev2EncryptionAlgorithm:
+            self.assertEqual(
+                Ikev2EncryptionAlgorithm.from_name(encryption_algorithm.name.lower()),
+                encryption_algorithm
+            )
+        with self.assertRaises(InvalidValue):
+            Ikev2EncryptionAlgorithm.from_name('no-such-name')
+
+    def test_from_implementation_name(self):
+        for encryption_algorithm in Ikev2EncryptionAlgorithm:
+            for bulk_cipher in encryption_algorithm.value.bulk_ciphers:
+                for entity, token in bulk_cipher.names.items():
+                    if token is not None:
+                        self.assertEqual(
+                            Ikev2EncryptionAlgorithm.from_implementation_name(entity, token),
+                            (encryption_algorithm, bulk_cipher.cipher.value.key_size)
+                        )
+        with self.assertRaises(InvalidValue):
+            Ikev2EncryptionAlgorithm.from_implementation_name(Entity.STRONGSWAN, 'no-such-token')
+
 
 class TestIkev2HashAlgorithm(TestClasses.TestJsonCodeNumericBase):
     @classmethod
@@ -158,6 +220,26 @@ class TestIkev2IntegrityAlgorithm(TestClasses.TestJsonCodeNumericBase):
             str(Ikev2IntegrityAlgorithm.NONE.value),
             'null'
         )
+
+    def test_from_name(self):
+        for integrity_algorithm in Ikev2IntegrityAlgorithm:
+            self.assertEqual(
+                Ikev2IntegrityAlgorithm.from_name(integrity_algorithm.name.lower()),
+                integrity_algorithm
+            )
+        with self.assertRaises(InvalidValue):
+            Ikev2IntegrityAlgorithm.from_name('no-such-name')
+
+    def test_from_implementation_name(self):
+        for integrity_algorithm in Ikev2IntegrityAlgorithm:
+            for entity, token in integrity_algorithm.value.names.items():
+                if token is not None:
+                    self.assertEqual(
+                        Ikev2IntegrityAlgorithm.from_implementation_name(entity, token),
+                        integrity_algorithm
+                    )
+        with self.assertRaises(InvalidValue):
+            Ikev2IntegrityAlgorithm.from_implementation_name(Entity.STRONGSWAN, 'no-such-token')
 
 
 class TestIkev2PayloadType(TestClasses.TestJsonCodeNumericBase):
@@ -266,6 +348,32 @@ class TestIkev1AuthenticationMethod(TestClasses.TestJsonCodeNumericBase):
             'RSA Signatures',
         )
 
+    def test_from_name(self):
+        for authentication_method in Ikev1AuthenticationMethod:
+            self.assertEqual(
+                Ikev1AuthenticationMethod.from_name(authentication_method.name.lower()),
+                authentication_method
+            )
+        with self.assertRaises(InvalidValue):
+            Ikev1AuthenticationMethod.from_name('no-such-name')
+
+    def test_from_implementation_name(self):
+        for authentication_method in Ikev1AuthenticationMethod:
+            for entity, token in authentication_method.value.names.items():
+                if token is not None:
+                    self.assertEqual(
+                        Ikev1AuthenticationMethod.from_implementation_name(entity, token),
+                        authentication_method
+                    )
+        self.assertEqual(
+            Ikev1AuthenticationMethod.from_implementation_name(Entity.STRONGSWAN, 'psk'),
+            Ikev1AuthenticationMethod.PRE_SHARED_KEY
+        )
+        with self.assertRaises(InvalidValue):
+            Ikev1AuthenticationMethod.from_implementation_name(Entity.STRONGSWAN, 'no-such-token')
+        with self.assertRaises(InvalidValue):
+            Ikev1AuthenticationMethod.from_implementation_name(Entity.STRONGSWAN, None)
+
 
 class TestIkev1DiffieHellmanGroup(TestClasses.TestJsonCodeNumericBase):
     @classmethod
@@ -277,6 +385,26 @@ class TestIkev1DiffieHellmanGroup(TestClasses.TestJsonCodeNumericBase):
             str(Ikev1DiffieHellmanGroup.MODP_768_BIT.value),
             '768-bit MODP Group/Oakley Group 1'
         )
+
+    def test_from_name(self):
+        for diffie_hellman_group in Ikev1DiffieHellmanGroup:
+            self.assertEqual(
+                Ikev1DiffieHellmanGroup.from_name(diffie_hellman_group.name.lower()),
+                diffie_hellman_group
+            )
+        with self.assertRaises(InvalidValue):
+            Ikev1DiffieHellmanGroup.from_name('no-such-name')
+
+    def test_from_implementation_name(self):
+        for diffie_hellman_group in Ikev1DiffieHellmanGroup:
+            for entity, token in diffie_hellman_group.value.names.items():
+                if token is not None:
+                    self.assertEqual(
+                        Ikev1DiffieHellmanGroup.from_implementation_name(entity, token),
+                        diffie_hellman_group
+                    )
+        with self.assertRaises(InvalidValue):
+            Ikev1DiffieHellmanGroup.from_implementation_name(Entity.STRONGSWAN, 'no-such-token')
 
 
 class TestIkev1EncryptionAlgorithm(TestClasses.TestJsonCodeNumericBase):
@@ -309,6 +437,27 @@ class TestIkev1EncryptionAlgorithm(TestClasses.TestJsonCodeNumericBase):
             'AES-128'
         )
 
+    def test_from_name(self):
+        for encryption_algorithm in Ikev1EncryptionAlgorithm:
+            self.assertEqual(
+                Ikev1EncryptionAlgorithm.from_name(encryption_algorithm.name.lower()),
+                encryption_algorithm
+            )
+        with self.assertRaises(InvalidValue):
+            Ikev1EncryptionAlgorithm.from_name('no-such-name')
+
+    def test_from_implementation_name(self):
+        for encryption_algorithm in Ikev1EncryptionAlgorithm:
+            for bulk_cipher in encryption_algorithm.value.bulk_ciphers:
+                for entity, token in bulk_cipher.names.items():
+                    if token is not None:
+                        self.assertEqual(
+                            Ikev1EncryptionAlgorithm.from_implementation_name(entity, token),
+                            (encryption_algorithm, bulk_cipher.cipher.value.key_size)
+                        )
+        with self.assertRaises(InvalidValue):
+            Ikev1EncryptionAlgorithm.from_implementation_name(Entity.STRONGSWAN, 'no-such-token')
+
 
 class TestIkev1HashAlgorithm(TestClasses.TestJsonCodeNumericBase):
     @classmethod
@@ -320,6 +469,26 @@ class TestIkev1HashAlgorithm(TestClasses.TestJsonCodeNumericBase):
             str(Ikev1HashAlgorithm.MD5.value),
             'MD5'
         )
+
+    def test_from_name(self):
+        for hash_algorithm in Ikev1HashAlgorithm:
+            self.assertEqual(
+                Ikev1HashAlgorithm.from_name(hash_algorithm.name.lower()),
+                hash_algorithm
+            )
+        with self.assertRaises(InvalidValue):
+            Ikev1HashAlgorithm.from_name('no-such-name')
+
+    def test_from_implementation_name(self):
+        for hash_algorithm in Ikev1HashAlgorithm:
+            for entity, token in hash_algorithm.value.names.items():
+                if token is not None:
+                    self.assertEqual(
+                        Ikev1HashAlgorithm.from_implementation_name(entity, token),
+                        hash_algorithm
+                    )
+        with self.assertRaises(InvalidValue):
+            Ikev1HashAlgorithm.from_implementation_name(Entity.STRONGSWAN, 'no-such-token')
 
 
 class TestIkeVendorId(TestClasses.TestJsonBase):

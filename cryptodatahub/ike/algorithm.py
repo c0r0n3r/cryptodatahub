@@ -7,6 +7,7 @@ import typing
 import attr
 
 from cryptodatahub.common.algorithm import GradeableAlgorithmParams
+from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.grade import GradeableComplex
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
@@ -15,6 +16,7 @@ from cryptodatahub.common.types import (
     CryptoDataParamsBase,
     CryptoDataParamsEnumNumeric,
     HexData,
+    convert_dict_to_object,
     convert_enum,
     convert_iterable,
     convert_mapping,
@@ -29,11 +31,34 @@ from cryptodatahub.common.pqc import (
 )
 
 
+class CryptoDataEnumIkeAlgorithmBase(CryptoDataEnumCodedBase):
+    """IKE algorithm enum base that adds reverse lookups"""
+
+    @classmethod
+    def from_name(cls, name):
+        try:
+            return cls[name.upper()]
+        except KeyError as e:
+            raise InvalidValue(name, cls, 'name') from e
+
+    @classmethod
+    def from_implementation_name(cls, entity, name):
+        if name is not None:
+            for item in cls:
+                bulk_ciphers = getattr(item.value, 'bulk_ciphers', None)
+                if bulk_ciphers is None:
+                    if getattr(item.value, 'names', {}).get(entity) == name:
+                        return item
+                else:
+                    for bulk_cipher in bulk_ciphers:
+                        if bulk_cipher.names.get(entity) == name:
+                            return item, bulk_cipher.cipher.value.key_size
+
+        raise InvalidValue(name, cls, 'names')
+
+
 @attr.s(frozen=True)
 class IkeEncryptionBulkCipherEntry(CryptoDataParamsBase):
-    """A bulk cipher variant of an IKE encryption algorithm, carrying the
-    per-implementation proposal keyword for that specific key size."""
-
     cipher: BlockCipher = attr.ib(
         converter=convert_enum(BlockCipher),
         validator=attr.validators.instance_of(BlockCipher)
@@ -45,12 +70,6 @@ class IkeEncryptionBulkCipherEntry(CryptoDataParamsBase):
             value_validator=attr.validators.optional(attr.validators.instance_of(str))
         )
     )
-
-
-def _convert_bulk_cipher_entry(value):
-    if isinstance(value, IkeEncryptionBulkCipherEntry):
-        return value
-    return IkeEncryptionBulkCipherEntry(**value)
 
 
 @attr.s(frozen=True)
@@ -91,7 +110,7 @@ class Ikev2PseudorandomFunctionParams(IkeAlgorithmParams):
         return (self.mac,)
 
 
-Ikev2PseudorandomFunction = CryptoDataEnumCodedBase(
+Ikev2PseudorandomFunction = CryptoDataEnumIkeAlgorithmBase(
     'PseudorandomFunction',
     CryptoDataEnumBase.get_json_records(Ikev2PseudorandomFunctionParams)
 )
@@ -151,7 +170,7 @@ class Ikev2IntegrityAlgorithmParams(IkeAlgorithmParams):
         return (self.hmac,) if self.hmac is not None else ()
 
 
-Ikev2IntegrityAlgorithm = CryptoDataEnumCodedBase(
+Ikev2IntegrityAlgorithm = CryptoDataEnumIkeAlgorithmBase(
     'IntegrityAlgorithm',
     CryptoDataEnumBase.get_json_records(Ikev2IntegrityAlgorithmParams)
 )
@@ -178,7 +197,7 @@ class Ikev2DiffieHellmanGroupParams(IkeAlgorithmParams):
         return (self.key_parameter,)
 
 
-Ikev2DiffieHellmanGroup = CryptoDataEnumCodedBase(
+Ikev2DiffieHellmanGroup = CryptoDataEnumIkeAlgorithmBase(
     'DiffieHellmanGroup',
     CryptoDataEnumBase.get_json_records(Ikev2DiffieHellmanGroupParams)
 )
@@ -189,7 +208,7 @@ class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
     """Encryption algorithm parameters."""
 
     bulk_ciphers: list[IkeEncryptionBulkCipherEntry] = attr.ib(
-        converter=convert_iterable(_convert_bulk_cipher_entry),
+        converter=convert_iterable(convert_dict_to_object(IkeEncryptionBulkCipherEntry)),
         validator=attr.validators.deep_iterable(
             member_validator=attr.validators.instance_of(IkeEncryptionBulkCipherEntry)
         ),
@@ -230,7 +249,7 @@ class Ikev2EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
         attr.validate(self)
 
 
-Ikev2EncryptionAlgorithm = CryptoDataEnumCodedBase(
+Ikev2EncryptionAlgorithm = CryptoDataEnumIkeAlgorithmBase(
     'Ikev2EncryptionAlgorithm',
     CryptoDataEnumBase.get_json_records(Ikev2EncryptionAlgorithmParams)
 )
@@ -574,7 +593,7 @@ class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
     """IKEv1 encryption algorithm parameters."""
 
     bulk_ciphers: list[IkeEncryptionBulkCipherEntry] = attr.ib(
-        converter=convert_iterable(_convert_bulk_cipher_entry),
+        converter=convert_iterable(convert_dict_to_object(IkeEncryptionBulkCipherEntry)),
         validator=attr.validators.deep_iterable(
             member_validator=attr.validators.instance_of(IkeEncryptionBulkCipherEntry)
         ),
@@ -610,7 +629,7 @@ class Ikev1EncryptionAlgorithmParams(CryptoDataParamsEnumNumeric, GradeableCompl
         attr.validate(self)
 
 
-Ikev1EncryptionAlgorithm = CryptoDataEnumCodedBase(
+Ikev1EncryptionAlgorithm = CryptoDataEnumIkeAlgorithmBase(
     'Ikev1EncryptionAlgorithm',
     CryptoDataEnumBase.get_json_records(Ikev1EncryptionAlgorithmParams)
 )
@@ -637,7 +656,7 @@ class Ikev1HashAlgorithmParams(IkeAlgorithmParams):
         return ['hash']
 
 
-Ikev1HashAlgorithm = CryptoDataEnumCodedBase(
+Ikev1HashAlgorithm = CryptoDataEnumIkeAlgorithmBase(
     'Ikev1HashAlgorithm',
     CryptoDataEnumBase.get_json_records(Ikev1HashAlgorithmParams)
 )
@@ -647,12 +666,21 @@ Ikev1HashAlgorithm = CryptoDataEnumCodedBase(
 class Ikev1AuthenticationMethodParams(IkeLongNameParams):
     """IKEv1 authentication method parameters."""
 
+    names: dict[Entity, typing.Optional[str]] = attr.ib(
+        kw_only=True,
+        converter=convert_mapping(convert_enum(Entity)),
+        validator=attr.validators.deep_mapping(
+            key_validator=attr.validators.instance_of(Entity),
+            value_validator=attr.validators.optional(attr.validators.instance_of(str))
+        )
+    )
+
     @classmethod
     def get_code_size(cls):
         return 2
 
 
-Ikev1AuthenticationMethod = CryptoDataEnumCodedBase(
+Ikev1AuthenticationMethod = CryptoDataEnumIkeAlgorithmBase(
     'Ikev1AuthenticationMethod',
     CryptoDataEnumBase.get_json_records(Ikev1AuthenticationMethodParams)
 )
@@ -773,7 +801,7 @@ class Ikev1DiffieHellmanGroupParams(IkeAlgorithmParams):
         return (self.key_parameter,)
 
 
-Ikev1DiffieHellmanGroup = CryptoDataEnumCodedBase(
+Ikev1DiffieHellmanGroup = CryptoDataEnumIkeAlgorithmBase(
     'DiffieHellmanGroup',
     CryptoDataEnumBase.get_json_records(Ikev1DiffieHellmanGroupParams)
 )
