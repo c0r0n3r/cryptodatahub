@@ -14,7 +14,9 @@ from cryptodatahub.common.grade import (
 )
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
+    CryptoDataEnumCodedBase,
     CryptoDataEnumOIDBase,
+    CryptoDataParamsEnumNumeric,
     CryptoDataParamsEnumString,
     CryptoDataParamsNamed,
     CryptoDataParamsOIDOptional,
@@ -116,6 +118,30 @@ class MACParams(CryptoDataParamsOIDOptional, GradeableVulnerabilities):
 
 
 MAC = CryptoDataEnumOIDBase('MAC', CryptoDataEnumOIDBase.get_json_records(MACParams))
+
+
+@attr.s(frozen=True)
+class IpProtocolNumberParams(CryptoDataParamsEnumNumeric):
+    """IANA "Assigned Internet Protocol Numbers" — 1-octet field carried
+    in RFC 2407 §4.6.2 IKEv1 IDENTIFICATION and RFC 7296 §3.5 IKEv2
+    IDi/IDr payloads. Values from
+    https://www.iana.org/assignments/protocol-numbers/ (subset covers
+    protocols commonly seen alongside IPsec; add entries as needed)."""
+
+    long_name = attr.ib(validator=attr.validators.instance_of(str))
+
+    def __str__(self):
+        return self.long_name
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+IpProtocolNumber = CryptoDataEnumCodedBase(
+    'IpProtocolNumber',
+    CryptoDataEnumCodedBase.get_json_records(IpProtocolNumberParams),
+)
 
 
 @attr.s(frozen=True)

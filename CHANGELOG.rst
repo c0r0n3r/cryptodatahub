@@ -12,6 +12,7 @@ Features
 -  Generic
 
    -  add long names to block cipher and MAC algorithm entries
+   -  add IANA assigned internet protocol numbers (#57)
 
 -  IKE (``ike``)
 

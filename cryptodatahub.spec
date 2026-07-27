@@ -68,6 +68,7 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 - add GSS-API IKEv1 authentication method (#57)
 - unify the IKEv2 authentication method entries under the long name attribute (#57)
 - add missing IKEv2 certificate types (#57)
+- add IANA assigned internet protocol numbers (#57)
 
 * Fri Jul 17 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.4.0-1
 - add IKE vendor IDs (#58)

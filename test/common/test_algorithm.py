@@ -9,6 +9,7 @@ from cryptodatahub.common.algorithm import (
     BlockCipher,
     BlockCipherMode,
     Hash,
+    IpProtocolNumber,
     KeyExchange,
     NamedGroup,
     MAC,
@@ -90,3 +91,12 @@ class TestSignature(TestClasses.TestJsonBase):
     @classmethod
     def _get_class(cls):
         return Signature
+
+
+class TestIpProtocolNumber(TestClasses.TestJsonCodeNumericBase):
+    @classmethod
+    def _get_class(cls):
+        return IpProtocolNumber
+
+    def test_str(self):
+        self.assertEqual(str(IpProtocolNumber.TCP.value), 'Transmission Control')

@@ -1,0 +1,122 @@
+{
+    "HOPOPT": {
+        "_code_in_hex": "0x00",
+        "_standard": "RFC8200",
+        "code": 0,
+        "long_name": "IPv6 Hop-by-Hop Option"
+    },
+    "ICMP": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC792",
+        "code": 1,
+        "long_name": "Internet Control Message"
+    },
+    "IGMP": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC1112",
+        "code": 2,
+        "long_name": "Internet Group Management"
+    },
+    "IPV4": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC2003",
+        "code": 4,
+        "long_name": "IPv4 encapsulation"
+    },
+    "TCP": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC9293",
+        "code": 6,
+        "long_name": "Transmission Control"
+    },
+    "UDP": {
+        "_code_in_hex": "0x11",
+        "_standard": "RFC768",
+        "code": 17,
+        "long_name": "User Datagram"
+    },
+    "IPV6": {
+        "_code_in_hex": "0x29",
+        "_standard": "RFC2473",
+        "code": 41,
+        "long_name": "IPv6 encapsulation"
+    },
+    "IPV6_ROUTE": {
+        "_code_in_hex": "0x2b",
+        "_standard": "RFC8200",
+        "code": 43,
+        "long_name": "Routing Header for IPv6"
+    },
+    "IPV6_FRAG": {
+        "_code_in_hex": "0x2c",
+        "_standard": "RFC8200",
+        "code": 44,
+        "long_name": "Fragment Header for IPv6"
+    },
+    "GRE": {
+        "_code_in_hex": "0x2f",
+        "_standard": "RFC2784",
+        "code": 47,
+        "long_name": "Generic Routing Encapsulation"
+    },
+    "ESP": {
+        "_code_in_hex": "0x32",
+        "_standard": "RFC4303",
+        "code": 50,
+        "long_name": "Encapsulating Security Payload"
+    },
+    "AH": {
+        "_code_in_hex": "0x33",
+        "_standard": "RFC4302",
+        "code": 51,
+        "long_name": "Authentication Header"
+    },
+    "ICMPV6": {
+        "_code_in_hex": "0x3a",
+        "_standard": "RFC4443",
+        "code": 58,
+        "long_name": "ICMP for IPv6"
+    },
+    "IPV6_NONXT": {
+        "_code_in_hex": "0x3b",
+        "_standard": "RFC8200",
+        "code": 59,
+        "long_name": "No Next Header for IPv6"
+    },
+    "IPV6_OPTS": {
+        "_code_in_hex": "0x3c",
+        "_standard": "RFC8200",
+        "code": 60,
+        "long_name": "Destination Options for IPv6"
+    },
+    "EIGRP": {
+        "_code_in_hex": "0x58",
+        "_standard": "RFC7868",
+        "code": 88,
+        "long_name": "Enhanced Interior Gateway Routing Protocol"
+    },
+    "OSPFIGP": {
+        "_code_in_hex": "0x59",
+        "_standard": "RFC1583",
+        "code": 89,
+        "long_name": "Open Shortest Path First"
+    },
+    "L2TP": {
+        "_code_in_hex": "0x73",
+        "_standard": "RFC3931",
+        "code": 115,
+        "long_name": "Layer Two Tunneling Protocol"
+    },
+    "SCTP": {
+        "_code_in_hex": "0x84",
+        "_standard": "RFC9260",
+        "code": 132,
+        "long_name": "Stream Control Transmission Protocol"
+    },
+    "UDPLITE": {
+        "_code_in_hex": "0x88",
+        "_standard": "RFC3828",
+        "code": 136,
+        "long_name": "Lightweight User Datagram Protocol"
+    }
+}
