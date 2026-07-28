@@ -8,21 +8,21 @@
     },
     "AES_128": {
         "name": "AES-128",
-        "long_name": null,
+        "long_name": "Advanced Encryption Standard (128)",
         "vulnerabilities": [],
         "key_size": 128,
         "block_size": 128
     },
     "AES_192": {
         "name": "AES-192",
-        "long_name": null,
+        "long_name": "Advanced Encryption Standard (192)",
         "vulnerabilities": [],
         "key_size": 192,
         "block_size": 128
     },
     "AES_256": {
         "name": "AES-256",
-        "long_name": null,
+        "long_name": "Advanced Encryption Standard (256)",
         "vulnerabilities": [],
         "key_size": 256,
         "block_size": 128
@@ -302,7 +302,7 @@
     },
     "DES": {
         "name": "DES",
-        "long_name": null,
+        "long_name": "Data Encryption Standard",
         "vulnerabilities": [
             {
                 "attack_type": "BRUTE_FORCE",
@@ -320,7 +320,7 @@
     },
     "DES40": {
         "name": "DES-40",
-        "long_name": null,
+        "long_name": "Data Encryption Standard (40)",
         "vulnerabilities": [
             {
                 "attack_type": "BRUTE_FORCE",
@@ -373,7 +373,7 @@
     },
     "IDEA": {
         "name": "IDEA",
-        "long_name": null,
+        "long_name": "International Data Encryption Algorithm",
         "vulnerabilities": [
             {
                 "attack_type": null,
@@ -386,7 +386,7 @@
     },
     "IDEA_128": {
         "name": "IDEA-128",
-        "long_name": null,
+        "long_name": "International Data Encryption Algorithm (128)",
         "vulnerabilities": null,
         "key_size": 128,
         "block_size": 64
@@ -432,35 +432,35 @@
     },
     "RC2_40": {
         "name": "RC2-40",
-        "long_name": null,
+        "long_name": "Rivest Cipher 2 (40)",
         "vulnerabilities": null,
         "key_size": 40,
         "block_size": 64
     },
     "RC2": {
         "name": "RC2",
-        "long_name": null,
+        "long_name": "Rivest Cipher 2",
         "vulnerabilities": null,
         "key_size": 64,
         "block_size": 64
     },
     "RC2_56": {
         "name": "RC2-56",
-        "long_name": null,
+        "long_name": "Rivest Cipher 2 (56)",
         "vulnerabilities": null,
         "key_size": 56,
         "block_size": 64
     },
     "RC2_128": {
         "name": "RC2-128",
-        "long_name": null,
+        "long_name": "Rivest Cipher 2 (128)",
         "vulnerabilities": null,
         "key_size": 128,
         "block_size": 64
     },
     "RC4_40": {
         "name": "RC4-40",
-        "long_name": null,
+        "long_name": "Rivest Cipher 4 (40)",
         "vulnerabilities": [
             {
                 "attack_type": "MITM",
@@ -473,7 +473,7 @@
     },
     "RC4_56": {
         "name": "RC4-56",
-        "long_name": null,
+        "long_name": "Rivest Cipher 4 (56)",
         "vulnerabilities": [
             {
                 "attack_type": "MITM",
@@ -486,7 +486,7 @@
     },
     "RC4_64": {
         "name": "RC4-64",
-        "long_name": null,
+        "long_name": "Rivest Cipher 4 (64)",
         "vulnerabilities": [
             {
                 "attack_type": "MITM",
@@ -499,7 +499,7 @@
     },
     "RC4_128": {
         "name": "RC4-128",
-        "long_name": null,
+        "long_name": "Rivest Cipher 4 (128)",
         "vulnerabilities": [
             {
                 "attack_type": "MITM",
@@ -512,7 +512,7 @@
     },
     "RC4_256": {
         "name": "RC4-256",
-        "long_name": null,
+        "long_name": "Rivest Cipher 4 (256)",
         "vulnerabilities": [
             {
                 "attack_type": "MITM",
@@ -525,7 +525,7 @@
     },
     "RC5_32": {
         "name": "RC5-32",
-        "long_name": null,
+        "long_name": "Rivest Cipher 5 (32)",
         "vulnerabilities": [
             {
                 "attack_type": "BIRTHDAY",
@@ -538,7 +538,7 @@
     },
     "RC5_64": {
         "name": "RC5-64",
-        "long_name": null,
+        "long_name": "Rivest Cipher 5 (64)",
         "vulnerabilities": [
             {
                 "attack_type": "BIRTHDAY",
@@ -551,7 +551,7 @@
     },
     "RC5_128": {
         "name": "RC5-128",
-        "long_name": null,
+        "long_name": "Rivest Cipher 5 (128)",
         "vulnerabilities": [
             {
                 "attack_type": "BIRTHDAY",

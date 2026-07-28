@@ -205,7 +205,7 @@
     },
     "MD5": {
         "name": "MD5",
-        "long_name": null,
+        "long_name": "Message Digest 5",
         "oid": "1.2.840.113549.2.6",
         "vulnerabilities": [
             {
@@ -251,7 +251,7 @@
     },
     "SHA1": {
         "name": "SHA-1",
-        "long_name": null,
+        "long_name": "Secure Hash Algorithm 1",
         "oid": "1.2.840.113549.2.7",
         "vulnerabilities": [
             {
@@ -279,7 +279,7 @@
     },
     "SHA2_224": {
         "name": "SHA2-224",
-        "long_name": null,
+        "long_name": "Secure Hash Algorithm 2 (224)",
         "oid": "1.2.840.113549.2.8",
         "vulnerabilities": [],
         "digest_size": null,
@@ -287,7 +287,7 @@
     },
     "SHA2_256": {
         "name": "SHA2-256",
-        "long_name": null,
+        "long_name": "Secure Hash Algorithm 2 (256)",
         "oid": "1.2.840.113549.2.9",
         "vulnerabilities": [],
         "digest_size": null,
@@ -303,7 +303,7 @@
     },
     "SHA2_384": {
         "name": "SHA2-384",
-        "long_name": null,
+        "long_name": "Secure Hash Algorithm 2 (384)",
         "oid": "1.2.840.113549.2.10",
         "vulnerabilities": [],
         "digest_size": null,
@@ -319,7 +319,7 @@
     },
     "SHA2_512": {
         "name": "SHA2-512",
-        "long_name": null,
+        "long_name": "Secure Hash Algorithm 2 (512)",
         "oid": "1.2.840.113549.2.11",
         "vulnerabilities": [],
         "digest_size": null,
