@@ -132,8 +132,15 @@ class TestIkev2HashAlgorithm(TestClasses.TestJsonCodeNumericBase):
 
     def test_str(self):
         self.assertEqual(
-            str(Ikev2HashAlgorithm.HASH_MD5.value),
-            'MD5'
+            str(Ikev2HashAlgorithm.SHA2_256.value),
+            'SHA-256'
+        )
+
+    def test_str_identity(self):
+        self.assertIsNone(Ikev2HashAlgorithm.IDENTITY.value.hash_algorithm)
+        self.assertEqual(
+            str(Ikev2HashAlgorithm.IDENTITY.value),
+            'Identity'
         )
 
 

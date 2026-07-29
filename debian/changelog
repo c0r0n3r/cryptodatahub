@@ -14,6 +14,7 @@ python-cryptodatahub (1.5.0) unstable; urgency=low
   * unify the IKEv2 authentication method entries under the long name attribute (#57)
   * add missing IKEv2 certificate types (#57)
   * add IANA assigned internet protocol numbers (#57)
+  * fix the values of the IKEv2 hash algorithms according to the IANA registry (#57)
 
  -- Szilárd Pfeiffer <coroner@pfeifferszilard.hu>  Thu, 30 Jul 2026 11:47:55 +0200
 

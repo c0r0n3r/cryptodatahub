@@ -29,6 +29,7 @@ Notable fixes
 -  IKE (``ike``)
 
    -  fix the code size of the IKEv2 authentication methods (#57)
+   -  fix the values of the IKEv2 hash algorithms according to the IANA registry (#57)
 
 Improvements
 ============

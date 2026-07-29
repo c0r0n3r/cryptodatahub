@@ -239,12 +239,17 @@ Ikev2EncryptionAlgorithm = CryptoDataEnumCodedBase(
 class Ikev2HashAlgorithmParams(IkeAlgorithmParams):
     """Hash algorithm parameters."""
 
-    hash_algorithm: Hash = attr.ib(
-        converter=convert_enum(Hash),
-        validator=attr.validators.instance_of(Hash)
+    hash_algorithm: typing.Optional[Hash] = attr.ib(
+        converter=attr.converters.optional(convert_enum(Hash)),
+        validator=attr.validators.optional(attr.validators.instance_of(Hash))
     )
 
     def __str__(self):
+        # RFC 8420 §2 defines the "Identity" hash marker for signature schemes that accept arbitrary-size input
+        # (Ed25519, Ed448).
+        if self.hash_algorithm is None:
+            return 'Identity'
+
         return self.hash_algorithm.value.name
 
     @classmethod
@@ -256,7 +261,7 @@ class Ikev2HashAlgorithmParams(IkeAlgorithmParams):
         return (self.hash_algorithm,)
 
 
-Ikev2HashAlgorithm = CryptoDataEnumBase(
+Ikev2HashAlgorithm = CryptoDataEnumCodedBase(
     'HashAlgorithm',
     CryptoDataEnumBase.get_json_records(Ikev2HashAlgorithmParams)
 )
