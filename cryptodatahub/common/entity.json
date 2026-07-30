@@ -1,18 +1,18 @@
 {
     "AKAMAI": {
-        "name": "ANSI",
-        "long_name": "American National Standards Institute",
-        "type": "NONPROFIT_ORG",
-        "activities": [
-            "STANDARD_DEVELOPER"
-        ]
-    },
-    "ANSI": {
         "name": "Akamai Technologies",
         "long_name": "Akamai Technologies, Inc.",
         "type": "FOR_PROFIT_ORG",
         "activities": [
             "CT_LOG_OPERATOR"
+        ]
+    },
+    "ANSI": {
+        "name": "ANSI",
+        "long_name": "American National Standards Institute",
+        "type": "NONPROFIT_ORG",
+        "activities": [
+            "STANDARD_DEVELOPER"
         ]
     },
     "ANDROID": {
