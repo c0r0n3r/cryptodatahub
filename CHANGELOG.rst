@@ -3,6 +3,17 @@ Changelog
 =========
 
 ------------------
+1.5.0 - Unreleased
+------------------
+
+Features
+========
+
+-  Generic
+
+   -  add long names to block cipher and MAC algorithm entries
+
+------------------
 1.4.0 - 2026-07-17
 ------------------
 

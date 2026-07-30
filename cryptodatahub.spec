@@ -54,6 +54,9 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %license LICENSE.txt
 
 %changelog
+* Thu Jul 30 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.5.0-1
+- add long names to block cipher and MAC algorithm entries
+
 * Fri Jul 17 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.4.0-1
 - add IKE vendor IDs (#58)
 - fix CAST-128 key size
