@@ -229,5 +229,12 @@
         "oid": null,
         "key_type": "XMSS",
         "hash_algorithm": "SHA2_256"
+    },
+    "RSASSA_PSS": {
+        "name": "RSA Signature Scheme with Appendix (SSA) based on the Probabilistic Signature Scheme (PSS)",
+        "long_name": null,
+        "oid": "1.2.840.113549.1.1.10",
+        "key_type": "RSA",
+        "hash_algorithm": "SHA1"
     }
 }

@@ -3,18 +3,54 @@
         "_code_in_hex": "0x01",
         "_standard": "RFC7296",
         "code": 1,
-        "description": "RSA Digital Signature"
+        "long_name": "RSA Digital Signature"
     },
     "SHARED_KEY_MESSAGE_INTEGRITY_CODE": {
         "_code_in_hex": "0x02",
         "_standard": "RFC7296",
         "code": 2,
-        "description": "Shared Key Message Integrity Code"
+        "long_name": "Shared Key Message Integrity Code"
     },
     "DSS_DIGITAL_SIGNATURE": {
         "_code_in_hex": "0x03",
         "_standard": "RFC7296",
         "code": 3,
-        "description": "DSS Digital Signature"
+        "long_name": "DSS Digital Signature"
+    },
+    "ECDSA_SHA_256_P_256": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC4754",
+        "code": 9,
+        "long_name": "ECDSA with SHA-256 on the P-256 curve"
+    },
+    "ECDSA_SHA_384_P_384": {
+        "_code_in_hex": "0x0a",
+        "_standard": "RFC4754",
+        "code": 10,
+        "long_name": "ECDSA with SHA-384 on the P-384 curve"
+    },
+    "ECDSA_SHA_512_P_521": {
+        "_code_in_hex": "0x0b",
+        "_standard": "RFC4754",
+        "code": 11,
+        "long_name": "ECDSA with SHA-512 on the P-521 curve"
+    },
+    "GENERIC_SECURE_PASSWORD_AUTHENTICATION_METHOD": {
+        "_code_in_hex": "0x0c",
+        "_standard": "RFC6467",
+        "code": 12,
+        "long_name": "Generic Secure Password Authentication Method"
+    },
+    "NULL_AUTHENTICATION": {
+        "_code_in_hex": "0x0d",
+        "_standard": "RFC7619",
+        "code": 13,
+        "long_name": "NULL Authentication"
+    },
+    "DIGITAL_SIGNATURE": {
+        "_code_in_hex": "0x0e",
+        "_standard": "RFC7427",
+        "code": 14,
+        "long_name": "Digital Signature with explicit AlgorithmIdentifier envelope"
     }
 }

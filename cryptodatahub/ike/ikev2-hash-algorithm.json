@@ -1,19 +1,8 @@
 {
-    "HASH_MD5": {
+    "SHA1": {
         "_code_in_hex": "0x01",
-        "_standard": "RFC2403",
+        "_standard": "RFC7427",
         "code": 1,
-        "names": {
-            "STRONGSWAN": "md5",
-            "LIBRESWAN": "md5",
-            "OPENSWAN": "md5"
-        },
-        "hash_algorithm": "MD5"
-    },
-    "HASH_SHA1": {
-        "_code_in_hex": "0x02",
-        "_standard": "RFC2404",
-        "code": 2,
         "names": {
             "STRONGSWAN": "sha1",
             "LIBRESWAN": "sha1",
@@ -21,21 +10,10 @@
         },
         "hash_algorithm": "SHA1"
     },
-    "HASH_TIGER": {
-        "_code_in_hex": "0x03",
-        "_standard": "RFC7296",
-        "code": 3,
-        "names": {
-            "STRONGSWAN": null,
-            "LIBRESWAN": null,
-            "OPENSWAN": null
-        },
-        "hash_algorithm": "TIGER_128"
-    },
-    "HASH_SHA2_256": {
-        "_code_in_hex": "0x04",
-        "_standard": "RFC4868",
-        "code": 4,
+    "SHA2_256": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC7427",
+        "code": 2,
         "names": {
             "STRONGSWAN": "sha256",
             "LIBRESWAN": "sha2_256",
@@ -43,10 +21,10 @@
         },
         "hash_algorithm": "SHA2_256"
     },
-    "HASH_SHA2_384": {
-        "_code_in_hex": "0x05",
-        "_standard": "RFC4868",
-        "code": 5,
+    "SHA2_384": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC7427",
+        "code": 3,
         "names": {
             "STRONGSWAN": "sha384",
             "LIBRESWAN": "sha2_384",
@@ -54,10 +32,10 @@
         },
         "hash_algorithm": "SHA2_384"
     },
-    "HASH_SHA2_512": {
-        "_code_in_hex": "0x06",
-        "_standard": "RFC4868",
-        "code": 6,
+    "SHA2_512": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC7427",
+        "code": 4,
         "names": {
             "STRONGSWAN": "sha512",
             "LIBRESWAN": "sha2_512",
@@ -65,81 +43,37 @@
         },
         "hash_algorithm": "SHA2_512"
     },
-    "HASH_MD4": {
-        "_code_in_hex": "0x401",
-        "_standard": null,
-        "code": 1025,
-        "names": {
-            "STRONGSWAN": "md4",
-            "LIBRESWAN": null,
-            "OPENSWAN": null
-        },
-        "hash_algorithm": "MD4"
-    },
-    "HASH_MD5_PRIVATE": {
-        "_code_in_hex": "0x402",
-        "_standard": null,
-        "code": 1026,
+    "IDENTITY": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC8420",
+        "code": 5,
         "names": {
             "STRONGSWAN": null,
             "LIBRESWAN": null,
             "OPENSWAN": null
         },
-        "hash_algorithm": "MD5"
+        "hash_algorithm": null
     },
-    "HASH_SHA224": {
-        "_code_in_hex": "0x403",
-        "_standard": null,
-        "code": 1027,
+    "STREEBOG_256": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC9385",
+        "code": 6,
         "names": {
-            "STRONGSWAN": "sha2_224",
+            "STRONGSWAN": null,
             "LIBRESWAN": null,
             "OPENSWAN": null
         },
-        "hash_algorithm": "SHA2_224"
+        "hash_algorithm": "GOST_R3411_12_256"
     },
-    "HASH_SHA3_224": {
-        "_code_in_hex": "0x404",
-        "_standard": null,
-        "code": 1028,
+    "STREEBOG_512": {
+        "_code_in_hex": "0x07",
+        "_standard": "RFC9385",
+        "code": 7,
         "names": {
-            "STRONGSWAN": "sha3_224",
+            "STRONGSWAN": null,
             "LIBRESWAN": null,
             "OPENSWAN": null
         },
-        "hash_algorithm": "SHA3_224"
-    },
-    "HASH_SHA3_256": {
-        "_code_in_hex": "0x405",
-        "_standard": null,
-        "code": 1029,
-        "names": {
-            "STRONGSWAN": "sha3_256",
-            "LIBRESWAN": null,
-            "OPENSWAN": null
-        },
-        "hash_algorithm": "SHA3_256"
-    },
-    "HASH_SHA3_384": {
-        "_code_in_hex": "0x406",
-        "_standard": null,
-        "code": 1030,
-        "names": {
-            "STRONGSWAN": "sha3_384",
-            "LIBRESWAN": null,
-            "OPENSWAN": null
-        },
-        "hash_algorithm": "SHA3_384"
-    },
-    "HASH_SHA3_512": {
-        "_code_in_hex": "0x407",
-        "_standard": null,
-        "code": 1031,
-        "names": {
-            "STRONGSWAN": "sha3_512",
-            "LIBRESWAN": null,
-            "OPENSWAN": null
-        },
-        "hash_algorithm": "SHA3_512"
+        "hash_algorithm": "GOST_R3411_12_512"
     }
 }

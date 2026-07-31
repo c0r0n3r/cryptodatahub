@@ -3,6 +3,55 @@ Changelog
 =========
 
 ------------------
+1.5.0 - Unreleased
+------------------
+
+Features
+========
+
+-  Generic
+
+   -  add long names to block cipher and MAC algorithm entries
+   -  add IANA assigned internet protocol numbers (#57)
+
+-  IKE (``ike``)
+
+   -  add long name attribute to IKE registry entry parameters (#57)
+   -  add IKEv1 certificate types (#57)
+   -  add IKEv2 certificate types (#57)
+   -  add IKEv1 identification types (#57)
+   -  add IKEv2 identification types (#57)
+   -  add long names to the IKEv1 authentication method entries (#57)
+
+Notable fixes
+=============
+
+-  IKE (``ike``)
+
+   -  fix the code size of the IKEv2 authentication methods (#57)
+   -  fix the values of the IKEv2 hash algorithms according to the IANA registry (#57)
+
+Improvements
+============
+
+-  Generic
+
+   -  add missing RSASSA-PSS signature algorithm (#57)
+
+-  IKE (``ike``)
+
+   -  add missing IKEv2 authentication methods (#57)
+   -  add GSS-API IKEv1 authentication method (#57)
+   -  add missing IKEv2 certificate types (#57)
+
+Refactor
+========
+
+-  IKE (``ike``)
+
+   -  unify the IKEv2 authentication method entries under the long name attribute (#57)
+
+------------------
 1.4.0 - 2026-07-17
 ------------------
 

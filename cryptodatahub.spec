@@ -54,6 +54,23 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %license LICENSE.txt
 
 %changelog
+* Thu Jul 30 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.5.0-1
+- add long names to block cipher and MAC algorithm entries
+- add long name attribute to IKE registry entry parameters (#57)
+- add IKEv1 certificate types (#57)
+- add IKEv2 certificate types (#57)
+- add IKEv1 identification types (#57)
+- fix the code size of the IKEv2 authentication methods (#57)
+- add missing IKEv2 authentication methods (#57)
+- add IKEv2 identification types (#57)
+- add missing RSASSA-PSS signature algorithm (#57)
+- add long names to the IKEv1 authentication method entries (#57)
+- add GSS-API IKEv1 authentication method (#57)
+- unify the IKEv2 authentication method entries under the long name attribute (#57)
+- add missing IKEv2 certificate types (#57)
+- add IANA assigned internet protocol numbers (#57)
+- fix the values of the IKEv2 hash algorithms according to the IANA registry (#57)
+
 * Fri Jul 17 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.4.0-1
 - add IKE vendor IDs (#58)
 - fix CAST-128 key size

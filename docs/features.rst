@@ -88,6 +88,8 @@ Attributes
       -  Group Description
       -  Life Type
       -  Pseudorandom Function
+      -  Certificate Type
+      -  Identification Type
 
    -  `IKEv2 <https://tools.ietf.org/html/rfc7296#section-3.3.2>`__
 
@@ -96,6 +98,8 @@ Attributes
       -  Integrity Algorithm
       -  Diffie-Hellman Group
       -  Extended Sequence Numbers
+      -  Certificate Type
+      -  Identification Type
 
 -  Secure Socket Layer (SSL)
 

@@ -1,0 +1,80 @@
+{
+    "PKCS7_WRAPPED_X509_CERTIFICATE": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC7296",
+        "code": 1,
+        "long_name": "PKCS #7 wrapped X.509 certificate"
+    },
+    "PGP_CERTIFICATE": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC7296",
+        "code": 2,
+        "long_name": "PGP Certificate"
+    },
+    "DNS_SIGNED_KEY": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC7296",
+        "code": 3,
+        "long_name": "DNS Signed Key"
+    },
+    "X509_CERTIFICATE_SIGNATURE": {
+        "_code_in_hex": "0x04",
+        "_standard": "RFC7296",
+        "code": 4,
+        "long_name": "X.509 Certificate - Signature"
+    },
+    "KERBEROS_TOKEN": {
+        "_code_in_hex": "0x06",
+        "_standard": "RFC7296",
+        "code": 6,
+        "long_name": "Kerberos Token"
+    },
+    "CERTIFICATE_REVOCATION_LIST": {
+        "_code_in_hex": "0x07",
+        "_standard": "RFC7296",
+        "code": 7,
+        "long_name": "Certificate Revocation List (CRL)"
+    },
+    "AUTHORITY_REVOCATION_LIST": {
+        "_code_in_hex": "0x08",
+        "_standard": "RFC7296",
+        "code": 8,
+        "long_name": "Authority Revocation List (ARL)"
+    },
+    "SPKI_CERTIFICATE": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC7296",
+        "code": 9,
+        "long_name": "SPKI Certificate"
+    },
+    "X509_CERTIFICATE_ATTRIBUTE": {
+        "_code_in_hex": "0x0a",
+        "_standard": "RFC7296",
+        "code": 10,
+        "long_name": "X.509 Certificate - Attribute"
+    },
+    "HASH_AND_URL_OF_X509_CERTIFICATE": {
+        "_code_in_hex": "0x0c",
+        "_standard": "RFC7296",
+        "code": 12,
+        "long_name": "Hash and URL of X.509 certificate"
+    },
+    "HASH_AND_URL_OF_X509_BUNDLE": {
+        "_code_in_hex": "0x0d",
+        "_standard": "RFC7296",
+        "code": 13,
+        "long_name": "Hash and URL of X.509 bundle"
+    },
+    "OCSP_CONTENT": {
+        "_code_in_hex": "0x0e",
+        "_standard": "RFC4806",
+        "code": 14,
+        "long_name": "OCSP Content"
+    },
+    "RAW_PUBLIC_KEY": {
+        "_code_in_hex": "0x0f",
+        "_standard": "RFC7670",
+        "code": 15,
+        "long_name": "Raw Public Key (SubjectPublicKeyInfo)"
+    }
+}

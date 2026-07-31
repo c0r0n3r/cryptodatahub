@@ -1,0 +1,56 @@
+{
+    "IPV4_ADDR": {
+        "_code_in_hex": "0x01",
+        "_standard": "RFC7296",
+        "code": 1,
+        "long_name": "IPv4 address"
+    },
+    "FQDN": {
+        "_code_in_hex": "0x02",
+        "_standard": "RFC7296",
+        "code": 2,
+        "long_name": "Fully-qualified domain name"
+    },
+    "RFC822_ADDR": {
+        "_code_in_hex": "0x03",
+        "_standard": "RFC7296",
+        "code": 3,
+        "long_name": "RFC 822 email address"
+    },
+    "IPV6_ADDR": {
+        "_code_in_hex": "0x05",
+        "_standard": "RFC7296",
+        "code": 5,
+        "long_name": "IPv6 address"
+    },
+    "DER_ASN1_DN": {
+        "_code_in_hex": "0x09",
+        "_standard": "RFC7296",
+        "code": 9,
+        "long_name": "DER-encoded ASN.1 X.500 Distinguished Name"
+    },
+    "DER_ASN1_GN": {
+        "_code_in_hex": "0x0a",
+        "_standard": "RFC7296",
+        "code": 10,
+        "long_name": "DER-encoded ASN.1 X.500 General Name"
+    },
+    "KEY_ID": {
+        "_code_in_hex": "0x0b",
+        "_standard": "RFC7296",
+        "code": 11,
+        "long_name": "Opaque vendor-specific key identifier"
+    },
+    "FC_NAME": {
+        "_code_in_hex": "0x0c",
+        "_standard": "RFC4595",
+        "code": 12,
+        "long_name": "Fibre Channel name"
+    },
+    "NULL": {
+        "_code_in_hex": "0x0d",
+        "_standard": "RFC7619",
+        "code": 13,
+        "long_name": "NULL identification"
+    }
+}

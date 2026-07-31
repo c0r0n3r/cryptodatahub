@@ -95,19 +95,27 @@ Ikev2PseudorandomFunction = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
-class Ikev2AuthenticationMethodParams(CryptoDataParamsEnumNumeric):
-    """Authentication method parameters."""
+class IkeLongNameParams(CryptoDataParamsEnumNumeric):
+    """IKE registry entry with a ``long_name`` field."""
 
-    description: str = attr.ib(
-        validator=attr.validators.instance_of(str)
-    )
+    long_name: str = attr.ib(validator=attr.validators.instance_of(str))
 
     def __str__(self):
-        return self.description
+        return self.long_name
+
+    @classmethod
+    @abc.abstractmethod
+    def get_code_size(cls):
+        raise NotImplementedError()
+
+
+@attr.s(frozen=True)
+class Ikev2AuthenticationMethodParams(IkeLongNameParams):
+    """IKEv2 authentication method parameters."""
 
     @classmethod
     def get_code_size(cls):
-        return 2
+        return 1
 
 
 Ikev2AuthenticationMethod = CryptoDataEnumCodedBase(
@@ -231,12 +239,17 @@ Ikev2EncryptionAlgorithm = CryptoDataEnumCodedBase(
 class Ikev2HashAlgorithmParams(IkeAlgorithmParams):
     """Hash algorithm parameters."""
 
-    hash_algorithm: Hash = attr.ib(
-        converter=convert_enum(Hash),
-        validator=attr.validators.instance_of(Hash)
+    hash_algorithm: typing.Optional[Hash] = attr.ib(
+        converter=attr.converters.optional(convert_enum(Hash)),
+        validator=attr.validators.optional(attr.validators.instance_of(Hash))
     )
 
     def __str__(self):
+        # RFC 8420 §2 defines the "Identity" hash marker for signature schemes that accept arbitrary-size input
+        # (Ed25519, Ed448).
+        if self.hash_algorithm is None:
+            return 'Identity'
+
         return self.hash_algorithm.value.name
 
     @classmethod
@@ -248,7 +261,7 @@ class Ikev2HashAlgorithmParams(IkeAlgorithmParams):
         return (self.hash_algorithm,)
 
 
-Ikev2HashAlgorithm = CryptoDataEnumBase(
+Ikev2HashAlgorithm = CryptoDataEnumCodedBase(
     'HashAlgorithm',
     CryptoDataEnumBase.get_json_records(Ikev2HashAlgorithmParams)
 )
@@ -630,7 +643,7 @@ Ikev1HashAlgorithm = CryptoDataEnumCodedBase(
 
 
 @attr.s(frozen=True)
-class Ikev1AuthenticationMethodParams(CryptoDataParamsEnumNumeric):
+class Ikev1AuthenticationMethodParams(IkeLongNameParams):
     """IKEv1 authentication method parameters."""
 
     @classmethod
@@ -675,6 +688,66 @@ class Ikev1LifeTypeParams(CryptoDataParamsEnumNumeric):
 Ikev1LifeType = CryptoDataEnumCodedBase(
     'LifeType',
     CryptoDataEnumBase.get_json_records(Ikev1LifeTypeParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1CertificateTypeParams(IkeLongNameParams):
+    """IKEv1 certificate type parameters."""
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev1CertificateType = CryptoDataEnumCodedBase(
+    'CertificateType',
+    CryptoDataEnumBase.get_json_records(Ikev1CertificateTypeParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev2CertificateTypeParams(IkeLongNameParams):
+    """IKEv2 certificate type parameters."""
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev2CertificateType = CryptoDataEnumCodedBase(
+    'CertificateType',
+    CryptoDataEnumBase.get_json_records(Ikev2CertificateTypeParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev1IdTypeParams(IkeLongNameParams):
+    """IKEv1 identification type parameters."""
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev1IdType = CryptoDataEnumCodedBase(
+    'IdType',
+    CryptoDataEnumBase.get_json_records(Ikev1IdTypeParams)
+)
+
+
+@attr.s(frozen=True)
+class Ikev2IdTypeParams(IkeLongNameParams):
+    """IKEv2 identification type parameters (RFC 7296 §3.5, IANA registry-10)."""
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+Ikev2IdType = CryptoDataEnumCodedBase(
+    'IdType',
+    CryptoDataEnumBase.get_json_records(Ikev2IdTypeParams)
 )
 
 
