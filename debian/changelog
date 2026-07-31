@@ -16,7 +16,7 @@ python-cryptodatahub (1.5.0) unstable; urgency=low
   * add IANA assigned internet protocol numbers (#57)
   * fix the values of the IKEv2 hash algorithms according to the IANA registry (#57)
 
- -- Szilárd Pfeiffer <coroner@pfeifferszilard.hu>  Thu, 30 Jul 2026 11:47:55 +0200
+ -- Szilárd Pfeiffer <coroner@pfeifferszilard.hu>  Fri, 31 Jul 2026 00:00:00 +0200
 
 python-cryptodatahub (1.4.0) unstable; urgency=low
 

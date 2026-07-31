@@ -46,6 +46,11 @@ Parameters
       -  `ProFTPD <https://en.wikipedia.org/wiki/ProFTPD>`__
       -  SOcket CAT (socat)
 
+Registries
+----------
+
+-  `IANA Assigned Internet Protocol Numbers <https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml>`__
+
 Stores
 ------
 
@@ -100,6 +105,8 @@ Attributes
       -  Extended Sequence Numbers
       -  Certificate Type
       -  Identification Type
+      -  Authentication Method
+      -  Hash Algorithm
 
 -  Secure Socket Layer (SSL)
 

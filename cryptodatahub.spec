@@ -1,5 +1,5 @@
 Name:           python-cryptodatahub
-Version:        1.4.0
+Version:        1.5.0
 Release:        1%{?dist}
 Summary:        Repository of cryptography-related data
 
@@ -54,7 +54,7 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %license LICENSE.txt
 
 %changelog
-* Thu Jul 30 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.5.0-1
+* Fri Jul 31 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.5.0-1
 - add long names to block cipher and MAC algorithm entries
 - add long name attribute to IKE registry entry parameters (#57)
 - add IKEv1 certificate types (#57)
