@@ -23,30 +23,21 @@ class UpdaterBase:
             current_data_items_by_name.items()
         ))
 
-    def _get_ordered_identifiers(self, current_data_items_by_name):
-        existing_data = self.enum_class.get_json(self.enum_param_class)
+    @classmethod
+    def _merge(cls, existing_data, current_items_by_identifier):
+        merged_data = collections.OrderedDict(existing_data)
+        for identifier in sorted(current_items_by_identifier):
+            merged_data[identifier] = current_items_by_identifier[identifier]._asdict()
 
-        ordered_identifiers = [
-            identifier
-            for identifier in existing_data.keys()
-            if identifier in current_data_items_by_name
-        ]
-        ordered_identifiers.extend(sorted(
-            identifier
-            for identifier in current_data_items_by_name.keys()
-            if identifier not in existing_data
-        ))
-
-        return ordered_identifiers
+        return merged_data
 
     def __call__(self):
         current_data = self.fetcher_class.from_current_data()
-        current_data_items_by_name = {
-            fetched_data_item.identifier: fetched_data_item
+        current_items_by_identifier = collections.OrderedDict(
+            (fetched_data_item.identifier, fetched_data_item)
             for fetched_data_item in current_data.parsed_data
-        }
-        if self._has_data_changed(current_data_items_by_name):
-            self.enum_class.set_json(self.enum_param_class, collections.OrderedDict([
-                (identifier, current_data_items_by_name[identifier]._asdict())
-                for identifier in self._get_ordered_identifiers(current_data_items_by_name)
-            ]))
+        )
+        if self._has_data_changed(current_items_by_identifier):
+            existing_data = self.enum_class.get_json(self.enum_param_class)
+            merged_data = self._merge(existing_data, current_items_by_identifier)
+            self.enum_class.set_json(self.enum_param_class, merged_data)

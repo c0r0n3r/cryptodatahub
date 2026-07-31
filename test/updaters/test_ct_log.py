@@ -1,6 +1,9 @@
 # SPDX-License-Identifier: MPL-2.0
 
+import collections
 import datetime
+import json
+
 import dateutil
 import urllib3
 
@@ -112,6 +115,30 @@ class TestUpdaterCertificateTransparencyLogs(pyfakefs.fake_filesystem_unittest.T
             CertificateTransparencyLogTrustStore(owner=Entity.GOOGLE, log_state=_TILED_LOG_STATE),
          ),
     )
+    # a log no longer present in any fetched store (retired everywhere)
+    _REMOVED_LOG = CertificateTransparencyLogParams(
+        log_id='cmV0aXJlZA==',
+        operator='FILIPPO_VALSORDA',
+        key='a2V5',
+        url='https://removed.log/',
+        mmd=86400,
+        description='removed description',
+        trust_stores=(
+            CertificateTransparencyLogTrustStore(owner=Entity.GOOGLE, log_state=_LOG_STATE),
+        ),
+    )
+    # an already-stored log sharing the fetched sample's log_id but with a different name/description
+    _EXISTING_LOG = CertificateTransparencyLogParams(
+        log_id='bG9nX2lk',
+        operator='FILIPPO_VALSORDA',
+        key='a2V5',
+        url='https://existing.log/',
+        mmd=86400,
+        description='existing description',
+        trust_stores=(
+            CertificateTransparencyLogTrustStore(owner=Entity.GOOGLE, log_state=_LOG_STATE),
+        ),
+    )
 
     def setUp(self):
         self.setUpPyfakefs()
@@ -151,3 +178,42 @@ class TestUpdaterCertificateTransparencyLogs(pyfakefs.fake_filesystem_unittest.T
                     'TILED_DESCRIPTION': self.CT_TILED_LOG_ITEM_OBJECT._asdict(),
                 }),
             )
+
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_log_list_update_preserves_removed_log(self, mock_request):
+        mock_request.return_value = urllib3.response.HTTPResponse(self.CT_LOG_LIST_JSON_SAMPLE)
+        json_file_path = str(CryptoDataEnumBase.get_json_path(CertificateTransparencyLogParams))
+        self.fs.create_file(json_file_path, contents=CryptoDataEnumBase.dump_json(collections.OrderedDict([
+            (self._REMOVED_LOG.identifier, self._REMOVED_LOG._asdict()),
+        ])))
+
+        UpdaterCertificateTransparencyLogs()()
+
+        with open(json_file_path, encoding='ascii') as json_file:
+            result = json.load(json_file)
+        self.assertIn(self._REMOVED_LOG.identifier, result)
+        self.assertEqual(result[self._REMOVED_LOG.identifier]['description'], 'removed description')
+        self.assertIn('DESCRIPTION', result)
+        self.assertIn('TILED_DESCRIPTION', result)
+
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_log_list_update_keeps_existing_log_and_refreshes_only_trust_stores(self, mock_request):
+        mock_request.return_value = urllib3.response.HTTPResponse(self.CT_LOG_LIST_JSON_SAMPLE)
+        json_file_path = str(CryptoDataEnumBase.get_json_path(CertificateTransparencyLogParams))
+        self.fs.create_file(json_file_path, contents=CryptoDataEnumBase.dump_json(collections.OrderedDict([
+            (self._EXISTING_LOG.identifier, self._EXISTING_LOG._asdict()),
+        ])))
+
+        UpdaterCertificateTransparencyLogs()()
+
+        with open(json_file_path, encoding='ascii') as json_file:
+            result = json.load(json_file)
+        self.assertIn(self._EXISTING_LOG.identifier, result)
+        self.assertNotIn('DESCRIPTION', result)
+        self.assertEqual(result[self._EXISTING_LOG.identifier]['description'], 'existing description')
+        self.assertEqual(
+            result[self._EXISTING_LOG.identifier]['trust_stores'],
+            json.loads(CryptoDataEnumBase.dump_json(self.CT_LOG_ITEM_OBJECT._asdict()))['trust_stores'],
+        )
+        log_ids = [entry['log_id'] for entry in result.values()]
+        self.assertEqual(len(log_ids), len(set(log_ids)))
