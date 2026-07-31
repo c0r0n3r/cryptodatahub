@@ -42,10 +42,10 @@
         "description": "Certly.IO log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-04-29T17:12:19Z"
+                    "timestamp": "2022-05-02T17:45:11Z"
                 }
             }
         ]
@@ -63,10 +63,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2017-11-13T19:42:25Z"
+                    "timestamp": "2022-04-29T19:12:51Z"
                 }
             }
         ]
@@ -84,10 +84,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2019-05-07T00:00:00Z"
+                    "timestamp": "2022-04-29T19:12:35Z"
                 }
             }
         ]
@@ -105,10 +105,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2020-02-07T00:00:00Z"
+                    "timestamp": "2022-04-29T19:12:31Z"
                 }
             }
         ]
@@ -126,10 +126,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2021-04-21T00:00:00Z"
+                    "timestamp": "2022-04-29T19:12:39Z"
                 }
             }
         ]
@@ -147,10 +147,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-03-01T00:00:00Z"
+                    "timestamp": "2022-04-29T19:12:44Z"
                 }
             }
         ]
@@ -168,10 +168,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-02-01T00:00:00Z"
+                    "timestamp": "2023-07-26T22:29:15Z"
                 }
             }
         ]
@@ -189,10 +189,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-02-02T00:00:00Z"
+                    "timestamp": "2024-01-20T02:12:28Z"
                 }
             }
         ]
@@ -210,10 +210,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-02-01T08:53:20Z"
+                    "timestamp": "2025-02-24T22:25:38Z"
                 }
             }
         ]
@@ -231,10 +231,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-08T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -251,6 +251,13 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-26T18:07:26Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -273,6 +280,13 @@
         },
         "trust_stores": [
             {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:04Z"
+                }
+            },
+            {
                 "owner": "GOOGLE",
                 "log_state": {
                     "state_type": "USABLE",
@@ -290,10 +304,10 @@
         "description": "CNNIC CT log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-04-29T17:12:19Z"
+                    "timestamp": "2022-05-02T17:43:44Z"
                 }
             }
         ]
@@ -307,10 +321,10 @@
         "description": "DigiCert Log Server",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-03-02T18:00:00Z"
+                    "timestamp": "2023-07-26T22:33:40Z"
                 }
             }
         ]
@@ -324,10 +338,10 @@
         "description": "DigiCert Log Server 2",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-02-01T00:00:00Z"
+                    "timestamp": "2023-07-26T22:33:29Z"
                 }
             }
         ]
@@ -345,10 +359,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2019-05-07T00:00:00Z"
+                    "timestamp": "2022-04-29T19:10:08Z"
                 }
             }
         ]
@@ -366,10 +380,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2020-02-07T00:00:00Z"
+                    "timestamp": "2022-04-29T19:10:15Z"
                 }
             }
         ]
@@ -387,10 +401,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2021-04-21T00:00:00Z"
+                    "timestamp": "2022-04-29T19:09:29Z"
                 }
             }
         ]
@@ -408,10 +422,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-03-01T00:00:00Z"
+                    "timestamp": "2022-04-29T19:08:40Z"
                 }
             }
         ]
@@ -429,10 +443,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-02-01T00:00:00Z"
+                    "timestamp": "2023-07-26T22:29:53Z"
                 }
             }
         ]
@@ -450,10 +464,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-02-02T00:00:00Z"
+                    "timestamp": "2024-01-20T02:14:13Z"
                 }
             }
         ]
@@ -471,10 +485,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-02-01T08:53:20Z"
+                    "timestamp": "2025-02-24T22:27:56Z"
                 }
             }
         ]
@@ -492,10 +506,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-08T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -513,10 +527,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-08-08T18:00:00Z"
+                    "timestamp": "2024-08-27T23:35:45Z"
                 }
             }
         ]
@@ -534,10 +548,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-02-01T08:53:20Z"
+                    "timestamp": "2025-02-24T22:28:30Z"
                 }
             }
         ]
@@ -555,10 +569,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-07-28T18:30:00Z"
+                    "timestamp": "2025-08-20T00:34:34Z"
                 }
             }
         ]
@@ -576,10 +590,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-14T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -597,10 +611,17 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "USABLE",
-                    "timestamp": "2024-11-08T00:00:00Z"
+                    "timestamp": "2024-11-26T18:12:06Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-09T13:40:00Z"
                 }
             }
         ]
@@ -617,6 +638,13 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-26T18:12:25Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -639,6 +667,13 @@
         },
         "trust_stores": [
             {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:02Z"
+                }
+            },
+            {
                 "owner": "GOOGLE",
                 "log_state": {
                     "state_type": "USABLE",
@@ -659,6 +694,13 @@
             "end_exclusive": "2028-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:03Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -681,10 +723,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-08-08T18:00:00Z"
+                    "timestamp": "2024-08-27T23:35:59Z"
                 }
             }
         ]
@@ -702,10 +744,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-02-01T08:53:20Z"
+                    "timestamp": "2025-02-24T22:28:15Z"
                 }
             }
         ]
@@ -723,10 +765,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-07-28T18:30:00Z"
+                    "timestamp": "2025-08-20T00:34:54Z"
                 }
             }
         ]
@@ -744,10 +786,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-14T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -765,10 +807,17 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "USABLE",
-                    "timestamp": "2024-11-08T00:00:00Z"
+                    "timestamp": "2024-11-26T18:10:24Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-09T13:40:00Z"
                 }
             }
         ]
@@ -785,6 +834,13 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-26T18:10:49Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -807,6 +863,13 @@
         },
         "trust_stores": [
             {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:03Z"
+                }
+            },
+            {
                 "owner": "GOOGLE",
                 "log_state": {
                     "state_type": "USABLE",
@@ -827,6 +890,13 @@
             "end_exclusive": "2028-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:03Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -849,10 +919,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2019-05-07T00:00:00Z"
+                    "timestamp": "2022-04-29T19:09:52Z"
                 }
             }
         ]
@@ -870,10 +940,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2020-02-07T00:00:00Z"
+                    "timestamp": "2022-04-29T19:09:59Z"
                 }
             }
         ]
@@ -891,10 +961,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2021-04-21T00:00:00Z"
+                    "timestamp": "2022-04-29T19:09:02Z"
                 }
             }
         ]
@@ -912,10 +982,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-03-01T00:00:00Z"
+                    "timestamp": "2022-04-29T19:09:16Z"
                 }
             }
         ]
@@ -933,10 +1003,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-02-01T00:00:00Z"
+                    "timestamp": "2023-07-26T22:33:18Z"
                 }
             }
         ]
@@ -954,10 +1024,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-02-01T00:00:00Z"
+                    "timestamp": "2023-07-26T22:32:44Z"
                 }
             }
         ]
@@ -975,7 +1045,7 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
                     "timestamp": "2023-12-01T00:00:00Z"
@@ -996,10 +1066,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-02-01T08:53:20Z"
+                    "timestamp": "2025-02-24T22:27:36Z"
                 }
             }
         ]
@@ -1017,10 +1087,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-08T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -1072,10 +1142,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2018-11-05T22:18:14Z"
+                    "timestamp": "2019-01-03T23:10:51Z"
                 }
             }
         ]
@@ -1093,10 +1163,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2018-11-08T05:47:34Z"
+                    "timestamp": "2019-01-03T23:11:12Z"
                 }
             }
         ]
@@ -1135,10 +1205,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2018-02-27T00:00:00Z"
+                    "timestamp": "2022-04-29T19:11:36Z"
                 }
             }
         ]
@@ -1156,10 +1226,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2019-05-07T00:00:00Z"
+                    "timestamp": "2022-04-29T19:11:07Z"
                 }
             }
         ]
@@ -1177,10 +1247,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2020-02-07T00:00:00Z"
+                    "timestamp": "2022-04-29T19:10:57Z"
                 }
             }
         ]
@@ -1198,10 +1268,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2021-04-21T00:00:00Z"
+                    "timestamp": "2022-04-29T19:11:11Z"
                 }
             }
         ]
@@ -1219,10 +1289,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-03-01T00:00:00Z"
+                    "timestamp": "2022-04-29T19:11:16Z"
                 }
             }
         ]
@@ -1240,10 +1310,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-02-01T00:00:00Z"
+                    "timestamp": "2023-07-26T22:30:09Z"
                 }
             }
         ]
@@ -1261,10 +1331,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-02-02T00:00:00Z"
+                    "timestamp": "2024-01-20T02:13:03Z"
                 }
             }
         ]
@@ -1282,10 +1352,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-02-01T08:53:20Z"
+                    "timestamp": "2025-02-24T22:26:45Z"
                 }
             }
         ]
@@ -1303,10 +1373,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-07-28T18:30:00Z"
+                    "timestamp": "2025-08-20T00:35:09Z"
                 }
             }
         ]
@@ -1324,10 +1394,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-08T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -1345,10 +1415,17 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "USABLE",
-                    "timestamp": "2024-09-30T22:19:27Z"
+                    "timestamp": "2024-11-26T18:08:02Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-09T13:40:00Z"
                 }
             }
         ]
@@ -1365,6 +1442,13 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-26T18:08:20Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -1387,6 +1471,13 @@
         },
         "trust_stores": [
             {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:06Z"
+                }
+            },
+            {
                 "owner": "GOOGLE",
                 "log_state": {
                     "state_type": "USABLE",
@@ -1404,10 +1495,10 @@
         "description": "Google 'Aviator' log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-04-29T17:12:19Z"
+                    "timestamp": "2024-07-17T00:30:04Z"
                 }
             }
         ]
@@ -1450,10 +1541,10 @@
         "description": "Google 'Icarus' log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-06-02T10:00:00Z"
+                    "timestamp": "2024-07-17T00:30:48Z"
                 }
             }
         ]
@@ -1467,10 +1558,10 @@
         "description": "Google 'Pilot' log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-06-02T10:00:00Z"
+                    "timestamp": "2024-07-17T00:30:17Z"
                 }
             }
         ]
@@ -1484,10 +1575,10 @@
         "description": "Google 'Rocketeer' log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-06-02T10:00:00Z"
+                    "timestamp": "2024-07-17T00:30:33Z"
                 }
             }
         ]
@@ -1501,10 +1592,10 @@
         "description": "Google 'Skydiver' log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-06-02T10:00:00Z"
+                    "timestamp": "2024-07-17T00:29:52Z"
                 }
             }
         ]
@@ -1779,10 +1870,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2019-02-21T00:00:00Z"
+                    "timestamp": "2022-04-29T19:11:23Z"
                 }
             }
         ]
@@ -1800,10 +1891,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2020-02-07T00:00:00Z"
+                    "timestamp": "2022-04-29T19:11:29Z"
                 }
             }
         ]
@@ -1821,10 +1912,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2021-04-21T00:00:00Z"
+                    "timestamp": "2022-04-29T19:10:54Z"
                 }
             }
         ]
@@ -1842,10 +1933,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-03-01T00:00:00Z"
+                    "timestamp": "2022-04-29T19:10:37Z"
                 }
             }
         ]
@@ -1863,10 +1954,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-02-01T00:00:00Z"
+                    "timestamp": "2023-07-26T22:30:33Z"
                 }
             }
         ]
@@ -1884,10 +1975,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-02-02T00:00:00Z"
+                    "timestamp": "2024-01-20T02:13:25Z"
                 }
             }
         ]
@@ -1905,10 +1996,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-02-01T08:53:20Z"
+                    "timestamp": "2025-02-24T22:27:08Z"
                 }
             }
         ]
@@ -1926,10 +2017,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-07-28T18:30:00Z"
+                    "timestamp": "2025-08-20T00:35:20Z"
                 }
             }
         ]
@@ -1947,10 +2038,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-08T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -1968,10 +2059,17 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "USABLE",
-                    "timestamp": "2024-09-30T22:19:27Z"
+                    "timestamp": "2024-11-26T18:08:37Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-09T13:40:00Z"
                 }
             }
         ]
@@ -1988,6 +2086,13 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-26T18:08:55Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -2009,6 +2114,13 @@
             "end_exclusive": "2027-07-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:06Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -2065,10 +2177,10 @@
         "description": "Izenpe log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-04-29T17:12:19Z"
+                    "timestamp": "2022-05-02T17:44:15Z"
                 }
             }
         ]
@@ -2100,10 +2212,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2020-02-07T00:00:00Z"
+                    "timestamp": "2022-04-29T19:08:30Z"
                 }
             }
         ]
@@ -2121,10 +2233,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2021-04-21T00:00:00Z"
+                    "timestamp": "2022-04-29T19:08:12Z"
                 }
             }
         ]
@@ -2142,10 +2254,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-03-01T00:00:00Z"
+                    "timestamp": "2022-04-29T19:07:54Z"
                 }
             }
         ]
@@ -2163,10 +2275,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-02-01T00:00:00Z"
+                    "timestamp": "2023-07-26T22:31:43Z"
                 }
             }
         ]
@@ -2184,10 +2296,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-02-02T00:00:00Z"
+                    "timestamp": "2024-01-20T02:15:00Z"
                 }
             }
         ]
@@ -2205,10 +2317,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-08-08T18:00:00Z"
+                    "timestamp": "2024-08-27T23:36:43Z"
                 }
             }
         ]
@@ -2226,10 +2338,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-02-01T08:53:20Z"
+                    "timestamp": "2025-02-24T22:31:45Z"
                 }
             }
         ]
@@ -2247,10 +2359,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-07-28T18:30:00Z"
+                    "timestamp": "2025-08-20T00:35:42Z"
                 }
             }
         ]
@@ -2268,10 +2380,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-27T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -2289,10 +2401,17 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "READONLY",
-                    "timestamp": "2025-12-12T22:30:00Z"
+                    "timestamp": "2025-12-11T16:28:56Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-27T13:40:00Z"
                 }
             }
         ]
@@ -2310,10 +2429,17 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "READONLY",
-                    "timestamp": "2025-12-12T22:30:00Z"
+                    "timestamp": "2025-12-11T16:28:41Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "RETIRED",
+                    "timestamp": "2026-02-28T00:00:00Z"
                 }
             }
         ]
@@ -2507,10 +2633,10 @@
         "description": "PuChuangSiDa CT log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2017-06-08T00:00:00Z"
+                    "timestamp": "2017-09-19T18:24:24Z"
                 }
             }
         ]
@@ -2710,10 +2836,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-08T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -2731,10 +2857,17 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "USABLE",
-                    "timestamp": "2025-07-22T01:33:20Z"
+                    "timestamp": "2025-09-15T22:32:30Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-09T13:40:00Z"
                 }
             }
         ]
@@ -2751,6 +2884,13 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-09-15T22:32:45Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -2773,6 +2913,13 @@
         },
         "trust_stores": [
             {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-09-15T22:33:00Z"
+                }
+            },
+            {
                 "owner": "GOOGLE",
                 "log_state": {
                     "state_type": "USABLE",
@@ -2793,6 +2940,13 @@
             "end_exclusive": "2028-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-09-15T22:33:16Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -2815,10 +2969,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-08-08T18:00:00Z"
+                    "timestamp": "2024-08-27T23:37:26Z"
                 }
             }
         ]
@@ -2836,10 +2990,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-08-08T18:00:00Z"
+                    "timestamp": "2024-08-27T23:37:13Z"
                 }
             }
         ]
@@ -2857,10 +3011,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-02-01T08:53:20Z"
+                    "timestamp": "2025-02-24T22:30:49Z"
                 }
             }
         ]
@@ -2878,10 +3032,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-07-28T18:30:00Z"
+                    "timestamp": "2025-08-20T00:36:03Z"
                 }
             }
         ]
@@ -2899,10 +3053,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-08T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -2920,10 +3074,17 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "READONLY",
                     "timestamp": "2025-09-18T17:20:00Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-09T13:40:00Z"
                 }
             }
         ]
@@ -2940,6 +3101,13 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "READONLY",
+                    "timestamp": "2025-09-18T17:20:00Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -2958,10 +3126,10 @@
         "description": "Sectigo 'Mammoth' CT log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-03-05T00:53:20Z"
+                    "timestamp": "2024-07-17T00:31:29Z"
                 }
             }
         ]
@@ -2979,10 +3147,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-08-08T18:00:00Z"
+                    "timestamp": "2024-08-27T23:37:42Z"
                 }
             }
         ]
@@ -3000,10 +3168,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-02-01T08:53:20Z"
+                    "timestamp": "2025-02-24T22:31:21Z"
                 }
             }
         ]
@@ -3021,10 +3189,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-07-28T18:30:00Z"
+                    "timestamp": "2025-08-20T00:36:15Z"
                 }
             }
         ]
@@ -3042,10 +3210,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-08T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -3063,10 +3231,17 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "READONLY",
                     "timestamp": "2025-09-18T17:20:00Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-09T13:40:00Z"
                 }
             }
         ]
@@ -3083,6 +3258,13 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "READONLY",
+                    "timestamp": "2025-09-18T17:20:00Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -3101,7 +3283,7 @@
         "description": "Sectigo 'Sabre' CT log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
                     "timestamp": "2025-06-09T14:40:00Z"
@@ -3122,10 +3304,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-08T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -3143,10 +3325,17 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "USABLE",
-                    "timestamp": "2025-09-18T23:00:00Z"
+                    "timestamp": "2025-09-15T22:33:45Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-09T13:40:00Z"
                 }
             }
         ]
@@ -3163,6 +3352,13 @@
             "end_exclusive": "2027-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-09-15T22:33:59Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -3185,6 +3381,13 @@
         },
         "trust_stores": [
             {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-09-15T22:34:18Z"
+                }
+            },
+            {
                 "owner": "GOOGLE",
                 "log_state": {
                     "state_type": "USABLE",
@@ -3205,6 +3408,13 @@
             "end_exclusive": "2028-01-01T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-09-15T22:34:35Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -3257,10 +3467,10 @@
         "description": "StartCom log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-04-29T17:12:19Z"
+                    "timestamp": "2022-05-02T17:41:23Z"
                 }
             }
         ]
@@ -3288,10 +3498,10 @@
         "description": "Symantec log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-04-29T17:12:19Z"
+                    "timestamp": "2022-05-02T17:45:59Z"
                 }
             }
         ]
@@ -3305,10 +3515,10 @@
         "description": "Symantec 'Sirius' log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-04-29T17:12:19Z"
+                    "timestamp": "2022-05-02T17:45:43Z"
                 }
             }
         ]
@@ -3322,10 +3532,10 @@
         "description": "Symantec 'Vega' log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-04-29T17:12:19Z"
+                    "timestamp": "2022-05-02T17:46:20Z"
                 }
             }
         ]
@@ -3342,6 +3552,13 @@
             "end_exclusive": "2028-01-08T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:08Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -3364,10 +3581,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-08T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -3385,10 +3602,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2026-01-08T00:00:00Z"
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
@@ -3405,6 +3622,13 @@
             "end_exclusive": "2027-01-08T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-26T18:16:15Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -3426,6 +3650,13 @@
             "end_exclusive": "2027-01-08T00:00:00Z"
         },
         "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2024-11-26T18:16:33Z"
+                }
+            },
             {
                 "owner": "GOOGLE",
                 "log_state": {
@@ -3490,10 +3721,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2021-04-21T00:00:00Z"
+                    "timestamp": "2021-01-04T18:57:47Z"
                 }
             }
         ]
@@ -3511,10 +3742,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-03-01T00:00:00Z"
+                    "timestamp": "2021-01-04T18:58:19Z"
                 }
             }
         ]
@@ -3532,10 +3763,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2023-02-01T00:00:00Z"
+                    "timestamp": "2023-07-26T22:32:16Z"
                 }
             }
         ]
@@ -3553,10 +3784,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2024-02-02T00:00:00Z"
+                    "timestamp": "2024-01-20T02:15:41Z"
                 }
             }
         ]
@@ -3595,10 +3826,10 @@
         },
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2025-02-01T08:53:20Z"
+                    "timestamp": "2025-02-24T22:32:11Z"
                 }
             }
         ]
@@ -3626,10 +3857,10 @@
         "description": "Venafi Gen2 CT log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2020-05-08T00:00:00Z"
+                    "timestamp": "2022-05-02T17:42:45Z"
                 }
             }
         ]
@@ -3643,10 +3874,10 @@
         "description": "Venafi log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-04-29T17:12:19Z"
+                    "timestamp": "2022-05-02T17:43:03Z"
                 }
             }
         ]
@@ -3677,10 +3908,10 @@
         "description": "WoSign log",
         "trust_stores": [
             {
-                "owner": "GOOGLE",
+                "owner": "APPLE",
                 "log_state": {
                     "state_type": "REJECTED",
-                    "timestamp": "2022-04-29T17:12:19Z"
+                    "timestamp": "2022-05-02T17:42:06Z"
                 }
             }
         ]
@@ -3698,6 +3929,1271 @@
                 "log_state": {
                     "state_type": "REJECTED",
                     "timestamp": "2017-09-04T13:30:58Z"
+                }
+            }
+        ]
+    },
+    "CLOUDFLARE_RAIO2025H2B_LOG": {
+        "log_id": "Tw05u8NV28wWJ5ZuVAUVfMr3Lj90j0f+ewSeWlkVXL0=",
+        "operator": "CLOUDFLARE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESwiXfU4VWajxfFHaQDvR5OsrBY5lp+JW6AONks1wbPABXhaX0yi5+5zGw0oX1RbA6tB4RiP8V/I9i/ncLniJkQ==",
+        "mmd": 60,
+        "description": "Cloudflare 'Raio2025h2b' log",
+        "temporal_interval": {
+            "start_inclusive": "2025-07-01T00:00:00Z",
+            "end_exclusive": "2026-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-29T03:22:36Z"
+                }
+            }
+        ]
+    },
+    "CLOUDFLARE_RAIO2026H1A_LOG": {
+        "log_id": "5bvNwMctaSvZWYo2AgQ86FTsb2D4AGZ4WWOIK3w4JDg=",
+        "operator": "CLOUDFLARE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEewKoi9UXxR2+or27gZXyqqjfC/K0d7YMSBuReaNIBVre8Fkf2IbIXu1JnPIdv2HW3WyOIV3BRAIFgstayoSLFQ==",
+        "mmd": 60,
+        "description": "Cloudflare 'Raio2026h1a' log",
+        "temporal_interval": {
+            "start_inclusive": "2026-01-01T00:00:00Z",
+            "end_exclusive": "2026-07-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:05Z"
+                }
+            }
+        ]
+    },
+    "CLOUDFLARE_RAIO2026H2A_LOG": {
+        "log_id": "uuKpKTLFwF0fpU00gTDwm/yIMxZKFaH7vvUmKDJWyAs=",
+        "operator": "CLOUDFLARE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESrSp8+SLuFV5XKzPo6YS5C5qymHjSVFfioV0V8/5Ilhd+AfKuN2m/6d8EAc2VRDD1wGPNFtoYWNotvsqXynfnQ==",
+        "mmd": 60,
+        "description": "Cloudflare 'Raio2026h2a' log",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:05Z"
+                }
+            }
+        ]
+    },
+    "CLOUDFLARE_RAIO2027H1A_LOG": {
+        "log_id": "ijgQv0CPWs97dN4gwHGQO3F5yrDb12jv+hD2KY6gaAw=",
+        "operator": "CLOUDFLARE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUJRLaVR5ytKhoHiquDYDwthBdbgMmoa8vFG0vUw493g652rDV39r8v8NGKjsQ48OtiBiOSJCea0SX5YotzjpDA==",
+        "mmd": 60,
+        "description": "Cloudflare 'Raio2027h1a' log",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:05Z"
+                }
+            }
+        ]
+    },
+    "CLOUDFLARE_RAIO2027H2A_LOG": {
+        "log_id": "Ia1IGvXLVPNLOr+uoP8Gmns8dm/DtpCHC7RrFS+2C/k=",
+        "operator": "CLOUDFLARE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEi26evoGHBxrQAASnY/nsnI0ryBZVFJoffV/rpEtmMS1FPEPR+Yjr0fP4YMMHbvnZO/EKU4FYGAXmOihuSV18Uw==",
+        "mmd": 60,
+        "description": "Cloudflare 'Raio2027h2a' log",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:02Z"
+                }
+            }
+        ]
+    },
+    "GEOMYS_NAVIGLI_2026H1": {
+        "log_id": "gs3NR5535F0UrWkDiCxBE/yBwhITvsKz2U6dx82Azf4=",
+        "operator": "GEOMYS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEh/xU5f2JBQfU/9jb1aUb06VChY/y+g9VCqiJ+rElEu81HMIj/1jvLzaXl/wYJFSVhtJhl4xeIMBOcltC/t7YTg==",
+        "mmd": 60,
+        "description": "Geomys Navigli2026h1",
+        "temporal_interval": {
+            "start_inclusive": "2026-01-01T00:00:00Z",
+            "end_exclusive": "2026-07-01T00:00:00Z"
+        },
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "GEOMYS_NAVIGLI_2026H2": {
+        "log_id": "JKaah8LdWC3VArJRfww4J/MLTqhKJBO1U+b78YzxX+8=",
+        "operator": "GEOMYS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE35uLGxEy/DbYDRg6/078qvcc2D0GyS8Iu8xG1CU8Ab133mXVcYtUJL5XlKP8768znap35cwzLbQUgYsmBIOs3Q==",
+        "mmd": 60,
+        "description": "Geomys Navigli2026h2",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "GEOMYS_NAVIGLI_2027H1": {
+        "log_id": "2tZHUVKWGUn6T3McZw6F5eS3TgaIGWBT8Rha1ySUGtM=",
+        "operator": "GEOMYS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEhBvjicdGxE1X4PDDFXT08IUoMvHZ8716jPiw0F5xG+4Q7SO3La7uDlEeEzkek0ZlqAfKcrBg/Zp2noofn5/jAw==",
+        "mmd": 60,
+        "description": "Geomys Navigli2027h1",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "GEOMYS_NAVIGLI_2027H2": {
+        "log_id": "z14MRaO4fEHLthgI+OCQulvrTdMmwUBN/7at+Y4WaRY=",
+        "operator": "GEOMYS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/X+10fVaeUuD/AambYvE2n40zMehkN2tM8NB+aYaUOYp6TWWWE7NCErYDehUQdiZ9vhMLR5X9zUWOPTm7PZVXQ==",
+        "mmd": 60,
+        "description": "Geomys Navigli2027h2",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "GEOMYS_TUSCOLO_2026H1": {
+        "log_id": "cX6V88I4im2x44RJPTHhWqliCHYtQgDgBQzQZ7WmYeI=",
+        "operator": "GEOMYS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEflxzMg2Ajjg7h1+ZIvQ9LV6yFvdj6uRi9YbvtRnSCgS2SamkH56WcPRaBTRYARPDIr5JwLqgJAVA/NvDxdJXOw==",
+        "mmd": 60,
+        "description": "Geomys 'Tuscolo2026h1'",
+        "temporal_interval": {
+            "start_inclusive": "2026-01-01T00:00:00Z",
+            "end_exclusive": "2026-07-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:09Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-09T13:40:00Z"
+                }
+            }
+        ]
+    },
+    "GEOMYS_TUSCOLO_2026H2": {
+        "log_id": "Rq+GPTs+5Z+ld96oJF02sNntIqIj9GF3QSKUUu6VUF8=",
+        "operator": "GEOMYS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEaA6P0i7JTsd9XfzF1/76avRWA3XXI4NStsFO/aFtBp6SY7olDEMiPSFSxGzFQjKA1r9vgG/oFQwurlWMy9FQNw==",
+        "mmd": 60,
+        "description": "Geomys 'Tuscolo2026h2'",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:09Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-08-31T07:00:00Z"
+                }
+            }
+        ]
+    },
+    "GEOMYS_TUSCOLO_2027H1": {
+        "log_id": "WW5sM4aUsllyolbIoOjdkEp26Ag92oc7AQg4KBQ87lk=",
+        "operator": "GEOMYS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEOYwwGoaNpZ/SQW0VNGICP7wGRQsSeEowTRl4DPSdPjSkO/+ouvFH78I8sQTR3FWPZDScALbclBqnqL0ptY8beA==",
+        "mmd": 60,
+        "description": "Geomys 'Tuscolo2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:09Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-10-08T21:00:00Z"
+                }
+            }
+        ]
+    },
+    "GEOMYS_TUSCOLO_2027H2": {
+        "log_id": "1d5V7roItgyf/BjFE75qYLoARga8WVuWu0T2LMV9Ofo=",
+        "operator": "GEOMYS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIAz2gOD7wIptaiLTnmR4k7AQwp5kFmqmGHY/8JmMJxaSHyAipoFA/YSBCTX7ZowxIkSKpZYGlqLtdLVcLWDS5w==",
+        "mmd": 60,
+        "description": "Geomys 'Tuscolo2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:10Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-10-08T21:00:00Z"
+                }
+            }
+        ]
+    },
+    "GOOGLE_ARCHE_2026H1_LOG": {
+        "log_id": "J+sqNJffaHpkC2Q4TkhW/Nyj6H+NzWbzTtbxvkKB7fw=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEZ+3YKoZTMruov4cmlImbk4MckBNzEdCyMuHlwGgJ8BUrzFLlR5U0619xDDXIXespkpBgCNVQAkhMTTXakM6KMg==",
+        "mmd": 60,
+        "description": "Google 'Arche2026h1' log",
+        "temporal_interval": {
+            "start_inclusive": "2026-01-01T00:00:00Z",
+            "end_exclusive": "2026-07-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "GOOGLE_COACHANDHORSES_2026H1_LOG": {
+        "log_id": "Ida8pGWG3oR5BIvzeNP2lqX0zFFs73zy2H/15xN0Ht0=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAECHOhXfvYgTcu+Fnl7M7niFj3FgqWlQpXUSWUDw2KAaJXvhGxdJTtmyciN5rWTiDtpeNENVmsUTHFS4XQgeRE0g==",
+        "mmd": 60,
+        "description": "Google 'CoachAndHorses2026h1' log",
+        "temporal_interval": {
+            "start_inclusive": "2026-01-01T00:00:00Z",
+            "end_exclusive": "2026-07-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "GOOGLE_COACHANDHORSES_2026H2_LOG": {
+        "log_id": "Xk+hRjqD27R5prdS05bhyQxjDbDZ9sDelTzC7dZPUKM=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE4yJ0Wz+EaKTI1Ae2PXKMk1VYjy9bt6YhcYM8p+gLq47ETwSgjx925dLf7jGjUEiVT/Q2bN2q8R6m2bMI09tL7Q==",
+        "mmd": 60,
+        "description": "Google 'CoachAndHorses2026h2' log",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "GOOGLE_COACHANDHORSES_2027H1_LOG": {
+        "log_id": "atJoPkfo0oBkkUI/1kQCGiJuzbhhm+1acN9ps2hPqi0=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEYRzG+Eugt1AOXUT9UpX1K71DCd9zOhVqjQ/DPDfqaIl/3UIrz4Gm1sFaNhcv9SqbMg7Imj+NbN6DR09mcmh8lQ==",
+        "mmd": 60,
+        "description": "Google 'CoachAndHorses2027h1' log",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "GOOGLE_COACHANDHORSES_2027H2_LOG": {
+        "log_id": "7PBUNaSTKW0Kvz7J0JbyGycBLEcaHoPngTZnpglSvqY=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEc3Si5lBbzwec+dc+rf1kzMt6SmTjlzEXJe0YH7tbHCKhOiggbxL/q/Hime2H/FxjcBspBQCwAv0ocWJMA6ghyA==",
+        "mmd": 60,
+        "description": "Google 'CoachAndHorses2027h2' log",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "GOOGLE_PARCELYARD_2026H2_LOG": {
+        "log_id": "utuIpG+cr6QJDoLlk1bbbni0pT9YLbCBl5UkLym2jJg=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEP2H56bHx6pPm5mCku6PFpeRuA5Ux0gs8iwXIVhvVdbojs0pPwZqLtlIEoJNbjxMEePTYo/qDW85AjhMJITlavA==",
+        "mmd": 60,
+        "description": "Google 'ParcelYard2026h2' log",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "QUALIFIED",
+                    "timestamp": "2026-06-19T19:00:00Z"
+                }
+            }
+        ]
+    },
+    "GOOGLE_PARCELYARD_2027H1_LOG": {
+        "log_id": "HIl0B+YBCgEpO7Z439ejaM6xjMpSHcyk04bkoy5bXQQ=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEX7i7gYwmBxpiLXAlM/VLk4BFzspJRmZA86iReO7NVRlwGL1KWb/Dv5DRXJNBZd+9uREkNUTee5yBy2dRdRGa0w==",
+        "mmd": 60,
+        "description": "Google 'ParcelYard2027h1' log",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "QUALIFIED",
+                    "timestamp": "2026-06-19T19:00:00Z"
+                }
+            }
+        ]
+    },
+    "GOOGLE_PARCELYARD_2027H2_LOG": {
+        "log_id": "aYS3IzyydLLRRn2l4EDXH+upCiHniGU3Srn5vPhocjc=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE+CTFsoroxXi53eLT+x2T4gsMKOcqzYEhqSLjyF6uVfdgF8yBeyA2cDWsu6nmhKGhqyoohwLh3PPgXdltfPP3BA==",
+        "mmd": 60,
+        "description": "Google 'ParcelYard2027h2' log",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "QUALIFIED",
+                    "timestamp": "2026-06-19T19:00:00Z"
+                }
+            }
+        ]
+    },
+    "GOOGLE_PLUMBERSARMS_2026H2_LOG": {
+        "log_id": "IPBfqqOkkvxqwUjMM6ICNhhrSfqpfmuzkk+yXsNrHDU=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERcKG6mGyrCTtzkWBNT51LFFsM1lZ3ZPSIoXgVilDtnY0dyhwKSX7jomkXvdyqWr8DOP3HA6I6kzmREX5wpUvug==",
+        "mmd": 60,
+        "description": "Google 'PlumbersArms2026h2' log",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "QUALIFIED",
+                    "timestamp": "2026-06-19T19:00:00Z"
+                }
+            }
+        ]
+    },
+    "GOOGLE_PLUMBERSARMS_2027H1_LOG": {
+        "log_id": "X/nA+6QtrHjOZELrGazggaKb1OL7U68MYzB55QWCBMk=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAKYYdjIeQwDP0RIY9mhAVntX5s2ObMc2F6u8cELSbhvavljWD/OesJZHUtqQjBXE5Ekbpiq6nchmaVnEHHpJmw==",
+        "mmd": 60,
+        "description": "Google 'PlumbersArms2027h1' log",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "QUALIFIED",
+                    "timestamp": "2026-06-19T19:00:00Z"
+                }
+            }
+        ]
+    },
+    "GOOGLE_PLUMBERSARMS_2027H2_LOG": {
+        "log_id": "M3qex8rmqQSLdS8tk65+SyqQLSG0lxKdg+J5x1PJL4w=",
+        "operator": "GOOGLE",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHCu5hooSXlk8FAiSkoWiZJ5G9GzCiJhj3eoJ9p3F3ZzV2QgcgxWWI9f75vnFgygju+baK11dsf3bXHAo/+TL/Q==",
+        "mmd": 60,
+        "description": "Google 'PlumbersArms2027h2' log",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "QUALIFIED",
+                    "timestamp": "2026-06-19T19:00:00Z"
+                }
+            }
+        ]
+    },
+    "GOUDA_2025H2": {
+        "log_id": "GoudanQ8ze1gH3O9MJcIHbyuxKYTnJKwtUDDE3sg7AU=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpHiP24MNo8pgt5RNoawsvGIwSaVEKNqdzYCUXtMu0MM15t63d26eDUDz+nkQjACuRo4LRJcyia7I0anEdNH9wA==",
+        "mmd": 86400,
+        "description": "Gouda 2025h2",
+        "temporal_interval": {
+            "start_inclusive": "2025-07-01T00:00:00Z",
+            "end_exclusive": "2026-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-29T03:22:36Z"
+                }
+            }
+        ]
+    },
+    "IPNG_GMBH_HALLOUMI_2025H2": {
+        "log_id": "+3xjpo0eBq3Qg4ibuNQyHLJFROv2/mlyKRkuOD5ebiM=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEqJxSnCcMhWikCFeWo1RiplGaVEZL5Vn4KEJYZM97Ro5XuTg4h6+n807utfPS7qqpLv5me/ddlpKFGoFfkMBrAQ==",
+        "mmd": 60,
+        "description": "IPng GmbH 'Halloumi2025h2'",
+        "temporal_interval": {
+            "start_inclusive": "2025-07-01T00:00:00Z",
+            "end_exclusive": "2026-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-29T03:22:36Z"
+                }
+            }
+        ]
+    },
+    "IPNG_NETWORKS_GOUDA_2026H1": {
+        "log_id": "GoudaUpXmMiZoMqIvfSPwLRWYMzDYA0fcfRp/8fRrKM=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAER6wvqVwhf5isuCtwSfNjTOrqwZg0vZuIMP7xk8fPmJfaFZCte1ptQiqNhRMCtqIgJvDcJyjkGVI8i44vxL877A==",
+        "mmd": 60,
+        "description": "IPng Networks 'Gouda2026h1'",
+        "temporal_interval": {
+            "start_inclusive": "2026-01-01T00:00:00Z",
+            "end_exclusive": "2026-07-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:10Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-09T13:40:00Z"
+                }
+            }
+        ]
+    },
+    "IPNG_NETWORKS_GOUDA_2026H2": {
+        "log_id": "Goudaw/+v4G0eTnG0jEKhtbRAtTwRuIYLJ3jX14mJe8=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjayczmhUMNftWy6VjvYXcTUEpvL8LIAKcYcxrxx5xxQGZEVvhnZeCnXVlsMWhq1h9J55eZfQWM/dqIr6GmoN9Q==",
+        "mmd": 60,
+        "description": "IPng Networks 'Gouda2026h2'",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:11Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-27T03:00:00Z"
+                }
+            }
+        ]
+    },
+    "IPNG_NETWORKS_GOUDA_2027H1": {
+        "log_id": "Gouda43XkdHNBUnttgNV1ga2T60w23H+eI8Px8j7xLE=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEOh11B2aRT9BiTqo+6kvQ7cSGf819Ait+jGc6AuHlGUXxWCX1YCQ9OFNnr6MUKStyw4sVin5FCvtbke1mctl3gQ==",
+        "mmd": 60,
+        "description": "IPng Networks 'Gouda2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:11Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-27T03:00:00Z"
+                }
+            }
+        ]
+    },
+    "IPNG_NETWORKS_GOUDA_2027H2": {
+        "log_id": "GoudaVNi2GSSp7niI2BuNOzp4xC6NPuTBXhdKc5XV+s=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEPuxPH20sSqUzHGllZceceFvyoSffwBWgX4LKd8wk3A3ayZuwwh2pDuEOsimMxLXFh0IUYz73a9I7kxkUqM+N8w==",
+        "mmd": 60,
+        "description": "IPng Networks 'Gouda2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:04Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-27T03:00:00Z"
+                }
+            }
+        ]
+    },
+    "IPNG_NETWORKS_HALLOUMI2026H2A": {
+        "log_id": "JuNkblhpISO8ND9HJDWbN5LNJFqI2BXTkzP9mRirRyM=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEiGh4zMsdukTgrdk9iPIwz9OfU9TQVi4Mxufpmnlrzv3ivJcxVhrST4XQSeQoF5LlFVIU6PL4IzrYl12BUWn9rQ==",
+        "mmd": 60,
+        "description": "IPng Networks 'Halloumi2026h2a'",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:05Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-01-01T07:30:00Z"
+                }
+            }
+        ]
+    },
+    "IPNG_NETWORKS_HALLOUMI_2026H1": {
+        "log_id": "fz035/iSPY5xZb6w0+q+5yoivkbAy4TEFtTkuYJky8I=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzdcnGwRjm2ZoA68JFZKfoM4cOPPG2fr0iR72p3XanznOlw57HJ9RlYRNt75gIMIKgB1r0dxY5Jojq1m8uobYjg==",
+        "mmd": 60,
+        "description": "IPng Networks 'Halloumi2026h1'",
+        "temporal_interval": {
+            "start_inclusive": "2026-01-01T00:00:00Z",
+            "end_exclusive": "2026-07-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:04Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-07-09T13:40:00Z"
+                }
+            }
+        ]
+    },
+    "IPNG_NETWORKS_HALLOUMI_2027H1": {
+        "log_id": "ROgi/CurDpLu0On61pZkYCd20Bdg4IkFCckjobA/w38=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEw5SUl2yfd5TFSqUGv7A+I5+TpLe+zEccmtWVQakQQtOHYKqH8TbycalFx5xaqE5PU4NEwwnAJ9FWeT/6QaovZw==",
+        "mmd": 60,
+        "description": "IPng Networks 'Halloumi2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:05Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-12-17T18:30:00Z"
+                }
+            }
+        ]
+    },
+    "IPNG_NETWORKS_HALLOUMI_2027H2": {
+        "log_id": "CRV/Yy1Gx/dtlSZUk7wPALOVrF2zorJr+wQ9ukrGOJM=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAErmKbFkPG7QfQUARhbIik8vVbIkXhK+YMB6TvLZkyhnzv7wedn+l7VChqovZHKOQXmZEd4B+3ljovIpQz2HmyHA==",
+        "mmd": 60,
+        "description": "IPng Networks 'Halloumi2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:05Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-12-17T18:30:00Z"
+                }
+            }
+        ]
+    },
+    "IPNG_NETWORKS_LIPASE_2026H1": {
+        "log_id": "b8whyKsJkXnvusRMwpnQ7EENf77I4306CVV2zZ9jxgg=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAErPjPlZYd4uo5aH/eIfHevbWqGHIiQIb7CXg0OszD+a0jbGERdUrnBP8afGBq6ey4/vDgI9aqqGiCmT9YGb1x4A==",
+        "mmd": 60,
+        "description": "IPng Networks 'Lipase2026h1'",
+        "temporal_interval": {
+            "start_inclusive": "2026-01-01T00:00:00Z",
+            "end_exclusive": "2026-07-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "IPNG_NETWORKS_LIPASE_2026H2": {
+        "log_id": "wrITHXl+UNevVCq6lNe/gvkblit8VSpx1d6TA3oaZHo=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzbuyo3fveONSA2O1SGsO+FH+H3nKfkOBGeDYAUwvP9xVt4leZF5ATRrvyAq6fh1ryXrq3KpIGjVkZxetF4c3QQ==",
+        "mmd": 60,
+        "description": "IPng Networks 'Lipase2026h2'",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "IPNG_NETWORKS_LIPASE_2027H1": {
+        "log_id": "lobDwHKqsHMHbjlGc7fpkBd6BWGOonZNS6ZQqQ6eCMw=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk3QA2r+4a13klobghHrz4PYkYfvCFDw3sIYwtnLjQMRij9jFucMgoCca5KOv42tJh6JJpYt2JjG8I28AxlLk3g==",
+        "mmd": 60,
+        "description": "IPng Networks 'Lipase2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "IPNG_NETWORKS_LIPASE_2027H2": {
+        "log_id": "vDvULt2EjVnlRf/XkJcMGs3KpHmmbmmVMI49ZsSR/kA=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE1aNm1Y4mLoC1AiEtf9PebaUapA5jA0sEoNV8KmNgMEjdAvHXJRONdqVKD5e0rlLIc2UlZMwe5Qi3b+dtiPlCeA==",
+        "mmd": 60,
+        "description": "IPng Networks 'Lipase2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "IPNG_NETWORKS_RENNET_2026H1": {
+        "log_id": "IPng7N+kfJEgOWLvg8kCWPeQbZ03SYvh/9hJVBcyCyA=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjjELwgGMea6d7YAOP1h1Q3z5IGFOFV/kmbT0qdRgMbhQCYZdDU/fObbHf7dPEGjlg/XbBCnmHJKJySK85tzC2w==",
+        "mmd": 60,
+        "description": "IPng Networks 'Rennet2026h1'",
+        "temporal_interval": {
+            "start_inclusive": "2026-01-01T00:00:00Z",
+            "end_exclusive": "2026-07-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "IPNG_NETWORKS_RENNET_2026H2": {
+        "log_id": "IPngiezr0NlfrYnreI+2QK/E2J+7QNyCETQxnDW/CNo=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEDjJrRh/NjSFYybFPOmilmqVHySfQ4a8ctJKYhWDuRLBLNLwy2PXxqVWwQStfjHXv0JofEAC00Xfrbd4aVz/7Bw==",
+        "mmd": 60,
+        "description": "IPng Networks 'Rennet2026h2'",
+        "temporal_interval": {
+            "start_inclusive": "2026-07-01T00:00:00Z",
+            "end_exclusive": "2027-01-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "IPNG_NETWORKS_RENNET_2027H1": {
+        "log_id": "IPngmrbD1ZzKxMv9sDFnjmgsvhhIV4z/L8d05K0vULE=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAErtwy8ljIL7OS99Fq0QMnXkep69geGFwjlex7/Wrii2cT+SCFl7Nw8JIAZTp24a5+RDrfoETMtUrkELVgmVeCVA==",
+        "mmd": 60,
+        "description": "IPng Networks 'Rennet2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2027-07-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "IPNG_NETWORKS_RENNET_2027H2": {
+        "log_id": "IPngONeE+PfIWiV4c8W5xL8kvQJlq9F3lPXT32yFW6s=",
+        "operator": "IPNG_NETWORKS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEi6aOJ3BVylIR4qc3UHBMON1VrUUTJSx2RrLUAf8Fo3/KImSvQuEZKrQSanLqsvvox8ExlLK5mPetb8JCS/0TYA==",
+        "mmd": 60,
+        "description": "IPng Networks 'Rennet2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-07-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z"
+        },
+        "log_type": "MONITORING_ONLY",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "LETS_ENCRYPT_SYCAMORE_2026H1": {
+        "log_id": "pcl4kl1XRheChw3YiWYLXFVki30AQPLsB2hR0YhpGfc=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfEEe0JZknA91/c6eNl1aexgeKzuGQUMvRCXPXg9L227O5I4Pi++Abcpq6qxlVUKPYafAJelAnMfGzv3lHCc8gA==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Sycamore2026h1'",
+        "temporal_interval": {
+            "start_inclusive": "2025-12-18T00:00:00Z",
+            "end_exclusive": "2026-06-18T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:06Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-06-25T13:40:00Z"
+                }
+            }
+        ]
+    },
+    "LETS_ENCRYPT_SYCAMORE_2026H2": {
+        "log_id": "bP5QGUOoXqkWvFLRM+TcyR7xQRx9JYQg0XOAnhgY6zo=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEwR1FtiiMbpvxR+sIeiZ5JSCIDIdTAPh7OrpdchcrCcyNVDvNUq358pqJx2qdyrOI+EjGxZ7UiPcN3bL3Q99FqA==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Sycamore2026h2'",
+        "temporal_interval": {
+            "start_inclusive": "2026-06-18T00:00:00Z",
+            "end_exclusive": "2026-12-17T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:07Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-27T03:00:00Z"
+                }
+            }
+        ]
+    },
+    "LETS_ENCRYPT_SYCAMORE_2027H1": {
+        "log_id": "jspHC6zeavOiBrCkeoS3Rv4fxr+VPiXmm07kAkjzxug=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEWrGdYyZYB7teCS4K/oKIsbV0yVBSgjlOwO22OOCoA6Y252QhFzC8Wg7oVXVKqfkWaSaM/n+3pfCBf4BAkpdx8g==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Sycamore2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2026-12-17T00:00:00Z",
+            "end_exclusive": "2027-06-18T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:07Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-27T03:00:00Z"
+                }
+            }
+        ]
+    },
+    "LETS_ENCRYPT_SYCAMORE_2027H2": {
+        "log_id": "5eNiR9ku9K2jhYO1NZHbcp/C8ArktnRRdNPd/GqiU4g=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEK+2zy2UWRMIyC2jU46+rj8UsyMjLsQIr1Y/6ClbdpWGthUb8y3Maf4zfAZTWW+AH9wAWPLRL5vmtz7Zkh2f2nA==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Sycamore2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-06-18T00:00:00Z",
+            "end_exclusive": "2027-12-16T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:03Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-27T03:00:00Z"
+                }
+            }
+        ]
+    },
+    "LETS_ENCRYPT_TWIG_2026H1": {
+        "log_id": "WUSCTUXhQ2fKUHvFtaSmfyox7je4S+Qnx6+LKKVk0Ss=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE5xh2NJZD3AYbBgaMlzB/xrD2MDHNQPbm0SUzhXI+cMAcCknQoL1CA38su6Gi1TtXOGr+ntegPTWCf5SNILWSmQ==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Twig2026h1'",
+        "temporal_interval": {
+            "start_inclusive": "2025-12-16T00:00:00Z",
+            "end_exclusive": "2026-06-16T00:00:00Z"
+        },
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "LETS_ENCRYPT_TWIG_2026H2": {
+        "log_id": "xn2BnpPBLPrrX2WgTQja4wqOXCf7fRUc73xH4tXLHe0=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKM7Fje9bHCZbaJj65sHgw1FBDjLwD5rgUawPYMz4U3u4+g2S6XOWcr5h2NtmGOgore78IpDsg/jsXh+FyeibUg==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Twig2026h2'",
+        "temporal_interval": {
+            "start_inclusive": "2026-06-16T00:00:00Z",
+            "end_exclusive": "2026-12-15T00:00:00Z"
+        },
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "LETS_ENCRYPT_TWIG_2027H1": {
+        "log_id": "MIQn6dbJsGQ5/rsS4QFNbqJ2NlTgQ19Z48RWY2ZbuOo=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEGHGl4ihlmfbfwJyONqNpBaLsRNnInohynCns6HTZeWRGZ3WLGA8VhbUJhlY2oAHH93mtoU+Pvtj/3MD4OqEJ5w==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Twig2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2026-12-15T00:00:00Z",
+            "end_exclusive": "2027-06-16T00:00:00Z"
+        },
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "LETS_ENCRYPT_TWIG_2027H2": {
+        "log_id": "0UNvAl0dnyOdvMGLuf+ksRm5lU1hDIPr7KA1oVaWvYE=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEr7GDfmQg4jsIQ7XjMicNTYLHdQKbkjhchr4QoXVEGa5lpl4ob0ObW2sDxcvAFLDQThX76XPd+BVBU6lDscD0uQ==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Twig2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-06-16T00:00:00Z",
+            "end_exclusive": "2027-12-14T00:00:00Z"
+        },
+        "log_type": "TEST",
+        "trust_stores": [
+            {
+                "owner": "GOOGLE",
+                "log_state": null
+            }
+        ]
+    },
+    "LETS_ENCRYPT_WILLOW_2026H1": {
+        "log_id": "4yON8o2iiOCq4Kzw+pDJhfC2v/XSpSewAfwcRFjEtug=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEtpFyulwgy1+u+wYQ37lbV+HsPFNYoi4sy6dZP662N/Z/usdNi4+Q3RLES1RY2PNk7zL/7VPSn3JERMPu/s4e4A==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Willow2026h1'",
+        "temporal_interval": {
+            "start_inclusive": "2025-12-17T00:00:00Z",
+            "end_exclusive": "2026-06-17T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:07Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-06-25T13:40:00Z"
+                }
+            }
+        ]
+    },
+    "LETS_ENCRYPT_WILLOW_2026H2": {
+        "log_id": "qCbL4wrGNRJGUz/gZfFPGdluGQgTxB3ZbXkAsxI8VSc=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEp8wH8R6zfM+UhsQq5un+lPdNTDkzcgkWLi1DwyqU6T00mtP5/CuGjvpw4mIz89I6KV5ZvhRHt5ZTF6qe24pqiA==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Willow2026h2'",
+        "temporal_interval": {
+            "start_inclusive": "2026-06-17T00:00:00Z",
+            "end_exclusive": "2026-12-16T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:08Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-27T03:00:00Z"
+                }
+            }
+        ]
+    },
+    "LETS_ENCRYPT_WILLOW_2027H1": {
+        "log_id": "ooEAGHNOF24dR+CVQPOBulRml81jqENQcW64CU7a8Q0=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzsMKtojO0BVB4t59lVyAhxtqObVA+wId5BpJGA8pZrw5GTjzuhpvLu/heQGi0hHCeislkDe34N/2D0SwEUBE0w==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Willow2027h1'",
+        "temporal_interval": {
+            "start_inclusive": "2026-12-16T00:00:00Z",
+            "end_exclusive": "2027-06-17T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-17T21:04:08Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-27T03:00:00Z"
+                }
+            }
+        ]
+    },
+    "LETS_ENCRYPT_WILLOW_2027H2": {
+        "log_id": "ppWirZJtb5lujvxJAUJX2LvwRqfWJYm4jcLXh2x45S8=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEYbMDg0qQEEYjsTttdDlouTKhg3fRiMJYNE+Epr/2bXyeQdQOHKQNKv5sbIKxjtE/5Vqo9YjQbnaOeH4Wm4PhdQ==",
+        "mmd": 60,
+        "description": "Let's Encrypt 'Willow2027h2'",
+        "temporal_interval": {
+            "start_inclusive": "2027-06-17T00:00:00Z",
+            "end_exclusive": "2027-12-15T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-03-30T19:10:04Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2025-11-27T03:00:00Z"
+                }
+            }
+        ]
+    },
+    "LOG_SYCAMORE_CT_LETSENCRYPT_ORG_2025H2D": {
+        "log_id": "W/beU/H7+sSaGFl0aUWhpqconV5wpg9IRQ5Ya7mucrg=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERI8grd3rsuE95/3Rk/Jn9rGBrpcvDqD6Y5Ooz1E+xABGl3w6JLdFHfzSFZvEFX/Goar6nbzQHtV75ud4R0Iafg==",
+        "mmd": 60,
+        "description": "log.sycamore.ct.letsencrypt.org/2025h2d",
+        "temporal_interval": {
+            "start_inclusive": "2025-06-19T00:00:00Z",
+            "end_exclusive": "2025-12-18T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-29T03:22:36Z"
+                }
+            }
+        ]
+    },
+    "LOG_WILLOW_CT_LETSENCRYPT_ORG_2025H2D": {
+        "log_id": "5NAXdhyRORG+9HOWrNjSRljCT7WTtRvqxVknYuiFPBU=",
+        "operator": "LETS_ENCRYPT",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAElX78WOZsrDp7/LDFvsGytclanWhJ2oEwdgytKo21ZrCzbJ6raFAmZ1bMFh4B/0+e1aWtfhG2wgCM2ex/aDgZuA==",
+        "mmd": 60,
+        "description": "log.willow.ct.letsencrypt.org/2025h2d",
+        "temporal_interval": {
+            "start_inclusive": "2025-06-18T00:00:00Z",
+            "end_exclusive": "2025-12-17T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-29T03:22:36Z"
+                }
+            }
+        ]
+    },
+    "TRUSTASIA_LUOSHU_2027": {
+        "log_id": "VzRIzG4dLA3JS2nyh9Hv5IPHolxQxTILuzrep29usEE=",
+        "operator": "TRUSTASIA",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEumSYzy6dUQlwTckPzKMKApMRinqxHIBlLfmrvx1SdMH1RTACi1wb1V18ss8YjlaC7Pch2OQa8OfRevub4Y9BDQ==",
+        "mmd": 60,
+        "description": "TrustAsia Luoshu2027",
+        "temporal_interval": {
+            "start_inclusive": "2026-12-24T00:00:00Z",
+            "end_exclusive": "2028-01-08T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "PENDING",
+                    "timestamp": "2026-01-29T02:31:37Z"
+                }
+            },
+            {
+                "owner": "GOOGLE",
+                "log_state": {
+                    "state_type": "USABLE",
+                    "timestamp": "2026-02-11T18:30:00Z"
+                }
+            }
+        ]
+    },
+    "TUSCOLO_2025H2": {
+        "log_id": "750EQi4gtDIQJ1TfUtJRRgJ/hEwH/YZeySLub86fe7w=",
+        "operator": "GEOMYS",
+        "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEK9d4GGtzbkwwsYpEtvnU9KKgZr67MsGlB7mnF8DW9bHnngHzPzXPbdo7n+FyCwSDYqEHbal1Z0CCVyZD6wQ/ow==",
+        "mmd": 86400,
+        "description": "Tuscolo2025h2",
+        "temporal_interval": {
+            "start_inclusive": "2025-07-01T00:00:00Z",
+            "end_exclusive": "2026-01-01T00:00:00Z"
+        },
+        "trust_stores": [
+            {
+                "owner": "APPLE",
+                "log_state": {
+                    "state_type": "REJECTED",
+                    "timestamp": "2026-01-29T03:22:36Z"
                 }
             }
         ]
