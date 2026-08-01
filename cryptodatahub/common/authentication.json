@@ -103,6 +103,13 @@
         "vulnerabilities": [],
         "anonymous": false
     },
+    "MLDSA": {
+        "name": "ML-DSA",
+        "long_name": "Module-Lattice-Based Digital Signature Algorithm",
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
     "XMSS": {
         "name": "XMSS",
         "long_name": "eXtended Merkle Signature Scheme",

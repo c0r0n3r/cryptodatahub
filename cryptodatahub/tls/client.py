@@ -1,18 +1,17 @@
 # SPDX-License-Identifier: MPL-2.0
 
 import collections
-import enum
 
 import attr
 
-from cryptodatahub.common.entity import Client
+from cryptodatahub.common.client import ClientParamsBase, get_client_capabilities_attribute
 from cryptodatahub.common.types import (
-    ClientVersion,
     CryptoDataEnumBase,
     CryptoDataParamsBase,
-    convert_client_version,
+    HexData,
     convert_dict_to_object,
     convert_enum,
+    convert_hex_data,
     convert_iterable,
 )
 
@@ -48,28 +47,6 @@ class ClientGreaseParams(CryptoDataParamsBase):
         default=[],
         converter=convert_iterable(convert_enum(TlsExtensionType)),
         validator=attr.validators.deep_iterable(attr.validators.instance_of(TlsExtensionType))
-    )
-
-
-class ClientConfigurationChange(enum.IntEnum):
-    pass
-
-
-@attr.s(frozen=True)
-class ClientVersionedParamsBase(CryptoDataParamsBase):
-    client = attr.ib(converter=convert_enum(Client), validator=attr.validators.instance_of(Client))
-    first_version = attr.ib(converter=convert_client_version(), validator=attr.validators.instance_of(ClientVersion))
-    last_version = attr.ib(converter=convert_client_version(), validator=attr.validators.instance_of(ClientVersion))
-
-    def __str__(self):
-        return f'{self.client.value} ({self.first_version} - {self.last_version})'
-
-
-@attr.s(frozen=True)
-class ClientVersionedParams(ClientVersionedParamsBase):
-    changes = attr.ib(
-        converter=frozenset,
-        validator=attr.validators.deep_iterable(attr.validators.instance_of(ClientConfigurationChange))
     )
 
 
@@ -124,6 +101,13 @@ class ClientExtensionParams(CryptoDataParamsBase):  # pylint: disable=too-many-i
             attr.validators.deep_iterable(attr.validators.instance_of(TlsNamedCurve))
         )
     )
+    old_application_layer_protocol_settings = attr.ib(
+        default=None,
+        converter=convert_iterable(convert_enum(TlsProtocolName)),
+        validator=attr.validators.optional(
+            attr.validators.deep_iterable(attr.validators.instance_of(TlsProtocolName))
+        )
+    )
     post_handshake_auth = attr.ib(default=None)
     psk_key_exchange_modes = attr.ib(
         default=None,
@@ -133,6 +117,7 @@ class ClientExtensionParams(CryptoDataParamsBase):  # pylint: disable=too-many-i
         )
     )
     record_size_limit = attr.ib(default=None, validator=attr.validators.optional(attr.validators.instance_of(int)))
+    server_padding = attr.ib(default=None, validator=attr.validators.optional(attr.validators.instance_of(int)))
     signature_algorithms = attr.ib(
         default=None,
         converter=convert_iterable(convert_enum(TlsSignatureAndHashAlgorithm)),
@@ -158,6 +143,13 @@ class ClientExtensionParams(CryptoDataParamsBase):  # pylint: disable=too-many-i
         default=None,
         converter=convert_dict_to_object(ClientTokenBindingParams),
         validator=attr.validators.optional(attr.validators.instance_of(ClientTokenBindingParams))
+    )
+    trust_anchors = attr.ib(
+        default=None,
+        converter=convert_iterable(convert_hex_data()),
+        validator=attr.validators.optional(
+            attr.validators.deep_iterable(attr.validators.instance_of(HexData))
+        )
     )
 
 
@@ -203,15 +195,8 @@ class ClientCapabilities(CryptoDataParamsBase):  # pylint: disable=too-many-inst
 
 
 @attr.s(frozen=True)
-class ClientParams(CryptoDataParamsBase):  # pylint: disable=too-many-instance-attributes
-    meta = attr.ib(
-        converter=convert_dict_to_object(ClientVersionedParams),
-        validator=attr.validators.instance_of(ClientVersionedParams)
-    )
-    capabilities = attr.ib(
-        converter=convert_dict_to_object(ClientCapabilities),
-        validator=attr.validators.instance_of(ClientCapabilities)
-    )
+class ClientParams(ClientParamsBase):
+    capabilities = get_client_capabilities_attribute(ClientCapabilities)
 
 
 TlsClient = CryptoDataEnumBase('TlsClient', CryptoDataEnumBase.get_json_records(ClientParams))
