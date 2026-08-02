@@ -58,6 +58,7 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 - add post-quantum named groups (#32)
 - add post-quantum named curves (#32)
 - add the p384_mlkem1024 named curve of Tresorit (#32)
+- sort the data written by the updaters and detect the changes by comparing them (#32)
 
 * Fri Jul 31 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.5.0-1
 - add long names to block cipher and MAC algorithm entries

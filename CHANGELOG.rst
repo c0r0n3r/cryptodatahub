@@ -18,6 +18,13 @@ Features
    -  add post-quantum named curves (#32)
    -  add the p384_mlkem1024 named curve of Tresorit (#32)
 
+Refactor
+========
+
+-  Generic
+
+   -  sort the data written by the updaters and detect the changes by comparing them (#32)
+
 ------------------
 1.5.0 - 2026-07-31
 ------------------
