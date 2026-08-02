@@ -15,6 +15,7 @@ Features
    -  add post-quantum authentication algorithms (#32)
    -  add the NIST security levels and their bit security (#32)
    -  add the algorithm name of the oqs-provider to the named group entries (#32)
+   -  add updater for the algorithms of the Open Quantum Safe project (#32)
 
 -  TLS (``tls``)
 
