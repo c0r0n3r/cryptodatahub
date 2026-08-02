@@ -20,6 +20,14 @@ Features
 
    -  add post-quantum named curves (#32)
    -  add the p384_mlkem1024 named curve of Tresorit (#32)
+   -  add post-quantum signature algorithms (#32)
+
+Notable fixes
+=============
+
+-  TLS (``tls``)
+
+   -  fix the named curve code points of the FrodoKEM-640-AES hybrids (#32)
 
 Refactor
 ========

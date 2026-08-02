@@ -62,6 +62,8 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 - add post-quantum authentication algorithms (#32)
 - add the NIST security levels and their bit security (#32)
 - add the algorithm name of the oqs-provider to the named group entries (#32)
+- add post-quantum signature algorithms (#32)
+- fix the named curve code points of the FrodoKEM-640-AES hybrids (#32)
 
 * Fri Jul 31 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.5.0-1
 - add long names to block cipher and MAC algorithm entries
