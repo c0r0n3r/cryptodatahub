@@ -21,6 +21,7 @@ from cryptodatahub.tls.algorithm import (
     TlsSignatureAndHashAlgorithm,
     TlsTokenBindingParamater,
 )
+from cryptodatahub.tls.version import TlsVersion
 
 
 class TestSslCipherKind(TestClasses.TestJsonCodeNumericBase):
@@ -117,6 +118,25 @@ class TestTlsNamedCurve(TestClasses.TestJsonCodeNumericBase):
 
     def test_str(self):
         self.assertEqual(str(TlsNamedCurve.X25519.value), 'Curve25519')
+
+    def test_versions(self):
+        self.assertEqual(TlsNamedCurve.SECT163K1.value.initial_version, TlsVersion.TLS1)
+        self.assertEqual(TlsNamedCurve.SECT163K1.value.last_version, TlsVersion.TLS1_2)
+
+        self.assertEqual(TlsNamedCurve.BRAINPOOLP256R1.value.initial_version, TlsVersion.TLS1)
+        self.assertEqual(TlsNamedCurve.BRAINPOOLP256R1.value.last_version, TlsVersion.TLS1_2)
+
+        self.assertEqual(TlsNamedCurve.SECP256R1.value.initial_version, TlsVersion.TLS1)
+        self.assertEqual(TlsNamedCurve.SECP256R1.value.last_version, TlsVersion.TLS1_3)
+
+        self.assertEqual(TlsNamedCurve.FFDHE2048.value.initial_version, TlsVersion.TLS1)
+        self.assertEqual(TlsNamedCurve.FFDHE2048.value.last_version, TlsVersion.TLS1_3)
+
+        self.assertEqual(TlsNamedCurve.GC256A.value.initial_version, TlsVersion.TLS1_2)
+        self.assertEqual(TlsNamedCurve.GC256A.value.last_version, TlsVersion.TLS1_3)
+
+        self.assertEqual(TlsNamedCurve.X25519_ML_KEM_768.value.initial_version, TlsVersion.TLS1_3)
+        self.assertEqual(TlsNamedCurve.X25519_ML_KEM_768.value.last_version, TlsVersion.TLS1_3)
 
 
 class TestTlsNextProtocolName(TestClasses.TestJsonCodeStringBase):
