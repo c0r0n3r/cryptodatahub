@@ -44,6 +44,14 @@ class NamedCurveParams(CryptoDataParamsEnumNumeric, GradeableComplex):
         converter=convert_enum(NamedGroup),
         validator=attr.validators.optional(attr.validators.instance_of(NamedGroup)),
     )
+    initial_version = attr.ib(
+        converter=convert_enum(TlsVersion),
+        validator=attr.validators.instance_of(TlsVersion),
+    )
+    last_version = attr.ib(
+        converter=convert_enum(TlsVersion),
+        validator=attr.validators.instance_of(TlsVersion),
+    )
 
     def __attrs_post_init__(self):
         if self.named_group is not None:
