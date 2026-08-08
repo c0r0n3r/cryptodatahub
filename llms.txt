@@ -1,0 +1,76 @@
+# CryptoDataHub
+
+A repository of cryptography-related data available under a free license, with a Python wrapper. Ships algorithm identifiers, Diffie-Hellman and elliptic curve parameters, trust stores, Certificate Transparency log lists, client capabilities and vulnerability data as JSON, exposed as typed enumerations. Consumed by CryptoParser and CryptoLyzer.
+
+## Files
+
+### Project Root
+- `pyproject.toml` — Build system, dependencies, metadata (setuptools + setuptools-scm)
+- `setup.py` — Delegates to pyproject.toml
+- `README.md` — Project overview, install instructions, license
+- `CHANGELOG.rst` — Versioned changelog
+- `CONTRIBUTING.md` — Contribution guidelines
+- `LICENSE.txt` — MPL-2.0
+
+### Common Infrastructure (`cryptodatahub/common/`)
+- `types.py` — Data loading engine: `CryptoDataEnumBase`, `CryptoDataEnumCodedBase`, `CryptoDataEnumOIDBase`, `CryptoDataEnumBinaryBase`, `CryptoDataParamsBase`, `CryptoDataParamsNamed`, and the converters that turn JSON values into typed attributes (`convert_enum`, `convert_datetime`, `convert_base64_data`, `convert_hex_data`, `convert_mapping`, `convert_variadic`)
+- `algorithm.py` — Protocol-independent algorithm enumerations: `Authentication`, `BlockCipher`, `BlockCipherMode`, `Hash`, `KeyExchange`, `NamedGroup`, `MAC`, `MACMode`, `Signature`, `IpProtocolNumber`
+- `grade.py` — Security grading: `Grade`, `Gradeable`, `GradeableSimple`, `GradeableVulnerabilities`, `GradeableComplex`, `Vulnerability`, `AttackType`, `AttackNamed`
+- `parameter.py` — Well-known parameters: `DHParamWellKnownBase`, `DHParameterNumbers`, `ECParamWellKnownBase`, `ECParameterNumbers`, `StandardParams`
+- `key.py` — Public key handling: `PublicKey`, `PublicKeySigned`, `PublicKeyX509Base`, `PublicKeySize`, per-algorithm parameter classes (RSA, DSA, ECDSA, EdDSA)
+- `stores.py` — Trust stores: `RootCertificateBase`, `RootCertificateParams`, `CertificateTransparencyLogBase`, `CertificateTransparencyOperator`, `CertificateTrustConstraint`
+- `entity.py` — Entities: `EntityBase`, `EntityType`, `EntityRole`, `ClientType`, `ServerType`
+- `client.py` — Client capability base classes: `ClientVersionedParamsBase`, `ClientParamsBase`, `ClientConfigurationChange`
+- `fetcher.py` — Source fetchers used by the updaters: Certificate Transparency log stores (Google, Apple), root certificate stores (Android, Apple, Chrome, Microsoft, Mozilla, OpenJDK, Oracle JDK)
+- `exception.py` — Exceptions: `InvalidValue`
+- `utils.py` — Utility: `bytes_to_hex_string()`, `bytes_from_hex_string()`, `name_to_enum_item_name()`, `hash_bytes()`, `HttpFetcher`
+
+### TLS/SSL (`cryptodatahub/tls/`)
+- `algorithm.py` — TLS algorithm enumerations: cipher suites, SSL cipher kinds, named curves, hash and signature algorithms, extension types, compression methods, EC point formats, protocol names, GREASE values
+- `version.py` — TLS and SSL protocol version data
+- `client.py` — Client capability data of browsers and libraries
+
+### SSH (`cryptodatahub/ssh/`)
+- `algorithm.py` — SSH algorithm enumerations: encryption, MAC, key exchange, host key, compression algorithms, elliptic curve identifiers
+
+### IKE (`cryptodatahub/ike/`)
+- `algorithm.py` — IKEv1 and IKEv2 algorithm enumerations: encryption, hash, integrity, pseudorandom function, Diffie-Hellman group, authentication method, transform, payload, notify and exchange types, vendor identifiers
+- `version.py` — ISAKMP and IKE version data
+
+### DNSSEC (`cryptodatahub/dnsrec/`)
+- `algorithm.py` — DNSSEC algorithm enumerations: DNSKEY algorithms, digest types, resource record types, SSHFP algorithms and fingerprint types
+
+### Data (`cryptodatahub/*/*.json`)
+- One JSON file per enumeration, named after it (`tls/cipher-suite.json`, `common/root-certificate.json`, `ike/ikev2-diffie-hellman-group.json`, …)
+- Loaded lazily by the enumeration classes in the module next to them
+- Packaged via `[tool.setuptools.package-data]` in `pyproject.toml`
+
+### Updaters (`updaters/`)
+- `ct_log.py` — Regenerates `common/certificate-transparency-log.json`, entry point `update-ct-log`
+- `trust_stores.py` — Regenerates `common/root-certificate.json`, entry point `update-trust-stores`
+- `common.py` — Shared updater infrastructure
+
+### Tests (`test/`)
+- `test/common/` — Common infrastructure tests: types and converters, algorithms, grading, parameters, keys, stores, entities, exceptions, utilities
+- `test/tls/` — TLS data tests: algorithms, versions, client capabilities
+- `test/ssh/` — SSH algorithm data tests
+- `test/ike/` — IKE algorithm data tests
+- `test/dnsrec/`, `test/dnssec/` — DNSSEC algorithm data tests
+- `test/updaters/` — Updater tests: Certificate Transparency logs, trust stores, shared updater infrastructure
+
+## Architecture
+
+The project separates the data from the code that exposes it:
+
+1. **Data** — JSON files next to the module that owns them, one file per enumeration.
+2. **Loading** (`common/types.py`) — `CryptoDataEnumBase` reads the JSON file belonging to the enumeration and builds its members from the entries. Converters map JSON values to typed attributes.
+3. **Parameter classes** — Each enumeration member carries a parameter object (`CryptoDataParamsBase` subclass) holding its code point, name, and algorithm-specific attributes.
+4. **Grading** (`common/grade.py`) — Parameter classes mix in `GradeableSimple`, `GradeableVulnerabilities` or `GradeableComplex`, so a member can report its security grade and the vulnerabilities affecting it.
+5. **Updaters** (`updaters/`) — Fetch the original sources and regenerate the JSON files, so the data can be refreshed without hand editing.
+
+## Key Patterns
+
+- Enumeration classes subclass `CryptoDataEnumBase` and gain lookup classmethods built on `_from_attr()`, for example `from_code()` on `CryptoDataEnumCodedBase` and `from_oid()` on `CryptoDataEnumOIDBase`
+- Parameter classes are `@attr.s` (attrs library) data classes with validators
+- Converters are factory functions returning a converter object, passed to `attr.ib(converter=...)`
+- Data files are never edited by hand where an updater exists for them
