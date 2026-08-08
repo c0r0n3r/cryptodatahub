@@ -45,6 +45,7 @@ Details
     :maxdepth: 3
 
     features
+    development
 
 =======
 History
