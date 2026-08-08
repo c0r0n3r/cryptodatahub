@@ -19,6 +19,7 @@ from cryptodatahub.__setup__ import (  # noqa: E402, pylint: disable=wrong-impor
 
 
 extensions = [
+    'myst_parser',
     'sphinx_sitemap',
 ]
 templates_path = ['_templates']

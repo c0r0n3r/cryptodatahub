@@ -19,7 +19,23 @@
 Summary
 =======
 
-.. include:: ../README.rst
+.. include:: ../README.md
+    :parser: myst_parser.sphinx_
+    :start-after: <!-- documentation-summary-start -->
+    :end-before: <!-- documentation-summary-end -->
+
+.. include:: ../README.md
+    :parser: myst_parser.sphinx_
+    :start-after: <!-- documentation-strength-start -->
+    :end-before: <!-- documentation-strength-end -->
+
+Why CryptoDataHub?
+==================
+
+.. include:: ../README.md
+    :parser: myst_parser.sphinx_
+    :start-after: <!-- documentation-comparison-start -->
+    :end-before: <!-- documentation-comparison-end -->
 
 =======
 Details

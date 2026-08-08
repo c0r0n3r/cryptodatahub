@@ -38,7 +38,7 @@ classifiers=[
 ]
 
 keywords=['ssl', 'tls', 'ssh', 'dns', 'dnssec', 'ike']
-readme = {file = 'README.rst', content-type = 'text/x-rst'}
+readme = {file = 'README.md', content-type = 'text/markdown'}
 license = {text = 'MPL-2.0'}
 requires-python = '>=3.9'
 
@@ -56,6 +56,7 @@ tests = [
     'coverage',
 ]
 docs = [
+    'myst-parser',
     'sphinx',
     'sphinx-sitemap',
     'docutils',
