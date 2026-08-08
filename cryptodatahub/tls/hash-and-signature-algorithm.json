@@ -3,97 +3,13 @@
         "_code_in_hex": "0x0000",
         "code": 0,
         "hash_algorithm": null,
-        "signature_algorithm": "anonymous",
-        "initial_version": "TLS1_2"
-    },
-    "ANONYMOUS_MD5": {
-        "_code_in_hex": "0x0100",
-        "code": 256,
-        "hash_algorithm": "MD5",
-        "signature_algorithm": "anonymous",
-        "initial_version": "TLS1_2"
-    },
-    "ANONYMOUS_SHA1": {
-        "_code_in_hex": "0x0200",
-        "code": 512,
-        "hash_algorithm": "SHA1",
-        "signature_algorithm": "anonymous",
-        "initial_version": "TLS1_2"
-    },
-    "ANONYMOUS_SHA224": {
-        "_code_in_hex": "0x0300",
-        "code": 768,
-        "hash_algorithm": "SHA2_224",
-        "signature_algorithm": "anonymous",
-        "initial_version": "TLS1_2"
-    },
-    "ANONYMOUS_SHA256": {
-        "_code_in_hex": "0x0400",
-        "code": 1024,
-        "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "anonymous",
-        "initial_version": "TLS1_2"
-    },
-    "ANONYMOUS_SHA384": {
-        "_code_in_hex": "0x0500",
-        "code": 1280,
-        "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "anonymous",
-        "initial_version": "TLS1_2"
-    },
-    "ANONYMOUS_SHA512": {
-        "_code_in_hex": "0x0006",
-        "code": 6,
-        "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "anonymous",
+        "signature_algorithm": "ANONYMOUS",
         "initial_version": "TLS1_2"
     },
     "RSA_NONE": {
         "_code_in_hex": "0x0001",
         "code": 1,
         "hash_algorithm": null,
-        "signature_algorithm": "RSA",
-        "initial_version": "TLS1_2"
-    },
-    "RSA_MD5": {
-        "_code_in_hex": "0x0101",
-        "code": 257,
-        "hash_algorithm": "MD5",
-        "signature_algorithm": "RSA",
-        "initial_version": "TLS1_2"
-    },
-    "RSA_SHA1": {
-        "_code_in_hex": "0x0201",
-        "code": 513,
-        "hash_algorithm": "SHA1",
-        "signature_algorithm": "RSA",
-        "initial_version": "TLS1_2"
-    },
-    "RSA_SHA224": {
-        "_code_in_hex": "0x0301",
-        "code": 769,
-        "hash_algorithm": "SHA2_224",
-        "signature_algorithm": "RSA",
-        "initial_version": "TLS1_2"
-    },
-    "RSA_SHA256": {
-        "_code_in_hex": "0x0401",
-        "code": 1025,
-        "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "RSA",
-        "initial_version": "TLS1_2"
-    },
-    "RSA_SHA384": {
-        "_code_in_hex": "0x0501",
-        "code": 1281,
-        "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "RSA",
-        "initial_version": "TLS1_2"
-    },
-    "RSA_SHA512": {
-        "_code_in_hex": "0x0601",
-        "code": 1537,
-        "hash_algorithm": "SHA2_512",
         "signature_algorithm": "RSA",
         "initial_version": "TLS1_2"
     },
@@ -104,48 +20,6 @@
         "signature_algorithm": "DSS",
         "initial_version": "TLS1_2"
     },
-    "DSA_MD5": {
-        "_code_in_hex": "0x0102",
-        "code": 258,
-        "hash_algorithm": "MD5",
-        "signature_algorithm": "DSS",
-        "initial_version": "TLS1_2"
-    },
-    "DSA_SHA1": {
-        "_code_in_hex": "0x0202",
-        "code": 514,
-        "hash_algorithm": "SHA1",
-        "signature_algorithm": "DSS",
-        "initial_version": "TLS1_2"
-    },
-    "DSA_SHA224": {
-        "_code_in_hex": "0x0302",
-        "code": 770,
-        "hash_algorithm": "SHA2_224",
-        "signature_algorithm": "DSS",
-        "initial_version": "TLS1_2"
-    },
-    "DSA_SHA256": {
-        "_code_in_hex": "0x0402",
-        "code": 1026,
-        "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "DSS",
-        "initial_version": "TLS1_2"
-    },
-    "DSA_SHA384": {
-        "_code_in_hex": "0x0502",
-        "code": 1282,
-        "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "DSS",
-        "initial_version": "TLS1_2"
-    },
-    "DSA_SHA512": {
-        "_code_in_hex": "0x0602",
-        "code": 1538,
-        "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "DSS",
-        "initial_version": "TLS1_2"
-    },
     "ECDSA_NONE": {
         "_code_in_hex": "0x0003",
         "code": 3,
@@ -153,68 +27,12 @@
         "signature_algorithm": "ECDSA",
         "initial_version": "TLS1_2"
     },
-    "ECDSA_MD5": {
-        "_code_in_hex": "0x0103",
-        "code": 259,
-        "hash_algorithm": "MD5",
-        "signature_algorithm": "ECDSA",
-        "initial_version": "TLS1_2"
-    },
-    "ECDSA_SHA1": {
-        "_code_in_hex": "0x0203",
-        "code": 515,
-        "hash_algorithm": "SHA1",
-        "signature_algorithm": "ECDSA",
-        "initial_version": "TLS1_2"
-    },
-    "ECDSA_SHA224": {
-        "_code_in_hex": "0x0303",
-        "code": 771,
-        "hash_algorithm": "SHA2_224",
-        "signature_algorithm": "ECDSA",
-        "initial_version": "TLS1_2"
-    },
-    "ECDSA_SHA256": {
-        "_code_in_hex": "0x0403",
-        "code": 1027,
-        "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "ECDSA",
-        "initial_version": "TLS1_2"
-    },
-    "ECDSA_SHA384": {
-        "_code_in_hex": "0x0503",
-        "code": 1283,
-        "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "ECDSA",
-        "initial_version": "TLS1_2"
-    },
-    "ECDSA_SHA512": {
-        "_code_in_hex": "0x0603",
-        "code": 1539,
+    "ANONYMOUS_SHA512": {
+        "_code_in_hex": "0x0006",
+        "code": 6,
         "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "ECDSA",
+        "signature_algorithm": "ANONYMOUS",
         "initial_version": "TLS1_2"
-    },
-    "ECDSA_BRAINPOOLP256R1TLS13_SHA256": {
-        "_code_in_hex": "0x081a",
-        "code": 2074,
-        "hash_algorithm": "SHA2_256",
-        "signature_algorithm": "ECDSA",
-        "initial_version": "TLS1_3"
-    },
-    "ECDSA_BRAINPOOLP384R1TLS13_SHA384": {
-        "_code_in_hex": "0x081b",
-        "code": 2075,
-        "hash_algorithm": "SHA2_384",
-        "signature_algorithm": "ECDSA",
-        "initial_version": "TLS1_3"
-    },
-    "ECDSA_BRAINPOOLP512R1TLS13_SHA512": {
-        "_code_in_hex": "0x081c",
-        "code": 2076,
-        "hash_algorithm": "SHA2_512",
-        "signature_algorithm": "ECDSA",
-        "initial_version": "TLS1_3"
     },
     "GOST_R3410_01": {
         "_code_in_hex": "0x00ed",
@@ -237,18 +55,172 @@
         "signature_algorithm": "GOST_R3410_12_512",
         "initial_version": "TLS1_2"
     },
-    "GOST_R3410_12_256": {
-        "_code_in_hex": "0x4008",
-        "code": 16392,
-        "hash_algorithm": "GOST_R3411_12_256",
-        "signature_algorithm": "GOST_R3410_12_256",
+    "ANONYMOUS_MD5": {
+        "_code_in_hex": "0x0100",
+        "code": 256,
+        "hash_algorithm": "MD5",
+        "signature_algorithm": "ANONYMOUS",
         "initial_version": "TLS1_2"
     },
-    "GOST_R3410_12_512": {
-        "_code_in_hex": "0x4108",
-        "code": 16648,
-        "hash_algorithm": "GOST_R3411_12_512",
-        "signature_algorithm": "GOST_R3410_12_512",
+    "RSA_MD5": {
+        "_code_in_hex": "0x0101",
+        "code": 257,
+        "hash_algorithm": "MD5",
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
+    },
+    "DSA_MD5": {
+        "_code_in_hex": "0x0102",
+        "code": 258,
+        "hash_algorithm": "MD5",
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
+    },
+    "ECDSA_MD5": {
+        "_code_in_hex": "0x0103",
+        "code": 259,
+        "hash_algorithm": "MD5",
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
+    },
+    "ANONYMOUS_SHA1": {
+        "_code_in_hex": "0x0200",
+        "code": 512,
+        "hash_algorithm": "SHA1",
+        "signature_algorithm": "ANONYMOUS",
+        "initial_version": "TLS1_2"
+    },
+    "RSA_SHA1": {
+        "_code_in_hex": "0x0201",
+        "code": 513,
+        "hash_algorithm": "SHA1",
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
+    },
+    "DSA_SHA1": {
+        "_code_in_hex": "0x0202",
+        "code": 514,
+        "hash_algorithm": "SHA1",
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
+    },
+    "ECDSA_SHA1": {
+        "_code_in_hex": "0x0203",
+        "code": 515,
+        "hash_algorithm": "SHA1",
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
+    },
+    "ANONYMOUS_SHA224": {
+        "_code_in_hex": "0x0300",
+        "code": 768,
+        "hash_algorithm": "SHA2_224",
+        "signature_algorithm": "ANONYMOUS",
+        "initial_version": "TLS1_2"
+    },
+    "RSA_SHA224": {
+        "_code_in_hex": "0x0301",
+        "code": 769,
+        "hash_algorithm": "SHA2_224",
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
+    },
+    "DSA_SHA224": {
+        "_code_in_hex": "0x0302",
+        "code": 770,
+        "hash_algorithm": "SHA2_224",
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
+    },
+    "ECDSA_SHA224": {
+        "_code_in_hex": "0x0303",
+        "code": 771,
+        "hash_algorithm": "SHA2_224",
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
+    },
+    "ANONYMOUS_SHA256": {
+        "_code_in_hex": "0x0400",
+        "code": 1024,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "ANONYMOUS",
+        "initial_version": "TLS1_2"
+    },
+    "RSA_SHA256": {
+        "_code_in_hex": "0x0401",
+        "code": 1025,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
+    },
+    "DSA_SHA256": {
+        "_code_in_hex": "0x0402",
+        "code": 1026,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
+    },
+    "ECDSA_SHA256": {
+        "_code_in_hex": "0x0403",
+        "code": 1027,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
+    },
+    "ANONYMOUS_SHA384": {
+        "_code_in_hex": "0x0500",
+        "code": 1280,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "ANONYMOUS",
+        "initial_version": "TLS1_2"
+    },
+    "RSA_SHA384": {
+        "_code_in_hex": "0x0501",
+        "code": 1281,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
+    },
+    "DSA_SHA384": {
+        "_code_in_hex": "0x0502",
+        "code": 1282,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
+    },
+    "ECDSA_SHA384": {
+        "_code_in_hex": "0x0503",
+        "code": 1283,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
+    },
+    "RSA_SHA512": {
+        "_code_in_hex": "0x0601",
+        "code": 1537,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "RSA",
+        "initial_version": "TLS1_2"
+    },
+    "DSA_SHA512": {
+        "_code_in_hex": "0x0602",
+        "code": 1538,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "DSS",
+        "initial_version": "TLS1_2"
+    },
+    "ECDSA_SHA512": {
+        "_code_in_hex": "0x0603",
+        "code": 1539,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_2"
+    },
+    "SM2_SM3": {
+        "_code_in_hex": "0x0708",
+        "code": 1800,
+        "hash_algorithm": "SM3",
+        "signature_algorithm": "SM2",
         "initial_version": "TLS1_2"
     },
     "RSA_PSS_RSAE_SHA256": {
@@ -307,6 +279,27 @@
         "signature_algorithm": "RSA",
         "initial_version": "TLS1_3"
     },
+    "ECDSA_BRAINPOOLP256R1TLS13_SHA256": {
+        "_code_in_hex": "0x081a",
+        "code": 2074,
+        "hash_algorithm": "SHA2_256",
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_3"
+    },
+    "ECDSA_BRAINPOOLP384R1TLS13_SHA384": {
+        "_code_in_hex": "0x081b",
+        "code": 2075,
+        "hash_algorithm": "SHA2_384",
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_3"
+    },
+    "ECDSA_BRAINPOOLP512R1TLS13_SHA512": {
+        "_code_in_hex": "0x081c",
+        "code": 2076,
+        "hash_algorithm": "SHA2_512",
+        "signature_algorithm": "ECDSA",
+        "initial_version": "TLS1_3"
+    },
     "MLDSA44": {
         "_code_in_hex": "0x0904",
         "code": 2308,
@@ -328,11 +321,837 @@
         "signature_algorithm": "MLDSA",
         "initial_version": "TLS1_3"
     },
-    "SM2_SM3": {
-        "_code_in_hex": "0x0708",
-        "code": 1800,
-        "hash_algorithm": "SM3",
-        "signature_algorithm": "SM2",
+    "GOST_R3410_12_256": {
+        "_code_in_hex": "0x4008",
+        "code": 16392,
+        "hash_algorithm": "GOST_R3411_12_256",
+        "signature_algorithm": "GOST_R3410_12_256",
         "initial_version": "TLS1_2"
+    },
+    "GOST_R3410_12_512": {
+        "_code_in_hex": "0x4108",
+        "code": 16648,
+        "hash_algorithm": "GOST_R3411_12_512",
+        "signature_algorithm": "GOST_R3410_12_512",
+        "initial_version": "TLS1_2"
+    },
+    "FALCON512_R3": {
+        "_code_in_hex": "0xfe0b",
+        "code": 65035,
+        "hash_algorithm": null,
+        "signature_algorithm": "FALCON",
+        "initial_version": "TLS1_3"
+    },
+    "P256_FALCON512_R3": {
+        "_code_in_hex": "0xfe0c",
+        "code": 65036,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_FALCON512",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_FALCON512_R3": {
+        "_code_in_hex": "0xfe0d",
+        "code": 65037,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_FALCON512",
+        "initial_version": "TLS1_3"
+    },
+    "FALCON1024_R3": {
+        "_code_in_hex": "0xfe0e",
+        "code": 65038,
+        "hash_algorithm": null,
+        "signature_algorithm": "FALCON",
+        "initial_version": "TLS1_3"
+    },
+    "P521_FALCON1024_R3": {
+        "_code_in_hex": "0xfe0f",
+        "code": 65039,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_FALCON1024",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2128FSIMPLE_R3": {
+        "_code_in_hex": "0xfe61",
+        "code": 65121,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P256_SPHINCSSHA2128FSIMPLE_R3": {
+        "_code_in_hex": "0xfe62",
+        "code": 65122,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_SPHINCSSHA2128FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_SPHINCSSHA2128FSIMPLE_R3": {
+        "_code_in_hex": "0xfe63",
+        "code": 65123,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_SPHINCSSHA2128FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2128SSIMPLE_R3": {
+        "_code_in_hex": "0xfe67",
+        "code": 65127,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P256_SPHINCSSHA2128SSIMPLE_R3": {
+        "_code_in_hex": "0xfe68",
+        "code": 65128,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_SPHINCSSHA2128SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_SPHINCSSHA2128SSIMPLE_R3": {
+        "_code_in_hex": "0xfe69",
+        "code": 65129,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_SPHINCSSHA2128SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2192FSIMPLE_R3": {
+        "_code_in_hex": "0xfe6c",
+        "code": 65132,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P384_SPHINCSSHA2192FSIMPLE_R3": {
+        "_code_in_hex": "0xfe6d",
+        "code": 65133,
+        "hash_algorithm": null,
+        "signature_algorithm": "P384_SPHINCSSHA2192FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2192SSIMPLE_R3": {
+        "_code_in_hex": "0xfe70",
+        "code": 65136,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P384_SPHINCSSHA2192SSIMPLE_R3": {
+        "_code_in_hex": "0xfe71",
+        "code": 65137,
+        "hash_algorithm": null,
+        "signature_algorithm": "P384_SPHINCSSHA2192SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2256FSIMPLE_R3": {
+        "_code_in_hex": "0xfe74",
+        "code": 65140,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P521_SPHINCSSHA2256FSIMPLE_R3": {
+        "_code_in_hex": "0xfe75",
+        "code": 65141,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_SPHINCSSHA2256FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2256SSIMPLE_R3": {
+        "_code_in_hex": "0xfe78",
+        "code": 65144,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P521_SPHINCSSHA2256SSIMPLE_R3": {
+        "_code_in_hex": "0xfe79",
+        "code": 65145,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_SPHINCSSHA2256SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE128FSIMPLE_R3": {
+        "_code_in_hex": "0xfe7d",
+        "code": 65149,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P256_SPHINCSSHAKE128FSIMPLE_R3": {
+        "_code_in_hex": "0xfe7e",
+        "code": 65150,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_SPHINCSSHAKE128FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_SPHINCSSHAKE128FSIMPLE_R3": {
+        "_code_in_hex": "0xfe7f",
+        "code": 65151,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_SPHINCSSHAKE128FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE128SSIMPLE_R3": {
+        "_code_in_hex": "0xfe83",
+        "code": 65155,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P256_SPHINCSSHAKE128SSIMPLE_R3": {
+        "_code_in_hex": "0xfe84",
+        "code": 65156,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_SPHINCSSHAKE128SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_SPHINCSSHAKE128SSIMPLE_R3": {
+        "_code_in_hex": "0xfe85",
+        "code": 65157,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_SPHINCSSHAKE128SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE192FSIMPLE_R3": {
+        "_code_in_hex": "0xfe88",
+        "code": 65160,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P384_SPHINCSSHAKE192FSIMPLE_R3": {
+        "_code_in_hex": "0xfe89",
+        "code": 65161,
+        "hash_algorithm": null,
+        "signature_algorithm": "P384_SPHINCSSHAKE192FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE192SSIMPLE_R3": {
+        "_code_in_hex": "0xfe8c",
+        "code": 65164,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P384_SPHINCSSHAKE192SSIMPLE_R3": {
+        "_code_in_hex": "0xfe8d",
+        "code": 65165,
+        "hash_algorithm": null,
+        "signature_algorithm": "P384_SPHINCSSHAKE192SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE256FSIMPLE_R3": {
+        "_code_in_hex": "0xfe90",
+        "code": 65168,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P521_SPHINCSSHAKE256FSIMPLE_R3": {
+        "_code_in_hex": "0xfe91",
+        "code": 65169,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_SPHINCSSHAKE256FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE256SSIMPLE_R3": {
+        "_code_in_hex": "0xfe94",
+        "code": 65172,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P521_SPHINCSSHAKE256SSIMPLE_R3": {
+        "_code_in_hex": "0xfe95",
+        "code": 65173,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_SPHINCSSHAKE256SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "FALCON512_R3_PQCLEAN": {
+        "_code_in_hex": "0xfeae",
+        "code": 65198,
+        "hash_algorithm": null,
+        "signature_algorithm": "FALCON",
+        "initial_version": "TLS1_3"
+    },
+    "P256_FALCON512_R3_PQCLEAN": {
+        "_code_in_hex": "0xfeaf",
+        "code": 65199,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_FALCON512",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_FALCON512_R3_PQCLEAN": {
+        "_code_in_hex": "0xfeb0",
+        "code": 65200,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_FALCON512",
+        "initial_version": "TLS1_3"
+    },
+    "FALCON1024_R3_PQCLEAN": {
+        "_code_in_hex": "0xfeb1",
+        "code": 65201,
+        "hash_algorithm": null,
+        "signature_algorithm": "FALCON",
+        "initial_version": "TLS1_3"
+    },
+    "P521_FALCON1024_R3_PQCLEAN": {
+        "_code_in_hex": "0xfeb2",
+        "code": 65202,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_FALCON1024",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2128FSIMPLE": {
+        "_code_in_hex": "0xfeb3",
+        "code": 65203,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P256_SPHINCSSHA2128FSIMPLE": {
+        "_code_in_hex": "0xfeb4",
+        "code": 65204,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_SPHINCSSHA2128FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_SPHINCSSHA2128FSIMPLE": {
+        "_code_in_hex": "0xfeb5",
+        "code": 65205,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_SPHINCSSHA2128FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2128SSIMPLE": {
+        "_code_in_hex": "0xfeb6",
+        "code": 65206,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P256_SPHINCSSHA2128SSIMPLE": {
+        "_code_in_hex": "0xfeb7",
+        "code": 65207,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_SPHINCSSHA2128SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_SPHINCSSHA2128SSIMPLE": {
+        "_code_in_hex": "0xfeb8",
+        "code": 65208,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_SPHINCSSHA2128SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2192FSIMPLE": {
+        "_code_in_hex": "0xfeb9",
+        "code": 65209,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P384_SPHINCSSHA2192FSIMPLE": {
+        "_code_in_hex": "0xfeba",
+        "code": 65210,
+        "hash_algorithm": null,
+        "signature_algorithm": "P384_SPHINCSSHA2192FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2192SSIMPLE": {
+        "_code_in_hex": "0xfebb",
+        "code": 65211,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P384_SPHINCSSHA2192SSIMPLE": {
+        "_code_in_hex": "0xfebc",
+        "code": 65212,
+        "hash_algorithm": null,
+        "signature_algorithm": "P384_SPHINCSSHA2192SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2256FSIMPLE": {
+        "_code_in_hex": "0xfebd",
+        "code": 65213,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P521_SPHINCSSHA2256FSIMPLE": {
+        "_code_in_hex": "0xfebe",
+        "code": 65214,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_SPHINCSSHA2256FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHA2256SSIMPLE": {
+        "_code_in_hex": "0xfec0",
+        "code": 65216,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P521_SPHINCSSHA2256SSIMPLE": {
+        "_code_in_hex": "0xfec1",
+        "code": 65217,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_SPHINCSSHA2256SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE128FSIMPLE": {
+        "_code_in_hex": "0xfec2",
+        "code": 65218,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P256_SPHINCSSHAKE128FSIMPLE": {
+        "_code_in_hex": "0xfec3",
+        "code": 65219,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_SPHINCSSHAKE128FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_SPHINCSSHAKE128FSIMPLE": {
+        "_code_in_hex": "0xfec4",
+        "code": 65220,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_SPHINCSSHAKE128FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE128SSIMPLE": {
+        "_code_in_hex": "0xfec5",
+        "code": 65221,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P256_SPHINCSSHAKE128SSIMPLE": {
+        "_code_in_hex": "0xfec6",
+        "code": 65222,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_SPHINCSSHAKE128SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_SPHINCSSHAKE128SSIMPLE": {
+        "_code_in_hex": "0xfec7",
+        "code": 65223,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_SPHINCSSHAKE128SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE192FSIMPLE": {
+        "_code_in_hex": "0xfec8",
+        "code": 65224,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P384_SPHINCSSHAKE192FSIMPLE": {
+        "_code_in_hex": "0xfec9",
+        "code": 65225,
+        "hash_algorithm": null,
+        "signature_algorithm": "P384_SPHINCSSHAKE192FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE192SSIMPLE": {
+        "_code_in_hex": "0xfeca",
+        "code": 65226,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P384_SPHINCSSHAKE192SSIMPLE": {
+        "_code_in_hex": "0xfecb",
+        "code": 65227,
+        "hash_algorithm": null,
+        "signature_algorithm": "P384_SPHINCSSHAKE192SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE256FSIMPLE": {
+        "_code_in_hex": "0xfecc",
+        "code": 65228,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P521_SPHINCSSHAKE256FSIMPLE": {
+        "_code_in_hex": "0xfecd",
+        "code": 65229,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_SPHINCSSHAKE256FSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "SPHINCSSHAKE256SSIMPLE": {
+        "_code_in_hex": "0xfece",
+        "code": 65230,
+        "hash_algorithm": null,
+        "signature_algorithm": "SLHDSA",
+        "initial_version": "TLS1_3"
+    },
+    "P521_SPHINCSSHAKE256SSIMPLE": {
+        "_code_in_hex": "0xfecf",
+        "code": 65231,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_SPHINCSSHAKE256SSIMPLE",
+        "initial_version": "TLS1_3"
+    },
+    "FALCON512": {
+        "_code_in_hex": "0xfed7",
+        "code": 65239,
+        "hash_algorithm": null,
+        "signature_algorithm": "FALCON",
+        "initial_version": "TLS1_3"
+    },
+    "P256_FALCON512": {
+        "_code_in_hex": "0xfed8",
+        "code": 65240,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_FALCON512",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_FALCON512": {
+        "_code_in_hex": "0xfed9",
+        "code": 65241,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_FALCON512",
+        "initial_version": "TLS1_3"
+    },
+    "FALCON1024": {
+        "_code_in_hex": "0xfeda",
+        "code": 65242,
+        "hash_algorithm": null,
+        "signature_algorithm": "FALCON",
+        "initial_version": "TLS1_3"
+    },
+    "P521_FALCON1024": {
+        "_code_in_hex": "0xfedb",
+        "code": 65243,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_FALCON1024",
+        "initial_version": "TLS1_3"
+    },
+    "FALCONPADDED512": {
+        "_code_in_hex": "0xfedc",
+        "code": 65244,
+        "hash_algorithm": null,
+        "signature_algorithm": "FALCON",
+        "initial_version": "TLS1_3"
+    },
+    "P256_FALCONPADDED512": {
+        "_code_in_hex": "0xfedd",
+        "code": 65245,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_FALCONPADDED512",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_FALCONPADDED512": {
+        "_code_in_hex": "0xfede",
+        "code": 65246,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_FALCONPADDED512",
+        "initial_version": "TLS1_3"
+    },
+    "FALCONPADDED1024": {
+        "_code_in_hex": "0xfedf",
+        "code": 65247,
+        "hash_algorithm": null,
+        "signature_algorithm": "FALCON",
+        "initial_version": "TLS1_3"
+    },
+    "P521_FALCONPADDED1024": {
+        "_code_in_hex": "0xfee0",
+        "code": 65248,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_FALCONPADDED1024",
+        "initial_version": "TLS1_3"
+    },
+    "P256_MLDSA44": {
+        "_code_in_hex": "0xff06",
+        "code": 65286,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_MLDSA44",
+        "initial_version": "TLS1_3"
+    },
+    "RSA3072_MLDSA44": {
+        "_code_in_hex": "0xff07",
+        "code": 65287,
+        "hash_algorithm": null,
+        "signature_algorithm": "RSA3072_MLDSA44",
+        "initial_version": "TLS1_3"
+    },
+    "P384_MLDSA65": {
+        "_code_in_hex": "0xff08",
+        "code": 65288,
+        "hash_algorithm": null,
+        "signature_algorithm": "P384_MLDSA65",
+        "initial_version": "TLS1_3"
+    },
+    "P521_MLDSA87": {
+        "_code_in_hex": "0xff09",
+        "code": 65289,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_MLDSA87",
+        "initial_version": "TLS1_3"
+    },
+    "OV_IP_PKC": {
+        "_code_in_hex": "0xff0f",
+        "code": 65295,
+        "hash_algorithm": null,
+        "signature_algorithm": "UOV",
+        "initial_version": "TLS1_3"
+    },
+    "OV_IP_PKC_SKC": {
+        "_code_in_hex": "0xff13",
+        "code": 65299,
+        "hash_algorithm": null,
+        "signature_algorithm": "UOV",
+        "initial_version": "TLS1_3"
+    },
+    "P256_OV_IP_PKC": {
+        "_code_in_hex": "0xff1b",
+        "code": 65307,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_OV_IP_PKC",
+        "initial_version": "TLS1_3"
+    },
+    "P256_OV_IP_PKC_SKC": {
+        "_code_in_hex": "0xff1f",
+        "code": 65311,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_OV_IP_PKC_SKC",
+        "initial_version": "TLS1_3"
+    },
+    "MAYO1": {
+        "_code_in_hex": "0xff32",
+        "code": 65330,
+        "hash_algorithm": null,
+        "signature_algorithm": "MAYO",
+        "initial_version": "TLS1_3"
+    },
+    "MAYO2": {
+        "_code_in_hex": "0xff33",
+        "code": 65331,
+        "hash_algorithm": null,
+        "signature_algorithm": "MAYO",
+        "initial_version": "TLS1_3"
+    },
+    "MAYO3": {
+        "_code_in_hex": "0xff34",
+        "code": 65332,
+        "hash_algorithm": null,
+        "signature_algorithm": "MAYO",
+        "initial_version": "TLS1_3"
+    },
+    "MAYO5": {
+        "_code_in_hex": "0xff35",
+        "code": 65333,
+        "hash_algorithm": null,
+        "signature_algorithm": "MAYO",
+        "initial_version": "TLS1_3"
+    },
+    "P256_MAYO1": {
+        "_code_in_hex": "0xff36",
+        "code": 65334,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_MAYO1",
+        "initial_version": "TLS1_3"
+    },
+    "P256_MAYO2": {
+        "_code_in_hex": "0xff37",
+        "code": 65335,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_MAYO2",
+        "initial_version": "TLS1_3"
+    },
+    "P384_MAYO3": {
+        "_code_in_hex": "0xff38",
+        "code": 65336,
+        "hash_algorithm": null,
+        "signature_algorithm": "P384_MAYO3",
+        "initial_version": "TLS1_3"
+    },
+    "P521_MAYO5": {
+        "_code_in_hex": "0xff39",
+        "code": 65337,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_MAYO5",
+        "initial_version": "TLS1_3"
+    },
+    "SNOVA2454": {
+        "_code_in_hex": "0xff3a",
+        "code": 65338,
+        "hash_algorithm": null,
+        "signature_algorithm": "SNOVA",
+        "initial_version": "TLS1_3"
+    },
+    "P256_SNOVA2454": {
+        "_code_in_hex": "0xff3b",
+        "code": 65339,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_SNOVA2454",
+        "initial_version": "TLS1_3"
+    },
+    "SNOVA2454ESK": {
+        "_code_in_hex": "0xff3e",
+        "code": 65342,
+        "hash_algorithm": null,
+        "signature_algorithm": "SNOVA",
+        "initial_version": "TLS1_3"
+    },
+    "P256_SNOVA2454ESK": {
+        "_code_in_hex": "0xff3f",
+        "code": 65343,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_SNOVA2454ESK",
+        "initial_version": "TLS1_3"
+    },
+    "SNOVA37172": {
+        "_code_in_hex": "0xff42",
+        "code": 65346,
+        "hash_algorithm": null,
+        "signature_algorithm": "SNOVA",
+        "initial_version": "TLS1_3"
+    },
+    "P256_SNOVA37172": {
+        "_code_in_hex": "0xff43",
+        "code": 65347,
+        "hash_algorithm": null,
+        "signature_algorithm": "P256_SNOVA37172",
+        "initial_version": "TLS1_3"
+    },
+    "SNOVA2455": {
+        "_code_in_hex": "0xff4c",
+        "code": 65356,
+        "hash_algorithm": null,
+        "signature_algorithm": "SNOVA",
+        "initial_version": "TLS1_3"
+    },
+    "P384_SNOVA2455": {
+        "_code_in_hex": "0xff4d",
+        "code": 65357,
+        "hash_algorithm": null,
+        "signature_algorithm": "P384_SNOVA2455",
+        "initial_version": "TLS1_3"
+    },
+    "SNOVA2965": {
+        "_code_in_hex": "0xff51",
+        "code": 65361,
+        "hash_algorithm": null,
+        "signature_algorithm": "SNOVA",
+        "initial_version": "TLS1_3"
+    },
+    "P521_SNOVA2965": {
+        "_code_in_hex": "0xff52",
+        "code": 65362,
+        "hash_algorithm": null,
+        "signature_algorithm": "P521_SNOVA2965",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDP128BALANCED": {
+        "_code_in_hex": "0xff53",
+        "code": 65363,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDP128FAST": {
+        "_code_in_hex": "0xff54",
+        "code": 65364,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDP128SMALL": {
+        "_code_in_hex": "0xff55",
+        "code": 65365,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDP192BALANCED": {
+        "_code_in_hex": "0xff56",
+        "code": 65366,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDP192FAST": {
+        "_code_in_hex": "0xff57",
+        "code": 65367,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDP192SMALL": {
+        "_code_in_hex": "0xff58",
+        "code": 65368,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDPG128BALANCED": {
+        "_code_in_hex": "0xff5a",
+        "code": 65370,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDPG128FAST": {
+        "_code_in_hex": "0xff5b",
+        "code": 65371,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDPG128SMALL": {
+        "_code_in_hex": "0xff5c",
+        "code": 65372,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDPG192BALANCED": {
+        "_code_in_hex": "0xff5d",
+        "code": 65373,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDPG192FAST": {
+        "_code_in_hex": "0xff5e",
+        "code": 65374,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDPG192SMALL": {
+        "_code_in_hex": "0xff5f",
+        "code": 65375,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDPG256BALANCED": {
+        "_code_in_hex": "0xff60",
+        "code": 65376,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDPG256FAST": {
+        "_code_in_hex": "0xff61",
+        "code": 65377,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
+    },
+    "CROSSRSDPG256SMALL": {
+        "_code_in_hex": "0xff62",
+        "code": 65378,
+        "hash_algorithm": null,
+        "signature_algorithm": "CROSS",
+        "initial_version": "TLS1_3"
     }
 }

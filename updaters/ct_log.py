@@ -19,8 +19,7 @@ class UpdaterCertificateTransparencyLogs(UpdaterBase):
             CertificateTransparencyLogParams,
         )
 
-    @classmethod
-    def _merge(cls, existing_data, current_items_by_identifier):
+    def _merge(self, existing_data, current_items_by_identifier):
         current_values_by_log_id = collections.OrderedDict()
         for item in current_items_by_identifier.values():
             current_value = item._asdict()
@@ -42,7 +41,7 @@ class UpdaterCertificateTransparencyLogs(UpdaterBase):
             if current_value['log_id'] not in existing_log_ids:
                 merged_data[identifier] = current_value
 
-        return merged_data
+        return collections.OrderedDict(sorted(merged_data.items(), key=self.sort_key))
 
 
 def main():

@@ -12,6 +12,13 @@
         ],
         "anonymous": true
     },
+    "CROSS": {
+        "name": "CROSS",
+        "long_name": "Codes and Restricted Objects Signature Scheme",
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
     "DSS": {
         "name": "DSS",
         "long_name": "Digital Signature Standard",
@@ -23,6 +30,20 @@
         "name": "ECDSA",
         "long_name": "Elliptic Curve Digital Signature Algorithm",
         "oid": "1.2.840.10045.2.1",
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "EDDSA": {
+        "name": "EDDSA",
+        "long_name": "Edwards-curve Digital Signature Algorithm",
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "FALCON": {
+        "name": "Falcon",
+        "long_name": "Fast-Fourier Lattice-based Compact Signatures over NTRU",
+        "oid": null,
         "vulnerabilities": [],
         "anonymous": false
     },
@@ -75,6 +96,230 @@
         "vulnerabilities": null,
         "anonymous": false
     },
+    "MAYO": {
+        "name": "MAYO",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "MLDSA": {
+        "name": "ML-DSA",
+        "long_name": "Module-Lattice-Based Digital Signature Algorithm",
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_FALCON512": {
+        "name": "ECDSA p256 + Falcon-512",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_FALCONPADDED512": {
+        "name": "ECDSA p256 + Falcon-padded-512",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_MAYO1": {
+        "name": "ECDSA p256 + MAYO-1",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_MAYO2": {
+        "name": "ECDSA p256 + MAYO-2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_MLDSA44": {
+        "name": "ECDSA p256 + ML-DSA-44",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_OV_IP_PKC": {
+        "name": "ECDSA p256 + OV-Ip-pkc",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_OV_IP_PKC_SKC": {
+        "name": "ECDSA p256 + OV-Ip-pkc-skc",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_SNOVA2454": {
+        "name": "ECDSA p256 + SNOVA_24_5_4",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_SNOVA2454ESK": {
+        "name": "ECDSA p256 + SNOVA_24_5_4_esk",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_SNOVA37172": {
+        "name": "ECDSA p256 + SNOVA_37_17_2",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_SPHINCSSHA2128FSIMPLE": {
+        "name": "ECDSA p256 + SPHINCS+-SHA2-128f-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_SPHINCSSHA2128SSIMPLE": {
+        "name": "ECDSA p256 + SPHINCS+-SHA2-128s-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_SPHINCSSHAKE128FSIMPLE": {
+        "name": "ECDSA p256 + SPHINCS+-SHAKE-128f-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P256_SPHINCSSHAKE128SSIMPLE": {
+        "name": "ECDSA p256 + SPHINCS+-SHAKE-128s-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P384_MAYO3": {
+        "name": "ECDSA p384 + MAYO-3",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P384_MLDSA65": {
+        "name": "ECDSA p384 + ML-DSA-65",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P384_SNOVA2455": {
+        "name": "ECDSA p384 + SNOVA_24_5_5",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P384_SPHINCSSHA2192FSIMPLE": {
+        "name": "ECDSA p384 + SPHINCS+-SHA2-192f-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P384_SPHINCSSHA2192SSIMPLE": {
+        "name": "ECDSA p384 + SPHINCS+-SHA2-192s-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P384_SPHINCSSHAKE192FSIMPLE": {
+        "name": "ECDSA p384 + SPHINCS+-SHAKE-192f-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P384_SPHINCSSHAKE192SSIMPLE": {
+        "name": "ECDSA p384 + SPHINCS+-SHAKE-192s-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P521_FALCON1024": {
+        "name": "ECDSA p521 + Falcon-1024",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P521_FALCONPADDED1024": {
+        "name": "ECDSA p521 + Falcon-padded-1024",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P521_MAYO5": {
+        "name": "ECDSA p521 + MAYO-5",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P521_MLDSA87": {
+        "name": "ECDSA p521 + ML-DSA-87",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P521_SNOVA2965": {
+        "name": "ECDSA p521 + SNOVA_29_6_5",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P521_SPHINCSSHA2256FSIMPLE": {
+        "name": "ECDSA p521 + SPHINCS+-SHA2-256f-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P521_SPHINCSSHA2256SSIMPLE": {
+        "name": "ECDSA p521 + SPHINCS+-SHA2-256s-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P521_SPHINCSSHAKE256FSIMPLE": {
+        "name": "ECDSA p521 + SPHINCS+-SHAKE-256f-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "P521_SPHINCSSHAKE256SSIMPLE": {
+        "name": "ECDSA p521 + SPHINCS+-SHAKE-256s-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
     "PSK": {
         "name": "PSK",
         "long_name": "Pre-shared Key",
@@ -89,30 +334,58 @@
         "vulnerabilities": [],
         "anonymous": false
     },
-    "SRP": {
-        "name": "SRP",
-        "long_name": "Secure Remote Password",
-        "oid": null,
-        "vulnerabilities": null,
-        "anonymous": false
-    },
-    "EDDSA": {
-        "name": "EDDSA",
-        "long_name": "Edwards-curve Digital Signature Algorithm",
+    "RSA3072_FALCON512": {
+        "name": "RSA3072 + Falcon-512",
+        "long_name": null,
         "oid": null,
         "vulnerabilities": [],
         "anonymous": false
     },
-    "MLDSA": {
-        "name": "ML-DSA",
-        "long_name": "Module-Lattice-Based Digital Signature Algorithm",
+    "RSA3072_FALCONPADDED512": {
+        "name": "RSA3072 + Falcon-padded-512",
+        "long_name": null,
         "oid": null,
         "vulnerabilities": [],
         "anonymous": false
     },
-    "XMSS": {
-        "name": "XMSS",
-        "long_name": "eXtended Merkle Signature Scheme",
+    "RSA3072_MLDSA44": {
+        "name": "RSA3072 + ML-DSA-44",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "RSA3072_SPHINCSSHA2128FSIMPLE": {
+        "name": "RSA3072 + SPHINCS+-SHA2-128f-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "RSA3072_SPHINCSSHA2128SSIMPLE": {
+        "name": "RSA3072 + SPHINCS+-SHA2-128s-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "RSA3072_SPHINCSSHAKE128FSIMPLE": {
+        "name": "RSA3072 + SPHINCS+-SHAKE-128f-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "RSA3072_SPHINCSSHAKE128SSIMPLE": {
+        "name": "RSA3072 + SPHINCS+-SHAKE-128s-simple",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "SLHDSA": {
+        "name": "SLH-DSA",
+        "long_name": "Stateless Hash-Based Digital Signature Algorithm",
         "oid": null,
         "vulnerabilities": [],
         "anonymous": false
@@ -128,6 +401,34 @@
         "name": "SM9",
         "long_name": "ShangMi 9 (Identity-Based Cryptography)",
         "oid": "1.2.156.10197.1.302",
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "SNOVA": {
+        "name": "SNOVA",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "SRP": {
+        "name": "SRP",
+        "long_name": "Secure Remote Password",
+        "oid": null,
+        "vulnerabilities": null,
+        "anonymous": false
+    },
+    "UOV": {
+        "name": "UOV",
+        "long_name": "Unbalanced Oil and Vinegar",
+        "oid": null,
+        "vulnerabilities": [],
+        "anonymous": false
+    },
+    "XMSS": {
+        "name": "XMSS",
+        "long_name": "eXtended Merkle Signature Scheme",
+        "oid": null,
         "vulnerabilities": [],
         "anonymous": false
     }

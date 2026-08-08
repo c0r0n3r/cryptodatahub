@@ -71,6 +71,23 @@ class KeyExchangeParams(CryptoDataParamsNamed, GradeableVulnerabilities):
         return 'key exchange'
 
 
+@attr.s(frozen=True)
+class NistSecurityLevelParams(CryptoDataParamsEnumNumeric):
+    bit_security = attr.ib(validator=attr.validators.instance_of(int))
+
+    @classmethod
+    def get_code_size(cls):
+        return 1
+
+
+class NistSecurityLevel(CryptoDataEnumCodedBase):
+    LEVEL_1 = NistSecurityLevelParams(code=1, bit_security=128)
+    LEVEL_2 = NistSecurityLevelParams(code=2, bit_security=128)
+    LEVEL_3 = NistSecurityLevelParams(code=3, bit_security=192)
+    LEVEL_4 = NistSecurityLevelParams(code=4, bit_security=192)
+    LEVEL_5 = NistSecurityLevelParams(code=5, bit_security=256)
+
+
 NamedGroupType = enum.Enum('NamedGroupType', 'ELLIPTIC_CURVE FINITE_FIELD HYBRID_PQS')
 
 
@@ -80,6 +97,11 @@ class NamedGroupParams(CryptoDataParamsOIDOptional, GradeableVulnerabilities):
     group_type = attr.ib(
         converter=convert_enum(NamedGroupType),
         validator=attr.validators.instance_of(NamedGroupType),
+    )
+    oqs_name = attr.ib(
+        default=None,
+        validator=attr.validators.optional(attr.validators.instance_of(str)),
+        metadata={'serialize_default': True},
     )
 
     @classmethod

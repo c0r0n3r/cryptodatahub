@@ -47,6 +47,7 @@ dependencies = [
     'attrs',
     'python-dateutil',
     'urllib3',
+    'PyYAML',
 ]
 
 [project.optional-dependencies]
@@ -64,6 +65,7 @@ docs = [
 
 [project.scripts]
 update-ct-log = 'updaters.ct_log:main'
+update-oqs = 'updaters.oqs:main'
 update-trust-stores = 'updaters.trust_stores:main'
 
 [project.urls]

@@ -54,6 +54,18 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %license LICENSE.txt
 
 %changelog
+* Tue Aug 04 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.6.0-1
+- add post-quantum named groups (#32)
+- add post-quantum named curves (#32)
+- add the p384_mlkem1024 named curve of Tresorit (#32)
+- sort the data written by the updaters and detect the changes by comparing them (#32)
+- add post-quantum authentication algorithms (#32)
+- add the NIST security levels and their bit security (#32)
+- add the algorithm name of the oqs-provider to the named group entries (#32)
+- add post-quantum signature algorithms (#32)
+- fix the named curve code points of the FrodoKEM-640-AES hybrids (#32)
+- add updater for the algorithms of the Open Quantum Safe project (#32)
+
 * Fri Jul 31 2026 Szilárd Pfeiffer <coroner@pfeifferszilard.hu> - 1.5.0-1
 - add long names to block cipher and MAC algorithm entries
 - add long name attribute to IKE registry entry parameters (#57)

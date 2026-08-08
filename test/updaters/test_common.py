@@ -85,12 +85,10 @@ class UpdaterBaseTestEnum:
         cls.written = json_object
 
 
-class UpdaterBaseTest(UpdaterBase):
-    def _has_data_changed(self, current_data_items_by_name):
-        return True
-
-
 class TestUpdaterBase(unittest.TestCase):
+    def setUp(self):
+        UpdaterBaseTestEnum.written = None
+
     def test_default_merge_updates_matching_keeps_removed_adds_new(self):
         UpdaterBaseTestEnum.existing = [
             ('KEPT', collections.OrderedDict([('value', 'old')])),
@@ -101,10 +99,23 @@ class TestUpdaterBase(unittest.TestCase):
             UpdaterBaseTestItem('ADDED', collections.OrderedDict([('value', 'fresh')])),
         ]
 
-        UpdaterBaseTest(UpdaterBaseTestFetcher, UpdaterBaseTestEnum, object)()
+        UpdaterBase(UpdaterBaseTestFetcher, UpdaterBaseTestEnum, object)()
         result = UpdaterBaseTestEnum.written
 
-        # default _get_identity keys by the identifier; default _merge_existing replaces the value
+        # the default merge keys by the identifier and replaces the value of the matching entries
         self.assertEqual(result['KEPT'], collections.OrderedDict([('value', 'new')]))
         self.assertEqual(result['REMOVED'], collections.OrderedDict([('value', 'gone')]))
         self.assertEqual(result['ADDED'], collections.OrderedDict([('value', 'fresh')]))
+        self.assertEqual(list(result), ['ADDED', 'KEPT', 'REMOVED'])
+
+    def test_unchanged_data_is_not_written(self):
+        UpdaterBaseTestEnum.existing = [
+            ('KEPT', collections.OrderedDict([('value', 'old')])),
+        ]
+        UpdaterBaseTestFetcher.parsed = [
+            UpdaterBaseTestItem('KEPT', collections.OrderedDict([('value', 'old')])),
+        ]
+
+        UpdaterBase(UpdaterBaseTestFetcher, UpdaterBaseTestEnum, object)()
+
+        self.assertEqual(UpdaterBaseTestEnum.written, None)
