@@ -344,12 +344,12 @@
         "group_type": "ELLIPTIC_CURVE",
         "oqs_name": null
     },
-    "E384": {
-        "name": "E384",
+    "E382": {
+        "name": "E382",
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 384,
+        "size": 382,
         "group_type": "ELLIPTIC_CURVE",
         "oqs_name": null
     },
