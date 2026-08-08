@@ -323,7 +323,7 @@
         "oid": null,
         "vulnerabilities": [],
         "size": 256,
-        "group_type": "ELLIPTIC_CURVE",
+        "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
     "CURVE25519": {
