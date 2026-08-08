@@ -1,0 +1,49 @@
+{
+    "IACR_EPRINT_2010_429": {
+        "name": "IACR ePrint 2010/429",
+        "long_name": "A Family of Implementation-Friendly BN Elliptic Curves",
+        "authors": [
+            "Geovandro C. C. F. Pereira",
+            "Marcos A. Simplício Jr.",
+            "Michael Naehrig",
+            "Paulo S. L. M. Barreto"
+        ],
+        "url": "https://eprint.iacr.org/2010/429"
+    },
+    "IACR_EPRINT_2012_232": {
+        "name": "IACR ePrint 2012/232",
+        "long_name": "Implementing Pairings at the 192-bit Security Level",
+        "authors": [
+            "Diego F. Aranha",
+            "Laura Fuentes-Castañeda",
+            "Edward Knapp",
+            "Alfred Menezes",
+            "Francisco Rodríguez-Henríquez"
+        ],
+        "url": "https://eprint.iacr.org/2012/232"
+    },
+    "IACR_EPRINT_2013_647": {
+        "name": "IACR ePrint 2013/647",
+        "long_name": "A note on high-security general-purpose elliptic curves",
+        "authors": [
+            "Diego F. Aranha",
+            "Paulo S. L. M. Barreto",
+            "Geovandro C. C. F. Pereira",
+            "Jefferson E. Ricardini"
+        ],
+        "url": "https://eprint.iacr.org/2013/647"
+    },
+    "IACR_EPRINT_2018_962": {
+        "name": "IACR ePrint 2018/962",
+        "long_name": "Zexe: Enabling Decentralized Private Computation",
+        "authors": [
+            "Sean Bowe",
+            "Alessandro Chiesa",
+            "Matthew Green",
+            "Ian Miers",
+            "Pratyush Mishra",
+            "Howard Wu"
+        ],
+        "url": "https://eprint.iacr.org/2018/962"
+    }
+}

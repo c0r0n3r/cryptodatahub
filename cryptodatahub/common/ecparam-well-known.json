@@ -1,60 +1,18 @@
 {
-    "GC256A": {
-        "name": "tc26-gost-3410-2012-256-paramSetA",
-        "long_name": null,
-        "standards": [],
-        "aliases": [],
-        "parameter_numbers": {
-            "a": [
-                "00000000 00000000 00000000 00000000 00000000 00000000",
-                "00000000 00000001"
-            ],
-            "b": [
-                "0605F6B7 C183FA81 578BC39C FAD51813 2B9DF628 97009AF7",
-                "E522C32D 6DC7BFFB"
-            ],
-            "x": [
-                "00000000 00000000 00000000 00000000 00000000 00000000",
-                "00000000 0000000D"
-            ],
-            "y": [
-                "60CA1E32 AA475B34 8488C38F AB07649C E7EF8DBE 87F22E81",
-                "F92B2592 DBA300E7"
-            ]
-        }
-    },
-    "GC512A": {
-        "name": "tc26-gost-3410-12-512-paramSetA",
-        "long_name": null,
-        "standards": [],
-        "aliases": [],
-        "parameter_numbers": {
-            "a": [
-                "00FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
-                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
-                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFD C4"
-            ],
-            "b": [
-                "00E8C250 5DEDFC86 DDC1BD0B 2B6667F1 DA34B825 74761CB0",
-                "E879BD08 1CFD0B62 65EE3CB0 90F30D27 614CB457 4010DA90",
-                "DD862EF9 D4EBEE47 61503190 785A71C7 60"
-            ],
-            "x": [
-                "03"
-            ],
-            "y": [
-                "7503CFE8 7A836AE3 A61B8816 E25450E6 CE5E1C93 ACF1ABC1",
-                "778064FD CBEFA921 DF1626BE 4FD036E9 3D75E6A5 0E3A41E9",
-                "8028FE5F C235F5B8 89A589CB 5215F2A4"
-            ]
-        }
-    },
-    "BLS12-377": {
+    "BLS12_377": {
         "name": "BLS12-377",
-        "long_name": null,
-        "standards": [],
+        "long_name": "BLS12-377 elliptic curve (377-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2018_962"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "01AE3A46 17C510EA C63B05C0 6CA1493B 1A22D9F3 00F5138F",
+                "1EF3622F BA094800 170B5D44 30000000 8508C000 00000001"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000"
@@ -70,15 +28,31 @@
             "y": [
                 "01914A69 C5102EFF 1F674F5D 30AFEEC4 BD7FB348 CA3E52D9",
                 "6D182AD4 4FB82305 C2FE3D36 34A9591A FD82DE55 559C8EA6"
-            ]
+            ],
+            "n": [
+                "00000000 00000000 00000000 00000000 12AB655E 9A2CA556",
+                "60B44D1E 5C37B001 59AA76FE D0000001 0A118000 00000001"
+            ],
+            "h": [
+                "170B5D44300000000000000000000000"
+            ],
+            "seed": null
         }
     },
-    "BLS12-381": {
+    "BLS12_381": {
         "name": "BLS12-381",
-        "long_name": null,
-        "standards": [],
+        "long_name": "BLS12-381 elliptic curve (381-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "DRAFT_IRTF_CFRG_PAIRING_FRIENDLY_CURVES"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "1A0111EA 397FE69A 4B1BA7B6 434BACD7 64774B84 F38512BF",
+                "6730D2A0 F6B0F624 1EABFFFE B153FFFF B9FEFFFF FFFFAAAB"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000"
@@ -94,15 +68,32 @@
             "y": [
                 "08B3F481 E3AAA0F1 A09E30ED 741D8AE4 FCF5E095 D5D00AF6",
                 "00DB18CB 2C04B3ED D03CC744 A2888AE4 0CAA2329 46C5E7E1"
-            ]
+            ],
+            "n": [
+                "00000000 00000000 00000000 00000000 73EDA753 299D7D48",
+                "3339D808 09A1D805 53BDA402 FFFE5BFE FFFFFFFF 00000001"
+            ],
+            "h": [
+                "396C8C005555E1568C00AAAB0000AAAB"
+            ],
+            "seed": null
         }
     },
-    "BLS12-446": {
+    "BLS12_446": {
         "name": "BLS12-446",
-        "long_name": null,
-        "standards": [],
+        "long_name": "BLS12-446 elliptic curve (446-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RELIC"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "3CDEE0FB 28C5E535 200FC349 65AAD640 0095A4B7 8A02FE32",
+                "0F75A64B BAC71602 824E6DC3 E23ACDEE 56EE4528 C573B5CC",
+                "311C0026 AAB0AAAB"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -122,15 +113,33 @@
                 "00DC40DD CBAB2823 A7870B5C 688AA04F EE40369D 913E4F2F",
                 "0947A152 FE1C27A7 9B7F787E 9C35B869 C3846FAC 4F12A70D",
                 "0FE22D2E 244268CC"
-            ]
+            ],
+            "n": [
+                "00000000 00000000 00000000 00000000 00000511 B70539F2",
+                "7995B349 95830FA4 D04C98CC C4C050BC 7BB9B0E8 D8CA3461",
+                "04280014 00040001"
+            ],
+            "h": [
+                "C02082602B0055D560AB0AD5AAAAC0002AAAC"
+            ],
+            "seed": null
         }
     },
-    "BLS12-455": {
+    "BLS12_455": {
         "name": "BLS12-455",
-        "long_name": null,
-        "standards": [],
+        "long_name": "BLS12-455 elliptic curve (455-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RELIC"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "55555955 55795557 2AA00E0F 95B49203 003F665E 3A5B1D56",
+                "234BD939 54FCB314 B8B3DB99 94ACE86D 1BA6C589 556B2AA9",
+                "56AAA000 01800002 AB"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -150,15 +159,34 @@
                 "19A8A9C4 C3AC2FFB 4C6B380D 17B8282E 02961505 2EAA6416",
                 "C16C8F36 F251D87C 272657F0 702CC58C 4E072628 D7BAD3C0",
                 "E9B3A8AE BFC6B235 7C"
-            ]
+            ],
+            "n": [
+                "00000000 00000000 00000000 00000000 00000100 00080000",
+                "380002E0 000F1000 4F00025E 00075000 1D1000A0 00004000",
+                "01C00007 FFFFC000 01"
+            ],
+            "h": [
+                "555556AAAAB15555B54AAB6A9557FFAABFFAAB"
+            ],
+            "seed": null
         }
     },
-    "BLS12-638": {
+    "BLS12_638": {
         "name": "BLS12-638",
-        "long_name": null,
-        "standards": [],
+        "long_name": "BLS12-638 elliptic curve (638-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2012_232"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "3CB86865 3D300B3F E8001555 4DD25DB0 FC01DCDE 95D40000",
+                "00631BBD 42171501 39555555 55529C00 5C75D6C2 AB000000",
+                "00000AC7 9600D2AB AAAAAAAA AAAAAA93 EAF3FF00 0AAAAAAA",
+                "AAAAAAAA BEAB000B"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -182,15 +210,34 @@
                 "B79FC6DA 3748461F CD80697E 486695F3 CAE76FCB 1781E784",
                 "F6812F57 BE05DFC8 50426650 DED8B40A 464B00A3 5718228E",
                 "C8E02B52 B59D876E"
-            ]
+            ],
+            "n": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "0000050F 94035FF4 000FFFFF FFFFFF94 06BFDC00 40000000",
+                "00000003 5FB801DF FBFFFFFF FFFFFFFF F401BFF8 00000000",
+                "00000000 000FFC01"
+            ],
+            "h": [
+                "BFF8001555555555555555554D957EAAAAAAAAAAAAAAAAAAAABEB"
+            ],
+            "seed": null
         }
     },
-    "BLS24-477": {
+    "BLS24_477": {
         "name": "BLS24-477",
-        "long_name": null,
-        "standards": [],
+        "long_name": "BLS24-477 elliptic curve (477-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2012_232"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "167278FA C63BD5B0 07EBB8F6 93A2AB3D BD9F92CF 437C399D",
+                "928E94BF E9A04A00 9FDA9E8C F9226901 DE62AEA9 DCEA48BF",
+                "1A0EBBF8 860A5E7A D000152B"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -210,15 +257,34 @@
                 "0A683957 A59B1B48 8FA657E1 1B448150 56BDE33C 09D6AAD3",
                 "92D299F8 9C7841B9 1A683BF0 1B7E7054 7E48E0FB E1CA9E99",
                 "19831314 70F886BA 9B6FCE2E"
-            ]
+            ],
+            "n": [
+                "00000000 00000000 00000000 57F52EE4 45CC4178 1FCD53D1",
+                "3E45F6AC DFE4F9F2 A3CD414E 71238AFC 9FCFC7D3 8CAEF64F",
+                "4FF79F90 013FFFFF F0000001"
+            ],
+            "h": [
+                "41550AAAC04B3FD5000015AB"
+            ],
+            "seed": null
         }
     },
-    "BLS48-581-G1": {
+    "BLS48_581_G1": {
         "name": "BLS48-581-G1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "BLS48-581-G1 elliptic curve (581-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "DRAFT_IRTF_CFRG_PAIRING_FRIENDLY_CURVES"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "1280F73F F3476F31 3824E31D 47012A00 56E84F8D 122131BB",
+                "3BE6C0F1 F3975444 A48AE43A F6E082AC D9CD3039 4F4736DA",
+                "F68367A5 513170EE 0A578FDF 721A4A48 AC3EDC15 4E656591",
+                "2B"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -242,15 +308,32 @@
                 "E991279D D41B720E F7BB7BEF FB98AEE5 3E80F678 584C3EF2",
                 "2F487F77 C2876D1B 2E35F37A EF7B926B 576DBB5D E3E2587A",
                 "70"
-            ]
+            ],
+            "n": [
+                "00000000 00000000 2386F8A9 25E2885E 233A9CCC 1615C0D6",
+                "C635387A 3F0B3CBE 003FAD6B C972C2E6 E741969D 34C4C920",
+                "16A85C7C D0562303 C4CCBE59 9467C24D A118A5FE 6FCD671C",
+                "01"
+            ],
+            "h": [
+                "85555841AAAEC4AC"
+            ],
+            "seed": null
         }
     },
     "BN158": {
         "name": "bn158",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn158 elliptic curve (158-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "24240D82 41D54451 06C84420 84001384 E0000013"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000"
             ],
@@ -262,15 +345,29 @@
             ],
             "y": [
                 "00000000 00000000 00000000 00000000 00000004"
-            ]
+            ],
+            "n": [
+                "24240D82 41D54451 06C7E3F0 7E001084 2000000D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN190": {
         "name": "bn190",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn190 elliptic curve (190-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "240001B0 00094800 1E600041 34005F10 005DC000 3A800013"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000"
             ],
@@ -282,15 +379,30 @@
             ],
             "y": [
                 "00000000 00000000 00000000 00000000 00000000 00000040"
-            ]
+            ],
+            "n": [
+                "240001B0 00094800 1E600040 D4005CD0 00576000 3180000D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN222": {
         "name": "bn222",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn222 elliptic curve (222-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "23DC0D7D C02402CD E486F4C0 0015B521 5C000000 4C6CE000",
+                "00000067"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000"
@@ -306,17 +418,33 @@
             "y": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000010"
-            ]
+            ],
+            "n": [
+                "23DC0D7D C02402CD E486F4C0 00155551 56000000 496DA000",
+                "00000061"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN254": {
         "name": "bn254",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn254 elliptic curve (254-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "Fp254BNb"
         ],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "25236482 40000001 BA344D80 00000008 61210000 00000013",
+                "A7000000 00000013"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000"
@@ -332,15 +460,31 @@
             "y": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000001"
-            ]
+            ],
+            "n": [
+                "25236482 40000001 BA344D80 00000007 FF9F8000 00000010",
+                "A1000000 0000000D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN286": {
         "name": "bn286",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn286 elliptic curve (286-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "240900D8 991B25B0 E2CB51DD A534A205 39189208 0A008108",
+                "00085381 38001380 00000013"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000"
@@ -356,15 +500,31 @@
             "y": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000001"
-            ]
+            ],
+            "n": [
+                "240900D8 991B25B0 E2CB51DD A534A205 391831FC 099FC0FC",
+                "0007F081 08001080 0000000D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN318": {
         "name": "bn318",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn318 elliptic curve (318-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "24009000 D8009000 24075015 F015F007 5000008F 411E808F",
+                "40000000 04E484E4 80000000 0000101B"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000"
@@ -380,15 +540,31 @@
             "y": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000001"
-            ]
+            ],
+            "n": [
+                "24009000 D8009000 24075015 F015F007 5000008E E11DC08E",
+                "E0000000 04DB84DB 80000000 00000FE5"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN350": {
         "name": "bn350",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn350 elliptic curve (350-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "23FFB800 35FFEE24 020A01CA FD738EC3 F24B475E BC0AD0F6",
+                "A0530FD7 8443FDF0 1A3FF640 84000004 E0000013"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000"
@@ -404,15 +580,31 @@
             "y": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000001"
-            ]
+            ],
+            "n": [
+                "23FFB800 35FFEE24 020A01CA FD738EC3 F24B475E BC0A70F7",
+                "0052F7D7 8413FE08 173FF7C0 7E000004 2000000D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN382": {
         "name": "bn382",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn382 elliptic curve (382-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "24002640 0F3D82B2 E42DE125 B0015840 5B710818 AC000008",
+                "40046200 95040000 00000013 80052E00 00000000 00000013"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000"
@@ -428,15 +620,32 @@
             "y": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000001"
-            ]
+            ],
+            "n": [
+                "24002640 0F3D82B2 E42DE125 B0015840 5B710818 AC000007",
+                "E0042F00 8E3E0000 00000010 80046200 00000000 0000000D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN414": {
         "name": "bn414",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn414 elliptic curve (414-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "24002400 0D7EE23F 2823CA03 5D31B144 364C75E5 9AEFFF60",
+                "54484514 2000765E FFF7C000 00211380 04DFFFFF D9000000",
+                "00000013"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -456,15 +665,33 @@
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000001"
-            ]
+            ],
+            "n": [
+                "24002400 0D7EE23F 2823CA03 5D31B144 364C75E5 9AEFFF60",
+                "5447E513 F0007060 7FF82000 001F9080 041FFFFF DF000000",
+                "0000000D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN446": {
         "name": "bn446",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn446 elliptic curve (446-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "24000000 00000000 00240000 0002D000 00000D80 0000021C",
+                "00000018 00000000 87000000 0B040000 0057C000 00015C00",
+                "00001320 00000067"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -484,15 +711,33 @@
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000010"
-            ]
+            ],
+            "n": [
+                "24000000 00000000 00240000 0002D000 00000D80 0000021C",
+                "00000017 A0000000 87000000 0AD40000 0054C000 00015600",
+                "00001260 00000061"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN478": {
         "name": "bn478",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn478 elliptic curve (478-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "23FFFFFF FFFFFFFE DFFFFFFF EE0001B3 60000000 6BFFF5DB",
+                "835FFF5D 28085442 32800288 8F96F294 4D7DED78 1430FFD7",
+                "80065FFF 010020FF FD900013"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -512,15 +757,33 @@
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000001"
-            ]
+            ],
+            "n": [
+                "23FFFFFF FFFFFFFE DFFFFFFF EE0001B3 60000000 6BFFF5DB",
+                "835FFF5D 2807F442 32800288 8F987294 4D7E0578 112F7FD7",
+                "80062FFF 07001F7F FDF0000D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN510": {
         "name": "bn510",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn510 elliptic curve (510-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "24000000 00000000 003F0000 00000001 B0002958 00000000",
+                "0237000C 0F000008 4000F810 0151A400 07380024 2D000013",
+                "80019440 00000000 08880000 00000013"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -540,15 +803,33 @@
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000010"
-            ]
+            ],
+            "n": [
+                "24000000 00000000 003F0000 00000001 B0002958 00000000",
+                "0237000C 0F000007 E000F810 0151A400 06E40024 2D000010",
+                "800181E0 00000000 07380000 0000000D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN542": {
         "name": "bn542",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn542 elliptic curve (542-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "24000900 00D80009 00002400 0090001B 01B1B051 09051000",
+                "1B00D800 1B0510D8 A2084511 080008D0 00090510 00511080",
+                "01081380 25380001 B0000008 40000013 80000013"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -568,15 +849,33 @@
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000001"
-            ]
+            ],
+            "n": [
+                "24000900 00D80009 00002400 0090001B 01B1B051 09051000",
+                "1B00D800 1B0510D8 A207E510 FC000870 00090510 00510FC0",
+                "00FC1080 25080001 B0000007 E0000010 8000000D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN574": {
         "name": "bn574",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn574 elliptic curve (574-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "2400023F FFFB7FFF 4C000024 00167FFF EE01AEE0 14423FAE",
+                "FFFB5C00 0A200050 FFFF2808 400041FF FE73FFF7 C0002100",
+                "00000000 00138000 4DFFFD90 00000000 00000000 00000013"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -596,15 +895,34 @@
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000001"
-            ]
+            ],
+            "n": [
+                "2400023F FFFB7FFF 4C000024 00167FFF EE01AEE0 14423FAE",
+                "FFFB5C00 0A200050 FFFF2807 E0003EFF FE85FFF8 20001F80",
+                "00000000 00108000 41FFFDF0 00000000 00000000 0000000D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN606": {
         "name": "bn606",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn606 elliptic curve (606-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "23FFFFFF FFFFFEE0 00000000 00036000 000241AF FB7FFFFF",
+                "F275E002 4000001B 1440000D 94482DF2 7FFFC9AE DF000000",
+                "00365121 00245142 137FFFFF B75D7BD9 00000000 00000024",
+                "6C844E13"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -628,15 +946,35 @@
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000001"
-            ]
+            ],
+            "n": [
+                "23FFFFFF FFFFFEE0 00000000 00036000 000241AF FB7FFFFF",
+                "F275E002 4000001B 1440000D 9447CDF2 7FFFC9AE E0800000",
+                "0036511F 8024513F 107FFFFF B75D81DF 00000000 00000024",
+                "6C7E420D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BN638": {
         "name": "bn638",
-        "long_name": null,
-        "standards": [],
+        "long_name": "bn638 elliptic curve (638-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2010_429"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "23FFFFFD C000000D 7FFFFFB8 000001D3 FFFFF942 D000165E",
+                "3FFF9487 0000D52F FFFDD0E0 0008DE55 C0008652 0021E55B",
+                "FFFFF51F FFF4EB80 0000004C 80015ACD FFFFFFFF FFFFECE0",
+                "00000000 00000067"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -660,15 +998,33 @@
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000010"
-            ]
+            ],
+            "n": [
+                "23FFFFFD C000000D 7FFFFFB8 000001D3 FFFFF942 D000165E",
+                "3FFF9487 0000D52F FFFDD0E0 0008DE55 60008655 0021E555",
+                "FFFFF54F FFF4EAC0 00000049 800154D9 FFFFFFFF FFFFEDA0",
+                "00000000 00000061"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BRAINPOOLP160R1": {
         "name": "brainpoolP160r1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP160r1 elliptic curve (160-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "E95E4A5F 737059DC 60DFC7AD 95B3D813 9515620F"
+            ],
             "a": [
                 "340E7BE2 A280EB74 E2BE61BA DA745D97 E8F7C300"
             ],
@@ -680,15 +1036,30 @@
             ],
             "y": [
                 "1667CB47 7A1A8EC3 38F94741 669C9763 16DA6321"
-            ]
+            ],
+            "n": [
+                "E95E4A5F 737059DC 60DF5991 D4502940 9E60FC09"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "2b7e151628aed2a6abf7158809cf4f3c762e7160"
         }
     },
     "BRAINPOOLP160T1": {
         "name": "brainpoolP160t1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP160t1 elliptic curve (160-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "E95E4A5F 737059DC 60DFC7AD 95B3D813 9515620F"
+            ],
             "a": [
                 "E95E4A5F 737059DC 60DFC7AD 95B3D813 9515620C"
             ],
@@ -700,15 +1071,30 @@
             ],
             "y": [
                 "ADD6718B 7C7C1961 F0991B84 24437721 52C9E0AD"
-            ]
+            ],
+            "n": [
+                "E95E4A5F 737059DC 60DF5991 D4502940 9E60FC09"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BRAINPOOLP192R1": {
         "name": "brainpoolP192r1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP192r1 elliptic curve (192-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "C302F41D 932A36CD A7A34630 93D18DB7 8FCE476D E1A86297"
+            ],
             "a": [
                 "6A911740 76B1E0E1 9C39C031 FE8685C1 CAE040E5 C69A28EF"
             ],
@@ -720,15 +1106,30 @@
             ],
             "y": [
                 "14B69086 6ABD5BB8 8B5F4828 C1490002 E6773FA2 FA299B8F"
-            ]
+            ],
+            "n": [
+                "C302F41D 932A36CD A7A3462F 9E9E916B 5BE8F102 9AC4ACC1"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "f38b4da56a784d9045190cfef324e7738926cfbe"
         }
     },
     "BRAINPOOLP192T1": {
         "name": "brainpoolP192t1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP192t1 elliptic curve (192-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "C302F41D 932A36CD A7A34630 93D18DB7 8FCE476D E1A86297"
+            ],
             "a": [
                 "C302F41D 932A36CD A7A34630 93D18DB7 8FCE476D E1A86294"
             ],
@@ -739,16 +1140,32 @@
                 "3AE9E58C 82F63C30 282E1FE7 BBF43FA7 2C446AF6 F4618129"
             ],
             "y": [
-                "97E2C566 7C2223A9 02AB5CA4 49D0084B 7E5B3DE7 CCC01C9"
-            ]
+                "097E2C56 67C2223A 902AB5CA 449D0084 B7E5B3DE 7CCC01C9"
+            ],
+            "n": [
+                "C302F41D 932A36CD A7A3462F 9E9E916B 5BE8F102 9AC4ACC1"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BRAINPOOLP224R1": {
         "name": "brainpoolP224r1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP224r1 elliptic curve (224-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "D7C134AA 26436686 2A183025 75D1D787 B09F0757 97DA89F5",
+                "7EC8C0FF"
+            ],
             "a": [
                 "68A5E62C A9CE6C1C 299803A6 C1530B51 4E182AD8 B0042A59",
                 "CAD29F43"
@@ -758,21 +1175,38 @@
                 "386C400B"
             ],
             "x": [
-                "D9029AD2 C7E5CF43 40823B2A 87DC68C9 E4CE3174 C1E6EFDE",
-                "E12C07D"
+                "0D9029AD 2C7E5CF4 340823B2 A87DC68C 9E4CE317 4C1E6EFD",
+                "EE12C07D"
             ],
             "y": [
                 "58AA56F7 72C0726F 24C6B89E 4ECDAC24 354B9E99 CAA3F6D3",
                 "761402CD"
-            ]
+            ],
+            "n": [
+                "D7C134AA 26436686 2A183025 75D0FB98 D116BC4B 6DDEBCA3",
+                "A5A7939F"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "5f4bf8d8d8c31d763da06c80abb1185eb4f7c7b5"
         }
     },
     "BRAINPOOLP224T1": {
         "name": "brainpoolP224t1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP224t1 elliptic curve (224-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "D7C134AA 26436686 2A183025 75D1D787 B09F0757 97DA89F5",
+                "7EC8C0FF"
+            ],
             "a": [
                 "D7C134AA 26436686 2A183025 75D1D787 B09F0757 97DA89F5",
                 "7EC8C0FC"
@@ -786,17 +1220,36 @@
                 "29B4D580"
             ],
             "y": [
-                "374E9F51 43E568CD 23F3F4D7 C0D4B1E4 1C8CC0D1 C6ABD5F1",
-                "A46DB4C"
-            ]
+                "0374E9F5 143E568C D23F3F4D 7C0D4B1E 41C8CC0D 1C6ABD5F",
+                "1A46DB4C"
+            ],
+            "n": [
+                "D7C134AA 26436686 2A183025 75D0FB98 D116BC4B 6DDEBCA3",
+                "A5A7939F"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BRAINPOOLP256R1": {
         "name": "brainpoolP256r1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP256r1 elliptic curve (256-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "RFC_7027",
+            "RFC_8734",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "A9FB57DB A1EEA9BC 3E660A90 9D838D72 6E3BF623 D5262028",
+                "2013481D 1F6E5377"
+            ],
             "a": [
                 "7D5A0975 FC2C3057 EEF67530 417AFFE7 FB8055C1 26DC5C6C",
                 "E94A4B44 F330B5D9"
@@ -812,15 +1265,32 @@
             "y": [
                 "547EF835 C3DAC4FD 97F8461A 14611DC9 C2774513 2DED8E54",
                 "5C1D54C7 2F046997"
-            ]
+            ],
+            "n": [
+                "A9FB57DB A1EEA9BC 3E660A90 9D838D71 8C397AA3 B561A6F7",
+                "901E0E82 974856A7"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "757f5958490cfd47d7c19bb42158d9554f7b46bc"
         }
     },
     "BRAINPOOLP256T1": {
         "name": "brainpoolP256t1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP256t1 elliptic curve (256-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "A9FB57DB A1EEA9BC 3E660A90 9D838D72 6E3BF623 D5262028",
+                "2013481D 1F6E5377"
+            ],
             "a": [
                 "A9FB57DB A1EEA9BC 3E660A90 9D838D72 6E3BF623 D5262028",
                 "2013481D 1F6E5374"
@@ -836,15 +1306,32 @@
             "y": [
                 "2D996C82 3439C56D 7F7B22E1 4644417E 69BCB6DE 39D02700",
                 "1DABE8F3 5B25C9BE"
-            ]
+            ],
+            "n": [
+                "A9FB57DB A1EEA9BC 3E660A90 9D838D71 8C397AA3 B561A6F7",
+                "901E0E82 974856A7"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BRAINPOOLP320R1": {
         "name": "brainpoolP320r1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP320r1 elliptic curve (320-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "D35E4720 36BC4FB7 E13C785E D201E065 F98FCFA6 F6F40DEF",
+                "4F92B9EC 7893EC28 FCD412B1 F1B32E27"
+            ],
             "a": [
                 "3EE30B56 8FBAB0F8 83CCEBD4 6D3F3BB8 A2A73513 F5EB79DA",
                 "66190EB0 85FFA9F4 92F375A9 7D860EB4"
@@ -860,15 +1347,32 @@
             "y": [
                 "14FDD055 45EC1CC8 AB409324 7F77275E 0743FFED 117182EA",
                 "A9C77877 AAAC6AC7 D35245D1 692E8EE1"
-            ]
+            ],
+            "n": [
+                "D35E4720 36BC4FB7 E13C785E D201E065 F98FCFA5 B68F12A3",
+                "2D482EC7 EE8658E9 8691555B 44C59311"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "ed55c4d79fd5f24d6613c31c3839a2ddf8a9a276"
         }
     },
     "BRAINPOOLP320T1": {
         "name": "brainpoolP320t1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP320t1 elliptic curve (320-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "D35E4720 36BC4FB7 E13C785E D201E065 F98FCFA6 F6F40DEF",
+                "4F92B9EC 7893EC28 FCD412B1 F1B32E27"
+            ],
             "a": [
                 "D35E4720 36BC4FB7 E13C785E D201E065 F98FCFA6 F6F40DEF",
                 "4F92B9EC 7893EC28 FCD412B1 F1B32E24"
@@ -884,22 +1388,41 @@
             "y": [
                 "63BA3A7A 27483EBF 6671DBEF 7ABB30EB EE084E58 A0B077AD",
                 "42A5A098 9D1EE71B 1B9BC045 5FB0D2C3"
-            ]
+            ],
+            "n": [
+                "D35E4720 36BC4FB7 E13C785E D201E065 F98FCFA5 B68F12A3",
+                "2D482EC7 EE8658E9 8691555B 44C59311"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BRAINPOOLP384R1": {
         "name": "brainpoolP384r1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP384r1 elliptic curve (384-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "RFC_7027",
+            "RFC_8734",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "8CB91E82 A3386D28 0F5D6F7E 50E641DF 152F7109 ED5456B4",
+                "12B1DA19 7FB71123 ACD3A729 901D1A71 87470013 3107EC53"
+            ],
             "a": [
                 "7BC382C6 3D8C150C 3C72080A CE05AFA0 C2BEA28E 4FB22787",
                 "139165EF BA91F90F 8AA5814A 503AD4EB 04A8C7DD 22CE2826"
             ],
             "b": [
-                "4A8C7DD2 2CE28268 B39B5541 6F0447C2 FB77DE10 7DCD2A62",
-                "E880EA53 EEB62D57 CB439029 5DBC9943 AB78696F A504C11"
+                "04A8C7DD 22CE2826 8B39B554 16F0447C 2FB77DE1 07DCD2A6",
+                "2E880EA5 3EEB62D5 7CB43902 95DBC994 3AB78696 FA504C11"
             ],
             "x": [
                 "1D1C64F0 68CF45FF A2A63A81 B7C13F6B 8847A3E7 7EF14FE3",
@@ -908,15 +1431,32 @@
             "y": [
                 "8ABE1D75 20F9C2A4 5CB1EB8E 95CFD552 62B70B29 FEEC5864",
                 "E19C054F F9912928 0E464621 77918111 42820341 263C5315"
-            ]
+            ],
+            "n": [
+                "8CB91E82 A3386D28 0F5D6F7E 50E641DF 152F7109 ED5456B3",
+                "1F166E6C AC0425A7 CF3AB6AF 6B7FC310 3B883202 E9046565"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "bcfbfa1c877c56284dab79cd4c2b3293d20e9e5e"
         }
     },
     "BRAINPOOLP384T1": {
         "name": "brainpoolP384t1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP384t1 elliptic curve (384-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "8CB91E82 A3386D28 0F5D6F7E 50E641DF 152F7109 ED5456B4",
+                "12B1DA19 7FB71123 ACD3A729 901D1A71 87470013 3107EC53"
+            ],
             "a": [
                 "8CB91E82 A3386D28 0F5D6F7E 50E641DF 152F7109 ED5456B4",
                 "12B1DA19 7FB71123 ACD3A729 901D1A71 87470013 3107EC50"
@@ -932,15 +1472,35 @@
             "y": [
                 "25AB0569 62D30651 A114AFD2 755AD336 747F9347 5B7A1FCA",
                 "3B88F2B6 A208CCFE 46940858 4DC2B291 2675BF5B 9E582928"
-            ]
+            ],
+            "n": [
+                "8CB91E82 A3386D28 0F5D6F7E 50E641DF 152F7109 ED5456B3",
+                "1F166E6C AC0425A7 CF3AB6AF 6B7FC310 3B883202 E9046565"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "BRAINPOOLP512R1": {
         "name": "brainpoolP512r1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP512r1 elliptic curve (512-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "RFC_7027",
+            "RFC_8734",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "AADD9DB8 DBE9C48B 3FD4E6AE 33C9FC07 CB308DB3 B3C9D20E",
+                "D6639CCA 70330871 7D4D9B00 9BC66842 AECDA12A E6A380E6",
+                "2881FF2F 2D82C685 28AA6056 583A48F3"
+            ],
             "a": [
                 "7830A331 8B603B89 E2327145 AC234CC5 94CBDD8D 3DF91610",
                 "A83441CA EA9863BC 2DED5D5A A8253AA1 0A2EF1C9 8B9AC8B5",
@@ -960,15 +1520,34 @@
                 "7DDE385D 566332EC C0EABFA9 CF7822FD F209F700 24A57B1A",
                 "A000C55B 881F8111 B2DCDE49 4A5F485E 5BCA4BD8 8A2763AE",
                 "D1CA2B2F A8F05406 78CD1E0F 3AD80892"
-            ]
+            ],
+            "n": [
+                "AADD9DB8 DBE9C48B 3FD4E6AE 33C9FC07 CB308DB3 B3C9D20E",
+                "D6639CCA 70330870 553E5C41 4CA92619 41866119 7FAC1047",
+                "1DB1D381 085DDADD B5879682 9CA90069"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "af02ac60acc93ed874422a52ecb238feee5ab6ad"
         }
     },
     "BRAINPOOLP512T1": {
         "name": "brainpoolP512t1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "brainpoolP512t1 elliptic curve (512-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_5639",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "AADD9DB8 DBE9C48B 3FD4E6AE 33C9FC07 CB308DB3 B3C9D20E",
+                "D6639CCA 70330871 7D4D9B00 9BC66842 AECDA12A E6A380E6",
+                "2881FF2F 2D82C685 28AA6056 583A48F3"
+            ],
             "a": [
                 "AADD9DB8 DBE9C48B 3FD4E6AE 33C9FC07 CB308DB3 B3C9D20E",
                 "D6639CCA 70330871 7D4D9B00 9BC66842 AECDA12A E6A380E6",
@@ -988,19 +1567,43 @@
                 "5B534BD5 95F5AF0F A2C89237 6C84ACE1 BB4E3019 B71634C0",
                 "1131159C AE03CEE9 D9932184 BEEF216B D71DF2DA DF86A627",
                 "306ECFF9 6DBB8BAC E198B61E 00F8B332"
-            ]
+            ],
+            "n": [
+                "AADD9DB8 DBE9C48B 3FD4E6AE 33C9FC07 CB308DB3 B3C9D20E",
+                "D6639CCA 70330870 553E5C41 4CA92619 41866119 7FAC1047",
+                "1DB1D381 085DDADD B5879682 9CA90069"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "C2PNB163V1": {
         "name": "c2pnb163v1",
-        "long_name": null,
-        "standards": [
-            "WTLS"
-        ],
+        "long_name": "c2pnb163v1 elliptic curve (binary field GF(2^163))",
+        "vulnerabilities": [],
         "aliases": [
             "WAP-WSG-IDM-ECID-WTLS5"
         ],
+        "sources": [
+            "WTLS",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "A3"
+            ],
+            "k1": [
+                "1"
+            ],
+            "k2": [
+                "2"
+            ],
+            "k3": [
+                "8"
+            ],
             "a": [
                 "072546B5 435234A4 22E07896 75F432C8 9435DE52 42"
             ],
@@ -1012,15 +1615,38 @@
             ],
             "y": [
                 "01EC2321 1B5966AD EA1D3F87 F7EA5848 AEF0B7CA 9F"
-            ]
+            ],
+            "n": [
+                "04000000 00000000 000001E6 0FC8821C C74DAEAF C1"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "d2c0fb15760860def1eef4d696e6768756151754"
         }
     },
     "C2PNB163V2": {
         "name": "c2pnb163v2",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2pnb163v2 elliptic curve (binary field GF(2^163))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "A3"
+            ],
+            "k1": [
+                "1"
+            ],
+            "k2": [
+                "2"
+            ],
+            "k3": [
+                "8"
+            ],
             "a": [
                 "0108B39E 77C4B108 BED981ED 0E890E11 7C511CF0 72"
             ],
@@ -1032,15 +1658,38 @@
             ],
             "y": [
                 "079F684D DF6684C5 CD258B38 90021B23 86DFD19F C5"
-            ]
+            ],
+            "n": [
+                "03FFFFFF FFFFFFFF FFFFFDF6 4DE1151A DBB78F10 A7"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "53814c050d44d696e67687561517580ca4e29ffd"
         }
     },
     "C2PNB163V3": {
         "name": "c2pnb163v3",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2pnb163v3 elliptic curve (binary field GF(2^163))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "A3"
+            ],
+            "k1": [
+                "1"
+            ],
+            "k2": [
+                "2"
+            ],
+            "k3": [
+                "8"
+            ],
             "a": [
                 "07A526C6 3D3E25A2 56A00769 9F5447E3 2AE456B5 0E"
             ],
@@ -1048,19 +1697,44 @@
                 "03F70617 98EB99E2 38FD6F1B F95B48FE EB485425 2B"
             ],
             "x": [
-                "2F9F87B7 C574D0BD ECF8A22E 6524775F 98CDEBDC B"
+                "02F9F87B 7C574D0B DECF8A22 E6524775 F98CDEBD CB"
             ],
             "y": [
-                "5B935590 C155E17E A48EB3FF 3718B893 DF59A05D 0"
-            ]
+                "05B93559 0C155E17 EA48EB3F F3718B89 3DF59A05 D0"
+            ],
+            "n": [
+                "03FFFFFF FFFFFFFF FFFFFE1A EE140F11 0AFF9613 09"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "50cbf1d95ca94d696e676875615175f16a36a3b8"
         }
     },
     "C2PNB176W1": {
         "name": "c2pnb176w1",
-        "long_name": null,
-        "standards": [],
-        "aliases": [],
+        "long_name": "c2pnb176w1 elliptic curve (binary field GF(2^176))",
+        "vulnerabilities": [],
+        "aliases": [
+            "C2PNB176V1"
+        ],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "B0"
+            ],
+            "k1": [
+                "1"
+            ],
+            "k2": [
+                "2"
+            ],
+            "k3": [
+                "2B"
+            ],
             "a": [
                 "E4E6DB29 95065C40 7D9D39B8 D0967B96 704BA8E9 C90B"
             ],
@@ -1072,17 +1746,41 @@
             ],
             "y": [
                 "6FA4539C 2DADDDD6 BAB5167D 61B436E1 D92BB16A 562C"
-            ]
+            ],
+            "n": [
+                "00010092 537397EC A4F61457 99D62B0A 19CE06FE 26AD"
+            ],
+            "h": [
+                "FF6E"
+            ],
+            "seed": null
         }
     },
     "C2PNB208W1": {
         "name": "c2pnb208w1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2pnb208w1 elliptic curve (binary field GF(2^208))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "D0"
+            ],
+            "k1": [
+                "1"
+            ],
+            "k2": [
+                "2"
+            ],
+            "k3": [
+                "53"
+            ],
             "a": [
-                "0"
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "0000"
             ],
             "b": [
                 "C8619ED4 5A62E621 2E116034 9E2BFA84 4439FAFC 2A3FD163",
@@ -1095,15 +1793,39 @@
             "y": [
                 "0F55B51A 06E78E9A C38A035F F520D8B0 1781BEB1 A6BB0861",
                 "7DE3"
-            ]
+            ],
+            "n": [
+                "000101BA F95C9723 C57B6C21 DA2EFF2D 5ED588BD D5717E21",
+                "2F9D"
+            ],
+            "h": [
+                "FE48"
+            ],
+            "seed": null
         }
     },
     "C2PNB272W1": {
         "name": "c2pnb272w1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2pnb272w1 elliptic curve (binary field GF(2^272))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "110"
+            ],
+            "k1": [
+                "1"
+            ],
+            "k2": [
+                "3"
+            ],
+            "k3": [
+                "38"
+            ],
             "a": [
                 "91A091F0 3B5FBA4A B2CCF49C 4EDD220F B028712D 42BE752B",
                 "2C40094D BACDB586 FB20"
@@ -1119,15 +1841,39 @@
             "y": [
                 "10C76957 16851EEF 6BA7F687 2E6142FB D241B830 FF5EFCAC",
                 "ECCAB05E 02005DDE 9D23"
-            ]
+            ],
+            "n": [
+                "000100FA F51354E0 E39E4892 DF6E319C 72C81616 03FA45AA",
+                "7B998A16 7B8F1E62 9521"
+            ],
+            "h": [
+                "FF06"
+            ],
+            "seed": null
         }
     },
     "C2PNB304W1": {
         "name": "c2pnb304w1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2pnb304w1 elliptic curve (binary field GF(2^304))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "130"
+            ],
+            "k1": [
+                "1"
+            ],
+            "k2": [
+                "2"
+            ],
+            "k3": [
+                "B"
+            ],
             "a": [
                 "FD0D6931 49A118F6 51E6DCE6 80208537 7E5F882D 1B510B44",
                 "160074C1 28807836 5A0396C8 E681"
@@ -1143,15 +1889,39 @@
             "y": [
                 "E19FBEB7 6E0DA171 517ECF40 1B50289B F0141032 88527A9B",
                 "416A105E 80260B54 9FDC1B92 C03B"
-            ]
+            ],
+            "n": [
+                "000101D5 56572AAB AC800101 D556572A ABAC8001 022D5C91",
+                "DD173F8F B561DA68 99164443 051D"
+            ],
+            "h": [
+                "FE2E"
+            ],
+            "seed": null
         }
     },
     "C2PNB368W1": {
         "name": "c2pnb368w1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2pnb368w1 elliptic curve (binary field GF(2^368))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "170"
+            ],
+            "k1": [
+                "1"
+            ],
+            "k2": [
+                "2"
+            ],
+            "k3": [
+                "55"
+            ],
             "a": [
                 "E0D2EE25 095206F5 E2A4F9ED 229F1F25 6E79A0E2 B455970D",
                 "8D0D865B D94778C5 76D62F0A B7519CCD 2A1A906A E30D"
@@ -1167,15 +1937,39 @@
             "y": [
                 "7B3EB1BD DCBA62D5 D8B2059B 525797FC 73822C59 059C623A",
                 "45FF3843 CEE8F87C D1855ADA A81E2A07 50B80FDA 2310"
-            ]
+            ],
+            "n": [
+                "00010090 512DA9AF 72B08349 D98A5DD4 C7B0532E CA51CE03",
+                "E2D10F3B 7AC579BD 87E909AE 40A6F131 E9CFCE5B D967"
+            ],
+            "h": [
+                "FF70"
+            ],
+            "seed": null
         }
     },
     "C2TNB191V1": {
         "name": "c2tnb191v1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2tnb191v1 elliptic curve (binary field GF(2^191))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "BF"
+            ],
+            "k1": [
+                "9"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "2866537B 67675263 6A68F565 54E12640 276B649E F7526267"
             ],
@@ -1187,15 +1981,38 @@
             ],
             "y": [
                 "765BE734 33B3F95E 332932E7 0EA245CA 2418EA0E F98018FB"
-            ]
+            ],
+            "n": [
+                "40000000 00000000 00000000 04A20E90 C39067C8 93BBB9A5"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "4e13ca542744d696e67687561517552f279a8c84"
         }
     },
     "C2TNB191V2": {
         "name": "c2tnb191v2",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2tnb191v2 elliptic curve (binary field GF(2^191))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "BF"
+            ],
+            "k1": [
+                "9"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "40102877 4D7777C7 B7666D13 66EA4320 71274F89 FF01E718"
             ],
@@ -1207,15 +2024,38 @@
             ],
             "y": [
                 "17434386 626D14F3 DBF01760 D9213A3E 1CF37AEC 437D668A"
-            ]
+            ],
+            "n": [
+                "20000000 00000000 00000000 50508CB8 9F652824 E06B8173"
+            ],
+            "h": [
+                "4"
+            ],
+            "seed": "0871ef2fef24d696e6768756151758bee0d95c15"
         }
     },
     "C2TNB191V3": {
         "name": "c2tnb191v3",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2tnb191v3 elliptic curve (binary field GF(2^191))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "BF"
+            ],
+            "k1": [
+                "9"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "6C010747 56099122 22105691 1C77D77E 77A777E7 E7E77FCB"
             ],
@@ -1227,15 +2067,38 @@
             ],
             "y": [
                 "545A3917 6196575D 98599936 6E6AD34C E0A77CD7 127B06BE"
-            ]
+            ],
+            "n": [
+                "15555555 55555555 55555555 610C0B19 6812BFB6 288A3EA3"
+            ],
+            "h": [
+                "6"
+            ],
+            "seed": "e053512dc684d696e676875615175067ae786d1f"
         }
     },
     "C2TNB239V1": {
         "name": "c2tnb239v1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2tnb239v1 elliptic curve (binary field GF(2^239))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "EF"
+            ],
+            "k1": [
+                "24"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "32010857 077C5431 123A46B8 08906756 F543423E 8D278775",
                 "78125778 AC76"
@@ -1251,15 +2114,39 @@
             "y": [
                 "61D8EE50 77C33FEC F6F1A16B 268DE469 C3C7744E A9A97164",
                 "9FC7A961 6305"
-            ]
+            ],
+            "n": [
+                "20000000 00000000 00000000 0000000F 4D42FFE1 492A4993",
+                "F1CAD666 E447"
+            ],
+            "h": [
+                "4"
+            ],
+            "seed": "d34b9a4d696e676875615175ca71b920bfefb05d"
         }
     },
     "C2TNB239V2": {
         "name": "c2tnb239v2",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2tnb239v2 elliptic curve (binary field GF(2^239))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "EF"
+            ],
+            "k1": [
+                "24"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "42300177 57A767FA E4239856 9B746325 D45313AF 07662664",
                 "79B75654 E65F"
@@ -1275,15 +2162,39 @@
             "y": [
                 "5667334C 45AFF3B5 A03BAD9D D75E2C71 A9936256 7D5453F7",
                 "FA6E227E C833"
-            ]
+            ],
+            "n": [
+                "15555555 55555555 55555555 5555553C 6F288525 9C31E3FC",
+                "DF154624 522D"
+            ],
+            "h": [
+                "6"
+            ],
+            "seed": "2aa6982fdfa4d696e676875615175d266727277d"
         }
     },
     "C2TNB239V3": {
         "name": "c2tnb239v3",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2tnb239v3 elliptic curve (binary field GF(2^239))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "EF"
+            ],
+            "k1": [
+                "24"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "01238774 666A6776 6D6676F7 78E676B6 69991766 66E68766",
                 "6D8766C6 6A9F"
@@ -1299,15 +2210,39 @@
             "y": [
                 "2E5A0EAF 6E5E1305 B9004DCE 5C0ED7FE 59A35608 F33837C8",
                 "16D80B79 F461"
-            ]
+            ],
+            "n": [
+                "0CCCCCCC CCCCCCCC CCCCCCCC CCCCCCAC 4912D2D9 DF903EF9",
+                "888B8A0E 4CFF"
+            ],
+            "h": [
+                "A"
+            ],
+            "seed": "9e076f4d696e676875615175e11e9fdd77f92041"
         }
     },
     "C2TNB359V1": {
         "name": "c2tnb359v1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2tnb359v1 elliptic curve (binary field GF(2^359))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "167"
+            ],
+            "k1": [
+                "44"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "5667676A 654B2075 4F356EA9 2017D946 567C4667 5556F195",
                 "56A04616 B567D223 A5E05656 FB549016 A96656A5 57"
@@ -1323,15 +2258,39 @@
             "y": [
                 "53D7E085 29547048 121E9C95 F3791DD8 04963948 F34FAE7B",
                 "F44EA823 65DC7868 FE57E4AE 2DE21130 5A407104 BD"
-            ]
+            ],
+            "n": [
+                "01AF286B CA1AF286 BCA1AF28 6BCA1AF2 86BCA1AF 286BC9FB",
+                "8F6B85C5 56892C20 A7EB964F E7719E74 F490758D 3B"
+            ],
+            "h": [
+                "4C"
+            ],
+            "seed": "2b354920b724d696e67687561517585ba1332dc6"
         }
     },
     "C2TNB431R1": {
         "name": "c2tnb431r1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "c2tnb431r1 elliptic curve (binary field GF(2^431))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "1AF"
+            ],
+            "k1": [
+                "78"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "1A827EF0 0DD6FC0E 234CAF04 6C6A5D8A 85395B23 6CC4AD2C",
                 "F32A0CAD BDC9DDF6 20B0EB99 06D0957F 6C6FEACD 615468DF",
@@ -1351,39 +2310,533 @@
                 "20D0AF89 03A96F8D 5FA2C255 745D3C45 1B302C93 46D9B7E4",
                 "85E7BCE4 1F6B591F 3E8F6ADD CBB0BC4C 2F947A7D E1A89B62",
                 "5D6A598B 3760"
+            ],
+            "n": [
+                "00034034 03403403 40340340 34034034 03403403 40340340",
+                "34034034 0323C313 FAB50589 703B5EC6 8D3587FE C60D161C",
+                "C149C1AD 4A91"
+            ],
+            "h": [
+                "2760"
+            ],
+            "seed": null
+        }
+    },
+    "CURVE25519": {
+        "name": "Curve25519",
+        "long_name": "Curve25519 Montgomery curve (255-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "X25519",
+            "curve25519"
+        ],
+        "sources": [
+            "RFC_7748",
+            "RFC_8031",
+            "SP_800_186"
+        ],
+        "parameter_form": "MONTGOMERY",
+        "parameter_numbers": {
+            "p": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFED"
+            ],
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00076D06"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000001"
+            ],
+            "u": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000009"
+            ],
+            "v": [
+                "20AE19A1 B8A086B4 E01EDD2C 7748D14C 923D4D7E 6D7C61B2",
+                "29E9C5A2 7ECED3D9"
+            ],
+            "n": [
+                "10000000 00000000 00000000 00000000 14DEF9DE A2F79CD6",
+                "5812631A 5CF5D3ED"
+            ],
+            "h": [
+                "8"
             ]
+        }
+    },
+    "CURVE448": {
+        "name": "Curve448",
+        "long_name": "Curve448 Montgomery curve (448-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "X448",
+            "curve448",
+            "Goldilocks"
+        ],
+        "sources": [
+            "RFC_7748",
+            "RFC_8031",
+            "SP_800_186"
+        ],
+        "parameter_form": "MONTGOMERY",
+        "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFE FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF"
+            ],
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 000262A6"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000001"
+            ],
+            "u": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000005"
+            ],
+            "v": [
+                "7D235D12 95F5B1F6 6C98AB6E 58326FCE CBAE5D34 F55545D0",
+                "60F75DC2 8DF3F6ED B8027E23 46430D21 1312C4B1 50677AF7",
+                "6FD7223D 457B5B1A"
+            ],
+            "n": [
+                "3FFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF 7CCA23E9 C44EDB49 AED63690 216CC272 8DC58F55",
+                "2378C292 AB5844F3"
+            ],
+            "h": [
+                "4"
+            ]
+        }
+    },
+    "E382": {
+        "name": "E382",
+        "long_name": "E382 twisted Edwards curve (382-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "E-382"
+        ],
+        "sources": [
+            "IACR_EPRINT_2013_647"
+        ],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": [
+                "3FFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFF97"
+            ],
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000001"
+            ],
+            "d": [
+                "3FFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFEF8E1"
+            ],
+            "x": [
+                "196F8DD0 EAB20391 E5F05BE9 6E8D20AE 68F84003 2B0B6435",
+                "2923BAB8 53648411 93517DBC E8105398 EBC0CC94 70F79603"
+            ],
+            "y": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000011"
+            ],
+            "n": [
+                "0FFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "D5FB21F2 1E95EEE1 7C5E6928 1B102D27 73E27E13 FD3C9719"
+            ],
+            "h": [
+                "4"
+            ]
+        }
+    },
+    "E521": {
+        "name": "E521",
+        "long_name": "E521 twisted Edwards curve (521-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "E-521"
+        ],
+        "sources": [
+            "IACR_EPRINT_2013_647"
+        ],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": [
+                "01FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFF"
+            ],
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 0001"
+            ],
+            "d": [
+                "01FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFA 4331"
+            ],
+            "x": [
+                "00752CB4 5C48648B 189DF90C B2296B28 78A3BFD9 F42FC6C8",
+                "18EC8BF3 C9C0C620 3913F6EC C5CCC724 34B1AE94 9D568FC9",
+                "9C6059D0 FB133648 38AA302A 940A2F19 BA6C"
+            ],
+            "y": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 000C"
+            ],
+            "n": [
+                "007FFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFD15B6 C64746FC 85F736B8 AF5E7EC5",
+                "3F04FBD8 C4569A8F 1F4540EA 2435F518 0D6B"
+            ],
+            "h": [
+                "4"
+            ]
+        }
+    },
+    "GC256A": {
+        "name": "tc26-gost-3410-2012-256-paramSetA",
+        "long_name": "tc26-gost-3410-2012-256-paramSetA twisted Edwards curve (256-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "id-tc26-gost-3410-2012-256-paramSetA"
+        ],
+        "sources": [
+            "RFC_7836",
+            "RFC_9215"
+        ],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFD97"
+            ],
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000001"
+            ],
+            "d": [
+                "0605F6B7 C183FA81 578BC39C FAD51813 2B9DF628 97009AF7",
+                "E522C32D 6DC7BFFB"
+            ],
+            "x": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 0000000D"
+            ],
+            "y": [
+                "60CA1E32 AA475B34 8488C38F AB07649C E7EF8DBE 87F22E81",
+                "F92B2592 DBA300E7"
+            ],
+            "n": [
+                "40000000 00000000 00000000 00000000 0FD8CDDF C87B6635",
+                "C115AF55 6C360C67"
+            ],
+            "h": [
+                "4"
+            ]
+        }
+    },
+    "GC256B": {
+        "name": "id-GostR3410-2001-CryptoPro-A-ParamSet",
+        "long_name": "id-GostR3410-2001-CryptoPro-A-ParamSet elliptic curve (256-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "id-GostR3410-2001-CryptoPro-XchA-ParamSet",
+            "id-tc26-gost-3410-2012-256-paramSetB"
+        ],
+        "sources": [
+            "RFC_4357",
+            "RFC_9215"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFD97"
+            ],
+            "a": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFD94"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 000000A6"
+            ],
+            "x": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000001"
+            ],
+            "y": [
+                "8D91E471 E0989CDA 27DF505A 453F2B76 35294F2D DF23E3B1",
+                "22ACC99C 9E9F1E14"
+            ],
+            "n": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF 6C611070 995AD100",
+                "45841B09 B761B893"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
+        }
+    },
+    "GC256C": {
+        "name": "id-GostR3410-2001-CryptoPro-B-ParamSet",
+        "long_name": "id-GostR3410-2001-CryptoPro-B-ParamSet elliptic curve (256-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "id-tc26-gost-3410-2012-256-paramSetC"
+        ],
+        "sources": [
+            "RFC_4357",
+            "RFC_9215"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": [
+                "80000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000C99"
+            ],
+            "a": [
+                "80000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000C96"
+            ],
+            "b": [
+                "3E1AF419 A269A5F8 66A7D3C2 5C3DF80A E9792593 73FF2B18",
+                "2F49D4CE 7E1BBC8B"
+            ],
+            "x": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000001"
+            ],
+            "y": [
+                "3FA81243 59F96680 B83D1C3E B2C070E5 C545C985 8D03ECFB",
+                "744BF8D7 17717EFC"
+            ],
+            "n": [
+                "80000000 00000000 00000000 00000001 5F700CFF F1A624E5",
+                "E497161B CC8A198F"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
+        }
+    },
+    "GC256D": {
+        "name": "id-GostR3410-2001-CryptoPro-C-ParamSet",
+        "long_name": "id-GostR3410-2001-CryptoPro-C-ParamSet elliptic curve (256-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "id-GostR3410-2001-CryptoPro-XchB-ParamSet",
+            "id-tc26-gost-3410-2012-256-paramSetD"
+        ],
+        "sources": [
+            "RFC_4357",
+            "RFC_9215"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": [
+                "9B9F605F 5A858107 AB1EC85E 6B41C8AA CF846E86 789051D3",
+                "7998F7B9 022D759B"
+            ],
+            "a": [
+                "9B9F605F 5A858107 AB1EC85E 6B41C8AA CF846E86 789051D3",
+                "7998F7B9 022D7598"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 0000805A"
+            ],
+            "x": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000"
+            ],
+            "y": [
+                "41ECE557 43711A8C 3CBF3783 CD08C0EE 4D4DC440 D4641A8F",
+                "366E550D FDB3BB67"
+            ],
+            "n": [
+                "9B9F605F 5A858107 AB1EC85E 6B41C8AA 582CA351 1EDDFB74",
+                "F02F3A65 98980BB9"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
+        }
+    },
+    "GC512A": {
+        "name": "tc26-gost-3410-12-512-paramSetA",
+        "long_name": "tc26-gost-3410-12-512-paramSetA elliptic curve (512-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "id-tc26-gost-3410-12-512-paramSetA"
+        ],
+        "sources": [
+            "RFC_7836",
+            "RFC_9215"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFDC7"
+            ],
+            "a": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFDC4"
+            ],
+            "b": [
+                "E8C2505D EDFC86DD C1BD0B2B 6667F1DA 34B82574 761CB0E8",
+                "79BD081C FD0B6265 EE3CB090 F30D2761 4CB45740 10DA90DD",
+                "862EF9D4 EBEE4761 50319078 5A71C760"
+            ],
+            "x": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000003"
+            ],
+            "y": [
+                "7503CFE8 7A836AE3 A61B8816 E25450E6 CE5E1C93 ACF1ABC1",
+                "778064FD CBEFA921 DF1626BE 4FD036E9 3D75E6A5 0E3A41E9",
+                "8028FE5F C235F5B8 89A589CB 5215F2A4"
+            ],
+            "n": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF 27E69532 F48D8911 6FF22B8D 4E056060",
+                "9B4B38AB FAD2B85D CACDB141 1F10B275"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
+        }
+    },
+    "GC512B": {
+        "name": "id-tc26-gost-3410-12-512-paramSetB",
+        "long_name": "id-tc26-gost-3410-12-512-paramSetB elliptic curve (512-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "RFC_7836",
+            "RFC_9215"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": [
+                "80000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 0000006F"
+            ],
+            "a": [
+                "80000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 0000006C"
+            ],
+            "b": [
+                "687D1B45 9DC84145 7E3E06CF 6F5E2517 B97C7D61 4AF138BC",
+                "BF85DC80 6C4B289F 3E965D2D B1416D21 7F8B276F AD1AB69C",
+                "50F78BEE 1FA3106E FB8CCBC7 C5140116"
+            ],
+            "x": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000002"
+            ],
+            "y": [
+                "1A8F7EDA 389B094C 2C071E36 47A8940F 3C123B69 7578C213",
+                "BE6DD9E6 C8EC7335 DCB228FD 1EDF4A39 152CBCAA F8C03988",
+                "28041055 F94CEEEC 7E213407 80FE41BD"
+            ],
+            "n": [
+                "80000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000001 49A1EC14 2565A545 ACFDB77B D9D40CFA",
+                "8B996712 101BEA0E C6346C54 374F25BD"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "GOST256": {
         "name": "gost256",
-        "long_name": null,
-        "standards": [],
-        "aliases": [],
+        "long_name": "GOST R 34.10-2001 test parameter set (256-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "id-GostR3410-2001-TestParamSet"
+        ],
+        "sources": [
+            "RFC_4357",
+            "RFC_5832"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "80000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000431"
+            ],
             "a": [
-                "7"
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000007"
             ],
             "b": [
                 "5FBFF498 AA938CE7 39B8E022 FBAFEF40 563F6E6A 3472FC2A",
                 "514C0CE9 DAE23B7E"
             ],
             "x": [
-                "2"
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000002"
             ],
             "y": [
-                "8E2A8A0E 65147D4B D6316030 E16D19C8 5C97F0A9 CA267122",
-                "B96ABBCE A7E8FC8"
-            ]
+                "08E2A8A0 E65147D4 BD631603 0E16D19C 85C97F0A 9CA26712",
+                "2B96ABBC EA7E8FC8"
+            ],
+            "n": [
+                "80000000 00000000 00000000 00000001 50FE8A18 92976154",
+                "C59CFC19 3ACCF5B3"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "GOST512": {
         "name": "gost512",
-        "long_name": null,
-        "standards": [],
+        "long_name": "GOST R 34.10-2012 test parameter set (512-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_7091",
+            "RFC_9215"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "4531ACD1 FE0023C7 550D267B 6B2FEE80 922B14B2 FFB90F04",
+                "D4EB7C09 B5D2D15D F1D85274 1AF4704A 0458047E 80E4546D",
+                "35B8336F AC224DD8 1664BBF5 28BE6373"
+            ],
             "a": [
-                "7"
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000007"
             ],
             "b": [
                 "1CFF0806 A31116DA 29D8CFA5 4E57EB74 8BC5F377 E49400FD",
@@ -1399,186 +2852,216 @@
                 "2BB312A4 3BD2CE6E 0D020613 C857ACDD CFBF061E 91E5F2C3",
                 "F32447C2 59F39B2C 83AB156D 77F1496B F7EB3351 E1EE4E43",
                 "DC1A18B9 1B24640B 6DBB92CB 1ADD371E"
-            ]
+            ],
+            "n": [
+                "4531ACD1 FE0023C7 550D267B 6B2FEE80 922B14B2 FFB90F04",
+                "D4EB7C09 B5D2D15D A82F2D7E CB1DBAC7 19905C5E ECC423F1",
+                "D86E25ED BE23C595 D644AAF1 87E6E6DF"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
-    "ID-GOSTR3410-2001-CRYPTOPRO-A-PARAMSET": {
-        "name": "id-GostR3410-2001-CryptoPro-A-ParamSet",
-        "long_name": null,
-        "standards": [],
-        "aliases": [],
+    "M383": {
+        "name": "M383",
+        "long_name": "M383 Montgomery curve (383-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "M-383"
+        ],
+        "sources": [
+            "IACR_EPRINT_2013_647"
+        ],
+        "parameter_form": "MONTGOMERY",
         "parameter_numbers": {
+            "p": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFF45"
+            ],
             "a": [
-                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
-                "FFFFFFFF FFFFFD94"
-            ],
-            "b": [
-                "A6"
-            ],
-            "x": [
-                "01"
-            ],
-            "y": [
-                "8D91E471 E0989CDA 27DF505A 453F2B76 35294F2D DF23E3B1",
-                "22ACC99C 9E9F1E14"
-            ]
-        }
-    },
-    "ID-GOSTR3410-2001-CRYPTOPRO-B-PARAMSET": {
-        "name": "id-GostR3410-2001-CryptoPro-B-ParamSet",
-        "long_name": null,
-        "standards": [],
-        "aliases": [],
-        "parameter_numbers": {
-            "a": [
-                "80000000 00000000 00000000 00000000 00000000 00000000",
-                "00000000 00000C96"
-            ],
-            "b": [
-                "3E1AF419 A269A5F8 66A7D3C2 5C3DF80A E9792593 73FF2B18",
-                "2F49D4CE 7E1BBC8B"
-            ],
-            "x": [
-                "01"
-            ],
-            "y": [
-                "3FA81243 59F96680 B83D1C3E B2C070E5 C545C985 8D03ECFB",
-                "744BF8D7 17717EFC"
-            ]
-        }
-    },
-    "ID-GOSTR3410-2001-CRYPTOPRO-C-PARAMSET": {
-        "name": "id-GostR3410-2001-CryptoPro-C-ParamSet",
-        "long_name": null,
-        "standards": [],
-        "aliases": [],
-        "parameter_numbers": {
-            "a": [
-                "9B9F605F 5A858107 AB1EC85E 6B41C8AA CF846E86 789051D3",
-                "7998F7B9 022D7598"
-            ],
-            "b": [
-                "805A"
-            ],
-            "x": [
-                "00"
-            ],
-            "y": [
-                "41ECE557 43711A8C 3CBF3783 CD08C0EE 4D4DC440 D4641A8F",
-                "366E550D FDB3BB67"
-            ]
-        }
-    },
-    "ID-TC26-GOST-3410-12-512-PARAMSETA": {
-        "name": "id-tc26-gost-3410-12-512-paramSetA",
-        "long_name": null,
-        "standards": [],
-        "aliases": [],
-        "parameter_numbers": {
-            "a": [
-                "00FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
-                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
-                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFD C4"
-            ],
-            "b": [
-                "00E8C250 5DEDFC86 DDC1BD0B 2B6667F1 DA34B825 74761CB0",
-                "E879BD08 1CFD0B62 65EE3CB0 90F30D27 614CB457 4010DA90",
-                "DD862EF9 D4EBEE47 61503190 785A71C7 60"
-            ],
-            "x": [
-                "03"
-            ],
-            "y": [
-                "7503CFE8 7A836AE3 A61B8816 E25450E6 CE5E1C93 ACF1ABC1",
-                "778064FD CBEFA921 DF1626BE 4FD036E9 3D75E6A5 0E3A41E9",
-                "8028FE5F C235F5B8 89A589CB 5215F2A4"
-            ]
-        }
-    },
-    "ID-TC26-GOST-3410-12-512-PARAMSETB": {
-        "name": "id-tc26-gost-3410-12-512-paramSetB",
-        "long_name": null,
-        "standards": [],
-        "aliases": [],
-        "parameter_numbers": {
-            "a": [
-                "00800000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
-                "00000000 00000000 00000000 00000000 6C"
+                "00000000 00000000 00000000 00000000 00000000 001F82FE"
             ],
             "b": [
-                "687D1B45 9DC84145 7E3E06CF 6F5E2517 B97C7D61 4AF138BC",
-                "BF85DC80 6C4B289F 3E965D2D B1416D21 7F8B276F AD1AB69C",
-                "50F78BEE 1FA3106E FB8CCBC7 C5140116"
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000001"
             ],
-            "x": [
-                "02"
+            "u": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 0000000C"
             ],
-            "y": [
-                "1A8F7EDA 389B094C 2C071E36 47A8940F 3C123B69 7578C213",
-                "BE6DD9E6 C8EC7335 DCB228FD 1EDF4A39 152CBCAA F8C03988",
-                "28041055 F94CEEEC 7E213407 80FE41BD"
+            "v": [
+                "1EC7ED04 AAF834AF 310E304B 2DA0F328 E7C165F0 E8988ABD",
+                "39928612 90F617AA 1F1B2E7D 0B6E332E 969991B6 2555E77E"
+            ],
+            "n": [
+                "10000000 00000000 00000000 00000000 00000000 00000000",
+                "06C79673 AC36BA6E 7A32576F 7B1B249E 46BBC225 BE9071D7"
+            ],
+            "h": [
+                "8"
+            ]
+        }
+    },
+    "M511": {
+        "name": "M511",
+        "long_name": "M511 Montgomery curve (511-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "M-511"
+        ],
+        "sources": [
+            "IACR_EPRINT_2013_647"
+        ],
+        "parameter_form": "MONTGOMERY",
+        "parameter_numbers": {
+            "p": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFF45"
+            ],
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00081806"
+            ],
+            "b": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000001"
+            ],
+            "u": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000005"
+            ],
+            "v": [
+                "2FBDC0AD 8530803D 28FDBAD3 54BB488D 32399AC1 CF8F6E01",
+                "EE3F9638 9B90C809 422B9429 E8A43DBF 49308AC4 455940AB",
+                "E9F1DBCA 542093A8 95E30A64 AF056FA5"
+            ],
+            "n": [
+                "10000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 17B5FEFF 30C7F567 7AB2AEEB D13779A2",
+                "AC125042 A6AA10BF A54C15BA B76BAF1B"
+            ],
+            "h": [
+                "8"
             ]
         }
     },
     "OAKLEY_GROUP_3": {
         "name": "Oakley Group 3",
-        "long_name": null,
-        "standards": [
+        "long_name": "Third Oakley Group (binary field GF(2^155))",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "RFC_2409"
         ],
-        "aliases": [],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
-            "a": [
+            "m": [
+                "9B"
+            ],
+            "k1": [
+                "3E"
+            ],
+            "k2": [
                 "0"
             ],
+            "k3": [
+                "0"
+            ],
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000"
+            ],
             "b": [
-                "07338F"
+                "00000000 00000000 00000000 00000000 0007338F"
             ],
             "x": [
-                "7B"
+                "00000000 00000000 00000000 00000000 0000007B"
             ],
             "y": [
-                "00"
-            ]
+                "00000000 00000000 00000000 00000000 000001B3"
+            ],
+            "n": [
+                "02AAAAAA AAAAAAAA AAAAC7F3 C7881BD0 868FA86C"
+            ],
+            "h": [
+                "3"
+            ],
+            "seed": null
         }
     },
     "OAKLEY_GROUP_4": {
         "name": "Oakley Group 4",
-        "long_name": null,
-        "standards": [
+        "long_name": "Fourth Oakley Group (binary field GF(2^185))",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "RFC_2409"
         ],
-        "aliases": [],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
-            "a": [
+            "m": [
+                "B9"
+            ],
+            "k1": [
+                "45"
+            ],
+            "k2": [
                 "0"
             ],
+            "k3": [
+                "0"
+            ],
+            "a": [
+                "00000000 00000000 00000000 00000000 00000000 00000000"
+            ],
             "b": [
-                "1EE9"
+                "00000000 00000000 00000000 00000000 00000000 00001EE9"
             ],
             "x": [
-                "18"
+                "00000000 00000000 00000000 00000000 00000000 00000018"
             ],
             "y": [
-                "00"
-            ]
+                "00000000 00000000 00000000 00000000 00000000 0000000D"
+            ],
+            "n": [
+                "00FFFFFF FFFFFFFF FFFFFFFF EDF97C44 DB9F2420 BAFCA75E"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": null
         }
     },
     "PRIME192V1": {
         "name": "prime192v1",
-        "long_name": null,
-        "standards": [
-            "SEC_2",
-            "SP_800_186",
-            "RFC_4753"
-        ],
+        "long_name": "prime192v1 elliptic curve (192-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "SECP192R1",
             "P-192",
-            "ECPRGF192Random"
+            "ECPRGF192Random",
+            "ANSIP192R1"
         ],
+        "sources": [
+            "RFC_4492",
+            "RFC_4753",
+            "RFC_5480",
+            "RFC_8422",
+            "SEC_2",
+            "SP_800_186",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFFFF FFFFFFFF"
+            ],
             "a": [
                 "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFFFF FFFFFFFC"
             ],
@@ -1590,15 +3073,29 @@
             ],
             "y": [
                 "07192B95 FFC8DA78 631011ED 6B24CDD5 73F977A1 1E794811"
-            ]
+            ],
+            "n": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF 99DEF836 146BC9B1 B4D22831"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "3045ae6fc8422f64ed579528d38120eae12196d5"
         }
     },
     "PRIME192V2": {
         "name": "prime192v2",
-        "long_name": null,
-        "standards": [],
+        "long_name": "prime192v2 elliptic curve (192-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFFFF FFFFFFFF"
+            ],
             "a": [
                 "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFFFF FFFFFFFC"
             ],
@@ -1610,15 +3107,29 @@
             ],
             "y": [
                 "6574D11D 69B6EC7A 672BB82A 083DF2F2 B0847DE9 70B2DE15"
-            ]
+            ],
+            "n": [
+                "FFFFFFFF FFFFFFFF FFFFFFFE 5FB1A724 DC804186 48D8DD31"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "31a92ee2029fd10d901b113e990710f0d21ac6b6"
         }
     },
     "PRIME192V3": {
         "name": "prime192v3",
-        "long_name": null,
-        "standards": [],
+        "long_name": "prime192v3 elliptic curve (192-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFFFF FFFFFFFF"
+            ],
             "a": [
                 "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFFFF FFFFFFFC"
             ],
@@ -1630,15 +3141,30 @@
             ],
             "y": [
                 "38A90F22 63733733 4B49DCB6 6A6DC8F9 978ACA76 48A943B0"
-            ]
+            ],
+            "n": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF 7A62D031 C83F4294 F640EC13"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "c469684435deb378c4b65ca9591e2a5763059a2e"
         }
     },
     "PRIME239V1": {
         "name": "prime239v1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "prime239v1 elliptic curve (239-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFF FFFF8000 00000000",
+                "7FFFFFFF FFFF"
+            ],
             "a": [
                 "7FFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFF FFFF8000 00000000",
                 "7FFFFFFF FFFC"
@@ -1654,15 +3180,31 @@
             "y": [
                 "7DEBE8E4 E90A5DAE 6E4054CA 530BA046 54B36818 CE226B39",
                 "FCCB7B02 F1AE"
-            ]
+            ],
+            "n": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF 7FFFFF9E 5E9A9F5D 9071FBD1",
+                "52268890 9D0B"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "e43bb460f0b80cc0c0b075798e948060f8321b7d"
         }
     },
     "PRIME239V2": {
         "name": "prime239v2",
-        "long_name": null,
-        "standards": [],
+        "long_name": "prime239v2 elliptic curve (239-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFF FFFF8000 00000000",
+                "7FFFFFFF FFFF"
+            ],
             "a": [
                 "7FFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFF FFFF8000 00000000",
                 "7FFFFFFF FFFC"
@@ -1678,15 +3220,31 @@
             "y": [
                 "5B0125E4 DBEA0EC7 206DA0FC 01D9B081 329FB555 DE6EF460",
                 "237DFF8B E4BA"
-            ]
+            ],
+            "n": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF 800000CF A7E85943 77D414C0",
+                "3821BC58 2063"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "e8b4011604095303ca3b8099982be09fcb9ae616"
         }
     },
     "PRIME239V3": {
         "name": "prime239v3",
-        "long_name": null,
-        "standards": [],
+        "long_name": "prime239v3 elliptic curve (239-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFF FFFF8000 00000000",
+                "7FFFFFFF FFFF"
+            ],
             "a": [
                 "7FFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFF FFFF8000 00000000",
                 "7FFFFFFF FFFC"
@@ -1702,23 +3260,42 @@
             "y": [
                 "1607E689 8F390C06 BC1D552B AD226F3B 6FCFE48B 6E818499",
                 "AF18E3ED 6CF3"
-            ]
+            ],
+            "n": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF 7FFFFF97 5DEB41B3 A6057C3C",
+                "43214652 6551"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "7d7374168ffe3471b60a857686a19475d3bfa2ff"
         }
     },
     "PRIME256V1": {
         "name": "prime256v1",
-        "long_name": null,
-        "standards": [
-            "SEC_2",
-            "SP_800_186",
-            "RFC_4753"
-        ],
+        "long_name": "prime256v1 elliptic curve (256-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "SECP256R1",
             "P-256",
             "ECPRGF256Random"
         ],
+        "sources": [
+            "RFC_4492",
+            "RFC_4753",
+            "RFC_5480",
+            "RFC_5903",
+            "RFC_8422",
+            "SEC_2",
+            "SP_800_186",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF 00000001 00000000 00000000 00000000 FFFFFFFF",
+                "FFFFFFFF FFFFFFFF"
+            ],
             "a": [
                 "FFFFFFFF 00000001 00000000 00000000 00000000 FFFFFFFF",
                 "FFFFFFFF FFFFFFFC"
@@ -1734,19 +3311,34 @@
             "y": [
                 "4FE342E2 FE1A7F9B 8EE7EB4A 7C0F9E16 2BCE3357 6B315ECE",
                 "CBB64068 37BF51F5"
-            ]
+            ],
+            "n": [
+                "FFFFFFFF 00000000 FFFFFFFF FFFFFFFF BCE6FAAD A7179E84",
+                "F3B9CAC2 FC632551"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "c49d360886e704936a6678e1139d26b7819f7e90"
         }
     },
     "SECP112R1": {
         "name": "secp112r1",
-        "long_name": null,
-        "standards": [
-            "WTLS"
-        ],
+        "long_name": "secp112r1 elliptic curve (112-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "WAP-WSG-IDM-ECID-WTLS6"
         ],
+        "sources": [
+            "SEC_2",
+            "WTLS",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "DB7C2ABF 62E35E66 8076BEAD 208B"
+            ],
             "a": [
                 "DB7C2ABF 62E35E66 8076BEAD 2088"
             ],
@@ -1758,15 +3350,30 @@
             ],
             "y": [
                 "A89CE5AF 8724C0A2 3E0E0FF7 7500"
-            ]
+            ],
+            "n": [
+                "DB7C2ABF 62E35E76 28DFAC65 61C5"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "00f50b028e4d696e676875615175290472783fb1"
         }
     },
     "SECP112R2": {
         "name": "secp112r2",
-        "long_name": null,
-        "standards": [],
+        "long_name": "secp112r2 elliptic curve (112-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "SEC_2",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "DB7C2ABF 62E35E66 8076BEAD 208B"
+            ],
             "a": [
                 "6127C24C 05F38A0A AAF65C0E F02C"
             ],
@@ -1778,15 +3385,30 @@
             ],
             "y": [
                 "ADCD46F5 882E3747 DEF36E95 6E97"
-            ]
+            ],
+            "n": [
+                "36DF0AAF D8B8D759 7CA10520 D04B"
+            ],
+            "h": [
+                "4"
+            ],
+            "seed": "002757a1114d696e6768756151755316c05e0bd4"
         }
     },
     "SECP128R1": {
         "name": "secp128r1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "secp128r1 elliptic curve (128-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "SEC_2",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFD FFFFFFFF FFFFFFFF FFFFFFFF"
+            ],
             "a": [
                 "FFFFFFFD FFFFFFFF FFFFFFFF FFFFFFFC"
             ],
@@ -1798,15 +3420,30 @@
             ],
             "y": [
                 "CF5AC839 5BAFEB13 C02DA292 DDED7A83"
-            ]
+            ],
+            "n": [
+                "FFFFFFFE 00000000 75A30D1B 9038A115"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "000e0d4d696e6768756151750cc03a4473d03679"
         }
     },
     "SECP128R2": {
         "name": "secp128r2",
-        "long_name": null,
-        "standards": [],
+        "long_name": "secp128r2 elliptic curve (128-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "SEC_2",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFD FFFFFFFF FFFFFFFF FFFFFFFF"
+            ],
             "a": [
                 "D6031998 D1B3BBFE BF59CC9B BFF9AEE1"
             ],
@@ -1818,19 +3455,33 @@
             ],
             "y": [
                 "27B6916A 894D3AEE 7106FE80 5FC34B44"
-            ]
+            ],
+            "n": [
+                "3FFFFFFF 7FFFFFFF BE002472 0613B5A3"
+            ],
+            "h": [
+                "4"
+            ],
+            "seed": "004d696e67687561517512d8f03431fce63b88f4"
         }
     },
     "SECP160K1": {
         "name": "secp160k1",
-        "long_name": null,
-        "standards": [
-            "X9_63"
-        ],
+        "long_name": "secp160k1 elliptic curve (160-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "ANSIP160K1"
         ],
+        "sources": [
+            "SEC_2",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFAC73"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000"
             ],
@@ -1842,21 +3493,35 @@
             ],
             "y": [
                 "938CF935 318FDCED 6BC28286 531733C3 F03C4FEE"
-            ]
+            ],
+            "n": [
+                "10000000 00000000 00001B8F A16DFAB9 ACA16B6B 3"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "SECP160R1": {
         "name": "secp160r1",
-        "long_name": null,
-        "standards": [
-            "WTLS",
-            "X9_63"
-        ],
+        "long_name": "secp160r1 elliptic curve (160-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "WAP-WSG-IDM-ECID-WTLS7",
             "ANSIP160R1"
         ],
+        "sources": [
+            "SEC_2",
+            "WTLS",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFF"
+            ],
             "a": [
                 "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF 7FFFFFFC"
             ],
@@ -1868,19 +3533,33 @@
             ],
             "y": [
                 "23A62855 3168947D 59DCC912 04235137 7AC5FB32"
-            ]
+            ],
+            "n": [
+                "10000000 00000000 00001F4C 8F927AED 3CA75225 7"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "1053cde42c14d696e67687561517533bf3f83345"
         }
     },
     "SECP160R2": {
         "name": "secp160r2",
-        "long_name": null,
-        "standards": [
-            "X9_63"
-        ],
+        "long_name": "secp160r2 elliptic curve (160-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "ANSIP160R2"
         ],
+        "sources": [
+            "SEC_2",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFAC73"
+            ],
             "a": [
                 "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFAC70"
             ],
@@ -1892,19 +3571,33 @@
             ],
             "y": [
                 "FEAFFEF2 E331F296 E071FA0D F9982CFE A7D43F2E"
-            ]
+            ],
+            "n": [
+                "10000000 00000000 00000351 EE786A81 8F3A1A16 B"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "b99b99b099b323e02709a4d696e6768756151751"
         }
     },
     "SECP192K1": {
         "name": "secp192k1",
-        "long_name": null,
-        "standards": [
-            "X9_63"
-        ],
+        "long_name": "secp192k1 elliptic curve (192-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "ANSIP192K1"
         ],
+        "sources": [
+            "SEC_2",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFEE37"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000"
             ],
@@ -1916,19 +3609,34 @@
             ],
             "y": [
                 "9B2F2F6D 9C5628A7 844163D0 15BE8634 4082AA88 D95E2F9D"
-            ]
+            ],
+            "n": [
+                "FFFFFFFF FFFFFFFF FFFFFFFE 26F2FC17 0F69466A 74DEFD8D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "SECP224K1": {
         "name": "secp224k1",
-        "long_name": null,
-        "standards": [
-            "X9_63"
-        ],
+        "long_name": "secp224k1 elliptic curve (224-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "ANSIP224K1"
         ],
+        "sources": [
+            "SEC_2",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE",
+                "FFFFE56D"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000"
@@ -1944,25 +3652,45 @@
             "y": [
                 "7E089FED 7FBA3442 82CAFBD6 F7E319F7 C0B0BD59 E2CA4BDB",
                 "556D61A5"
-            ]
+            ],
+            "n": [
+                "10000000 00000000 00000000 00001DCE 8D2EC618 4CAF0A97",
+                "1769FB1F 7"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "SECP224R1": {
         "name": "secp224r1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "WTLS",
-            "X9_63",
-            "RFC_4753"
-        ],
+        "long_name": "secp224r1 elliptic curve (224-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "P-224",
             "WAP-WSG-IDM-ECID-WTLS12",
             "ANSIP224R1",
             "ECPRGF224Random"
         ],
+        "sources": [
+            "RFC_4492",
+            "RFC_4753",
+            "RFC_5114",
+            "RFC_5480",
+            "RFC_8422",
+            "SEC_2",
+            "SP_800_186",
+            "WTLS",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF 00000000 00000000",
+                "00000001"
+            ],
             "a": [
                 "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFFFF FFFFFFFF",
                 "FFFFFFFE"
@@ -1978,19 +3706,36 @@
             "y": [
                 "BD376388 B5F723FB 4C22DFE6 CD4375A0 5A074764 44D58199",
                 "85007E34"
-            ]
+            ],
+            "n": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFF16A2 E0B8F03E 13DD2945",
+                "5C5C2A3D"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "bd71344799d5c7fcdc45b59fa3b9ab8f6a948bc5"
         }
     },
     "SECP256K1": {
         "name": "secp256k1",
-        "long_name": null,
-        "standards": [
-            "X9_63"
-        ],
+        "long_name": "secp256k1 elliptic curve (256-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "ANSIP256K1"
         ],
+        "sources": [
+            "SEC_2",
+            "SP_800_186",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFE FFFFFC2F"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000"
@@ -2006,23 +3751,44 @@
             "y": [
                 "483ADA77 26A3C465 5DA4FBFC 0E1108A8 FD17B448 A6855419",
                 "9C47D08F FB10D4B8"
-            ]
+            ],
+            "n": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE BAAEDCE6 AF48A03B",
+                "BFD25E8C D0364141"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
     "SECP384R1": {
         "name": "secp384r1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "X9_63",
-            "RFC_4753"
-        ],
+        "long_name": "secp384r1 elliptic curve (384-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "P-384",
             "ANSIP384R1",
             "ECPRGF384Random"
         ],
+        "sources": [
+            "RFC_4492",
+            "RFC_4753",
+            "RFC_5480",
+            "RFC_5656",
+            "RFC_5903",
+            "RFC_8422",
+            "SEC_2",
+            "SP_800_186",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFE FFFFFFFF 00000000 00000000 FFFFFFFF"
+            ],
             "a": [
                 "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
                 "FFFFFFFF FFFFFFFE FFFFFFFF 00000000 00000000 FFFFFFFC"
@@ -2038,23 +3804,45 @@
             "y": [
                 "3617DE4A 96262C6F 5D9E98BF 9292DC29 F8F41DBD 289A147C",
                 "E9DA3113 B5F0B8C0 0A60B1CE 1D7E819D 7A431D7C 90EA0E5F"
-            ]
+            ],
+            "n": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "C7634D81 F4372DDF 581A0DB2 48B0A77A ECEC196A CCC52973"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "a335926aa319a27a1d00896a6773a4827acdac73"
         }
     },
     "SECP521R1": {
         "name": "secp521r1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "X9_63",
-            "RFC_4753"
-        ],
+        "long_name": "secp521r1 elliptic curve (521-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [
             "P-521",
             "ANSIP521R1",
             "ECPRGF521Random"
         ],
+        "sources": [
+            "RFC_4492",
+            "RFC_4753",
+            "RFC_5480",
+            "RFC_5656",
+            "RFC_5903",
+            "RFC_8422",
+            "SEC_2",
+            "SP_800_186",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "01FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFF"
+            ],
             "a": [
                 "01FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
                 "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
@@ -2074,19 +3862,44 @@
                 "01183929 6A789A3B C0045C8A 5FB42C7D 1BD998F5 4449579B",
                 "446817AF BD17273E 662C97EE 72995EF4 2640C550 B9013FAD",
                 "0761353C 7086A272 C24088BE 94769FD1 6650"
-            ]
+            ],
+            "n": [
+                "01FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFA5186 8783BF2F 966B7FCC 0148F709",
+                "A5D03BB5 C9B8899C 47AEBB6F B71E9138 6409"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": "d09e8800291cb85396cc6717393284aaa0da64ba"
         }
     },
     "SECT113R1": {
         "name": "sect113r1",
-        "long_name": null,
-        "standards": [
-            "WTLS"
-        ],
+        "long_name": "sect113r1 elliptic curve (binary field GF(2^113))",
+        "vulnerabilities": [],
         "aliases": [
             "WAP-WSG-IDM-ECID-WTLS4"
         ],
+        "sources": [
+            "SEC_2",
+            "WTLS",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "71"
+            ],
+            "k1": [
+                "9"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "00308825 0CA6E7C7 FE649CE8 5820F7"
             ],
@@ -2098,15 +3911,39 @@
             ],
             "y": [
                 "00A52830 277958EE 84D1315E D31886"
-            ]
+            ],
+            "n": [
+                "01000000 00000000 D9CCEC8A 39E56F"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "10e723ab14d696e6768756151756febf8fcb49a9"
         }
     },
     "SECT113R2": {
         "name": "sect113r2",
-        "long_name": null,
-        "standards": [],
+        "long_name": "sect113r2 elliptic curve (binary field GF(2^113))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "SEC_2",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "71"
+            ],
+            "k1": [
+                "9"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "00689918 DBEC7E5A 0DD6DFC0 AA55C7"
             ],
@@ -2118,15 +3955,39 @@
             ],
             "y": [
                 "00B3ADC9 4ED1FE67 4C06E695 BABA1D"
-            ]
+            ],
+            "n": [
+                "01000000 00000001 08789B24 96AF93"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "10c0fb15760860def1eef4d696e676875615175d"
         }
     },
     "SECT131R1": {
         "name": "sect131r1",
-        "long_name": null,
-        "standards": [],
+        "long_name": "sect131r1 elliptic curve (binary field GF(2^131))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "SEC_2",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "83"
+            ],
+            "k1": [
+                "2"
+            ],
+            "k2": [
+                "3"
+            ],
+            "k3": [
+                "8"
+            ],
             "a": [
                 "07A11B09 A76B5621 44418FF3 FF8C2570 B8"
             ],
@@ -2138,15 +3999,39 @@
             ],
             "y": [
                 "078C6E7E A38C001F 73C8134B 1B4EF9E1 50"
-            ]
+            ],
+            "n": [
+                "04000000 00000000 02312395 3A9464B5 4D"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "4d696e676875615175985bd3adbada21b43a97e2"
         }
     },
     "SECT131R2": {
         "name": "sect131r2",
-        "long_name": null,
-        "standards": [],
+        "long_name": "sect131r2 elliptic curve (binary field GF(2^131))",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "SEC_2",
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "83"
+            ],
+            "k1": [
+                "2"
+            ],
+            "k2": [
+                "3"
+            ],
+            "k3": [
+                "8"
+            ],
             "a": [
                 "03E5A889 19D7CAFC BF415F07 C2176573 B2"
             ],
@@ -2158,26 +4043,49 @@
             ],
             "y": [
                 "0648F06D 867940A5 366D9E26 5DE9EB24 0F"
-            ]
+            ],
+            "n": [
+                "04000000 00000000 016954A2 33049BA9 8F"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "985bd3adbad4d696e676875615175a21b43a97e3"
         }
     },
     "SECT163K1": {
         "name": "sect163k1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "X9_63",
-            "WTLS",
-            "RFC_4753",
-            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
-        ],
+        "long_name": "sect163k1 elliptic curve (binary field GF(2^163))",
+        "vulnerabilities": [],
         "aliases": [
             "K-163",
             "ANSIT163K1",
             "WAP-WSG-IDM-ECID-WTLS3",
             "EC2NGF163Koblitz"
         ],
+        "sources": [
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10",
+            "RFC_4753",
+            "SEC_2",
+            "SP_800_186",
+            "WTLS",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "A3"
+            ],
+            "k1": [
+                "3"
+            ],
+            "k2": [
+                "6"
+            ],
+            "k3": [
+                "7"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 01"
             ],
@@ -2189,22 +4097,45 @@
             ],
             "y": [
                 "0289070F B05D38FF 58321F2E 800536D5 38CCDAA3 D9"
-            ]
+            ],
+            "n": [
+                "04000000 00000000 00000201 08A2E0CC 0D99F8A5 EF"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": null
         }
     },
     "SECT163R1": {
         "name": "sect163r1",
-        "long_name": null,
-        "standards": [
-            "X9_63",
-            "RFC_4753",
-            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
-        ],
+        "long_name": "sect163r1 elliptic curve (binary field GF(2^163))",
+        "vulnerabilities": [],
         "aliases": [
             "ANSIT163R1",
             "EC2NGF163Random2"
         ],
+        "sources": [
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10",
+            "RFC_4753",
+            "SEC_2",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "A3"
+            ],
+            "k1": [
+                "3"
+            ],
+            "k2": [
+                "6"
+            ],
+            "k3": [
+                "7"
+            ],
             "a": [
                 "07B6882C AAEFA84F 9554FF84 28BD88E2 46D2782A E2"
             ],
@@ -2216,24 +4147,47 @@
             ],
             "y": [
                 "00435EDB 42EFAFB2 989D51FE FCE3C809 88F41FF8 83"
-            ]
+            ],
+            "n": [
+                "03FFFFFF FFFFFFFF FFFFFF48 AAB689C2 9CA71027 9B"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "24b7b137c8a14d696e6768756151756fd0da2e5c"
         }
     },
     "SECT163R2": {
         "name": "sect163r2",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "X9_63",
-            "RFC_4753",
-            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
-        ],
+        "long_name": "sect163r2 elliptic curve (binary field GF(2^163))",
+        "vulnerabilities": [],
         "aliases": [
             "B-163",
             "ANSIT163R2",
             "EC2NGF163Random"
         ],
+        "sources": [
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10",
+            "RFC_4753",
+            "SEC_2",
+            "SP_800_186",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "A3"
+            ],
+            "k1": [
+                "3"
+            ],
+            "k2": [
+                "6"
+            ],
+            "k3": [
+                "7"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 01"
             ],
@@ -2245,19 +4199,42 @@
             ],
             "y": [
                 "00D51FBC 6C71A009 4FA2CDD5 45B11C5C 0C797324 F1"
-            ]
+            ],
+            "n": [
+                "04000000 00000000 00000292 FE77E70C 12A4234C 33"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "85e25bfe5c86226cdb12016f7553f9d0e693a268"
         }
     },
     "SECT193R1": {
         "name": "sect193r1",
-        "long_name": null,
-        "standards": [
-            "X9_63"
-        ],
+        "long_name": "sect193r1 elliptic curve (binary field GF(2^193))",
+        "vulnerabilities": [],
         "aliases": [
             "ANSIT193R1"
         ],
+        "sources": [
+            "SEC_2",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "C1"
+            ],
+            "k1": [
+                "F"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "0017858F EB7A9897 5169E171 F77B4087 DE098AC8 A911DF7B",
                 "01"
@@ -2273,19 +4250,43 @@
             "y": [
                 "0025E399 F2903712 CCF3EA9E 3A1AD17F B0B3201B 6AF7CE1B",
                 "05"
-            ]
+            ],
+            "n": [
+                "01000000 00000000 00000000 00C7F34A 778F443A CC920EBA",
+                "49"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "103faec74d696e676875615175777fc5b191ef30"
         }
     },
     "SECT193R2": {
         "name": "sect193r2",
-        "long_name": null,
-        "standards": [
-            "X9_63"
-        ],
+        "long_name": "sect193r2 elliptic curve (binary field GF(2^193))",
+        "vulnerabilities": [],
         "aliases": [
             "ANSIT193R2"
         ],
+        "sources": [
+            "SEC_2",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "C1"
+            ],
+            "k1": [
+                "F"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "0163F35A 5137C2CE 3EA6ED86 67190B0B C43ECD69 97770270",
                 "9B"
@@ -2301,26 +4302,50 @@
             "y": [
                 "01CE9433 5607C304 AC29E7DE FBD9CA01 F596F927 224CDECF",
                 "6C"
-            ]
+            ],
+            "n": [
+                "01000000 00000000 00000000 015AAB56 1B005413 CCD4EE99",
+                "D5"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "10b7b4d696e676875615175137c8a16fd0da2211"
         }
     },
     "SECT233K1": {
         "name": "sect233k1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "WTLS",
-            "X9_63",
-            "RFC_4753",
-            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
-        ],
+        "long_name": "sect233k1 elliptic curve (binary field GF(2^233))",
+        "vulnerabilities": [],
         "aliases": [
             "K-233",
             "WAP-WSG-IDM-ECID-WTLS10",
             "ANSIT233K1",
             "EC2NGF233Koblitz"
         ],
+        "sources": [
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10",
+            "RFC_4753",
+            "SEC_2",
+            "SP_800_186",
+            "WTLS",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "E9"
+            ],
+            "k1": [
+                "4A"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 0000"
@@ -2336,26 +4361,50 @@
             "y": [
                 "01DB537D ECE819B7 F70F555A 67C427A8 CD9BF18A EB9B56E0",
                 "C11056FA E6A3"
-            ]
+            ],
+            "n": [
+                "00800000 00000000 00000000 00000006 9D5BB915 BCD46EFB",
+                "1AD5F173 ABDF"
+            ],
+            "h": [
+                "4"
+            ],
+            "seed": null
         }
     },
     "SECT233R1": {
         "name": "sect233r1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "WTLS",
-            "X9_63",
-            "RFC_4753",
-            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
-        ],
+        "long_name": "sect233r1 elliptic curve (binary field GF(2^233))",
+        "vulnerabilities": [],
         "aliases": [
             "B-233",
             "WAP-WSG-IDM-ECID-WTLS11",
             "ANSIT233R1",
             "EC2NGF233Random"
         ],
+        "sources": [
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10",
+            "RFC_4753",
+            "SEC_2",
+            "SP_800_186",
+            "WTLS",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "E9"
+            ],
+            "k1": [
+                "4A"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 0001"
@@ -2371,19 +4420,43 @@
             "y": [
                 "01006A08 A4190335 0678E585 28BEBF8A 0BEFF867 A7CA3671",
                 "6F7E01F8 1052"
-            ]
+            ],
+            "n": [
+                "01000000 00000000 00000000 00000013 E974E72F 8A692203",
+                "1D2603CF E0D7"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "74d59ff07f6b413d0ea14b344b20a2db049b50c3"
         }
     },
     "SECT239K1": {
         "name": "sect239k1",
-        "long_name": null,
-        "standards": [
-            "X9_63"
-        ],
+        "long_name": "sect239k1 elliptic curve (binary field GF(2^239))",
+        "vulnerabilities": [],
         "aliases": [
             "ANSIT239K1"
         ],
+        "sources": [
+            "SEC_2",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "EF"
+            ],
+            "k1": [
+                "9E"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 0000"
@@ -2399,24 +4472,48 @@
             "y": [
                 "76310804 F12E549B DB011C10 3089E735 10ACB275 FC312A5D",
                 "C6B76553 F0CA"
-            ]
+            ],
+            "n": [
+                "20000000 00000000 00000000 0000005A 79FEC67C B6E91F1C",
+                "1DA800E4 78A5"
+            ],
+            "h": [
+                "4"
+            ],
+            "seed": null
         }
     },
     "SECT283K1": {
         "name": "sect283k1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "X9_63",
-            "RFC_4753",
-            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
-        ],
+        "long_name": "sect283k1 elliptic curve (binary field GF(2^283))",
+        "vulnerabilities": [],
         "aliases": [
             "K-283",
             "ANSIT283K1",
             "EC2NGF283Koblitz"
         ],
+        "sources": [
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10",
+            "RFC_4753",
+            "SEC_2",
+            "SP_800_186",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "11B"
+            ],
+            "k1": [
+                "5"
+            ],
+            "k2": [
+                "7"
+            ],
+            "k3": [
+                "C"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000"
@@ -2432,24 +4529,48 @@
             "y": [
                 "01CCDA38 0F1C9E31 8D90F95D 07E5426F E87E45C0 E8184698",
                 "E4596236 4E341161 77DD2259"
-            ]
+            ],
+            "n": [
+                "01FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFE9AE 2ED07577",
+                "265DFF7F 94451E06 1E163C61"
+            ],
+            "h": [
+                "4"
+            ],
+            "seed": null
         }
     },
     "SECT283R1": {
         "name": "sect283r1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "X9_63",
-            "RFC_4753",
-            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
-        ],
+        "long_name": "sect283r1 elliptic curve (binary field GF(2^283))",
+        "vulnerabilities": [],
         "aliases": [
             "B-283",
             "ANSIT283R1",
             "EC2NGF283Random"
         ],
+        "sources": [
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10",
+            "RFC_4753",
+            "SEC_2",
+            "SP_800_186",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "11B"
+            ],
+            "k1": [
+                "5"
+            ],
+            "k2": [
+                "7"
+            ],
+            "k3": [
+                "C"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000001"
@@ -2465,24 +4586,48 @@
             "y": [
                 "03676854 FE24141C B98FE6D4 B20D02B4 516FF702 350EDDB0",
                 "826779C8 13F0DF45 BE8112F4"
-            ]
+            ],
+            "n": [
+                "03FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFEF90 399660FC",
+                "938A9016 5B042A7C EFADB307"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "77e2b07370eb0f832a6dd5b62dfc88cd06bb84be"
         }
     },
     "SECT409K1": {
         "name": "sect409k1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "X9_63",
-            "RFC_4753",
-            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
-        ],
+        "long_name": "sect409k1 elliptic curve (binary field GF(2^409))",
+        "vulnerabilities": [],
         "aliases": [
             "K-409",
             "ANSIT409K1",
             "EC2NGF409Koblitz"
         ],
+        "sources": [
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10",
+            "RFC_4753",
+            "SEC_2",
+            "SP_800_186",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "199"
+            ],
+            "k1": [
+                "57"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -2502,24 +4647,49 @@
                 "01E36905 0B7C4E42 ACBA1DAC BF04299C 3460782F 918EA427",
                 "E6325165 E9EA10E3 DA5F6C42 E9C55215 AA9CA27A 5863EC48",
                 "D8E0286B"
-            ]
+            ],
+            "n": [
+                "007FFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFE5F 83B2D4EA 20400EC4 557D5ED3 E3E7CA5B 4B5C83B8",
+                "E01E5FCF"
+            ],
+            "h": [
+                "4"
+            ],
+            "seed": null
         }
     },
     "SECT409R1": {
         "name": "sect409r1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "X9_63",
-            "RFC_4753",
-            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
-        ],
+        "long_name": "sect409r1 elliptic curve (binary field GF(2^409))",
+        "vulnerabilities": [],
         "aliases": [
             "B-409",
             "ANSIT409R1",
             "EC2NGF409Random"
         ],
+        "sources": [
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10",
+            "RFC_4753",
+            "SEC_2",
+            "SP_800_186",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "199"
+            ],
+            "k1": [
+                "57"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -2539,24 +4709,49 @@
                 "0061B1CF AB6BE5F3 2BBFA783 24ED106A 7636B9C5 A7BD198D",
                 "0158AA4F 5488D08F 38514F1F DF4B4F40 D2181B36 81C364BA",
                 "0273C706"
-            ]
+            ],
+            "n": [
+                "01000000 00000000 00000000 00000000 00000000 00000000",
+                "000001E2 AAD6A612 F33307BE 5FA47C3C 9E052F83 8164CD37",
+                "D9A21173"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "4099b5a457f9d69f79213d094c4bcd4d4262210b"
         }
     },
     "SECT571K1": {
         "name": "sect571k1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "X9_63",
-            "RFC_4753",
-            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
-        ],
+        "long_name": "sect571k1 elliptic curve (binary field GF(2^571))",
+        "vulnerabilities": [],
         "aliases": [
             "K-571",
             "ANSIT571K1",
             "EC2NGF571Koblitz"
         ],
+        "sources": [
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10",
+            "RFC_4753",
+            "SEC_2",
+            "SP_800_186",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "23B"
+            ],
+            "k1": [
+                "2"
+            ],
+            "k2": [
+                "5"
+            ],
+            "k3": [
+                "A"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -2576,24 +4771,49 @@
                 "0349DC80 7F4FBF37 4F4AEADE 3BCA9531 4DD58CEC 9F307A54",
                 "FFC61EFC 006D8A2C 9D4979C0 AC44AEA7 4FBEBBB9 F772AEDC",
                 "B620B01A 7BA7AF1B 320430C8 591984F6 01CD4C14 3EF1C7A3"
-            ]
+            ],
+            "n": [
+                "02000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 131850E1 F19A63E4 B391A8DB",
+                "917F4138 B630D84B E5D63938 1E91DEB4 5CFE778F 637C1001"
+            ],
+            "h": [
+                "4"
+            ],
+            "seed": null
         }
     },
     "SECT571R1": {
         "name": "sect571r1",
-        "long_name": null,
-        "standards": [
-            "SP_800_186",
-            "X9_63",
-            "RFC_4753",
-            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10"
-        ],
+        "long_name": "sect571r1 elliptic curve (binary field GF(2^571))",
+        "vulnerabilities": [],
         "aliases": [
             "B-571",
             "ANSIT571R1",
             "EC2NGF571Random"
         ],
+        "sources": [
+            "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10",
+            "RFC_4753",
+            "SEC_2",
+            "SP_800_186",
+            "X9_62",
+            "X9_63"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "23B"
+            ],
+            "k1": [
+                "2"
+            ],
+            "k2": [
+                "5"
+            ],
+            "k3": [
+                "A"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000 00000000",
                 "00000000 00000000 00000000 00000000 00000000 00000000",
@@ -2613,15 +4833,32 @@
                 "037BF273 42DA639B 6DCCFFFE B73D69D7 8C6C27A6 009CBBCA",
                 "1980F853 3921E8A6 84423E43 BAB08A57 6291AF8F 461BB2A8",
                 "B3531D2F 0485C19B 16E2F151 6E23DD3C 1A4827AF 1B8AC15B"
-            ]
+            ],
+            "n": [
+                "03FFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF E661CE18 FF559873 08059B18",
+                "6823851E C7DD9CA1 161DE93D 5174D66E 8382E9BB 2FE84E47"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": "2aa058f73a0e33ab486b0f610410c53a7f132310"
         }
     },
     "SM2P256V1": {
         "name": "sm2p256v1",
-        "long_name": "ShangMi 2 (256-bit prime field)",
-        "standards": [],
+        "long_name": "sm2p256v1 elliptic curve (256-bit prime field)",
+        "vulnerabilities": [],
         "aliases": [],
+        "sources": [
+            "RFC_8998"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFE FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF 00000000",
+                "FFFFFFFF FFFFFFFF"
+            ],
             "a": [
                 "FFFFFFFE FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF 00000000",
                 "FFFFFFFF FFFFFFFC"
@@ -2637,17 +4874,39 @@
             "y": [
                 "BC3736A2 F4F6779C 59BDCEE3 6B692153 D0A9877C C62A4740",
                 "02DF32E5 2139F0A0"
-            ]
+            ],
+            "n": [
+                "FFFFFFFE FFFFFFFF FFFFFFFF FFFFFFFF 7203DF6B 21C6052B",
+                "53BBF409 39D54123"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
-    "WAP-WSG-IDM-ECID-WTLS1": {
+    "WAP_WSG_IDM_ECID_WTLS1": {
         "name": "wap-wsg-idm-ecid-wtls1",
-        "long_name": null,
-        "standards": [
+        "long_name": "wap-wsg-idm-ecid-wtls1 elliptic curve (binary field GF(2^113))",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "WTLS"
         ],
-        "aliases": [],
+        "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
+            "m": [
+                "71"
+            ],
+            "k1": [
+                "9"
+            ],
+            "k2": [
+                "0"
+            ],
+            "k3": [
+                "0"
+            ],
             "a": [
                 "00000000 00000000 00000000 000001"
             ],
@@ -2659,17 +4918,29 @@
             ],
             "y": [
                 "00F44B4A F1ECC263 0E08785C EBCC15"
-            ]
+            ],
+            "n": [
+                "00FFFFFF FFFFFFFF FDBF91AF 6DEA73"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": null
         }
     },
-    "WAP-WSG-IDM-ECID-WTLS8": {
+    "WAP_WSG_IDM_ECID_WTLS8": {
         "name": "wap-wsg-idm-ecid-wtls8",
-        "long_name": null,
-        "standards": [
+        "long_name": "wap-wsg-idm-ecid-wtls8 elliptic curve (112-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "WTLS"
         ],
-        "aliases": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FDE7"
+            ],
             "a": [
                 "00000000 00000000 00000000 0000"
             ],
@@ -2681,17 +4952,29 @@
             ],
             "y": [
                 "00000000 00000000 00000000 0002"
-            ]
+            ],
+            "n": [
+                "10000000 0000001E CEA551AD 837E9"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     },
-    "WAP-WSG-IDM-ECID-WTLS9": {
+    "WAP_WSG_IDM_ECID_WTLS9": {
         "name": "wap-wsg-idm-ecid-wtls9",
-        "long_name": null,
-        "standards": [
+        "long_name": "wap-wsg-idm-ecid-wtls9 elliptic curve (160-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "WTLS"
         ],
-        "aliases": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFC808F"
+            ],
             "a": [
                 "00000000 00000000 00000000 00000000 00000000"
             ],
@@ -2703,7 +4986,14 @@
             ],
             "y": [
                 "00000000 00000000 00000000 00000000 00000002"
-            ]
+            ],
+            "n": [
+                "10000000 00000000 00001CDC 98AE0E2D E574ABF3 3"
+            ],
+            "h": [
+                "1"
+            ],
+            "seed": null
         }
     }
 }

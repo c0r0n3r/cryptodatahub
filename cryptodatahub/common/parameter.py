@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: MPL-2.0
 
 import abc
+import enum
 
 import attr
 
@@ -10,9 +11,11 @@ from cryptodatahub.common.grade import GradeableVulnerabilities
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataParamsNamed,
+    HexData,
     convert_big_enum,
     convert_dict_to_object,
     convert_enum,
+    convert_hex_data,
     convert_iterable,
     convert_variadic,
 )
@@ -27,6 +30,24 @@ class StandardParams(CryptoDataParamsNamed):
 
 
 Standard = CryptoDataEnumBase('Standard', CryptoDataEnumBase.get_json_records(StandardParams))
+
+
+@attr.s(frozen=True)
+class PaperParams(CryptoDataParamsNamed):
+    authors = attr.ib(validator=attr.validators.deep_iterable(attr.validators.instance_of(str)))
+    url = attr.ib(
+        validator=attr.validators.instance_of(str),
+        metadata={'human_readable_name': 'URL', 'human_friendly': False},
+    )
+
+
+class PaperBase(CryptoDataEnumBase):
+    @classmethod
+    def get_json_encoding(cls):
+        return 'utf-8'
+
+
+Paper = PaperBase('Paper', PaperBase.get_json_records(PaperParams))
 
 
 @attr.s(eq=False, frozen=True)
@@ -58,11 +79,12 @@ class ParamWellKnownBase(CryptoDataParamsNamed, GradeableVulnerabilities):
     sources = attr.ib(
         converter=convert_iterable(convert_variadic((
             convert_enum(Standard),
+            convert_enum(Paper),
             convert_enum(Entity),
             convert_enum(Server),
         ))),
         validator=attr.validators.deep_iterable(
-            attr.validators.instance_of((Standard, Entity, Server))
+            attr.validators.instance_of((Standard, Paper, Entity, Server))
         ),
     )
 
@@ -106,8 +128,18 @@ DHParamWellKnown = DHParamWellKnownBase(
 )
 
 
+ECParameterForm = enum.Enum(
+    'ECParameterForm', 'WEIERSTRASS_PRIME WEIERSTRASS_BINARY MONTGOMERY TWISTED_EDWARDS'
+)
+
+
 @attr.s
-class ECParameterNumbers:
+class ECParameterNumbersWeierstrassPrime:  # pylint: disable=too-many-instance-attributes
+    p = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'p'},
+    )
     a = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
         validator=attr.validators.instance_of(int),
@@ -128,19 +160,204 @@ class ECParameterNumbers:
         validator=attr.validators.instance_of(int),
         metadata={'human_readable_name': 'y'},
     )
+    n = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'n'},
+    )
+    h = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'h'},
+    )
+    seed = attr.ib(
+        converter=convert_hex_data(),
+        validator=attr.validators.optional(attr.validators.instance_of(HexData)),
+        metadata={'human_readable_name': 'seed'},
+    )
+
+    @classmethod
+    def get_parameter_form(cls):
+        return ECParameterForm.WEIERSTRASS_PRIME
+
+
+@attr.s
+class ECParameterNumbersWeierstrassBinary:  # pylint: disable=too-many-instance-attributes
+    m = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'm'},
+    )
+    k1 = attr.ib(
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'k1'},
+    )
+    k2 = attr.ib(
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'k2'},
+    )
+    k3 = attr.ib(
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'k3'},
+    )
+    a = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'a'},
+    )
+    b = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'b'},
+    )
+    x = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'x'},
+    )
+    y = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'y'},
+    )
+    n = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'n'},
+    )
+    h = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'h'},
+    )
+    seed = attr.ib(
+        converter=convert_hex_data(),
+        validator=attr.validators.optional(attr.validators.instance_of(HexData)),
+        metadata={'human_readable_name': 'seed'},
+    )
+
+    @classmethod
+    def get_parameter_form(cls):
+        return ECParameterForm.WEIERSTRASS_BINARY
+
+
+@attr.s
+class ECParameterNumbersMontgomery:
+    p = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'p'},
+    )
+    a = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'a'},
+    )
+    b = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'b'},
+    )
+    u = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'u'},
+    )
+    v = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'v'},
+    )
+    n = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'n'},
+    )
+    h = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'h'},
+    )
+
+    @classmethod
+    def get_parameter_form(cls):
+        return ECParameterForm.MONTGOMERY
+
+
+@attr.s
+class ECParameterNumbersTwistedEdwards:
+    p = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'p'},
+    )
+    a = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'a'},
+    )
+    d = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'd'},
+    )
+    x = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'x'},
+    )
+    y = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'y'},
+    )
+    n = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'n'},
+    )
+    h = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'h'},
+    )
+
+    @classmethod
+    def get_parameter_form(cls):
+        return ECParameterForm.TWISTED_EDWARDS
 
 
 @attr.s(eq=False, frozen=True)
-class ECParamWellKnownParams(CryptoDataParamsNamed):
-    standards = attr.ib(
-        converter=convert_iterable(convert_enum(Standard)),
-        validator=attr.validators.deep_iterable(attr.validators.instance_of(Standard))
+class ECParamWellKnownParams(ParamWellKnownBase):
+    parameter_form = attr.ib(
+        converter=convert_enum(ECParameterForm),
+        validator=attr.validators.instance_of(ECParameterForm),
     )
-    aliases = attr.ib(validator=attr.validators.deep_iterable(attr.validators.instance_of(str)))
     parameter_numbers = attr.ib(
-        converter=convert_dict_to_object(ECParameterNumbers),
-        validator=attr.validators.instance_of(ECParameterNumbers)
+        converter=convert_variadic((
+            convert_dict_to_object(ECParameterNumbersWeierstrassPrime),
+            convert_dict_to_object(ECParameterNumbersWeierstrassBinary),
+            convert_dict_to_object(ECParameterNumbersMontgomery),
+            convert_dict_to_object(ECParameterNumbersTwistedEdwards),
+        )),
+        validator=attr.validators.instance_of((
+            ECParameterNumbersWeierstrassPrime,
+            ECParameterNumbersWeierstrassBinary,
+            ECParameterNumbersMontgomery,
+            ECParameterNumbersTwistedEdwards,
+        ))
     )
+
+    @classmethod
+    def get_gradeable_name(cls):
+        return 'EC parameter'
+
+    def __attrs_post_init__(self):
+        if self.parameter_numbers.get_parameter_form() != self.parameter_form:
+            raise InvalidValue(self.parameter_form, type(self), 'parameter_form')
 
 
 class ECParamWellKnownBase(CryptoDataEnumBase):

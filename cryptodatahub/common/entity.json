@@ -242,6 +242,14 @@
             "CA_TRUST_STORE_OWNER"
         ]
     },
+    "RELIC": {
+        "name": "RELIC",
+        "long_name": "RELIC is an Efficient LIbrary for Cryptography",
+        "type": "SOFTWARE_PROJECT",
+        "activities": [
+            "LIBRARY_DEVELOPER"
+        ]
+    },
     "QIHOO_360": {
         "name": "Qihoo 360",
         "long_name": "360 Security Technology Inc.",

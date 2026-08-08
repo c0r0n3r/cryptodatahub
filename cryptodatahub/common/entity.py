@@ -20,6 +20,7 @@ class EntityRole(enum.Enum):
     CA_TRUST_STORE_OWNER = 'CA trust store owner'
     CLIENT_DEVELOPER = 'client developer'
     CT_LOG_OPERATOR = 'certificate transparency log operator'
+    LIBRARY_DEVELOPER = 'library developer'
     SERVER_DEVELOPER = 'server developer'
     STANDARD_DEVELOPER = 'standard developer'
 

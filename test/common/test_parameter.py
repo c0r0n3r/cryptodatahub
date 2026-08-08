@@ -10,7 +10,14 @@ from test.common.classes import TestClasses
 from cryptodatahub.common.algorithm import NamedGroup
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.grade import AttackNamed, Grade
-from cryptodatahub.common.parameter import DHParameterNumbers, DHParamWellKnown, ECParamWellKnown
+from cryptodatahub.common.parameter import (
+    DHParameterNumbers,
+    DHParamWellKnown,
+    ECParameterForm,
+    ECParameterNumbersWeierstrassPrime,
+    ECParamWellKnown,
+    ECParamWellKnownParams,
+)
 
 
 class TestDHParamWellKnownParams(unittest.TestCase):
@@ -75,6 +82,24 @@ class TestDHParamWellKnown(TestClasses.TestJsonBase):
             DHParamWellKnown.APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_512,
             DHParamWellKnown.APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_1024,
         )
+
+
+class TestECParamWellKnownParams(unittest.TestCase):
+    def test_error_parameter_form_mismatch(self):
+        with self.assertRaisesRegex(
+                InvalidValue, 'MONTGOMERY.* is not a valid ECParamWellKnownParams parameter_form value'
+        ):
+            ECParamWellKnownParams(
+                name='prime field curve declared as a Montgomery curve',
+                long_name=None,
+                vulnerabilities=[],
+                aliases=[],
+                sources=[],
+                parameter_form=ECParameterForm.MONTGOMERY,
+                parameter_numbers=ECParameterNumbersWeierstrassPrime(
+                    p=23, a=1, b=1, x=3, y=10, n=28, h=1, seed=None
+                ),
+            )
 
 
 class TestECParamWellKnown(TestClasses.TestJsonBase):
