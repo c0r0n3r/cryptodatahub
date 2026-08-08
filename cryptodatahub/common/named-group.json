@@ -1406,6 +1406,15 @@
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
+    "NTRU_HRSS_701": {
+        "name": "NTRU-HRSS-701",
+        "long_name": null,
+        "oid": null,
+        "vulnerabilities": [],
+        "size": 701,
+        "group_type": "HYBRID_PQS",
+        "oqs_name": null
+    },
     "SECP256R1_BIKE1_L1_CPA_R2": {
         "name": "secp256r1/bike1_l1_cpa_r2",
         "long_name": null,

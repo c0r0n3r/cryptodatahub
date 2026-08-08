@@ -1,0 +1,62 @@
+{
+    "SECP256R1_KYBER_512_R3": {
+        "name": "secp256r1/Kyber-512-r3",
+        "long_name": "secp256r1 with Kyber-512 round 3",
+        "classical_named_group": "PRIME256V1",
+        "post_quantum_named_group": "KYBER_512_R3"
+    },
+    "SECP256R1_KYBER_768_R3": {
+        "name": "secp256r1/Kyber-768-r3",
+        "long_name": "secp256r1 with Kyber-768 round 3",
+        "classical_named_group": "PRIME256V1",
+        "post_quantum_named_group": "KYBER_768_R3"
+    },
+    "SECP256R1_ML_KEM_768": {
+        "name": "SecP256r1MLKEM768",
+        "long_name": "secp256r1 with ML-KEM-768",
+        "classical_named_group": "PRIME256V1",
+        "post_quantum_named_group": "ML_KEM_768"
+    },
+    "SECP384R1_KYBER_768_R3": {
+        "name": "secp384r1/Kyber-768-r3",
+        "long_name": "secp384r1 with Kyber-768 round 3",
+        "classical_named_group": "SECP384R1",
+        "post_quantum_named_group": "KYBER_768_R3"
+    },
+    "SECP384R1_ML_KEM_1024": {
+        "name": "SecP384r1MLKEM1024",
+        "long_name": "secp384r1 with ML-KEM-1024",
+        "classical_named_group": "SECP384R1",
+        "post_quantum_named_group": "ML_KEM_1024"
+    },
+    "SECP521R1_KYBER_1024_R3": {
+        "name": "secp521r1/Kyber-1024-r3",
+        "long_name": "secp521r1 with Kyber-1024 round 3",
+        "classical_named_group": "SECP521R1",
+        "post_quantum_named_group": "KYBER_1024_R3"
+    },
+    "X25519_KYBER_512_R3": {
+        "name": "x25519/Kyber-512-r3",
+        "long_name": "X25519 with Kyber-512 round 3",
+        "classical_named_group": "CURVE25519",
+        "post_quantum_named_group": "KYBER_512_R3"
+    },
+    "X25519_KYBER_768_R3": {
+        "name": "x25519/Kyber-768-r3",
+        "long_name": "X25519 with Kyber-768 round 3",
+        "classical_named_group": "CURVE25519",
+        "post_quantum_named_group": "KYBER_768_R3"
+    },
+    "X25519_ML_KEM_768": {
+        "name": "X25519MLKEM768",
+        "long_name": "X25519 with ML-KEM-768",
+        "classical_named_group": "CURVE25519",
+        "post_quantum_named_group": "ML_KEM_768"
+    },
+    "CECPQ2": {
+        "name": "CECPQ2",
+        "long_name": "X25519 with NTRU-HRSS-701",
+        "classical_named_group": "CURVE25519",
+        "post_quantum_named_group": "NTRU_HRSS_701"
+    }
+}

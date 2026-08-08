@@ -118,6 +118,23 @@ NamedGroup = CryptoDataEnumOIDBase('NamedGroup', CryptoDataEnumOIDBase.get_json_
 
 
 @attr.s(frozen=True)
+class HybridNamedGroupParams(CryptoDataParamsNamed):
+    classical_named_group = attr.ib(
+        converter=convert_enum(NamedGroup),
+        validator=attr.validators.instance_of(NamedGroup),
+    )
+    post_quantum_named_group = attr.ib(
+        converter=convert_enum(NamedGroup),
+        validator=attr.validators.instance_of(NamedGroup),
+    )
+
+
+HybridNamedGroup = CryptoDataEnumBase(
+    'HybridNamedGroup', CryptoDataEnumBase.get_json_records(HybridNamedGroupParams)
+)
+
+
+@attr.s(frozen=True)
 class MACParams(CryptoDataParamsOIDOptional, GradeableVulnerabilities):
     digest_size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
     hash_algorithm = attr.ib(validator=attr.validators.optional(attr.validators.instance_of((Hash, str))))
