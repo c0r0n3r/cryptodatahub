@@ -7,19 +7,22 @@ stages:
 
 before_script:
 - pip install uv
-- uv pip install --system .[tests]
+- uv sync --extra tests
+
+variables:
+  UV_PYTHON_DOWNLOADS: "never"
+  UV_PYTHON_PREFERENCE: "only-system"
 
 .test:
   script:
-  - coverage run -m unittest discover -v
-  - coverage report
+  - uv run coverage run -m unittest discover -v
+  - uv run coverage report
 
 pylint:
   image: python:3.14-slim
   stage: earlytest
   script:
-  - uv pip install --system pylint
-  - pylint --rcfile .pylintrc cryptodatahub docs updaters test
+  - uv run --with pylint pylint --rcfile .pylintrc cryptodatahub docs updaters test
 
 ruff:
   image: python:3.14-slim
@@ -75,9 +78,8 @@ coveralls:
     CI_BRANCH: "${CI_COMMIT_REF_NAME}"
   stage: deploy
   script:
-    - uv pip install --system coveralls
-    - coverage run -m unittest -v -f
-    - coveralls
+    - uv run coverage run -m unittest -v -f
+    - uv run --with coveralls coveralls
   only:
     refs:
       - master

@@ -40,6 +40,7 @@ classifiers=[
 keywords=['ssl', 'tls', 'ssh', 'dns', 'dnssec', 'ike']
 readme = {file = 'README.rst', content-type = 'text/x-rst'}
 license = {text = 'MPL-2.0'}
+requires-python = '>=3.9'
 
 dependencies = [
     'asn1crypto',
