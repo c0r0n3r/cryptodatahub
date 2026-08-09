@@ -93,7 +93,7 @@ NamedGroupType = enum.Enum('NamedGroupType', 'ELLIPTIC_CURVE FINITE_FIELD HYBRID
 
 @attr.s(frozen=True)
 class NamedGroupParams(CryptoDataParamsOIDOptional, GradeableVulnerabilities):
-    size = attr.ib(validator=attr.validators.instance_of(int))
+    size = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(int)))
     group_type = attr.ib(
         converter=convert_enum(NamedGroupType),
         validator=attr.validators.instance_of(NamedGroupType),

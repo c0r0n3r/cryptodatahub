@@ -13,6 +13,7 @@ from cryptodatahub.common.algorithm import (
     IpProtocolNumber,
     KeyExchange,
     NamedGroup,
+    NamedGroupType,
     MAC,
     MACModeParams,
     MACParams,
@@ -69,6 +70,13 @@ class TestNamedGroup(TestClasses.TestJsonBase):
     @classmethod
     def _get_class(cls):
         return NamedGroup
+
+    def test_size_is_unknown_for_hybrid_groups_only(self):
+        self.assertEqual([
+            named_group.name
+            for named_group in NamedGroup
+            if (named_group.value.size is None) != (named_group.value.group_type == NamedGroupType.HYBRID_PQS)
+        ], [])
 
 
 class TestHybridNamedGroup(TestClasses.TestJsonBase):

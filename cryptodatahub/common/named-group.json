@@ -322,7 +322,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 256,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -934,7 +934,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -943,7 +943,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -952,7 +952,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -961,7 +961,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -970,7 +970,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -979,7 +979,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 24664,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "bikel3"
     },
@@ -988,7 +988,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -997,7 +997,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 40976,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "bikel5"
     },
@@ -1006,7 +1006,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1015,7 +1015,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1024,7 +1024,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1033,7 +1033,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 6400,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "bp256_mlkem512"
     },
@@ -1042,7 +1042,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 9472,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "bp384_mlkem768"
     },
@@ -1051,7 +1051,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 12544,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "bp512_mlkem1024"
     },
@@ -1060,7 +1060,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 172160,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "frodo1344aes"
     },
@@ -1069,7 +1069,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1078,7 +1078,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 172160,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "frodo1344shake"
     },
@@ -1087,7 +1087,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1096,7 +1096,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 76928,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "frodo640aes"
     },
@@ -1105,7 +1105,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1114,7 +1114,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 76928,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "frodo640shake"
     },
@@ -1123,7 +1123,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1132,7 +1132,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 125056,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "frodo976aes"
     },
@@ -1141,7 +1141,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1150,7 +1150,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 125056,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "frodo976shake"
     },
@@ -1159,7 +1159,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1168,7 +1168,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 17992,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "hqc128"
     },
@@ -1177,7 +1177,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1186,7 +1186,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 36176,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "hqc192"
     },
@@ -1195,7 +1195,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1204,7 +1204,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 57960,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "hqc256"
     },
@@ -1213,7 +1213,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1222,7 +1222,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1231,7 +1231,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1240,7 +1240,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1249,7 +1249,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1258,7 +1258,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1267,7 +1267,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1276,7 +1276,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1024,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1285,7 +1285,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1294,7 +1294,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1303,7 +1303,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1312,7 +1312,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1321,7 +1321,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1330,7 +1330,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1339,7 +1339,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1348,7 +1348,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1357,7 +1357,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "mlkem1024"
     },
@@ -1366,7 +1366,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "mlkem512"
     },
@@ -1375,7 +1375,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "mlkem768"
     },
@@ -1384,7 +1384,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1024,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1393,7 +1393,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 512,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1402,7 +1402,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 768,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1411,7 +1411,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 701,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1420,7 +1420,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1429,7 +1429,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1438,7 +1438,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1447,7 +1447,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1456,7 +1456,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 76928,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p256_frodo640aes"
     },
@@ -1465,7 +1465,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1474,7 +1474,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 76928,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p256_frodo640shake"
     },
@@ -1483,7 +1483,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1492,7 +1492,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 17992,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p256_hqc128"
     },
@@ -1501,7 +1501,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1510,7 +1510,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1519,7 +1519,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1528,7 +1528,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1537,7 +1537,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1546,7 +1546,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1555,7 +1555,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1564,7 +1564,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p256_mlkem512"
     },
@@ -1573,7 +1573,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "SecP256r1MLKEM768"
     },
@@ -1582,7 +1582,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1591,7 +1591,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1600,7 +1600,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 24664,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p384_bikel3"
     },
@@ -1609,7 +1609,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1618,7 +1618,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1627,7 +1627,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 125056,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p384_frodo976aes"
     },
@@ -1636,7 +1636,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1645,7 +1645,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 125056,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p384_frodo976shake"
     },
@@ -1654,7 +1654,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1663,7 +1663,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 36176,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p384_hqc192"
     },
@@ -1672,7 +1672,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1681,7 +1681,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1690,7 +1690,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1699,7 +1699,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1708,7 +1708,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1717,7 +1717,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1726,7 +1726,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p384_mlkem768"
     },
@@ -1735,7 +1735,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "SecP384r1MLKEM1024"
     },
@@ -1744,7 +1744,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 40976,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p521_bikel5"
     },
@@ -1753,7 +1753,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1762,7 +1762,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 172160,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p521_frodo1344aes"
     },
@@ -1771,7 +1771,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1780,7 +1780,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 172160,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p521_frodo1344shake"
     },
@@ -1789,7 +1789,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1798,7 +1798,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 57960,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p521_hqc256"
     },
@@ -1807,7 +1807,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1816,7 +1816,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1825,7 +1825,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1834,7 +1834,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1843,7 +1843,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1852,7 +1852,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1861,7 +1861,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "p521_mlkem1024"
     },
@@ -1870,7 +1870,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1879,7 +1879,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1888,7 +1888,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1897,7 +1897,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 76928,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "x25519_frodo640aes"
     },
@@ -1906,7 +1906,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1915,7 +1915,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 76928,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "x25519_frodo640shake"
     },
@@ -1924,7 +1924,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1933,7 +1933,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 17992,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "x25519_hqc128"
     },
@@ -1942,7 +1942,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1951,7 +1951,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1960,7 +1960,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1969,7 +1969,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1978,7 +1978,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1987,7 +1987,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -1996,7 +1996,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "x25519_mlkem512"
     },
@@ -2005,7 +2005,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "X25519MLKEM768"
     },
@@ -2014,7 +2014,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 24664,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "x448_bikel3"
     },
@@ -2023,7 +2023,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -2032,7 +2032,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 125056,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "x448_frodo976aes"
     },
@@ -2041,7 +2041,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -2050,7 +2050,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 125056,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "x448_frodo976shake"
     },
@@ -2059,7 +2059,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -2068,7 +2068,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 36176,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "x448_hqc192"
     },
@@ -2077,7 +2077,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -2086,7 +2086,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -2095,7 +2095,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -2104,7 +2104,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": null
     },
@@ -2113,7 +2113,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1234,
+        "size": null,
         "group_type": "HYBRID_PQS",
         "oqs_name": "x448_mlkem768"
     }
