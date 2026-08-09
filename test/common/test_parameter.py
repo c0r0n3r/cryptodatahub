@@ -17,6 +17,7 @@ from cryptodatahub.common.parameter import (
     ECParameterNumbersWeierstrassPrime,
     ECParamWellKnown,
     ECParamWellKnownParams,
+    KeyEncapsulationMechanism,
 )
 
 
@@ -125,3 +126,28 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
            ECParamWellKnown.from_parameter_numbers(ec_param.value.parameter_numbers),
            ec_param
         )
+
+
+class TestKeyEncapsulationMechanism(TestClasses.TestJsonBase):
+    @classmethod
+    def _get_class(cls):
+        return KeyEncapsulationMechanism
+
+    def test_from_named_group(self):
+        self.assertEqual(
+            KeyEncapsulationMechanism.from_named_group(NamedGroup.ML_KEM_768),
+            KeyEncapsulationMechanism.ML_KEM_768
+        )
+
+        with self.assertRaisesRegex(
+                InvalidValue, "NamedGroup.PRIME256V1.* is not a valid KeyEncapsulationMechanism"
+        ) as context_manager:
+            KeyEncapsulationMechanism.from_named_group(NamedGroup.PRIME256V1)
+        self.assertEqual(context_manager.exception.value, NamedGroup.PRIME256V1)
+
+    def test_named_group_exists(self):
+        self.assertEqual([
+            key_encapsulation_mechanism.name
+            for key_encapsulation_mechanism in KeyEncapsulationMechanism
+            if key_encapsulation_mechanism.name not in NamedGroup.__members__
+        ], [])

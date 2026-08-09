@@ -129,6 +129,11 @@
         "long_name": "SEC 2: Recommended Elliptic Curve Domain Parameters",
         "publisher": "CERTICOM"
     },
+    "FIPS_203": {
+        "name": "FIPS 203",
+        "long_name": "Module-Lattice-Based Key-Encapsulation Mechanism Standard",
+        "publisher": "NIST"
+    },
     "SP_800_186": {
         "name": "NIST SP 800-186",
         "long_name": "NIST Special Publication NIST SP 800-186 Recommendations for Discrete Logarithm-based Cryptography: Elliptic Curve Domain Parameters",

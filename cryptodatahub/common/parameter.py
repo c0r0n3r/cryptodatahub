@@ -5,6 +5,7 @@ import enum
 
 import attr
 
+from cryptodatahub.common.algorithm import NistSecurityLevel
 from cryptodatahub.common.entity import Entity, Server
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.grade import GradeableVulnerabilities
@@ -377,4 +378,53 @@ class ECParamWellKnownBase(CryptoDataEnumBase):
 
 ECParamWellKnown = ECParamWellKnownBase(
     'ECParamWellKnown', ECParamWellKnownBase.get_json_records(ECParamWellKnownParams)
+)
+
+
+@attr.s(frozen=True)
+class KeyEncapsulationMechanismParams(CryptoDataParamsNamed):
+    standards = attr.ib(
+        converter=convert_iterable(convert_enum(Standard)),
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(Standard))
+    )
+    papers = attr.ib(
+        converter=convert_iterable(convert_enum(Paper)),
+        validator=attr.validators.deep_iterable(attr.validators.instance_of(Paper))
+    )
+    encapsulation_key_size = attr.ib(
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'encapsulation key size'},
+    )
+    decapsulation_key_size = attr.ib(
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'decapsulation key size'},
+    )
+    ciphertext_size = attr.ib(
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'ciphertext size'},
+    )
+    shared_secret_size = attr.ib(
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'shared secret size'},
+    )
+    security_category = attr.ib(
+        converter=convert_enum(NistSecurityLevel),
+        validator=attr.validators.instance_of(NistSecurityLevel),
+        metadata={'human_readable_name': 'security category'},
+    )
+
+
+class KeyEncapsulationMechanismBase(CryptoDataEnumBase):
+    @classmethod
+    def from_named_group(cls, named_group):
+        try:
+            key_encapsulation_mechanism = cls[named_group.name]
+        except KeyError as e:
+            raise InvalidValue(named_group, cls) from e
+
+        return key_encapsulation_mechanism
+
+
+KeyEncapsulationMechanism = KeyEncapsulationMechanismBase(
+    'KeyEncapsulationMechanism', KeyEncapsulationMechanismBase.get_json_records(KeyEncapsulationMechanismParams)
 )

@@ -1,0 +1,93 @@
+{
+    "KYBER_512_R3": {
+        "name": "Kyber-512-r3",
+        "long_name": "CRYSTALS-Kyber round 3 with the Kyber512 parameter set",
+        "standards": [],
+        "papers": [
+            "CRYSTALS_KYBER_ROUND_3"
+        ],
+        "encapsulation_key_size": 6400,
+        "decapsulation_key_size": 13056,
+        "ciphertext_size": 6144,
+        "shared_secret_size": 256,
+        "security_category": "LEVEL_1"
+    },
+    "KYBER_768_R3": {
+        "name": "Kyber-768-r3",
+        "long_name": "CRYSTALS-Kyber round 3 with the Kyber768 parameter set",
+        "standards": [],
+        "papers": [
+            "CRYSTALS_KYBER_ROUND_3"
+        ],
+        "encapsulation_key_size": 9472,
+        "decapsulation_key_size": 19200,
+        "ciphertext_size": 8704,
+        "shared_secret_size": 256,
+        "security_category": "LEVEL_3"
+    },
+    "KYBER_1024_R3": {
+        "name": "Kyber-1024-r3",
+        "long_name": "CRYSTALS-Kyber round 3 with the Kyber1024 parameter set",
+        "standards": [],
+        "papers": [
+            "CRYSTALS_KYBER_ROUND_3"
+        ],
+        "encapsulation_key_size": 12544,
+        "decapsulation_key_size": 25344,
+        "ciphertext_size": 12544,
+        "shared_secret_size": 256,
+        "security_category": "LEVEL_5"
+    },
+    "ML_KEM_512": {
+        "name": "ml-kem-512",
+        "long_name": "Module-Lattice-Based Key-Encapsulation Mechanism with the ML-KEM-512 parameter set",
+        "standards": [
+            "FIPS_203"
+        ],
+        "papers": [],
+        "encapsulation_key_size": 6400,
+        "decapsulation_key_size": 13056,
+        "ciphertext_size": 6144,
+        "shared_secret_size": 256,
+        "security_category": "LEVEL_1"
+    },
+    "ML_KEM_768": {
+        "name": "ml-kem-768",
+        "long_name": "Module-Lattice-Based Key-Encapsulation Mechanism with the ML-KEM-768 parameter set",
+        "standards": [
+            "FIPS_203"
+        ],
+        "papers": [],
+        "encapsulation_key_size": 9472,
+        "decapsulation_key_size": 19200,
+        "ciphertext_size": 8704,
+        "shared_secret_size": 256,
+        "security_category": "LEVEL_3"
+    },
+    "ML_KEM_1024": {
+        "name": "ml-kem-1024",
+        "long_name": "Module-Lattice-Based Key-Encapsulation Mechanism with the ML-KEM-1024 parameter set",
+        "standards": [
+            "FIPS_203"
+        ],
+        "papers": [],
+        "encapsulation_key_size": 12544,
+        "decapsulation_key_size": 25344,
+        "ciphertext_size": 12544,
+        "shared_secret_size": 256,
+        "security_category": "LEVEL_5"
+    },
+    "NTRU_HRSS_701": {
+        "name": "NTRU-HRSS-701",
+        "long_name": "NTRU round 3 with the ntruhrss701 parameter set",
+        "standards": [],
+        "papers": [
+            "NTRU_ROUND_3"
+        ],
+        "encapsulation_key_size": 9104,
+        "decapsulation_key_size": 11600,
+        "ciphertext_size": 9104,
+        "shared_secret_size": 256,
+        "security_category": "LEVEL_1"
+    }
+}

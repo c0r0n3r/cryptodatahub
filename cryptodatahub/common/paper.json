@@ -1,4 +1,37 @@
 {
+    "CRYSTALS_KYBER_ROUND_3": {
+        "name": "CRYSTALS-Kyber round 3",
+        "long_name": "CRYSTALS-Kyber Algorithm Specifications And Supporting Documentation (version 3.02)",
+        "authors": [
+            "Roberto Avanzi",
+            "Joppe Bos",
+            "Léo Ducas",
+            "Eike Kiltz",
+            "Tancrède Lepoint",
+            "Vadim Lyubashevsky",
+            "John M. Schanck",
+            "Peter Schwabe",
+            "Gregor Seiler",
+            "Damien Stehlé"
+        ],
+        "url": "https://pq-crystals.org/kyber/data/kyber-specification-round3-20210804.pdf"
+    },
+    "NTRU_ROUND_3": {
+        "name": "NTRU round 3",
+        "long_name": "NTRU Algorithm Specifications And Supporting Documentation",
+        "authors": [
+            "Cong Chen",
+            "Oussama Danba",
+            "Jeffrey Hoffstein",
+            "Andreas Hülsing",
+            "Joost Rijneveld",
+            "John M. Schanck",
+            "Peter Schwabe",
+            "William Whyte",
+            "Zhenfei Zhang"
+        ],
+        "url": "https://ntru.org/f/ntru-20190330.pdf"
+    },
     "IACR_EPRINT_2010_429": {
         "name": "IACR ePrint 2010/429",
         "long_name": "A Family of Implementation-Friendly BN Elliptic Curves",
