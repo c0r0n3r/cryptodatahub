@@ -2932,6 +2932,52 @@
             "seed": null
         }
     },
+    "GC512C": {
+        "name": "tc26-gost-3410-2012-512-paramSetC",
+        "long_name": "tc26-gost-3410-2012-512-paramSetC twisted Edwards curve (512-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [
+            "id-tc26-gost-3410-2012-512-paramSetC"
+        ],
+        "sources": [
+            "RFC_7836",
+            "RFC_9215"
+        ],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFFFFDC7"
+            ],
+            "a": [
+                "1"
+            ],
+            "d": [
+                "9E4F5D8C 017D8D9F 13A5CF3C DF5BFE4D AB402D54 198E31EB",
+                "DE28A062 1050439C A6B39E0A 515C06B3 04E2CE43 E79E369E",
+                "91A0CFC2 BC2A22B4 CA302DBB 33EE7550"
+            ],
+            "x": [
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000000 00000000 00000000",
+                "00000000 00000000 00000000 00000012"
+            ],
+            "y": [
+                "469AF79D 1FB1F5E1 6B99592B 77A01E2A 0FDFB0D0 1794368D",
+                "9A56117F 7B386695 22DD4B65 0CF789EE BF068C5D 139732F0",
+                "905622C0 4B2BAAE7 600303EE 73001A3D"
+            ],
+            "n": [
+                "3FFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF",
+                "FFFFFFFF FFFFFFFF C98CDBA4 6506AB00 4C33A9FF 5147502C",
+                "C8EDA9E7 A769A126 94623CEF 47F023ED"
+            ],
+            "h": [
+                "4"
+            ]
+        }
+    },
     "GOST256": {
         "name": "gost256",
         "long_name": "GOST R 34.10-2001 test parameter set (256-bit prime field)",
