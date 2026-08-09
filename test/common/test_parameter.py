@@ -9,7 +9,7 @@ except ImportError:
 
 from test.common.classes import TestClasses
 
-from cryptodatahub.common.algorithm import NamedGroup
+from cryptodatahub.common.algorithm import NamedGroup, NamedGroupType
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.grade import AttackNamed, Grade
 from cryptodatahub.common.parameter import (
@@ -512,6 +512,14 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         ) as context_manager:
             ECParamWellKnown.from_named_group(NamedGroup.ML_KEM_768)
         self.assertEqual(context_manager.exception.value, NamedGroup.ML_KEM_768)
+
+    def test_every_elliptic_curve_named_group_has_an_entry(self):
+        self.assertEqual([
+            named_group.name
+            for named_group in NamedGroup
+            if named_group.value.group_type == NamedGroupType.ELLIPTIC_CURVE and
+            named_group.name not in ECParamWellKnown.__members__
+        ], [])
 
     def test_from_parameter_numbers(self):
         ec_param = ECParamWellKnown.PRIME256V1
