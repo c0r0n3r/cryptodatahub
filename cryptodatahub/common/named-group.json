@@ -448,7 +448,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 768,
+        "size": 155,
         "group_type": "ELLIPTIC_CURVE",
         "oqs_name": null
     },
@@ -457,7 +457,7 @@
         "long_name": null,
         "oid": null,
         "vulnerabilities": [],
-        "size": 1024,
+        "size": 185,
         "group_type": "ELLIPTIC_CURVE",
         "oqs_name": null
     },
