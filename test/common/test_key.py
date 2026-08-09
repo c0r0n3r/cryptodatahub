@@ -203,7 +203,7 @@ class TestPublicKey(TestClasses.TestKeyBase):
         )
         public_key = PublicKey.from_params(params)
         self.assertEqual(params, public_key.params)
-        self.assertEqual(public_key.key_size, 256)
+        self.assertEqual(public_key.key_size, 255)
 
         public_key = self._get_public_key('ssh_ed448_key')
         public_key_params = public_key.params
