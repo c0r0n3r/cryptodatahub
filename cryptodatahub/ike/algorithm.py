@@ -7,7 +7,7 @@ import typing
 import attr
 
 from cryptodatahub.common.algorithm import GradeableAlgorithmParams
-from cryptodatahub.common.exception import InvalidValue
+from cryptodatahub.common.exception import InvalidProposalToken, InvalidValue
 from cryptodatahub.common.grade import GradeableComplex
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
@@ -55,6 +55,49 @@ class CryptoDataEnumIkeAlgorithmBase(CryptoDataEnumCodedBase):
                             return item, bulk_cipher.cipher.value.key_size
 
         raise InvalidValue(name, cls, 'names')
+
+    @classmethod
+    def _iana_encryption_key_length(cls, token, bulk_ciphers, key_length_text):
+        key_sizes = [entry.cipher.value.key_size for entry in bulk_ciphers]
+        if not key_sizes:
+            raise InvalidProposalToken(token, 'encryption algorithm has no offerable key length')
+
+        variable_key = len(key_sizes) > 1
+        if key_length_text:
+            if not variable_key:
+                raise InvalidProposalToken(token, 'key length is forbidden on a fixed-key encryption algorithm')
+
+            if not key_length_text.isdigit() or int(key_length_text) not in key_sizes:
+                raise InvalidProposalToken(token, f'key length must be one of {sorted(key_sizes)}')
+
+            return int(key_length_text)
+
+        if variable_key:
+            raise InvalidProposalToken(token, 'key length is required on a variable-key encryption algorithm')
+
+        return key_sizes[0]
+
+    @classmethod
+    def from_proposal_token(cls, entity, token):
+        if entity is not None:
+            try:
+                return cls.from_implementation_name(entity, token)
+            except InvalidValue as e:
+                raise InvalidProposalToken(token, f'unknown {entity.name.lower()} token') from e
+
+        member_name, _, key_length_text = token.partition('/')
+        try:
+            algorithm = cls.from_name(member_name)
+        except InvalidValue as e:
+            raise InvalidProposalToken(token, 'unknown iana token') from e
+
+        bulk_ciphers = getattr(algorithm.value, 'bulk_ciphers', None)
+        if bulk_ciphers is None:
+            if key_length_text:
+                raise InvalidProposalToken(token, 'key length is forbidden on a non-encryption algorithm')
+            return algorithm
+
+        return algorithm, cls._iana_encryption_key_length(token, bulk_ciphers, key_length_text)
 
 
 @attr.s(frozen=True)

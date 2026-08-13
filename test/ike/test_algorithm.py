@@ -5,7 +5,7 @@ import unittest
 from test.common.classes import TestClasses
 
 from cryptodatahub.common.entity import Entity
-from cryptodatahub.common.exception import InvalidValue
+from cryptodatahub.common.exception import InvalidProposalToken, InvalidValue
 from cryptodatahub.ike.version import IkeVersion
 from cryptodatahub.ike.algorithm import (
     IkeEncryptionBulkCipherEntry,
@@ -185,6 +185,28 @@ class TestIkev2EncryptionAlgorithm(TestClasses.TestJsonCodeNumericBase):
                         )
         with self.assertRaises(InvalidValue):
             Ikev2EncryptionAlgorithm.from_implementation_name(Entity.STRONGSWAN, 'no-such-token')
+
+    def test_from_proposal_token(self):
+        self.assertEqual(
+            Ikev2EncryptionAlgorithm.from_proposal_token(Entity.STRONGSWAN, 'aes256gcm16'),
+            (Ikev2EncryptionAlgorithm.ENCR_AES_GCM_16, 256)
+        )
+        self.assertEqual(
+            Ikev2EncryptionAlgorithm.from_proposal_token(None, 'encr_aes_cbc/128'),
+            (Ikev2EncryptionAlgorithm.ENCR_AES_CBC, 128)
+        )
+        self.assertEqual(
+            Ikev2EncryptionAlgorithm.from_proposal_token(None, 'encr_chacha20_poly1305'),
+            (Ikev2EncryptionAlgorithm.ENCR_CHACHA20_POLY1305, 256)
+        )
+
+        with self.assertRaises(InvalidProposalToken) as context_manager:
+            Ikev2EncryptionAlgorithm.from_proposal_token(Entity.STRONGSWAN, 'no-such-cipher')
+        self.assertEqual(context_manager.exception.hint, 'unknown strongswan token')
+
+        with self.assertRaises(InvalidProposalToken) as context_manager:
+            Ikev2EncryptionAlgorithm.from_proposal_token(None, 'encr_null')
+        self.assertEqual(context_manager.exception.hint, 'encryption algorithm has no offerable key length')
 
 
 class TestIkev2HashAlgorithm(TestClasses.TestJsonCodeNumericBase):
@@ -458,6 +480,45 @@ class TestIkev1EncryptionAlgorithm(TestClasses.TestJsonCodeNumericBase):
         with self.assertRaises(InvalidValue):
             Ikev1EncryptionAlgorithm.from_implementation_name(Entity.STRONGSWAN, 'no-such-token')
 
+    def test_from_proposal_token(self):
+        self.assertEqual(
+            Ikev1EncryptionAlgorithm.from_proposal_token(Entity.STRONGSWAN, 'aes256'),
+            (Ikev1EncryptionAlgorithm.AES_CBC, 256)
+        )
+        self.assertEqual(
+            Ikev1EncryptionAlgorithm.from_proposal_token(Entity.LIBRESWAN, 'aes_gcm_c256'),
+            (Ikev1EncryptionAlgorithm.AES_GCM_16, 256)
+        )
+        self.assertEqual(
+            Ikev1EncryptionAlgorithm.from_proposal_token(None, 'aes_cbc/128'),
+            (Ikev1EncryptionAlgorithm.AES_CBC, 128)
+        )
+        self.assertEqual(
+            Ikev1EncryptionAlgorithm.from_proposal_token(None, 'des_cbc'),
+            (Ikev1EncryptionAlgorithm.DES_CBC, 56)
+        )
+
+        with self.assertRaises(InvalidProposalToken) as context_manager:
+            Ikev1EncryptionAlgorithm.from_proposal_token(None, 'no_such_cipher/128')
+        self.assertEqual(context_manager.exception.hint, 'unknown iana token')
+
+        with self.assertRaises(InvalidProposalToken) as context_manager:
+            Ikev1EncryptionAlgorithm.from_proposal_token(None, 'aes_cbc')
+        self.assertEqual(
+            context_manager.exception.hint, 'key length is required on a variable-key encryption algorithm'
+        )
+
+        with self.assertRaises(InvalidProposalToken) as context_manager:
+            Ikev1EncryptionAlgorithm.from_proposal_token(None, 'des_cbc/56')
+        self.assertEqual(
+            context_manager.exception.hint, 'key length is forbidden on a fixed-key encryption algorithm'
+        )
+
+        for key_length_text in ('64', 'notanumber'):
+            with self.assertRaises(InvalidProposalToken) as context_manager:
+                Ikev1EncryptionAlgorithm.from_proposal_token(None, f'aes_cbc/{key_length_text}')
+            self.assertIn('key length must be one of', context_manager.exception.hint)
+
 
 class TestIkev1HashAlgorithm(TestClasses.TestJsonCodeNumericBase):
     @classmethod
@@ -489,6 +550,28 @@ class TestIkev1HashAlgorithm(TestClasses.TestJsonCodeNumericBase):
                     )
         with self.assertRaises(InvalidValue):
             Ikev1HashAlgorithm.from_implementation_name(Entity.STRONGSWAN, 'no-such-token')
+
+    def test_from_proposal_token(self):
+        self.assertEqual(
+            Ikev1HashAlgorithm.from_proposal_token(Entity.STRONGSWAN, 'sha256'),
+            Ikev1HashAlgorithm.SHA2_256
+        )
+        self.assertEqual(
+            Ikev1HashAlgorithm.from_proposal_token(None, 'sha2_256'),
+            Ikev1HashAlgorithm.SHA2_256
+        )
+
+        with self.assertRaises(InvalidProposalToken) as context_manager:
+            Ikev1HashAlgorithm.from_proposal_token(Entity.STRONGSWAN, 'no-such-hash')
+        self.assertEqual(context_manager.exception.hint, 'unknown strongswan token')
+
+        with self.assertRaises(InvalidProposalToken) as context_manager:
+            Ikev1HashAlgorithm.from_proposal_token(None, 'no-such-hash')
+        self.assertEqual(context_manager.exception.hint, 'unknown iana token')
+
+        with self.assertRaises(InvalidProposalToken) as context_manager:
+            Ikev1HashAlgorithm.from_proposal_token(None, 'sha2_256/128')
+        self.assertEqual(context_manager.exception.hint, 'key length is forbidden on a non-encryption algorithm')
 
 
 class TestIkeVendorId(TestClasses.TestJsonBase):
