@@ -26,6 +26,11 @@ class OqsNamedGroup:
     name = attr.ib(validator=attr.validators.instance_of(str))
     size = attr.ib(validator=attr.validators.instance_of(int))
     oqs_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
+    # The group type is derived from this rather than kept here, because the
+    # updater reloads the enum modules between its phases, so an enum member kept
+    # here would be an instance of a class that no longer is the one the reloaded
+    # module defines.
+    has_classical_half = attr.ib(default=False, validator=attr.validators.instance_of(bool))
 
 
 @attr.s(frozen=True)
@@ -179,6 +184,7 @@ class FetcherOqsBase(FetcherBase):
                 name=f'{classical_named_curve.name.lower()}/{name_group}',
                 size=size,
                 oqs_name=f'{cls._get_hybrid_group(classical_named_curve)}_{name_group}',
+                has_classical_half=True,
             )
 
         extra_nids = key_encapsulation_mechanism.get('extra_nids', {})
@@ -201,7 +207,11 @@ class FetcherOqsBase(FetcherBase):
                 oqs_name = extra_nid.get('standard_name', f'{hybrid_group}_{name_group}')
 
             yield OqsNamedGroup(
-                code=cls._get_code(extra_nid['nid']), name=name, size=size, oqs_name=oqs_name
+                code=cls._get_code(extra_nid['nid']),
+                name=name,
+                size=size,
+                oqs_name=oqs_name,
+                has_classical_half=hybrid_group is not None,
             )
 
     @classmethod
@@ -369,7 +379,11 @@ class FetcherOqsNamedGroup(FetcherOqsBase):
                 oid=None,
                 vulnerabilities=[],
                 size=oqs_named_group.size,
-                group_type=cryptodatahub.common.algorithm.NamedGroupType.HYBRID_PQS,
+                group_type=(
+                    cryptodatahub.common.algorithm.NamedGroupType.HYBRID_PQS
+                    if oqs_named_group.has_classical_half
+                    else cryptodatahub.common.algorithm.NamedGroupType.POST_QUANTUM
+                ),
                 oqs_name=oqs_named_group.oqs_name,
             )
             existing_names.add(oqs_named_group.name)

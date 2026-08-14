@@ -270,7 +270,7 @@ class TestFetcherOqsNamedGroup(TestOqsBase):
                 oid=None,
                 vulnerabilities=[],
                 size=336,
-                group_type=NamedGroupType.HYBRID_PQS,
+                group_type=NamedGroupType.POST_QUANTUM,
                 oqs_name='nonexistingkem',
             ),
         )
@@ -279,6 +279,9 @@ class TestFetcherOqsNamedGroup(TestOqsBase):
         )
         self.assertEqual(
             params_by_identifier['SECP256R1_NONEXISTINGKEM'].oqs_name, 'p256_nonexistingkem'
+        )
+        self.assertEqual(
+            params_by_identifier['SECP256R1_NONEXISTINGKEM'].group_type, NamedGroupType.HYBRID_PQS
         )
         self.assertEqual(params_by_identifier['HIGHERNISTLEVELKEM'].size, 344)
         self.assertEqual(
@@ -347,7 +350,7 @@ class TestUpdaterOqsNamedGroup(TestUpdaterOqsBase):
                 'oid': None,
                 'vulnerabilities': [],
                 'size': 336,
-                'group_type': 'HYBRID_PQS',
+                'group_type': 'POST_QUANTUM',
                 'oqs_name': 'nonexistingkem',
             },
         )

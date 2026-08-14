@@ -88,7 +88,7 @@ class NistSecurityLevel(CryptoDataEnumCodedBase):
     LEVEL_5 = NistSecurityLevelParams(code=5, bit_security=256)
 
 
-NamedGroupType = enum.Enum('NamedGroupType', 'ELLIPTIC_CURVE FINITE_FIELD HYBRID_PQS')
+NamedGroupType = enum.Enum('NamedGroupType', 'ELLIPTIC_CURVE FINITE_FIELD POST_QUANTUM HYBRID_PQS')
 
 
 @attr.s(frozen=True)
