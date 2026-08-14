@@ -16,6 +16,8 @@ from cryptodatahub.common.parameter import (
     DHParameterNumbers,
     DHParamWellKnown,
     ECParameterForm,
+    ECParameterNumbersTwistedEdwardsExtension,
+    ECParameterNumbersWeierstrassExtension,
     ECParameterNumbersWeierstrassPrime,
     ECParamWellKnown,
     ECParamWellKnownParams,
@@ -103,6 +105,18 @@ class TestDHParamWellKnown(TestClasses.TestJsonBase):
         )
 
 
+class TestECParameterNumbersExtension(unittest.TestCase):
+    def test_parameter_form(self):
+        self.assertEqual(
+            ECParameterNumbersWeierstrassExtension.get_parameter_form(),
+            ECParameterForm.WEIERSTRASS_EXTENSION,
+        )
+        self.assertEqual(
+            ECParameterNumbersTwistedEdwardsExtension.get_parameter_form(),
+            ECParameterForm.TWISTED_EDWARDS_EXTENSION,
+        )
+
+
 class TestECParamWellKnownParams(unittest.TestCase):
     def test_error_parameter_form_mismatch(self):
         with self.assertRaisesRegex(
@@ -127,6 +141,10 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         ECParameterForm.WEIERSTRASS_BINARY,
         ECParameterForm.WEIERSTRASS_BINARY_NORMAL_BASIS,
     )
+    EXTENSION_PARAMETER_FORMS = (
+        ECParameterForm.WEIERSTRASS_EXTENSION,
+        ECParameterForm.TWISTED_EDWARDS_EXTENSION,
+    )
     # The base point ANSI X9.62 publishes for this curve generates the whole group
     # rather than the prime order subgroup, and the file records what the standard
     # defines.
@@ -145,6 +163,9 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
                 cls._is_base_point_on_weierstrass_binary_normal_basis_curve,
             ECParameterForm.MONTGOMERY: cls._is_base_point_on_montgomery_curve,
             ECParameterForm.TWISTED_EDWARDS: cls._is_base_point_on_twisted_edwards_curve,
+            ECParameterForm.WEIERSTRASS_EXTENSION: cls._is_base_point_on_weierstrass_extension_curve,
+            ECParameterForm.TWISTED_EDWARDS_EXTENSION:
+                cls._is_base_point_on_twisted_edwards_extension_curve,
         }
 
     @classmethod
@@ -156,6 +177,10 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
                 cls._is_order_annihilating_on_weierstrass_binary_normal_basis_curve,
             ECParameterForm.MONTGOMERY: cls._is_order_annihilating_on_montgomery_curve,
             ECParameterForm.TWISTED_EDWARDS: cls._is_order_annihilating_on_twisted_edwards_curve,
+            ECParameterForm.WEIERSTRASS_EXTENSION:
+                cls._is_order_annihilating_on_weierstrass_extension_curve,
+            ECParameterForm.TWISTED_EDWARDS_EXTENSION:
+                cls._is_order_annihilating_on_twisted_edwards_extension_curve,
         }
 
     @staticmethod
@@ -254,6 +279,136 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
                 reduction_polynomial |= 1 << exponent
 
         return reduction_polynomial
+
+    @staticmethod
+    def _get_extension_field_degree(reduction_polynomial_constants):
+        return 1 << len(reduction_polynomial_constants)
+
+    @staticmethod
+    def _add_in_extension_field(left, right, prime):
+        return [(left_part + right_part) % prime for left_part, right_part in zip(left, right)]
+
+    @staticmethod
+    def _subtract_in_extension_field(left, right, prime):
+        return [(left_part - right_part) % prime for left_part, right_part in zip(left, right)]
+
+    @staticmethod
+    def _multiply_in_extension_field(left, right, reduction_polynomial_constants, prime):
+        if not reduction_polynomial_constants:
+            return [left[0] * right[0] % prime]
+
+        lower_constants = reduction_polynomial_constants[:-1]
+        constant = reduction_polynomial_constants[-1]
+        half = TestECParamWellKnown._get_extension_field_degree(lower_constants)
+
+        def multiply(first, second):
+            return TestECParamWellKnown._multiply_in_extension_field(
+                first, second, lower_constants, prime
+            )
+
+        low_product = multiply(left[:half], right[:half])
+        high_product = multiply(left[half:], right[half:])
+        cross_product = TestECParamWellKnown._subtract_in_extension_field(
+            TestECParamWellKnown._subtract_in_extension_field(
+                multiply(
+                    TestECParamWellKnown._add_in_extension_field(left[:half], left[half:], prime),
+                    TestECParamWellKnown._add_in_extension_field(right[:half], right[half:], prime),
+                ),
+                low_product,
+                prime,
+            ),
+            high_product,
+            prime,
+        )
+
+        return (
+            TestECParamWellKnown._subtract_in_extension_field(
+                low_product, multiply(high_product, constant), prime
+            ) +
+            cross_product
+        )
+
+    @staticmethod
+    def _invert_in_extension_field(value, reduction_polynomial_constants, prime):
+        if not reduction_polynomial_constants:
+            return [pow(value[0], -1, prime)]
+
+        lower_constants = reduction_polynomial_constants[:-1]
+        constant = reduction_polynomial_constants[-1]
+        half = TestECParamWellKnown._get_extension_field_degree(lower_constants)
+
+        def multiply(first, second):
+            return TestECParamWellKnown._multiply_in_extension_field(
+                first, second, lower_constants, prime
+            )
+
+        low, high = value[:half], value[half:]
+        inverse_norm = TestECParamWellKnown._invert_in_extension_field(
+            TestECParamWellKnown._add_in_extension_field(
+                multiply(low, low), multiply(multiply(high, high), constant), prime
+            ),
+            lower_constants,
+            prime,
+        )
+
+        return (
+            multiply(low, inverse_norm) +
+            multiply([(-part) % prime for part in high], inverse_norm)
+        )
+
+    @staticmethod
+    def _get_extension_field_one(reduction_polynomial_constants):
+        element = [0] * TestECParamWellKnown._get_extension_field_degree(reduction_polynomial_constants)
+        element[0] = 1
+
+        return element
+
+    @staticmethod
+    def _get_extension_field_zero(reduction_polynomial_constants):
+        return [0] * TestECParamWellKnown._get_extension_field_degree(reduction_polynomial_constants)
+
+    @staticmethod
+    def _is_base_point_on_weierstrass_extension_curve(parameter_numbers):
+        prime = parameter_numbers.p
+        constants = parameter_numbers.reduction_polynomial_constants
+
+        def multiply(left, right):
+            return TestECParamWellKnown._multiply_in_extension_field(left, right, constants, prime)
+
+        point_x = parameter_numbers.x
+        left_hand_side = multiply(parameter_numbers.y, parameter_numbers.y)
+        right_hand_side = TestECParamWellKnown._add_in_extension_field(
+            TestECParamWellKnown._add_in_extension_field(
+                multiply(point_x, multiply(point_x, point_x)),
+                multiply(parameter_numbers.a, point_x),
+                prime,
+            ),
+            parameter_numbers.b,
+            prime,
+        )
+
+        return left_hand_side == right_hand_side
+
+    @staticmethod
+    def _is_base_point_on_twisted_edwards_extension_curve(parameter_numbers):
+        prime = parameter_numbers.p
+        constants = parameter_numbers.reduction_polynomial_constants
+
+        def multiply(left, right):
+            return TestECParamWellKnown._multiply_in_extension_field(left, right, constants, prime)
+
+        square_x = multiply(parameter_numbers.x, parameter_numbers.x)
+        square_y = multiply(parameter_numbers.y, parameter_numbers.y)
+        left_hand_side = TestECParamWellKnown._add_in_extension_field(
+            multiply(parameter_numbers.a, square_x), square_y, prime
+        )
+        right_hand_side = TestECParamWellKnown._add_in_extension_field(
+            TestECParamWellKnown._get_extension_field_one(constants),
+            multiply(parameter_numbers.d, multiply(square_x, square_y)),
+            prime,
+        )
+
+        return left_hand_side == right_hand_side
 
     @staticmethod
     def _is_base_point_on_weierstrass_prime_curve(parameter_numbers):
@@ -492,10 +647,122 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         )
 
     @staticmethod
+    def _is_order_annihilating_on_weierstrass_extension_curve(parameter_numbers):
+        prime = parameter_numbers.p
+        constants = parameter_numbers.reduction_polynomial_constants
+
+        def multiply(left, right):
+            return TestECParamWellKnown._multiply_in_extension_field(left, right, constants, prime)
+
+        def add(left, right):
+            return TestECParamWellKnown._add_in_extension_field(left, right, prime)
+
+        def subtract(left, right):
+            return TestECParamWellKnown._subtract_in_extension_field(left, right, prime)
+
+        def invert(value):
+            return TestECParamWellKnown._invert_in_extension_field(value, constants, prime)
+
+        def add_points(first, second):
+            if first is None:
+                return second
+            if second is None:
+                return first
+
+            first_x, first_y = first
+            second_x, second_y = second
+
+            if first_x == second_x:
+                if not any(add(first_y, second_y)):
+                    return None
+
+                square_x = multiply(first_x, first_x)
+                slope = multiply(
+                    add(add(add(square_x, square_x), square_x), parameter_numbers.a),
+                    invert(add(first_y, first_y)),
+                )
+            else:
+                slope = multiply(
+                    subtract(second_y, first_y), invert(subtract(second_x, first_x))
+                )
+
+            result_x = subtract(subtract(multiply(slope, slope), first_x), second_x)
+            result_y = subtract(multiply(slope, subtract(first_x, result_x)), first_y)
+
+            return (result_x, result_y)
+
+        result = None
+        addend = (parameter_numbers.x, parameter_numbers.y)
+        scalar = parameter_numbers.n
+        while scalar:
+            if scalar & 1:
+                result = add_points(result, addend)
+            addend = add_points(addend, addend)
+            scalar >>= 1
+
+        return result is None
+
+    @staticmethod
+    def _is_order_annihilating_on_twisted_edwards_extension_curve(parameter_numbers):
+        prime = parameter_numbers.p
+        constants = parameter_numbers.reduction_polynomial_constants
+        one = TestECParamWellKnown._get_extension_field_one(constants)
+        identity = (TestECParamWellKnown._get_extension_field_zero(constants), one)
+
+        def multiply(left, right):
+            return TestECParamWellKnown._multiply_in_extension_field(left, right, constants, prime)
+
+        def add(left, right):
+            return TestECParamWellKnown._add_in_extension_field(left, right, prime)
+
+        def subtract(left, right):
+            return TestECParamWellKnown._subtract_in_extension_field(left, right, prime)
+
+        def invert(value):
+            return TestECParamWellKnown._invert_in_extension_field(value, constants, prime)
+
+        def add_points(first, second):
+            first_x, first_y = first
+            second_x, second_y = second
+
+            product = multiply(
+                parameter_numbers.d,
+                multiply(multiply(first_x, second_x), multiply(first_y, second_y)),
+            )
+            result_x = multiply(
+                add(multiply(first_x, second_y), multiply(first_y, second_x)),
+                invert(add(one, product)),
+            )
+            result_y = multiply(
+                subtract(
+                    multiply(first_y, second_y),
+                    multiply(parameter_numbers.a, multiply(first_x, second_x)),
+                ),
+                invert(subtract(one, product)),
+            )
+
+            return (result_x, result_y)
+
+        result = identity
+        addend = (parameter_numbers.x, parameter_numbers.y)
+        scalar = parameter_numbers.n
+        while scalar:
+            if scalar & 1:
+                result = add_points(result, addend)
+            addend = add_points(addend, addend)
+            scalar >>= 1
+
+        return result == identity
+
+    @staticmethod
     def _is_group_order_in_hasse_interval(ec_param_well_known_params):
         parameter_numbers = ec_param_well_known_params.parameter_numbers
         if ec_param_well_known_params.parameter_form in TestECParamWellKnown.BINARY_PARAMETER_FORMS:
             field_size = 1 << parameter_numbers.m
+        elif ec_param_well_known_params.parameter_form in TestECParamWellKnown.EXTENSION_PARAMETER_FORMS:
+            field_size = parameter_numbers.p ** TestECParamWellKnown._get_extension_field_degree(
+                parameter_numbers.reduction_polynomial_constants
+            )
         else:
             field_size = parameter_numbers.p
 

@@ -131,7 +131,8 @@ DHParamWellKnown = DHParamWellKnownBase(
 
 ECParameterForm = enum.Enum(
     'ECParameterForm',
-    'WEIERSTRASS_PRIME WEIERSTRASS_BINARY WEIERSTRASS_BINARY_NORMAL_BASIS MONTGOMERY TWISTED_EDWARDS'
+    'WEIERSTRASS_PRIME WEIERSTRASS_BINARY WEIERSTRASS_BINARY_NORMAL_BASIS MONTGOMERY TWISTED_EDWARDS '
+    'WEIERSTRASS_EXTENSION TWISTED_EDWARDS_EXTENSION'
 )
 
 
@@ -385,6 +386,110 @@ class ECParameterNumbersTwistedEdwards:
         return ECParameterForm.TWISTED_EDWARDS
 
 
+def convert_extension_field_element():
+    return convert_iterable(convert_big_enum())
+
+
+def validate_extension_field_element():
+    return attr.validators.deep_iterable(attr.validators.instance_of(int))
+
+
+@attr.s
+class ECParameterNumbersWeierstrassExtension:  # pylint: disable=too-many-instance-attributes
+    p = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'p'},
+    )
+    reduction_polynomial_constants = attr.ib(
+        converter=convert_iterable(convert_extension_field_element()),
+        validator=attr.validators.deep_iterable(validate_extension_field_element()),
+        metadata={'human_readable_name': 'reduction polynomial constants'},
+    )
+    a = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_extension_field_element(),
+        validator=validate_extension_field_element(),
+        metadata={'human_readable_name': 'a'},
+    )
+    b = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_extension_field_element(),
+        validator=validate_extension_field_element(),
+        metadata={'human_readable_name': 'b'},
+    )
+    x = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_extension_field_element(),
+        validator=validate_extension_field_element(),
+        metadata={'human_readable_name': 'x'},
+    )
+    y = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_extension_field_element(),
+        validator=validate_extension_field_element(),
+        metadata={'human_readable_name': 'y'},
+    )
+    n = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'n'},
+    )
+    h = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'h'},
+    )
+
+    @classmethod
+    def get_parameter_form(cls):
+        return ECParameterForm.WEIERSTRASS_EXTENSION
+
+
+@attr.s
+class ECParameterNumbersTwistedEdwardsExtension:  # pylint: disable=too-many-instance-attributes
+    p = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'p'},
+    )
+    reduction_polynomial_constants = attr.ib(
+        converter=convert_iterable(convert_extension_field_element()),
+        validator=attr.validators.deep_iterable(validate_extension_field_element()),
+        metadata={'human_readable_name': 'reduction polynomial constants'},
+    )
+    a = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_extension_field_element(),
+        validator=validate_extension_field_element(),
+        metadata={'human_readable_name': 'a'},
+    )
+    d = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_extension_field_element(),
+        validator=validate_extension_field_element(),
+        metadata={'human_readable_name': 'd'},
+    )
+    x = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_extension_field_element(),
+        validator=validate_extension_field_element(),
+        metadata={'human_readable_name': 'x'},
+    )
+    y = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_extension_field_element(),
+        validator=validate_extension_field_element(),
+        metadata={'human_readable_name': 'y'},
+    )
+    n = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'n'},
+    )
+    h = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'h'},
+    )
+
+    @classmethod
+    def get_parameter_form(cls):
+        return ECParameterForm.TWISTED_EDWARDS_EXTENSION
+
+
 @attr.s(eq=False, frozen=True)
 class ECParamWellKnownParams(ParamWellKnownBase):
     parameter_form = attr.ib(
@@ -398,6 +503,8 @@ class ECParamWellKnownParams(ParamWellKnownBase):
             convert_dict_to_object(ECParameterNumbersWeierstrassBinaryNormalBasis),
             convert_dict_to_object(ECParameterNumbersMontgomery),
             convert_dict_to_object(ECParameterNumbersTwistedEdwards),
+            convert_dict_to_object(ECParameterNumbersWeierstrassExtension),
+            convert_dict_to_object(ECParameterNumbersTwistedEdwardsExtension),
         )),
         validator=attr.validators.instance_of((
             ECParameterNumbersWeierstrassPrime,
@@ -405,6 +512,8 @@ class ECParamWellKnownParams(ParamWellKnownBase):
             ECParameterNumbersWeierstrassBinaryNormalBasis,
             ECParameterNumbersMontgomery,
             ECParameterNumbersTwistedEdwards,
+            ECParameterNumbersWeierstrassExtension,
+            ECParameterNumbersTwistedEdwardsExtension,
         ))
     )
 
