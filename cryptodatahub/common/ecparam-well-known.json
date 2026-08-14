@@ -1,4 +1,189 @@
 {
+    "ANOMALOUS": {
+        "name": "Anomalous",
+        "long_name": "Anomalous",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "B0000000000000000000000953000000000000000000001F9D7",
+            "a": "98D0FAC687D6343EB1A1F595283EB1A1F58D0FAC687D635F5E4",
+            "b": "4A1F58D0FAC687D6343EB1A5E2D6343EB1A1F58D0FAC688AB3F",
+            "x": "101EFB35FD1963C4871A2D17EDAAFA7E249807F58F8705126C6",
+            "y": "22389A3954375834304BA1D509A97DE6C07148EA7F5951B20E7",
+            "n": "B0000000000000000000000953000000000000000000001F9D7",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "ANSSI_FRP256V1": {
+        "name": "ANSSI FRP256v1",
+        "long_name": "ANSSI FRP256v1",
+        "vulnerabilities": [],
+        "aliases": [
+            "FRP256v1"
+        ],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C03",
+            "a": "F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C00",
+            "b": "EE353FCA5428A9300D4ABA754A44C00FDFEC0C9AE4B1A1803075ED967B7BB73F",
+            "x": "B6B3D4C356C139EB31183D4749D423958C27D2DCAF98B70164C97A2DD98F5CFF",
+            "y": "6142E0F7C8B204911F9271F0F3ECEF8C2701C307E8E4C9E183115A1554062CFB",
+            "n": "F1FD178C0B3AD58F10126DE8CE42435B53DC67E140D2BF941FFDD459C6D655E1",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "BADA55_R_256": {
+        "name": "BADA55-R-256",
+        "long_name": "BADA55-R (256-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C03",
+            "a": "F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C00",
+            "b": "BADA55BADA55BADA55BADA55BADA55BADA55BADA55BADA55BADA55BADA55BD48",
+            "x": "0",
+            "y": "58612A58DB7E3CCAB4BC4AFF51594AFECF835F80615D6D285A5C9335C6158011",
+            "n": "F1FD178C0B3AD58F10126DE8CE42435A1A8E3837861AA0EFA0E52AEC7379C967",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "BADA55_VPR2_224": {
+        "name": "BADA55-VPR2-224",
+        "long_name": "BADA55-VPR2 (224-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000001",
+            "a": "CBA97952A45146601A34BEF5B927D70FE1F0F34F8C992BF5A8C5991C",
+            "b": "E4F459B931BD2FE7EE2DB9D01D18081A0BE0C0039E41F26C7995BD7C",
+            "x": "0",
+            "y": "5ADDAD3A740A93274B4276BFF9B85FCBEF36D3F81916F55419CCB634",
+            "n": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFDF5C0319F61DC6CCEBE902BC220F",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "BADA55_VPR_224": {
+        "name": "BADA55-VPR-224",
+        "long_name": "BADA55-VPR-224",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000001",
+            "a": "8110B017FDA88A224F3F64F3964926308DEC9784B13C08F09F4FFC4A",
+            "b": "5587342F92BA3091A9BA09AD867F4CEF85778EDB831054F9CB5B3ED5",
+            "x": "0",
+            "y": "5BF50773D4AF0F3CABA87919B7504FCBD4549F9F845D19AA369DBABE",
+            "n": "FFFFFFFFFFFFFFFFFFFFFFFFFFFF473FA5D3E9BF40A95A8D3F014ADD",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "BADA55_VR_224": {
+        "name": "BADA55-VR-224",
+        "long_name": "BADA55-VR-224",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000001",
+            "a": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFE",
+            "b": "FD9CA54C0738B8A6FB8CF4CDB328E75983D6DA1B78B6223463375562",
+            "x": "3",
+            "y": "32E826F050BDF4C3F4292FA4EFA50146B0FD3F342DA5E081BADBC36C",
+            "n": "FFFFFFFFFFFFFFFFFFFFFFFFFFFF0D44EF1096B2B67B7A3DCEE7B079",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "BADA55_VR_256": {
+        "name": "BADA55-VR-256",
+        "long_name": "BADA55-VR-256",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "FFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFC",
+            "b": "BADA55ECD8BBEAD3ADD6C534F92197DEB47FCEB9BE7E0E702A8D1DD56B5D0B0C",
+            "x": "0",
+            "y": "5310D24619C2E5B721E14DCEDC3332D0BE3CE9347161EBBC14A43FC7FAD546D2",
+            "n": "FFFFFFFF00000000FFFFFFFFFFFFFFFEBEDC2797003336661A49D76A903BDB91",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "BADA55_VR_384": {
+        "name": "BADA55-VR-384",
+        "long_name": "BADA55-VR-384",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFF0000000000000000FFFFFFFF",
+            "a": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFF0000000000000000FFFFFFFC",
+            "b": "BADA55EC3BE2AD1F9EEEA5881ECF95BBF3AC392526F01D4CD13E684C63A17CC4D5F271642AD83899113817A61006413D",
+            "x": "2",
+            "y": "37D4CB922A8A155845AE2B2884C788A01A22FBF621A7918DC1F18A89FAD6DF0AB3169ACFA538EB7C6C1C9CDA7CFB5023",
+            "n": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEFE1169B82FF7E5032C683F766FAE57359CFC5FC25FFCE37",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "BANDERSNATCH": {
+        "name": "Bandersnatch",
+        "long_name": "Bandersnatch twisted Edwards curve (255-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "IACR_EPRINT_2021_1152"
+        ],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": [
+                "73EDA753 299D7D48 3339D808 09A1D805 53BDA402 FFFE5BFE",
+                "FFFFFFFF 00000001"
+            ],
+            "a": [
+                "73EDA753 299D7D48 3339D808 09A1D805 53BDA402 FFFE5BFE",
+                "FFFFFFFE FFFFFFFC"
+            ],
+            "d": [
+                "6389C126 33C267CB C66E3BF8 6BE3B6D8 CB666771 77E54F92",
+                "B369F2F5 188D58E7"
+            ],
+            "x": [
+                "29C132CC 2C0B34C5 74371177 7BBE42F3 2B79C022 AD998465",
+                "E1E71866 A252AE18"
+            ],
+            "y": [
+                "2A6C669E DA123E0F 157D8B50 BADCD586 358CAD81 EEE46460",
+                "5E3167B6 CC974166"
+            ],
+            "n": [
+                "1CFB69D4 CA675F52 0CCE7602 02687600 FF8F8700 74190471",
+                "74FD06B5 2876E7E1"
+            ],
+            "h": [
+                "04"
+            ]
+        }
+    },
     "BLS12_377": {
         "name": "BLS12-377",
         "long_name": "BLS12-377 elliptic curve (377-bit prime field)",
@@ -319,6 +504,304 @@
                 "85555841AAAEC4AC"
             ],
             "seed": null
+        }
+    },
+    "BLS48_581_G2": {
+        "name": "BLS48-581-G2",
+        "long_name": "BLS48-581 G2 elliptic curve (581-bit prime field, octic extension)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "DRAFT_IRTF_CFRG_PAIRING_FRIENDLY_CURVES"
+        ],
+        "parameter_form": "WEIERSTRASS_EXTENSION",
+        "parameter_numbers": {
+            "p": [
+                "1280F73F F3476F31 3824E31D 47012A00 56E84F8D 122131BB",
+                "3BE6C0F1 F3975444 A48AE43A F6E082AC D9CD3039 4F4736DA",
+                "F68367A5 513170EE 0A578FDF 721A4A48 AC3EDC15 4E656591",
+                "2B"
+            ],
+            "reduction_polynomial_constants": [
+                [
+                    [
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "01"
+                    ]
+                ],
+                [
+                    [
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "01"
+                    ],
+                    [
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "01"
+                    ]
+                ],
+                [
+                    [
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00"
+                    ],
+                    [
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00"
+                    ],
+                    [
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "01"
+                    ],
+                    [
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00"
+                    ]
+                ]
+            ],
+            "a": [
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ]
+            ],
+            "b": [
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00"
+                ],
+                [
+                    "09407B9F F9A3B798 9C12718E A3809500 2B7427C6 891098DD",
+                    "9DF36078 F9CBAA22 5245721D 7B704156 6CE6981C A7A39B6D",
+                    "7B41B3D2 A898B877 052BC7EF B90D2524 561F6E0A A732B2C8",
+                    "95"
+                ],
+                [
+                    "09407B9F F9A3B798 9C12718E A3809500 2B7427C6 891098DD",
+                    "9DF36078 F9CBAA22 5245721D 7B704156 6CE6981C A7A39B6D",
+                    "7B41B3D2 A898B877 052BC7EF B90D2524 561F6E0A A732B2C8",
+                    "96"
+                ]
+            ],
+            "x": [
+                [
+                    "05D615D9 A7871E4A 38237FA4 5A2775DE BABBEFC7 0344DBCC",
+                    "B7DE64DB 3A2EF156 C46FF79B AAD1A8C4 2281A63C A0612F40",
+                    "0503004D 80491F51 0317B797 66322154 DEC34FD0 B4ACE8BF",
+                    "AB"
+                ],
+                [
+                    "07C4973E CE225851 2069B0E8 6ABC07E8 B22BB6D9 80E1623E",
+                    "9526F6DA 12307F4E 1C3943A0 0ABFEDF1 6214A76A FFA62504",
+                    "F0C3C763 0D979630 FFD75556 A01AFA14 3F1669B3 6676B47C",
+                    "57"
+                ],
+                [
+                    "01FCCC70 198F1334 E1B2EA18 53AD83BC 73A8A6CA 9AE237CA",
+                    "7A6D6957 CCBAB5AB 6860161C 1DBD1924 2FFAE766 F0D2A6D5",
+                    "5F028CBD FBB879D5 FEA8EF4C DED6B3F0 B4648815 6CA55A3E",
+                    "6A"
+                ],
+                [
+                    "0BE2218C 25CEB618 5C78D801 2954D4BF E8F5985A C62F3E58",
+                    "21B7B92A 393F8BE0 CC218A95 F63E1C77 6E6EC143 B1B279B9",
+                    "468C31C5 257C200C A52310B8 CB4E80BC 3F09A703 3CBB7FEA",
+                    "FE"
+                ],
+                [
+                    "038B91C6 00B35913 A3C598E4 CAA9DD63 007C675D 0B1642B5",
+                    "675FF0E7 C5805386 699981F9 E48199D5 AC10B2EF 492AE589",
+                    "274FAD55 FC1889AA 80C65B5F 746C9D4C BB739C3A 1C53F8CC",
+                    "E5"
+                ],
+                [
+                    "0C96C779 7EB07386 03F1311E 4ECDA088 F7B8F35D CEF0977A",
+                    "3D1A5867 7BB03741 8181DF63 835D2899 7EB57B40 B9C0B15D",
+                    "D7595A9F 177612F0 97FC7960 910FCE33 70F2004D 914A3C09",
+                    "3A"
+                ],
+                [
+                    "0B9B7951 C6061EE3 F0197A49 8908AEE6 60DEA41B 39D13852",
+                    "B6DB908B A2C0B7A4 49CEF11F 293B13CE D0FD0CAA 5EFCF343",
+                    "2AAD1CBE 4324C22D 63334B5B 0E205C33 54E41607 E60750E0",
+                    "57"
+                ],
+                [
+                    "0827D5C2 2FB2BDEC 5282624C 4F4AAA2B 1E5D7A9D EFAF47B5",
+                    "211CF741 719728A7 F9F8CFCA 93F29CFF 364A7190 B7E2B0D4",
+                    "585479BD 6AEBF9FC 44E56AF2 FC9E97C3 F84E19DA 00FBC6AE",
+                    "34"
+                ]
+            ],
+            "y": [
+                [
+                    "00EB5335 6C375B5D FA497216 452F3024 B918B423 8059A577",
+                    "E6F3B39E BFC435FA AB090623 5AFA2774 8D90F733 6D8AE516",
+                    "3C1599AB F77EEA6D 65904501 2AB12C0F F323EDD3 FE4D2D79",
+                    "71"
+                ],
+                [
+                    "0284DC75 979E0FF1 44DA6531 815FCADC 2B75A422 BA325E6F",
+                    "BA01D729 64732FCB F3AFB096 B243B1F1 92C5C3D1 892AB24E",
+                    "1DD212FA 097D760E 2E588B42 3525FFC7 B111471D B936CD56",
+                    "65"
+                ],
+                [
+                    "0B36A201 DD008523 E421EFB7 0367669E F2C2FC50 30216D5B",
+                    "119D3A48 0D370514 475F7D5C 99D0E904 11515536 CA3295E5",
+                    "E2F0C1D3 5D51A652 269CBC7C 46FC3B8F DE68332A 526A2A84",
+                    "74"
+                ],
+                [
+                    "0AEC25A4 621EDC06 88223FBB D478762B 1C2CDED3 360DCEE2",
+                    "3DD8B0E7 10E122D2 742C89B2 24333FA4 0DCED281 7742770B",
+                    "A10D67BD A503EE5E 578FB3D8 B8A1E533 7316213D A9284158",
+                    "9D"
+                ],
+                [
+                    "0D209D5A 223A9C46 916503FA 5A88325A 2554DC54 1B43DD93",
+                    "B5A95980 5F112985 7ED85C77 FA238CDC E8A1E2CA 4E512B64",
+                    "F59F4301 35945D13 7B08857F DDDFCF7A 43F47831 F982E501",
+                    "37"
+                ],
+                [
+                    "07D0D037 45736B7A 513D339D 5AD537B9 0421AD66 EB16722B",
+                    "589D82E2 055AB750 4FA83420 E8C27084 1F6824F4 7C180D13",
+                    "9E3AAFC1 98CAA72B 679DA59E D8226CF3 A594EEDC 58CF90BE",
+                    "E4"
+                ],
+                [
+                    "08967678 11BE65EA 25C2D05D FDD17AF8 A006F364 FC0841B0",
+                    "64155F14 E4C819A6 DF98F425 AE3A2864 F22C1FAB 8C74B261",
+                    "8B5BB40F A639F53D CCC9E884 017D9AA6 2B3D41FA EAFEB239",
+                    "86"
+                ],
+                [
+                    "035E2524 FF89029D 393A5C07 E84F981B 5E068F14 06BE8E50",
+                    "C87549B6 EF8ECA9A 9533A3F8 E69C31E9 7E1AD033 3EC71920",
+                    "5417300D 8C4AB33F 748E5AC6 6E84069C 55D667FF CB732718",
+                    "B6"
+                ]
+            ],
+            "n": [
+                "00000000 00000000 2386F8A9 25E2885E 233A9CCC 1615C0D6",
+                "C635387A 3F0B3CBE 003FAD6B C972C2E6 E741969D 34C4C920",
+                "16A85C7C D0562303 C4CCBE59 9467C24D A118A5FE 6FCD671C",
+                "01"
+            ],
+            "h": [
+                "170E915C B0A6B740 6B8D9404 2317F811 D6BC3FC6 E211ADA4",
+                "2E58CCFC B3AC076A 7E4499D7 00A0C23D C4B0C078 F92DEF8C",
+                "87B7FE63 E1EEA270 DB353A4E F4D38B59 98AD8F0D 042EA24C",
+                "8F02BE1C 0C83992F E5D77252 27BB2712 3A949E08 76C0A8CE",
+                "0A67326D B0E955DC B791B867 F31D6BFA 62FBDD5F 44A00504",
+                "DF04E186 FAE033F1 EB43C1B1 A08B6E08 6EFF03C8 FEE9EBDD",
+                "1E191A8A 4B0466C9 0B389987 DE5637D5 DD13DAB3 3196BD2E",
+                "5AFA6CD1 9CF0FC3F C7DB7ECE 1F3FAC74 2626B1B0 2FCEE040",
+                "43B2EA96 492F6AFA 51739597 C54BB78A A6B0B993 19FEF9D0",
+                "9F768831 018EE656 4C68D054 C62F2E0B 4549426F EC24AB26",
+                "957A669D BA2A2B69 45CE40C9 AEC6AFDE DA16C79E 15546CD7",
+                "771FA544 D5364236 690EA068 32679562 A6873142 0AE52D0D",
+                "35A90B8D 10B688E3 1B6AEE45 F45B7A50 83C71732 105852DE",
+                "CC888F64 839A4DE3 3B99521F 0984A418 D20FC7B0 609530E4",
+                "54F0696F A2A8075A C01CC8AE 3869E8D0 FE1F3788 FFAC4C01",
+                "AA2720E4 31DA333C 83D9663B FB1FB7A1 A7B90528 482C6BE7",
+                "89229903 0BB51A51 DC7E91E9 15687441 6BF4C26F 1EA7EC57",
+                "80585639 60EF92BB BB8632D3 A1B695F9 54AF10E9 A78E40AC",
+                "FFC13B06 540AAE9D A5287FC4 429485D4 4E6289D8 C0D6A3EB",
+                "2ECE3501 24527518 39FB48BC 14B51547 8E2FF412 D930AC20",
+                "307561F3 A5C998E6 BCBFEBD9 7EFFC643 3033A236 1BFCDC4F",
+                "C74AD379 A16C6DEA 49C209B1"
+            ]
         }
     },
     "BN158": {
@@ -2480,6 +2963,23 @@
             "seed": null
         }
     },
+    "CURVE1174": {
+        "name": "Curve1174",
+        "long_name": "Curve1174",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7",
+            "a": "1",
+            "d": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB61",
+            "x": "37FBB0CEA308C479343AEE7C029A190C021D96A492ECD6516123F27BCE29EDA",
+            "y": "6B72F82D47FB7CC6656841169840E0C4FE2DEE2AF3F976BA4CCB1BF9B46360E",
+            "n": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF77965C4DFD307348944D45FD166C971",
+            "h": "4"
+        }
+    },
     "CURVE25519": {
         "name": "Curve25519",
         "long_name": "Curve25519 Montgomery curve (255-bit prime field)",
@@ -2522,6 +3022,40 @@
             "h": [
                 "8"
             ]
+        }
+    },
+    "CURVE383187": {
+        "name": "Curve383187",
+        "long_name": "Curve383187",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "MONTGOMERY",
+        "parameter_numbers": {
+            "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF45",
+            "a": "38251",
+            "b": "1",
+            "u": "5",
+            "v": "1EEBE07DC1871896732B12D5504A32370471965C7A11F2C89865F855AB3CBD7C224E3620C31AF3370788457DD5CE46DF",
+            "n": "1000000000000000000000000000000000000000000000000E85A85287A1488ACD41AE84B2B7030446F72088B00A0E21",
+            "h": "8"
+        }
+    },
+    "CURVE41417": {
+        "name": "Curve41417",
+        "long_name": "Curve41417",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEF",
+            "a": "1",
+            "d": "E21",
+            "x": "1A334905141443300218C0631C326E5FCD46369F44C03EC7F57FF35498A4AB4D6D6BA111301A73FAA8537C64C4FD3812F3CBC595",
+            "y": "22",
+            "n": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEB3CC92414CF706022B36F1C0338AD63CF181B0E71A5E106AF79",
+            "h": "8"
         }
     },
     "CURVE448": {
@@ -2573,6 +3107,60 @@
             "h": [
                 "4"
             ]
+        }
+    },
+    "CURVE_22103": {
+        "name": "CURVE_22103",
+        "long_name": "CURVE_22103",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD",
+            "a": "155555555555555555555555555555555555555555555552174084FF",
+            "b": "1425ED097B425ED097B425ED097B425ED097B425ED0BBA9428427967",
+            "x": "CB476FE081B61F56A60B1D1B34FB7207D072EF25DADF377731049B0",
+            "y": "36429404D97E1E217BAD2E5601F6551F95D8FE9481BD454D1F3E7B6",
+            "n": "3FFFFFFFFFFFFFFFFFFFFFFFFFFF5CD04695A145C3067CF4AAE2025",
+            "h": "8",
+            "seed": null
+        }
+    },
+    "CURVE_4417": {
+        "name": "CURVE_4417",
+        "long_name": "CURVE_4417",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB",
+            "a": "4648D10B419379D50F4BA01869D9AE363285E01FE66920878EE075B0",
+            "b": "4C4DCEDFAC09383A0311B98EE9637415B9134B4115FDB760C1A3D419",
+            "x": "FF9D7EDD97D523012FFAACA32B7C90F1A8E026F21972C789A8484A2B",
+            "y": "3E9036ADC1A41FCE2F2CA08E2D1BE4F6D97E30CA7761DB1F3E2F2CE96",
+            "n": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFC4A75594D4923FC93D42713CDAF",
+            "h": "4",
+            "seed": null
+        }
+    },
+    "CURVE_67254": {
+        "name": "CURVE_67254",
+        "long_name": "CURVE_67254",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF97",
+            "a": "2E32419A32377AF8E7F03148A106D112C8C2E26D31A89F46B743DEED322C7ADC3024AFE4B5AFD8DB7180281586549F4A",
+            "b": "22F6EF3BE72A67FDC236D7173727CD2AF6D02A195753C44BDF451369B02EA0F963D9A775CAE6DC3AE9CCABB7F183C1AD",
+            "x": "141946416199FDDA96EC1F1AC80058AA3F0CE96B1BCD023E97BAE542FE3404B4738DB9B81A13698339387672ECA360C0",
+            "y": "D51BF79D968F4A076022E750F821058E2B5073697B639EDD355EBF8AD32352B1EFA9478DE7EB5662EF0D26EF6EEA795",
+            "n": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD5FB21F21E95EEE17C5E69281B102D2773E27E13FD3C9719",
+            "h": "4",
+            "seed": null
         }
     },
     "E382": {
@@ -2661,6 +3249,600 @@
             "h": [
                 "4"
             ]
+        }
+    },
+    "ED25519": {
+        "name": "Ed25519",
+        "long_name": "Ed25519",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFED",
+            "a": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEC",
+            "d": "52036CEE2B6FFE738CC740797779E89800700A4D4141D8AB75EB4DCA135978A3",
+            "x": "216936D3CD6E53FEC0A4E231FDD6DC5C692CC7609525A7B2C9562D608F25D51A",
+            "y": "6666666666666666666666666666666666666666666666666666666666666658",
+            "n": "1000000000000000000000000000000014DEF9DEA2F79CD65812631A5CF5D3ED",
+            "h": "8"
+        }
+    },
+    "ED448": {
+        "name": "Ed448",
+        "long_name": "Ed448",
+        "vulnerabilities": [],
+        "aliases": [
+            "Ed448-Goldilocks"
+        ],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "1",
+            "d": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6756",
+            "x": "4F1970C66BED0DED221D15A622BF36DA9E146570470F1767EA6DE324A3D3A46412AE1AF72AB66511433B80E18B00938E2626A82BC70CC05E",
+            "y": "693F46716EB6BC248876203756C9C7624BEA73736CA3984087789C1E05A0C2D73AD3FF1CE67C39C4FDBD132C4ED7C8AD9808795BF230FA14",
+            "n": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7CCA23E9C44EDB49AED63690216CC2728DC58F552378C292AB5844F3",
+            "h": "4"
+        }
+    },
+    "ED_254_MONT": {
+        "name": "ed-254-mont",
+        "long_name": "Mersenne ed-254",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "3F80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "3F80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE",
+            "d": "367B",
+            "x": "2AB1AA8E5574692F4AD85DD5FF160D8A4BF1EAF85593AFA58BC80F4BF6B82DE5",
+            "y": "23D017704F41794B63C3730E43470728703894241260F1ABD1E3084A294412C0",
+            "n": "FE03FFFFFFFFFFFFFFFFFFFFFFFFFFFEB95306C8BD62FB0EAF3D3FEC46E98C7",
+            "h": "4"
+        }
+    },
+    "ED_255_MERS": {
+        "name": "ed-255-mers",
+        "long_name": "Mersenne ed-255",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD03",
+            "a": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD02",
+            "d": "EA97",
+            "x": "65A27AB4B9AFCEB7D8155800B9FAC14209CE0CA60A87659AF23A5F334F78CE5D",
+            "y": "6B7BA9EB81FB7D15104E4007C82C73859E79A53225ACFF9653C8C38456FA6EEC",
+            "n": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDCF1A785EDA6832EAC49D1ED0436EB75",
+            "h": "4"
+        }
+    },
+    "ED_256_MONT": {
+        "name": "ed-256-mont",
+        "long_name": "Ed-256 Montgomery",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "FFA7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "FFA7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE",
+            "d": "350A",
+            "x": "2162E165186FB36258CB6F881BC0FD1E28159B6AA8DF44A0E1996BD5A22518EA",
+            "y": "E625421CDFBDCA90F36D3E16836D338842299E19E545B9FD3F453DE277418ED5",
+            "n": "3FE9FFFFFFFFFFFFFFFFFFFFFFFFFFFFB154BBAFB86733C966D92EDED8EC7BAB",
+            "h": "4"
+        }
+    },
+    "ED_382_MONT": {
+        "name": "ed-382-mont",
+        "long_name": "Ed-382 Montgomery",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "3FFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "3FFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE",
+            "d": "AF381",
+            "x": "1CD4AA84BC90A0B8DA6027F73666D73114E47C5A619CE8E02BFDF51B9A299FFD88E754069E61DB35EED120B7D20B1317",
+            "y": "3236D1A1FF2A7B7910563EFD3F3C497C90D60FD01126388AA621487A71EE6C1D71868012E735821371CFEC758AA3936C",
+            "n": "FFEBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD31AFAA1520DC177D8C1605C481E068269880369E5F3FA61",
+            "h": "4"
+        }
+    },
+    "ED_383_MERS": {
+        "name": "ed-383-mers",
+        "long_name": "Ed-383 Mersenne",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE5B",
+            "a": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE5A",
+            "d": "7FED6",
+            "x": "B8E1FED33FBEDEAEC4819DD6294950C4784048D2C64D19657B5D35472E529DC44A06C5AAEF2F881B693E3ADA1779F03",
+            "y": "A91B5013478744D763DC0DE9F6170F3AF477CEEC468BE6F5AC814142A39E721DA691153C291A3A0BD9C49824B3D5EAD",
+            "n": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF1109704E73D9FBBBCD5687C9EACA2206FFEBCEC1BA7C81D",
+            "h": "4"
+        }
+    },
+    "ED_384_MONT": {
+        "name": "ed-384-mont",
+        "long_name": "Ed-384 Montgomery",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "B0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "B0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE",
+            "d": "6F17",
+            "x": "843A9259779DC1207329746209A4B9AC4705B1C8EB357C412904F96680553A9DE0B9C9FDCA37037F55EB8C9BB21FAEE2",
+            "y": "711DF135EA7CCA0B5A833B6C940BCA469337805CE3470DAC2FF35470050DB11B1B886EBE436FDEB6EA891A3D951D335A",
+            "n": "2C3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF56D07E24E2749CD9F6B769AEC80F6FE06FE4E3A6332489B",
+            "h": "4"
+        }
+    },
+    "ED_510_MONT": {
+        "name": "ed-510-mont",
+        "long_name": "Ed-510 Montgomery",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "3EDDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "3EDDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE",
+            "d": "8DA1E",
+            "x": "16FD28489D8DC97823CEF15EF4B1F584F9FD19E688D2BC88431146172E67A5E4A86549C31FB529CFD63CFC6718AF0829802DE1DA3DCD1A3D65CC2F4BDC65D7C9",
+            "y": "18B75FF86BD3661F9C3735C538F7A27C015B3F18A92AECC8FEC57DE7B67F0A88926554ABEA322401F089F45EBC328B2FED563C7F7377EDF3383B3FA003596955",
+            "n": "FB77FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD7CED11E7C2F1ABF716DF42A6C246080B5FCC20917E59A42C85821CDF36D51B1",
+            "h": "4"
+        }
+    },
+    "ED_511_MERS": {
+        "name": "ed-511-mers",
+        "long_name": "Ed-511 Mersenne",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE1F",
+            "a": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE1E",
+            "d": "10BF7D",
+            "x": "2989E7FB43877BEC2440935D5F92D631B11CEB33AAE65658BC9539B326A7B4C2018740D09F0C1EBF8AB5B7D1FAF15D7FD5D240B3CC01D587FC09D62F9C996EFA",
+            "y": "4CABD08D4E8E78E8083878F475D5DFD251F468B21F3094FCD65C9A7955A4AE35AED2FDA7B6186D4453FD4898F984E50EC0A42C5601FB1FC18383F64FF81D5835",
+            "n": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEA7C34182E41E2E9BAA930E478C489B72542706BEC5F32194F7C2E8F8D142F11",
+            "h": "4"
+        }
+    },
+    "ED_512_MONT": {
+        "name": "ed-512-mont",
+        "long_name": "Ed-512 Montgomery",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "FE14FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "FE14FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE",
+            "d": "12A9C",
+            "x": "2D38A6904D04769603BA5EB824ACD30BBCB880A3256E8BE28E48DCD78F0C521749296A3EC9689865691210648581ABF3C997CEFDA14D4719B339BA4C084CEC94",
+            "y": "50034DF05B8AAABBF23683637AF3B09BC61CC16AB97170C5090EA6B40DF00C89365CBFF728F4D431DAE3D024DB4971F22A3AF22D71F7B2805C1C9F72FA8B7BD4",
+            "n": "3F853FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCCCFD59CDC33470D103060513F6DEF4D37D9AF21B2B2701FA331487ECB8DB605",
+            "h": "4"
+        }
+    },
+    "E_157": {
+        "name": "E-157",
+        "long_name": "E-157",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7B",
+            "a": "1",
+            "d": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5B6B",
+            "x": "5C86C66D57599FFE429901AC0B0D5A395A2E916",
+            "y": "14",
+            "n": "80000000000000000001436B102409ED8159947",
+            "h": "4"
+        }
+    },
+    "E_190": {
+        "name": "E-190",
+        "long_name": "E-190",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDF",
+            "a": "1",
+            "d": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC2FF",
+            "x": "1D151E0FDF75EF1CAA5737BEC84C33264C9F3F9FFB4D217F",
+            "y": "9",
+            "n": "100000000000000000000000237598721BE820B70A837665",
+            "h": "4"
+        }
+    },
+    "E_222": {
+        "name": "E-222",
+        "long_name": "E-222",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8B",
+            "a": "1",
+            "d": "27166",
+            "x": "19B12BB156A389E55C9768C303316D07C23ADAB3736EB2BC3EB54E51",
+            "y": "1C",
+            "n": "FFFFFFFFFFFFFFFFFFFFFFFFFFFF70CBC95E932F802F31423598CBF",
+            "h": "4"
+        }
+    },
+    "FOURQ": {
+        "name": "FourQ",
+        "long_name": "FourQ twisted Edwards curve (127-bit prime field, quadratic extension)",
+        "vulnerabilities": [],
+        "aliases": [
+            "Curve4Q"
+        ],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS_EXTENSION",
+        "parameter_numbers": {
+            "p": [
+                "7FFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF"
+            ],
+            "reduction_polynomial_constants": [
+                [
+                    [
+                        "00000000 00000000 00000000 00000001"
+                    ]
+                ]
+            ],
+            "a": [
+                [
+                    "7FFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000"
+                ]
+            ],
+            "d": [
+                [
+                    "00000000 000000E4 00000000 00000142"
+                ],
+                [
+                    "5E472F84 6657E0FC B3821488 F1FC0C8D"
+                ]
+            ],
+            "x": [
+                [
+                    "1A347223 7C2FB305 286592AD 7B3833AA"
+                ],
+                [
+                    "1E1F553F 2878AA9C 96869FB3 60AC77F6"
+                ]
+            ],
+            "y": [
+                [
+                    "0E3FEE9B A120785A B924A246 2BCBB287"
+                ],
+                [
+                    "6E1C4AF8 630E0242 49A7C344 844C8B5C"
+                ]
+            ],
+            "n": [
+                "29CBC14E 5E0A72F0 5397829C BC14E5DF BD004DFE 0F79992F",
+                "B2540EC7 768CE7"
+            ],
+            "h": [
+                "00000000 00000000 00000000 00000188"
+            ]
+        }
+    },
+    "FP224BN": {
+        "name": "Fp224BN",
+        "long_name": "Fp224BN Barreto-Naehrig curve (224-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "DRAFT_KASAMATSU_BNCURVES"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFF10728 8EC29E60 2C4520DB 42180823 BB907D12",
+                "87127833"
+            ],
+            "a": [
+                "00"
+            ],
+            "b": [
+                "03"
+            ],
+            "x": [
+                "01"
+            ],
+            "y": [
+                "02"
+            ],
+            "n": [
+                "FFFFFFFF FFF10728 8EC29E60 2C4420DB 4218082B 36C2ACCF",
+                "F76C58ED"
+            ],
+            "h": [
+                "01"
+            ],
+            "seed": null
+        }
+    },
+    "FP254BNA": {
+        "name": "Fp254BNa",
+        "long_name": "Fp254BNa Barreto-Naehrig curve (254-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "DRAFT_KASAMATSU_BNCURVES"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": [
+                "2370FB04 9D410FBE 4E761A98 86E50241 7D023F40 18000001",
+                "7E806000 00000001"
+            ],
+            "a": [
+                "00"
+            ],
+            "b": [
+                "05"
+            ],
+            "x": [
+                "01"
+            ],
+            "y": [
+                "0D45589B 158FAAF6 AB0E4AD3 8D998E99 82E7FF63 964EE146",
+                "0342A592 677CCCB0"
+            ],
+            "n": [
+                "2370FB04 9D410FBE 4E761A98 86E50241 1DC1AF70 12000001",
+                "7E806000 00000001"
+            ],
+            "h": [
+                "01"
+            ],
+            "seed": null
+        }
+    },
+    "FP254BNC": {
+        "name": "Fp254BNc",
+        "long_name": "Fp254BNc",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "DRAFT_KASAMATSU_BNCURVES"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "240120DB6517014EFA0BAB3696F8D5F06E8A555614F464BABE9DBBFEEEB4A713",
+            "a": "0",
+            "b": "2",
+            "x": "240120DB6517014EFA0BAB3696F8D5F06E8A555614F464BABE9DBBFEEEB4A712",
+            "y": "1",
+            "n": "240120DB6517014EFA0BAB3696F8D5F00E88D43492B2CB363A75777E8D30210D",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "FP254BND": {
+        "name": "Fp254BNd",
+        "long_name": "Fp254BNd",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "DRAFT_KASAMATSU_BNCURVES"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "24000482410F5AADB74E200F3B89D00081CF93E428F0D651E8B2DC2BB460A48B",
+            "a": "0",
+            "b": "2",
+            "x": "24000482410F5AADB74E200F3B89D00081CF93E428F0D651E8B2DC2BB460A48A",
+            "y": "1",
+            "n": "24000482410F5AADB74E200F3B89D00021CF8DE127B73833D7FB71A511AA2BF5",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "FP254N2BNA": {
+        "name": "Fp254n2BNa",
+        "long_name": "Fp254n2BNa sextic twist of Fp254BNa (254-bit prime field, quadratic extension)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_EXTENSION",
+        "parameter_numbers": {
+            "p": [
+                "2370FB04 9D410FBE 4E761A98 86E50241 7D023F40 18000001",
+                "7E806000 00000001"
+            ],
+            "reduction_polynomial_constants": [
+                [
+                    [
+                        "00000000 00000000 00000000 00000000 00000000 00000000",
+                        "00000000 00000005"
+                    ]
+                ]
+            ],
+            "a": [
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000"
+                ],
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000"
+                ]
+            ],
+            "b": [
+                [
+                    "00000000 00000000 00000000 00000000 00000000 00000000",
+                    "00000000 00000000"
+                ],
+                [
+                    "2370FB04 9D410FBE 4E761A98 86E50241 7D023F40 18000001",
+                    "7E806000 00000000"
+                ]
+            ],
+            "x": [
+                [
+                    "19B0BEA4 AFE4C330 DA93CC35 33DA38A9 F430B471 C6F8A536",
+                    "E81962ED 967909B5"
+                ],
+                [
+                    "0A1CF585 585A61C6 E9880B1F 2A5C539F 7D906FFF 238FA634",
+                    "1E1DE1A2 E45C3F72"
+                ]
+            ],
+            "y": [
+                [
+                    "17ABD366 EBBD6533 3E49C711 A80A0CF6 D24ADF1B 9B3990EE",
+                    "DCC91731 384D2627"
+                ],
+                [
+                    "0EE97D6D E9902A27 D00E9522 32A78700 863BC9AA 9BE960C3",
+                    "2F5BF9FD 0A32D345"
+                ]
+            ],
+            "n": [
+                "2370FB04 9D410FBE 4E761A98 86E50241 1DC1AF70 12000001",
+                "7E806000 00000001"
+            ],
+            "h": [
+                "2370FB04 9D410FBE 4E761A98 86E50241 DC42CF10 1E000001",
+                "7E806000 00000001"
+            ]
+        }
+    },
+    "FP256BN": {
+        "name": "Fp256BN",
+        "long_name": "Fp256BN Barreto-Naehrig curve (256-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "DRAFT_KASAMATSU_BNCURVES"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFCF0CD 46E5F25E EE71A49F 0CDC65FB 12980A82",
+                "D3292DDB AED33013"
+            ],
+            "a": [
+                "00"
+            ],
+            "b": [
+                "03"
+            ],
+            "x": [
+                "01"
+            ],
+            "y": [
+                "02"
+            ],
+            "n": [
+                "FFFFFFFF FFFCF0CD 46E5F25E EE71A49E 0CDC65FB 1299921A",
+                "F62D536C D10B500D"
+            ],
+            "h": [
+                "01"
+            ],
+            "seed": null
+        }
+    },
+    "FP384BN": {
+        "name": "Fp384BN",
+        "long_name": "Fp384BN Barreto-Naehrig curve (384-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "DRAFT_KASAMATSU_BNCURVES"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFF2A968 23D5920D 2A127E3F 6FBCA024",
+                "C8FBE295 31892C79 534F9D30 63282615 50A7CABD 7CCCD10B"
+            ],
+            "a": [
+                "00"
+            ],
+            "b": [
+                "03"
+            ],
+            "x": [
+                "01"
+            ],
+            "y": [
+                "02"
+            ],
+            "n": [
+                "FFFFFFFF FFFFFFFF FFF2A968 23D5920D 2A127E3F 6FBCA023",
+                "C8FBE295 31892C79 5356487D 8AC63E4F 4DB17384 341A5775"
+            ],
+            "h": [
+                "01"
+            ],
+            "seed": null
+        }
+    },
+    "FP512BN": {
+        "name": "Fp512BN",
+        "long_name": "Fp512BN Barreto-Naehrig curve (512-bit prime field)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "DRAFT_KASAMATSU_BNCURVES"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFF9EC7F 01C60BA1 D8CB5307",
+                "C0BBE3C1 11B0EF45 5146CF1E ACBE98B8 E48C65DE AB236FE1",
+                "916A55CE 5F4C6467 B4EB2809 22ADEF33"
+            ],
+            "a": [
+                "00"
+            ],
+            "b": [
+                "03"
+            ],
+            "x": [
+                "01"
+            ],
+            "y": [
+                "02"
+            ],
+            "n": [
+                "FFFFFFFF FFFFFFFF FFFFFFFF FFF9EC7F 01C60BA1 D8CB5307",
+                "C0BBE3C1 11B0EF44 5146CF1E ACBE98B8 E48C65DE AB2679A3",
+                "4A10313E 04F9A2B4 06A64A5F 519A09ED"
+            ],
+            "h": [
+                "01"
+            ],
+            "seed": null
         }
     },
     "GC256A": {
@@ -3068,6 +4250,25 @@
             "seed": null
         }
     },
+    "JUBJUB": {
+        "name": "JubJub",
+        "long_name": "JubJub",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "ZCASH"
+        ],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "73EDA753299D7D483339D80809A1D80553BDA402FFFE5BFEFFFFFFFF00000001",
+            "a": "73EDA753299D7D483339D80809A1D80553BDA402FFFE5BFEFFFFFFFF00000000",
+            "d": "2A9318E74BFA2B48F5FD9207E6BD7FD4292D7F6D37579D2601065FD6D6343EB1",
+            "x": "5183972AF8EFF38CA624B4DF00384882000C546BF2F39EDE7F4ECF1A74F976C4",
+            "y": "3B43F8472CA2FC2C9E8FCC5ABD9DC308096C8707FFA6833B146BAD709349702E",
+            "n": "E7DB4EA6533AFA906673B0101343B00A6682093CCC81082D0970E5ED6F72CB7",
+            "h": "8"
+        }
+    },
     "M383": {
         "name": "M383",
         "long_name": "M383 Montgomery curve (383-bit prime field)",
@@ -3156,6 +4357,373 @@
             ]
         }
     },
+    "MDC201601": {
+        "name": "MDC201601",
+        "long_name": "MDC201601",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "MILLION_DOLLAR_CURVE"
+        ],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "C04809F16AA3246DCFD6B60183E407A9C1DF20818CBB73B7F605FF2BA3E05D3F",
+            "a": "1",
+            "d": "9053E26C5D7685C401C03568F5D7DD9991A71F2E0503278C33646F45F04E5FB6",
+            "x": "9C20989F159A5D3165F6458701B240646EE235EF26112D488F016749CEADE645",
+            "y": "9B8E8FC5BDAA790C70E0200421A2BC56AEEF11DB38CB80D5A5B7CB489281BF5B",
+            "n": "3012027C5AA8C91B73F5AD8060F901EA69779A1818BCAEEDA773F650739CB60D",
+            "h": "4"
+        }
+    },
+    "MNT1": {
+        "name": "mnt1",
+        "long_name": "MNT Curve 1",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "26DCCACC5041939206CF2B7DEC50950E3C9FA4827AF",
+            "a": "22FFBB20CC052993FA27DC507800B624C650E4FF3D2",
+            "b": "1C7BE6FA8DA953B5624EFC72406AF7FA77499803D08",
+            "x": "106B415D7B4A2D71659AE97440CBB20A6DE42D76D69",
+            "y": "100580A1C7597BA084B50F3D0A2FC1BF500BC145C2C",
+            "n": "A60FD646AD409B3312C3B23BA64E082AD7B354D",
+            "h": "3BE9",
+            "seed": null
+        }
+    },
+    "MNT2_1": {
+        "name": "mnt2/1",
+        "long_name": "MNT Curve 2 Variant 1",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "5AFFFFFFFFFFFF4B46081000000059BB1BF600B7",
+            "a": "3DD24A7E5C0BDFACCC215E22760469C73EE9D879",
+            "b": "478C31A992B294E19F6E4416F958646DDDEDE5E3",
+            "x": "2",
+            "y": "19633576A1D83FCF42BC7618B3D1E64E2DFF63F9",
+            "n": "5AFFFFFFFFFFFF4B46081000000059BB1BF600B5",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "MNT2_2": {
+        "name": "mnt2/2",
+        "long_name": "MNT Curve 2 Variant 2",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "5AFFFFFFFFFFFF4B46081000000059BB1BF600B7",
+            "a": "7B29491C1A02CD87844F5098D0381F6C45D6523",
+            "b": "41CC630BD66AC817D43358B108AD3D214037993C",
+            "x": "2",
+            "y": "290968968A8AEAFDA0174660EDB4D198D7BD7ED0",
+            "n": "5AFFFFFFFFFFFF4B46081000000059BB1BF600B5",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "MNT3_1": {
+        "name": "mnt3/1",
+        "long_name": "MNT Curve 3 Variant 1",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "8AFFFFFFFFFFFEEB0FA77000000089F0DD49FAC7",
+            "a": "6D01FD0A017C62075AE999977379867E07F2A6D4",
+            "b": "7701535C00FD965341D38BBA4CFBDCF9A4651825",
+            "x": "0",
+            "y": "3DB851712C5D90D6114594426BDCD2420A0146F0",
+            "n": "8AFFFFFFFFFFFEEB0FA77000000089F0DD49FAC5",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "MNT3_2": {
+        "name": "mnt3/2",
+        "long_name": "MNT Curve 3 Variant 2",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "8AFFFFFFFFFFFEEB0FA77000000089F0DD49FAC7",
+            "a": "5FBE0085BD2B23AFCD5B9C7704AEED2BFDBE89E4",
+            "b": "3FD4005928C76D1FDE3D12FA031F48C7FE7F0698",
+            "x": "1",
+            "y": "35877138C434D26123A4FC7EC0F368417FF5308C",
+            "n": "8AFFFFFFFFFFFEEB0FA77000000089F0DD49FAC5",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "MNT3_3": {
+        "name": "mnt3/3",
+        "long_name": "MNT Curve 3 Variant 3",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "8AFFFFFFFFFFFEEB0FA77000000089F0DD49FAC7",
+            "a": "2DDF23ACB05A91BDA6BA9C20D7A584AA25075CE0",
+            "b": "1F8125C46A31E79FD6CC25298B23AB130CD22B5A",
+            "x": "2",
+            "y": "318D3D8BA28EF7DAA80C59688C9D680F66907048",
+            "n": "8AFFFFFFFFFFFEEB0FA77000000089F0DD49FAC5",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "MNT4": {
+        "name": "mnt4",
+        "long_name": "MNT Curve 4",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "A2FFFFFFFFFFFFFFFFFFFFFFFFC298B00000000000000000000005C866CF",
+            "a": "4BE28760AA064734852CB4FF51EF2928A7A3CD75087C35CB1433714F7407",
+            "b": "329704EB1C042F7858C878AA369F70C5C517DE4E05A823DCB8224B8A4D5A",
+            "x": "1",
+            "y": "45535BC317053676E2E623B9832D7AE1395EA54B443E3049CD8BB44F1E0E",
+            "n": "A2FFFFFFFFFFFFFFFFFFFFFFFFC298B00000000000000000000005C866CD",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "MNT5_1": {
+        "name": "mnt5/1",
+        "long_name": "MNT Curve 5 Variant 1",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "D2FFFFFFFFFFFFFFFFFFFFFFFE9058D000000000000000000000A0271007",
+            "a": "D149265D4687DCAB1F2046E0947E51AC5E8E7F25916D35539D4DF2E9017A",
+            "b": "489E7783A1F584712BD4F6D48CF2D1CA2C975678936E639083991C5FC369",
+            "x": "0",
+            "y": "374AFA2D4EBCDF438F0057D15739E54BE1E3285CEBDAD6655564F2D7A207",
+            "n": "D2FFFFFFFFFFFFFFFFFFFFFFFE9058D000000000000000000000A0271005",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "MNT5_2": {
+        "name": "mnt5/2",
+        "long_name": "MNT Curve 5 Variant 2",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "D2FFFFFFFFFFFFFFFFFFFFFFFE9058D000000000000000000000A0271007",
+            "a": "26CAACED434C5A4C2C9C1B09E0DDC167548A95516E7C81B20702485C9809",
+            "b": "6031C89E2CDD91881DBD675BEAC3F3DF8DB1B8E0F45301215A01BAF56AB3",
+            "x": "0",
+            "y": "188005E882D7AE31647481F91AD1A69D898588EAE39AA7198119B764C60D",
+            "n": "D2FFFFFFFFFFFFFFFFFFFFFFFE9058D000000000000000000000A0271005",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "MNT5_3": {
+        "name": "mnt5/3",
+        "long_name": "MNT Curve 5 Variant 3",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "D2FFFFFFFFFFFFFFFFFFFFFFFE9058D000000000000000000000A0271007",
+            "a": "44CFC0F3BC92EC82F818B443B564CF25DEE3EBAE7902E370F9E80283D3BD",
+            "b": "2DDFD5F7D30C9DACA565CD8278EDDF6E9497F27450AC97A0A69AAC57E27E",
+            "x": "0",
+            "y": "495E34680E6DB567B3526EFB514CD684E83B0DD69F14F84FA7173C3A74D8",
+            "n": "D2FFFFFFFFFFFFFFFFFFFFFFFE9058D000000000000000000000A0271005",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "M_159": {
+        "name": "M-159",
+        "long_name": "M-159",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "MONTGOMERY",
+        "parameter_numbers": {
+            "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA5",
+            "a": "30496",
+            "b": "1",
+            "u": "3",
+            "v": "340D4CA2BB8DFAEFD89B1AAADA57760F28D0953",
+            "n": "10000000000000000000171B19C77652F2A6CF9F",
+            "h": "8"
+        }
+    },
+    "M_191": {
+        "name": "M-191",
+        "long_name": "M-191",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "MONTGOMERY",
+        "parameter_numbers": {
+            "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFED",
+            "a": "-44C8E",
+            "b": "1",
+            "u": "B",
+            "v": "30D7CE36A5FB5C14EAEBB8D109CAC48370D71A9F307071F3",
+            "n": "10000000000000000000000019614DB0EE142440F4CC2BED",
+            "h": "8"
+        }
+    },
+    "M_221": {
+        "name": "M-221",
+        "long_name": "M-221",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "MONTGOMERY",
+        "parameter_numbers": {
+            "p": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD",
+            "a": "1C93A",
+            "b": "1",
+            "u": "4",
+            "v": "F7ACDD2A4939571D1CEF14ECA37C228E61DBFF10707DC6C08C5056D",
+            "n": "40000000000000000000000000015A08ED730E8A2F77F005042605B",
+            "h": "8"
+        }
+    },
+    "NUMSP256D1": {
+        "name": "numsp256d1",
+        "long_name": "numsp256d1",
+        "vulnerabilities": [],
+        "aliases": [
+            "w-256-mers"
+        ],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF43",
+            "a": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF40",
+            "b": "25581",
+            "x": "1",
+            "y": "696F1853C1E466D7FC82C96CCEEEDD6BD02C2F9375894EC10BF46306C2B56C77",
+            "n": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE43C8275EA265C6020AB20294751A825",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "NUMSP256T1": {
+        "name": "numsp256t1",
+        "long_name": "numsp256t1",
+        "vulnerabilities": [],
+        "aliases": [
+            "ed-256-mers"
+        ],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF43",
+            "a": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF42",
+            "d": "3BEE",
+            "x": "D",
+            "y": "7D0AB41E2A1276DBA3D330B39FA046BFBE2A6D63824D303F707F6FB5331CADBA",
+            "n": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBE6AA55AD0A6BC64E5B84E6F1122B4AD",
+            "h": "4"
+        }
+    },
+    "NUMSP384D1": {
+        "name": "numsp384d1",
+        "long_name": "numsp384d1",
+        "vulnerabilities": [],
+        "aliases": [
+            "w-384-mers"
+        ],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEC3",
+            "a": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEC0",
+            "b": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF77BB",
+            "x": "2",
+            "y": "3C9F82CB4B87B4DC71E763E0663E5DBD8034ED422F04F82673330DC58D15FFA2B4A3D0BAD5D30F865BCBBF503EA66F43",
+            "n": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD61EAF1EEB5D6881BEDA9D3D4C37E27A604D81F67B0E61B9",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "NUMSP384T1": {
+        "name": "numsp384t1",
+        "long_name": "numsp384t1",
+        "vulnerabilities": [],
+        "aliases": [
+            "ed-384-mers"
+        ],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEC3",
+            "a": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEC2",
+            "d": "5158A",
+            "x": "8",
+            "y": "749CDABA136CE9B65BD4471794AA619DAA5C7B4C930BFF8EBD798A8AE753C6D72F003860FEBABAD534A4ACF5FA7F5BEE",
+            "n": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECD7D11ED5A259A25A13A0458E39F4E451D6D71F70426E25",
+            "h": "4"
+        }
+    },
+    "NUMSP512D1": {
+        "name": "numsp512d1",
+        "long_name": "numsp512d1",
+        "vulnerabilities": [],
+        "aliases": [
+            "w-512-mers"
+        ],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDC7",
+            "a": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDC4",
+            "b": "1D99B",
+            "x": "2",
+            "y": "1C282EB23327F9711952C250EA61AD53FCC13031CF6DD336E0B9328433AFBDD8CC5A1C1F0C716FDC724DDE537C2B0ADB00BB3D08DC83755B205CC30D7F83CF28",
+            "n": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5B3CA4FB94E7831B4FC258ED97D0BDC63B568B36607CD243CE153F390433555D",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "NUMSP512T1": {
+        "name": "numsp512t1",
+        "long_name": "numsp512t1",
+        "vulnerabilities": [],
+        "aliases": [
+            "ed-512-mers"
+        ],
+        "sources": [],
+        "parameter_form": "TWISTED_EDWARDS",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDC7",
+            "a": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDC6",
+            "d": "9BAA8",
+            "x": "20",
+            "y": "7D67E841DC4C467B605091D80869212F9CEB124BF726973F9FF048779E1D614E62AE2ECE5057B5DAD96B7A897C1D72799261134638750F4F0CB91027543B1C5E",
+            "n": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA7E50809EFDABBB9A624784F449545F0DCEA5FF0CB800F894E78D1CB0B5F0189",
+            "h": "4"
+        }
+    },
     "OAKLEY_GROUP_3": {
         "name": "Oakley Group 3",
         "long_name": "Third Oakley Group (binary field GF(2^155))",
@@ -3242,6 +4810,26 @@
             "seed": null
         }
     },
+    "PALLAS": {
+        "name": "Pallas",
+        "long_name": "Pallas",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "ZCASH"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "40000000000000000000000000000000224698FC094CF91B992D30ED00000001",
+            "a": "0",
+            "b": "5",
+            "x": "40000000000000000000000000000000224698FC094CF91B992D30ED00000000",
+            "y": "2",
+            "n": "40000000000000000000000000000000224698FC0994A8DD8C46EB2100000001",
+            "h": "1",
+            "seed": null
+        }
+    },
     "PRIME192V1": {
         "name": "prime192v1",
         "long_name": "prime192v1 elliptic curve (192-bit prime field)",
@@ -3250,7 +4838,8 @@
             "SECP192R1",
             "P-192",
             "ECPRGF192Random",
-            "ANSIP192R1"
+            "ANSIP192R1",
+            "192-bit Random ECP Group"
         ],
         "sources": [
             "RFC_4492",
@@ -3482,7 +5071,8 @@
         "aliases": [
             "SECP256R1",
             "P-256",
-            "ECPRGF256Random"
+            "ECPRGF256Random",
+            "256-bit Random ECP Group"
         ],
         "sources": [
             "RFC_4492",
@@ -3875,7 +5465,8 @@
             "P-224",
             "WAP-WSG-IDM-ECID-WTLS12",
             "ANSIP224R1",
-            "ECPRGF224Random"
+            "ECPRGF224Random",
+            "224-bit Random ECP Group"
         ],
         "sources": [
             "RFC_4492",
@@ -3973,7 +5564,8 @@
         "aliases": [
             "P-384",
             "ANSIP384R1",
-            "ECPRGF384Random"
+            "ECPRGF384Random",
+            "384-bit Random ECP Group"
         ],
         "sources": [
             "RFC_4492",
@@ -4026,7 +5618,8 @@
         "aliases": [
             "P-521",
             "ANSIP521R1",
-            "ECPRGF521Random"
+            "ECPRGF521Random",
+            "521-bit Random ECP Group"
         ],
         "sources": [
             "RFC_4492",
@@ -5089,6 +6682,262 @@
             "seed": null
         }
     },
+    "SSC_160": {
+        "name": "ssc-160",
+        "long_name": "MIRACL Standard Secure Curve (160-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "C90FDAA22168C234C4C6628B80DC1CD129024E1F",
+            "a": "C90FDAA22168C234C4C6628B80DC1CD129024E1C",
+            "b": "ADF85458A2BB4A9AAFDC5620273D3CF1D8B9C841",
+            "x": "0",
+            "y": "435BF9217F691E5B430A3D21DB2B24EB18BE38FE",
+            "n": "C90FDAA22168C234C4C5D89F4F2DD72349EE61F7",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "SSC_192": {
+        "name": "ssc-192",
+        "long_name": "MIRACL Standard Secure Curve (192-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CD13",
+            "a": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CD10",
+            "b": "ADF85458A2BB4A9AAFDC5620273D3CF1D8B9C583CE2D36A6",
+            "x": "0",
+            "y": "44EA83C359A0936597C81D378CD6A39C835B09A53BAA5FE1",
+            "n": "C90FDAA22168C234C4C6628C5DCA19490DD3E6FD7979A7A3",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "SSC_224": {
+        "name": "ssc-224",
+        "long_name": "MIRACL Standard Secure Curve (224-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEDF",
+            "a": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEDC",
+            "b": "ADF85458A2BB4A9AAFDC5620273D3CF1D8B9C583CE2D3695A9E13A03",
+            "x": "0",
+            "y": "5B7687E285EC86E26DFD84F0F2E2D409391595F7F9B40CCA9D0D20C",
+            "n": "C90FDAA22168C234C4C6628B80DD2439BE5B2B827A9FFBEA7240E5CD",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "SSC_256": {
+        "name": "ssc-256",
+        "long_name": "MIRACL Standard Secure Curve (256-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139C0B",
+            "a": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139C08",
+            "b": "ADF85458A2BB4A9AAFDC5620273D3CF1D8B9C583CE2D3695A9E13641146434E1",
+            "x": "1",
+            "y": "5266EFDF704821EEEAE4345E7126DFAB8DDF93DFD61DE1886EB7254BB80D57E5",
+            "n": "C90FDAA22168C234C4C6628B80DC1CD0FBEC42E940B37A88D9CAECA198A64437",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "SSC_288": {
+        "name": "ssc-288",
+        "long_name": "MIRACL Standard Secure Curve (288-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A098B",
+            "a": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A0988",
+            "b": "ADF85458A2BB4A9AAFDC5620273D3CF1D8B9C583CE2D3695A9E13641146433FBCC939F36",
+            "x": "2",
+            "y": "525435933CB96A56F3B8E7D2A5A08684F4D1DAF8DCA831BAC3D9E357B584D869680C6410",
+            "n": "C90FDAA22168C234C4C6628B80DC1CD12903BA214366757B7A5240B2A637E2065A850855",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "SSC_320": {
+        "name": "ssc-320",
+        "long_name": "MIRACL Standard Secure Curve (320-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A08798E3408B3",
+            "a": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A08798E3408B0",
+            "b": "ADF85458A2BB4A9AAFDC5620273D3CF1D8B9C583CE2D3695A9E13641146433FBCC939DCE249B40A4",
+            "x": "0",
+            "y": "372048712760DF5F30A6F29652C0F5A5F20DCCC148ED35F6E99AAB1BD276E1A2C1E4B5304FDCA0DA",
+            "n": "C90FDAA22168C234C4C6628B80DC1CD129024E09489BD44FDA941042CCCC7286009777663BB29671",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "SSC_384": {
+        "name": "ssc-384",
+        "long_name": "MIRACL Standard Secure Curve (384-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A08798E3404DDEF9519B3CD3A437B",
+            "a": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A08798E3404DDEF9519B3CD3A4378",
+            "b": "ADF85458A2BB4A9AAFDC5620273D3CF1D8B9C583CE2D3695A9E13641146433FBCC939DCE249B3EF97D2FE363630C7791",
+            "x": "0",
+            "y": "C55A6005731FD26331FAD633D2248F1AA81A7176120B8D978206937F43F359D64EC9A42A1E6BBEFD4E5DC7AE7B0CFCB",
+            "n": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC73B7669162524B60C73EE73E6DFE7059F510370FE7870D8599",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "SSC_512": {
+        "name": "ssc-512",
+        "long_name": "MIRACL Standard Secure Curve (512-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A08798E3404DDEF9519B3CD3A431B302B0A6DF25F14374FE1356D6D51C5EF",
+            "a": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A08798E3404DDEF9519B3CD3A431B302B0A6DF25F14374FE1356D6D51C5EC",
+            "b": "ADF85458A2BB4A9AAFDC5620273D3CF1D8B9C583CE2D3695A9E13641146433FBCC939DCE249B3EF97D2FE363630C75D8F681B202AEC4617AD3DF1ED5D5FD6A8D",
+            "x": "1",
+            "y": "300DF8FDD73E5ECA6C547355CB46E332EA09414413973390C5A4A8044DA455CA393B063A8998373E9990903FB9F5BE1A9CEEBFF0E5BB9B10D3E46E27E651FB92",
+            "n": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B235A2359C4AFBC9EB7987F1C9AB37E42599188C4B7DC6269B830D80897F57A5F71",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "TOM_256": {
+        "name": "Tom-256",
+        "long_name": "Tom (256-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FFFFFFFF0000000100000000000000017E72B42B30E7317793135661B1C4B117",
+            "a": "776679E96D94AFF61A5FB6D256DECE8A9162868D9A3FCBCEAD27946509C31405",
+            "b": "C0450ED15E63704C6DFDD9BE22FD6BBDFE5F4CCBC43C4D88A2EC905A2AF4FEF7",
+            "x": "2",
+            "y": "563B74484DDDA63CD63270827428D939B7B7864FCC743D68EB3B1D421F9B3D98",
+            "n": "FFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "TOM_384": {
+        "name": "Tom-384",
+        "long_name": "Tom (384-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEAF5F689F8669FB41B08D5F5EDFFD26599C434BBD978917C5",
+            "a": "821DFDC940E7F074AC481F8B2870C48962CCE56ABD72DFC42813A944CEA15DF78DC0A2D97FBF031ED26C9076826940BA",
+            "b": "9B5B584B655FDCB087D37F8C4FEE893C0499223DB5E004C674EA0DEE48A4EC0C9E9F684099F2A51C62A2CCE400CB1E4B",
+            "x": "2",
+            "y": "6877D000515D0D307A0934E1D383FEF5E38F5E0CA1C44B6BD00AA758298F5CD0E2B41028046866EE020BC04D2E59E8B",
+            "n": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFF0000000000000000FFFFFFFF",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "TOM_521": {
+        "name": "Tom-521",
+        "long_name": "Tom (521-bit)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "200000000000000000000000000000000000000000000000000000000000000002C54BE78524C33584F734A266748B2063ACCF5028E6778DC5056476D0690853249",
+            "a": "EF6432C21701CC48C63FB9263E14BA76D4A94BA14D173B134E3032B0E2E543180EB6725125992A7D00162A5F57D21918B0766364EEB53C53BB12F405DAC1D527E2",
+            "b": "3CBC65D1E0245D79703B18E9AAEA1AC6D67F87A2CD4BD84B9E6DF6A45A979C481825CA5A857270FC890352F9FAC7FD6020DEAABB28D099718F0F77A4EEC222871D",
+            "x": "0",
+            "y": "F554773EEAA1F476E77888C5DF8E8D766C6DAE01AD54FFE6982AE7AE772E4A80E7C3DEC699AA6D3FD93C1D2B019519CD1C627939A52D30F14A7B67725E7C13471C",
+            "n": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "TWEEDLEDEE": {
+        "name": "Tweedledee",
+        "long_name": "Tweedledee",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "DAIRA_EMMA_HOPWOOD"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "40000000000000000000000000000000038AA127696286C9842CAFD400000001",
+            "a": "0",
+            "b": "5",
+            "x": "40000000000000000000000000000000038AA127696286C9842CAFD400000000",
+            "y": "2",
+            "n": "40000000000000000000000000000000038AA1276C3F59B9A14064E200000001",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "TWEEDLEDUM": {
+        "name": "TWEEDLEDUM",
+        "long_name": "TWEEDLEDUM",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "40000000000000000000000000000000038AA1276C3F59B9A14064E200000001",
+            "a": "0",
+            "b": "5",
+            "x": "14733B283272574E23931F358A0354B7BCD5C765CC1FCEACC3B3D1A0C495C9E",
+            "y": "D27E5D5B7C3AFAED0754EA62B947B23546EBF597530A7369EDC466E456761D8",
+            "n": "40000000000000000000000000000000038AA127696286C9842CAFD400000001",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "VESTA": {
+        "name": "Vesta",
+        "long_name": "Vesta",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "ZCASH"
+        ],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "40000000000000000000000000000000224698FC0994A8DD8C46EB2100000001",
+            "a": "0",
+            "b": "5",
+            "x": "40000000000000000000000000000000224698FC0994A8DD8C46EB2100000000",
+            "y": "2",
+            "n": "40000000000000000000000000000000224698FC094CF91B992D30ED00000001",
+            "h": "1",
+            "seed": null
+        }
+    },
     "WAP_WSG_IDM_ECID_WTLS1": {
         "name": "wap-wsg-idm-ecid-wtls1",
         "long_name": "wap-wsg-idm-ecid-wtls1 elliptic curve (binary field GF(2^113))",
@@ -5197,6 +7046,168 @@
             "h": [
                 "1"
             ],
+            "seed": null
+        }
+    },
+    "W_254_MONT": {
+        "name": "w-254-mont",
+        "long_name": "W-254 Montgomery",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "3F80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "3F80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC",
+            "b": "3F80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD08D",
+            "x": "2",
+            "y": "140E3FD33B2E56014AE15A75BD778AEBDFB738E3F8511931AD65DF37F90D4EBC",
+            "n": "3F80FFFFFFFFFFFFFFFFFFFFFFFFFFFFEB818BEA0DA375C06FA419C4AF8DF83F",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "W_255_MERS": {
+        "name": "w-255-mers",
+        "long_name": "W-255 Mersenne",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD03",
+            "a": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD00",
+            "b": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAB46",
+            "x": "1",
+            "y": "1085953F124587CC6DE140064D0082E882493873220259F2E8CC00989634B849",
+            "n": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF864A38283AD2B3DFAB8FAC983C594AEB",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "W_256_MONT": {
+        "name": "w-256-mont",
+        "long_name": "W-256 Montgomery",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FFA7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "FFA7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC",
+            "b": "14E6A",
+            "x": "1",
+            "y": "20887C87BE1808CE7BABBA26123DAE28956947EB8D94DC661007954C2B724D2A",
+            "n": "FFA7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFC517513E6E5074B9D10C5E1A79857EB",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "W_382_MONT": {
+        "name": "w-382-mont",
+        "long_name": "W-382 Montgomery",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "3FFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "3FFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC",
+            "b": "3FFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDF58D",
+            "x": "0",
+            "y": "D0815A2223A217DF53AEF9FC50E03E8A2C6FAAE5E126893E88D8BB40B0354832E4B1FCF711B06C0FBD6D0A482EF81B9",
+            "n": "3FFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA6EB1CFF4BDE214D73B321FFD8E82CD160AB86803EBB301D",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "W_383_MERS": {
+        "name": "w-383-mers",
+        "long_name": "W-383 Mersenne",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE5B",
+            "a": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE58",
+            "b": "17DBC",
+            "x": "3",
+            "y": "B4D51A66F4444E332907A1132068565B5EEE080440984D988E938E579E299F6B590382EE95BDE62D4784C55B9CFDA3C",
+            "n": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA9CAF814A8A116AD9FB0B4035417AAF319297FC0BB7A439F",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "W_384_MONT": {
+        "name": "w-384-mont",
+        "long_name": "W-384 Montgomery",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "B0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "B0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC",
+            "b": "6C96",
+            "x": "0",
+            "y": "23137905D8D622E7D6A413162713156F486CCA5D990C535036C028E9718EFAA9A71294DCAD238A3802D82326F3D3B275",
+            "n": "B0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBA9B7F14CA7512537A4EDCD38A7C41DA29BE4894B298EEBB",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "W_510_MONT": {
+        "name": "w-510-mont",
+        "long_name": "W-510 Montgomery",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "3EDDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "3EDDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC",
+            "b": "988D",
+            "x": "1",
+            "y": "380DFC3BF210D6D4C1AB56EAD6BF06696ED6B2958FF82D969AC4259E73C0DCD152FF3AD25FB7F0ABACD5906D9D22F68A33A980956B0468E683355436B015EEA",
+            "n": "3EDDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB9146CCDE150EF33747AB29D1E6573D8D22DE95E322303F3A00B200986FA9A2D",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "W_511_MERS": {
+        "name": "w-511-mers",
+        "long_name": "W-511 Mersenne",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE1F",
+            "a": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE1C",
+            "b": "879DA",
+            "x": "3",
+            "y": "219236AE8B4C60E19DD0D9A5F5A6D6581667E9FEC9004194430B7CF1FCCE25364E5D8A9B0678C099531ED564A3C9D81A53B9906DFC65035251FE1D79E5D1DA06",
+            "n": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8DBEFA3F5ED9D839A2D4FE6FF516E87FA8D3E656A0F99FA1F0105F73B3B9D19F",
+            "h": "1",
+            "seed": null
+        }
+    },
+    "W_512_MONT": {
+        "name": "w-512-mont",
+        "long_name": "W-512 Montgomery",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
+        "parameter_form": "WEIERSTRASS_PRIME",
+        "parameter_numbers": {
+            "p": "FE14FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+            "a": "FE14FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC",
+            "b": "185ED",
+            "x": "3",
+            "y": "4F34764248157B49A4BD6041EBB3B78CFF3359AEA78A30EED501E074E3BC65CFD6BFA9671D0788EB0E83AA3DD8A3163A835FA36C828CE1EFFDBFE7D868E88D4",
+            "n": "FE14FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF638A8D792EE750298064AAF0B8498E61DF3D3995064ED73B939628F17E98FDC9",
+            "h": "1",
             "seed": null
         }
     }

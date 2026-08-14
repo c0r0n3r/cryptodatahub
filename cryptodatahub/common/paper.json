@@ -32,6 +32,19 @@
         ],
         "url": "https://ntru.org/f/ntru-20190330.pdf"
     },
+    "MILLION_DOLLAR_CURVE": {
+        "name": "Million Dollar Curve",
+        "long_name": "Trap Me If You Can: Million Dollar Curve",
+        "authors": [
+            "Thomas Baignères",
+            "Cécile Delerablée",
+            "Matthieu Finiasz",
+            "Louis Goubin",
+            "Tancrède Lepoint",
+            "Matthieu Rivain"
+        ],
+        "url": "https://cryptoexperts.github.io/million-dollar-curve/specifications/2016-02-01_trap-me-if-you-can.pdf"
+    },
     "IACR_EPRINT_2010_429": {
         "name": "IACR ePrint 2010/429",
         "long_name": "A Family of Implementation-Friendly BN Elliptic Curves",
@@ -78,5 +91,15 @@
             "Howard Wu"
         ],
         "url": "https://eprint.iacr.org/2018/962"
+    },
+    "IACR_EPRINT_2021_1152": {
+        "name": "IACR ePrint 2021/1152",
+        "long_name": "Bandersnatch: a fast elliptic curve built over the BLS12-381 scalar field",
+        "authors": [
+            "Simon Masson",
+            "Antonio Sanso",
+            "Zhenfei Zhang"
+        ],
+        "url": "https://eprint.iacr.org/2021/1152"
     }
 }

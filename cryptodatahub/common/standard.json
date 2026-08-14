@@ -29,6 +29,16 @@
         "long_name": "Pairing-Friendly Curves",
         "publisher": "IETF"
     },
+    "DRAFT_KASAMATSU_BNCURVES": {
+        "name": "draft-kasamatsu-bncurves",
+        "long_name": "Barreto-Naehrig Curves",
+        "publisher": "IETF"
+    },
+    "DRAFT_LADD_CFRG_4Q": {
+        "name": "draft-ladd-cfrg-4q",
+        "long_name": "Curve4Q",
+        "publisher": "IETF"
+    },
     "RFC_5114": {
         "name": "RFC 5114",
         "long_name": "Additional Diffie-Hellman Groups for Use with IETF Standards",

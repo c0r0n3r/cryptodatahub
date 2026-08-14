@@ -79,6 +79,14 @@
             "CT_LOG_OPERATOR"
         ]
     },
+    "DAIRA_EMMA_HOPWOOD": {
+        "name": "Daira-Emma Hopwood",
+        "long_name": null,
+        "type": "PRIV_PERSON",
+        "activities": [
+            "STANDARD_DEVELOPER"
+        ]
+    },
     "DIGICERT": {
         "name": "DigiCert",
         "long_name": "DigiCert, Inc.",
@@ -344,6 +352,14 @@
         "type": "FOR_PROFIT_ORG",
         "activities": [
             "CT_LOG_OPERATOR"
+        ]
+    },
+    "ZCASH": {
+        "name": "Zcash",
+        "long_name": null,
+        "type": "SOFTWARE_PROJECT",
+        "activities": [
+            "STANDARD_DEVELOPER"
         ]
     }
 }
