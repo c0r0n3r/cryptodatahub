@@ -326,14 +326,17 @@ class TestFetcherOqsNamedGroup(TestOqsBase):
 
 
 class TestFetcherOqsHybridNamedGroup(TestOqsBase):
-    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
-    def test_hybrid_named_group_parsing(self, mock_request):
+    def _get_params_by_identifier(self, mock_request):
         mock_request.side_effect = self.get_mock_request(self.NAMED_GROUP_RESPONSES)
 
         with contextlib.redirect_stdout(io.StringIO()):
             current_data = FetcherOqsHybridNamedGroup.from_current_data()
 
-        params_by_identifier = {params.identifier: params for params in current_data.parsed_data}
+        return {params.identifier: params for params in current_data.parsed_data}
+
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_hybrid_named_group_parsing(self, mock_request):
+        params_by_identifier = self._get_params_by_identifier(mock_request)
 
         self.assertEqual(
             params_by_identifier['X25519_ML_KEM_512'],
@@ -349,20 +352,33 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
             params_by_identifier['SECP256R1_MLKEM512'].classical_named_group,
             NamedGroup.PRIME256V1,
         )
-        # A round bearing half is named after the group here and after the
-        # algorithm elsewhere, so both spellings are tried against the registry.
+
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_round_bearing_half_is_found_under_either_spelling(self, mock_request):
+        params_by_identifier = self._get_params_by_identifier(mock_request)
+
         self.assertEqual(
             params_by_identifier['X25519_FRODOKEM_640_AES_R3'].post_quantum_named_group,
             NamedGroup.FRODO640AES_R3,
         )
-        # A group the named group registry does not have gets no composition,
-        # whether because it is unknown or because its code point was taken.
+
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_group_missing_from_the_named_group_registry_gets_no_composition(self, mock_request):
+        params_by_identifier = self._get_params_by_identifier(mock_request)
+
         self.assertNotIn('SECP256R1_NONEXISTINGKEM', params_by_identifier)
         self.assertNotIn('SECP256R1_ML_KEM_512_R3', params_by_identifier)
-        # A plain post-quantum group is not composed of anything.
+
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_plain_post_quantum_group_is_not_composed(self, mock_request):
+        params_by_identifier = self._get_params_by_identifier(mock_request)
+
         self.assertNotIn('MLKEM512', params_by_identifier)
-        # The stored records are kept as they are rather than rewritten, both the
-        # ones the fetched data does not mention and the ones it does.
+
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_stored_records_are_kept_as_they_are(self, mock_request):
+        params_by_identifier = self._get_params_by_identifier(mock_request)
+
         self.assertEqual(
             params_by_identifier['CECPQ2'].name, HybridNamedGroup.CECPQ2.value.name
         )
