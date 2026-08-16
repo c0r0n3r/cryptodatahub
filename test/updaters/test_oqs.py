@@ -10,6 +10,7 @@ from unittest import mock
 import pyfakefs.fake_filesystem_unittest
 import urllib3
 
+import cryptodatahub.common.algorithm
 from cryptodatahub.common.algorithm import (
     Authentication,
     AuthenticationParams,
@@ -42,6 +43,12 @@ from updaters.oqs_params import (
     FetchedNamedGroupParams,
 )
 
+HYBRID_NAMED_GROUP_HELD_BACK_SO_IT_IS_DERIVED = 'X448_KYBER_768_R3'
+HYBRID_NAMED_GROUPS_LEFT_IN_THE_REGISTRY = [
+    hybrid_named_group for hybrid_named_group in HybridNamedGroup
+    if hybrid_named_group.name != HYBRID_NAMED_GROUP_HELD_BACK_SO_IT_IS_DERIVED
+]
+
 
 class TestOqsBase(unittest.TestCase):
     ML_KEM_DATASHEET = """
@@ -57,6 +64,7 @@ class TestOqsBase(unittest.TestCase):
           length-public-key: 800
     """
     FRODOKEM_DATASHEET = """
+        nist-round: 3
         parameter-sets:
         - name: FrodoKEM-640-AES
           claimed-nist-level: 1
@@ -97,6 +105,9 @@ class TestOqsBase(unittest.TestCase):
             oqs_alg: 'OQS_KEM_alg_frodokem_640_aes'
             enable_tls: true
             extra_nids:
+              current:
+                - hybrid_group: 'x25519'
+                  nid: '0xFEF7'
               old:
                 - nist-round: 3
                   hybrid_group: 'x25519'
@@ -130,6 +141,16 @@ class TestOqsBase(unittest.TestCase):
               old:
                 - nist-round: 3
                   nid: '0x023A'"""
+    RETIRED_RELEASE_NAMED_GROUP = """
+          - family: 'CRYSTALS-Kyber'
+            name_group: 'kyber768'
+            oqs_alg: 'OQS_KEM_alg_kyber_768'
+            enable_tls: true
+            extra_nids:
+              old:
+                - nist-round: 3
+                  hybrid_group: 'x448'
+                  nid: '0xFEF8'"""
     STORED_COMPOSITION_NAMED_GROUP = """
           - family: 'CRYSTALS-Kyber'
             name_group: 'kyber512'
@@ -245,6 +266,15 @@ class TestOqsBase(unittest.TestCase):
         FetcherOqsBase.get_algorithm_datasheet_url('nonexistingkem'): NON_EXISTING_ALGORITHM_DATASHEET,
         FetcherOqsBase.get_algorithm_datasheet_url('kyber'): KYBER_DATASHEET,
     }
+    RETIRED_RELEASE_VERSION = '0.10.0'
+    RETIRED_RELEASE_CONFIG = (
+        KEY_ENCAPSULATION_MECHANISM_LIST +
+        RETIRED_RELEASE_NAMED_GROUP
+    )
+    HYBRID_NAMED_GROUP_RESPONSES = dict(
+        NAMED_GROUP_RESPONSES,
+        **{FetcherOqsBase.get_config_url(RETIRED_RELEASE_VERSION): RETIRED_RELEASE_CONFIG},
+    )
     NAMED_CURVE_RESPONSES = {
         FetcherOqsBase.get_config_url(): NAMED_CURVE_CONFIG,
         FetcherOqsBase.get_algorithm_datasheet_url('ml_kem'): ML_KEM_DATASHEET,
@@ -326,8 +356,15 @@ class TestFetcherOqsNamedGroup(TestOqsBase):
 
 
 class TestFetcherOqsHybridNamedGroup(TestOqsBase):
+    @mock.patch.object(
+        cryptodatahub.common.algorithm, 'HybridNamedGroup', HYBRID_NAMED_GROUPS_LEFT_IN_THE_REGISTRY
+    )
+    @mock.patch.object(
+        FetcherOqsHybridNamedGroup, '_OQS_PROVIDER_RETIRED_VERSIONS_NEWEST_FIRST',
+        (TestOqsBase.RETIRED_RELEASE_VERSION,),
+    )
     def _get_params_by_identifier(self, mock_request):
-        mock_request.side_effect = self.get_mock_request(self.NAMED_GROUP_RESPONSES)
+        mock_request.side_effect = self.get_mock_request(self.HYBRID_NAMED_GROUP_RESPONSES)
 
         with contextlib.redirect_stdout(io.StringIO()):
             current_data = FetcherOqsHybridNamedGroup.from_current_data()
@@ -368,6 +405,24 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
 
         self.assertNotIn('SECP256R1_NONEXISTINGKEM', params_by_identifier)
         self.assertNotIn('SECP256R1_ML_KEM_512_R3', params_by_identifier)
+
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_group_only_a_retired_release_knows_is_derived(self, mock_request):
+        params_by_identifier = self._get_params_by_identifier(mock_request)
+
+        self.assertEqual(
+            params_by_identifier[HYBRID_NAMED_GROUP_HELD_BACK_SO_IT_IS_DERIVED].post_quantum_named_group,
+            NamedGroup.KYBER_768_R3,
+        )
+
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_current_group_is_registered_again_under_the_round_of_its_family(self, mock_request):
+        params_by_identifier = self._get_params_by_identifier(mock_request)
+
+        self.assertEqual(
+            params_by_identifier['X25519_FRODOKEM_640_AES_R3'].classical_named_group,
+            NamedGroup.CURVE25519,
+        )
 
     @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
     def test_plain_post_quantum_group_is_not_composed(self, mock_request):
@@ -442,9 +497,13 @@ class TestUpdaterOqsNamedGroup(TestUpdaterOqsBase):
 
 
 class TestUpdaterOqsHybridNamedGroup(TestUpdaterOqsBase):
+    @mock.patch.object(
+        FetcherOqsHybridNamedGroup, '_OQS_PROVIDER_RETIRED_VERSIONS_NEWEST_FIRST',
+        (TestUpdaterOqsBase.RETIRED_RELEASE_VERSION,),
+    )
     @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
     def test_hybrid_named_group_update(self, mock_request):
-        mock_request.side_effect = self.get_mock_request(self.NAMED_GROUP_RESPONSES)
+        mock_request.side_effect = self.get_mock_request(self.HYBRID_NAMED_GROUP_RESPONSES)
         json_file_path = str(CryptoDataEnumBase.get_json_path(HybridNamedGroupParams))
         self.fs.create_file(json_file_path, contents='{}')
 

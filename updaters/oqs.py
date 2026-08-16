@@ -101,8 +101,8 @@ class FetcherOqsBase(FetcherBase):
         raise NotImplementedError()
 
     @classmethod
-    def get_config_url(cls):
-        return cls._OQS_PROVIDER_CONFIG_URL.format(version=cls._OQS_PROVIDER_VERSION)
+    def get_config_url(cls, version=None):
+        return cls._OQS_PROVIDER_CONFIG_URL.format(version=version or cls._OQS_PROVIDER_VERSION)
 
     @classmethod
     def get_algorithm_datasheet_url(cls, name):
@@ -215,7 +215,10 @@ class FetcherOqsBase(FetcherBase):
                 oqs_name=name_group,
             )
 
-        if 'nid_hybrid' in key_encapsulation_mechanism:
+        # Only this branch needs the strength, to choose a classical curve by it.
+        # An entry whose parameter set the pinned release no longer describes still
+        # names the classical half of every hybrid beside it outright.
+        if 'nid_hybrid' in key_encapsulation_mechanism and bit_security is not None:
             classical_named_curve = cls._get_classical_named_curve(bit_security)
             yield OqsNamedGroup(
                 code=cls._get_code(key_encapsulation_mechanism['nid_hybrid']),
@@ -445,7 +448,84 @@ class FetcherOqsNamedGroup(FetcherOqsBase):
         return list(named_group_params.values())
 
 
+def _get_oqs_provider_release_order(version):
+    release, _, candidate = version.partition('-rc')
+    is_final_release = 0 if candidate else 1
+
+    return tuple(map(int, release.split('.'))), is_final_release, int(candidate or 0)
+
+
 class FetcherOqsHybridNamedGroup(FetcherOqsBase):
+    # The first release that yields a group is the one that names it, and an algorithm carries no
+    # round while it is current and gains one only once a later release retires it, so the oldest
+    # naming would register secp256r1/kyber512 where the registry has secp256r1/kyber_512_r2.
+    _OQS_PROVIDER_RETIRED_VERSIONS_NEWEST_FIRST = tuple(sorted(
+        (
+            '0.11.0', '0.10.0', '0.10.0-rc1', '0.9.0', '0.9.0-rc1', '0.8.0', '0.8.0-rc1',
+            '0.7.0', '0.7.0-rc1', '0.6.1', '0.6.1-rc1', '0.6.0', '0.6.0-rc1',
+            '0.5.3', '0.5.2', '0.5.1', '0.5.1-rc1', '0.5.0',
+        ),
+        key=_get_oqs_provider_release_order,
+        reverse=True,
+    ))
+
+    @classmethod
+    def _get_config_versions(cls):
+        return (cls._OQS_PROVIDER_VERSION,) + cls._OQS_PROVIDER_RETIRED_VERSIONS_NEWEST_FIRST
+
+    @classmethod
+    def _get_family_nist_round(cls, datasheets, key_encapsulation_mechanism):
+        datasheet = datasheets[cls._get_datasheet_name(key_encapsulation_mechanism['family'])]
+        nist_round = datasheet.get('nist-round')
+
+        return nist_round if isinstance(nist_round, int) else None
+
+    @classmethod
+    def _get_current_data(cls):
+        oqs_named_groups = []
+        for version in cls._get_config_versions():
+            config = cls._fetch_yaml(cls.get_config_url(version))
+            key_encapsulation_mechanisms = cls._get_tls_enabled_key_encapsulation_mechanisms(config)
+            datasheets = cls._get_algorithm_datasheets(key_encapsulation_mechanisms)
+
+            for key_encapsulation_mechanism in key_encapsulation_mechanisms:
+                parameter_set = cls._get_parameter_set(datasheets, key_encapsulation_mechanism)
+                bit_security = None
+                if parameter_set is not None:
+                    bit_security = cryptodatahub.common.algorithm.NistSecurityLevel.from_code(
+                        parameter_set['claimed-nist-level']
+                    ).value.bit_security
+
+                oqs_named_groups.extend(cls._get_named_groups(
+                    key_encapsulation_mechanism, bit_security, 0
+                ))
+                oqs_named_groups.extend(cls._get_named_groups_of_family_round(
+                    key_encapsulation_mechanism,
+                    bit_security,
+                    cls._get_family_nist_round(datasheets, key_encapsulation_mechanism),
+                ))
+
+        return oqs_named_groups
+
+    @classmethod
+    def _get_named_groups_of_family_round(
+            cls, key_encapsulation_mechanism, bit_security, family_nist_round
+    ):
+        if family_nist_round is None:
+            return
+
+        for oqs_named_group in cls._get_named_groups(key_encapsulation_mechanism, bit_security, 0):
+            if not oqs_named_group.hybrid or oqs_named_group.name.endswith(f'_r{family_nist_round}'):
+                continue
+
+            yield attr.evolve(
+                oqs_named_group,
+                name=f'{oqs_named_group.name}_r{family_nist_round}',
+                post_quantum_named_group=cls._get_post_quantum_named_group(
+                    key_encapsulation_mechanism, family_nist_round
+                ),
+            )
+
     @classmethod
     def _transform_data(cls, current_data):
         hybrid_named_group_params = collections.OrderedDict([
