@@ -12,7 +12,7 @@ import attr
 import yaml
 
 import cryptodatahub.common.algorithm
-import cryptodatahub.common.parameter
+import cryptodatahub.common.pqc
 import cryptodatahub.tls.algorithm
 import cryptodatahub.tls.version
 from cryptodatahub.common.fetcher import FetcherBase
@@ -538,7 +538,7 @@ class FetcherOqsHybridNamedGroup(FetcherOqsBase):
                     identifier=hybrid_named_group.name, **hybrid_named_group.value._asdict()
                 ),
             )
-            for hybrid_named_group in cryptodatahub.common.algorithm.HybridNamedGroup
+            for hybrid_named_group in cryptodatahub.common.pqc.HybridNamedGroup
         ])
 
         for oqs_named_group in current_data:
@@ -716,8 +716,7 @@ class FetcherOqsKeyEncapsulationMechanism(FetcherOqsBase):
                     **key_encapsulation_mechanism.value._asdict()
                 ),
             )
-            for key_encapsulation_mechanism in cryptodatahub.common.parameter.
-            KeyEncapsulationMechanism
+            for key_encapsulation_mechanism in cryptodatahub.common.pqc.KeyEncapsulationMechanism
         ])
 
         for parameter_set in current_data:
@@ -873,6 +872,7 @@ class UpdaterOqsBase(UpdaterBase):
         # been imported again. Reloading them in a test would replace the enum classes the other
         # tests compare against, so this is only ever exercised by main().
         importlib.reload(cryptodatahub.common.algorithm)
+        importlib.reload(cryptodatahub.common.pqc)
         importlib.reload(cryptodatahub.tls.algorithm)
         importlib.reload(updaters.oqs_params)
 
@@ -896,8 +896,8 @@ class UpdaterOqsHybridNamedGroup(UpdaterOqsBase):
     def __init__(self):
         super().__init__(
             FetcherOqsHybridNamedGroup,
-            cryptodatahub.common.algorithm.HybridNamedGroup,
-            cryptodatahub.common.algorithm.HybridNamedGroupParams,
+            cryptodatahub.common.pqc.HybridNamedGroup,
+            cryptodatahub.common.pqc.HybridNamedGroupParams,
         )
 
 
@@ -905,8 +905,8 @@ class UpdaterOqsKeyEncapsulationMechanism(UpdaterOqsBase):
     def __init__(self):
         super().__init__(
             FetcherOqsKeyEncapsulationMechanism,
-            cryptodatahub.common.parameter.KeyEncapsulationMechanism,
-            cryptodatahub.common.parameter.KeyEncapsulationMechanismParams,
+            cryptodatahub.common.pqc.KeyEncapsulationMechanism,
+            cryptodatahub.common.pqc.KeyEncapsulationMechanismParams,
         )
 
 

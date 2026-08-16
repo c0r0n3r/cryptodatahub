@@ -9,7 +9,6 @@ from cryptodatahub.common.algorithm import (
     BlockCipher,
     BlockCipherMode,
     Hash,
-    HybridNamedGroup,
     IpProtocolNumber,
     KeyExchange,
     NamedGroup,
@@ -79,23 +78,6 @@ class TestNamedGroup(TestClasses.TestJsonBase):
             for named_group in NamedGroup
             if ((named_group.value.size is None) !=
                 (named_group.value.group_type in groups_without_a_comparable_size))
-        ], [])
-
-
-class TestHybridNamedGroup(TestClasses.TestJsonBase):
-    @classmethod
-    def _get_class(cls):
-        return HybridNamedGroup
-
-    def test_halves(self):
-        self.assertEqual(HybridNamedGroup.CECPQ2.value.classical_named_group, NamedGroup.CURVE25519)
-        self.assertEqual(HybridNamedGroup.CECPQ2.value.post_quantum_named_group, NamedGroup.NTRU_HRSS_701)
-
-    def test_named_group_exists(self):
-        self.assertEqual([
-            hybrid_named_group.name
-            for hybrid_named_group in HybridNamedGroup
-            if hybrid_named_group.name not in NamedGroup.__members__
         ], [])
 
 

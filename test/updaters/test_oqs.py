@@ -11,17 +11,18 @@ import pyfakefs.fake_filesystem_unittest
 import urllib3
 
 import cryptodatahub.common.algorithm
+import cryptodatahub.common.pqc
 from cryptodatahub.common.algorithm import (
     Authentication,
     AuthenticationParams,
-    HybridNamedGroup,
-    HybridNamedGroupParams,
     NamedGroup,
     NamedGroupParams,
     NamedGroupType,
     NistSecurityLevel,
 )
-from cryptodatahub.common.parameter import (
+from cryptodatahub.common.pqc import (
+    HybridNamedGroup,
+    HybridNamedGroupParams,
     KeyEncapsulationMechanism,
     KeyEncapsulationMechanismParams,
 )
@@ -445,7 +446,7 @@ class TestFetcherOqsNamedGroup(TestOqsBase):
 
 class TestFetcherOqsHybridNamedGroup(TestOqsBase):
     @mock.patch.object(
-        cryptodatahub.common.algorithm, 'HybridNamedGroup', HYBRID_NAMED_GROUPS_LEFT_IN_THE_REGISTRY
+        cryptodatahub.common.pqc, 'HybridNamedGroup', HYBRID_NAMED_GROUPS_LEFT_IN_THE_REGISTRY
     )
     @mock.patch.object(
         FetcherOqsHybridNamedGroup, '_OQS_PROVIDER_RETIRED_VERSIONS_NEWEST_FIRST',
