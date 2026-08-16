@@ -127,7 +127,7 @@ class FetcherOqsBase(FetcherBase):
 
     @staticmethod
     def _get_named_curve_size(named_curve):
-        return named_curve.value.key_parameter.value.size
+        return named_curve.value.key_parameter.value.field_size
 
     @classmethod
     def _get_classical_named_curve(cls, bit_security):

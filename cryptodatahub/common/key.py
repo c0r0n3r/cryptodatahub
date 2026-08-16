@@ -304,7 +304,7 @@ class PublicKey:
         if self.key_type == Authentication.GOST_R3410_01:
             return 256
         if self.key_type == Authentication.EDDSA:
-            return self.params.key_parameter.value.size
+            return self.params.key_parameter.value.field_size
 
         return int(self._public_key.bit_size)
 

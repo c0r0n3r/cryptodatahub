@@ -780,12 +780,12 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         self.assertIsNone(ECParamWellKnown.M383.value.oid)
 
     def test_size_of_a_binary_field_curve(self):
-        self.assertEqual(ECParamWellKnown.C2PNB163V1.value.size, 163)
-        self.assertEqual(ECParamWellKnown.C2ONB191V4.value.size, 191)
+        self.assertEqual(ECParamWellKnown.C2PNB163V1.value.field_size, 163)
+        self.assertEqual(ECParamWellKnown.C2ONB191V4.value.field_size, 191)
 
     def test_size_of_an_extension_field_curve(self):
-        self.assertEqual(ECParamWellKnown.FOURQ.value.size, 127)
-        self.assertEqual(ECParamWellKnown.BLS48_581_G2.value.size, 1743)
+        self.assertEqual(ECParamWellKnown.FOURQ.value.field_size, 127)
+        self.assertEqual(ECParamWellKnown.BLS48_581_G2.value.field_size, 1743)
 
     def test_curve_too_small_for_the_discrete_logarithm_problem(self):
         self.assertEqual(ECParamWellKnown.SECP112R2.value.min_grade, Grade.INSECURE)
@@ -793,7 +793,7 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
 
     def test_every_parameter_form_derives_a_size(self):
         self.assertEqual(
-            {ec_param.value.parameter_form for ec_param in ECParamWellKnown if ec_param.value.size},
+            {ec_param.value.parameter_form for ec_param in ECParamWellKnown if ec_param.value.field_size},
             set(ECParameterForm),
         )
 

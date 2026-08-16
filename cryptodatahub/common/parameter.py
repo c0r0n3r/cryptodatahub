@@ -102,7 +102,7 @@ class DHParamWellKnownParams(ParamWellKnownBase):
         converter=convert_dict_to_object(DHParameterNumbers),
         validator=attr.validators.instance_of(DHParameterNumbers)
     )
-    key_size = attr.ib(validator=attr.validators.instance_of(int))
+    field_size = attr.ib(validator=attr.validators.instance_of(int))
 
     @classmethod
     def get_gradeable_name(cls):
@@ -116,7 +116,7 @@ class DHParamWellKnownParams(ParamWellKnownBase):
 
         origin = next(source for source in self.sources if not isinstance(source, Standard))
 
-        return f'{self.key_size}-bit {origin.value.name} {self.name} DH parameter'
+        return f'{self.field_size}-bit {origin.value.name} {self.name} DH parameter'
 
 
 class DHParamWellKnownBase(CryptoDataEnumBase):
@@ -185,7 +185,7 @@ class ECParameterNumbersWeierstrassPrime:  # pylint: disable=too-many-instance-a
         return ECParameterForm.WEIERSTRASS_PRIME
 
     @property
-    def size(self):
+    def field_size(self):
         return self.p.bit_length()
 
 
@@ -252,7 +252,7 @@ class ECParameterNumbersWeierstrassBinary:  # pylint: disable=too-many-instance-
         return ECParameterForm.WEIERSTRASS_BINARY
 
     @property
-    def size(self):
+    def field_size(self):
         return self.m
 
 
@@ -309,7 +309,7 @@ class ECParameterNumbersWeierstrassBinaryNormalBasis:  # pylint: disable=too-man
         return ECParameterForm.WEIERSTRASS_BINARY_NORMAL_BASIS
 
     @property
-    def size(self):
+    def field_size(self):
         return self.m
 
 
@@ -356,7 +356,7 @@ class ECParameterNumbersMontgomery:
         return ECParameterForm.MONTGOMERY
 
     @property
-    def size(self):
+    def field_size(self):
         return self.p.bit_length()
 
 
@@ -403,7 +403,7 @@ class ECParameterNumbersTwistedEdwards:
         return ECParameterForm.TWISTED_EDWARDS
 
     @property
-    def size(self):
+    def field_size(self):
         return self.p.bit_length()
 
 
@@ -463,7 +463,7 @@ class ECParameterNumbersWeierstrassExtension:  # pylint: disable=too-many-instan
         return ECParameterForm.WEIERSTRASS_EXTENSION
 
     @property
-    def size(self):
+    def field_size(self):
         return self.p.bit_length() * len(self.reduction_polynomial_constants)
 
 
@@ -515,7 +515,7 @@ class ECParameterNumbersTwistedEdwardsExtension:  # pylint: disable=too-many-ins
         return ECParameterForm.TWISTED_EDWARDS_EXTENSION
 
     @property
-    def size(self):
+    def field_size(self):
         return self.p.bit_length() * len(self.reduction_polynomial_constants)
 
 
@@ -551,8 +551,8 @@ class ECParamWellKnownParams(ParamWellKnownBase, CryptoDataParamsOIDOptional):
         return 'EC parameter'
 
     @property
-    def size(self):
-        return self.parameter_numbers.size
+    def field_size(self):
+        return self.parameter_numbers.field_size
 
     def __attrs_post_init__(self):
         if self.parameter_numbers.get_parameter_form() != self.parameter_form:

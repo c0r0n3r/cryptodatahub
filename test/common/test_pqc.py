@@ -15,6 +15,9 @@ class TestKeyEncapsulationMechanism(TestClasses.TestJsonBase):
         self.assertEqual(KeyEncapsulationMechanism.MLKEM768.value.oqs_name, 'mlkem768')
         self.assertIsNone(KeyEncapsulationMechanism.ML_KEM_768.value.oqs_name)
 
+    def test_no_field_size(self):
+        self.assertIsNone(KeyEncapsulationMechanism.ML_KEM_768.value.field_size)
+
 
 class TestHybridNamedGroup(TestClasses.TestJsonBase):
     @classmethod
@@ -34,3 +37,6 @@ class TestHybridNamedGroup(TestClasses.TestJsonBase):
         self.assertEqual(HybridNamedGroup.X25519_ML_KEM_768.value.oqs_name, 'X25519MLKEM768')
         self.assertEqual(HybridNamedGroup.SECP256R1_FRODO640AES.value.oqs_name, 'p256_frodo640aes')
         self.assertIsNone(HybridNamedGroup.CECPQ2.value.oqs_name)
+
+    def test_no_field_size(self):
+        self.assertIsNone(HybridNamedGroup.X25519_ML_KEM_768.value.field_size)

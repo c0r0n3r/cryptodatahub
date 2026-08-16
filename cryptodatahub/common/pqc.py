@@ -48,6 +48,11 @@ class KeyEncapsulationMechanismParams(ParamWellKnownBase):
     def get_gradeable_name(cls):
         return 'key encapsulation mechanism'
 
+    @property
+    def field_size(self):
+        """A post-quantum key size is not comparable with a classical field size, so it states none."""
+        return None
+
 
 KeyEncapsulationMechanism = CryptoDataEnumBase(
     'KeyEncapsulationMechanism', CryptoDataEnumBase.get_json_records(KeyEncapsulationMechanismParams)
@@ -73,6 +78,11 @@ class HybridNamedGroupParams(CryptoDataParamsNamed, GradeableVulnerabilities):
     @classmethod
     def get_gradeable_name(cls):
         return 'hybrid named group'
+
+    @property
+    def field_size(self):
+        """A composition is the two halves it names, so it states no field size of its own."""
+        return None
 
 
 HybridNamedGroup = CryptoDataEnumBase(
