@@ -5,6 +5,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "B0000000000000000000000953000000000000000000001F9D7",
@@ -25,6 +26,7 @@
             "FRP256v1"
         ],
         "sources": [],
+        "oid": "1.2.250.1.223.101.256.1",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C03",
@@ -43,6 +45,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C03",
@@ -61,6 +64,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000001",
@@ -79,6 +83,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000001",
@@ -97,6 +102,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000001",
@@ -115,6 +121,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF",
@@ -133,6 +140,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFF0000000000000000FFFFFFFF",
@@ -153,6 +161,7 @@
         "sources": [
             "IACR_EPRINT_2021_1152"
         ],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": [
@@ -192,6 +201,7 @@
         "sources": [
             "IACR_EPRINT_2018_962"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -232,6 +242,7 @@
         "sources": [
             "DRAFT_IRTF_CFRG_PAIRING_FRIENDLY_CURVES"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -272,6 +283,7 @@
         "sources": [
             "RELIC"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -318,6 +330,7 @@
         "sources": [
             "RELIC"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -364,6 +377,7 @@
         "sources": [
             "IACR_EPRINT_2012_232"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -416,6 +430,7 @@
         "sources": [
             "IACR_EPRINT_2012_232"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -462,6 +477,7 @@
         "sources": [
             "DRAFT_IRTF_CFRG_PAIRING_FRIENDLY_CURVES"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -514,6 +530,7 @@
         "sources": [
             "DRAFT_IRTF_CFRG_PAIRING_FRIENDLY_CURVES"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_EXTENSION",
         "parameter_numbers": {
             "p": [
@@ -812,6 +829,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -846,6 +864,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -880,6 +899,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -922,6 +942,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -962,6 +983,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1002,6 +1024,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1042,6 +1065,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1082,6 +1106,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1122,6 +1147,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1168,6 +1194,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1214,6 +1241,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1260,6 +1288,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1306,6 +1335,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1352,6 +1382,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1398,6 +1429,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1450,6 +1482,7 @@
         "sources": [
             "IACR_EPRINT_2010_429"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1503,6 +1536,7 @@
             "RFC_5639",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.1",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1538,6 +1572,7 @@
             "RFC_5639",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.2",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1573,6 +1608,7 @@
             "RFC_5639",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.3",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1608,6 +1644,7 @@
             "RFC_5639",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.4",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1643,6 +1680,7 @@
             "RFC_5639",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.5",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1684,6 +1722,7 @@
             "RFC_5639",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.6",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1727,6 +1766,7 @@
             "RFC_8734",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.7",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1768,6 +1808,7 @@
             "RFC_5639",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.8",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1809,6 +1850,7 @@
             "RFC_5639",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.9",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1850,6 +1892,7 @@
             "RFC_5639",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.10",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1893,6 +1936,7 @@
             "RFC_8734",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.11",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1934,6 +1978,7 @@
             "RFC_5639",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.12",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -1977,6 +2022,7 @@
             "RFC_8734",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.13",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -2024,6 +2070,7 @@
             "RFC_5639",
             "X9_62"
         ],
+        "oid": "1.3.36.3.3.2.8.1.1.14",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -2070,6 +2117,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.8",
         "parameter_form": "WEIERSTRASS_BINARY_NORMAL_BASIS",
         "parameter_numbers": {
             "m": [
@@ -2107,6 +2155,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.9",
         "parameter_form": "WEIERSTRASS_BINARY_NORMAL_BASIS",
         "parameter_numbers": {
             "m": [
@@ -2144,6 +2193,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.14",
         "parameter_form": "WEIERSTRASS_BINARY_NORMAL_BASIS",
         "parameter_numbers": {
             "m": [
@@ -2186,6 +2236,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.15",
         "parameter_form": "WEIERSTRASS_BINARY_NORMAL_BASIS",
         "parameter_numbers": {
             "m": [
@@ -2231,6 +2282,7 @@
             "WTLS",
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.1",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2274,6 +2326,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.2",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2317,6 +2370,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.3",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2362,6 +2416,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.4",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2405,6 +2460,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.10",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2453,6 +2509,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.16",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2501,6 +2558,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.17",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2549,6 +2607,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.19",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2597,6 +2656,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.5",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2640,6 +2700,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.6",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2683,6 +2744,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.7",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2726,6 +2788,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.11",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2774,6 +2837,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.12",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2822,6 +2886,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.13",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2870,6 +2935,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.18",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2918,6 +2984,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.0.20",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -2969,6 +3036,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7",
@@ -2993,6 +3061,7 @@
             "RFC_8031",
             "SP_800_186"
         ],
+        "oid": "1.3.101.110",
         "parameter_form": "MONTGOMERY",
         "parameter_numbers": {
             "p": [
@@ -3030,6 +3099,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "MONTGOMERY",
         "parameter_numbers": {
             "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF45",
@@ -3047,6 +3117,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEF",
@@ -3072,6 +3143,7 @@
             "RFC_8031",
             "SP_800_186"
         ],
+        "oid": "1.3.101.111",
         "parameter_form": "MONTGOMERY",
         "parameter_numbers": {
             "p": [
@@ -3115,6 +3187,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD",
@@ -3133,6 +3206,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB",
@@ -3151,6 +3225,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF97",
@@ -3173,6 +3248,7 @@
         "sources": [
             "IACR_EPRINT_2013_647"
         ],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": [
@@ -3214,6 +3290,7 @@
         "sources": [
             "IACR_EPRINT_2013_647"
         ],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": [
@@ -3257,6 +3334,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFED",
@@ -3276,6 +3354,7 @@
             "Ed448-Goldilocks"
         ],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -3293,6 +3372,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "3F80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -3310,6 +3390,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD03",
@@ -3327,6 +3408,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "FFA7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -3344,6 +3426,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "3FFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -3361,6 +3444,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE5B",
@@ -3378,6 +3462,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "B0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -3395,6 +3480,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "3EDDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -3412,6 +3498,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE1F",
@@ -3429,6 +3516,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "FE14FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -3446,6 +3534,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7B",
@@ -3463,6 +3552,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDF",
@@ -3480,6 +3570,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8B",
@@ -3499,6 +3590,7 @@
             "Curve4Q"
         ],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS_EXTENSION",
         "parameter_numbers": {
             "p": [
@@ -3560,6 +3652,7 @@
         "sources": [
             "DRAFT_KASAMATSU_BNCURVES"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -3596,6 +3689,7 @@
         "sources": [
             "DRAFT_KASAMATSU_BNCURVES"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -3633,6 +3727,7 @@
         "sources": [
             "DRAFT_KASAMATSU_BNCURVES"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "240120DB6517014EFA0BAB3696F8D5F06E8A555614F464BABE9DBBFEEEB4A713",
@@ -3653,6 +3748,7 @@
         "sources": [
             "DRAFT_KASAMATSU_BNCURVES"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "24000482410F5AADB74E200F3B89D00081CF93E428F0D651E8B2DC2BB460A48B",
@@ -3671,6 +3767,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_EXTENSION",
         "parameter_numbers": {
             "p": [
@@ -3743,6 +3840,7 @@
         "sources": [
             "DRAFT_KASAMATSU_BNCURVES"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -3779,6 +3877,7 @@
         "sources": [
             "DRAFT_KASAMATSU_BNCURVES"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -3815,6 +3914,7 @@
         "sources": [
             "DRAFT_KASAMATSU_BNCURVES"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -3856,6 +3956,7 @@
             "RFC_7836",
             "RFC_9215"
         ],
+        "oid": "1.2.643.7.1.2.1.1.1",
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": [
@@ -3899,6 +4000,7 @@
             "RFC_4357",
             "RFC_9215"
         ],
+        "oid": "1.2.643.2.2.35.1",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -3942,6 +4044,7 @@
             "RFC_4357",
             "RFC_9215"
         ],
+        "oid": "1.2.643.2.2.35.2",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -3986,6 +4089,7 @@
             "RFC_4357",
             "RFC_9215"
         ],
+        "oid": "1.2.643.2.2.35.3",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -4029,6 +4133,7 @@
             "RFC_7836",
             "RFC_9215"
         ],
+        "oid": "1.2.643.7.1.2.1.2.1",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -4076,6 +4181,7 @@
             "RFC_7836",
             "RFC_9215"
         ],
+        "oid": "1.2.643.7.1.2.1.2.2",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -4125,6 +4231,7 @@
             "RFC_7836",
             "RFC_9215"
         ],
+        "oid": "1.2.643.7.1.2.1.2.3",
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": [
@@ -4171,6 +4278,7 @@
             "RFC_4357",
             "RFC_5832"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -4212,6 +4320,7 @@
             "RFC_7091",
             "RFC_9215"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -4258,6 +4367,7 @@
         "sources": [
             "ZCASH"
         ],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "73EDA753299D7D483339D80809A1D80553BDA402FFFE5BFEFFFFFFFF00000001",
@@ -4279,6 +4389,7 @@
         "sources": [
             "IACR_EPRINT_2013_647"
         ],
+        "oid": null,
         "parameter_form": "MONTGOMERY",
         "parameter_numbers": {
             "p": [
@@ -4320,6 +4431,7 @@
         "sources": [
             "IACR_EPRINT_2013_647"
         ],
+        "oid": null,
         "parameter_form": "MONTGOMERY",
         "parameter_numbers": {
             "p": [
@@ -4365,6 +4477,7 @@
         "sources": [
             "MILLION_DOLLAR_CURVE"
         ],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "C04809F16AA3246DCFD6B60183E407A9C1DF20818CBB73B7F605FF2BA3E05D3F",
@@ -4382,6 +4495,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "26DCCACC5041939206CF2B7DEC50950E3C9FA4827AF",
@@ -4400,6 +4514,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "5AFFFFFFFFFFFF4B46081000000059BB1BF600B7",
@@ -4418,6 +4533,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "5AFFFFFFFFFFFF4B46081000000059BB1BF600B7",
@@ -4436,6 +4552,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "8AFFFFFFFFFFFEEB0FA77000000089F0DD49FAC7",
@@ -4454,6 +4571,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "8AFFFFFFFFFFFEEB0FA77000000089F0DD49FAC7",
@@ -4472,6 +4590,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "8AFFFFFFFFFFFEEB0FA77000000089F0DD49FAC7",
@@ -4490,6 +4609,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "A2FFFFFFFFFFFFFFFFFFFFFFFFC298B00000000000000000000005C866CF",
@@ -4508,6 +4628,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "D2FFFFFFFFFFFFFFFFFFFFFFFE9058D000000000000000000000A0271007",
@@ -4526,6 +4647,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "D2FFFFFFFFFFFFFFFFFFFFFFFE9058D000000000000000000000A0271007",
@@ -4544,6 +4666,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "D2FFFFFFFFFFFFFFFFFFFFFFFE9058D000000000000000000000A0271007",
@@ -4562,6 +4685,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "MONTGOMERY",
         "parameter_numbers": {
             "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA5",
@@ -4579,6 +4703,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "MONTGOMERY",
         "parameter_numbers": {
             "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFED",
@@ -4596,6 +4721,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "MONTGOMERY",
         "parameter_numbers": {
             "p": "1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD",
@@ -4615,6 +4741,7 @@
             "w-256-mers"
         ],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF43",
@@ -4635,6 +4762,7 @@
             "ed-256-mers"
         ],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF43",
@@ -4654,6 +4782,7 @@
             "w-384-mers"
         ],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEC3",
@@ -4674,6 +4803,7 @@
             "ed-384-mers"
         ],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEC3",
@@ -4693,6 +4823,7 @@
             "w-512-mers"
         ],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDC7",
@@ -4713,6 +4844,7 @@
             "ed-512-mers"
         ],
         "sources": [],
+        "oid": null,
         "parameter_form": "TWISTED_EDWARDS",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDC7",
@@ -4732,6 +4864,7 @@
         "sources": [
             "RFC_2409"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -4775,6 +4908,7 @@
         "sources": [
             "RFC_2409"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -4818,6 +4952,7 @@
         "sources": [
             "ZCASH"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "40000000000000000000000000000000224698FC094CF91B992D30ED00000001",
@@ -4850,6 +4985,7 @@
             "SP_800_186",
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.1.1",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -4884,6 +5020,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.1.2",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -4918,6 +5055,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.1.3",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -4952,6 +5090,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.1.4",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -4992,6 +5131,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.1.5",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5032,6 +5172,7 @@
         "sources": [
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.1.6",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5084,6 +5225,7 @@
             "SP_800_186",
             "X9_62"
         ],
+        "oid": "1.2.840.10045.3.1.7",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5128,6 +5270,7 @@
             "WTLS",
             "X9_62"
         ],
+        "oid": "1.3.132.0.6",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5163,6 +5306,7 @@
             "SEC_2",
             "X9_62"
         ],
+        "oid": "1.3.132.0.7",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5198,6 +5342,7 @@
             "SEC_2",
             "X9_62"
         ],
+        "oid": "1.3.132.0.28",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5233,6 +5378,7 @@
             "SEC_2",
             "X9_62"
         ],
+        "oid": "1.3.132.0.29",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5271,6 +5417,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.9",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5311,6 +5458,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.8",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5349,6 +5497,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.30",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5387,6 +5536,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.31",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5425,6 +5575,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.32",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5480,6 +5631,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.33",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5525,6 +5677,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.10",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5579,6 +5732,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.34",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5633,6 +5787,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.35",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -5683,6 +5838,7 @@
             "WTLS",
             "X9_62"
         ],
+        "oid": "1.3.132.0.4",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -5727,6 +5883,7 @@
             "SEC_2",
             "X9_62"
         ],
+        "oid": "1.3.132.0.5",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -5771,6 +5928,7 @@
             "SEC_2",
             "X9_62"
         ],
+        "oid": "1.3.132.0.22",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -5815,6 +5973,7 @@
             "SEC_2",
             "X9_62"
         ],
+        "oid": "1.3.132.0.23",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -5869,6 +6028,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.1",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -5919,6 +6079,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.2",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -5971,6 +6132,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.15",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6018,6 +6180,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.24",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6070,6 +6233,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.25",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6129,6 +6293,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.26",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6188,6 +6353,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.27",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6240,6 +6406,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.3",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6297,6 +6464,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.16",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6354,6 +6522,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.17",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6411,6 +6580,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.36",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6473,6 +6643,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.37",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6535,6 +6706,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.38",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6597,6 +6769,7 @@
             "X9_62",
             "X9_63"
         ],
+        "oid": "1.3.132.0.39",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6650,6 +6823,7 @@
         "sources": [
             "RFC_8998"
         ],
+        "oid": "1.2.156.10197.1.301",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -6688,6 +6862,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "C90FDAA22168C234C4C6628B80DC1CD129024E1F",
@@ -6706,6 +6881,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CD13",
@@ -6724,6 +6900,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEDF",
@@ -6742,6 +6919,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139C0B",
@@ -6760,6 +6938,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A098B",
@@ -6778,6 +6957,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A08798E3408B3",
@@ -6796,6 +6976,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A08798E3404DDEF9519B3CD3A437B",
@@ -6814,6 +6995,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "C90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A08798E3404DDEF9519B3CD3A431B302B0A6DF25F14374FE1356D6D51C5EF",
@@ -6832,6 +7014,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FFFFFFFF0000000100000000000000017E72B42B30E7317793135661B1C4B117",
@@ -6850,6 +7033,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEAF5F689F8669FB41B08D5F5EDFFD26599C434BBD978917C5",
@@ -6868,6 +7052,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "200000000000000000000000000000000000000000000000000000000000000002C54BE78524C33584F734A266748B2063ACCF5028E6778DC5056476D0690853249",
@@ -6888,6 +7073,7 @@
         "sources": [
             "DAIRA_EMMA_HOPWOOD"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "40000000000000000000000000000000038AA127696286C9842CAFD400000001",
@@ -6906,6 +7092,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "40000000000000000000000000000000038AA1276C3F59B9A14064E200000001",
@@ -6926,6 +7113,7 @@
         "sources": [
             "ZCASH"
         ],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "40000000000000000000000000000000224698FC0994A8DD8C46EB2100000001",
@@ -6946,6 +7134,7 @@
         "sources": [
             "WTLS"
         ],
+        "oid": "2.23.43.1.4.1",
         "parameter_form": "WEIERSTRASS_BINARY",
         "parameter_numbers": {
             "m": [
@@ -6989,6 +7178,7 @@
         "sources": [
             "WTLS"
         ],
+        "oid": "2.23.43.1.4.8",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -7023,6 +7213,7 @@
         "sources": [
             "WTLS"
         ],
+        "oid": "2.23.43.1.4.9",
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": [
@@ -7055,6 +7246,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "3F80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -7073,6 +7265,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD03",
@@ -7091,6 +7284,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FFA7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -7109,6 +7303,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "3FFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -7127,6 +7322,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE5B",
@@ -7145,6 +7341,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "B0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -7163,6 +7360,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "3EDDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
@@ -7181,6 +7379,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE1F",
@@ -7199,6 +7398,7 @@
         "vulnerabilities": [],
         "aliases": [],
         "sources": [],
+        "oid": null,
         "parameter_form": "WEIERSTRASS_PRIME",
         "parameter_numbers": {
             "p": "FE14FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",

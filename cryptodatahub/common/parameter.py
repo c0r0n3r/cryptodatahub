@@ -11,7 +11,9 @@ from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.grade import GradeableVulnerabilities
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
+    CryptoDataEnumOIDBase,
     CryptoDataParamsNamed,
+    CryptoDataParamsOIDOptional,
     HexData,
     convert_big_enum,
     convert_dict_to_object,
@@ -491,7 +493,7 @@ class ECParameterNumbersTwistedEdwardsExtension:  # pylint: disable=too-many-ins
 
 
 @attr.s(eq=False, frozen=True)
-class ECParamWellKnownParams(ParamWellKnownBase):
+class ECParamWellKnownParams(ParamWellKnownBase, CryptoDataParamsOIDOptional):
     parameter_form = attr.ib(
         converter=convert_enum(ECParameterForm),
         validator=attr.validators.instance_of(ECParameterForm),
@@ -526,7 +528,7 @@ class ECParamWellKnownParams(ParamWellKnownBase):
             raise InvalidValue(self.parameter_form, type(self), 'parameter_form')
 
 
-class ECParamWellKnownBase(CryptoDataEnumBase):
+class ECParamWellKnownBase(CryptoDataEnumOIDBase):
     @classmethod
     def from_parameter_numbers(cls, parameter_numbers):
         return cls._from_attr('parameter_numbers', parameter_numbers)

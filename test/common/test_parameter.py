@@ -128,6 +128,7 @@ class TestECParamWellKnownParams(unittest.TestCase):
                 vulnerabilities=[],
                 aliases=[],
                 sources=[],
+                oid=None,
                 parameter_form=ECParameterForm.MONTGOMERY,
                 parameter_numbers=ECParameterNumbersWeierstrassPrime(
                     p=23, a=1, b=1, x=3, y=10, n=28, h=1, seed=None
@@ -787,6 +788,26 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
             if named_group.value.group_type == NamedGroupType.ELLIPTIC_CURVE and
             named_group.name not in ECParamWellKnown.__members__
         ], [])
+
+    def test_from_oid(self):
+        self.assertEqual(
+            ECParamWellKnown.from_oid('1.2.840.10045.3.1.7'),
+            ECParamWellKnown.PRIME256V1
+        )
+
+        with self.assertRaisesRegex(InvalidValue, "1.2.3.4.* is not a valid ECParamWellKnown oid"):
+            ECParamWellKnown.from_oid('1.2.3.4')
+
+    def test_every_object_identifier_a_named_group_has_is_carried(self):
+        self.assertEqual([
+            named_group.name
+            for named_group in NamedGroup
+            if named_group.value.oid is not None and
+            ECParamWellKnown[named_group.name].value.oid != named_group.value.oid
+        ], [])
+
+    def test_curve_without_an_object_identifier(self):
+        self.assertIsNone(ECParamWellKnown.M383.value.oid)
 
     def test_from_parameter_numbers(self):
         ec_param = ECParamWellKnown.PRIME256V1
