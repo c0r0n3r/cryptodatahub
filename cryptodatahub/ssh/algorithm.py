@@ -18,7 +18,7 @@ from cryptodatahub.common.algorithm import (
 )
 from cryptodatahub.common.grade import GradeableVulnerabilities
 from cryptodatahub.common.key import PublicKeySize
-from cryptodatahub.common.parameter import DHParamWellKnown
+from cryptodatahub.common.parameter import DHParamWellKnown, ECParamWellKnown
 from cryptodatahub.common.types import (
     CryptoDataEnumCodedBase,
     CryptoDataParamsEnumString,
@@ -151,9 +151,9 @@ class CompressionAlgorithmParams(CryptoDataParamsEnumString, GradeableVulnerabil
 
 @attr.s(frozen=True)
 class EllipticCurveIdentifierParams(CryptoDataParamsEnumString):
-    named_group = attr.ib(
-        converter=convert_enum(NamedGroup),
-        validator=attr.validators.instance_of(NamedGroup)
+    key_parameter = attr.ib(
+        converter=convert_enum(ECParamWellKnown),
+        validator=attr.validators.instance_of(ECParamWellKnown)
     )
 
 
