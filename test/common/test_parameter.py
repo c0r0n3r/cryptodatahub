@@ -809,6 +809,28 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
     def test_curve_without_an_object_identifier(self):
         self.assertIsNone(ECParamWellKnown.M383.value.oid)
 
+    def test_size(self):
+        self.assertEqual([
+            named_group.name
+            for named_group in NamedGroup
+            if named_group.value.group_type == NamedGroupType.ELLIPTIC_CURVE and
+            ECParamWellKnown[named_group.name].value.size != named_group.value.size
+        ], [])
+
+    def test_size_of_a_binary_field_curve(self):
+        self.assertEqual(ECParamWellKnown.C2PNB163V1.value.size, 163)
+        self.assertEqual(ECParamWellKnown.C2ONB191V4.value.size, 191)
+
+    def test_size_of_an_extension_field_curve(self):
+        self.assertEqual(ECParamWellKnown.FOURQ.value.size, 127)
+        self.assertEqual(ECParamWellKnown.BLS48_581_G2.value.size, 1743)
+
+    def test_every_parameter_form_derives_a_size(self):
+        self.assertEqual(
+            {ec_param.value.parameter_form for ec_param in ECParamWellKnown if ec_param.value.size},
+            set(ECParameterForm),
+        )
+
     def test_from_parameter_numbers(self):
         ec_param = ECParamWellKnown.PRIME256V1
         self.assertEqual(

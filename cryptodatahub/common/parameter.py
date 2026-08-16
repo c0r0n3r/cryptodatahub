@@ -185,6 +185,10 @@ class ECParameterNumbersWeierstrassPrime:  # pylint: disable=too-many-instance-a
     def get_parameter_form(cls):
         return ECParameterForm.WEIERSTRASS_PRIME
 
+    @property
+    def size(self):
+        return self.p.bit_length()
+
 
 @attr.s
 class ECParameterNumbersWeierstrassBinary:  # pylint: disable=too-many-instance-attributes
@@ -248,6 +252,10 @@ class ECParameterNumbersWeierstrassBinary:  # pylint: disable=too-many-instance-
     def get_parameter_form(cls):
         return ECParameterForm.WEIERSTRASS_BINARY
 
+    @property
+    def size(self):
+        return self.m
+
 
 @attr.s
 class ECParameterNumbersWeierstrassBinaryNormalBasis:  # pylint: disable=too-many-instance-attributes
@@ -301,6 +309,10 @@ class ECParameterNumbersWeierstrassBinaryNormalBasis:  # pylint: disable=too-man
     def get_parameter_form(cls):
         return ECParameterForm.WEIERSTRASS_BINARY_NORMAL_BASIS
 
+    @property
+    def size(self):
+        return self.m
+
 
 @attr.s
 class ECParameterNumbersMontgomery:
@@ -344,6 +356,10 @@ class ECParameterNumbersMontgomery:
     def get_parameter_form(cls):
         return ECParameterForm.MONTGOMERY
 
+    @property
+    def size(self):
+        return self.p.bit_length()
+
 
 @attr.s
 class ECParameterNumbersTwistedEdwards:
@@ -386,6 +402,10 @@ class ECParameterNumbersTwistedEdwards:
     @classmethod
     def get_parameter_form(cls):
         return ECParameterForm.TWISTED_EDWARDS
+
+    @property
+    def size(self):
+        return self.p.bit_length()
 
 
 def convert_extension_field_element():
@@ -443,6 +463,10 @@ class ECParameterNumbersWeierstrassExtension:  # pylint: disable=too-many-instan
     def get_parameter_form(cls):
         return ECParameterForm.WEIERSTRASS_EXTENSION
 
+    @property
+    def size(self):
+        return self.p.bit_length() * len(self.reduction_polynomial_constants)
+
 
 @attr.s
 class ECParameterNumbersTwistedEdwardsExtension:  # pylint: disable=too-many-instance-attributes
@@ -491,6 +515,10 @@ class ECParameterNumbersTwistedEdwardsExtension:  # pylint: disable=too-many-ins
     def get_parameter_form(cls):
         return ECParameterForm.TWISTED_EDWARDS_EXTENSION
 
+    @property
+    def size(self):
+        return self.p.bit_length() * len(self.reduction_polynomial_constants)
+
 
 @attr.s(eq=False, frozen=True)
 class ECParamWellKnownParams(ParamWellKnownBase, CryptoDataParamsOIDOptional):
@@ -522,6 +550,10 @@ class ECParamWellKnownParams(ParamWellKnownBase, CryptoDataParamsOIDOptional):
     @classmethod
     def get_gradeable_name(cls):
         return 'EC parameter'
+
+    @property
+    def size(self):
+        return self.parameter_numbers.size
 
     def __attrs_post_init__(self):
         if self.parameter_numbers.get_parameter_form() != self.parameter_form:
