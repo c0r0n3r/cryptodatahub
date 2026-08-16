@@ -1,15 +1,18 @@
 # SPDX-License-Identifier: MPL-2.0
 
+import typing
+
 import attr
 
 from cryptodatahub.common.algorithm import NistSecurityLevel
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.grade import GradeableVulnerabilities
-from cryptodatahub.common.parameter import ECParamWellKnown, ParamWellKnownBase
+from cryptodatahub.common.parameter import DHParamWellKnown, ECParamWellKnown, ParamWellKnownBase
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataParamsNamed,
     convert_enum,
+    convert_variadic,
 )
 
 
@@ -87,3 +90,23 @@ class HybridNamedGroupParams(CryptoDataParamsNamed, GradeableVulnerabilities):
 HybridNamedGroup = CryptoDataEnumBase(
     'HybridNamedGroup', CryptoDataEnumBase.get_json_records(HybridNamedGroupParams)
 )
+
+
+KEY_PARAMETER_REGISTRIES = (
+    ECParamWellKnown, DHParamWellKnown, KeyEncapsulationMechanism, HybridNamedGroup
+)
+KeyParameter = typing.Union[
+    ECParamWellKnown, DHParamWellKnown, KeyEncapsulationMechanism, HybridNamedGroup, str
+]
+
+
+def convert_key_parameter():
+    return convert_variadic(tuple(convert_enum(registry) for registry in KEY_PARAMETER_REGISTRIES))
+
+
+def validate_key_parameter():
+    return attr.validators.instance_of(KEY_PARAMETER_REGISTRIES)
+
+
+def validate_key_parameter_or_unregistered_name():
+    return attr.validators.instance_of(KEY_PARAMETER_REGISTRIES + (str,))

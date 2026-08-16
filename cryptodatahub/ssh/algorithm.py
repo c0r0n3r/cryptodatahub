@@ -12,18 +12,17 @@ from cryptodatahub.common.algorithm import (
     KeyExchange,
     MAC,
     MACMode,
-    NamedGroup,
     Signature,
     GradeableAlgorithmParams,
 )
 from cryptodatahub.common.grade import GradeableVulnerabilities
 from cryptodatahub.common.key import PublicKeySize
 from cryptodatahub.common.parameter import DHParamWellKnown, ECParamWellKnown
+from cryptodatahub.common.pqc import convert_key_parameter, validate_key_parameter_or_unregistered_name
 from cryptodatahub.common.types import (
     CryptoDataEnumCodedBase,
     CryptoDataParamsEnumString,
     convert_enum,
-    convert_variadic,
 )
 
 
@@ -82,10 +81,8 @@ class KexAlgorithmParams(SshAlgorithmParams):
         validator=attr.validators.optional(attr.validators.instance_of(KeyExchange))
     )
     key_parameter = attr.ib(
-        converter=convert_variadic((convert_enum(NamedGroup), convert_enum(DHParamWellKnown))),
-        validator=attr.validators.optional(
-            attr.validators.instance_of((NamedGroup, DHParamWellKnown, str))
-        )
+        converter=convert_key_parameter(),
+        validator=attr.validators.optional(validate_key_parameter_or_unregistered_name())
     )
     exchange_hash = attr.ib(
         converter=convert_enum(Hash),

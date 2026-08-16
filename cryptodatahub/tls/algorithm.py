@@ -14,15 +14,13 @@ from cryptodatahub.common.algorithm import (
     MAC,
 )
 from cryptodatahub.common.grade import GradeableComplex
-from cryptodatahub.common.parameter import DHParamWellKnown, ECParamWellKnown
-from cryptodatahub.common.pqc import HybridNamedGroup, KeyEncapsulationMechanism
+from cryptodatahub.common.pqc import convert_key_parameter, validate_key_parameter
 from cryptodatahub.common.types import (
     CryptoDataEnumCodedBase,
     CryptoDataParamsEnumNumeric,
     CryptoDataParamsEnumString,
     CryptoDataParamsNamed,
     convert_enum,
-    convert_variadic,
 )
 
 from cryptodatahub.tls.version import TlsVersion
@@ -43,15 +41,8 @@ TlsCompressionMethod = CryptoDataEnumCodedBase(
 @attr.s(frozen=True)
 class NamedCurveParams(CryptoDataParamsEnumNumeric, GradeableComplex):
     key_parameter = attr.ib(
-        converter=convert_variadic((
-            convert_enum(ECParamWellKnown),
-            convert_enum(DHParamWellKnown),
-            convert_enum(KeyEncapsulationMechanism),
-            convert_enum(HybridNamedGroup),
-        )),
-        validator=attr.validators.optional(attr.validators.instance_of((
-            ECParamWellKnown, DHParamWellKnown, KeyEncapsulationMechanism, HybridNamedGroup
-        ))),
+        converter=convert_key_parameter(),
+        validator=attr.validators.optional(validate_key_parameter()),
     )
     initial_version = attr.ib(
         converter=convert_enum(TlsVersion),
