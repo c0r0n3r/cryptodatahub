@@ -127,7 +127,7 @@ class FetcherOqsBase(FetcherBase):
 
     @staticmethod
     def _get_named_curve_size(named_curve):
-        return named_curve.value.named_group.value.size
+        return named_curve.value.key_parameter.value.size
 
     @classmethod
     def _get_classical_named_curve(cls, bit_security):
@@ -228,7 +228,7 @@ class FetcherOqsBase(FetcherBase):
                 name=f'{classical_named_curve.name.lower()}/{name_group}',
                 size=size,
                 oqs_name=f'{cls._get_hybrid_group(classical_named_curve)}_{name_group}',
-                classical_key_parameter=classical_named_curve.value.named_group.name,
+                classical_key_parameter=classical_named_curve.value.key_parameter.name,
                 post_quantum_key_parameter=cls._get_post_quantum_key_parameter(
                     key_encapsulation_mechanism, None
                 ),
@@ -252,7 +252,7 @@ class FetcherOqsBase(FetcherBase):
         classical_key_parameter = None
         if hybrid_group is not None:
             classical_named_curve = cls._CLASSICAL_NAMED_CURVE_BY_HYBRID_GROUP[hybrid_group]
-            classical_key_parameter = classical_named_curve.value.named_group.name
+            classical_key_parameter = classical_named_curve.value.key_parameter.name
             named_group_name = f'{classical_named_curve.name.lower()}/{named_group_name}'
 
         is_earlier_nist_round = nist_round is not None
@@ -418,10 +418,10 @@ class FetcherOqsNamedGroup(FetcherOqsBase):
                         f'Code point already assigned; code=0x{oqs_named_group.code:04x}, '
                         f'existing={existing_named_curve.name}, fetched={identifier}'
                     )
-                elif existing_named_curve.value.named_group is not None:
+                elif existing_named_curve.value.key_parameter is not None:
                     cls._set_oqs_name(
                         named_group_params,
-                        existing_named_curve.value.named_group.name,
+                        existing_named_curve.value.key_parameter.name,
                         oqs_named_group.oqs_name,
                     )
 
@@ -776,7 +776,7 @@ class FetcherOqsNamedCurve(FetcherOqsBase):
             named_curve_params.append(updaters.oqs_params.FetchedNamedCurveParams(
                 identifier=identifier,
                 code=oqs_named_group.code,
-                named_group=identifier,
+                key_parameter=identifier,
                 initial_version=cryptodatahub.tls.version.TlsVersion.TLS1_3,
                 last_version=cryptodatahub.tls.version.TlsVersion.TLS1_3,
             ))

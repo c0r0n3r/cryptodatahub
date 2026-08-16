@@ -615,7 +615,7 @@ class TestFetcherOqsNamedCurve(TestOqsBase):
             FetchedNamedCurveParams(
                 identifier='ML_KEM_512',
                 code=0xfefe,
-                named_group=NamedGroup.ML_KEM_512,
+                key_parameter=KeyEncapsulationMechanism.ML_KEM_512,
                 initial_version=TlsVersion.TLS1_3,
                 last_version=TlsVersion.TLS1_3,
             ),
@@ -747,7 +747,7 @@ class TestUpdaterOqsNamedCurve(TestUpdaterOqsBase):
             {
                 '_code_in_hex': '0xfefe',
                 'code': 0xfefe,
-                'named_group': 'ML_KEM_512',
+                'key_parameter': 'ML_KEM_512',
                 'initial_version': 'TLS1_3',
                 'last_version': 'TLS1_3',
             },
