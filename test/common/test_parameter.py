@@ -825,6 +825,18 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         self.assertEqual(ECParamWellKnown.FOURQ.value.size, 127)
         self.assertEqual(ECParamWellKnown.BLS48_581_G2.value.size, 1743)
 
+    def test_every_vulnerability_a_named_group_has_is_carried(self):
+        self.assertEqual([
+            named_group.name
+            for named_group in NamedGroup
+            if named_group.value.vulnerabilities and named_group.name in ECParamWellKnown.__members__ and
+            ECParamWellKnown[named_group.name].value.vulnerabilities != named_group.value.vulnerabilities
+        ], [])
+
+    def test_curve_too_small_for_the_discrete_logarithm_problem(self):
+        self.assertEqual(ECParamWellKnown.SECP112R2.value.min_grade, Grade.INSECURE)
+        self.assertEqual(ECParamWellKnown.SECP160R1.value.min_grade, Grade.WEAK)
+
     def test_every_parameter_form_derives_a_size(self):
         self.assertEqual(
             {ec_param.value.parameter_form for ec_param in ECParamWellKnown if ec_param.value.size},

@@ -1530,7 +1530,13 @@
     "BRAINPOOLP160R1": {
         "name": "brainpoolP160r1",
         "long_name": "brainpoolP160r1 elliptic curve (160-bit prime field)",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "aliases": [],
         "sources": [
             "RFC_5639",
@@ -1566,7 +1572,13 @@
     "BRAINPOOLP160T1": {
         "name": "brainpoolP160t1",
         "long_name": "brainpoolP160t1 elliptic curve (160-bit prime field)",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "aliases": [],
         "sources": [
             "RFC_5639",
@@ -5261,7 +5273,13 @@
     "SECP112R1": {
         "name": "secp112r1",
         "long_name": "secp112r1 elliptic curve (112-bit prime field)",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "aliases": [
             "WAP-WSG-IDM-ECID-WTLS6"
         ],
@@ -5300,7 +5318,13 @@
     "SECP112R2": {
         "name": "secp112r2",
         "long_name": "secp112r2 elliptic curve (112-bit prime field)",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "aliases": [],
         "sources": [
             "SEC_2",
@@ -5336,7 +5360,13 @@
     "SECP128R1": {
         "name": "secp128r1",
         "long_name": "secp128r1 elliptic curve (128-bit prime field)",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "aliases": [],
         "sources": [
             "SEC_2",
@@ -5372,7 +5402,13 @@
     "SECP128R2": {
         "name": "secp128r2",
         "long_name": "secp128r2 elliptic curve (128-bit prime field)",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "aliases": [],
         "sources": [
             "SEC_2",
@@ -5447,7 +5483,13 @@
     "SECP160R1": {
         "name": "secp160r1",
         "long_name": "secp160r1 elliptic curve (160-bit prime field)",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "aliases": [
             "WAP-WSG-IDM-ECID-WTLS7",
             "ANSIP160R1"
@@ -5488,7 +5530,13 @@
     "SECP160R2": {
         "name": "secp160r2",
         "long_name": "secp160r2 elliptic curve (160-bit prime field)",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "aliases": [
             "ANSIP160R2"
         ],
@@ -5829,7 +5877,13 @@
     "SECT113R1": {
         "name": "sect113r1",
         "long_name": "sect113r1 elliptic curve (binary field GF(2^113))",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "INSECURE",
+                "named": null
+            }
+        ],
         "aliases": [
             "WAP-WSG-IDM-ECID-WTLS4"
         ],
@@ -5877,7 +5931,13 @@
     "SECT113R2": {
         "name": "sect113r2",
         "long_name": "sect113r2 elliptic curve (binary field GF(2^113))",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "aliases": [],
         "sources": [
             "SEC_2",
@@ -5922,7 +5982,13 @@
     "SECT131R1": {
         "name": "sect131r1",
         "long_name": "sect131r1 elliptic curve (binary field GF(2^131))",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "aliases": [],
         "sources": [
             "SEC_2",
@@ -5967,7 +6033,13 @@
     "SECT131R2": {
         "name": "sect131r2",
         "long_name": "sect131r2 elliptic curve (binary field GF(2^131))",
-        "vulnerabilities": [],
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "WEAK",
+                "named": null
+            }
+        ],
         "aliases": [],
         "sources": [
             "SEC_2",
