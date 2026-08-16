@@ -10,7 +10,8 @@ from test.common.classes import TestClasses
 
 import asn1crypto
 
-from cryptodatahub.common.algorithm import Authentication, Hash, KeyExchange, NamedGroup, Signature
+from cryptodatahub.common.algorithm import Authentication, Hash, KeyExchange, Signature
+from cryptodatahub.common.parameter import ECParamWellKnown
 from cryptodatahub.common.key import (
     _PublicKeySizeGradeable,
     PublicKey,
@@ -164,7 +165,7 @@ class TestPublicKeyParamsEcdsa(TestClasses.TestKeyBase):
         self.assertEqual(
             public_key_params,
             PublicKeyParamsEcdsa.from_octet_bit_string(
-                public_key_params.named_group,
+                public_key_params.key_parameter,
                 public_key_params.octet_bit_string,
             )
         )
@@ -187,7 +188,7 @@ class TestPublicKey(TestClasses.TestKeyBase):
         public_key = self._get_public_key('gitlab.com_ssh_ecdsa_key')
         public_key_params = public_key.params
         params = PublicKeyParamsEcdsa(
-            named_group=NamedGroup.PRIME256V1,
+            key_parameter=ECParamWellKnown.PRIME256V1,
             point_x=public_key_params.point_x,
             point_y=public_key_params.point_y,
         )
@@ -198,7 +199,7 @@ class TestPublicKey(TestClasses.TestKeyBase):
         public_key = self._get_public_key('gitlab.com_ssh_eddsa_key')
         public_key_params = public_key.params
         params = PublicKeyParamsEddsa(
-            curve_type=public_key_params.curve_type,
+            key_parameter=public_key_params.key_parameter,
             key_data=public_key_params.key_data,
         )
         public_key = PublicKey.from_params(params)
@@ -208,7 +209,7 @@ class TestPublicKey(TestClasses.TestKeyBase):
         public_key = self._get_public_key('ssh_ed448_key')
         public_key_params = public_key.params
         params = PublicKeyParamsEddsa(
-            curve_type=public_key_params.curve_type,
+            key_parameter=public_key_params.key_parameter,
             key_data=public_key_params.key_data,
         )
         public_key = PublicKey.from_params(params)
