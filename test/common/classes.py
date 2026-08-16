@@ -61,6 +61,7 @@ class EnumIntTest(enum.IntEnum):
     TEN = 10
 
 
+@attr.s(frozen=True)
 class TestEnumNamedParams(CryptoDataParamsNamed):
     pass
 

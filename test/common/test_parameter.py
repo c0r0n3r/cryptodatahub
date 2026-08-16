@@ -9,6 +9,7 @@ from test.common.classes import TestClasses
 
 from cryptodatahub.common.algorithm import NamedGroup
 from cryptodatahub.common.exception import InvalidValue
+from cryptodatahub.common.grade import AttackNamed, Grade
 from cryptodatahub.common.parameter import DHParameterNumbers, DHParamWellKnown, ECParamWellKnown
 
 
@@ -41,6 +42,38 @@ class TestDHParamWellKnown(TestClasses.TestJsonBase):
         self.assertEqual(
             str(DHParamWellKnown.APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_1024.value),
             '1024-bit Apache 2.0.18 builtin DH parameter'
+        )
+
+    def test_sources(self):
+        sources = DHParamWellKnown.RFC2539_768_BIT_MODP_GROUP.value.sources
+        self.assertEqual(
+            [source.value.name for source in sources], ['RFC 2409', 'RFC 2539', 'IETF']
+        )
+        self.assertEqual(
+            [
+                source.value.name
+                for source in DHParamWellKnown.APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_1024
+                .value.sources
+            ],
+            ['Apache'],
+        )
+
+    def test_non_safe_prime(self):
+        group = DHParamWellKnown.RFC5114_1024_BIT_MODP_GROUP_WITH_160_BIT_PRIME_ORDER_SUBGROUP
+        self.assertIn(
+            AttackNamed.NON_SAFE_PRIME,
+            [vulnerability.named for vulnerability in group.value.vulnerabilities],
+        )
+        self.assertEqual(group.value.min_grade, Grade.DEPRECATED)
+
+    def test_entries_of_one_name_stay_apart(self):
+        self.assertEqual(
+            DHParamWellKnown.APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_512.value.name,
+            DHParamWellKnown.APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_1024.value.name,
+        )
+        self.assertNotEqual(
+            DHParamWellKnown.APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_512,
+            DHParamWellKnown.APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_1024,
         )
 
 

@@ -435,7 +435,7 @@ class CryptoDataParamsFetchedBase(CryptoDataParamsBase):
         raise NotImplementedError()
 
 
-@attr.s(frozen=True)
+@attr.s(eq=False, frozen=True)
 class CryptoDataParamsNamed(CryptoDataParamsBase):
     name = attr.ib(validator=attr.validators.instance_of(str))
     long_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))

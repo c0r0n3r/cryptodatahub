@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MPL-2.0
 
-import typing
+import abc
 
 import attr
 
@@ -9,7 +9,6 @@ from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.grade import GradeableVulnerabilities
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
-    CryptoDataParamsBase,
     CryptoDataParamsNamed,
     convert_big_enum,
     convert_dict_to_object,
@@ -54,33 +53,46 @@ class DHParameterNumbers:
 
 
 @attr.s(eq=False, frozen=True)
-class DHParamWellKnownParams(CryptoDataParamsBase, GradeableVulnerabilities):
-    parameter_numbers: DHParameterNumbers = attr.ib(
+class ParamWellKnownBase(CryptoDataParamsNamed, GradeableVulnerabilities):
+    aliases = attr.ib(validator=attr.validators.deep_iterable(attr.validators.instance_of(str)))
+    sources = attr.ib(
+        converter=convert_iterable(convert_variadic((
+            convert_enum(Standard),
+            convert_enum(Entity),
+            convert_enum(Server),
+        ))),
+        validator=attr.validators.deep_iterable(
+            attr.validators.instance_of((Standard, Entity, Server))
+        ),
+    )
+
+    @classmethod
+    @abc.abstractmethod
+    def get_gradeable_name(cls):
+        raise NotImplementedError()
+
+
+@attr.s(eq=False, frozen=True)
+class DHParamWellKnownParams(ParamWellKnownBase):
+    parameter_numbers = attr.ib(
         converter=convert_dict_to_object(DHParameterNumbers),
         validator=attr.validators.instance_of(DHParameterNumbers)
     )
-    name: str = attr.ib(validator=attr.validators.instance_of(str))
-    source: typing.Union[Entity, Server] = attr.ib(
-        converter=convert_variadic((convert_enum(Entity), convert_enum(Server))),
-        validator=attr.validators.instance_of((Entity, Server))
-    )
-    standards: typing.Iterable[Standard] = attr.ib(
-        converter=convert_iterable(convert_enum(Standard)),
-        validator=attr.validators.deep_iterable(attr.validators.instance_of(Standard))
-    )
-    key_size: int = attr.ib(validator=attr.validators.instance_of(int))
-    safe_prime: bool = attr.ib(default=True, validator=attr.validators.instance_of(bool))
+    key_size = attr.ib(validator=attr.validators.instance_of(int))
 
     @classmethod
     def get_gradeable_name(cls):
         return 'DH parameter'
 
     def __str__(self):
-        if self.standards:
-            standards_str = ', '.join(map(lambda standard: standard.value.name, self.standards))
+        standards = [source for source in self.sources if isinstance(source, Standard)]
+        if standards:
+            standards_str = ', '.join(map(lambda standard: standard.value.name, standards))
             return f'{self.name} ({standards_str})'
 
-        return f'{self.key_size}-bit {self.source.value.name} {self.name} DH parameter'
+        origin = next(source for source in self.sources if not isinstance(source, Standard))
+
+        return f'{self.key_size}-bit {origin.value.name} {self.name} DH parameter'
 
 
 class DHParamWellKnownBase(CryptoDataEnumBase):

@@ -1,11 +1,19 @@
 {
     "RFC2539_768_BIT_MODP_GROUP": {
+        "name": "768-bit MODP Group/Oakley Group 1",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "WEAK",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "RFC_2409",
+            "RFC_2539",
+            "IETF"
         ],
         "parameter_numbers": {
             "p": [
@@ -16,22 +24,23 @@
             ],
             "g": 2
         },
-        "name": "768-bit MODP Group/Oakley Group 1",
-        "source": "IETF",
-        "standards": [
-            "RFC_2409",
-            "RFC_2539"
-        ],
-        "key_size": 768,
-        "safe_prime": true
+        "key_size": 768
     },
     "RFC2539_1024_BIT_MODP_GROUP": {
+        "name": "1024-bit MODP Group/Oakley Group 2",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "RFC_2409",
+            "RFC_2539",
+            "IETF"
         ],
         "parameter_numbers": {
             "p": [
@@ -44,17 +53,17 @@
             ],
             "g": 2
         },
-        "name": "1024-bit MODP Group/Oakley Group 2",
-        "source": "IETF",
-        "standards": [
-            "RFC_2409",
-            "RFC_2539"
-        ],
-        "key_size": 1024,
-        "safe_prime": true
+        "key_size": 1024
     },
     "RFC3526_1536_BIT_MODP_GROUP": {
+        "name": "1536-bit MODP Group/Oakley Group 5",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "RFC_3526",
+            "IETF"
+        ],
         "parameter_numbers": {
             "p": [
                 "FFFFFFFF FFFFFFFF C90FDAA2 2168C234 C4C6628B 80DC1CD1",
@@ -68,16 +77,17 @@
             ],
             "g": 2
         },
-        "name": "1536-bit MODP Group/Oakley Group 5",
-        "source": "IETF",
-        "standards": [
-            "RFC_3526"
-        ],
-        "key_size": 1536,
-        "safe_prime": true
+        "key_size": 1536
     },
     "RFC3526_2048_BIT_MODP_GROUP": {
+        "name": "2048-bit MODP Group/Oakley Group 14",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "RFC_3526",
+            "IETF"
+        ],
         "parameter_numbers": {
             "p": [
                 "FFFFFFFF FFFFFFFF C90FDAA2 2168C234 C4C6628B 80DC1CD1",
@@ -94,16 +104,17 @@
             ],
             "g": 2
         },
-        "name": "2048-bit MODP Group/Oakley Group 14",
-        "source": "IETF",
-        "standards": [
-            "RFC_3526"
-        ],
-        "key_size": 2048,
-        "safe_prime": true
+        "key_size": 2048
     },
     "RFC3526_3072_BIT_MODP_GROUP": {
+        "name": "3072-bit MODP Group/Oakley Group 15",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "RFC_3526",
+            "IETF"
+        ],
         "parameter_numbers": {
             "p": [
                 "FFFFFFFF FFFFFFFF C90FDAA2 2168C234 C4C6628B 80DC1CD1",
@@ -125,16 +136,17 @@
             ],
             "g": 2
         },
-        "name": "3072-bit MODP Group/Oakley Group 15",
-        "source": "IETF",
-        "standards": [
-            "RFC_3526"
-        ],
-        "key_size": 3072,
-        "safe_prime": true
+        "key_size": 3072
     },
     "RFC3526_4096_BIT_MODP_GROUP": {
+        "name": "4096-bit MODP Group/Oakley Group 16",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "RFC_3526",
+            "IETF"
+        ],
         "parameter_numbers": {
             "p": [
                 "FFFFFFFF FFFFFFFF C90FDAA2 2168C234 C4C6628B 80DC1CD1",
@@ -162,21 +174,22 @@
             ],
             "g": 2
         },
-        "name": "4096-bit MODP Group/Oakley Group 16",
-        "source": "IETF",
-        "standards": [
-            "RFC_3526"
-        ],
-        "key_size": 4096,
-        "safe_prime": true
+        "key_size": 4096
     },
     "RFC3526_6144_BIT_MODP_GROUP": {
+        "name": "6144-bit MODP Group/Oakley Group 17",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "DOS_ATTACK",
                 "grade": "WEAK",
                 "named": "DHEAT_ATTACK"
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "RFC_3526",
+            "IETF"
         ],
         "parameter_numbers": {
             "p": [
@@ -211,21 +224,22 @@
             ],
             "g": 2
         },
-        "name": "6144-bit MODP Group/Oakley Group 17",
-        "source": "IETF",
-        "standards": [
-            "RFC_3526"
-        ],
-        "key_size": 6144,
-        "safe_prime": true
+        "key_size": 6144
     },
     "RFC3526_8192_BIT_MODP_GROUP": {
+        "name": "8192-bit MODP Group/Oakley Group 18",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "DOS_ATTACK",
                 "grade": "WEAK",
                 "named": "DHEAT_ATTACK"
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "RFC_3526",
+            "IETF"
         ],
         "parameter_numbers": {
             "p": [
@@ -275,21 +289,27 @@
             ],
             "g": 2
         },
-        "name": "8192-bit MODP Group/Oakley Group 18",
-        "source": "IETF",
-        "standards": [
-            "RFC_3526"
-        ],
-        "key_size": 8192,
-        "safe_prime": true
+        "key_size": 8192
     },
     "RFC5114_1024_BIT_MODP_GROUP_WITH_160_BIT_PRIME_ORDER_SUBGROUP": {
+        "name": "1024-bit MODP Group with 160-bit Prime Order Subgroup",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
+            },
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "DEPRECATED",
+                "named": "NON_SAFE_PRIME"
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "RFC_5114",
+            "IETF"
         ],
         "parameter_numbers": {
             "p": [
@@ -312,16 +332,23 @@
                 "F518AA87 81A8DF27 8ABA4E7D 64B7CB9D 49462353"
             ]
         },
-        "name": "1024-bit MODP Group with 160-bit Prime Order Subgroup",
-        "source": "IETF",
-        "standards": [
-            "RFC_5114"
-        ],
-        "key_size": 1024,
-        "safe_prime": false
+        "key_size": 1024
     },
     "RFC5114_2048_BIT_MODP_GROUP_WITH_224_BIT_PRIME_ORDER_SUBGROUP": {
-        "vulnerabilities": [],
+        "name": "2048-bit MODP Group with 224-bit Prime Order Subgroup",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "DEPRECATED",
+                "named": "NON_SAFE_PRIME"
+            }
+        ],
+        "aliases": [],
+        "sources": [
+            "RFC_5114",
+            "IETF"
+        ],
         "parameter_numbers": {
             "p": [
                 "AD107E1E 9123A9D0 D660FAA7 9559C51F A20D64E5 683B9FD1",
@@ -354,16 +381,23 @@
                 "B36371EB"
             ]
         },
-        "name": "2048-bit MODP Group with 224-bit Prime Order Subgroup",
-        "source": "IETF",
-        "standards": [
-            "RFC_5114"
-        ],
-        "key_size": 2048,
-        "safe_prime": false
+        "key_size": 2048
     },
     "RFC5114_2048_BIT_MODP_GROUP_WITH_256_BIT_PRIME_ORDER_SUBGROUP": {
-        "vulnerabilities": [],
+        "name": "2048-bit MODP Group with 256-bit Prime Order Subgroup",
+        "long_name": null,
+        "vulnerabilities": [
+            {
+                "attack_type": "DISCRETE_LOGARITHM",
+                "grade": "DEPRECATED",
+                "named": "NON_SAFE_PRIME"
+            }
+        ],
+        "aliases": [],
+        "sources": [
+            "RFC_5114",
+            "IETF"
+        ],
         "parameter_numbers": {
             "p": [
                 "87A8E61D B4B6663C FFBBD19C 65195999 8CEEF608 660DD0F2",
@@ -396,16 +430,17 @@
                 "A308B0FE 64F5FBD3"
             ]
         },
-        "name": "2048-bit MODP Group with 256-bit Prime Order Subgroup",
-        "source": "IETF",
-        "standards": [
-            "RFC_5114"
-        ],
-        "key_size": 2048,
-        "safe_prime": false
+        "key_size": 2048
     },
     "RFC7919_2048_BIT_FINITE_FIELD_DIFFIE_HELLMAN_GROUP": {
+        "name": "2048-bit Finite Field Diffie-Hellman group",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "RFC_7919",
+            "IETF"
+        ],
         "parameter_numbers": {
             "p": [
                 "FFFFFFFF FFFFFFFF ADF85458 A2BB4A9A AFDC5620 273D3CF1",
@@ -435,16 +470,17 @@
                 "4435A11C 30942E4B FFFFFFFF FFFFFFFF"
             ]
         },
-        "name": "2048-bit Finite Field Diffie-Hellman group",
-        "source": "IETF",
-        "standards": [
-            "RFC_7919"
-        ],
-        "key_size": 2048,
-        "safe_prime": true
+        "key_size": 2048
     },
     "RFC7919_3072_BIT_FINITE_FIELD_DIFFIE_HELLMAN_GROUP": {
+        "name": "3072-bit Finite Field Diffie-Hellman group",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "RFC_7919",
+            "IETF"
+        ],
         "parameter_numbers": {
             "p": [
                 "FFFFFFFF FFFFFFFF ADF85458 A2BB4A9A AFDC5620 273D3CF1",
@@ -484,16 +520,17 @@
                 "9E0D9077 1FEACEBE 12F20E95 B363171B FFFFFFFF FFFFFFFF"
             ]
         },
-        "name": "3072-bit Finite Field Diffie-Hellman group",
-        "source": "IETF",
-        "standards": [
-            "RFC_7919"
-        ],
-        "key_size": 3072,
-        "safe_prime": true
+        "key_size": 3072
     },
     "RFC7919_4096_BIT_FINITE_FIELD_DIFFIE_HELLMAN_GROUP": {
+        "name": "4096-bit Finite Field Diffie-Hellman group",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "RFC_7919",
+            "IETF"
+        ],
         "parameter_numbers": {
             "p": [
                 "FFFFFFFF FFFFFFFF ADF85458 A2BB4A9A AFDC5620 273D3CF1",
@@ -545,21 +582,22 @@
                 "7FFFFFFF FFFFFFFF"
             ]
         },
-        "name": "4096-bit Finite Field Diffie-Hellman group",
-        "source": "IETF",
-        "standards": [
-            "RFC_7919"
-        ],
-        "key_size": 4096,
-        "safe_prime": true
+        "key_size": 4096
     },
     "RFC7919_6144_BIT_FINITE_FIELD_DIFFIE_HELLMAN_GROUP": {
+        "name": "6144-bit Finite Field Diffie-Hellman group",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "DOS_ATTACK",
                 "grade": "WEAK",
                 "named": "DHEAT_ATTACK"
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "RFC_7919",
+            "IETF"
         ],
         "parameter_numbers": {
             "p": [
@@ -632,21 +670,22 @@
                 "D20EAB86 BC9C6D6A 5207194E 68720732 FFFFFFFF FFFFFFFF"
             ]
         },
-        "name": "6144-bit Finite Field Diffie-Hellman group",
-        "source": "IETF",
-        "standards": [
-            "RFC_7919"
-        ],
-        "key_size": 6144,
-        "safe_prime": true
+        "key_size": 6144
     },
     "RFC7919_8192_BIT_FINITE_FIELD_DIFFIE_HELLMAN_GROUP": {
+        "name": "8192-bit Finite Field Diffie-Hellman group",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "DOS_ATTACK",
                 "grade": "WEAK",
                 "named": "DHEAT_ATTACK"
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "RFC_7919",
+            "IETF"
         ],
         "parameter_numbers": {
             "p": [
@@ -741,16 +780,16 @@
                 "6B4645DB E2E32126 7FFFFFFF FFFFFFFF"
             ]
         },
-        "name": "8192-bit Finite Field Diffie-Hellman group",
-        "source": "IETF",
-        "standards": [
-            "RFC_7919"
-        ],
-        "key_size": 8192,
-        "safe_prime": true
+        "key_size": 8192
     },
     "APPLICATION_SERVER_POSTFIX_VERSION_2_2_BIT_512": {
+        "name": "2.2 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "POSTFIX"
+        ],
         "parameter_numbers": {
             "p": [
                 "0x88, 0x3F, 0x00, 0xAF, 0xFC, 0x0C, 0x8A, 0xB8, 0x35, 0xCD, 0xE5, 0xC2,",
@@ -762,19 +801,21 @@
             ],
             "g": 2
         },
-        "name": "2.2 builtin",
-        "source": "POSTFIX",
-        "standards": [],
-        "key_size": 512,
-        "safe_prime": true
+        "key_size": 512
     },
     "APPLICATION_SERVER_POSTFIX_VERSION_2_2_BIT_1024": {
+        "name": "2.2 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "POSTFIX"
         ],
         "parameter_numbers": {
             "p": [
@@ -792,14 +833,16 @@
             ],
             "g": 2
         },
-        "name": "2.2 builtin",
-        "source": "POSTFIX",
-        "standards": [],
-        "key_size": 1024,
-        "safe_prime": true
+        "key_size": 1024
     },
     "APPLICATION_SERVER_POSTFIX_VERSION_3_1_BIT_512": {
+        "name": "3.1 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "POSTFIX"
+        ],
         "parameter_numbers": {
             "p": [
                 "0x30, 0x46, 0x02, 0x41, 0x00, 0xd8, 0xbf, 0x11, 0xd6, 0x41, 0x2a, 0x7a,",
@@ -811,14 +854,16 @@
             ],
             "g": 2
         },
-        "name": "3.1 builtin",
-        "source": "POSTFIX",
-        "standards": [],
-        "key_size": 512,
-        "safe_prime": true
+        "key_size": 512
     },
     "APPLICATION_SERVER_POSTFIX_VERSION_3_1_BIT_2048": {
+        "name": "3.1 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "POSTFIX"
+        ],
         "parameter_numbers": {
             "p": [
                 "0x30, 0x82, 0x01, 0x08, 0x02, 0x82, 0x01, 0x01, 0x00, 0xbf, 0x28, 0x1b,",
@@ -847,14 +892,16 @@
             ],
             "g": 2
         },
-        "name": "3.1 builtin",
-        "source": "POSTFIX",
-        "standards": [],
-        "key_size": 2048,
-        "safe_prime": true
+        "key_size": 2048
     },
     "APPLICATION_SERVER_POSTFIX_VERSION_3_6_BIT_2048": {
+        "name": "3.6 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "POSTFIX"
+        ],
         "parameter_numbers": {
             "p": [
                 "0x30, 0x82, 0x01, 0x08, 0x02, 0x82, 0x01, 0x01, 0x00, 0x9e, 0x28, 0x15,",
@@ -883,14 +930,16 @@
             ],
             "g": 2
         },
-        "name": "3.6 builtin",
-        "source": "POSTFIX",
-        "standards": [],
-        "key_size": 2048,
-        "safe_prime": true
+        "key_size": 2048
     },
     "APPLICATION_SERVER_POSTFIX_VERSION_3_7_BIT_2048": {
+        "name": "3.7 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "POSTFIX"
+        ],
         "parameter_numbers": {
             "p": [
                 "0x30, 0x82, 0x01, 0x08, 0x02, 0x82, 0x01, 0x01, 0x00, 0xec, 0x02, 0x7b,",
@@ -919,19 +968,21 @@
             ],
             "g": 2
         },
-        "name": "3.7 builtin",
-        "source": "POSTFIX",
-        "standards": [],
-        "key_size": 2048,
-        "safe_prime": true
+        "key_size": 2048
     },
     "APPLICATION_SERVER_HAPROXY_VERSION_1_6_BIT_1024": {
+        "name": "1.6 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "HAPROXY"
         ],
         "parameter_numbers": {
             "p": [
@@ -949,14 +1000,16 @@
             ],
             "g": 2
         },
-        "name": "1.6 builtin",
-        "source": "HAPROXY",
-        "standards": [],
-        "key_size": 1024,
-        "safe_prime": true
+        "key_size": 1024
     },
     "APPLICATION_SERVER_HAPROXY_VERSION_1_6_BIT_2048": {
+        "name": "1.6 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "HAPROXY"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xEC, 0x86, 0xF8, 0x70, 0xA0, 0x33, 0x16, 0xEC, 0x05, 0x1A, 0x73, 0x59,",
@@ -984,14 +1037,16 @@
             ],
             "g": 2
         },
-        "name": "1.6 builtin",
-        "source": "HAPROXY",
-        "standards": [],
-        "key_size": 2048,
-        "safe_prime": true
+        "key_size": 2048
     },
     "APPLICATION_SERVER_HAPROXY_VERSION_1_6_BIT_4096": {
+        "name": "1.6 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "HAPROXY"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xDE, 0x16, 0x94, 0xCD, 0x99, 0x58, 0x07, 0xF1, 0xF7, 0x32, 0x96, 0x11,",
@@ -1040,14 +1095,16 @@
             ],
             "g": 2
         },
-        "name": "1.6 builtin",
-        "source": "HAPROXY",
-        "standards": [],
-        "key_size": 4096,
-        "safe_prime": true
+        "key_size": 4096
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_2_8_BIT_512": {
+        "name": "1.2.8 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xC0, 0xC5, 0x23, 0x8D, 0x3A, 0xB3, 0xA3, 0x63, 0x57, 0xC0, 0xD3, 0xFE,",
@@ -1059,14 +1116,16 @@
             ],
             "g": 2
         },
-        "name": "1.2.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 512,
-        "safe_prime": true
+        "key_size": 512
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_2_8_BIT_768": {
+        "name": "1.2.8 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xB3, 0x95, 0x74, 0xCE, 0x0B, 0xFD, 0xAB, 0xC3, 0x53, 0x9B, 0x0B, 0xFD,",
@@ -1080,19 +1139,21 @@
             ],
             "g": 2
         },
-        "name": "1.2.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 768,
-        "safe_prime": true
+        "key_size": 768
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_2_8_BIT_1024": {
+        "name": "1.2.8 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
         ],
         "parameter_numbers": {
             "p": [
@@ -1110,14 +1171,16 @@
             ],
             "g": 2
         },
-        "name": "1.2.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 1024,
-        "safe_prime": true
+        "key_size": 1024
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_2_8_BIT_1536": {
+        "name": "1.2.8 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xDA, 0x68, 0x25, 0x7F, 0x9D, 0xB5, 0x3F, 0x42, 0x05, 0xBC, 0x79, 0x65,",
@@ -1139,14 +1202,16 @@
             ],
             "g": 2
         },
-        "name": "1.2.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 1536,
-        "safe_prime": true
+        "key_size": 1536
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_2_8_BIT_2048": {
+        "name": "1.2.8 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xD0, 0xE6, 0xFF, 0x1F, 0x39, 0xE0, 0xCC, 0x85, 0xAC, 0xA4, 0xE6, 0xDD,",
@@ -1174,14 +1239,16 @@
             ],
             "g": 2
         },
-        "name": "1.2.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 2048,
-        "safe_prime": true
+        "key_size": 2048
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_2_BIT_512": {
+        "name": "1.3.2 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xFE, 0xA8, 0xF1, 0x85, 0x9A, 0x13, 0x69, 0x45, 0x34, 0x64, 0xB5, 0xAC,",
@@ -1193,14 +1260,16 @@
             ],
             "g": 2
         },
-        "name": "1.3.2 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 512,
-        "safe_prime": true
+        "key_size": 512
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_2_BIT_768": {
+        "name": "1.3.2 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xFC, 0xE8, 0xB1, 0x99, 0x7D, 0x2D, 0x4D, 0x36, 0x43, 0x2D, 0xBB, 0x8B,",
@@ -1214,19 +1283,21 @@
             ],
             "g": 2
         },
-        "name": "1.3.2 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 768,
-        "safe_prime": true
+        "key_size": 768
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_2_BIT_1024": {
+        "name": "1.3.2 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
         ],
         "parameter_numbers": {
             "p": [
@@ -1244,14 +1315,16 @@
             ],
             "g": 2
         },
-        "name": "1.3.2 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 1024,
-        "safe_prime": true
+        "key_size": 1024
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_2_BIT_1536": {
+        "name": "1.3.2 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xD8, 0xF5, 0x0C, 0x0A, 0x3E, 0xF7, 0x93, 0x3D, 0x07, 0xC5, 0x7B, 0xA5,",
@@ -1273,14 +1346,16 @@
             ],
             "g": 2
         },
-        "name": "1.3.2 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 1536,
-        "safe_prime": true
+        "key_size": 1536
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_5_BIT_512": {
+        "name": "1.3.5 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xBA, 0x55, 0xC0, 0x7C, 0xF9, 0x61, 0x5E, 0x17, 0x3F, 0xC7, 0x42, 0x79,",
@@ -1292,19 +1367,21 @@
             ],
             "g": 5
         },
-        "name": "1.3.5 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 512,
-        "safe_prime": true
+        "key_size": 512
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_5_BIT_768": {
+        "name": "1.3.5 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "WEAK",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
         ],
         "parameter_numbers": {
             "p": [
@@ -1319,19 +1396,21 @@
             ],
             "g": 5
         },
-        "name": "1.3.5 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 768,
-        "safe_prime": true
+        "key_size": 768
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_5_BIT_1024": {
+        "name": "1.3.5 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
         ],
         "parameter_numbers": {
             "p": [
@@ -1349,14 +1428,16 @@
             ],
             "g": 5
         },
-        "name": "1.3.5 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 1024,
-        "safe_prime": true
+        "key_size": 1024
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_5_BIT_1536": {
+        "name": "1.3.5 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0x94, 0xAB, 0x27, 0xAE, 0x97, 0xF4, 0x7A, 0x42, 0x45, 0x15, 0x12, 0xB8,",
@@ -1378,14 +1459,16 @@
             ],
             "g": 5
         },
-        "name": "1.3.5 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 1536,
-        "safe_prime": true
+        "key_size": 1536
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_5_BIT_2048": {
+        "name": "1.3.5 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xF2, 0xEA, 0x0A, 0x01, 0x2B, 0xB9, 0x67, 0xDB, 0x1D, 0x15, 0x57, 0x44,",
@@ -1413,14 +1496,16 @@
             ],
             "g": 5
         },
-        "name": "1.3.5 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 2048,
-        "safe_prime": true
+        "key_size": 2048
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_7_BIT_512": {
+        "name": "1.3.7 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0x8B, 0xFB, 0x35, 0x64, 0xC4, 0xFC, 0x41, 0x02, 0x14, 0xD3,",
@@ -1433,19 +1518,21 @@
             ],
             "g": 2
         },
-        "name": "1.3.7 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 512,
-        "safe_prime": true
+        "key_size": 512
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_7_BIT_768": {
+        "name": "1.3.7 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "WEAK",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
         ],
         "parameter_numbers": {
             "p": [
@@ -1462,19 +1549,21 @@
             ],
             "g": 2
         },
-        "name": "1.3.7 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 768,
-        "safe_prime": true
+        "key_size": 768
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_7_BIT_1024": {
+        "name": "1.3.7 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
         ],
         "parameter_numbers": {
             "p": [
@@ -1494,14 +1583,16 @@
             ],
             "g": 2
         },
-        "name": "1.3.7 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 1024,
-        "safe_prime": true
+        "key_size": 1024
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_7_BIT_1536": {
+        "name": "1.3.7 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xFF, 0x88, 0x9F, 0x3A, 0x0F, 0x13, 0xF1, 0xD4, 0x79, 0xF1,",
@@ -1527,14 +1618,16 @@
             ],
             "g": 2
         },
-        "name": "1.3.7 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 1536,
-        "safe_prime": true
+        "key_size": 1536
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_7_BIT_2048": {
+        "name": "1.3.2 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xEA, 0xB7, 0x8A, 0x79, 0xFE, 0x66, 0xCD, 0xB3, 0x0C, 0xE9,",
@@ -1566,14 +1659,16 @@
             ],
             "g": 2
         },
-        "name": "1.3.2 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 2048,
-        "safe_prime": true
+        "key_size": 2048
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_8_BIT_512": {
+        "name": "1.3.8 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xFE, 0x72, 0x7D, 0xBE, 0xF4, 0x71, 0x6C, 0xC2, 0x44, 0x3A, 0x9C, 0x32,",
@@ -1585,19 +1680,21 @@
             ],
             "g": 5
         },
-        "name": "1.3.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 512,
-        "safe_prime": true
+        "key_size": 512
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_8_BIT_768": {
+        "name": "1.3.8 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "WEAK",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
         ],
         "parameter_numbers": {
             "p": [
@@ -1612,19 +1709,21 @@
             ],
             "g": 5
         },
-        "name": "1.3.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 768,
-        "safe_prime": true
+        "key_size": 768
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_8_BIT_1024": {
+        "name": "1.3.8 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
         ],
         "parameter_numbers": {
             "p": [
@@ -1642,14 +1741,16 @@
             ],
             "g": 5
         },
-        "name": "1.3.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 1024,
-        "safe_prime": true
+        "key_size": 1024
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_8_BIT_1536": {
+        "name": "1.3.8 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0x89, 0x55, 0xC2, 0x99, 0xCC, 0x56, 0xB0, 0x29, 0x22, 0xB8, 0x5F, 0x1A,",
@@ -1671,14 +1772,16 @@
             ],
             "g": 5
         },
-        "name": "1.3.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 1536,
-        "safe_prime": true
+        "key_size": 1536
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_8_BIT_2048": {
+        "name": "1.3.8 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xA2, 0x46, 0x65, 0xEA, 0x09, 0x2A, 0x47, 0x9D, 0x3C, 0x57, 0xA6, 0xDB,",
@@ -1706,14 +1809,16 @@
             ],
             "g": 5
         },
-        "name": "1.3.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 2048,
-        "safe_prime": true
+        "key_size": 2048
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_8_BIT_3072": {
+        "name": "1.3.8 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xC1, 0xD8, 0x7C, 0x6C, 0x10, 0x67, 0xE0, 0xFC, 0xB4, 0x17, 0x37, 0x25,",
@@ -1751,14 +1856,16 @@
             ],
             "g": 2
         },
-        "name": "1.3.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 3072,
-        "safe_prime": true
+        "key_size": 3072
     },
     "APPLICATION_SERVER_PROFTPD_VERSION_1_3_8_BIT_4096": {
+        "name": "1.3.8 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "PROFTPD"
+        ],
         "parameter_numbers": {
             "p": [
                 "0x93, 0x3D, 0x4B, 0xD6, 0x87, 0xFE, 0x47, 0xDF, 0x68, 0x48, 0x2A, 0x8B,",
@@ -1807,19 +1914,21 @@
             ],
             "g": 5
         },
-        "name": "1.3.8 builtin",
-        "source": "PROFTPD",
-        "standards": [],
-        "key_size": 4096,
-        "safe_prime": true
+        "key_size": 4096
     },
     "APPLICATION_SERVER_NGINX_VERSION_0_7_2_BIT_1024": {
+        "name": "0.7.2 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "NGINX"
         ],
         "parameter_numbers": {
             "p": [
@@ -1837,14 +1946,16 @@
             ],
             "g": 2
         },
-        "name": "0.7.2 builtin",
-        "source": "NGINX",
-        "standards": [],
-        "key_size": 1024,
-        "safe_prime": true
+        "key_size": 1024
     },
     "APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_512": {
+        "name": "2.0.18 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "APACHE_HTTP_SERVER"
+        ],
         "parameter_numbers": {
             "p": [
                 "0xD4, 0xBC, 0xD5, 0x24, 0x06, 0xF6, 0x9B, 0x35, 0x99, 0x4B, 0x88, 0xDE,",
@@ -1856,19 +1967,21 @@
             ],
             "g": 2
         },
-        "name": "2.0.18 builtin",
-        "source": "APACHE_HTTP_SERVER",
-        "standards": [],
-        "key_size": 512,
-        "safe_prime": true
+        "key_size": 512
     },
     "APPLICATION_SERVER_APACHE_VERSION_2_0_18_BIT_1024": {
+        "name": "2.0.18 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "APACHE_HTTP_SERVER"
         ],
         "parameter_numbers": {
             "p": [
@@ -1886,14 +1999,16 @@
             ],
             "g": 2
         },
-        "name": "2.0.18 builtin",
-        "source": "APACHE_HTTP_SERVER",
-        "standards": [],
-        "key_size": 1024,
-        "safe_prime": true
+        "key_size": 1024
     },
     "APPLICATION_SERVER_APACHE_VERSION_2_1_5_BIT_512": {
+        "name": "2.1.5 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "APACHE_HTTP_SERVER"
+        ],
         "parameter_numbers": {
             "p": [
                 "0x9F, 0xDB, 0x8B, 0x8A, 0x00, 0x45, 0x44, 0xF0, 0x04, 0x5F, 0x17, 0x37,",
@@ -1905,19 +2020,21 @@
             ],
             "g": 2
         },
-        "name": "2.1.5 builtin",
-        "source": "APACHE_HTTP_SERVER",
-        "standards": [],
-        "key_size": 512,
-        "safe_prime": true
+        "key_size": 512
     },
     "APPLICATION_SERVER_APACHE_VERSION_2_1_5_BIT_1024": {
+        "name": "2.1.5 builtin",
+        "long_name": null,
         "vulnerabilities": [
             {
                 "attack_type": "INTEGER_FACTORIZATION",
                 "grade": "DEPRECATED",
                 "named": null
             }
+        ],
+        "aliases": [],
+        "sources": [
+            "APACHE_HTTP_SERVER"
         ],
         "parameter_numbers": {
             "p": [
@@ -1935,14 +2052,16 @@
             ],
             "g": 2
         },
-        "name": "2.1.5 builtin",
-        "source": "APACHE_HTTP_SERVER",
-        "standards": [],
-        "key_size": 1024,
-        "safe_prime": true
+        "key_size": 1024
     },
     "APPLICATION_SERVER_SOCAT_VERSION_1_7_3_BIT_2048": {
+        "name": "1.7.3 builtin",
+        "long_name": null,
         "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "SOCAT"
+        ],
         "parameter_numbers": {
             "p": [
                 "0x00, 0xdc, 0x21, 0x64, 0x56, 0xbd, 0x9c, 0xb2, 0xac, 0xbe, 0xc9, 0x98, 0xef, 0x95, 0x3e,",
@@ -1966,10 +2085,6 @@
             ],
             "g": 2
         },
-        "name": "1.7.3 builtin",
-        "source": "SOCAT",
-        "standards": [],
-        "key_size": 2048,
-        "safe_prime": true
+        "key_size": 2048
     }
 }
