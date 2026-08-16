@@ -4,6 +4,7 @@ from test.common.classes import TestClasses
 
 from cryptodatahub.common.algorithm import NamedGroup
 from cryptodatahub.common.exception import InvalidValue
+from cryptodatahub.common.parameter import ECParamWellKnown
 from cryptodatahub.common.pqc import HybridNamedGroup, KeyEncapsulationMechanism
 
 
@@ -42,8 +43,13 @@ class TestHybridNamedGroup(TestClasses.TestJsonBase):
         return HybridNamedGroup
 
     def test_halves(self):
-        self.assertEqual(HybridNamedGroup.CECPQ2.value.classical_named_group, NamedGroup.CURVE25519)
-        self.assertEqual(HybridNamedGroup.CECPQ2.value.post_quantum_named_group, NamedGroup.NTRU_HRSS_701)
+        self.assertEqual(
+            HybridNamedGroup.CECPQ2.value.classical_key_parameter, ECParamWellKnown.CURVE25519
+        )
+        self.assertEqual(
+            HybridNamedGroup.CECPQ2.value.post_quantum_key_parameter,
+            KeyEncapsulationMechanism.NTRU_HRSS_701,
+        )
 
     def test_named_group_exists(self):
         self.assertEqual([

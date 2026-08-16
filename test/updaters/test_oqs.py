@@ -20,6 +20,7 @@ from cryptodatahub.common.algorithm import (
     NamedGroupType,
     NistSecurityLevel,
 )
+from cryptodatahub.common.parameter import ECParamWellKnown
 from cryptodatahub.common.pqc import (
     HybridNamedGroup,
     HybridNamedGroupParams,
@@ -470,14 +471,14 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
                 identifier='X25519_ML_KEM_512',
                 name=NamedGroup.X25519_ML_KEM_512.value.name,
                 long_name=NamedGroup.X25519_ML_KEM_512.value.long_name,
-                classical_named_group=NamedGroup.CURVE25519,
-                post_quantum_named_group=NamedGroup.MLKEM512,
+                classical_key_parameter=ECParamWellKnown.CURVE25519,
+                post_quantum_key_parameter=KeyEncapsulationMechanism.MLKEM512,
                 oqs_name='x25519_mlkem512',
             ),
         )
         self.assertEqual(
-            params_by_identifier['SECP256R1_MLKEM512'].classical_named_group,
-            NamedGroup.PRIME256V1,
+            params_by_identifier['SECP256R1_MLKEM512'].classical_key_parameter,
+            ECParamWellKnown.PRIME256V1,
         )
 
     @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
@@ -485,8 +486,8 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
         params_by_identifier = self._get_params_by_identifier(mock_request)
 
         self.assertEqual(
-            params_by_identifier['X25519_FRODOKEM_640_AES_R3'].post_quantum_named_group,
-            NamedGroup.FRODO640AES_R3,
+            params_by_identifier['X25519_FRODOKEM_640_AES_R3'].post_quantum_key_parameter,
+            KeyEncapsulationMechanism.FRODO640AES_R3,
         )
 
     @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
@@ -501,8 +502,8 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
         params_by_identifier = self._get_params_by_identifier(mock_request)
 
         self.assertEqual(
-            params_by_identifier[HYBRID_NAMED_GROUP_HELD_BACK_SO_IT_IS_DERIVED].post_quantum_named_group,
-            NamedGroup.KYBER_768_R3,
+            params_by_identifier[HYBRID_NAMED_GROUP_HELD_BACK_SO_IT_IS_DERIVED].post_quantum_key_parameter,
+            KeyEncapsulationMechanism.KYBER_768_R3,
         )
 
     @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
@@ -510,8 +511,8 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
         params_by_identifier = self._get_params_by_identifier(mock_request)
 
         self.assertEqual(
-            params_by_identifier['X25519_FRODOKEM_640_AES_R3'].classical_named_group,
-            NamedGroup.CURVE25519,
+            params_by_identifier['X25519_FRODOKEM_640_AES_R3'].classical_key_parameter,
+            ECParamWellKnown.CURVE25519,
         )
 
     @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
@@ -675,8 +676,8 @@ class TestUpdaterOqsHybridNamedGroup(TestUpdaterOqsBase):
             {
                 'name': NamedGroup.X25519_ML_KEM_512.value.name,
                 'long_name': None,
-                'classical_named_group': 'CURVE25519',
-                'post_quantum_named_group': 'MLKEM512',
+                'classical_key_parameter': 'CURVE25519',
+                'post_quantum_key_parameter': 'MLKEM512',
                 'oqs_name': 'x25519_mlkem512',
             },
         )

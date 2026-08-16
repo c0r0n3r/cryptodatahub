@@ -33,16 +33,16 @@ class OqsNamedGroup:
     # updater reloads the enum modules between its phases, so an enum member kept here would be an instance of a
     # class that no longer is the one the reloaded module defines. A group that has no classical half is not a
     # hybrid one.
-    classical_named_group = attr.ib(
+    classical_key_parameter = attr.ib(
         default=None, validator=attr.validators.optional(attr.validators.instance_of(str))
     )
-    post_quantum_named_group = attr.ib(
+    post_quantum_key_parameter = attr.ib(
         default=None, validator=attr.validators.optional(attr.validators.instance_of(str))
     )
 
     @property
     def hybrid(self):
-        return self.classical_named_group is not None
+        return self.classical_key_parameter is not None
 
 
 @attr.s(frozen=True)
@@ -183,7 +183,7 @@ class FetcherOqsBase(FetcherBase):
         return None
 
     @classmethod
-    def _get_post_quantum_named_group(cls, key_encapsulation_mechanism, nist_round):
+    def _get_post_quantum_key_parameter(cls, key_encapsulation_mechanism, nist_round):
         """The plain entry a hybrid one of the same round is composed with.
 
         A round bearing entry is named after the algorithm for some families and
@@ -228,8 +228,8 @@ class FetcherOqsBase(FetcherBase):
                 name=f'{classical_named_curve.name.lower()}/{name_group}',
                 size=size,
                 oqs_name=f'{cls._get_hybrid_group(classical_named_curve)}_{name_group}',
-                classical_named_group=classical_named_curve.value.named_group.name,
-                post_quantum_named_group=cls._get_post_quantum_named_group(
+                classical_key_parameter=classical_named_curve.value.named_group.name,
+                post_quantum_key_parameter=cls._get_post_quantum_key_parameter(
                     key_encapsulation_mechanism, None
                 ),
             )
@@ -249,10 +249,10 @@ class FetcherOqsBase(FetcherBase):
             named_group_name += f'_r{nist_round}'
 
         hybrid_group = extra_nid.get('hybrid_group')
-        classical_named_group = None
+        classical_key_parameter = None
         if hybrid_group is not None:
             classical_named_curve = cls._CLASSICAL_NAMED_CURVE_BY_HYBRID_GROUP[hybrid_group]
-            classical_named_group = classical_named_curve.value.named_group.name
+            classical_key_parameter = classical_named_curve.value.named_group.name
             named_group_name = f'{classical_named_curve.name.lower()}/{named_group_name}'
 
         is_earlier_nist_round = nist_round is not None
@@ -267,10 +267,10 @@ class FetcherOqsBase(FetcherBase):
             name=named_group_name,
             size=size,
             oqs_name=oqs_name,
-            classical_named_group=classical_named_group,
-            post_quantum_named_group=(
-                None if classical_named_group is None
-                else cls._get_post_quantum_named_group(key_encapsulation_mechanism, nist_round)
+            classical_key_parameter=classical_key_parameter,
+            post_quantum_key_parameter=(
+                None if classical_key_parameter is None
+                else cls._get_post_quantum_key_parameter(key_encapsulation_mechanism, nist_round)
             ),
         )
 
@@ -524,7 +524,7 @@ class FetcherOqsHybridNamedGroup(FetcherOqsBase):
             yield attr.evolve(
                 oqs_named_group,
                 name=f'{oqs_named_group.name}_r{family_nist_round}',
-                post_quantum_named_group=cls._get_post_quantum_named_group(
+                post_quantum_key_parameter=cls._get_post_quantum_key_parameter(
                     key_encapsulation_mechanism, family_nist_round
                 ),
             )
@@ -553,7 +553,7 @@ class FetcherOqsHybridNamedGroup(FetcherOqsBase):
             # assigned never became one, so it must not gain a composition either, and neither half can be left
             # unnamed.
             named_group = cryptodatahub.common.algorithm.NamedGroup.__members__.get(identifier)
-            if named_group is None or oqs_named_group.post_quantum_named_group is None:
+            if named_group is None or oqs_named_group.post_quantum_key_parameter is None:
                 continue
 
             hybrid_named_group_params[identifier] = (
@@ -564,8 +564,8 @@ class FetcherOqsHybridNamedGroup(FetcherOqsBase):
                     # two halves for the rest, so it is two kinds of thing under one field.
                     name=named_group.value.name,
                     long_name=named_group.value.long_name,
-                    classical_named_group=oqs_named_group.classical_named_group,
-                    post_quantum_named_group=oqs_named_group.post_quantum_named_group,
+                    classical_key_parameter=oqs_named_group.classical_key_parameter,
+                    post_quantum_key_parameter=oqs_named_group.post_quantum_key_parameter,
                     oqs_name=oqs_named_group.name,
                 )
             )

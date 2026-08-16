@@ -2,9 +2,9 @@
 
 import attr
 
-from cryptodatahub.common.algorithm import NamedGroup, NistSecurityLevel
+from cryptodatahub.common.algorithm import NistSecurityLevel
 from cryptodatahub.common.exception import InvalidValue
-from cryptodatahub.common.parameter import Paper, Standard
+from cryptodatahub.common.parameter import ECParamWellKnown, Paper, Standard
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataParamsNamed,
@@ -14,7 +14,7 @@ from cryptodatahub.common.types import (
 
 
 @attr.s(frozen=True)
-class KeyEncapsulationMechanismParams(CryptoDataParamsNamed):
+class KeyEncapsulationMechanismParams(CryptoDataParamsNamed):  # pylint: disable=too-many-instance-attributes
     standards = attr.ib(
         converter=convert_iterable(convert_enum(Standard)),
         validator=attr.validators.deep_iterable(attr.validators.instance_of(Standard))
@@ -69,13 +69,13 @@ KeyEncapsulationMechanism = KeyEncapsulationMechanismBase(
 
 @attr.s(frozen=True)
 class HybridNamedGroupParams(CryptoDataParamsNamed):
-    classical_named_group = attr.ib(
-        converter=convert_enum(NamedGroup),
-        validator=attr.validators.instance_of(NamedGroup),
+    classical_key_parameter = attr.ib(
+        converter=convert_enum(ECParamWellKnown),
+        validator=attr.validators.instance_of(ECParamWellKnown),
     )
-    post_quantum_named_group = attr.ib(
-        converter=convert_enum(NamedGroup),
-        validator=attr.validators.instance_of(NamedGroup),
+    post_quantum_key_parameter = attr.ib(
+        converter=convert_enum(KeyEncapsulationMechanism),
+        validator=attr.validators.instance_of(KeyEncapsulationMechanism),
     )
     oqs_name = attr.ib(
         default=None,
