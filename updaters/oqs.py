@@ -6,17 +6,20 @@ import abc
 import collections
 import importlib
 import itertools
+import re
 
 import attr
 import yaml
 
 import cryptodatahub.common.algorithm
+import cryptodatahub.common.parameter
 import cryptodatahub.tls.algorithm
 import cryptodatahub.tls.version
 from cryptodatahub.common.fetcher import FetcherBase
 from cryptodatahub.common.utils import HttpFetcher, name_to_enum_item_name
 
 from updaters.common import UpdaterBase
+import updaters.oqs_datasheet
 import updaters.oqs_params
 
 
@@ -570,6 +573,180 @@ class FetcherOqsHybridNamedGroup(FetcherOqsBase):
 
 
 class FetcherOqsKeyEncapsulationMechanism(FetcherOqsBase):
+    # Every release that documents its parameter sets, newest first. A round is
+    # taken from the newest release still in it, because an older one may carry a
+    # mistake a later release of the same round corrects: liboqs 0.5.0 claims NIST
+    # level 1 for Kyber768-90s where 0.4.0 and 0.7.0 both claim 3.
+    _LIBOQS_DATASHEET_VERSIONS = (
+        '0.16.0', '0.15.0', '0.14.0', '0.13.0', '0.12.0', '0.11.0', '0.10.1', '0.10.0',
+        '0.9.2', '0.9.1', '0.9.0', '0.8.0', '0.7.2', '0.7.1', '0.7.0',
+    )
+    # The releases before 0.7.0 state the same numbers in a table instead.
+    _LIBOQS_MARKDOWN_DATASHEET_VERSIONS = ('0.6.0', '0.5.0', '0.4.0', '0.3.0')
+    _LIBOQS_ALGORITHM_DATASHEET_MARKDOWN_URL = (
+        'https://raw.githubusercontent.com/open-quantum-safe/liboqs/{version}/'
+        'docs/algorithms/kem/{name}.md'
+    )
+    _DATASHEET_NAMES = ('bike', 'frodokem', 'hqc', 'kyber', 'ml_kem', 'ntru')
+
+    @classmethod
+    def get_algorithm_datasheet_markdown_url(cls, version, name):
+        return cls._LIBOQS_ALGORITHM_DATASHEET_MARKDOWN_URL.format(version=version, name=name)
+
+    @staticmethod
+    def _split_nist_round(name):
+        """A registry name carries the round it belongs to, a parameter set name does not.
+
+        The separator is a hyphen in the stored records and an underscore in the
+        named group names, so both are accepted.
+        """
+        match = re.search(r'[_-]r(\d)$', name)
+        if match is None:
+            return name, None
+
+        return name[:match.start()], int(match.group(1))
+
+    @classmethod
+    def _get_datasheet_of_version(cls, version, datasheet_name, markdown):
+        if markdown:
+            content = HttpFetcher(connect_timeout=5, read_timeout=30)(
+                cls.get_algorithm_datasheet_markdown_url(version, datasheet_name)
+            )
+            if isinstance(content, bytes):
+                # The submitter names are not all spelled in ASCII.
+                content = content.decode('utf-8')
+
+            return (
+                updaters.oqs_datasheet.get_nist_round_of_markdown(content),
+                updaters.oqs_datasheet.get_parameter_sets_of_markdown(content),
+            )
+
+        datasheet = cls._fetch_yaml(
+            cls._LIBOQS_ALGORITHM_DATASHEET_URL.format(version=version, name=datasheet_name)
+        )
+
+        return (
+            updaters.oqs_datasheet.get_nist_round(datasheet),
+            updaters.oqs_datasheet.get_parameter_sets(datasheet),
+        )
+
+    @classmethod
+    def _get_datasheets_of_version(cls, version, markdown):
+        datasheets = {}
+        for datasheet_name in cls._DATASHEET_NAMES:
+            try:
+                nist_round, parameter_sets = cls._get_datasheet_of_version(
+                    version, datasheet_name, markdown
+                )
+            except AttributeError:
+                # A family that release does not describe. The fetcher leaves no
+                # response behind for one, which is what reading it raises on.
+                continue
+
+            datasheets[datasheet_name] = (
+                nist_round,
+                {
+                    cls._get_comparable_algorithm_name(name): parameter_set
+                    for name, parameter_set in parameter_sets.items()
+                },
+            )
+
+        return datasheets
+
+    @classmethod
+    def _get_current_data(cls):
+        wanted = collections.OrderedDict(
+            (named_group.name, cls._split_nist_round(named_group.value.name))
+            for named_group in cryptodatahub.common.algorithm.NamedGroup
+            if named_group.value.group_type
+            == cryptodatahub.common.algorithm.NamedGroupType.POST_QUANTUM
+        )
+
+        resolved = collections.OrderedDict()
+        versions = (
+            [(version, False) for version in cls._LIBOQS_DATASHEET_VERSIONS] +
+            [(version, True) for version in cls._LIBOQS_MARKDOWN_DATASHEET_VERSIONS]
+        )
+        for version, markdown in versions:
+            if len(resolved) == len(wanted):
+                break
+
+            datasheets = cls._get_datasheets_of_version(version, markdown)
+            for identifier, (name, nist_round) in wanted.items():
+                if identifier in resolved:
+                    continue
+
+                comparable_name = cls._get_comparable_algorithm_name(name)
+                for family_nist_round, parameter_sets in datasheets.values():
+                    if comparable_name not in parameter_sets:
+                        continue
+                    # A datasheet that states its round has to agree, because a
+                    # family can carry one parameter set name into two rounds with
+                    # different sizes: Kyber512 encapsulates into 736 bytes in
+                    # round 2 and 768 in round 3. Where a datasheet states no
+                    # round the name is the only identity there is, and only the
+                    # families that state one reuse a name across rounds.
+                    if None not in (nist_round, family_nist_round) \
+                            and family_nist_round != nist_round:
+                        continue
+
+                    parameter_set = parameter_sets[comparable_name]
+                    # The round belongs in the name, the way the stored records
+                    # spell it. Two rounds of one parameter set can hold the same
+                    # sizes, and records that agree in every field are one record.
+                    resolved[identifier] = attr.evolve(
+                        parameter_set,
+                        identifier=identifier,
+                        name=(
+                            parameter_set.name if nist_round is None
+                            else f'{parameter_set.name}-r{nist_round}'
+                        ),
+                    )
+                    break
+
+        return list(resolved.values())
+
+    @classmethod
+    def _transform_data(cls, current_data):
+        key_encapsulation_mechanism_params = collections.OrderedDict([
+            (
+                key_encapsulation_mechanism.name,
+                updaters.oqs_params.FetchedKeyEncapsulationMechanismParams(
+                    identifier=key_encapsulation_mechanism.name,
+                    **key_encapsulation_mechanism.value._asdict()
+                ),
+            )
+            for key_encapsulation_mechanism in cryptodatahub.common.parameter.
+            KeyEncapsulationMechanism
+        ])
+
+        for parameter_set in current_data:
+            existing = key_encapsulation_mechanism_params.get(parameter_set.identifier)
+            # The sizes and the security category are what the datasheet states,
+            # so they are taken from it even where a record already holds them.
+            # The name, the standards and the papers are not in a datasheet at
+            # all, so a record that has them keeps them.
+            key_encapsulation_mechanism_params[parameter_set.identifier] = (
+                updaters.oqs_params.FetchedKeyEncapsulationMechanismParams(
+                    identifier=parameter_set.identifier,
+                    name=existing.name if existing else parameter_set.name,
+                    long_name=existing.long_name if existing else None,
+                    standards=existing.standards if existing else [],
+                    papers=existing.papers if existing else [],
+                    encapsulation_key_size=parameter_set.encapsulation_key_size,
+                    decapsulation_key_size=parameter_set.decapsulation_key_size,
+                    ciphertext_size=parameter_set.ciphertext_size,
+                    shared_secret_size=parameter_set.shared_secret_size,
+                    security_category=cryptodatahub.common.algorithm.NistSecurityLevel.from_code(
+                        parameter_set.security_category
+                    ),
+                )
+            )
+
+        return list(key_encapsulation_mechanism_params.values())
+
+
+class FetcherOqsNamedCurve(FetcherOqsBase):
     @classmethod
     def _transform_data(cls, current_data):
         named_curve_params = []
@@ -728,6 +905,15 @@ class UpdaterOqsKeyEncapsulationMechanism(UpdaterOqsBase):
     def __init__(self):
         super().__init__(
             FetcherOqsKeyEncapsulationMechanism,
+            cryptodatahub.common.parameter.KeyEncapsulationMechanism,
+            cryptodatahub.common.parameter.KeyEncapsulationMechanismParams,
+        )
+
+
+class UpdaterOqsNamedCurve(UpdaterOqsBase):
+    def __init__(self):
+        super().__init__(
+            FetcherOqsNamedCurve,
             cryptodatahub.tls.algorithm.TlsNamedCurve,
             cryptodatahub.tls.algorithm.NamedCurveParams,
         )
@@ -766,9 +952,11 @@ class UpdaterOqsSignatureAlgorithm(UpdaterOqsBase):
 def main():
     UpdaterOqsNamedGroup()()  # pragma: no cover
     UpdaterOqsBase.reload_enum_modules()  # pragma: no cover
+    UpdaterOqsKeyEncapsulationMechanism()()  # pragma: no cover
+    UpdaterOqsBase.reload_enum_modules()  # pragma: no cover
     UpdaterOqsHybridNamedGroup()()  # pragma: no cover
     UpdaterOqsBase.reload_enum_modules()  # pragma: no cover
-    UpdaterOqsKeyEncapsulationMechanism()()  # pragma: no cover
+    UpdaterOqsNamedCurve()()  # pragma: no cover
 
     UpdaterOqsAuthentication()()  # pragma: no cover
     UpdaterOqsBase.reload_enum_modules()  # pragma: no cover

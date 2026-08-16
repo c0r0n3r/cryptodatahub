@@ -3,7 +3,21 @@
 import attr
 
 import cryptodatahub.common.algorithm
+import cryptodatahub.common.parameter
 import cryptodatahub.tls.algorithm
+
+
+@attr.s(frozen=True)
+class FetchedKeyEncapsulationMechanismParams(
+        cryptodatahub.common.parameter.KeyEncapsulationMechanismParams
+):
+    identifier = attr.ib(kw_only=True, validator=attr.validators.instance_of(str))
+
+    def _asdict(self):
+        as_dict = super()._asdict()
+        as_dict.pop('identifier', None)
+
+        return as_dict
 
 
 @attr.s(frozen=True)
