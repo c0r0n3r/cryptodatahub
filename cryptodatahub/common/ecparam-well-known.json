@@ -1579,6 +1579,164 @@
             "seed": null
         }
     },
+    "C2ONB191V4": {
+        "name": "c2onb191v4",
+        "long_name": "c2onb191v4 elliptic curve (binary field GF(2^191), optimal normal basis)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY_NORMAL_BASIS",
+        "parameter_numbers": {
+            "m": [
+                "BF"
+            ],
+            "gaussian_normal_basis_type": [
+                "2"
+            ],
+            "a": [
+                "65903E04 E1E49242 53E26A3C 9AC28C75 8BD8184A 3FB680E8"
+            ],
+            "b": [
+                "54678621 B190CFCE 282ADE21 9D5B3A06 5E3F4B3F FDEBB29B"
+            ],
+            "x": [
+                "5A2C69A3 2E8638E5 1CCEFAAD 05350A97 8457CB5F B6DF994A"
+            ],
+            "y": [
+                "0F32FE0F A0E902F1 9B17D363 C269F4F5 CFE80876 18569954"
+            ],
+            "n": [
+                "40000000 00000000 00000000 9CF2D6E3 901DAC4C 32EEC65D"
+            ],
+            "h": [
+                "2"
+            ],
+            "seed": null
+        }
+    },
+    "C2ONB191V5": {
+        "name": "c2onb191v5",
+        "long_name": "c2onb191v5 elliptic curve (binary field GF(2^191), optimal normal basis)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY_NORMAL_BASIS",
+        "parameter_numbers": {
+            "m": [
+                "BF"
+            ],
+            "gaussian_normal_basis_type": [
+                "2"
+            ],
+            "a": [
+                "25F8D06C 97C82253 6D469CD5 170CDD7B B9F500BD 6DB110FB"
+            ],
+            "b": [
+                "75FF570E 35CA94FB 3780C261 9D081C17 AA59FBD5 E591C1C4"
+            ],
+            "x": [
+                "2A16910E 8F6C4B19 9BE24213 857ABC9C 992EDFB2 471F3C68"
+            ],
+            "y": [
+                "1592DBFE BEB81A7C 071B744D 5E2F9E24 2EA65B81 138A3468"
+            ],
+            "n": [
+                "0FFFFFFF FFFFFFFF FFFFFFFF EEB354B7 270B2992 B7818627"
+            ],
+            "h": [
+                "8"
+            ],
+            "seed": null
+        }
+    },
+    "C2ONB239V4": {
+        "name": "c2onb239v4",
+        "long_name": "c2onb239v4 elliptic curve (binary field GF(2^239), optimal normal basis)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY_NORMAL_BASIS",
+        "parameter_numbers": {
+            "m": [
+                "EF"
+            ],
+            "gaussian_normal_basis_type": [
+                "2"
+            ],
+            "a": [
+                "182DD45F 5D470239 B8983FEA 47B8B292 641C57F9 BF84BAEC",
+                "DE8BB3AD CE30"
+            ],
+            "b": [
+                "147A9C1D 4C2CE9BE 5D34EC02 797F7666 7EBAD5A3 F93FA2A5",
+                "24BFDE91 EF28"
+            ],
+            "x": [
+                "4912AD65 7F1D1C6B 32EDB994 2C95E226 B06FB012 CD40FDEA",
+                "0D72197C 8104"
+            ],
+            "y": [
+                "01F1FBC3 D21168FD 3F66C441 C2B5C6CF DCD9ED3E 13646B7A",
+                "4DB9A3B0 C286"
+            ],
+            "n": [
+                "20000000 00000000 00000000 00000047 4F7E69F4 2FE43093",
+                "1D0B455A AE8B"
+            ],
+            "h": [
+                "4"
+            ],
+            "seed": null
+        }
+    },
+    "C2ONB239V5": {
+        "name": "c2onb239v5",
+        "long_name": "c2onb239v5 elliptic curve (binary field GF(2^239), optimal normal basis)",
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
+            "X9_62"
+        ],
+        "parameter_form": "WEIERSTRASS_BINARY_NORMAL_BASIS",
+        "parameter_numbers": {
+            "m": [
+                "EF"
+            ],
+            "gaussian_normal_basis_type": [
+                "2"
+            ],
+            "a": [
+                "1ECF1B9D 28D80175 05E17475 D3DF2982 E243CA5C B5E9F94A",
+                "3F36124A 486E"
+            ],
+            "b": [
+                "3EE25725 0D1A2E66 CEF23AA0 F25B1238 8DE8A10F F9554F90",
+                "AFBAA9A0 8B6D"
+            ],
+            "x": [
+                "193279FC 543E9F5F 71191897 85B9C60B 249BE482 0BAF6C24",
+                "BDFA2813 F8B8"
+            ],
+            "y": [
+                "5DA021E5 AF776040 51FC5C38 DA8293C1 EEEAA00F 046EEB93",
+                "B6C8B774 BB9B"
+            ],
+            "n": [
+                "15555555 55555555 55555555 5555558C F77A5D05 89D2A934",
+                "0D963B7A D703"
+            ],
+            "h": [
+                "6"
+            ],
+            "seed": null
+        }
+    },
     "C2PNB163V1": {
         "name": "c2pnb163v1",
         "long_name": "c2pnb163v1 elliptic curve (binary field GF(2^163))",

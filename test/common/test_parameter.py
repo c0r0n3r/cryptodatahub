@@ -123,6 +123,14 @@ class TestECParamWellKnownParams(unittest.TestCase):
 
 class TestECParamWellKnown(TestClasses.TestJsonBase):
     MILLER_RABIN_WITNESSES = (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37)
+    BINARY_PARAMETER_FORMS = (
+        ECParameterForm.WEIERSTRASS_BINARY,
+        ECParameterForm.WEIERSTRASS_BINARY_NORMAL_BASIS,
+    )
+    # The base point ANSI X9.62 publishes for this curve generates the whole group
+    # rather than the prime order subgroup, and the file records what the standard
+    # defines.
+    CURVE_WITH_A_BASE_POINT_OUTSIDE_THE_PRIME_ORDER_SUBGROUP = 'c2onb239v5'
 
     @classmethod
     def _get_class(cls):
@@ -133,6 +141,8 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         return {
             ECParameterForm.WEIERSTRASS_PRIME: cls._is_base_point_on_weierstrass_prime_curve,
             ECParameterForm.WEIERSTRASS_BINARY: cls._is_base_point_on_weierstrass_binary_curve,
+            ECParameterForm.WEIERSTRASS_BINARY_NORMAL_BASIS:
+                cls._is_base_point_on_weierstrass_binary_normal_basis_curve,
             ECParameterForm.MONTGOMERY: cls._is_base_point_on_montgomery_curve,
             ECParameterForm.TWISTED_EDWARDS: cls._is_base_point_on_twisted_edwards_curve,
         }
@@ -142,6 +152,8 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         return {
             ECParameterForm.WEIERSTRASS_PRIME: cls._is_order_annihilating_on_weierstrass_prime_curve,
             ECParameterForm.WEIERSTRASS_BINARY: cls._is_order_annihilating_on_weierstrass_binary_curve,
+            ECParameterForm.WEIERSTRASS_BINARY_NORMAL_BASIS:
+                cls._is_order_annihilating_on_weierstrass_binary_normal_basis_curve,
             ECParameterForm.MONTGOMERY: cls._is_order_annihilating_on_montgomery_curve,
             ECParameterForm.TWISTED_EDWARDS: cls._is_order_annihilating_on_twisted_edwards_curve,
         }
@@ -192,6 +204,49 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         return product
 
     @staticmethod
+    def _get_multiplicative_order(base, modulus):
+        order = 1
+        power = base % modulus
+        while power != 1:
+            power = power * base % modulus
+            order += 1
+
+        return order
+
+    @staticmethod
+    def _get_gaussian_normal_basis_pairs(degree, basis_type):
+        modulus = basis_type * degree + 1
+        order_element = 2
+        while TestECParamWellKnown._get_multiplicative_order(order_element, modulus) != basis_type:
+            order_element += 1
+
+        positions = [0] * modulus
+        element = 1
+        for _ in range(basis_type):
+            index = element
+            for position in range(degree):
+                positions[index] = position
+                index = 2 * index % modulus
+            element = order_element * element % modulus
+
+        return [(positions[step + 1], positions[modulus - step]) for step in range(1, modulus - 1)]
+
+    @staticmethod
+    def _rotate_in_normal_basis(value, shift, degree):
+        return ((value << shift) | (value >> (degree - shift))) & ((1 << degree) - 1)
+
+    @staticmethod
+    def _multiply_in_normal_basis(left, right, pairs, degree):
+        product = 0
+        for left_shift, right_shift in pairs:
+            product ^= (
+                TestECParamWellKnown._rotate_in_normal_basis(left, left_shift, degree) &
+                TestECParamWellKnown._rotate_in_normal_basis(right, right_shift, degree)
+            )
+
+        return product
+
+    @staticmethod
     def _get_reduction_polynomial(parameter_numbers):
         reduction_polynomial = (1 << parameter_numbers.m) | 1
         for exponent in (parameter_numbers.k1, parameter_numbers.k2, parameter_numbers.k3):
@@ -216,6 +271,24 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
 
         def multiply(left, right):
             return TestECParamWellKnown._multiply_in_binary_field(left, right, reduction_polynomial, degree)
+
+        point_x = parameter_numbers.x
+        point_y = parameter_numbers.y
+        square_x = multiply(point_x, point_x)
+        left_hand_side = multiply(point_y, point_y) ^ multiply(point_x, point_y)
+        right_hand_side = multiply(point_x, square_x) ^ multiply(parameter_numbers.a, square_x) ^ parameter_numbers.b
+
+        return left_hand_side == right_hand_side
+
+    @staticmethod
+    def _is_base_point_on_weierstrass_binary_normal_basis_curve(parameter_numbers):
+        degree = parameter_numbers.m
+        pairs = TestECParamWellKnown._get_gaussian_normal_basis_pairs(
+            degree, parameter_numbers.gaussian_normal_basis_type
+        )
+
+        def multiply(left, right):
+            return TestECParamWellKnown._multiply_in_normal_basis(left, right, pairs, degree)
 
         point_x = parameter_numbers.x
         point_y = parameter_numbers.y
@@ -405,9 +478,23 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         return result == (0, 1)
 
     @staticmethod
+    def _is_order_annihilating_on_weierstrass_binary_normal_basis_curve(parameter_numbers):
+        degree = parameter_numbers.m
+        pairs = TestECParamWellKnown._get_gaussian_normal_basis_pairs(
+            degree, parameter_numbers.gaussian_normal_basis_type
+        )
+
+        return TestECParamWellKnown._is_order_annihilating_in_binary_field(
+            parameter_numbers,
+            lambda left, right: TestECParamWellKnown._multiply_in_normal_basis(left, right, pairs, degree),
+            lambda value: TestECParamWellKnown._rotate_in_normal_basis(value, degree - 1, degree),
+            (1 << degree) - 1,
+        )
+
+    @staticmethod
     def _is_group_order_in_hasse_interval(ec_param_well_known_params):
         parameter_numbers = ec_param_well_known_params.parameter_numbers
-        if ec_param_well_known_params.parameter_form == ECParameterForm.WEIERSTRASS_BINARY:
+        if ec_param_well_known_params.parameter_form in TestECParamWellKnown.BINARY_PARAMETER_FORMS:
             field_size = 1 << parameter_numbers.m
         else:
             field_size = parameter_numbers.p
@@ -421,10 +508,10 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         )
 
         with self.assertRaisesRegex(
-                InvalidValue, "NamedGroup.C2ONB239V4.* is not a valid ECParamWellKnown"
+                InvalidValue, "NamedGroup.ML_KEM_768.* is not a valid ECParamWellKnown"
         ) as context_manager:
-            ECParamWellKnown.from_named_group(NamedGroup.C2ONB239V4)
-        self.assertEqual(context_manager.exception.value, NamedGroup.C2ONB239V4)
+            ECParamWellKnown.from_named_group(NamedGroup.ML_KEM_768)
+        self.assertEqual(context_manager.exception.value, NamedGroup.ML_KEM_768)
 
     def test_from_parameter_numbers(self):
         ec_param = ECParamWellKnown.PRIME256V1
@@ -437,7 +524,7 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         self.assertEqual([
             ec_param.name
             for ec_param in ECParamWellKnown
-            if ec_param.value.parameter_form != ECParameterForm.WEIERSTRASS_BINARY and
+            if ec_param.value.parameter_form not in self.BINARY_PARAMETER_FORMS and
             not self.is_probable_prime(ec_param.value.parameter_numbers.p)
         ], [])
 
@@ -461,7 +548,7 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
             ec_param.value.name
             for ec_param in ECParamWellKnown
             if not self._get_order_checks()[ec_param.value.parameter_form](ec_param.value.parameter_numbers)
-        ], [])
+        ], [self.CURVE_WITH_A_BASE_POINT_OUTSIDE_THE_PRIME_ORDER_SUBGROUP])
 
     def test_group_order_is_in_hasse_interval(self):
         self.assertEqual([

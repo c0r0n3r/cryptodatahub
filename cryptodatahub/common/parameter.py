@@ -130,7 +130,8 @@ DHParamWellKnown = DHParamWellKnownBase(
 
 
 ECParameterForm = enum.Enum(
-    'ECParameterForm', 'WEIERSTRASS_PRIME WEIERSTRASS_BINARY MONTGOMERY TWISTED_EDWARDS'
+    'ECParameterForm',
+    'WEIERSTRASS_PRIME WEIERSTRASS_BINARY WEIERSTRASS_BINARY_NORMAL_BASIS MONTGOMERY TWISTED_EDWARDS'
 )
 
 
@@ -246,6 +247,59 @@ class ECParameterNumbersWeierstrassBinary:  # pylint: disable=too-many-instance-
 
 
 @attr.s
+class ECParameterNumbersWeierstrassBinaryNormalBasis:  # pylint: disable=too-many-instance-attributes
+    m = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'm'},
+    )
+    gaussian_normal_basis_type = attr.ib(
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'Gaussian normal basis type'},
+    )
+    a = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'a'},
+    )
+    b = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'b'},
+    )
+    x = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'x'},
+    )
+    y = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'y'},
+    )
+    n = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'n'},
+    )
+    h = attr.ib(  # pylint: disable=invalid-name
+        converter=convert_big_enum(),
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'h'},
+    )
+    seed = attr.ib(
+        converter=convert_hex_data(),
+        validator=attr.validators.optional(attr.validators.instance_of(HexData)),
+        metadata={'human_readable_name': 'seed'},
+    )
+
+    @classmethod
+    def get_parameter_form(cls):
+        return ECParameterForm.WEIERSTRASS_BINARY_NORMAL_BASIS
+
+
+@attr.s
 class ECParameterNumbersMontgomery:
     p = attr.ib(  # pylint: disable=invalid-name
         converter=convert_big_enum(),
@@ -341,12 +395,14 @@ class ECParamWellKnownParams(ParamWellKnownBase):
         converter=convert_variadic((
             convert_dict_to_object(ECParameterNumbersWeierstrassPrime),
             convert_dict_to_object(ECParameterNumbersWeierstrassBinary),
+            convert_dict_to_object(ECParameterNumbersWeierstrassBinaryNormalBasis),
             convert_dict_to_object(ECParameterNumbersMontgomery),
             convert_dict_to_object(ECParameterNumbersTwistedEdwards),
         )),
         validator=attr.validators.instance_of((
             ECParameterNumbersWeierstrassPrime,
             ECParameterNumbersWeierstrassBinary,
+            ECParameterNumbersWeierstrassBinaryNormalBasis,
             ECParameterNumbersMontgomery,
             ECParameterNumbersTwistedEdwards,
         ))
