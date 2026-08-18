@@ -18,6 +18,17 @@ class FetchedNamedGroupParams(cryptodatahub.common.algorithm.NamedGroupParams):
 
 
 @attr.s(frozen=True)
+class FetchedHybridNamedGroupParams(cryptodatahub.common.algorithm.HybridNamedGroupParams):
+    identifier = attr.ib(kw_only=True, validator=attr.validators.instance_of(str))
+
+    def _asdict(self):
+        as_dict = super()._asdict()
+        as_dict.pop('identifier', None)
+
+        return as_dict
+
+
+@attr.s(frozen=True)
 class FetchedNamedCurveParams(cryptodatahub.tls.algorithm.NamedCurveParams):
     identifier = attr.ib(kw_only=True, validator=attr.validators.instance_of(str))
 

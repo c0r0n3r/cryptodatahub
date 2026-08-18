@@ -26,11 +26,21 @@ class OqsNamedGroup:
     name = attr.ib(validator=attr.validators.instance_of(str))
     size = attr.ib(validator=attr.validators.instance_of(int))
     oqs_name = attr.ib(validator=attr.validators.optional(attr.validators.instance_of(str)))
-    # The group type is derived from this rather than kept here, because the
-    # updater reloads the enum modules between its phases, so an enum member kept
-    # here would be an instance of a class that no longer is the one the reloaded
-    # module defines.
-    has_classical_half = attr.ib(default=False, validator=attr.validators.instance_of(bool))
+    # The halves are the names of the entries a hybrid group is composed of, not
+    # the entries themselves: the updater reloads the enum modules between its
+    # phases, so an enum member kept here would be an instance of a class that no
+    # longer is the one the reloaded module defines. A group that has no classical
+    # half is not a hybrid one.
+    classical_named_group = attr.ib(
+        default=None, validator=attr.validators.optional(attr.validators.instance_of(str))
+    )
+    post_quantum_named_group = attr.ib(
+        default=None, validator=attr.validators.optional(attr.validators.instance_of(str))
+    )
+
+    @property
+    def hybrid(self):
+        return self.classical_named_group is not None
 
 
 @attr.s(frozen=True)
@@ -70,6 +80,9 @@ class FetcherOqsBase(FetcherBase):
         cryptodatahub.tls.algorithm.TlsNamedCurve.SECP521R1,
     )
     _CLASSICAL_NAMED_CURVE_BY_HYBRID_GROUP = {
+        # The releases up to 0.8.0 spell the two shorter prime curves this way.
+        'p256': cryptodatahub.tls.algorithm.TlsNamedCurve.SECP256R1,
+        'p384': cryptodatahub.tls.algorithm.TlsNamedCurve.SECP384R1,
         'secp256_r1': cryptodatahub.tls.algorithm.TlsNamedCurve.SECP256R1,
         'secp384_r1': cryptodatahub.tls.algorithm.TlsNamedCurve.SECP384R1,
         'secp521_r1': cryptodatahub.tls.algorithm.TlsNamedCurve.SECP521R1,
@@ -139,7 +152,9 @@ class FetcherOqsBase(FetcherBase):
         return [
             key_encapsulation_mechanism
             for key_encapsulation_mechanism in config['kems']
-            if key_encapsulation_mechanism.get('enable_tls')
+            # The key was introduced after the 0.5 releases, which enable every
+            # entry for TLS, so its absence must not be read as disabled.
+            if key_encapsulation_mechanism.get('enable_tls', True)
         ]
 
     @classmethod
@@ -165,9 +180,32 @@ class FetcherOqsBase(FetcherBase):
         return None
 
     @classmethod
-    def _get_named_groups(cls, key_encapsulation_mechanism, bit_security, size):
+    def _get_post_quantum_named_group(cls, key_encapsulation_mechanism, nist_round):
+        """The plain entry a hybrid one of the same round is composed with.
+
+        A round bearing entry is named after the algorithm for some families and
+        after the group for others, so the candidates are resolved against the
+        registry rather than one of the two spellings being assumed. None means
+        the half cannot be named, and the composition is left unwritten.
+        """
         name_group = key_encapsulation_mechanism['name_group']
         algorithm_name = key_encapsulation_mechanism['oqs_alg'][len(cls._OQS_ALGORITHM_NAME_PREFIX):]
+
+        if nist_round is None:
+            candidates = (name_group, algorithm_name)
+        else:
+            candidates = (f'{algorithm_name}_r{nist_round}', f'{name_group}_r{nist_round}')
+
+        for candidate in candidates:
+            identifier = name_to_enum_item_name(candidate)
+            if identifier in cryptodatahub.common.algorithm.NamedGroup.__members__:
+                return identifier
+
+        return None
+
+    @classmethod
+    def _get_named_groups(cls, key_encapsulation_mechanism, bit_security, size):
+        name_group = key_encapsulation_mechanism['name_group']
 
         if 'nid' in key_encapsulation_mechanism:
             yield OqsNamedGroup(
@@ -184,35 +222,51 @@ class FetcherOqsBase(FetcherBase):
                 name=f'{classical_named_curve.name.lower()}/{name_group}',
                 size=size,
                 oqs_name=f'{cls._get_hybrid_group(classical_named_curve)}_{name_group}',
-                has_classical_half=True,
+                classical_named_group=classical_named_curve.value.named_group.name,
+                post_quantum_named_group=cls._get_post_quantum_named_group(
+                    key_encapsulation_mechanism, None
+                ),
             )
 
         extra_nids = key_encapsulation_mechanism.get('extra_nids', {})
         for extra_nid in itertools.chain(extra_nids.get('current', []), extra_nids.get('old', [])):
-            name = algorithm_name
-            nist_round = extra_nid.get('nist-round')
-            if nist_round is not None:
-                name += f'_r{nist_round}'
-
-            hybrid_group = extra_nid.get('hybrid_group')
-            if hybrid_group is not None:
-                classical_named_curve = cls._CLASSICAL_NAMED_CURVE_BY_HYBRID_GROUP[hybrid_group]
-                name = f'{classical_named_curve.name.lower()}/{name}'
-
-            is_earlier_nist_round = nist_round is not None
-            repeats_plain_code_point = hybrid_group is None
-            if is_earlier_nist_round or repeats_plain_code_point:
-                oqs_name = None
-            else:
-                oqs_name = extra_nid.get('standard_name', f'{hybrid_group}_{name_group}')
-
-            yield OqsNamedGroup(
-                code=cls._get_code(extra_nid['nid']),
-                name=name,
-                size=size,
-                oqs_name=oqs_name,
-                has_classical_half=hybrid_group is not None,
+            yield cls._get_named_group_from_extra_nid(
+                key_encapsulation_mechanism, extra_nid, size
             )
+
+    @classmethod
+    def _get_named_group_from_extra_nid(cls, key_encapsulation_mechanism, extra_nid, size):
+        name_group = key_encapsulation_mechanism['name_group']
+        name = key_encapsulation_mechanism['oqs_alg'][len(cls._OQS_ALGORITHM_NAME_PREFIX):]
+        nist_round = extra_nid.get('nist-round')
+        if nist_round is not None:
+            name += f'_r{nist_round}'
+
+        hybrid_group = extra_nid.get('hybrid_group')
+        classical_named_group = None
+        if hybrid_group is not None:
+            classical_named_curve = cls._CLASSICAL_NAMED_CURVE_BY_HYBRID_GROUP[hybrid_group]
+            classical_named_group = classical_named_curve.value.named_group.name
+            name = f'{classical_named_curve.name.lower()}/{name}'
+
+        is_earlier_nist_round = nist_round is not None
+        repeats_plain_code_point = hybrid_group is None
+        if is_earlier_nist_round or repeats_plain_code_point:
+            oqs_name = None
+        else:
+            oqs_name = extra_nid.get('standard_name', f'{hybrid_group}_{name_group}')
+
+        return OqsNamedGroup(
+            code=cls._get_code(extra_nid['nid']),
+            name=name,
+            size=size,
+            oqs_name=oqs_name,
+            classical_named_group=classical_named_group,
+            post_quantum_named_group=(
+                None if classical_named_group is None
+                else cls._get_post_quantum_named_group(key_encapsulation_mechanism, nist_round)
+            ),
+        )
 
     @classmethod
     def _get_current_data(cls):
@@ -381,7 +435,7 @@ class FetcherOqsNamedGroup(FetcherOqsBase):
                 size=oqs_named_group.size,
                 group_type=(
                     cryptodatahub.common.algorithm.NamedGroupType.HYBRID_PQS
-                    if oqs_named_group.has_classical_half
+                    if oqs_named_group.hybrid
                     else cryptodatahub.common.algorithm.NamedGroupType.POST_QUANTUM
                 ),
                 oqs_name=oqs_named_group.oqs_name,
@@ -389,6 +443,52 @@ class FetcherOqsNamedGroup(FetcherOqsBase):
             existing_names.add(oqs_named_group.name)
 
         return list(named_group_params.values())
+
+
+class FetcherOqsHybridNamedGroup(FetcherOqsBase):
+    @classmethod
+    def _transform_data(cls, current_data):
+        hybrid_named_group_params = collections.OrderedDict([
+            (
+                hybrid_named_group.name,
+                updaters.oqs_params.FetchedHybridNamedGroupParams(
+                    identifier=hybrid_named_group.name, **hybrid_named_group.value._asdict()
+                ),
+            )
+            for hybrid_named_group in cryptodatahub.common.algorithm.HybridNamedGroup
+        ])
+
+        for oqs_named_group in current_data:
+            if not oqs_named_group.hybrid:
+                continue
+
+            identifier = name_to_enum_item_name(oqs_named_group.name)
+            if identifier in hybrid_named_group_params:
+                continue
+
+            # A composition describes a group the named group registry has. An
+            # entry whose code point is already assigned never became one, so it
+            # must not gain a composition either, and neither half can be left
+            # unnamed.
+            named_group = cryptodatahub.common.algorithm.NamedGroup.__members__.get(identifier)
+            if named_group is None or oqs_named_group.post_quantum_named_group is None:
+                continue
+
+            hybrid_named_group_params[identifier] = (
+                updaters.oqs_params.FetchedHybridNamedGroupParams(
+                    identifier=identifier,
+                    # The name the group itself is registered by. The Open Quantum
+                    # Safe name is not an alternative: it holds a standard name for
+                    # a few entries and an internal one built from the two halves
+                    # for the rest, so it is two kinds of thing under one field.
+                    name=named_group.value.name,
+                    long_name=named_group.value.long_name,
+                    classical_named_group=oqs_named_group.classical_named_group,
+                    post_quantum_named_group=oqs_named_group.post_quantum_named_group,
+                )
+            )
+
+        return list(hybrid_named_group_params.values())
 
 
 class FetcherOqsKeyEncapsulationMechanism(FetcherOqsBase):
@@ -537,6 +637,15 @@ class UpdaterOqsNamedGroup(UpdaterOqsBase):
         return params['group_type'], identifier
 
 
+class UpdaterOqsHybridNamedGroup(UpdaterOqsBase):
+    def __init__(self):
+        super().__init__(
+            FetcherOqsHybridNamedGroup,
+            cryptodatahub.common.algorithm.HybridNamedGroup,
+            cryptodatahub.common.algorithm.HybridNamedGroupParams,
+        )
+
+
 class UpdaterOqsKeyEncapsulationMechanism(UpdaterOqsBase):
     def __init__(self):
         super().__init__(
@@ -578,6 +687,8 @@ class UpdaterOqsSignatureAlgorithm(UpdaterOqsBase):
 
 def main():
     UpdaterOqsNamedGroup()()  # pragma: no cover
+    UpdaterOqsBase.reload_enum_modules()  # pragma: no cover
+    UpdaterOqsHybridNamedGroup()()  # pragma: no cover
     UpdaterOqsBase.reload_enum_modules()  # pragma: no cover
     UpdaterOqsKeyEncapsulationMechanism()()  # pragma: no cover
 

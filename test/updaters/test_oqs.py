@@ -13,6 +13,8 @@ import urllib3
 from cryptodatahub.common.algorithm import (
     Authentication,
     AuthenticationParams,
+    HybridNamedGroup,
+    HybridNamedGroupParams,
     NamedGroup,
     NamedGroupParams,
     NamedGroupType,
@@ -24,15 +26,21 @@ from cryptodatahub.tls.version import TlsVersion
 from updaters.oqs import (
     FetcherOqsAuthentication,
     FetcherOqsBase,
+    FetcherOqsHybridNamedGroup,
     FetcherOqsKeyEncapsulationMechanism,
     FetcherOqsNamedGroup,
     FetcherOqsSignatureAlgorithm,
     UpdaterOqsAuthentication,
+    UpdaterOqsHybridNamedGroup,
     UpdaterOqsKeyEncapsulationMechanism,
     UpdaterOqsNamedGroup,
     UpdaterOqsSignatureAlgorithm,
 )
-from updaters.oqs_params import FetchedNamedCurveParams, FetchedNamedGroupParams
+from updaters.oqs_params import (
+    FetchedHybridNamedGroupParams,
+    FetchedNamedCurveParams,
+    FetchedNamedGroupParams,
+)
 
 
 class TestOqsBase(unittest.TestCase):
@@ -122,6 +130,16 @@ class TestOqsBase(unittest.TestCase):
               old:
                 - nist-round: 3
                   nid: '0x023A'"""
+    STORED_COMPOSITION_NAMED_GROUP = """
+          - family: 'CRYSTALS-Kyber'
+            name_group: 'kyber512'
+            oqs_alg: 'OQS_KEM_alg_kyber_512'
+            enable_tls: true
+            extra_nids:
+              old:
+                - nist-round: 3
+                  hybrid_group: 'x25519'
+                  nid: '0xFEF9'"""
     TLS_DISABLED_NAMED_GROUP = """
           - family: 'TlsDisabledKEM'
             name_group: 'tlsdisabledkem'
@@ -199,6 +217,7 @@ class TestOqsBase(unittest.TestCase):
         HIGHER_NIST_LEVEL_NAMED_GROUP +
         WITHOUT_PARAMETER_SET_NAMED_GROUP +
         EARLIER_NIST_ROUND_NAMED_GROUP +
+        STORED_COMPOSITION_NAMED_GROUP +
         TLS_DISABLED_NAMED_GROUP
     )
     NAMED_CURVE_CONFIG = (
@@ -306,6 +325,53 @@ class TestFetcherOqsNamedGroup(TestOqsBase):
         )
 
 
+class TestFetcherOqsHybridNamedGroup(TestOqsBase):
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_hybrid_named_group_parsing(self, mock_request):
+        mock_request.side_effect = self.get_mock_request(self.NAMED_GROUP_RESPONSES)
+
+        with contextlib.redirect_stdout(io.StringIO()):
+            current_data = FetcherOqsHybridNamedGroup.from_current_data()
+
+        params_by_identifier = {params.identifier: params for params in current_data.parsed_data}
+
+        self.assertEqual(
+            params_by_identifier['X25519_ML_KEM_512'],
+            FetchedHybridNamedGroupParams(
+                identifier='X25519_ML_KEM_512',
+                name=NamedGroup.X25519_ML_KEM_512.value.name,
+                long_name=NamedGroup.X25519_ML_KEM_512.value.long_name,
+                classical_named_group=NamedGroup.CURVE25519,
+                post_quantum_named_group=NamedGroup.MLKEM512,
+            ),
+        )
+        self.assertEqual(
+            params_by_identifier['SECP256R1_MLKEM512'].classical_named_group,
+            NamedGroup.PRIME256V1,
+        )
+        # A round bearing half is named after the group here and after the
+        # algorithm elsewhere, so both spellings are tried against the registry.
+        self.assertEqual(
+            params_by_identifier['X25519_FRODOKEM_640_AES_R3'].post_quantum_named_group,
+            NamedGroup.FRODO640AES_R3,
+        )
+        # A group the named group registry does not have gets no composition,
+        # whether because it is unknown or because its code point was taken.
+        self.assertNotIn('SECP256R1_NONEXISTINGKEM', params_by_identifier)
+        self.assertNotIn('SECP256R1_ML_KEM_512_R3', params_by_identifier)
+        # A plain post-quantum group is not composed of anything.
+        self.assertNotIn('MLKEM512', params_by_identifier)
+        # The stored records are kept as they are rather than rewritten, both the
+        # ones the fetched data does not mention and the ones it does.
+        self.assertEqual(
+            params_by_identifier['CECPQ2'].name, HybridNamedGroup.CECPQ2.value.name
+        )
+        self.assertEqual(
+            params_by_identifier['X25519_KYBER_512_R3'].name,
+            HybridNamedGroup.X25519_KYBER_512_R3.value.name,
+        )
+
+
 class TestFetcherOqsKeyEncapsulationMechanism(TestOqsBase):
     @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
     def test_named_curve_parsing(self, mock_request):
@@ -357,6 +423,33 @@ class TestUpdaterOqsNamedGroup(TestUpdaterOqsBase):
 
         sort_keys = [(params['group_type'], identifier) for identifier, params in result.items()]
         self.assertEqual(sort_keys, sorted(sort_keys))
+
+
+class TestUpdaterOqsHybridNamedGroup(TestUpdaterOqsBase):
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_hybrid_named_group_update(self, mock_request):
+        mock_request.side_effect = self.get_mock_request(self.NAMED_GROUP_RESPONSES)
+        json_file_path = str(CryptoDataEnumBase.get_json_path(HybridNamedGroupParams))
+        self.fs.create_file(json_file_path, contents='{}')
+
+        with contextlib.redirect_stdout(io.StringIO()):
+            UpdaterOqsHybridNamedGroup()()
+
+        with open(json_file_path, encoding='ascii') as json_file:
+            result = json.load(json_file)
+
+        self.assertEqual(
+            result['X25519_ML_KEM_512'],
+            {
+                'name': NamedGroup.X25519_ML_KEM_512.value.name,
+                'long_name': None,
+                'classical_named_group': 'CURVE25519',
+                'post_quantum_named_group': 'MLKEM512',
+            },
+        )
+
+        identifiers = list(result)
+        self.assertEqual(identifiers, sorted(identifiers))
 
 
 class TestUpdaterOqsKeyEncapsulationMechanism(TestUpdaterOqsBase):
