@@ -472,6 +472,7 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
                 long_name=NamedGroup.X25519_ML_KEM_512.value.long_name,
                 classical_named_group=NamedGroup.CURVE25519,
                 post_quantum_named_group=NamedGroup.MLKEM512,
+                oqs_name='x25519_mlkem512',
             ),
         )
         self.assertEqual(
@@ -676,6 +677,7 @@ class TestUpdaterOqsHybridNamedGroup(TestUpdaterOqsBase):
                 'long_name': None,
                 'classical_named_group': 'CURVE25519',
                 'post_quantum_named_group': 'MLKEM512',
+                'oqs_name': 'x25519_mlkem512',
             },
         )
 
@@ -715,6 +717,7 @@ class TestUpdaterOqsKeyEncapsulationMechanism(TestUpdaterOqsBase):
                 'ciphertext_size': 736 * 8,
                 'shared_secret_size': 32 * 8,
                 'security_category': 'LEVEL_1',
+                'oqs_name': None,
             },
         )
         self.assertEqual(result['NTRU_HRSS_701']['security_category'], 'LEVEL_3')

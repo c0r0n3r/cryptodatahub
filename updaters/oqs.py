@@ -566,6 +566,7 @@ class FetcherOqsHybridNamedGroup(FetcherOqsBase):
                     long_name=named_group.value.long_name,
                     classical_named_group=oqs_named_group.classical_named_group,
                     post_quantum_named_group=oqs_named_group.post_quantum_named_group,
+                    oqs_name=oqs_named_group.name,
                 )
             )
 
@@ -723,8 +724,10 @@ class FetcherOqsKeyEncapsulationMechanism(FetcherOqsBase):
             existing = key_encapsulation_mechanism_params.get(parameter_set.identifier)
             # The sizes and the security category are what the datasheet states,
             # so they are taken from it even where a record already holds them.
-            # The name, the standards and the papers are not in a datasheet at
-            # all, so a record that has them keeps them.
+            # The name, the standards, the papers and the Open Quantum Safe name
+            # are not in a datasheet at all — the last one is in the provider
+            # configuration the hybrid compositions are read from — so a record
+            # that has them keeps them.
             key_encapsulation_mechanism_params[parameter_set.identifier] = (
                 updaters.oqs_params.FetchedKeyEncapsulationMechanismParams(
                     identifier=parameter_set.identifier,
@@ -739,6 +742,7 @@ class FetcherOqsKeyEncapsulationMechanism(FetcherOqsBase):
                     security_category=cryptodatahub.common.algorithm.NistSecurityLevel.from_code(
                         parameter_set.security_category
                     ),
+                    oqs_name=existing.oqs_name if existing else None,
                 )
             )
 

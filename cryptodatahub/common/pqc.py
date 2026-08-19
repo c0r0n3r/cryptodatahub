@@ -44,6 +44,11 @@ class KeyEncapsulationMechanismParams(CryptoDataParamsNamed):
         validator=attr.validators.instance_of(NistSecurityLevel),
         metadata={'human_readable_name': 'security category'},
     )
+    oqs_name = attr.ib(
+        default=None,
+        validator=attr.validators.optional(attr.validators.instance_of(str)),
+        metadata={'human_readable_name': 'Open Quantum Safe name', 'serialize_default': True},
+    )
 
 
 class KeyEncapsulationMechanismBase(CryptoDataEnumBase):
@@ -71,6 +76,11 @@ class HybridNamedGroupParams(CryptoDataParamsNamed):
     post_quantum_named_group = attr.ib(
         converter=convert_enum(NamedGroup),
         validator=attr.validators.instance_of(NamedGroup),
+    )
+    oqs_name = attr.ib(
+        default=None,
+        validator=attr.validators.optional(attr.validators.instance_of(str)),
+        metadata={'human_readable_name': 'Open Quantum Safe name', 'serialize_default': True},
     )
 
 

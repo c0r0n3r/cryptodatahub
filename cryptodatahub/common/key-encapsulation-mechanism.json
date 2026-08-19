@@ -8,7 +8,8 @@
         "decapsulation_key_size": 24880,
         "ciphertext_size": 20336,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "BIKE1_L1_FO_R2": {
         "name": "BIKE1-L1-FO-r2",
@@ -19,7 +20,8 @@
         "decapsulation_key_size": 51680,
         "ciphertext_size": 23568,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "BIKE1_L3_CPA_R2": {
         "name": "BIKE1-L3-CPA-r2",
@@ -30,7 +32,8 @@
         "decapsulation_key_size": 46304,
         "ciphertext_size": 39712,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "BIKE1_L3_FO_R2": {
         "name": "BIKE1-L3-FO-r2",
@@ -41,7 +44,8 @@
         "decapsulation_key_size": 105888,
         "ciphertext_size": 49648,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "BIKEL1_R4": {
         "name": "BIKE-L1-r4",
@@ -52,7 +56,8 @@
         "decapsulation_key_size": 41784,
         "ciphertext_size": 12584,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "BIKEL3": {
         "name": "BIKE-L3",
@@ -63,7 +68,8 @@
         "decapsulation_key_size": 80840,
         "ciphertext_size": 24920,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": "bikel3"
     },
     "BIKEL3_R4": {
         "name": "BIKE-L3-r4",
@@ -74,7 +80,8 @@
         "decapsulation_key_size": 80840,
         "ciphertext_size": 24920,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "BIKEL5": {
         "name": "BIKE-L5",
@@ -85,7 +92,8 @@
         "decapsulation_key_size": 131952,
         "ciphertext_size": 41232,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": "bikel5"
     },
     "BIKEL5_R4": {
         "name": "BIKE-L5-r4",
@@ -96,7 +104,8 @@
         "decapsulation_key_size": 131952,
         "ciphertext_size": 41232,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": null
     },
     "BIKE_L1_R3": {
         "name": "BIKE-L1-r3",
@@ -107,7 +116,8 @@
         "decapsulation_key_size": 41784,
         "ciphertext_size": 12584,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "BIKE_L3_R3": {
         "name": "BIKE-L3-r3",
@@ -118,7 +128,8 @@
         "decapsulation_key_size": 80840,
         "ciphertext_size": 24920,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "FRODO1344AES": {
         "name": "FrodoKEM-1344-AES",
@@ -129,7 +140,8 @@
         "decapsulation_key_size": 344704,
         "ciphertext_size": 173568,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": "frodo1344aes"
     },
     "FRODO1344AES_R3": {
         "name": "FrodoKEM-1344-AES-r3",
@@ -140,7 +152,8 @@
         "decapsulation_key_size": 344704,
         "ciphertext_size": 173568,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": null
     },
     "FRODO1344SHAKE": {
         "name": "FrodoKEM-1344-SHAKE",
@@ -151,7 +164,8 @@
         "decapsulation_key_size": 344704,
         "ciphertext_size": 173568,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": "frodo1344shake"
     },
     "FRODO1344SHAKE_R3": {
         "name": "FrodoKEM-1344-SHAKE-r3",
@@ -162,7 +176,8 @@
         "decapsulation_key_size": 344704,
         "ciphertext_size": 173568,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": null
     },
     "FRODO640AES": {
         "name": "FrodoKEM-640-AES",
@@ -173,7 +188,8 @@
         "decapsulation_key_size": 159104,
         "ciphertext_size": 78016,
         "shared_secret_size": 128,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": "frodo640aes"
     },
     "FRODO640AES_R3": {
         "name": "FrodoKEM-640-AES-r3",
@@ -184,7 +200,8 @@
         "decapsulation_key_size": 159104,
         "ciphertext_size": 78016,
         "shared_secret_size": 128,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "FRODO640SHAKE": {
         "name": "FrodoKEM-640-SHAKE",
@@ -195,7 +212,8 @@
         "decapsulation_key_size": 159104,
         "ciphertext_size": 78016,
         "shared_secret_size": 128,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": "frodo640shake"
     },
     "FRODO640SHAKE_R3": {
         "name": "FrodoKEM-640-SHAKE-r3",
@@ -206,7 +224,8 @@
         "decapsulation_key_size": 159104,
         "ciphertext_size": 78016,
         "shared_secret_size": 128,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "FRODO976AES": {
         "name": "FrodoKEM-976-AES",
@@ -217,7 +236,8 @@
         "decapsulation_key_size": 250368,
         "ciphertext_size": 126336,
         "shared_secret_size": 192,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": "frodo976aes"
     },
     "FRODO976AES_R3": {
         "name": "FrodoKEM-976-AES-r3",
@@ -228,7 +248,8 @@
         "decapsulation_key_size": 250368,
         "ciphertext_size": 126336,
         "shared_secret_size": 192,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "FRODO976SHAKE": {
         "name": "FrodoKEM-976-SHAKE",
@@ -239,7 +260,8 @@
         "decapsulation_key_size": 250368,
         "ciphertext_size": 126336,
         "shared_secret_size": 192,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": "frodo976shake"
     },
     "FRODO976SHAKE_R3": {
         "name": "FrodoKEM-976-SHAKE-r3",
@@ -250,7 +272,8 @@
         "decapsulation_key_size": 250368,
         "ciphertext_size": 126336,
         "shared_secret_size": 192,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "HQC128": {
         "name": "HQC-128",
@@ -261,7 +284,8 @@
         "decapsulation_key_size": 18440,
         "ciphertext_size": 35464,
         "shared_secret_size": 512,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": "hqc128"
     },
     "HQC128_R4": {
         "name": "HQC-128-r4",
@@ -272,7 +296,8 @@
         "decapsulation_key_size": 18440,
         "ciphertext_size": 35464,
         "shared_secret_size": 512,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "HQC192": {
         "name": "HQC-192",
@@ -283,7 +308,8 @@
         "decapsulation_key_size": 36688,
         "ciphertext_size": 71824,
         "shared_secret_size": 512,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": "hqc192"
     },
     "HQC192_R4": {
         "name": "HQC-192-r4",
@@ -294,7 +320,8 @@
         "decapsulation_key_size": 36688,
         "ciphertext_size": 71824,
         "shared_secret_size": 512,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "HQC256": {
         "name": "HQC-256",
@@ -305,7 +332,8 @@
         "decapsulation_key_size": 58536,
         "ciphertext_size": 115368,
         "shared_secret_size": 512,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": "hqc256"
     },
     "HQC256_R4": {
         "name": "HQC-256-r4",
@@ -316,7 +344,8 @@
         "decapsulation_key_size": 58536,
         "ciphertext_size": 115368,
         "shared_secret_size": 512,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": null
     },
     "HQC_128_R3": {
         "name": "HQC-128-r3",
@@ -327,7 +356,8 @@
         "decapsulation_key_size": 18312,
         "ciphertext_size": 35848,
         "shared_secret_size": 512,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "HQC_192_R3": {
         "name": "HQC-192-r3",
@@ -338,7 +368,8 @@
         "decapsulation_key_size": 36496,
         "ciphertext_size": 72208,
         "shared_secret_size": 512,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "HQC_256_R3": {
         "name": "HQC-256-r3",
@@ -349,7 +380,8 @@
         "decapsulation_key_size": 58280,
         "ciphertext_size": 115752,
         "shared_secret_size": 512,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": null
     },
     "KYBER_1024_90S_R2": {
         "name": "Kyber1024-90s-r2",
@@ -360,7 +392,8 @@
         "decapsulation_key_size": 25344,
         "ciphertext_size": 12544,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": null
     },
     "KYBER_1024_90S_R3": {
         "name": "Kyber1024-90s-r3",
@@ -371,7 +404,8 @@
         "decapsulation_key_size": 25344,
         "ciphertext_size": 12544,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": null
     },
     "KYBER_1024_R2": {
         "name": "Kyber1024-r2",
@@ -382,7 +416,8 @@
         "decapsulation_key_size": 25344,
         "ciphertext_size": 12544,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": null
     },
     "KYBER_1024_R3": {
         "name": "Kyber-1024-r3",
@@ -395,7 +430,8 @@
         "decapsulation_key_size": 25344,
         "ciphertext_size": 12544,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": null
     },
     "KYBER_512_90S_R2": {
         "name": "Kyber512-90s-r2",
@@ -406,7 +442,8 @@
         "decapsulation_key_size": 13056,
         "ciphertext_size": 5888,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "KYBER_512_90S_R3": {
         "name": "Kyber512-90s-r3",
@@ -417,7 +454,8 @@
         "decapsulation_key_size": 13056,
         "ciphertext_size": 6144,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "KYBER_512_R2": {
         "name": "Kyber512-r2",
@@ -428,7 +466,8 @@
         "decapsulation_key_size": 13056,
         "ciphertext_size": 5888,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "KYBER_512_R3": {
         "name": "Kyber-512-r3",
@@ -441,7 +480,8 @@
         "decapsulation_key_size": 13056,
         "ciphertext_size": 6144,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "KYBER_768_90S_R2": {
         "name": "Kyber768-90s-r2",
@@ -452,7 +492,8 @@
         "decapsulation_key_size": 19200,
         "ciphertext_size": 8704,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "KYBER_768_90S_R3": {
         "name": "Kyber768-90s-r3",
@@ -463,7 +504,8 @@
         "decapsulation_key_size": 19200,
         "ciphertext_size": 8704,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "KYBER_768_R2": {
         "name": "Kyber768-r2",
@@ -474,7 +516,8 @@
         "decapsulation_key_size": 19200,
         "ciphertext_size": 8704,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "KYBER_768_R3": {
         "name": "Kyber-768-r3",
@@ -487,7 +530,8 @@
         "decapsulation_key_size": 19200,
         "ciphertext_size": 8704,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "MLKEM1024": {
         "name": "ML-KEM-1024",
@@ -498,7 +542,8 @@
         "decapsulation_key_size": 25344,
         "ciphertext_size": 12544,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": "mlkem1024"
     },
     "MLKEM512": {
         "name": "ML-KEM-512",
@@ -509,7 +554,8 @@
         "decapsulation_key_size": 13056,
         "ciphertext_size": 6144,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": "mlkem512"
     },
     "MLKEM768": {
         "name": "ML-KEM-768",
@@ -520,7 +566,8 @@
         "decapsulation_key_size": 19200,
         "ciphertext_size": 8704,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": "mlkem768"
     },
     "ML_KEM_1024": {
         "name": "ml-kem-1024",
@@ -533,7 +580,8 @@
         "decapsulation_key_size": 25344,
         "ciphertext_size": 12544,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_5"
+        "security_category": "LEVEL_5",
+        "oqs_name": null
     },
     "ML_KEM_512": {
         "name": "ml-kem-512",
@@ -546,7 +594,8 @@
         "decapsulation_key_size": 13056,
         "ciphertext_size": 6144,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_1"
+        "security_category": "LEVEL_1",
+        "oqs_name": null
     },
     "ML_KEM_768": {
         "name": "ml-kem-768",
@@ -559,7 +608,8 @@
         "decapsulation_key_size": 19200,
         "ciphertext_size": 8704,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     },
     "NTRU_HRSS_701": {
         "name": "NTRU-HRSS-701",
@@ -572,6 +622,7 @@
         "decapsulation_key_size": 11600,
         "ciphertext_size": 9104,
         "shared_secret_size": 256,
-        "security_category": "LEVEL_3"
+        "security_category": "LEVEL_3",
+        "oqs_name": null
     }
 }

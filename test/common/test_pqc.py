@@ -31,6 +31,10 @@ class TestKeyEncapsulationMechanism(TestClasses.TestJsonBase):
             if key_encapsulation_mechanism.name not in NamedGroup.__members__
         ], [])
 
+    def test_oqs_name(self):
+        self.assertEqual(KeyEncapsulationMechanism.MLKEM768.value.oqs_name, 'mlkem768')
+        self.assertIsNone(KeyEncapsulationMechanism.ML_KEM_768.value.oqs_name)
+
 
 class TestHybridNamedGroup(TestClasses.TestJsonBase):
     @classmethod
@@ -46,4 +50,18 @@ class TestHybridNamedGroup(TestClasses.TestJsonBase):
             hybrid_named_group.name
             for hybrid_named_group in HybridNamedGroup
             if hybrid_named_group.name not in NamedGroup.__members__
+        ], [])
+
+    def test_oqs_name(self):
+        self.assertEqual(HybridNamedGroup.X25519_ML_KEM_768.value.oqs_name, 'X25519MLKEM768')
+        self.assertEqual(HybridNamedGroup.SECP256R1_FRODO640AES.value.oqs_name, 'p256_frodo640aes')
+        self.assertIsNone(HybridNamedGroup.CECPQ2.value.oqs_name)
+
+    def test_every_oqs_name_a_named_group_has_is_carried(self):
+        self.assertEqual([
+            named_group.name
+            for named_group in NamedGroup
+            if named_group.value.oqs_name is not None and
+            named_group.name in HybridNamedGroup.__members__ and
+            HybridNamedGroup[named_group.name].value.oqs_name != named_group.value.oqs_name
         ], [])
