@@ -11,8 +11,6 @@ from cryptodatahub.common.algorithm import (
     Hash,
     IpProtocolNumber,
     KeyExchange,
-    NamedGroup,
-    NamedGroupType,
     MAC,
     MACModeParams,
     MACParams,
@@ -63,22 +61,6 @@ class TestKeyExchange(TestClasses.TestJsonBase):
     @classmethod
     def _get_class(cls):
         return KeyExchange
-
-
-class TestNamedGroup(TestClasses.TestJsonBase):
-    @classmethod
-    def _get_class(cls):
-        return NamedGroup
-
-    def test_size_is_unknown_for_post_quantum_groups_only(self):
-        groups_without_a_comparable_size = (NamedGroupType.POST_QUANTUM, NamedGroupType.HYBRID_PQS)
-
-        self.assertEqual([
-            named_group.name
-            for named_group in NamedGroup
-            if ((named_group.value.size is None) !=
-                (named_group.value.group_type in groups_without_a_comparable_size))
-        ], [])
 
 
 class TestMAC(TestClasses.TestJsonBase):

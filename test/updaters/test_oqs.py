@@ -12,12 +12,7 @@ import urllib3
 
 import cryptodatahub.common.algorithm
 import cryptodatahub.common.pqc
-from cryptodatahub.common.algorithm import (
-    Authentication,
-    AuthenticationParams,
-    NamedGroup,
-    NistSecurityLevel,
-)
+from cryptodatahub.common.algorithm import Authentication, AuthenticationParams, NistSecurityLevel
 from cryptodatahub.common.parameter import ECParamWellKnown
 from cryptodatahub.common.pqc import (
     HybridNamedGroup,
@@ -417,8 +412,8 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
             params_by_identifier['X25519_ML_KEM_512'],
             FetchedHybridNamedGroupParams(
                 identifier='X25519_ML_KEM_512',
-                name=NamedGroup.X25519_ML_KEM_512.value.name,
-                long_name=NamedGroup.X25519_ML_KEM_512.value.long_name,
+                name=HybridNamedGroup.X25519_ML_KEM_512.value.name,
+                long_name=HybridNamedGroup.X25519_ML_KEM_512.value.long_name,
                 vulnerabilities=[],
                 classical_key_parameter=ECParamWellKnown.CURVE25519,
                 post_quantum_key_parameter=KeyEncapsulationMechanism.MLKEM512,
@@ -440,7 +435,7 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
         )
 
     @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
-    def test_group_missing_from_the_named_group_registry_gets_no_composition(self, mock_request):
+    def test_group_whose_post_quantum_half_is_unanswered_gets_no_composition(self, mock_request):
         params_by_identifier = self._get_params_by_identifier(mock_request)
 
         self.assertNotIn('SECP256R1_NONEXISTINGKEM', params_by_identifier)
@@ -454,7 +449,6 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
             params_by_identifier['X25519_ML_KEM_512'].post_quantum_key_parameter,
             KeyEncapsulationMechanism.MLKEM512,
         )
-        self.assertNotIn('SECP256R1_ML_KEM_512_R3', params_by_identifier)
 
     @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
     def test_group_only_a_retired_release_knows_is_derived(self, mock_request):
@@ -628,7 +622,7 @@ class TestUpdaterOqsHybridNamedGroup(TestUpdaterOqsBase):
         self.assertEqual(
             result['X25519_ML_KEM_512'],
             {
-                'name': NamedGroup.X25519_ML_KEM_512.value.name,
+                'name': HybridNamedGroup.X25519_ML_KEM_512.value.name,
                 'long_name': None,
                 'vulnerabilities': [],
                 'classical_key_parameter': 'CURVE25519',

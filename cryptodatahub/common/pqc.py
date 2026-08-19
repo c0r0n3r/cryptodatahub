@@ -5,7 +5,6 @@ import typing
 import attr
 
 from cryptodatahub.common.algorithm import NistSecurityLevel
-from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.grade import GradeableVulnerabilities
 from cryptodatahub.common.parameter import DHParamWellKnown, ECParamWellKnown, ParamWellKnownBase
 from cryptodatahub.common.types import (
@@ -50,19 +49,8 @@ class KeyEncapsulationMechanismParams(ParamWellKnownBase):
         return 'key encapsulation mechanism'
 
 
-class KeyEncapsulationMechanismBase(CryptoDataEnumBase):
-    @classmethod
-    def from_named_group(cls, named_group):
-        try:
-            key_encapsulation_mechanism = cls[named_group.name]
-        except KeyError as e:
-            raise InvalidValue(named_group, cls) from e
-
-        return key_encapsulation_mechanism
-
-
-KeyEncapsulationMechanism = KeyEncapsulationMechanismBase(
-    'KeyEncapsulationMechanism', KeyEncapsulationMechanismBase.get_json_records(KeyEncapsulationMechanismParams)
+KeyEncapsulationMechanism = CryptoDataEnumBase(
+    'KeyEncapsulationMechanism', CryptoDataEnumBase.get_json_records(KeyEncapsulationMechanismParams)
 )
 
 

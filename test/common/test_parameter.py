@@ -9,7 +9,6 @@ except ImportError:
 
 from test.common.classes import TestClasses
 
-from cryptodatahub.common.algorithm import NamedGroup, NamedGroupType
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.grade import AttackNamed, Grade
 from cryptodatahub.common.parameter import (
@@ -768,26 +767,6 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
 
         return abs(parameter_numbers.n * parameter_numbers.h - field_size - 1) <= 2 * math.isqrt(field_size)
 
-    def test_from_named_group(self):
-        self.assertEqual(
-           ECParamWellKnown.from_named_group(NamedGroup.PRIME256V1),
-           ECParamWellKnown.PRIME256V1
-        )
-
-        with self.assertRaisesRegex(
-                InvalidValue, "NamedGroup.ML_KEM_768.* is not a valid ECParamWellKnown"
-        ) as context_manager:
-            ECParamWellKnown.from_named_group(NamedGroup.ML_KEM_768)
-        self.assertEqual(context_manager.exception.value, NamedGroup.ML_KEM_768)
-
-    def test_every_elliptic_curve_named_group_has_an_entry(self):
-        self.assertEqual([
-            named_group.name
-            for named_group in NamedGroup
-            if named_group.value.group_type == NamedGroupType.ELLIPTIC_CURVE and
-            named_group.name not in ECParamWellKnown.__members__
-        ], [])
-
     def test_from_oid(self):
         self.assertEqual(
             ECParamWellKnown.from_oid('1.2.840.10045.3.1.7'),
@@ -797,24 +776,8 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
         with self.assertRaisesRegex(InvalidValue, "1.2.3.4.* is not a valid ECParamWellKnown oid"):
             ECParamWellKnown.from_oid('1.2.3.4')
 
-    def test_every_object_identifier_a_named_group_has_is_carried(self):
-        self.assertEqual([
-            named_group.name
-            for named_group in NamedGroup
-            if named_group.value.oid is not None and
-            ECParamWellKnown[named_group.name].value.oid != named_group.value.oid
-        ], [])
-
     def test_curve_without_an_object_identifier(self):
         self.assertIsNone(ECParamWellKnown.M383.value.oid)
-
-    def test_size(self):
-        self.assertEqual([
-            named_group.name
-            for named_group in NamedGroup
-            if named_group.value.group_type == NamedGroupType.ELLIPTIC_CURVE and
-            ECParamWellKnown[named_group.name].value.size != named_group.value.size
-        ], [])
 
     def test_size_of_a_binary_field_curve(self):
         self.assertEqual(ECParamWellKnown.C2PNB163V1.value.size, 163)
@@ -823,14 +786,6 @@ class TestECParamWellKnown(TestClasses.TestJsonBase):
     def test_size_of_an_extension_field_curve(self):
         self.assertEqual(ECParamWellKnown.FOURQ.value.size, 127)
         self.assertEqual(ECParamWellKnown.BLS48_581_G2.value.size, 1743)
-
-    def test_every_vulnerability_a_named_group_has_is_carried(self):
-        self.assertEqual([
-            named_group.name
-            for named_group in NamedGroup
-            if named_group.value.vulnerabilities and named_group.name in ECParamWellKnown.__members__ and
-            ECParamWellKnown[named_group.name].value.vulnerabilities != named_group.value.vulnerabilities
-        ], [])
 
     def test_curve_too_small_for_the_discrete_logarithm_problem(self):
         self.assertEqual(ECParamWellKnown.SECP112R2.value.min_grade, Grade.INSECURE)

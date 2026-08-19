@@ -564,15 +564,6 @@ class ECParamWellKnownBase(CryptoDataEnumOIDBase):
     def from_parameter_numbers(cls, parameter_numbers):
         return cls._from_attr('parameter_numbers', parameter_numbers)
 
-    @classmethod
-    def from_named_group(cls, named_group):
-        try:
-            ec_param = cls[named_group.name]
-        except KeyError as e:
-            raise InvalidValue(named_group, cls) from e
-
-        return ec_param
-
 
 ECParamWellKnown = ECParamWellKnownBase(
     'ECParamWellKnown', ECParamWellKnownBase.get_json_records(ECParamWellKnownParams)
