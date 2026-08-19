@@ -16,8 +16,6 @@ from cryptodatahub.common.algorithm import (
     Authentication,
     AuthenticationParams,
     NamedGroup,
-    NamedGroupParams,
-    NamedGroupType,
     NistSecurityLevel,
 )
 from cryptodatahub.common.parameter import ECParamWellKnown
@@ -37,20 +35,14 @@ from updaters.oqs import (
     FetcherOqsHybridNamedGroup,
     FetcherOqsKeyEncapsulationMechanism,
     FetcherOqsNamedCurve,
-    FetcherOqsNamedGroup,
     FetcherOqsSignatureAlgorithm,
     UpdaterOqsAuthentication,
     UpdaterOqsHybridNamedGroup,
     UpdaterOqsKeyEncapsulationMechanism,
     UpdaterOqsNamedCurve,
-    UpdaterOqsNamedGroup,
     UpdaterOqsSignatureAlgorithm,
 )
-from updaters.oqs_params import (
-    FetchedHybridNamedGroupParams,
-    FetchedNamedCurveParams,
-    FetchedNamedGroupParams,
-)
+from updaters.oqs_params import FetchedHybridNamedGroupParams, FetchedNamedCurveParams
 
 HYBRID_NAMED_GROUP_HELD_BACK_SO_IT_IS_DERIVED = 'X448_KYBER_768_R3'
 HYBRID_NAMED_GROUPS_LEFT_IN_THE_REGISTRY = [
@@ -246,6 +238,15 @@ class TestOqsBase(unittest.TestCase):
                 - nist-round: 3
                   hybrid_group: 'x25519'
                   nid: '0xFEF9'"""
+    ALREADY_COMPOSED_NAMED_GROUP = """
+          - family: 'ML-KEM'
+            name_group: 'mlkem512'
+            oqs_alg: 'OQS_KEM_alg_mlkem512'
+            enable_tls: true
+            extra_nids:
+              current:
+                - hybrid_group: 'x25519'
+                  nid: '0xFEF5'"""
     TLS_DISABLED_NAMED_GROUP = """
           - family: 'TlsDisabledKEM'
             name_group: 'tlsdisabledkem'
@@ -324,13 +325,15 @@ class TestOqsBase(unittest.TestCase):
         WITHOUT_PARAMETER_SET_NAMED_GROUP +
         EARLIER_NIST_ROUND_NAMED_GROUP +
         STORED_COMPOSITION_NAMED_GROUP +
+        ALREADY_COMPOSED_NAMED_GROUP +
         TLS_DISABLED_NAMED_GROUP
     )
     NAMED_CURVE_CONFIG = (
         KEY_ENCAPSULATION_MECHANISM_LIST +
         NON_EXISTING_NAMED_CURVE +
         ASSIGNED_CODE_POINT_NAMED_CURVE +
-        TAKEN_IDENTIFIER_NAMED_CURVE
+        TAKEN_IDENTIFIER_NAMED_CURVE +
+        WITHOUT_PARAMETER_SET_NAMED_GROUP
     )
     AUTHENTICATION_CONFIG = (
         KNOWN_SIGNATURE_ALGORITHM_FAMILY +
@@ -363,6 +366,7 @@ class TestOqsBase(unittest.TestCase):
     NAMED_CURVE_RESPONSES = {
         FetcherOqsBase.get_config_url(): NAMED_CURVE_CONFIG,
         FetcherOqsBase.get_algorithm_datasheet_url('ml_kem'): ML_KEM_DATASHEET,
+        FetcherOqsBase.get_algorithm_datasheet_url('kyber'): KYBER_DATASHEET,
     }
     AUTHENTICATION_RESPONSES = {
         FetcherOqsBase.get_config_url(): AUTHENTICATION_CONFIG,
@@ -387,62 +391,6 @@ class TestOqsBase(unittest.TestCase):
 class TestUpdaterOqsBase(TestOqsBase, pyfakefs.fake_filesystem_unittest.TestCase):
     def setUp(self):
         self.setUpPyfakefs()
-
-
-class TestFetcherOqsNamedGroup(TestOqsBase):
-    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
-    def test_named_group_parsing(self, mock_request):
-        mock_request.side_effect = self.get_mock_request(self.NAMED_GROUP_RESPONSES)
-
-        report = io.StringIO()
-        with contextlib.redirect_stdout(report):
-            current_data = FetcherOqsNamedGroup.from_current_data()
-
-        params_by_identifier = {params.identifier: params for params in current_data.parsed_data}
-
-        self.assertEqual(
-            params_by_identifier['NONEXISTINGKEM'],
-            FetchedNamedGroupParams(
-                identifier='NONEXISTINGKEM',
-                name='nonexistingkem',
-                long_name=None,
-                oid=None,
-                vulnerabilities=[],
-                size=336,
-                group_type=NamedGroupType.POST_QUANTUM,
-                oqs_name='nonexistingkem',
-            ),
-        )
-        self.assertEqual(
-            params_by_identifier['SECP256R1_NONEXISTINGKEM'].name, 'secp256r1/nonexistingkem'
-        )
-        self.assertEqual(
-            params_by_identifier['SECP256R1_NONEXISTINGKEM'].oqs_name, 'p256_nonexistingkem'
-        )
-        self.assertEqual(
-            params_by_identifier['SECP256R1_NONEXISTINGKEM'].group_type, NamedGroupType.HYBRID_PQS
-        )
-        self.assertEqual(params_by_identifier['HIGHERNISTLEVELKEM'].size, 344)
-        self.assertEqual(
-            params_by_identifier['SECP384R1_HIGHERNISTLEVELKEM'].oqs_name, 'p384_highernistlevelkem'
-        )
-        self.assertEqual(params_by_identifier['MLKEM512'].oqs_name, 'mlkem512')
-        self.assertEqual(params_by_identifier['X25519_ML_KEM_512'].oqs_name, 'x25519_mlkem512')
-        self.assertEqual(params_by_identifier['KYBER_512_R3'].oqs_name, None)
-        self.assertNotIn('WITHOUTPARAMETERSETKYBER', params_by_identifier)
-        self.assertNotIn('TLSDISABLEDKEM', params_by_identifier)
-        self.assertEqual(
-            params_by_identifier['X25519_FRODOKEM_640_AES_R3'].size,
-            NamedGroup.X25519_FRODOKEM_640_AES_R3.value.size,
-        )
-        self.assertEqual(
-            report.getvalue().splitlines(),
-            [
-                'Code point already assigned; code=0x023a, existing=KYBER_512_R3, fetched=ML_KEM_512_R3',
-                'Code point already assigned; code=0x2f3a, existing=SECP256R1_KYBER_512_R3, '
-                'fetched=SECP256R1_ML_KEM_512_R3',
-            ],
-        )
 
 
 class TestFetcherOqsHybridNamedGroup(TestOqsBase):
@@ -496,6 +444,16 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
         params_by_identifier = self._get_params_by_identifier(mock_request)
 
         self.assertNotIn('SECP256R1_NONEXISTINGKEM', params_by_identifier)
+
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_pair_already_composed_is_not_composed_under_another_name(self, mock_request):
+        params_by_identifier = self._get_params_by_identifier(mock_request)
+
+        self.assertNotIn('X25519_MLKEM512', params_by_identifier)
+        self.assertEqual(
+            params_by_identifier['X25519_ML_KEM_512'].post_quantum_key_parameter,
+            KeyEncapsulationMechanism.MLKEM512,
+        )
         self.assertNotIn('SECP256R1_ML_KEM_512_R3', params_by_identifier)
 
     @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
@@ -579,7 +537,8 @@ class TestFetcherOqsKeyEncapsulationMechanism(TestOqsBase):
 
 class TestFetcherOqsKeyEncapsulationMechanismResolvedEarly(TestOqsBase):
     @mock.patch.object(
-        cryptodatahub.common.algorithm, 'NamedGroup', [NamedGroup.KYBER_512_R3]
+        cryptodatahub.common.pqc, 'KeyEncapsulationMechanism',
+        [KeyEncapsulationMechanism.KYBER_512_R3],
     )
     @mock.patch.object(
         FetcherOqsKeyEncapsulationMechanism, '_LIBOQS_DATASHEET_VERSIONS',
@@ -603,12 +562,17 @@ class TestFetcherOqsKeyEncapsulationMechanismResolvedEarly(TestOqsBase):
 
 
 class TestFetcherOqsNamedCurve(TestOqsBase):
-    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
-    def test_named_curve_parsing(self, mock_request):
+    def _get_params_by_identifier(self, mock_request, report=None):
         mock_request.side_effect = self.get_mock_request(self.NAMED_CURVE_RESPONSES)
 
-        current_data = FetcherOqsNamedCurve.from_current_data()
-        params_by_identifier = {params.identifier: params for params in current_data.parsed_data}
+        with contextlib.redirect_stdout(report or io.StringIO()):
+            current_data = FetcherOqsNamedCurve.from_current_data()
+
+        return {params.identifier: params for params in current_data.parsed_data}
+
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_named_curve_parsing(self, mock_request):
+        params_by_identifier = self._get_params_by_identifier(mock_request)
 
         self.assertEqual(
             params_by_identifier['ML_KEM_512'],
@@ -620,39 +584,28 @@ class TestFetcherOqsNamedCurve(TestOqsBase):
                 last_version=TlsVersion.TLS1_3,
             ),
         )
-        self.assertNotIn('SECP256R1_ML_KEM_512', params_by_identifier)
-        self.assertEqual(params_by_identifier['SECP256R1_MLKEM512'].code, 0x2f4b)
         self.assertEqual(params_by_identifier['X25519_ML_KEM_512'].code, 0x2fb6)
 
-
-class TestUpdaterOqsNamedGroup(TestUpdaterOqsBase):
     @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
-    def test_named_group_update(self, mock_request):
-        mock_request.side_effect = self.get_mock_request(self.NAMED_GROUP_RESPONSES)
-        json_file_path = str(CryptoDataEnumBase.get_json_path(NamedGroupParams))
-        self.fs.create_file(json_file_path, contents='{}')
+    def test_entry_the_pinned_release_does_not_describe_is_left_out(self, mock_request):
+        params_by_identifier = self._get_params_by_identifier(mock_request)
 
-        with contextlib.redirect_stdout(io.StringIO()):
-            UpdaterOqsNamedGroup()()
+        self.assertNotIn('WITHOUTPARAMETERSETKYBER', params_by_identifier)
 
-        with open(json_file_path, encoding='ascii') as json_file:
-            result = json.load(json_file)
+    @mock.patch.object(urllib3.poolmanager.PoolManager, 'request')
+    def test_assigned_code_point_keeps_the_name_it_has_and_is_reported(self, mock_request):
+        report = io.StringIO()
+        params_by_identifier = self._get_params_by_identifier(mock_request, report)
 
         self.assertEqual(
-            result['NONEXISTINGKEM'],
-            {
-                'name': 'nonexistingkem',
-                'long_name': None,
-                'oid': None,
-                'vulnerabilities': [],
-                'size': 336,
-                'group_type': 'POST_QUANTUM',
-                'oqs_name': 'nonexistingkem',
-            },
+            report.getvalue().splitlines(),
+            [
+                'Code point already assigned; code=0x2f4b, existing=SECP256R1_MLKEM512, '
+                'fetched=SECP256R1_ML_KEM_512',
+            ],
         )
-
-        sort_keys = [(params['group_type'], identifier) for identifier, params in result.items()]
-        self.assertEqual(sort_keys, sorted(sort_keys))
+        self.assertNotIn('SECP256R1_ML_KEM_512', params_by_identifier)
+        self.assertEqual(params_by_identifier['SECP256R1_MLKEM512'].code, 0x2f4b)
 
 
 class TestUpdaterOqsHybridNamedGroup(TestUpdaterOqsBase):
@@ -737,7 +690,8 @@ class TestUpdaterOqsNamedCurve(TestUpdaterOqsBase):
         json_file_path = str(CryptoDataEnumBase.get_json_path(NamedCurveParams))
         self.fs.create_file(json_file_path, contents='{}')
 
-        UpdaterOqsNamedCurve()()
+        with contextlib.redirect_stdout(io.StringIO()):
+            UpdaterOqsNamedCurve()()
 
         with open(json_file_path, encoding='ascii') as json_file:
             result = json.load(json_file)

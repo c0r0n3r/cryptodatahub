@@ -201,7 +201,7 @@ class FetcherOqsBase(FetcherBase):
 
         for candidate in candidates:
             identifier = name_to_enum_item_name(candidate)
-            if identifier in cryptodatahub.common.algorithm.NamedGroup.__members__:
+            if identifier in cryptodatahub.common.pqc.KeyEncapsulationMechanism.__members__:
                 return identifier
 
         return None
@@ -383,74 +383,6 @@ class FetcherOqsSignatureAlgorithmBase(FetcherOqsBase):
         return oqs_signature_algorithms
 
 
-class FetcherOqsNamedGroup(FetcherOqsBase):
-    @staticmethod
-    def _set_oqs_name(named_group_params, identifier, oqs_name):
-        if oqs_name is None:
-            return
-
-        named_group_params[identifier] = attr.evolve(named_group_params[identifier], oqs_name=oqs_name)
-
-    @classmethod
-    def _transform_data(cls, current_data):
-        named_group_params = collections.OrderedDict([
-            (
-                named_group.name,
-                updaters.oqs_params.FetchedNamedGroupParams(
-                    identifier=named_group.name, **named_group.value._asdict()
-                ),
-            )
-            for named_group in cryptodatahub.common.algorithm.NamedGroup
-        ])
-        existing_names = {params.name for params in named_group_params.values()}
-        existing_named_curves_by_code = collections.OrderedDict([
-            (named_curve.value.code, named_curve)
-            for named_curve in cryptodatahub.tls.algorithm.TlsNamedCurve
-        ])
-
-        for oqs_named_group in current_data:
-            identifier = name_to_enum_item_name(oqs_named_group.name)
-
-            existing_named_curve = existing_named_curves_by_code.get(oqs_named_group.code)
-            if existing_named_curve is not None:
-                if existing_named_curve.name != identifier:
-                    print(
-                        f'Code point already assigned; code=0x{oqs_named_group.code:04x}, '
-                        f'existing={existing_named_curve.name}, fetched={identifier}'
-                    )
-                elif existing_named_curve.value.key_parameter is not None:
-                    cls._set_oqs_name(
-                        named_group_params,
-                        existing_named_curve.value.key_parameter.name,
-                        oqs_named_group.oqs_name,
-                    )
-
-                continue
-
-            if oqs_named_group.name in existing_names:
-                cls._set_oqs_name(named_group_params, identifier, oqs_named_group.oqs_name)
-
-                continue
-
-            named_group_params[identifier] = updaters.oqs_params.FetchedNamedGroupParams(
-                identifier=identifier,
-                name=oqs_named_group.name,
-                long_name=None,
-                oid=None,
-                vulnerabilities=[],
-                size=oqs_named_group.size,
-                group_type=(
-                    cryptodatahub.common.algorithm.NamedGroupType.HYBRID_PQS
-                    if oqs_named_group.hybrid
-                    else cryptodatahub.common.algorithm.NamedGroupType.POST_QUANTUM
-                ),
-                oqs_name=oqs_named_group.oqs_name,
-            )
-            existing_names.add(oqs_named_group.name)
-
-        return list(named_group_params.values())
-
-
 def _get_oqs_provider_release_order(version):
     release, _, candidate = version.partition('-rc')
     is_final_release = 0 if candidate else 1
@@ -540,6 +472,10 @@ class FetcherOqsHybridNamedGroup(FetcherOqsBase):
             )
             for hybrid_named_group in cryptodatahub.common.pqc.HybridNamedGroup
         ])
+        composed_halves = {
+            (params.classical_key_parameter.name, params.post_quantum_key_parameter.name)
+            for params in hybrid_named_group_params.values()
+        }
 
         for oqs_named_group in current_data:
             if not oqs_named_group.hybrid:
@@ -549,21 +485,27 @@ class FetcherOqsHybridNamedGroup(FetcherOqsBase):
             if identifier in hybrid_named_group_params:
                 continue
 
-            # A composition describes a group the named group registry has. An entry whose code point is already
-            # assigned never became one, so it must not gain a composition either, and neither half can be left
-            # unnamed.
-            named_group = cryptodatahub.common.algorithm.NamedGroup.__members__.get(identifier)
-            if named_group is None or oqs_named_group.post_quantum_key_parameter is None:
+            if oqs_named_group.post_quantum_key_parameter is None:
                 continue
+
+            halves = (
+                oqs_named_group.classical_key_parameter, oqs_named_group.post_quantum_key_parameter
+            )
+            if halves in composed_halves:
+                continue
+            composed_halves.add(halves)
 
             hybrid_named_group_params[identifier] = (
                 updaters.oqs_params.FetchedHybridNamedGroupParams(
                     identifier=identifier,
-                    # Taken from the named group registry rather than from the Open Quantum Safe name,
-                    # which holds a standard name for a few entries and an internal one built from the
-                    # two halves for the rest, so it is two kinds of thing under one field.
-                    name=named_group.value.name,
-                    long_name=named_group.value.long_name,
+                    # The classical curve and the algorithm joined, which is how the provider names the
+                    # group. The Open Quantum Safe name is not an alternative: it holds a standard name
+                    # for a few entries and an internal one built from the two halves for the rest, so
+                    # it is two kinds of thing under one field.
+                    name=oqs_named_group.name,
+                    long_name=None,
+                    # A composition is graded by the two halves it names, so it
+                    # states no vulnerability of its own.
                     vulnerabilities=[],
                     classical_key_parameter=oqs_named_group.classical_key_parameter,
                     post_quantum_key_parameter=oqs_named_group.post_quantum_key_parameter,
@@ -658,10 +600,11 @@ class FetcherOqsKeyEncapsulationMechanism(FetcherOqsBase):
     @classmethod
     def _get_current_data(cls):
         wanted = collections.OrderedDict(
-            (named_group.name, cls._split_nist_round(named_group.value.name))
-            for named_group in cryptodatahub.common.algorithm.NamedGroup
-            if named_group.value.group_type
-            == cryptodatahub.common.algorithm.NamedGroupType.POST_QUANTUM
+            (
+                key_encapsulation_mechanism.name,
+                cls._split_nist_round(key_encapsulation_mechanism.value.name),
+            )
+            for key_encapsulation_mechanism in cryptodatahub.common.pqc.KeyEncapsulationMechanism
         )
 
         resolved = collections.OrderedDict()
@@ -762,14 +705,22 @@ class FetcherOqsNamedCurve(FetcherOqsBase):
                 updaters.oqs_params.FetchedNamedCurveParams(identifier=named_curve.name, **params)
             )
 
-        existing_codes = {params.code for params in named_curve_params}
+        existing_identifier_by_code = {params.code: params.identifier for params in named_curve_params}
         existing_identifiers = {params.identifier for params in named_curve_params}
 
         for oqs_named_group in current_data:
-            if oqs_named_group.code in existing_codes:
+            identifier = name_to_enum_item_name(oqs_named_group.name)
+
+            existing_identifier = existing_identifier_by_code.get(oqs_named_group.code)
+            if existing_identifier is not None:
+                if existing_identifier != identifier:
+                    print(
+                        f'Code point already assigned; code=0x{oqs_named_group.code:04x}, '
+                        f'existing={existing_identifier}, fetched={identifier}'
+                    )
+
                 continue
 
-            identifier = name_to_enum_item_name(oqs_named_group.name)
             if identifier in existing_identifiers:
                 continue
 
@@ -780,7 +731,7 @@ class FetcherOqsNamedCurve(FetcherOqsBase):
                 initial_version=cryptodatahub.tls.version.TlsVersion.TLS1_3,
                 last_version=cryptodatahub.tls.version.TlsVersion.TLS1_3,
             ))
-            existing_codes.add(oqs_named_group.code)
+            existing_identifier_by_code[oqs_named_group.code] = identifier
             existing_identifiers.add(identifier)
 
         return named_curve_params
@@ -883,21 +834,6 @@ class UpdaterOqsBase(UpdaterBase):
         importlib.reload(updaters.oqs_params)
 
 
-class UpdaterOqsNamedGroup(UpdaterOqsBase):
-    def __init__(self):
-        super().__init__(
-            FetcherOqsNamedGroup,
-            cryptodatahub.common.algorithm.NamedGroup,
-            cryptodatahub.common.algorithm.NamedGroupParams,
-        )
-
-    @staticmethod
-    def sort_key(merged_item):
-        identifier, params = merged_item
-
-        return params['group_type'], identifier
-
-
 class UpdaterOqsHybridNamedGroup(UpdaterOqsBase):
     def __init__(self):
         super().__init__(
@@ -956,8 +892,6 @@ class UpdaterOqsSignatureAlgorithm(UpdaterOqsBase):
 
 
 def main():
-    UpdaterOqsNamedGroup()()  # pragma: no cover
-    UpdaterOqsBase.reload_enum_modules()  # pragma: no cover
     UpdaterOqsKeyEncapsulationMechanism()()  # pragma: no cover
     UpdaterOqsBase.reload_enum_modules()  # pragma: no cover
     UpdaterOqsHybridNamedGroup()()  # pragma: no cover
