@@ -4,25 +4,17 @@ import attr
 
 from cryptodatahub.common.algorithm import NistSecurityLevel
 from cryptodatahub.common.exception import InvalidValue
-from cryptodatahub.common.parameter import ECParamWellKnown, Paper, Standard
+from cryptodatahub.common.grade import GradeableVulnerabilities
+from cryptodatahub.common.parameter import ECParamWellKnown, ParamWellKnownBase
 from cryptodatahub.common.types import (
     CryptoDataEnumBase,
     CryptoDataParamsNamed,
     convert_enum,
-    convert_iterable,
 )
 
 
 @attr.s(frozen=True)
-class KeyEncapsulationMechanismParams(CryptoDataParamsNamed):  # pylint: disable=too-many-instance-attributes
-    standards = attr.ib(
-        converter=convert_iterable(convert_enum(Standard)),
-        validator=attr.validators.deep_iterable(attr.validators.instance_of(Standard))
-    )
-    papers = attr.ib(
-        converter=convert_iterable(convert_enum(Paper)),
-        validator=attr.validators.deep_iterable(attr.validators.instance_of(Paper))
-    )
+class KeyEncapsulationMechanismParams(ParamWellKnownBase):
     encapsulation_key_size = attr.ib(
         validator=attr.validators.instance_of(int),
         metadata={'human_readable_name': 'encapsulation key size'},
@@ -50,6 +42,10 @@ class KeyEncapsulationMechanismParams(CryptoDataParamsNamed):  # pylint: disable
         metadata={'human_readable_name': 'Open Quantum Safe name', 'serialize_default': True},
     )
 
+    @classmethod
+    def get_gradeable_name(cls):
+        return 'key encapsulation mechanism'
+
 
 class KeyEncapsulationMechanismBase(CryptoDataEnumBase):
     @classmethod
@@ -68,7 +64,7 @@ KeyEncapsulationMechanism = KeyEncapsulationMechanismBase(
 
 
 @attr.s(frozen=True)
-class HybridNamedGroupParams(CryptoDataParamsNamed):
+class HybridNamedGroupParams(CryptoDataParamsNamed, GradeableVulnerabilities):
     classical_key_parameter = attr.ib(
         converter=convert_enum(ECParamWellKnown),
         validator=attr.validators.instance_of(ECParamWellKnown),
@@ -82,6 +78,10 @@ class HybridNamedGroupParams(CryptoDataParamsNamed):
         validator=attr.validators.optional(attr.validators.instance_of(str)),
         metadata={'human_readable_name': 'Open Quantum Safe name', 'serialize_default': True},
     )
+
+    @classmethod
+    def get_gradeable_name(cls):
+        return 'hybrid named group'
 
 
 HybridNamedGroup = CryptoDataEnumBase(

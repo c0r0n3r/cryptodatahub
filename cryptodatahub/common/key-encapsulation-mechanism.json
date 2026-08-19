@@ -2,8 +2,9 @@
     "BIKE1_L1_CPA_R2": {
         "name": "BIKE1-L1-CPA-r2",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 20336,
         "decapsulation_key_size": 24880,
         "ciphertext_size": 20336,
@@ -14,8 +15,9 @@
     "BIKE1_L1_FO_R2": {
         "name": "BIKE1-L1-FO-r2",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 23568,
         "decapsulation_key_size": 51680,
         "ciphertext_size": 23568,
@@ -26,8 +28,9 @@
     "BIKE1_L3_CPA_R2": {
         "name": "BIKE1-L3-CPA-r2",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 39712,
         "decapsulation_key_size": 46304,
         "ciphertext_size": 39712,
@@ -38,8 +41,9 @@
     "BIKE1_L3_FO_R2": {
         "name": "BIKE1-L3-FO-r2",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 49648,
         "decapsulation_key_size": 105888,
         "ciphertext_size": 49648,
@@ -50,8 +54,9 @@
     "BIKEL1_R4": {
         "name": "BIKE-L1-r4",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 12328,
         "decapsulation_key_size": 41784,
         "ciphertext_size": 12584,
@@ -62,8 +67,9 @@
     "BIKEL3": {
         "name": "BIKE-L3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 24664,
         "decapsulation_key_size": 80840,
         "ciphertext_size": 24920,
@@ -74,8 +80,9 @@
     "BIKEL3_R4": {
         "name": "BIKE-L3-r4",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 24664,
         "decapsulation_key_size": 80840,
         "ciphertext_size": 24920,
@@ -86,8 +93,9 @@
     "BIKEL5": {
         "name": "BIKE-L5",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 40976,
         "decapsulation_key_size": 131952,
         "ciphertext_size": 41232,
@@ -98,8 +106,9 @@
     "BIKEL5_R4": {
         "name": "BIKE-L5-r4",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 40976,
         "decapsulation_key_size": 131952,
         "ciphertext_size": 41232,
@@ -110,8 +119,9 @@
     "BIKE_L1_R3": {
         "name": "BIKE-L1-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 12328,
         "decapsulation_key_size": 41784,
         "ciphertext_size": 12584,
@@ -122,8 +132,9 @@
     "BIKE_L3_R3": {
         "name": "BIKE-L3-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 24664,
         "decapsulation_key_size": 80840,
         "ciphertext_size": 24920,
@@ -134,8 +145,9 @@
     "FRODO1344AES": {
         "name": "FrodoKEM-1344-AES",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 172160,
         "decapsulation_key_size": 344704,
         "ciphertext_size": 173568,
@@ -146,8 +158,9 @@
     "FRODO1344AES_R3": {
         "name": "FrodoKEM-1344-AES-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 172160,
         "decapsulation_key_size": 344704,
         "ciphertext_size": 173568,
@@ -158,8 +171,9 @@
     "FRODO1344SHAKE": {
         "name": "FrodoKEM-1344-SHAKE",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 172160,
         "decapsulation_key_size": 344704,
         "ciphertext_size": 173568,
@@ -170,8 +184,9 @@
     "FRODO1344SHAKE_R3": {
         "name": "FrodoKEM-1344-SHAKE-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 172160,
         "decapsulation_key_size": 344704,
         "ciphertext_size": 173568,
@@ -182,8 +197,9 @@
     "FRODO640AES": {
         "name": "FrodoKEM-640-AES",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 76928,
         "decapsulation_key_size": 159104,
         "ciphertext_size": 78016,
@@ -194,8 +210,9 @@
     "FRODO640AES_R3": {
         "name": "FrodoKEM-640-AES-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 76928,
         "decapsulation_key_size": 159104,
         "ciphertext_size": 78016,
@@ -206,8 +223,9 @@
     "FRODO640SHAKE": {
         "name": "FrodoKEM-640-SHAKE",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 76928,
         "decapsulation_key_size": 159104,
         "ciphertext_size": 78016,
@@ -218,8 +236,9 @@
     "FRODO640SHAKE_R3": {
         "name": "FrodoKEM-640-SHAKE-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 76928,
         "decapsulation_key_size": 159104,
         "ciphertext_size": 78016,
@@ -230,8 +249,9 @@
     "FRODO976AES": {
         "name": "FrodoKEM-976-AES",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 125056,
         "decapsulation_key_size": 250368,
         "ciphertext_size": 126336,
@@ -242,8 +262,9 @@
     "FRODO976AES_R3": {
         "name": "FrodoKEM-976-AES-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 125056,
         "decapsulation_key_size": 250368,
         "ciphertext_size": 126336,
@@ -254,8 +275,9 @@
     "FRODO976SHAKE": {
         "name": "FrodoKEM-976-SHAKE",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 125056,
         "decapsulation_key_size": 250368,
         "ciphertext_size": 126336,
@@ -266,8 +288,9 @@
     "FRODO976SHAKE_R3": {
         "name": "FrodoKEM-976-SHAKE-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 125056,
         "decapsulation_key_size": 250368,
         "ciphertext_size": 126336,
@@ -278,8 +301,9 @@
     "HQC128": {
         "name": "HQC-128",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 17992,
         "decapsulation_key_size": 18440,
         "ciphertext_size": 35464,
@@ -290,8 +314,9 @@
     "HQC128_R4": {
         "name": "HQC-128-r4",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 17992,
         "decapsulation_key_size": 18440,
         "ciphertext_size": 35464,
@@ -302,8 +327,9 @@
     "HQC192": {
         "name": "HQC-192",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 36176,
         "decapsulation_key_size": 36688,
         "ciphertext_size": 71824,
@@ -314,8 +340,9 @@
     "HQC192_R4": {
         "name": "HQC-192-r4",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 36176,
         "decapsulation_key_size": 36688,
         "ciphertext_size": 71824,
@@ -326,8 +353,9 @@
     "HQC256": {
         "name": "HQC-256",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 57960,
         "decapsulation_key_size": 58536,
         "ciphertext_size": 115368,
@@ -338,8 +366,9 @@
     "HQC256_R4": {
         "name": "HQC-256-r4",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 57960,
         "decapsulation_key_size": 58536,
         "ciphertext_size": 115368,
@@ -350,8 +379,9 @@
     "HQC_128_R3": {
         "name": "HQC-128-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 17992,
         "decapsulation_key_size": 18312,
         "ciphertext_size": 35848,
@@ -362,8 +392,9 @@
     "HQC_192_R3": {
         "name": "HQC-192-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 36176,
         "decapsulation_key_size": 36496,
         "ciphertext_size": 72208,
@@ -374,8 +405,9 @@
     "HQC_256_R3": {
         "name": "HQC-256-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 57960,
         "decapsulation_key_size": 58280,
         "ciphertext_size": 115752,
@@ -386,8 +418,9 @@
     "KYBER_1024_90S_R2": {
         "name": "Kyber1024-90s-r2",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 12544,
         "decapsulation_key_size": 25344,
         "ciphertext_size": 12544,
@@ -398,8 +431,9 @@
     "KYBER_1024_90S_R3": {
         "name": "Kyber1024-90s-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 12544,
         "decapsulation_key_size": 25344,
         "ciphertext_size": 12544,
@@ -410,8 +444,9 @@
     "KYBER_1024_R2": {
         "name": "Kyber1024-r2",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 12544,
         "decapsulation_key_size": 25344,
         "ciphertext_size": 12544,
@@ -422,8 +457,9 @@
     "KYBER_1024_R3": {
         "name": "Kyber-1024-r3",
         "long_name": "CRYSTALS-Kyber round 3 with the Kyber1024 parameter set",
-        "standards": [],
-        "papers": [
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "CRYSTALS_KYBER_ROUND_3"
         ],
         "encapsulation_key_size": 12544,
@@ -436,8 +472,9 @@
     "KYBER_512_90S_R2": {
         "name": "Kyber512-90s-r2",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 6400,
         "decapsulation_key_size": 13056,
         "ciphertext_size": 5888,
@@ -448,8 +485,9 @@
     "KYBER_512_90S_R3": {
         "name": "Kyber512-90s-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 6400,
         "decapsulation_key_size": 13056,
         "ciphertext_size": 6144,
@@ -460,8 +498,9 @@
     "KYBER_512_R2": {
         "name": "Kyber512-r2",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 6400,
         "decapsulation_key_size": 13056,
         "ciphertext_size": 5888,
@@ -472,8 +511,9 @@
     "KYBER_512_R3": {
         "name": "Kyber-512-r3",
         "long_name": "CRYSTALS-Kyber round 3 with the Kyber512 parameter set",
-        "standards": [],
-        "papers": [
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "CRYSTALS_KYBER_ROUND_3"
         ],
         "encapsulation_key_size": 6400,
@@ -486,8 +526,9 @@
     "KYBER_768_90S_R2": {
         "name": "Kyber768-90s-r2",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 9472,
         "decapsulation_key_size": 19200,
         "ciphertext_size": 8704,
@@ -498,8 +539,9 @@
     "KYBER_768_90S_R3": {
         "name": "Kyber768-90s-r3",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 9472,
         "decapsulation_key_size": 19200,
         "ciphertext_size": 8704,
@@ -510,8 +552,9 @@
     "KYBER_768_R2": {
         "name": "Kyber768-r2",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 9472,
         "decapsulation_key_size": 19200,
         "ciphertext_size": 8704,
@@ -522,8 +565,9 @@
     "KYBER_768_R3": {
         "name": "Kyber-768-r3",
         "long_name": "CRYSTALS-Kyber round 3 with the Kyber768 parameter set",
-        "standards": [],
-        "papers": [
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "CRYSTALS_KYBER_ROUND_3"
         ],
         "encapsulation_key_size": 9472,
@@ -536,8 +580,9 @@
     "MLKEM1024": {
         "name": "ML-KEM-1024",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 12544,
         "decapsulation_key_size": 25344,
         "ciphertext_size": 12544,
@@ -548,8 +593,9 @@
     "MLKEM512": {
         "name": "ML-KEM-512",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 6400,
         "decapsulation_key_size": 13056,
         "ciphertext_size": 6144,
@@ -560,8 +606,9 @@
     "MLKEM768": {
         "name": "ML-KEM-768",
         "long_name": null,
-        "standards": [],
-        "papers": [],
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [],
         "encapsulation_key_size": 9472,
         "decapsulation_key_size": 19200,
         "ciphertext_size": 8704,
@@ -572,10 +619,11 @@
     "ML_KEM_1024": {
         "name": "ml-kem-1024",
         "long_name": "Module-Lattice-Based Key-Encapsulation Mechanism with the ML-KEM-1024 parameter set",
-        "standards": [
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "FIPS_203"
         ],
-        "papers": [],
         "encapsulation_key_size": 12544,
         "decapsulation_key_size": 25344,
         "ciphertext_size": 12544,
@@ -586,10 +634,11 @@
     "ML_KEM_512": {
         "name": "ml-kem-512",
         "long_name": "Module-Lattice-Based Key-Encapsulation Mechanism with the ML-KEM-512 parameter set",
-        "standards": [
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "FIPS_203"
         ],
-        "papers": [],
         "encapsulation_key_size": 6400,
         "decapsulation_key_size": 13056,
         "ciphertext_size": 6144,
@@ -600,10 +649,11 @@
     "ML_KEM_768": {
         "name": "ml-kem-768",
         "long_name": "Module-Lattice-Based Key-Encapsulation Mechanism with the ML-KEM-768 parameter set",
-        "standards": [
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "FIPS_203"
         ],
-        "papers": [],
         "encapsulation_key_size": 9472,
         "decapsulation_key_size": 19200,
         "ciphertext_size": 8704,
@@ -614,8 +664,9 @@
     "NTRU_HRSS_701": {
         "name": "NTRU-HRSS-701",
         "long_name": "NTRU round 3 with the ntruhrss701 parameter set",
-        "standards": [],
-        "papers": [
+        "vulnerabilities": [],
+        "aliases": [],
+        "sources": [
             "NTRU_ROUND_3"
         ],
         "encapsulation_key_size": 9104,

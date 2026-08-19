@@ -564,6 +564,7 @@ class FetcherOqsHybridNamedGroup(FetcherOqsBase):
                     # two halves for the rest, so it is two kinds of thing under one field.
                     name=named_group.value.name,
                     long_name=named_group.value.long_name,
+                    vulnerabilities=[],
                     classical_key_parameter=oqs_named_group.classical_key_parameter,
                     post_quantum_key_parameter=oqs_named_group.post_quantum_key_parameter,
                     oqs_name=oqs_named_group.name,
@@ -724,7 +725,7 @@ class FetcherOqsKeyEncapsulationMechanism(FetcherOqsBase):
             existing = key_encapsulation_mechanism_params.get(parameter_set.identifier)
             # The sizes and the security category are what the datasheet states,
             # so they are taken from it even where a record already holds them.
-            # The name, the standards, the papers and the Open Quantum Safe name
+            # The name, the aliases, the sources and the Open Quantum Safe name
             # are not in a datasheet at all — the last one is in the provider
             # configuration the hybrid compositions are read from — so a record
             # that has them keeps them.
@@ -733,8 +734,9 @@ class FetcherOqsKeyEncapsulationMechanism(FetcherOqsBase):
                     identifier=parameter_set.identifier,
                     name=existing.name if existing else parameter_set.name,
                     long_name=existing.long_name if existing else None,
-                    standards=existing.standards if existing else [],
-                    papers=existing.papers if existing else [],
+                    vulnerabilities=existing.vulnerabilities if existing else [],
+                    aliases=existing.aliases if existing else [],
+                    sources=existing.sources if existing else [],
                     encapsulation_key_size=parameter_set.encapsulation_key_size,
                     decapsulation_key_size=parameter_set.decapsulation_key_size,
                     ciphertext_size=parameter_set.ciphertext_size,

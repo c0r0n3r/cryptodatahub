@@ -471,6 +471,7 @@ class TestFetcherOqsHybridNamedGroup(TestOqsBase):
                 identifier='X25519_ML_KEM_512',
                 name=NamedGroup.X25519_ML_KEM_512.value.name,
                 long_name=NamedGroup.X25519_ML_KEM_512.value.long_name,
+                vulnerabilities=[],
                 classical_key_parameter=ECParamWellKnown.CURVE25519,
                 post_quantum_key_parameter=KeyEncapsulationMechanism.MLKEM512,
                 oqs_name='x25519_mlkem512',
@@ -565,8 +566,8 @@ class TestFetcherOqsKeyEncapsulationMechanism(TestOqsBase):
             params_by_identifier['NTRU_HRSS_701'].security_category, NistSecurityLevel.LEVEL_3
         )
         self.assertEqual(
-            params_by_identifier['NTRU_HRSS_701'].papers,
-            KeyEncapsulationMechanism.NTRU_HRSS_701.value.papers,
+            params_by_identifier['NTRU_HRSS_701'].sources,
+            KeyEncapsulationMechanism.NTRU_HRSS_701.value.sources,
         )
         self.assertEqual(
             params_by_identifier['NTRU_HRSS_701'].name,
@@ -676,6 +677,7 @@ class TestUpdaterOqsHybridNamedGroup(TestUpdaterOqsBase):
             {
                 'name': NamedGroup.X25519_ML_KEM_512.value.name,
                 'long_name': None,
+                'vulnerabilities': [],
                 'classical_key_parameter': 'CURVE25519',
                 'post_quantum_key_parameter': 'MLKEM512',
                 'oqs_name': 'x25519_mlkem512',
@@ -711,8 +713,9 @@ class TestUpdaterOqsKeyEncapsulationMechanism(TestUpdaterOqsBase):
             {
                 'name': 'Kyber512-r2',
                 'long_name': None,
-                'standards': [],
-                'papers': [],
+                'vulnerabilities': [],
+                'aliases': [],
+                'sources': [],
                 'encapsulation_key_size': 800 * 8,
                 'decapsulation_key_size': 1632 * 8,
                 'ciphertext_size': 736 * 8,
