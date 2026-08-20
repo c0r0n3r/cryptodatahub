@@ -88,33 +88,11 @@ class NistSecurityLevel(CryptoDataEnumCodedBase):
     LEVEL_5 = NistSecurityLevelParams(code=5, bit_security=256)
 
 
-NamedGroupType = enum.Enum('NamedGroupType', 'ELLIPTIC_CURVE FINITE_FIELD HYBRID_PQS')
-
-
-@attr.s(frozen=True)
-class NamedGroupParams(CryptoDataParamsOIDOptional, GradeableVulnerabilities):
-    size = attr.ib(validator=attr.validators.instance_of(int))
-    group_type = attr.ib(
-        converter=convert_enum(NamedGroupType),
-        validator=attr.validators.instance_of(NamedGroupType),
-    )
-    oqs_name = attr.ib(
-        default=None,
-        validator=attr.validators.optional(attr.validators.instance_of(str)),
-        metadata={'serialize_default': True},
-    )
-
-    @classmethod
-    def get_gradeable_name(cls):
-        return 'named group'
-
-
 Authentication = CryptoDataEnumOIDBase('Authentication', CryptoDataEnumOIDBase.get_json_records(AuthenticationParams))
 BlockCipher = CryptoDataEnumBase('BlockCipher', CryptoDataEnumBase.get_json_records(BlockCipherParams))
 BlockCipherMode = CryptoDataEnumBase('BlockCipherMode', CryptoDataEnumBase.get_json_records(BlockCipherModeParams))
 Hash = CryptoDataEnumOIDBase('Hash', CryptoDataEnumOIDBase.get_json_records(HashParams))
 KeyExchange = CryptoDataEnumBase('KeyExchange', CryptoDataEnumBase.get_json_records(KeyExchangeParams))
-NamedGroup = CryptoDataEnumOIDBase('NamedGroup', CryptoDataEnumOIDBase.get_json_records(NamedGroupParams))
 
 
 @attr.s(frozen=True)

@@ -13,7 +13,8 @@ import asn1crypto.pem
 import asn1crypto.x509
 import attr
 
-from cryptodatahub.common.algorithm import Authentication, KeyExchange, Hash, NamedGroup, Signature
+from cryptodatahub.common.algorithm import Authentication, KeyExchange, Hash, Signature
+from cryptodatahub.common.parameter import ECParamWellKnown
 from cryptodatahub.common.exception import InvalidValue
 from cryptodatahub.common.grade import (
     AttackNamed,
@@ -124,15 +125,15 @@ class PublicKeyParamsDsa(PublicKeyParamBase):
 
 @attr.s(frozen=True)
 class PublicKeyParamsEcdsa(PublicKeyParamBase):
-    named_group = attr.ib(validator=attr.validators.instance_of(NamedGroup))
+    key_parameter = attr.ib(validator=attr.validators.instance_of(ECParamWellKnown))
     point_x = attr.ib(validator=attr.validators.instance_of(int))
     point_y = attr.ib(validator=attr.validators.instance_of(int))
 
     @classmethod
-    def from_octet_bit_string(cls, named_group, octet_bit_string):
+    def from_octet_bit_string(cls, key_parameter, octet_bit_string):
         point_x, point_y = asn1crypto.keys.ECPointBitString(bytes(octet_bit_string)).to_coords()
         return cls(
-            named_group,
+            key_parameter,
             point_x,
             point_y,
         )
@@ -144,7 +145,7 @@ class PublicKeyParamsEcdsa(PublicKeyParamBase):
 
 @attr.s(frozen=True)
 class PublicKeyParamsEddsa(PublicKeyParamBase):
-    curve_type = attr.ib(validator=attr.validators.instance_of(NamedGroup))
+    key_parameter = attr.ib(validator=attr.validators.instance_of(ECParamWellKnown))
     key_data = attr.ib(validator=attr.validators.instance_of((bytes, bytearray)))
 
 
@@ -185,9 +186,9 @@ class PublicKey:
                 'public_key': params.public_key_value,
             })
         elif isinstance(params, PublicKeyParamsEddsa):
-            if params.curve_type == NamedGroup.CURVE25519:
+            if params.key_parameter == ECParamWellKnown.CURVE25519:
                 algorithm_name = 'ed25519'
-            elif params.curve_type == NamedGroup.CURVE448:
+            elif params.key_parameter == ECParamWellKnown.CURVE448:
                 algorithm_name = 'ed448'
             else:
                 raise NotImplementedError()
@@ -210,7 +211,7 @@ class PublicKey:
         elif isinstance(params, PublicKeyParamsEcdsa):
             algorithm_id = asn1crypto.keys.PublicKeyAlgorithmId('ec')
             parameters = asn1crypto.keys.ECDomainParameters({
-                'named': params.named_group.value.oid
+                'named': params.key_parameter.value.oid
             })
 
             public_key = asn1crypto.keys.PublicKeyInfo({
@@ -241,21 +242,21 @@ class PublicKey:
             parameters = self._public_key['algorithm']['parameters']
 
             return PublicKeyParamsEcdsa(
-                NamedGroup.from_oid(parameters.chosen.dotted),
+                ECParamWellKnown.from_oid(parameters.chosen.dotted),
                 *public_key.to_coords()
             )
         if self.key_type == Authentication.EDDSA:
             algorithm = self._public_key['algorithm']['algorithm']
             signature = Signature.from_oid(algorithm.dotted)
             if signature == Signature.ED25519:
-                curve_type = NamedGroup.CURVE25519
+                key_parameter = ECParamWellKnown.CURVE25519
             elif signature == Signature.ED448:
-                curve_type = NamedGroup.CURVE448
+                key_parameter = ECParamWellKnown.CURVE448
             else:
                 raise NotImplementedError()
 
             return PublicKeyParamsEddsa(
-                curve_type=curve_type,
+                key_parameter=key_parameter,
                 key_data=self._public_key['public_key'].native
             )
         if self.key_type == Authentication.RSA:
@@ -303,7 +304,7 @@ class PublicKey:
         if self.key_type == Authentication.GOST_R3410_01:
             return 256
         if self.key_type == Authentication.EDDSA:
-            return self.params.curve_type.value.size
+            return self.params.key_parameter.value.field_size
 
         return int(self._public_key.bit_size)
 

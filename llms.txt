@@ -14,9 +14,10 @@ A repository of cryptography-related data available under a free license, with a
 
 ### Common Infrastructure (`cryptodatahub/common/`)
 - `types.py` — Data loading engine: `CryptoDataEnumBase`, `CryptoDataEnumCodedBase`, `CryptoDataEnumOIDBase`, `CryptoDataEnumBinaryBase`, `CryptoDataParamsBase`, `CryptoDataParamsNamed`, and the converters that turn JSON values into typed attributes (`convert_enum`, `convert_datetime`, `convert_base64_data`, `convert_hex_data`, `convert_mapping`, `convert_variadic`)
-- `algorithm.py` — Protocol-independent algorithm enumerations: `Authentication`, `BlockCipher`, `BlockCipherMode`, `Hash`, `KeyExchange`, `NamedGroup`, `MAC`, `MACMode`, `Signature`, `IpProtocolNumber`
+- `algorithm.py` — Protocol-independent algorithm enumerations: `Authentication`, `BlockCipher`, `BlockCipherMode`, `Hash`, `KeyExchange`, `MAC`, `MACMode`, `Signature`, `IpProtocolNumber`, `NistSecurityLevel`
 - `grade.py` — Security grading: `Grade`, `Gradeable`, `GradeableSimple`, `GradeableVulnerabilities`, `GradeableComplex`, `Vulnerability`, `AttackType`, `AttackNamed`
-- `parameter.py` — Well-known parameters: `DHParamWellKnownBase`, `DHParameterNumbers`, `ECParamWellKnownBase`, `ECParameterNumbers`, `StandardParams`
+- `parameter.py` — Well-known parameters, sharing one shape in `ParamWellKnownBase`: `DHParamWellKnownBase`, `DHParameterNumbers`, `ECParamWellKnownBase`, `ECParameterForm`, the seven `ECParameterNumbers` classes, `StandardParams`, `PaperParams`
+- `pqc.py` — Post-quantum registries: `KeyEncapsulationMechanism`, `HybridNamedGroup`, and the key parameter helpers every protocol code point resolves through (`KEY_PARAMETER_REGISTRIES`, `KeyParameter`, `convert_key_parameter`, `validate_key_parameter`)
 - `key.py` — Public key handling: `PublicKey`, `PublicKeySigned`, `PublicKeyX509Base`, `PublicKeySize`, per-algorithm parameter classes (RSA, DSA, ECDSA, EdDSA)
 - `stores.py` — Trust stores: `RootCertificateBase`, `RootCertificateParams`, `CertificateTransparencyLogBase`, `CertificateTransparencyOperator`, `CertificateTrustConstraint`
 - `entity.py` — Entities: `EntityBase`, `EntityType`, `EntityRole`, `ClientType`, `ServerType`

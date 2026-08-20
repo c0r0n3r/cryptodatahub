@@ -11,7 +11,6 @@ from cryptodatahub.common.algorithm import (
     Hash,
     IpProtocolNumber,
     KeyExchange,
-    NamedGroup,
     MAC,
     MACModeParams,
     MACParams,
@@ -62,12 +61,6 @@ class TestKeyExchange(TestClasses.TestJsonBase):
     @classmethod
     def _get_class(cls):
         return KeyExchange
-
-
-class TestNamedGroup(TestClasses.TestJsonBase):
-    @classmethod
-    def _get_class(cls):
-        return NamedGroup
 
 
 class TestMAC(TestClasses.TestJsonBase):

@@ -3,11 +3,25 @@
 import attr
 
 import cryptodatahub.common.algorithm
+import cryptodatahub.common.pqc
 import cryptodatahub.tls.algorithm
 
 
 @attr.s(frozen=True)
-class FetchedNamedGroupParams(cryptodatahub.common.algorithm.NamedGroupParams):
+class FetchedKeyEncapsulationMechanismParams(
+        cryptodatahub.common.pqc.KeyEncapsulationMechanismParams
+):
+    identifier = attr.ib(kw_only=True, validator=attr.validators.instance_of(str))
+
+    def _asdict(self):
+        as_dict = super()._asdict()
+        as_dict.pop('identifier', None)
+
+        return as_dict
+
+
+@attr.s(frozen=True)
+class FetchedHybridNamedGroupParams(cryptodatahub.common.pqc.HybridNamedGroupParams):
     identifier = attr.ib(kw_only=True, validator=attr.validators.instance_of(str))
 
     def _asdict(self):

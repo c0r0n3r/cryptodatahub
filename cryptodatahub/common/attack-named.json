@@ -53,23 +53,29 @@
         "grade": "INSECURE",
         "attack_type": null
     },
+    "NON_SAFE_PRIME": {
+        "name": "non-safe prime",
+        "long_name": "modulus whose halved predecessor is not a Sophie Germain prime",
+        "grade": "DEPRECATED",
+        "attack_type": "DISCRETE_LOGARITHM"
+    },
     "POODLE": {
         "name": "POODLE",
         "long_name": "Padding Oracle On Downgraded Legacy Encryption",
         "grade": "INSECURE",
         "attack_type": "PADDING_ORACLE"
     },
-    "SWEET32": {
-        "name": "Sweet32",
-        "long_name": null,
-        "grade": "INSECURE",
-        "attack_type": "BIRTHDAY"
-    },
     "SHATTERED": {
         "name": "SHAttered attack",
         "long_name": null,
         "grade": "INSECURE",
         "attack_type": "COLLISION"
+    },
+    "SWEET32": {
+        "name": "Sweet32",
+        "long_name": null,
+        "grade": "INSECURE",
+        "attack_type": "BIRTHDAY"
     },
     "WEAK_DH": {
         "name": "weak DH",

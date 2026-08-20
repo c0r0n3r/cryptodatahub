@@ -12,9 +12,9 @@ from cryptodatahub.common.algorithm import (
     Hash,
     KeyExchange,
     MAC,
-    NamedGroup,
 )
 from cryptodatahub.common.grade import GradeableComplex
+from cryptodatahub.common.pqc import convert_key_parameter, validate_key_parameter
 from cryptodatahub.common.types import (
     CryptoDataEnumCodedBase,
     CryptoDataParamsEnumNumeric,
@@ -40,9 +40,9 @@ TlsCompressionMethod = CryptoDataEnumCodedBase(
 
 @attr.s(frozen=True)
 class NamedCurveParams(CryptoDataParamsEnumNumeric, GradeableComplex):
-    named_group = attr.ib(
-        converter=convert_enum(NamedGroup),
-        validator=attr.validators.optional(attr.validators.instance_of(NamedGroup)),
+    key_parameter = attr.ib(
+        converter=convert_key_parameter(),
+        validator=attr.validators.optional(validate_key_parameter()),
     )
     initial_version = attr.ib(
         converter=convert_enum(TlsVersion),
@@ -54,13 +54,13 @@ class NamedCurveParams(CryptoDataParamsEnumNumeric, GradeableComplex):
     )
 
     def __attrs_post_init__(self):
-        if self.named_group is not None:
-            object.__setattr__(self, 'gradeables', [self.named_group.value])
+        if self.key_parameter is not None:
+            object.__setattr__(self, 'gradeables', [self.key_parameter.value])
 
         attr.validate(self)
 
     def __str__(self):
-        return str(self.named_group.value)
+        return str(self.key_parameter.value)
 
     @classmethod
     def get_code_size(cls):

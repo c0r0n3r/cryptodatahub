@@ -1,0 +1,658 @@
+{
+    "BRAINPOOLP256R1_ML_KEM_512": {
+        "name": "brainpoolp256r1/ml_kem_512",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "BRAINPOOLP256R1",
+        "post_quantum_key_parameter": "MLKEM512",
+        "oqs_name": "bp256_mlkem512"
+    },
+    "BRAINPOOLP384R1_ML_KEM_768": {
+        "name": "brainpoolp384r1/ml_kem_768",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "BRAINPOOLP384R1",
+        "post_quantum_key_parameter": "MLKEM768",
+        "oqs_name": "bp384_mlkem768"
+    },
+    "BRAINPOOLP512R1_ML_KEM_1024": {
+        "name": "brainpoolp512r1/ml_kem_1024",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "BRAINPOOLP512R1",
+        "post_quantum_key_parameter": "MLKEM1024",
+        "oqs_name": "bp512_mlkem1024"
+    },
+    "CECPQ2": {
+        "name": "CECPQ2",
+        "long_name": "X25519 with NTRU-HRSS-701",
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "NTRU_HRSS_701",
+        "oqs_name": null
+    },
+    "SECP256R1_BIKE1_L1_CPA_R2": {
+        "name": "secp256r1/bike1_l1_cpa_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "BIKE1_L1_CPA_R2",
+        "oqs_name": null
+    },
+    "SECP256R1_BIKE1_L1_FO_R2": {
+        "name": "secp256r1/bike1_l1_fo_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "BIKE1_L1_FO_R2",
+        "oqs_name": null
+    },
+    "SECP256R1_BIKEL1_R4": {
+        "name": "secp256r1/bikel1_r4",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "BIKEL1_R4",
+        "oqs_name": null
+    },
+    "SECP256R1_BIKE_L1_R3": {
+        "name": "secp256r1/bike_l1_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "BIKE_L1_R3",
+        "oqs_name": null
+    },
+    "SECP256R1_FRODO640AES": {
+        "name": "secp256r1/frodo640aes",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "FRODO640AES",
+        "oqs_name": "p256_frodo640aes"
+    },
+    "SECP256R1_FRODO640AES_R3": {
+        "name": "secp256r1/frodo640aes_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "FRODO640AES_R3",
+        "oqs_name": null
+    },
+    "SECP256R1_FRODO640SHAKE": {
+        "name": "secp256r1/frodo640shake",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "FRODO640SHAKE",
+        "oqs_name": "p256_frodo640shake"
+    },
+    "SECP256R1_FRODO640SHAKE_R3": {
+        "name": "secp256r1/frodo640shake_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "FRODO640SHAKE_R3",
+        "oqs_name": null
+    },
+    "SECP256R1_HQC128": {
+        "name": "secp256r1/hqc128",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "HQC128",
+        "oqs_name": "p256_hqc128"
+    },
+    "SECP256R1_HQC128_R4": {
+        "name": "secp256r1/hqc128_r4",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "HQC128_R4",
+        "oqs_name": null
+    },
+    "SECP256R1_HQC_128_R3": {
+        "name": "secp256r1/hqc_128_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "HQC_128_R3",
+        "oqs_name": null
+    },
+    "SECP256R1_KYBER_512_90S_R2": {
+        "name": "secp256r1/kyber_512_90s_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "KYBER_512_90S_R2",
+        "oqs_name": null
+    },
+    "SECP256R1_KYBER_512_90S_R3": {
+        "name": "secp256r1/kyber_512_90s_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "KYBER_512_90S_R3",
+        "oqs_name": null
+    },
+    "SECP256R1_KYBER_512_R2": {
+        "name": "secp256r1/kyber_512_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "KYBER_512_R2",
+        "oqs_name": null
+    },
+    "SECP256R1_KYBER_512_R3": {
+        "name": "secp256r1/Kyber-512-r3",
+        "long_name": "secp256r1 with Kyber-512 round 3",
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "KYBER_512_R3",
+        "oqs_name": null
+    },
+    "SECP256R1_KYBER_768_R3": {
+        "name": "secp256r1/Kyber-768-r3",
+        "long_name": "secp256r1 with Kyber-768 round 3",
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "KYBER_768_R3",
+        "oqs_name": null
+    },
+    "SECP256R1_MLKEM512": {
+        "name": "secp256r1/mlkem512",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "MLKEM512",
+        "oqs_name": "p256_mlkem512"
+    },
+    "SECP256R1_ML_KEM_768": {
+        "name": "SecP256r1MLKEM768",
+        "long_name": "secp256r1 with ML-KEM-768",
+        "vulnerabilities": [],
+        "classical_key_parameter": "PRIME256V1",
+        "post_quantum_key_parameter": "ML_KEM_768",
+        "oqs_name": "SecP256r1MLKEM768"
+    },
+    "SECP384R1_BIKE1_L3_CPA_R2": {
+        "name": "secp384r1/bike1_l3_cpa_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "BIKE1_L3_CPA_R2",
+        "oqs_name": null
+    },
+    "SECP384R1_BIKE1_L3_FO_R2": {
+        "name": "secp384r1/bike1_l3_fo_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "BIKE1_L3_FO_R2",
+        "oqs_name": null
+    },
+    "SECP384R1_BIKEL3": {
+        "name": "secp384r1/bikel3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "BIKEL3",
+        "oqs_name": "p384_bikel3"
+    },
+    "SECP384R1_BIKEL3_R4": {
+        "name": "secp384r1/bikel3_r4",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "BIKEL3_R4",
+        "oqs_name": null
+    },
+    "SECP384R1_BIKE_L3_R3": {
+        "name": "secp384r1/bike_l3_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "BIKE_L3_R3",
+        "oqs_name": null
+    },
+    "SECP384R1_FRODO976AES": {
+        "name": "secp384r1/frodo976aes",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "FRODO976AES",
+        "oqs_name": "p384_frodo976aes"
+    },
+    "SECP384R1_FRODO976AES_R3": {
+        "name": "secp384r1/frodo976aes_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "FRODO976AES_R3",
+        "oqs_name": null
+    },
+    "SECP384R1_FRODO976SHAKE": {
+        "name": "secp384r1/frodo976shake",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "FRODO976SHAKE",
+        "oqs_name": "p384_frodo976shake"
+    },
+    "SECP384R1_FRODO976SHAKE_R3": {
+        "name": "secp384r1/frodo976shake_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "FRODO976SHAKE_R3",
+        "oqs_name": null
+    },
+    "SECP384R1_HQC192": {
+        "name": "secp384r1/hqc192",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "HQC192",
+        "oqs_name": "p384_hqc192"
+    },
+    "SECP384R1_HQC192_R4": {
+        "name": "secp384r1/hqc192_r4",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "HQC192_R4",
+        "oqs_name": null
+    },
+    "SECP384R1_HQC_192_R3": {
+        "name": "secp384r1/hqc_192_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "HQC_192_R3",
+        "oqs_name": null
+    },
+    "SECP384R1_KYBER_768_90S_R2": {
+        "name": "secp384r1/kyber_768_90s_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "KYBER_768_90S_R2",
+        "oqs_name": null
+    },
+    "SECP384R1_KYBER_768_90S_R3": {
+        "name": "secp384r1/kyber_768_90s_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "KYBER_768_90S_R3",
+        "oqs_name": null
+    },
+    "SECP384R1_KYBER_768_R2": {
+        "name": "secp384r1/kyber_768_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "KYBER_768_R2",
+        "oqs_name": null
+    },
+    "SECP384R1_KYBER_768_R3": {
+        "name": "secp384r1/Kyber-768-r3",
+        "long_name": "secp384r1 with Kyber-768 round 3",
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "KYBER_768_R3",
+        "oqs_name": null
+    },
+    "SECP384R1_MLKEM768": {
+        "name": "secp384r1/mlkem768",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "MLKEM768",
+        "oqs_name": "p384_mlkem768"
+    },
+    "SECP384R1_ML_KEM_1024": {
+        "name": "SecP384r1MLKEM1024",
+        "long_name": "secp384r1 with ML-KEM-1024",
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP384R1",
+        "post_quantum_key_parameter": "ML_KEM_1024",
+        "oqs_name": "SecP384r1MLKEM1024"
+    },
+    "SECP521R1_BIKEL5": {
+        "name": "secp521r1/bikel5",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "BIKEL5",
+        "oqs_name": "p521_bikel5"
+    },
+    "SECP521R1_BIKEL5_R4": {
+        "name": "secp521r1/bikel5_r4",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "BIKEL5_R4",
+        "oqs_name": null
+    },
+    "SECP521R1_FRODO1344AES": {
+        "name": "secp521r1/frodo1344aes",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "FRODO1344AES",
+        "oqs_name": "p521_frodo1344aes"
+    },
+    "SECP521R1_FRODO1344AES_R3": {
+        "name": "secp521r1/frodo1344aes_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "FRODO1344AES_R3",
+        "oqs_name": null
+    },
+    "SECP521R1_FRODO1344SHAKE": {
+        "name": "secp521r1/frodo1344shake",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "FRODO1344SHAKE",
+        "oqs_name": "p521_frodo1344shake"
+    },
+    "SECP521R1_FRODO1344SHAKE_R3": {
+        "name": "secp521r1/frodo1344shake_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "FRODO1344SHAKE_R3",
+        "oqs_name": null
+    },
+    "SECP521R1_HQC256": {
+        "name": "secp521r1/hqc256",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "HQC256",
+        "oqs_name": "p521_hqc256"
+    },
+    "SECP521R1_HQC256_R4": {
+        "name": "secp521r1/hqc256_r4",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "HQC256_R4",
+        "oqs_name": null
+    },
+    "SECP521R1_HQC_256_R3": {
+        "name": "secp521r1/hqc_256_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "HQC_256_R3",
+        "oqs_name": null
+    },
+    "SECP521R1_KYBER_1024_90S_R2": {
+        "name": "secp521r1/kyber_1024_90s_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "KYBER_1024_90S_R2",
+        "oqs_name": null
+    },
+    "SECP521R1_KYBER_1024_90S_R3": {
+        "name": "secp521r1/kyber_1024_90s_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "KYBER_1024_90S_R3",
+        "oqs_name": null
+    },
+    "SECP521R1_KYBER_1024_R2": {
+        "name": "secp521r1/kyber_1024_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "KYBER_1024_R2",
+        "oqs_name": null
+    },
+    "SECP521R1_KYBER_1024_R3": {
+        "name": "secp521r1/Kyber-1024-r3",
+        "long_name": "secp521r1 with Kyber-1024 round 3",
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "KYBER_1024_R3",
+        "oqs_name": null
+    },
+    "SECP521R1_MLKEM1024": {
+        "name": "secp521r1/mlkem1024",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "SECP521R1",
+        "post_quantum_key_parameter": "MLKEM1024",
+        "oqs_name": "p521_mlkem1024"
+    },
+    "X25519_BIKE1_L1_FO_R2": {
+        "name": "x25519/bike1_l1_fo_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "BIKE1_L1_FO_R2",
+        "oqs_name": null
+    },
+    "X25519_BIKE_L1_R3": {
+        "name": "x25519/bike_l1_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "BIKE_L1_R3",
+        "oqs_name": null
+    },
+    "X25519_BIKE_L1_R4": {
+        "name": "x25519/bike_l1_r4",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "BIKEL1_R4",
+        "oqs_name": null
+    },
+    "X25519_FRODOKEM_640_AES": {
+        "name": "x25519/frodokem_640_aes",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "FRODO640AES",
+        "oqs_name": "x25519_frodo640aes"
+    },
+    "X25519_FRODOKEM_640_AES_R3": {
+        "name": "x25519/frodokem_640_aes_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "FRODO640AES_R3",
+        "oqs_name": null
+    },
+    "X25519_FRODOKEM_640_SHAKE": {
+        "name": "x25519/frodokem_640_shake",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "FRODO640SHAKE",
+        "oqs_name": "x25519_frodo640shake"
+    },
+    "X25519_FRODOKEM_640_SHAKE_R3": {
+        "name": "x25519/frodokem_640_shake_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "FRODO640SHAKE_R3",
+        "oqs_name": null
+    },
+    "X25519_HQC_128": {
+        "name": "x25519/hqc_128",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "HQC128",
+        "oqs_name": "x25519_hqc128"
+    },
+    "X25519_HQC_128_R3": {
+        "name": "x25519/hqc_128_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "HQC_128_R3",
+        "oqs_name": null
+    },
+    "X25519_HQC_128_R4": {
+        "name": "x25519/hqc_128_r4",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "HQC128_R4",
+        "oqs_name": null
+    },
+    "X25519_KYBER_512_90S_R3": {
+        "name": "x25519/kyber_512_90s_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "KYBER_512_90S_R3",
+        "oqs_name": null
+    },
+    "X25519_KYBER_512_R2": {
+        "name": "x25519/kyber_512_r2",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "KYBER_512_R2",
+        "oqs_name": null
+    },
+    "X25519_KYBER_512_R3": {
+        "name": "x25519/Kyber-512-r3",
+        "long_name": "X25519 with Kyber-512 round 3",
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "KYBER_512_R3",
+        "oqs_name": null
+    },
+    "X25519_KYBER_768_R3": {
+        "name": "x25519/Kyber-768-r3",
+        "long_name": "X25519 with Kyber-768 round 3",
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "KYBER_768_R3",
+        "oqs_name": null
+    },
+    "X25519_ML_KEM_512": {
+        "name": "x25519/ml_kem_512",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "MLKEM512",
+        "oqs_name": "x25519_mlkem512"
+    },
+    "X25519_ML_KEM_768": {
+        "name": "X25519MLKEM768",
+        "long_name": "X25519 with ML-KEM-768",
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE25519",
+        "post_quantum_key_parameter": "ML_KEM_768",
+        "oqs_name": "X25519MLKEM768"
+    },
+    "X448_BIKE_L3": {
+        "name": "x448/bike_l3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "BIKEL3",
+        "oqs_name": "x448_bikel3"
+    },
+    "X448_BIKE_L3_R4": {
+        "name": "x448/bike_l3_r4",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "BIKEL3_R4",
+        "oqs_name": null
+    },
+    "X448_FRODOKEM_976_AES": {
+        "name": "x448/frodokem_976_aes",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "FRODO976AES",
+        "oqs_name": "x448_frodo976aes"
+    },
+    "X448_FRODOKEM_976_AES_R3": {
+        "name": "x448/frodokem_976_aes_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "FRODO976AES_R3",
+        "oqs_name": null
+    },
+    "X448_FRODOKEM_976_SHAKE": {
+        "name": "x448/frodokem_976_shake",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "FRODO976SHAKE",
+        "oqs_name": "x448_frodo976shake"
+    },
+    "X448_FRODOKEM_976_SHAKE_R3": {
+        "name": "x448/frodokem_976_shake_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "FRODO976SHAKE_R3",
+        "oqs_name": null
+    },
+    "X448_HQC_192": {
+        "name": "x448/hqc_192",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "HQC192",
+        "oqs_name": "x448_hqc192"
+    },
+    "X448_HQC_192_R3": {
+        "name": "x448/hqc_192_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "HQC_192_R3",
+        "oqs_name": null
+    },
+    "X448_HQC_192_R4": {
+        "name": "x448/hqc_192_r4",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "HQC192_R4",
+        "oqs_name": null
+    },
+    "X448_KYBER_768_90S_R3": {
+        "name": "x448/kyber_768_90s_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "KYBER_768_90S_R3",
+        "oqs_name": null
+    },
+    "X448_KYBER_768_R3": {
+        "name": "x448/kyber_768_r3",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "KYBER_768_R3",
+        "oqs_name": null
+    },
+    "X448_ML_KEM_768": {
+        "name": "x448/ml_kem_768",
+        "long_name": null,
+        "vulnerabilities": [],
+        "classical_key_parameter": "CURVE448",
+        "post_quantum_key_parameter": "MLKEM768",
+        "oqs_name": "x448_mlkem768"
+    }
+}

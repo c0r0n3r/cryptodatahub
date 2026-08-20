@@ -18,12 +18,15 @@ from cryptodatahub.common.types import (
     convert_enum,
     convert_iterable,
     convert_mapping,
-    convert_variadic,
     convert_hex_data,
 )
-from cryptodatahub.common.algorithm import BlockCipher, Hash, MAC, NamedGroup, BlockCipherMode
+from cryptodatahub.common.algorithm import BlockCipher, Hash, MAC, BlockCipherMode
 from cryptodatahub.common.entity import Entity
-from cryptodatahub.common.parameter import DHParamWellKnown
+from cryptodatahub.common.pqc import (
+    KeyParameter,
+    convert_key_parameter,
+    validate_key_parameter_or_unregistered_name,
+)
 
 
 @attr.s(frozen=True)
@@ -158,11 +161,9 @@ Ikev2IntegrityAlgorithm = CryptoDataEnumCodedBase(
 class Ikev2DiffieHellmanGroupParams(IkeAlgorithmParams):
     """Diffie-Hellman group parameters."""
 
-    key_parameter: typing.Union[NamedGroup, DHParamWellKnown, str] = attr.ib(
-        converter=convert_variadic((convert_enum(NamedGroup), convert_enum(DHParamWellKnown))),
-        validator=attr.validators.optional(
-            attr.validators.instance_of((NamedGroup, DHParamWellKnown, str))
-        )
+    key_parameter: KeyParameter = attr.ib(
+        converter=convert_key_parameter(),
+        validator=attr.validators.optional(validate_key_parameter_or_unregistered_name())
     )
 
     def __str__(self):
@@ -755,9 +756,9 @@ Ikev2IdType = CryptoDataEnumCodedBase(
 class Ikev1DiffieHellmanGroupParams(IkeAlgorithmParams):
     """IKEv1 Diffie-Hellman group parameters."""
 
-    key_parameter: typing.Union[NamedGroup, DHParamWellKnown, str] = attr.ib(
-        converter=convert_variadic((convert_enum(NamedGroup), convert_enum(DHParamWellKnown))),
-        validator=attr.validators.instance_of((NamedGroup, DHParamWellKnown, str))
+    key_parameter: KeyParameter = attr.ib(
+        converter=convert_key_parameter(),
+        validator=validate_key_parameter_or_unregistered_name()
     )
 
     def __str__(self):

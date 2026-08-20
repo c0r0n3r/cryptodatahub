@@ -1,0 +1,110 @@
+# SPDX-License-Identifier: MPL-2.0
+
+import typing
+
+import attr
+
+from cryptodatahub.common.algorithm import NistSecurityLevel
+from cryptodatahub.common.grade import GradeableVulnerabilities
+from cryptodatahub.common.parameter import DHParamWellKnown, ECParamWellKnown, ParamWellKnownBase
+from cryptodatahub.common.types import (
+    CryptoDataEnumBase,
+    CryptoDataParamsNamed,
+    convert_enum,
+    convert_variadic,
+)
+
+
+@attr.s(frozen=True)
+class KeyEncapsulationMechanismParams(ParamWellKnownBase):
+    encapsulation_key_size = attr.ib(
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'encapsulation key size'},
+    )
+    decapsulation_key_size = attr.ib(
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'decapsulation key size'},
+    )
+    ciphertext_size = attr.ib(
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'ciphertext size'},
+    )
+    shared_secret_size = attr.ib(
+        validator=attr.validators.instance_of(int),
+        metadata={'human_readable_name': 'shared secret size'},
+    )
+    security_category = attr.ib(
+        converter=convert_enum(NistSecurityLevel),
+        validator=attr.validators.instance_of(NistSecurityLevel),
+        metadata={'human_readable_name': 'security category'},
+    )
+    oqs_name = attr.ib(
+        default=None,
+        validator=attr.validators.optional(attr.validators.instance_of(str)),
+        metadata={'human_readable_name': 'Open Quantum Safe name', 'serialize_default': True},
+    )
+
+    @classmethod
+    def get_gradeable_name(cls):
+        return 'key encapsulation mechanism'
+
+    @property
+    def field_size(self):
+        """A post-quantum key size is not comparable with a classical field size, so it states none."""
+        return None
+
+
+KeyEncapsulationMechanism = CryptoDataEnumBase(
+    'KeyEncapsulationMechanism', CryptoDataEnumBase.get_json_records(KeyEncapsulationMechanismParams)
+)
+
+
+@attr.s(frozen=True)
+class HybridNamedGroupParams(CryptoDataParamsNamed, GradeableVulnerabilities):
+    classical_key_parameter = attr.ib(
+        converter=convert_enum(ECParamWellKnown),
+        validator=attr.validators.instance_of(ECParamWellKnown),
+    )
+    post_quantum_key_parameter = attr.ib(
+        converter=convert_enum(KeyEncapsulationMechanism),
+        validator=attr.validators.instance_of(KeyEncapsulationMechanism),
+    )
+    oqs_name = attr.ib(
+        default=None,
+        validator=attr.validators.optional(attr.validators.instance_of(str)),
+        metadata={'human_readable_name': 'Open Quantum Safe name', 'serialize_default': True},
+    )
+
+    @classmethod
+    def get_gradeable_name(cls):
+        return 'hybrid named group'
+
+    @property
+    def field_size(self):
+        """A composition is the two halves it names, so it states no field size of its own."""
+        return None
+
+
+HybridNamedGroup = CryptoDataEnumBase(
+    'HybridNamedGroup', CryptoDataEnumBase.get_json_records(HybridNamedGroupParams)
+)
+
+
+KEY_PARAMETER_REGISTRIES = (
+    ECParamWellKnown, DHParamWellKnown, KeyEncapsulationMechanism, HybridNamedGroup
+)
+KeyParameter = typing.Union[
+    ECParamWellKnown, DHParamWellKnown, KeyEncapsulationMechanism, HybridNamedGroup, str
+]
+
+
+def convert_key_parameter():
+    return convert_variadic(tuple(convert_enum(registry) for registry in KEY_PARAMETER_REGISTRIES))
+
+
+def validate_key_parameter():
+    return attr.validators.instance_of(KEY_PARAMETER_REGISTRIES)
+
+
+def validate_key_parameter_or_unregistered_name():
+    return attr.validators.instance_of(KEY_PARAMETER_REGISTRIES + (str,))

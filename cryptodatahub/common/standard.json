@@ -24,14 +24,109 @@
         "long_name": "Additional ECC Groups For IKE and IKEv2",
         "publisher": "IETF"
     },
+    "DRAFT_IRTF_CFRG_PAIRING_FRIENDLY_CURVES": {
+        "name": "draft-irtf-cfrg-pairing-friendly-curves",
+        "long_name": "Pairing-Friendly Curves",
+        "publisher": "IETF"
+    },
+    "DRAFT_KASAMATSU_BNCURVES": {
+        "name": "draft-kasamatsu-bncurves",
+        "long_name": "Barreto-Naehrig Curves",
+        "publisher": "IETF"
+    },
+    "DRAFT_LADD_CFRG_4Q": {
+        "name": "draft-ladd-cfrg-4q",
+        "long_name": "Curve4Q",
+        "publisher": "IETF"
+    },
     "RFC_5114": {
         "name": "RFC 5114",
         "long_name": "Additional Diffie-Hellman Groups for Use with IETF Standards",
         "publisher": "IETF"
     },
+    "RFC_4357": {
+        "name": "RFC 4357",
+        "long_name": "Additional Cryptographic Algorithms for Use with GOST 28147-89, GOST R 34.10-94, GOST R 34.10-2001, and GOST R 34.11-94 Algorithms",
+        "publisher": "IETF"
+    },
+    "RFC_4492": {
+        "name": "RFC 4492",
+        "long_name": "Elliptic Curve Cryptography (ECC) Cipher Suites for Transport Layer Security (TLS)",
+        "publisher": "IETF"
+    },
+    "RFC_5480": {
+        "name": "RFC 5480",
+        "long_name": "Elliptic Curve Cryptography Subject Public Key Information",
+        "publisher": "IETF"
+    },
     "RFC_5639": {
         "name": "RFC 5639",
         "long_name": "Elliptic Curve Cryptography (ECC) Brainpool Standard Curves and Curve Generation",
+        "publisher": "IETF"
+    },
+    "RFC_5656": {
+        "name": "RFC 5656",
+        "long_name": "Elliptic Curve Algorithm Integration in the Secure Shell Transport Layer",
+        "publisher": "IETF"
+    },
+    "RFC_5832": {
+        "name": "RFC 5832",
+        "long_name": "GOST R 34.10-2001: Digital Signature Algorithm",
+        "publisher": "IETF"
+    },
+    "RFC_5903": {
+        "name": "RFC 5903",
+        "long_name": "Elliptic Curve Groups modulo a Prime (ECP Groups) for IKE and IKEv2",
+        "publisher": "IETF"
+    },
+    "RFC_7027": {
+        "name": "RFC 7027",
+        "long_name": "Elliptic Curve Cryptography (ECC) Brainpool Curves for Transport Layer Security (TLS)",
+        "publisher": "IETF"
+    },
+    "RFC_7091": {
+        "name": "RFC 7091",
+        "long_name": "GOST R 34.10-2012: Digital Signature Algorithm",
+        "publisher": "IETF"
+    },
+    "RFC_7748": {
+        "name": "RFC 7748",
+        "long_name": "Elliptic Curves for Security",
+        "publisher": "IETF"
+    },
+    "RFC_7836": {
+        "name": "RFC 7836",
+        "long_name": "Guidelines on the Cryptographic Algorithms to Accompany the Usage of Standards GOST R 34.10-2012 and GOST R 34.11-2012",
+        "publisher": "IETF"
+    },
+    "RFC_8031": {
+        "name": "RFC 8031",
+        "long_name": "Curve25519 and Curve448 for the Internet Key Exchange Protocol Version 2 (IKEv2) Key Agreement",
+        "publisher": "IETF"
+    },
+    "RFC_8032": {
+        "name": "RFC 8032",
+        "long_name": "Edwards-Curve Digital Signature Algorithm (EdDSA)",
+        "publisher": "IETF"
+    },
+    "RFC_8422": {
+        "name": "RFC 8422",
+        "long_name": "Elliptic Curve Cryptography (ECC) Cipher Suites for Transport Layer Security (TLS) Versions 1.2 and Earlier",
+        "publisher": "IETF"
+    },
+    "RFC_8734": {
+        "name": "RFC 8734",
+        "long_name": "Elliptic Curve Cryptography (ECC) Brainpool Curves for Transport Layer Security (TLS) Version 1.3",
+        "publisher": "IETF"
+    },
+    "RFC_8998": {
+        "name": "RFC 8998",
+        "long_name": "ShangMi (SM) Cipher Suites for Transport Layer Security (TLS) Protocol Version 1.3",
+        "publisher": "IETF"
+    },
+    "RFC_9215": {
+        "name": "RFC 9215",
+        "long_name": "Using GOST R 34.10-2012 and GOST R 34.11-2012 Algorithms with the Internet X.509 Public Key Infrastructure",
         "publisher": "IETF"
     },
     "RFC_7919": {
@@ -43,6 +138,11 @@
         "name": "SEC2",
         "long_name": "SEC 2: Recommended Elliptic Curve Domain Parameters",
         "publisher": "CERTICOM"
+    },
+    "FIPS_203": {
+        "name": "FIPS 203",
+        "long_name": "Module-Lattice-Based Key-Encapsulation Mechanism Standard",
+        "publisher": "NIST"
     },
     "SP_800_186": {
         "name": "NIST SP 800-186",
