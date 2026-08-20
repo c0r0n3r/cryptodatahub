@@ -45,6 +45,39 @@
         ],
         "url": "https://cryptoexperts.github.io/million-dollar-curve/specifications/2016-02-01_trap-me-if-you-can.pdf"
     },
+    "SAFECURVES": {
+        "name": "SafeCurves",
+        "long_name": "SafeCurves: choosing safe curves for elliptic-curve cryptography",
+        "authors": [
+            "Daniel J. Bernstein",
+            "Tanja Lange"
+        ],
+        "url": "https://safecurves.cr.yp.to"
+    },
+    "BADA55": {
+        "name": "BADA55",
+        "long_name": "How to manipulate curve standards: a white paper for the black hat",
+        "authors": [
+            "Daniel J. Bernstein",
+            "Tung Chou",
+            "Chitchanok Chuengsatiansup",
+            "Andreas Hülsing",
+            "Tanja Lange",
+            "Ruben Niederhagen",
+            "Christine van Vredendaal"
+        ],
+        "url": "https://safecurves.cr.yp.to/bada55/bada55-20140722.pdf"
+    },
+    "MNT": {
+        "name": "MNT",
+        "long_name": "New explicit conditions of elliptic curve traces for FR-reduction",
+        "authors": [
+            "Atsuko Miyaji",
+            "Masaki Nakabayashi",
+            "Shunzou Takano"
+        ],
+        "url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4432/1/73-48.pdf"
+    },
     "IACR_EPRINT_2010_429": {
         "name": "IACR ePrint 2010/429",
         "long_name": "A Family of Implementation-Friendly BN Elliptic Curves",
@@ -79,6 +112,17 @@
         ],
         "url": "https://eprint.iacr.org/2013/647"
     },
+    "IACR_EPRINT_2014_130": {
+        "name": "IACR ePrint 2014/130",
+        "long_name": "Selecting Elliptic Curves for Cryptography: An Efficiency and Security Analysis",
+        "authors": [
+            "Joppe W. Bos",
+            "Craig Costello",
+            "Patrick Longa",
+            "Michael Naehrig"
+        ],
+        "url": "https://eprint.iacr.org/2014/130"
+    },
     "IACR_EPRINT_2018_962": {
         "name": "IACR ePrint 2018/962",
         "long_name": "Zexe: Enabling Decentralized Private Computation",
@@ -101,5 +145,15 @@
             "Zhenfei Zhang"
         ],
         "url": "https://eprint.iacr.org/2021/1152"
+    },
+    "IACR_EPRINT_2021_1183": {
+        "name": "IACR ePrint 2021/1183",
+        "long_name": "ZKAttest: Ring and Group Signatures for existing ECDSA keys",
+        "authors": [
+            "Armando Faz-Hernández",
+            "Watson Ladd",
+            "Deepak Maram"
+        ],
+        "url": "https://eprint.iacr.org/2021/1183"
     }
 }
