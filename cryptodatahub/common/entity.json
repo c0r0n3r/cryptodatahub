@@ -55,6 +55,14 @@
             "STANDARD_DEVELOPER"
         ]
     },
+    "CATACOMB": {
+        "name": "Catacomb",
+        "long_name": null,
+        "type": "SOFTWARE_PROJECT",
+        "activities": [
+            "LIBRARY_DEVELOPER"
+        ]
+    },
     "CERTLY": {
         "name": "Certly",
         "long_name": "Certly VOF",
@@ -191,6 +199,14 @@
         "type": "FOR_PROFIT_ORG",
         "activities": [
             "CA_TRUST_STORE_OWNER"
+        ]
+    },
+    "MIRACL": {
+        "name": "MIRACL",
+        "long_name": "Multiprecision Integer and Rational Arithmetic Cryptographic Library",
+        "type": "SOFTWARE_PROJECT",
+        "activities": [
+            "LIBRARY_DEVELOPER"
         ]
     },
     "MOZILLA": {

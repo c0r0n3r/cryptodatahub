@@ -19,6 +19,11 @@
         "long_name": "ECP Groups For IKE and IKEv2",
         "publisher": "IETF"
     },
+    "DRAFT_BLACK_NUMSCURVES": {
+        "name": "draft-black-numscurves",
+        "long_name": "Elliptic Curve Cryptography (ECC) Nothing Up My Sleeve (NUMS) Curves and Curve Generation",
+        "publisher": "IETF"
+    },
     "DRAFT_IETF_IPSEC_IKE_ECC_GROUPS_10": {
         "name": "draft-ietf-ipsec-ike-ecc-groups-10",
         "long_name": "Additional ECC Groups For IKE and IKEv2",
