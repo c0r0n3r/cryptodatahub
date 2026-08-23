@@ -25,3 +25,12 @@ class InvalidValue(Exception):
         super().__init__(message)
 
         self.value = value
+
+
+@attr.s
+class InvalidProposalToken(Exception):
+    token = attr.ib(validator=attr.validators.instance_of(str))
+    hint = attr.ib(validator=attr.validators.instance_of(str))
+
+    def __str__(self):
+        return f'invalid proposal token; token="{self.token}", hint="{self.hint}"'

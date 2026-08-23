@@ -5,7 +5,15 @@ import unittest
 from test.common.classes import EnumIntTest
 
 
-from cryptodatahub.common.exception import InvalidValue
+from cryptodatahub.common.exception import InvalidProposalToken, InvalidValue
+
+
+class TestInvalidProposalToken(unittest.TestCase):
+    def test_str(self):
+        self.assertEqual(
+            str(InvalidProposalToken('aes999', 'unknown strongswan token')),
+            'invalid proposal token; token="aes999", hint="unknown strongswan token"'
+        )
 
 
 class TestException(unittest.TestCase):
