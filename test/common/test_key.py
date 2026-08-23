@@ -204,7 +204,8 @@ class TestPublicKey(TestClasses.TestKeyBase):
         )
         public_key = PublicKey.from_params(params)
         self.assertEqual(params, public_key.params)
-        self.assertEqual(public_key.key_size, 255)
+        self.assertEqual(public_key.key_size, 256)
+        self.assertEqual(public_key.params.key_parameter.value.field_size, 255)
 
         public_key = self._get_public_key('ssh_ed448_key')
         public_key_params = public_key.params
@@ -214,7 +215,8 @@ class TestPublicKey(TestClasses.TestKeyBase):
         )
         public_key = PublicKey.from_params(params)
         self.assertEqual(params, public_key.params)
-        self.assertEqual(public_key.key_size, 448)
+        self.assertEqual(public_key.key_size, 456)
+        self.assertEqual(public_key.params.key_parameter.value.field_size, 448)
 
         public_key = self._get_public_key('gitlab.com_ssh_rsa_key')
         public_key_params = public_key.params

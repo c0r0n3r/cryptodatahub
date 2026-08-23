@@ -304,7 +304,9 @@ class PublicKey:
         if self.key_type == Authentication.GOST_R3410_01:
             return 256
         if self.key_type == Authentication.EDDSA:
-            return self.params.key_parameter.value.field_size
+            # RFC 8032 sections 5.1.2 and 5.2.2 encode an EdDSA public key as the compressed point: the y-coordinate,
+            # plus one bit carrying the least significant bit of x, padded to whole octets.
+            return (self.params.key_parameter.value.field_size // 8 + 1) * 8
 
         return int(self._public_key.bit_size)
 
