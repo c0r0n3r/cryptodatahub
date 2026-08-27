@@ -10,8 +10,34 @@ python-cryptodatahub (1.6.0) unstable; urgency=low
   * add post-quantum signature algorithms (#32)
   * fix the named curve code points of the FrodoKEM-640-AES hybrids (#32)
   * add updater for the algorithms of the Open Quantum Safe project (#32)
+  * add domain parameters for the elliptic curves (#65)
+  * add the missing elliptic curves, object identifiers and sources (#65)
+  * add the elliptic curve parameter forms over extension fields (#65)
+  * add the ANSI X9.62 optimal normal basis curves (#65)
+  * add the GOST 512-bit parameter set C curve (#65)
+  * add vulnerabilities for the elliptic curves (#65)
+  * add field size for every key parameter class (#65)
+  * add parameters for the IKE and SSH algorithms (#65)
+  * add key encapsulation mechanism parameters (#65)
+  * add the composition of the hybrid named groups (#65)
+  * add the missing post-quantum named groups and their names (#65)
+  * make the post-quantum parameters gradeable (#65)
+  * add updater for the key encapsulation mechanisms and the hybrid named group compositions (#65)
+  * use parameters instead of named groups (#65)
+  * rename the named group field to key parameter (#65)
+  * set the field size of Curve25519 and the third and fourth Oakley groups (#65)
+  * set the group type of CECPQ2 to hybrid (#65)
+  * rename the E384 named group to E382 (#65)
+  * add the initial and last protocol version to the named curves (#63)
+  * add implementation name, IANA name and proposal token lookups to the IKE algorithm enums (#62)
+  * add ML-DSA authentication and signature algorithms (#60)
+  * add the TLS extension types sent by Chrome 152 (#60)
+  * update Chromium and Firefox client capabilities to 152 and Opera to 133 (#60)
+  * update the certificate transparency log list and preserve the existing entries (#59)
+  * report the encoded key length as the EdDSA key size
+  * correct the CAST5-40 key size
 
- -- Szilárd Pfeiffer <coroner@pfeifferszilard.hu>  Tue, 04 Aug 2026 00:00:00 +0200
+ -- Szilárd Pfeiffer <coroner@pfeifferszilard.hu>  Tue, 25 Aug 2026 00:00:00 +0200
 
 python-cryptodatahub (1.5.0) unstable; urgency=low
 

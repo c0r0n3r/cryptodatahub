@@ -16,6 +16,8 @@ Algorithms
 -  `cryptographic hash <https://en.wikipedia.org/wiki/Cryptographic_hash_function>`__
 -  `elliptic-curve <https://en.wikipedia.org/wiki/Elliptic-curve_cryptography>`__
 -  `message authentication code <https://en.wikipedia.org/wiki/Message_authentication_code>`__
+-  `key encapsulation mechanism <https://en.wikipedia.org/wiki/Key_encapsulation_mechanism>`__ (KEM), including the
+   post-quantum ones supported by the `Open Quantum Safe <https://openquantumsafe.org/>`__ project
 
 Vulnerabilities
 ---------------
@@ -45,6 +47,33 @@ Parameters
       -  `Postfix <https://en.wikipedia.org/wiki/Postfix_(software)>`__
       -  `ProFTPD <https://en.wikipedia.org/wiki/ProFTPD>`__
       -  SOcket CAT (socat)
+
+-  Elliptic curve (domain parameters, object identifiers and field sizes)
+
+   -  defined by standard
+
+      -  `ANSI X9.62 <https://webstore.ansi.org/standards/ascx9/ansix9621998>`__ and
+         `ANSI X9.63 <https://webstore.ansi.org/standards/ascx9/ansix9632011r2017>`__
+      -  `SEC 2 <https://www.secg.org/sec2-v2.pdf>`__
+      -  `NIST SP 800-186 <https://csrc.nist.gov/pubs/sp/800/186/final>`__
+      -  `Brainpool <https://www.rfc-editor.org/rfc/rfc5639.html>`__
+      -  `Curve25519 and Curve448 <https://www.rfc-editor.org/rfc/rfc7748.html>`__
+      -  `GOST <https://www.rfc-editor.org/rfc/rfc7836.html>`__
+      -  `ShangMi <https://www.rfc-editor.org/rfc/rfc8998.html>`__
+
+   -  defined by research paper
+
+      -  `SafeCurves <https://safecurves.cr.yp.to/>`__
+      -  `Nothing Up My Sleeve (NUMS) curves <https://datatracker.ietf.org/doc/draft-black-numscurves/>`__
+      -  `BADA55 curves <https://bada55.cr.yp.to/>`__
+      -  `pairing-friendly curves <https://datatracker.ietf.org/doc/draft-irtf-cfrg-pairing-friendly-curves/>`__
+
+   -  parameter forms
+
+      -  short Weierstrass over prime, binary and extension fields, the binary one both in polynomial and in optimal
+         normal basis representation
+      -  Montgomery
+      -  twisted Edwards over prime and extension fields
 
 Registries
 ----------

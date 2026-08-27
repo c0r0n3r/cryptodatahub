@@ -3,7 +3,7 @@ Changelog
 =========
 
 ------------------
-1.6.0 - Unreleased
+1.6.0 - 2026-08-25
 ------------------
 
 Features
@@ -16,15 +16,60 @@ Features
    -  add the NIST security levels and their bit security (#32)
    -  add the algorithm name of the oqs-provider to the named group entries (#32)
    -  add updater for the algorithms of the Open Quantum Safe project (#32)
+   -  add the ML-DSA authentication algorithm (#60)
+   -  add domain parameters for the elliptic curves (#65)
+   -  add the missing elliptic curves (#65)
+   -  add the elliptic curve parameter forms over extension fields (#65)
+   -  add the ANSI X9.62 optimal normal basis curves (#65)
+   -  add the GOST 512-bit parameter set C curve (#65)
+   -  add the missing object identifiers of the elliptic curves (#65)
+   -  add the missing sources of the elliptic curve domain parameters (#65)
+   -  add vulnerabilities for the elliptic curves (#65)
+   -  derive the field size of a well-known elliptic curve (#65)
+   -  add field size for every key parameter class (#65)
+   -  add parameters for the IKE and SSH algorithms (#65)
+   -  add key encapsulation mechanism parameters (#65)
+   -  add the composition of the hybrid named groups (#65)
+   -  add the missing post-quantum named groups (#65)
+   -  add names for the post-quantum named groups (#65)
+   -  add the Open Quantum Safe name to the post-quantum parameters (#65)
+   -  make the post-quantum parameters gradeable (#65)
+   -  set the size of a hybrid named group to null (#65)
+   -  add updater for the key encapsulation mechanisms (#65)
+   -  add updater for the hybrid named group compositions (#65)
+   -  add the hybrid compositions of the older releases (#65)
+   -  stop writing the named group registry (#65)
+   -  update the certificate transparency log list (#59)
+   -  preserve the existing entries when updating the certificate transparency log list (#59)
 
 -  TLS (``tls``)
 
    -  add post-quantum named curves (#32)
    -  add the p384_mlkem1024 named curve of Tresorit (#32)
    -  add post-quantum signature algorithms (#32)
+   -  add the initial and last protocol version to the named curves (#63)
+   -  add ML-DSA signature algorithms (#60)
+   -  add the TLS extension types sent by Chrome 152 (#60)
+   -  update Chromium client capabilities to 152 (#60)
+   -  update Firefox client capabilities to 152 (#60)
+   -  update Opera client capabilities to 133 (#60)
+
+-  IKE (``ike``)
+
+   -  add implementation name and IANA name reverse lookups to the algorithm enums (#62)
+   -  add proposal token resolution to the algorithm enums (#62)
 
 Notable fixes
 =============
+
+-  Generic
+
+   -  set the field size of Curve25519 (#65)
+   -  set the field size of the third and fourth Oakley groups (#65)
+   -  set the group type of CECPQ2 to hybrid (#65)
+   -  rename the E384 named group to E382 (#65)
+   -  report the encoded key length as the EdDSA key size
+   -  correct the CAST5-40 key size
 
 -  TLS (``tls``)
 
@@ -36,6 +81,27 @@ Refactor
 -  Generic
 
    -  sort the data written by the updaters and detect the changes by comparing them (#32)
+   -  use parameters instead of named groups (#65)
+   -  share the well-known parameter shape (#65)
+   -  separate the post-quantum parameters from the other types (#65)
+   -  rename the named group field to key parameter in the hybrid groups (#65)
+   -  rename the curve type to key parameter in the ECDSA public keys (#65)
+   -  extract the client parameter base classes from the TLS client module (#60)
+
+-  TLS (``tls``)
+
+   -  rename the named group field to key parameter in the named groups (#65)
+
+-  SSH (``ssh``)
+
+   -  rename the named group field to key parameter in the elliptic curve identifiers (#65)
+
+Other
+=====
+
+-  switch to Markdown format in readme
+-  add llms.txt to describe the library for large language models
+-  use uv instead of pipenv and pip in the documentation
 
 ------------------
 1.5.0 - 2026-07-31
