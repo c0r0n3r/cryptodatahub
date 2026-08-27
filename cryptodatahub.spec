@@ -50,6 +50,7 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %{python3_sitelib}/cryptodatahub-%{version}.dist-info/
 %{python3_sitelib}/updaters/
 %{_bindir}/update-ct-log
+%{_bindir}/update-oqs
 %{_bindir}/update-trust-stores
 %license LICENSE.txt
 
